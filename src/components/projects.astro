@@ -1,44 +1,62 @@
 ---
 import ProjectCard from './project-card.astro';
 import projectsData from '../data/projects.json';
+
+const projects = projectsData.map((project) => ({
+  ...project,
+  link:
+    project.link && project.link !== '#'
+      ? project.link
+      : `/albums/${project.title
+          .toLowerCase()
+          .replaceAll('neo-sacred zikr: ', '')
+          .replaceAll("tanrı'nın hediyesi", 'tanrinin-hediyesi')
+          .replaceAll('ı', 'i')
+          .replaceAll('ğ', 'g')
+          .replaceAll('ü', 'u')
+          .replaceAll('ş', 's')
+          .replaceAll('ö', 'o')
+          .replaceAll('ç', 'c')
+          .replaceAll(' ', '-')
+          .replaceAll('--', '-')}`,
+}));
 ---
 
 <section id="projects" class="section-container overflow-hidden">
   <div class="container mx-auto">
     <div class="mb-16 project-header">
       <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext mb-2 flex items-center gap-4">
-          <span class="text-accent">/</span> Featured Projects
-        </h2>
+        <span class="text-accent">/</span> Discography
+      </h2>
+
       <p class="text-subtext font-body text-sm max-w-md">
-        A selection of professional work, published apps, and experimental prototypes.
+        Explore the official Neo-Sacred Zikr albums and musical universe of Berk Köksal.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {projectsData.map((project) => (
-        <ProjectCard project={project} />
-      ))}
+      {
+        projects.map((project) => (
+          <ProjectCard project={project} />
+        ))
+      }
     </div>
   </div>
 </section>
 
-
 <style>
-  /* Header Initial State */
   .project-header {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* Cards Initial State */
   .project-card {
-    opacity: 0; /* Ensuring cards start hidden too */
+    opacity: 0;
     transform: translateY(20px) scale(0.95);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* Shared Revealed State */
   .project-header.reveal,
   .project-card.reveal {
     opacity: 1 !important;
@@ -50,44 +68,38 @@ import projectsData from '../data/projects.json';
   const initProjectReveal = () => {
     const header = document.querySelector('.project-header');
     const cards = document.querySelectorAll('.project-card');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const target = entry.target as HTMLElement;
-          
-          // Check if the intersecting element is the header
-          if (target.classList.contains('project-header')) {
-            target.classList.add('reveal');
-            observer.unobserve(target);
-          } 
-          // Check if the intersecting element is a project card
-          else if (target.classList.contains('project-card')) {
-            const index = Array.from(cards).indexOf(target);
-            
-            // Stagger effect based on row position (only for cards)
-            setTimeout(() => {
-              target.classList.add('reveal');
-            }, (index % 3) * 150);
-            
-            observer.unobserve(target);
-          }
-        }
-      });
-    }, { 
-      threshold: 0.15, 
-      rootMargin: '0px 0px -10px 0px' 
-    });
 
-    // Observe the header
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const target = entry.target as HTMLElement;
+
+            if (target.classList.contains('project-header')) {
+              target.classList.add('reveal');
+              observer.unobserve(target);
+            } else if (target.classList.contains('project-card')) {
+              const index = Array.from(cards).indexOf(target);
+
+              setTimeout(() => {
+                target.classList.add('reveal');
+              }, (index % 3) * 150);
+
+              observer.unobserve(target);
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: '0px 0px -10px 0px',
+      }
+    );
+
     if (header) observer.observe(header);
-    
-    // Observe all cards
-    cards.forEach(card => observer.observe(card));
+    cards.forEach((card) => observer.observe(card));
   };
 
   window.addEventListener('load', initProjectReveal);
-
-  // Support for Astro View Transitions
   document.addEventListener('astro:after-swap', initProjectReveal);
 </script>

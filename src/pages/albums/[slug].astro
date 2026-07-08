@@ -1,0 +1,314 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/nav.astro";
+import { Icon } from "astro-icon/components";
+import albums from "../../data/albums.json";
+
+export async function getStaticPaths() {
+  return albums.map((album) => ({
+    params: { slug: album.slug },
+    props: { album }
+  }));
+}
+
+const { album } = Astro.props;
+
+const currentIndex = albums.findIndex((item) => item.slug === album.slug);
+
+const previous =
+  albums[currentIndex - 1] ?? albums[albums.length - 1];
+
+const next =
+  albums[currentIndex + 1] ?? albums[0];
+
+const genreItems = album.genre?.split("/").map((item) => item.trim()) ?? [];
+
+const credits = [
+  "Composition",
+  "Lyrics",
+  "Arrangement",
+  "Production",
+  "Vocals",
+  "Guitars",
+  "Orchestration",
+  "Choirs",
+  "Programming",
+  "Sound Design",
+  "Mix",
+  "Mastering",
+  "Artwork",
+  "Concept"
+];
+
+const features = genreItems.slice(0, 4);
+---
+
+<Layout title={`${album.title} | Berk KÖKSAL`}>
+  <Nav />
+
+  <section class="relative min-h-screen pt-32 pb-24 overflow-hidden">
+    <div class="absolute inset-0 -z-30">
+      <img
+        src={album.cover}
+        alt=""
+        class="w-full h-full object-cover blur-3xl scale-125 opacity-30"
+      />
+    </div>
+
+    <div class="absolute inset-0 -z-20 bg-gradient-to-b from-background/70 via-background/95 to-background"></div>
+
+    <div class="absolute left-1/2 top-1/2 -z-10 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#D4AF37]/10 blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-14 items-center">
+      <button
+        type="button"
+        class="album-cover-button relative group"
+        aria-label={`Open ${album.title} cover`}
+      >
+        <div class="absolute -inset-8 rounded-full bg-[#D4AF37]/20 blur-3xl opacity-70 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+        <img
+          src={album.cover}
+          alt={album.title}
+          class="relative w-full max-w-xl mx-auto rounded-[2rem] border border-[#D4AF37]/30 shadow-[0_0_90px_rgba(212,175,55,0.25)] transition-transform duration-700 group-hover:scale-[1.025]"
+        />
+      </button>
+
+      <div class="space-y-7 text-center lg:text-left">
+        <p class="text-[#D4AF37] uppercase tracking-[0.45em] text-xs font-bold">
+          Album • {album.year}
+        </p>
+
+        <h1 class="text-5xl md:text-7xl font-heading font-bold text-maintext leading-tight">
+          {album.title}
+        </h1>
+
+        <p class="text-xl text-accent leading-8">
+          {album.tracksCount} Tracks • {album.duration}
+        </p>
+
+        <p class="text-subtext text-lg leading-8 max-w-2xl">
+          {album.description}
+        </p>
+
+        <div class="flex flex-wrap gap-2 justify-center lg:justify-start">
+          {genreItems.map((item) => (
+            <span class="rounded-full border border-accent/20 bg-accent/5 px-4 py-2 text-xs text-accent">
+              {item}
+            </span>
+          ))}
+        </div>
+
+        <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
+          <a
+            href={album.spotify}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 rounded-full border border-[#D4AF37]/40 bg-[#D4AF37]/10 px-7 py-3 text-maintext hover:bg-[#D4AF37]/20 hover:shadow-[0_0_35px_rgba(212,175,55,0.25)] hover:scale-105 transition-all"
+          >
+            <Icon name="mdi:spotify" class="w-5 h-5" />
+            Listen on Spotify
+          </a>
+
+          <a
+            href="/#projects"
+            class="inline-flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-7 py-3 text-maintext hover:bg-accent/20 hover:scale-105 transition-all"
+          >
+            Back to Discography
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-container max-w-6xl mx-auto space-y-28">
+
+    <section class="grid grid-cols-1 lg:grid-cols-[0.75fr_1.25fr] gap-12">
+      <div>
+        <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-4">
+          I
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext">
+          About the Album
+        </h2>
+      </div>
+
+      <div class="space-y-6 text-subtext text-lg leading-8">
+        <p>
+          {album.story}
+        </p>
+
+        <p>
+          This album is part of Berk KÖKSAL's Neo-Sacred Zikr universe, where music is used as a way of remembrance, reflection and glorification of GOD.
+        </p>
+
+        <p>
+          Its sound world brings together sacred atmosphere, modern production and spiritual intention while keeping the focus on zikr, contemplation and inner awareness.
+        </p>
+      </div>
+    </section>
+
+    <section class="rounded-[2rem] border border-accent/20 bg-accent/5 p-10 md:p-14">
+      <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
+        II · Musical Identity
+      </p>
+
+      <h2 class="text-4xl md:text-6xl font-heading font-bold text-maintext mb-10">
+        A sacred sound language shaped by remembrance.
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {features.map((feature) => (
+          <div class="rounded-2xl border border-accent/20 bg-background/40 p-6">
+            <p class="text-[#D4AF37] text-xs uppercase tracking-[0.3em] font-bold mb-3">
+              Neo-Sacred Element
+            </p>
+
+            <h3 class="text-2xl font-heading font-bold text-maintext">
+              {feature}
+            </h3>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12">
+      <div>
+        <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
+          III · Track List
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext">
+          {album.tracksCount} Sacred Works
+        </h2>
+      </div>
+
+      <ol class="rounded-[2rem] border border-[#D4AF37]/20 bg-[#D4AF37]/5 p-6 md:p-8 space-y-1">
+        {album.tracks.map((track, index) => (
+          <li class="group flex items-center gap-4 rounded-xl border-b border-white/5 px-2 py-4 text-subtext hover:bg-white/5 transition-colors">
+            <span class="text-[#D4AF37] font-mono text-sm w-8">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+
+            <Icon
+              name="mdi:play-circle-outline"
+              class="w-5 h-5 text-[#D4AF37]/50 group-hover:text-[#D4AF37] transition-colors"
+            />
+
+            <span class="group-hover:text-maintext transition-colors">
+              {track}
+            </span>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section>
+      <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
+        IV · Production
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext mb-10">
+        One-Man Production Vision
+      </h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {credits.map((credit) => (
+          <div class="rounded-2xl border border-accent/20 bg-accent/5 p-5">
+            <p class="text-[#D4AF37] text-xs uppercase tracking-widest mb-2">
+              {credit}
+            </p>
+
+            <p class="text-maintext font-bold">
+              Berk KÖKSAL
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+<section class="rounded-[2rem] border border-[#D4AF37]/20 bg-[#D4AF37]/5 p-10 md:p-14 text-center">
+  <p class="text-[#D4AF37] text-xs uppercase tracking-[0.45em] font-bold mb-8">
+    The Final Testament
+  </p>
+
+  <blockquote class="max-w-4xl mx-auto">
+    <p class="text-3xl md:text-5xl font-heading font-bold text-maintext leading-tight italic">
+      "Glorify the name of your Lord, the Most High."
+    </p>
+
+    <p class="mt-8 text-subtext text-sm">
+      Quran 87:1 — Rashad Khalifa Translation
+    </p>
+  </blockquote>
+</section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <a
+        href={`/albums/${previous.slug}`}
+        class="group rounded-[2rem] border border-accent/10 bg-accent/5 p-8 hover:border-[#D4AF37]/30 transition-all"
+      >
+        <p class="text-accent text-xs uppercase tracking-widest mb-3">
+          Previous Album
+        </p>
+
+        <h3 class="text-2xl font-heading font-bold group-hover:text-[#D4AF37] transition-colors">
+          {previous.title}
+        </h3>
+      </a>
+
+      <a
+        href={`/albums/${next.slug}`}
+        class="group rounded-[2rem] border border-accent/10 bg-accent/5 p-8 text-right hover:border-[#D4AF37]/30 transition-all"
+      >
+        <p class="text-accent text-xs uppercase tracking-widest mb-3">
+          Next Album
+        </p>
+
+        <h3 class="text-2xl font-heading font-bold group-hover:text-[#D4AF37] transition-colors">
+          {next.title}
+        </h3>
+      </a>
+    </section>
+  </section>
+
+  <div id="cover-lightbox" class="fixed inset-0 z-[999] hidden items-center justify-center bg-black/90 p-6">
+    <button
+      id="close-lightbox"
+      class="absolute top-6 right-6 text-maintext hover:text-[#D4AF37]"
+      aria-label="Close cover"
+    >
+      <Icon name="mdi:close" class="w-9 h-9" />
+    </button>
+
+    <img
+      src={album.cover}
+      alt={album.title}
+      class="max-h-[90vh] max-w-[90vw] rounded-3xl border border-[#D4AF37]/30 shadow-[0_0_100px_rgba(212,175,55,0.25)]"
+    />
+  </div>
+
+  <script>
+    const openButton = document.querySelector(".album-cover-button");
+    const lightbox = document.querySelector("#cover-lightbox");
+    const closeButton = document.querySelector("#close-lightbox");
+
+    openButton?.addEventListener("click", () => {
+      lightbox?.classList.remove("hidden");
+      lightbox?.classList.add("flex");
+    });
+
+    closeButton?.addEventListener("click", () => {
+      lightbox?.classList.add("hidden");
+      lightbox?.classList.remove("flex");
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        lightbox?.classList.add("hidden");
+        lightbox?.classList.remove("flex");
+      }
+    });
+  </script>
+</Layout>

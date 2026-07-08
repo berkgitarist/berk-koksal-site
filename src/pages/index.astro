@@ -1,4 +1,5 @@
 ---
+import Singles from "../components/singles.astro";
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/nav.astro";
 import Home from "../components/home.astro";
@@ -34,10 +35,11 @@ const { webpageTitle } = data;
 ---
 
 <Layout title={webpageTitle}>
-  	<Nav />
-	<Home />
-	<Career />
-	<Projects />
-	<Tech />
-	<Contact />
+  <Nav />
+  <Home />
+  <Career />
+  <Projects />
+  <Singles />
+  <Tech />
+  <Contact />
 </Layout>

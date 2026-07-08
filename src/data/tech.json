@@ -1,35 +1,54 @@
 {
   "categories": [
     {
-      "title": "Mobile Development",
+      "title": "Sacred Music Elements",
       "skills": [
-        { "name": "Flutter", "level": 3, "icon": "skill-icons:flutter-dark" },
-        { "name": "Dart", "level": 3, "icon": "skill-icons:dart-dark" },
-        { "name": "Kotlin", "level": 1, "icon": "skill-icons:kotlin-dark" }
+        { "name": "Zikr", "level": 3, "icon": "mdi:music-circle" },
+        { "name": "Esma-ul Husna", "level": 3, "icon": "mdi:star-crescent" },
+        { "name": "Sacred Choir", "level": 3, "icon": "mdi:account-music" },
+        { "name": "Spiritual Atmosphere", "level": 3, "icon": "mdi:weather-night" }
       ]
     },
     {
-      "title": "Frontend",
+      "title": "Vocal Universe",
       "skills": [
-        { "name": "Astro", "level": 2, "icon": "skill-icons:astro" },
-        { "name": "HTML", "level": 2, "icon": "skill-icons:html" },
-        { "name": "CSS", "level": 2, "icon": "skill-icons:css" },
-        { "name": "Tailwind CSS", "level": 1, "icon": "skill-icons:tailwindcss-dark" }
+        { "name": "Children Choir", "level": 3, "icon": "mdi:account-child-circle" },
+        { "name": "Female Vocals", "level": 3, "icon": "mdi:microphone-variant" },
+        { "name": "Male Vocals", "level": 2, "icon": "mdi:microphone" },
+        { "name": "Choral Layers", "level": 3, "icon": "mdi:account-group" }
       ]
     },
     {
-      "title": "Backend",
+      "title": "Instruments",
       "skills": [
-        { "name": "FastAPI", "level": 2, "icon": "skill-icons:fastapi" },
-        { "name": "Python", "level": 2, "icon": "skill-icons:python-dark" },
-        { "name": "Firebase", "level": 3, "icon": "vscode-icons:file-type-firebase" }
+        { "name": "Electric Guitar", "level": 3, "icon": "mdi:guitar-electric" },
+        { "name": "Piano", "level": 3, "icon": "mdi:piano" },
+        { "name": "Pipe Organ", "level": 3, "icon": "mdi:church" },
+        { "name": "Strings", "level": 3, "icon": "mdi:violin" },
+        { "name": "Ney", "level": 2, "icon": "mdi:music-note" },
+        { "name": "Harp", "level": 2, "icon": "mdi:music-clef-treble" }
       ]
     },
     {
-      "title": "Database",
+      "title": "Genres",
       "skills": [
-        { "name": "SQLite", "level": 3, "icon": "skill-icons:sqlite" },
-        { "name": "PostgreSQL", "level": 2, "icon": "skill-icons:postgresql-dark" }
+        { "name": "Symphonic Sacred", "level": 3, "icon": "mdi:music-clef-treble" },
+        { "name": "Sacred Rock", "level": 3, "icon": "mdi:guitar-electric" },
+        { "name": "Spiritual Rap", "level": 3, "icon": "mdi:microphone-variant" },
+        { "name": "Ambient Zikr", "level": 3, "icon": "mdi:meditation" },
+        { "name": "Sacred Choral", "level": 3, "icon": "mdi:account-group" },
+        { "name": "Neoclassical", "level": 3, "icon": "mdi:music" }
+      ]
+    },
+    {
+      "title": "Production",
+      "skills": [
+        { "name": "Composition", "level": 3, "icon": "mdi:pencil" },
+        { "name": "Arrangement", "level": 3, "icon": "mdi:tune" },
+        { "name": "Orchestration", "level": 3, "icon": "mdi:music-box-multiple" },
+        { "name": "Mixing", "level": 3, "icon": "mdi:console" },
+        { "name": "Mastering", "level": 3, "icon": "mdi:waveform" },
+        { "name": "Sound Design", "level": 3, "icon": "mdi:surround-sound" }
       ]
     }
   ]

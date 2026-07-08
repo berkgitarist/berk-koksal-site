@@ -1,20 +1,83 @@
 [
   {
-    "title": "Awesome Website",
-    "description": "A high-performance, SEO-optimized web application built with modern frameworks to showcase technical expertise.",
-    "images": ["astro-01.webp", "astro-02.jpeg"],
-    "tech": ["Astro", "Tailwind"],
+    "title": "ZIKR-I BATIN",
+    "description": "A deeply personal Neo-Sacred Zikr album focused on the silent remembrance of the heart, inner reflection and the beautiful names of GOD.",
+    "images": ["albums/zikr-i-batin.webp"],
+    "tech": ["Neo-Sacred Zikr", "Sacred Choral Music", "Neoclassical", "Spiritual Music"],
     "platforms": ["web"],
-    "link": "https://astro.build/themes/details/career-portfolio-data-driven-astro-ssg/",
-    "category": "Published Website"
+    "link": "/albums/zikr-i-batin",
+    "category": "Album • 2026"
   },
   {
-    "title": "Demo Mobile App",
-    "description": "A high-performance mobile application built with modern frameworks to showcase technical expertise.",
-    "images": ["astro-02.jpeg", "#"],
-    "tech": ["Flutter", "Dart", "REST API"],
-    "platforms": ["apple-ios", "android"],
-    "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Hobby"
+    "title": "ZIKR RAP",
+    "description": "A sacred hip-hop album where zikr meets rap vocals, boom bap rhythms and modern spiritual expression.",
+    "images": ["albums/zikr-rap.webp"],
+    "tech": ["Neo-Sacred Zikr", "Spiritual Rap", "Sacred Hip-Hop"],
+    "platforms": ["web"],
+    "link": "/albums/zikr-rap",
+    "category": "Album • 2026"
+  },
+  {
+    "title": "Neo-Sacred Zikr: One God One Love",
+    "description": "A bright, universal and children-choir-centered sacred music album carrying the message of One GOD, One Love and One Truth.",
+    "images": ["albums/one-god-one-love.webp"],
+    "tech": ["Sacred Music", "Children Choir", "Spiritual Contemporary"],
+    "platforms": ["web"],
+    "link": "/albums/one-god-one-love",
+    "category": "Album • 2026"
+  },
+  {
+    "title": "Neo-Sacred Zikr: Classical Chorus",
+    "description": "A monumental sacred choral album combining classical choir aesthetics, neoclassical orchestration, cathedral atmosphere and zikr.",
+    "images": ["albums/classical-chorus.webp"],
+    "tech": ["Sacred Choral Music", "Neoclassical", "Choir"],
+    "platforms": ["web"],
+    "link": "/albums/classical-chorus",
+    "category": "Album • 2026"
+  },
+  {
+    "title": "ZIKR ROCK",
+    "description": "A powerful Neo-Sacred Zikr album where rock, metal, neoclassical guitars, cathedral organs and sacred choirs become a language of remembrance.",
+    "images": ["albums/zikr-rock.webp"],
+    "tech": ["Sacred Rock", "Progressive Rock", "Neoclassical Metal"],
+    "platforms": ["web"],
+    "link": "/albums/zikr-rock",
+    "category": "Album • 2026"
+  },
+  {
+    "title": "Zikr Nur",
+    "description": "A peaceful ambient zikr album shaped by female vocals, rain atmospheres, ney melodies and the theme of divine light.",
+    "images": ["albums/zikr-nur.webp"],
+    "tech": ["Ambient Spiritual Music", "Sacred Meditation", "Female Vocals"],
+    "platforms": ["web"],
+    "link": "/albums/zikr-nur",
+    "category": "Album • 2026"
+  },
+  {
+    "title": "Zikr Huu",
+    "description": "A minimalist sacred meditation album focused on repetition, female vocals and the quiet remembrance of the heart.",
+    "images": ["albums/zikr-huu.webp"],
+    "tech": ["Spiritual Ambient", "Sacred Meditation", "Minimal Zikr"],
+    "platforms": ["web"],
+    "link": "/albums/zikr-huu",
+    "category": "Album • 2026"
+  },
+  {
+    "title": "Zikr Symphony",
+    "description": "The first great manifesto of the Neo-Sacred Zikr universe, combining symphonic orchestra, choir, progressive rock and sacred remembrance.",
+    "images": ["albums/zikr-symphony.webp"],
+    "tech": ["Symphonic Sacred Music", "Neoclassical", "Choral Music"],
+    "platforms": ["web"],
+    "link": "/albums/zikr-symphony",
+    "category": "Album • 2025"
+  },
+  {
+    "title": "Tanrı'nın Hediyesi",
+    "description": "The first Neo-Sacred Zikr work, centered on repentance, purification, forgiveness and turning toward GOD.",
+    "images": ["albums/tanrinin-hediyesi.webp"],
+    "tech": ["Spiritual Music", "Contemporary Devotional Music"],
+    "platforms": ["web"],
+    "link": "/albums/tanrinin-hediyesi",
+    "category": "Album • 2024"
   }
 ]

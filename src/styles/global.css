@@ -161,3 +161,56 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: color-mix(in srgb, var(--color-accent), transparent 25%);
 }
+
+.falling-note {
+  color: #D4AF37 !important;
+  opacity: 0.28;
+  text-shadow:
+    0 0 6px rgba(212, 175, 55, 0.7),
+    0 0 18px rgba(212, 175, 55, 0.35);
+  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.45));
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-8vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: translateY(45vh) translateX(var(--note-drift, 20px)) rotate(var(--note-rotate, 20deg));
+    opacity: 0.28;
+  }
+
+  90% {
+    opacity: 0.18;
+  }
+
+  100% {
+    transform: translateY(95vh) translateX(calc(var(--note-drift, 20px) * -1)) rotate(calc(var(--note-rotate, 20deg) * -1));
+    opacity: 0;
+  }
+}
+font-family:
+"Noto Naskh Arabic",
+"Noto Sans Arabic",
+"Amiri",
+serif;
+
+.biography-image img{
+    transition:transform .8s ease;
+}
+
+.biography-image:hover img{
+    transform:scale(1.03);
+}
+
+.project-card:hover{
+    box-shadow:
+        0 0 25px rgba(212,175,55,.08),
+        0 0 80px rgba(212,175,55,.04);
+}

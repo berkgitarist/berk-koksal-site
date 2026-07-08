@@ -1,0 +1,254 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/nav.astro";
+
+const principles = [
+  "To glorify the ONE GOD",
+  "To express zikr through the sounds of the modern age",
+  "To make Esmâü’l-Hüsnâ heard through music",
+  "To use music as remembrance and reflection",
+  "To see genres as tools, not the destination",
+];
+
+const albums = [
+  ["Zikr-i Batın", "Neo-Sacred Zikr / Sacred Choral Music / Spiritual Ambient", "An inner journey shaped around silent remembrance, reflection and the beautiful names of GOD."],
+  ["Zikr Symphony", "Neo-Sacred Zikr / Symphonic Sacred Music / Neoclassical", "Epic sacred music centered on symphonic arrangements, choirs and orchestral structures."],
+  ["Zikr Rock", "Neo-Sacred Zikr / Sacred Rock / Progressive Rock", "Energetic zikr works built with progressive rock, neoclassical guitars and powerful rhythms."],
+  ["Zikr Nur", "Neo-Sacred Zikr / Ambient Spiritual Music", "Peace-focused works emphasizing meditation, simplicity and inner depth."],
+  ["Zikr Huu", "Neo-Sacred Zikr / Spiritual Ambient / Sacred Meditation", "Experimental zikr based on minimalism, repetition and sacred atmosphere."],
+  ["Neo-Sacred Zikr: Classical Chorus", "Neo-Sacred Zikr / Sacred Choral Music / Neoclassical", "Large-scale choral works inspired by baroque and classical choir traditions."],
+  ["Neo-Sacred Zikr: One God One Love", "Neo-Sacred Zikr / Sacred Music / Spiritual Contemporary", "International Neo-Sacred Zikr works carrying a universal message in English."],
+  ["ZIKR RAP", "Neo-Sacred Zikr / Spiritual Rap / Sacred Hip-Hop", "An experimental project where zikr and spiritual themes meet contemporary rhythmic expression."],
+  ["Tanrı'nın Hediyesi", "Neo-Sacred Zikr / Spiritual Music / Contemporary Devotional Music", "A concept work shaped around repentance, hope, mercy and spiritual journey."],
+];
+
+const singles = [
+  "Requiem Concerto",
+  "Dua",
+  "Zikir (La ilahe illa Allah)",
+  "Zikir (Allah Allah La ilahe illa Allah)",
+  "Allahu Lena – Tanrı Bizimle",
+  "Tanrıya Övgüler – All Praising Be to GOD",
+  "Allahu Ekber",
+  "Ya Baki Entel Baki",
+  "Rabbi Eûzu Bike",
+  "Allahu Allah",
+];
+---
+
+<Layout title="Neo-Sacred Zikr | Berk KÖKSAL">
+  <Nav />
+
+  <section class="min-h-screen py-28">
+    <div class="max-w-6xl mx-auto space-y-28">
+
+      <!-- HERO -->
+      <header class="relative overflow-hidden rounded-[2rem] border border-accent/20">
+        <img
+          src="/artist/neo-sacred-zikr-banner.webp"
+          alt="Neo-Sacred Zikr"
+          class="w-full h-[460px] md:h-[620px] object-cover opacity-75"
+        />
+
+        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/10"></div>
+
+        <div class="absolute inset-0 flex items-center p-10 md:p-16">
+          <div class="max-w-3xl">
+            <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
+              Sacred Music Universe
+            </p>
+
+            <h1 class="text-5xl md:text-7xl font-heading font-bold text-maintext mb-6">
+              Neo-Sacred Zikr
+            </h1>
+
+            <p class="text-xl md:text-2xl text-subtext leading-9">
+              A sacred music universe developed by Berk KÖKSAL, bringing together
+              zikr music, sacred choir tradition, symphonic orchestration,
+              progressive rock, ambient sound design and modern production.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <!-- DEFINITION -->
+      <section class="grid grid-cols-1 lg:grid-cols-[0.75fr_1.25fr] gap-12">
+        <div>
+          <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-4">
+            I
+          </p>
+          <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext">
+            What is Neo-Sacred Zikr?
+          </h2>
+        </div>
+
+        <div class="space-y-6 text-subtext text-lg leading-8">
+          <p>
+            Neo-Sacred Zikr is a contemporary sacred music approach created by
+            Berk KÖKSAL. It combines zikr, Esmâü’l-Hüsnâ, divine reflection and
+            spiritual themes with classical music, symphonic structure,
+            progressive rock, neoclassical arrangements, choir music and modern
+            production techniques.
+          </p>
+
+          <p>
+            Its purpose is not merely to produce music, but to invite the listener
+            into reflection, peace and the experience of divine greatness through art.
+          </p>
+
+          <p>
+            Within this musical universe, different series and albums are created.
+            Each one belongs to the same spiritual center while offering a distinct
+            aesthetic direction.
+          </p>
+        </div>
+      </section>
+
+      <!-- PRINCIPLES -->
+      <section class="rounded-[2rem] border border-accent/20 bg-accent/5 p-10 md:p-14">
+        <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
+          II · Core Principles
+        </p>
+
+        <h2 class="text-4xl md:text-6xl font-heading font-bold text-maintext mb-10">
+          Music as remembrance, reflection and glorification.
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {principles.map((item) => (
+            <div class="rounded-2xl border border-accent/20 bg-background/40 p-6">
+              <p class="text-maintext text-xl font-heading font-bold">
+                {item}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- IMAGE -->
+      <section class="rounded-[2rem] overflow-hidden border border-accent/20">
+        <img
+          src="/artist/singles.webp"
+          alt="Neo-Sacred Zikr singles"
+          class="w-full object-cover"
+        />
+      </section>
+
+      <!-- UNIVERSE -->
+      <section>
+        <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
+          III · Universe
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext mb-8">
+          From symphonic sacred music to ambient meditation.
+        </h2>
+
+        <p class="text-subtext text-lg leading-8 max-w-4xl mb-10">
+          The Neo-Sacred Zikr universe gathers different musical approaches around
+          the same spiritual center: sacred choirs, symphonic music, ambient
+          meditation, progressive rock, spiritual rap, neoclassical textures and
+          devotional contemporary music.
+        </p>
+
+        <div class="space-y-5">
+          {albums.map(([title, genre, description]) => (
+            <div class="p-6 rounded-2xl border border-accent/20 bg-accent/5">
+              <p class="text-accent text-xs uppercase tracking-[0.3em] font-bold mb-3">
+                {genre}
+              </p>
+
+              <h3 class="text-2xl md:text-3xl font-heading font-bold text-maintext mb-3">
+                {title}
+              </h3>
+
+              <p class="text-subtext leading-7">
+                {description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- SINGLES -->
+      <section class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12">
+        <div>
+          <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
+            IV · First Works
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext">
+            Early Singles
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {singles.map((single) => (
+            <div class="rounded-xl border border-accent/20 bg-accent/5 p-5 text-maintext font-bold">
+              {single}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- JOURNEY -->
+      <section>
+        <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
+          V · Journey
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext mb-10">
+          Neo-Sacred Zikr Timeline
+        </h2>
+
+        <div class="space-y-5">
+          {[
+            ["2024", "Tanrı'nın Hediyesi"],
+            ["2025", "Zikr Symphony"],
+            ["2026", "Zikr Huu · Zikr Nur · ZIKR ROCK · Classical Chorus · One God One Love · ZIKR RAP · Zikr-i Batın"],
+          ].map(([year, title]) => (
+            <div class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-4 p-6 rounded-2xl border border-accent/20 bg-accent/5">
+              <p class="text-accent font-bold">{year}</p>
+              <h3 class="text-2xl font-heading font-bold text-maintext">
+                {title}
+              </h3>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- FINAL -->
+      <section class="text-center py-20">
+        <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-8">
+          Final Statement
+        </p>
+
+        <h2 class="text-4xl md:text-6xl font-heading font-bold text-maintext leading-tight max-w-5xl mx-auto">
+          Zikr becomes sound.<br />
+          Sound becomes remembrance.
+        </h2>
+      </section>
+
+      <!-- QURAN LINK -->
+      <a
+        href="https://kuransonahit.tr"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block p-10 md:p-14 rounded-[2rem] border border-accent/30 bg-accent/5 hover:bg-accent/10 transition-all text-center"
+      >
+        <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
+          QURAN: THE FINAL TESTAMENT
+        </p>
+
+        <h2 class="text-3xl md:text-5xl font-heading font-bold text-maintext leading-tight">
+          [87:1] Glorify the name of your Lord, the Most High.
+        </h2>
+
+        <p class="mt-6 text-accent text-sm">
+          kuransonahit.tr ↗
+        </p>
+      </a>
+
+    </div>
+  </section>
+</Layout>

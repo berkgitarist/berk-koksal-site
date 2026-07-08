@@ -17,10 +17,10 @@ const defaultTheme = `${baseTheme}-dark`;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/favicon.png?v=2" />
+<link rel="apple-touch-icon" href="/artist-logo.webp" />
     <title>{title}</title>
 
-    <!-- THEME TOGGLE SCRIPT -->
     <script is:inline define:vars={{ baseTheme, defaultTheme }}>
       const savedTheme = localStorage.getItem('theme');
 
@@ -31,8 +31,8 @@ const defaultTheme = `${baseTheme}-dark`;
         localStorage.setItem('theme', defaultTheme);
       }
     </script>
-
   </head>
+
   <body class="bg-container relative min-h-screen overflow-x-hidden antialiased">
     <div 
       id="matrix-container" 
@@ -41,7 +41,7 @@ const defaultTheme = `${baseTheme}-dark`;
     ></div>
 
     <main class="px-2 sm:px-12 md:px-14 lg:px-28 max-w-360 mx-auto relative z-0">
-        <slot />
+      <slot />
     </main>
 
     <button
@@ -53,7 +53,9 @@ const defaultTheme = `${baseTheme}-dark`;
         <circle cx="28" cy="28" r="24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent/5"></circle>
         <circle
           id="progress-circle"
-          cx="28" cy="28" r="24"
+          cx="28"
+          cy="28"
+          r="24"
           fill="none"
           stroke="currentColor" 
           stroke-width="3"
@@ -73,32 +75,40 @@ const defaultTheme = `${baseTheme}-dark`;
 
     <script>
       const container = document.getElementById('matrix-container');
-      const characters = "{}[]()<>/\=+*01;";
-      // const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$#@&%";
-      const colors = ["#FF4500", "#32CD32", "#1E90FF", "#FFD700", "#8A2BE2", "#FF1493"];
+      const notes = ["♪", "♫", "♬", "♩", "♭", "♯"];
+
+function randomSymbol() {
+  const r = Math.random();
+
+  if (r < 0.02) return "هو";
+  if (r < 0.10) return "ﷲ";
+
+  return notes[Math.floor(Math.random() * notes.length)];
+}
 
       function createLetter() {
         if (!container) return;
 
         const span = document.createElement('span');
-        const char = characters[Math.floor(Math.random() * characters.length)];
-        // const color = colors[Math.floor(Math.random() * colors.length)];
-        const color = "var(--color-textrain)";
-        
-        const left = Math.random() * 100; 
-        const duration = 4 + Math.random() * 8; // 4s to 10s
-        const size = 10 + Math.random() * 10; // 10px to 20px
-        
+        const char = randomSymbol();
+        const color = "#D4AF37";
+
+        const left = Math.random() * 100;
+        const duration = 8 + Math.random() * 10;
+        const size = 12 + Math.random() * 16;
+        const drift = -30 + Math.random() * 60;
+        const rotate = -40 + Math.random() * 80;
+
         span.innerText = char;
-        span.className = 'falling-letter';
+        span.className = 'falling-letter falling-note';
         span.style.left = `${left}vw`;
         span.style.color = color;
         span.style.fontSize = `${size}px`;
         span.style.animationDuration = `${duration}s`;
-        
-        // Add a slight glow effect
-        span.style.textShadow = `0 0 5px ${color}`;
-        
+        span.style.setProperty('--note-drift', `${drift}px`);
+        span.style.setProperty('--note-rotate', `${rotate}deg`);
+        span.style.textShadow = `0 0 8px ${color}, 0 0 20px rgba(212, 175, 55, 0.35)`;
+
         container.appendChild(span);
 
         setTimeout(() => {
@@ -106,62 +116,53 @@ const defaultTheme = `${baseTheme}-dark`;
         }, duration * 1000);
       }
 
+      function createStaticLetter() {
+        if (!container) return;
+
+        const span = document.createElement('span');
+        const char = randomSymbol();
+        const color = "#D4AF37";
+
+        const left = Math.random() * 100;
+        const top = Math.random() * 90;
+        const size = 12 + Math.random() * 14;
+
+        span.innerText = char;
+        span.className = 'falling-letter falling-note';
+        span.style.animation = 'none';
+        span.style.left = `${left}vw`;
+        span.style.top = `${top}vh`;
+        span.style.color = color;
+        span.style.fontSize = `${size}px`;
+        span.style.opacity = (0.08 + Math.random() * 0.2).toString();
+        span.style.textShadow = `0 0 8px ${color}`;
+
+        container.appendChild(span);
+      }
 
       if (window.innerWidth > 768) {
-        // one letter every 250ms
-        setInterval(createLetter, 250);
+        setInterval(createLetter, 450);
       } else {
-        // Static scatter effect for mobile optimization
-        const mobileCount = 20; 
+        const mobileCount = 18;
         for (let i = 0; i < mobileCount; i++) {
           createStaticLetter();
         }
       }
 
-      function createStaticLetter() {
-        if (!container) return;
-
-        const span = document.createElement('span');
-        const char = characters[Math.floor(Math.random() * characters.length)];
-        const color = "var(--color-textrain)";
-        
-        const left = Math.random() * 100; 
-        const top = Math.random() * 90; // Random vertical position
-        const size = 10 + Math.random() * 10;
-        
-        span.innerText = char;
-        span.className = 'falling-letter'; // from global.css
-        
-        // Override animation for mobile 'none'
-        span.style.animation = 'none'; 
-        span.style.left = `${left}vw`;
-        span.style.top = `${top}vh`;
-        span.style.color = color;
-        span.style.fontSize = `${size}px`;
-        span.style.opacity = (0.1 + Math.random() * 0.3).toString();
-        span.style.textShadow = `0 0 5px ${color}`;
-        
-        container.appendChild(span);
-      }
-
-      
-      // ** SCROLL TO TOP ** //
       const toTopBtn = document.getElementById('to-top');
       const progressCircle = document.getElementById('progress-circle');
-      const circumference = 150.796; // 2 * pi * 24
+      const circumference = 150.796;
       const arrowIcon = toTopBtn?.querySelector('.absolute');
 
       function handleScroll() {
         const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrollPercentage = window.scrollY / scrollHeight;
-        
-        // Update the Circle Progress
         const offset = circumference - (scrollPercentage * circumference);
+
         if (progressCircle) {
           progressCircle.style.strokeDashoffset = offset.toString();
         }
 
-        // Visibility Logic (Appear at 50%)
         if (scrollPercentage > 0.5) {
           toTopBtn?.classList.remove('translate-y-20', 'opacity-0');
           toTopBtn?.classList.add('translate-y-0', 'opacity-100');
@@ -170,7 +171,6 @@ const defaultTheme = `${baseTheme}-dark`;
           toTopBtn?.classList.remove('translate-y-0', 'opacity-100');
         }
 
-        // Bounce Logic at 98%
         if (scrollPercentage > 0.98) {
           arrowIcon?.classList.add('animate-bounce-twice');
         } else {
@@ -180,52 +180,45 @@ const defaultTheme = `${baseTheme}-dark`;
 
       window.addEventListener('scroll', handleScroll, { passive: true });
 
-      // toTopBtn?.addEventListener('click', () => {
-      //   window.scrollTo({ top: 0, behavior: 'smooth' });
-      // });
-
       toTopBtn?.addEventListener('click', () => {
-      arrowIcon?.classList.add('launching');
+        arrowIcon?.classList.add('launching');
 
-      const startPosition = window.scrollY;
-      const duration = 750;
-      let startTime: number | null = null;
-      let requestID: number; // storing the ID here
+        const startPosition = window.scrollY;
+        const duration = 750;
+        let startTime = null;
+        let requestID;
 
-      const stopAnimation = () => {
-        cancelAnimationFrame(requestID);
-        arrowIcon?.classList.remove('launching');
-        // Remove listeners once stopped
-        window.removeEventListener('wheel', stopAnimation);
-        window.removeEventListener('touchmove', stopAnimation);
-      };
+        const stopAnimation = () => {
+          cancelAnimationFrame(requestID);
+          arrowIcon?.classList.remove('launching');
+          window.removeEventListener('wheel', stopAnimation);
+          window.removeEventListener('touchmove', stopAnimation);
+        };
 
-      function easeOutQuad(t: number, b: number, c: number, d: number) {
-        t /= d;
-        return -c * t * (t - 2) + b;
-      }
-
-      function animation(currentTime: number) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = easeOutQuad(timeElapsed, startPosition, -startPosition, duration);
-        
-        window.scrollTo(0, run);
-
-        if (timeElapsed < duration) {
-          requestID = requestAnimationFrame(animation);
-        } else {
-          stopAnimation();
+        function easeOutQuad(t, b, c, d) {
+          t /= d;
+          return -c * t * (t - 2) + b;
         }
-      }
 
-      // Listen for any user interruption
-      window.addEventListener('wheel', stopAnimation, { once: true });
-      window.addEventListener('touchmove', stopAnimation, { once: true });
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const run = easeOutQuad(timeElapsed, startPosition, -startPosition, duration);
 
-      requestID = requestAnimationFrame(animation);
-    });
+          window.scrollTo(0, run);
 
+          if (timeElapsed < duration) {
+            requestID = requestAnimationFrame(animation);
+          } else {
+            stopAnimation();
+          }
+        }
+
+        window.addEventListener('wheel', stopAnimation, { once: true });
+        window.addEventListener('touchmove', stopAnimation, { once: true });
+
+        requestID = requestAnimationFrame(animation);
+      });
     </script>
   </body>
 </html>
