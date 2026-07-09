@@ -41,6 +41,18 @@ const credits = [
 ];
 
 const features = genreItems.slice(0, 4);
+
+const spotifyAlbumId = album.spotify
+  ?.split("/album/")
+  ?.at(1)
+  ?.split("?")
+  ?.at(0)
+  ?.split("/")
+  ?.at(0);
+
+const spotifyEmbedUrl = spotifyAlbumId
+  ? `https://open.spotify.com/embed/album/${spotifyAlbumId}?utm_source=generator`
+  : null;
 ---
 
 <Layout title={`${album.title} | Berk KÖKSAL`}>
@@ -119,6 +131,32 @@ const features = genreItems.slice(0, 4);
         </div>
       </div>
     </div>
+
+    {spotifyEmbedUrl && (
+      <div class="max-w-6xl mx-auto px-4 mt-16">
+        <div class="rounded-[2rem] border border-[#1DB954]/25 bg-[#1DB954]/5 p-4 md:p-5 shadow-[0_0_60px_rgba(29,185,84,0.08)]">
+          <div class="flex items-center gap-3 mb-4">
+            <Icon name="mdi:spotify" class="w-5 h-5 text-[#1DB954]" />
+
+            <p class="text-[#1DB954] text-xs uppercase tracking-[0.35em] font-bold">
+              Official Spotify Stream
+            </p>
+          </div>
+
+          <div class="overflow-hidden rounded-[1.25rem] border border-[#1DB954]/20 bg-background/40">
+            <iframe
+              src={spotifyEmbedUrl}
+              width="100%"
+              height="492"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              class="block h-[352px] sm:h-[420px] lg:h-[492px]"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    )}
   </section>
 
   <section class="section-container max-w-6xl mx-auto space-y-28">
@@ -204,9 +242,10 @@ const features = genreItems.slice(0, 4);
       </ol>
     </section>
 
+
     <section>
       <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
-        IV · Production
+        V · Production
       </p>
 
       <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext mb-10">
@@ -228,21 +267,21 @@ const features = genreItems.slice(0, 4);
       </div>
     </section>
 
-<section class="rounded-[2rem] border border-[#D4AF37]/20 bg-[#D4AF37]/5 p-10 md:p-14 text-center">
-  <p class="text-[#D4AF37] text-xs uppercase tracking-[0.45em] font-bold mb-8">
-    The Final Testament
-  </p>
+    <section class="rounded-[2rem] border border-[#D4AF37]/20 bg-[#D4AF37]/5 p-10 md:p-14 text-center">
+      <p class="text-[#D4AF37] text-xs uppercase tracking-[0.45em] font-bold mb-8">
+        The Final Testament
+      </p>
 
-  <blockquote class="max-w-4xl mx-auto">
-    <p class="text-3xl md:text-5xl font-heading font-bold text-maintext leading-tight italic whitespace-pre-line">
-      {album.verse.text}
-    </p>
+      <blockquote class="max-w-4xl mx-auto">
+        <p class="text-3xl md:text-5xl font-heading font-bold text-maintext leading-tight italic whitespace-pre-line">
+          {album.verse.text}
+        </p>
 
-    <p class="mt-8 text-subtext text-sm whitespace-pre-line">
-      {album.verse.reference} — {album.verse.source}
-    </p>
-  </blockquote>
-</section>
+        <p class="mt-8 text-subtext text-sm whitespace-pre-line">
+          {album.verse.reference} — {album.verse.source}
+        </p>
+      </blockquote>
+    </section>
 
     <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <a
