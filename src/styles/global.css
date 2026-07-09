@@ -450,3 +450,8 @@
     background-position: 200%;
   }
 }
+
+.group:hover img {
+    transform: scale(1.02);
+    filter: brightness(1.05);
+}
