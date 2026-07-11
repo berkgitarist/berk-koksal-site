@@ -1,0 +1,664 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/nav.astro";
+
+const albums = [
+  {
+    year: "2024",
+    title: "Tanrı'nın Hediyesi",
+    description:
+      "The spiritual beginning of the Neo-Sacred Zikr journey, centered on repentance, purification, forgiveness and turning toward GOD."
+  },
+  {
+    year: "2025",
+    title: "Zikr Symphony",
+    description:
+      "A large-scale sacred work combining symphonic orchestra, choir, progressive rock, neoclassical metal, organ textures and zikr."
+  },
+  {
+    year: "2026",
+    title: "Zikr Huu",
+    description:
+      "A minimalist and peaceful album focused on repetition, female vocals and the quiet remembrance of the heart."
+  },
+  {
+    year: "2026",
+    title: "Zikr Nur",
+    description:
+      "An ambient spiritual journey shaped by female vocals, rain atmospheres, ney melodies and the theme of divine light."
+  },
+  {
+    year: "2026",
+    title: "ZIKR ROCK",
+    description:
+      "A powerful meeting of zikr, progressive rock, neoclassical guitars, cathedral organs and sacred choirs."
+  },
+  {
+    year: "2026",
+    title: "Neo-Sacred Zikr: Classical Chorus",
+    description:
+      "A monumental choral work combining classical sacred choir aesthetics, liturgical harmonies and neoclassical orchestration."
+  },
+  {
+    year: "2026",
+    title: "Neo-Sacred Zikr: One God One Love",
+    description:
+      "A bright and universal album built around children's choir, gratitude, peace, divine love and belief in the ONE GOD."
+  },
+  {
+    year: "2026",
+    title: "ZIKR RAP",
+    description:
+      "A sacred hip-hop project bringing remembrance, submission and the beautiful names of GOD into the rhythmic language of rap."
+  },
+  {
+    year: "2026",
+    title: "Zikr-i Batın",
+    description:
+      "A deeply personal work centered on inner remembrance, sacred choirs, reflection and the silent zikr of the heart."
+  }
+];
+
+const productionSkills = [
+  "Composition",
+  "Songwriting",
+  "Guitar Performance",
+  "Vocals",
+  "Arrangement",
+  "Recording",
+  "MIDI Programming",
+  "Orchestration",
+  "Sound Design",
+  "Mixing",
+  "Mastering",
+  "Visual Concepts"
+];
+---
+
+<Layout title="Berk KÖKSAL | Full Biography">
+  <Nav />
+
+  <main>
+    <section class="px-4 pb-12 pt-28 md:px-8 md:pb-16 md:pt-32">
+      <div class="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-accent/25 shadow-2xl shadow-black/30">
+        <div class="relative aspect-[4/5] sm:aspect-[16/10] md:aspect-[16/8] lg:aspect-[16/7]">
+          <img
+            src="/artist/biography/hero-neo-sacred-zikr.webp"
+            alt="Berk Köksal and the Neo-Sacred Zikr artistic universe"
+            class="absolute inset-0 h-full w-full object-cover object-center"
+            fetchpriority="high"
+          />
+
+          <div class="absolute inset-0 bg-gradient-to-r from-background/95 via-background/60 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-background/20"></div>
+
+          <div class="relative z-10 flex h-full items-end p-6 sm:p-9 md:p-12 lg:p-16">
+            <div class="max-w-3xl">
+              <p class="mb-4 text-xs font-bold uppercase tracking-[0.4em] text-accent md:text-sm">
+                The Story Behind
+              </p>
+
+              <h1 class="text-4xl font-heading font-bold leading-none text-maintext sm:text-5xl md:text-6xl lg:text-7xl">
+                Berk KÖKSAL
+              </h1>
+
+              <p class="mt-5 text-base leading-7 text-maintext/90 sm:text-lg md:text-xl">
+                Composer • Guitarist • Music Producer • Software Engineer
+              </p>
+
+              <p class="mt-1 text-lg font-bold text-accent md:text-2xl">
+                Founder of Neo-Sacred Zikr
+              </p>
+
+              <a
+                href="#biography"
+                class="group mt-7 inline-flex items-center gap-3 rounded-full border border-maintext/25 bg-background/40 px-5 py-3 text-xs font-bold uppercase tracking-[0.2em] text-maintext backdrop-blur-md transition-all duration-300 hover:border-accent hover:bg-accent hover:text-background sm:text-sm"
+              >
+                <span>Discover the Journey</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 transition-transform duration-300 group-hover:translate-y-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="biography"
+      class="mx-auto max-w-6xl space-y-24 px-5 pt-2 pb-16 md:space-y-32 md:px-8 md:pt-4 md:pb-24"
+    >
+      <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="biography-image">
+          <img
+            src="/artist/biography/berk-koksal-portrait.webp"
+            alt="Portrait of Berk Köksal"
+            class="aspect-[4/5] w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div>
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">
+            I · A Life of Music and Faith
+          </p>
+
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">
+            Music as remembrance, expression and submission
+          </h2>
+
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>
+              For some people, music is entertainment. For others, it is a
+              profession or a way of expressing emotion. For Berk Köksal, music
+              carries a deeper meaning. It is a language capable of touching the
+              heart, encouraging reflection and inviting people to remember the
+              ONE GOD.
+            </p>
+
+            <p>
+              His experience as a composer, guitarist, vocalist, songwriter,
+              arranger, music producer and software engineer gradually came
+              together within a single artistic vision.
+            </p>
+
+            <p>
+              That vision became
+              <strong class="text-maintext">Neo-Sacred Zikr</strong>: an original
+              sacred music universe in which zikr, symphonic orchestration,
+              sacred choirs, progressive rock, ambient sound design and modern
+              production techniques meet around the purpose of glorifying GOD.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="pro-glass p-8 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">
+          II · The Beginning
+        </p>
+
+        <h2 class="mb-9 max-w-4xl text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">
+          Every artistic journey begins with a quiet first step.
+        </h2>
+
+        <div class="grid grid-cols-1 gap-8 text-lg leading-8 text-subtext lg:grid-cols-2">
+          <p>
+            Berk Köksal's musical journey did not begin with major stages or
+            completed albums. It developed through curiosity, listening,
+            experimentation and the desire to understand how music was created.
+            His relationship with the guitar became an important turning point,
+            opening the way toward melody, harmony and composition.
+          </p>
+
+          <p>
+            Over time, playing existing music was no longer enough. He wanted to
+            write his own works, create arrangements, record ideas and gradually
+            build an independent musical language. This desire became the
+            foundation of the production approach he would later develop.
+          </p>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="biography-image lg:order-2">
+          <img
+            src="/artist/biography/berk-koksal-metal-era.webp"
+            alt="Berk Köksal during his guitar and rock music years"
+            class="aspect-[4/5] w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="lg:order-1">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">
+            III · The Guitar Years
+          </p>
+
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">
+            The guitar became a voice
+          </h2>
+
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>
+              Rock and metal played an important role in Berk Köksal's musical
+              development. The electric guitar became more than an instrument;
+              it became a means of expression and a discipline that demanded
+              patience, precision and continuous improvement.
+            </p>
+
+            <p>
+              By listening to and studying different musical traditions, he
+              expanded his understanding of harmony, composition and
+              arrangement. The technical side of the guitar was important, but
+              its ability to carry emotion remained equally central.
+            </p>
+
+            <p>
+              The neoclassical lines, progressive structures and expressive
+              guitar passages heard in his later works are the natural result of
+              this long musical journey.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="biography-image">
+          <img
+            src="/artist/biography/berk-koksal-home-studio.webp"
+            alt="Berk Köksal in his home music studio"
+            class="aspect-[4/5] w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div>
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">
+            IV · The Home Studio
+          </p>
+
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">
+            From musical ideas to finished records
+          </h2>
+
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>
+              The desire to create music gradually expanded beyond performing an
+              instrument. Berk Köksal wanted to record his own work, construct
+              arrangements, build orchestral layers, mix every element and
+              complete the final mastering process himself.
+            </p>
+
+            <p>
+              His home studio became more than a room filled with instruments
+              and technology. It became a creative environment where ideas could
+              grow into compositions and compositions could become complete
+              albums.
+            </p>
+
+            <p>
+              Through years of study and practical production experience, he
+              developed an independent workflow capable of carrying a project
+              from its earliest concept to its final release.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="pro-glass p-8 md:p-14">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">
+              One-Man Production
+            </p>
+
+            <h2 class="text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">
+              One artistic vision across every stage
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+            {
+              productionSkills.map((skill) => (
+                <div class="rounded-2xl border border-accent/20 bg-accent/5 p-5 font-bold text-maintext">
+                  {skill}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="biography-image lg:order-2">
+          <img
+            src="/artist/biography/berk-koksal-studio-portrait.webp"
+            alt="Berk Köksal working with music and software technologies"
+            class="aspect-[4/5] w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="lg:order-1">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">
+            V · Music Meets Software
+          </p>
+
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">
+            Creativity supported by technology
+          </h2>
+
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>
+              Music and technology are often treated as separate disciplines.
+              For Berk Köksal, they are two languages that continually support
+              and strengthen one another.
+            </p>
+
+            <p>
+              His Computer Science education and software engineering
+              experience influenced not only his professional career, but also
+              his approach to music production. Analytical thinking, systematic
+              planning and problem-solving became important parts of his
+              creative workflow.
+            </p>
+
+            <p>
+              Digital audio technologies, software development, data analysis,
+              visual design and contemporary production tools now operate
+              together within the same independent production system.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative overflow-hidden rounded-[2rem] border border-accent/20">
+        <div class="relative min-h-[520px]">
+          <img
+            src="/artist/biography/hero-neo-sacred-zikr-alt.webp"
+            alt="Neo-Sacred Zikr concept artwork"
+            class="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+          />
+
+          <div class="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/25"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/20"></div>
+
+          <div class="relative z-10 flex min-h-[520px] items-center p-8 md:p-14">
+            <div class="max-w-3xl">
+              <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">
+                VI · The Birth of Neo-Sacred Zikr
+              </p>
+
+              <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">
+                A sacred musical language for the modern age
+              </h2>
+
+              <div class="space-y-6 text-lg leading-8 text-maintext/80">
+                <p>
+                  Years of experience across different musical styles eventually
+                  led to a central question:
+                </p>
+
+                <p class="text-2xl font-heading font-bold leading-10 text-maintext md:text-3xl">
+                  How could sacred music speak to the people of the modern age
+                  through contemporary sound?
+                </p>
+
+                <p>
+                  Neo-Sacred Zikr emerged as Berk Köksal's answer to that
+                  question. It brings the spiritual essence of zikr together
+                  with symphonic orchestration, sacred choral traditions,
+                  progressive rock, ambient atmospheres, neoclassical
+                  structures, rap vocals, children's choirs and modern
+                  production techniques.
+                </p>
+
+                <p>
+                  Genres are not treated as destinations. They are tools serving
+                  the same center: remembering GOD, glorifying GOD and inviting
+                  the listener toward contemplation, peace and submission.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">
+          VII · The Albums
+        </p>
+
+        <h2 class="mb-12 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">
+          An expanding sacred music universe
+        </h2>
+
+        <div class="space-y-5">
+          {
+            albums.map((album) => (
+              <article class="pro-card grid grid-cols-1 gap-4 p-6 md:grid-cols-[110px_1fr] md:p-8">
+                <p class="font-bold tracking-[0.2em] text-accent">
+                  {album.year}
+                </p>
+
+                <div>
+                  <h3 class="mb-3 text-2xl font-heading font-bold text-maintext">
+                    {album.title}
+                  </h3>
+
+                  <p class="leading-7 text-subtext">
+                    {album.description}
+                  </p>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+
+        <a
+          href="/#discography"
+          class="group mt-10 inline-flex items-center gap-3 font-bold text-accent transition-colors hover:text-maintext"
+        >
+          <span>Explore the Discography</span>
+          <span
+            aria-hidden="true"
+            class="transition-transform duration-300 group-hover:translate-x-2"
+          >
+            →
+          </span>
+        </a>
+      </section>
+
+      <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="biography-image">
+          <img
+            src="/artist/biography/kuranteyit-interface.webp"
+            alt="Kuranteyit QUR'AN research software interface"
+            class="aspect-[4/5] w-full object-cover object-left"
+            loading="lazy"
+          />
+        </div>
+
+        <div>
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">
+            VIII · QUR'AN Research
+          </p>
+
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">
+            Research, verification and reflection
+          </h2>
+
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>
+              In addition to music, Berk Köksal has devoted many years to
+              QUR'AN research and software development. His work in this area
+              grew from a personal commitment to examining the sacred text
+              directly, comparing information and encouraging thoughtful
+              investigation.
+            </p>
+
+            <p>
+              Kuranteyit was developed as a digital research environment where
+              verses, concepts, notes, translations and relationships between
+              passages could be studied in a more systematic way.
+            </p>
+
+            <p>
+              For him, software and music ultimately serve a related purpose:
+              encouraging people to reflect, seek knowledge and engage directly
+              with the message of GOD.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="biography-image lg:order-2">
+          <img
+            src="/artist/biography/berk-koksal-family.webp"
+            alt="Berk Köksal with his family"
+            class="aspect-[4/5] w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="lg:order-1">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">
+            IX · Family and Inspiration
+          </p>
+
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">
+            Music shaped by love and family
+          </h2>
+
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>
+              Behind Berk Köksal's intensive creative work stands the strength,
+              warmth and inspiration of his family. His life is not centered
+              only on albums, technology or professional projects, but also on
+              sharing life, growing together and creating meaningful memories
+              with the people he loves.
+            </p>
+
+            <p>
+              Berk Köksal has also composed music for his daughters,
+              <strong class="text-maintext">Bernaz Su Köksal</strong> and
+              <strong class="text-maintext">Arya Belinda Köksal</strong>.
+              These personal compositions reflect the love, tenderness and
+              emotional connection between a father and his children.
+            </p>
+
+            <p>
+              In this sense, music becomes more than an artistic expression. It
+              also becomes a personal memory, a family legacy and a lasting gift
+              created with love.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div class="biography-image">
+          <img
+            src="/artist/biography/berk-koksal-wedding.webp"
+            alt="Berk Köksal wedding photograph"
+            class="aspect-[4/5] w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="pro-glass flex flex-col justify-center p-8 md:p-12">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">
+            The Human Side of the Journey
+          </p>
+
+          <h2 class="mb-7 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">
+            Art grows from life itself
+          </h2>
+
+          <p class="text-lg leading-8 text-subtext">
+            Personal experiences, family bonds, responsibility, gratitude and
+            love all contribute to the emotional foundation of Berk Köksal's
+            work. The balance between family life and artistic production gives
+            his creative journey a deeper and more human dimension.
+          </p>
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="biography-image">
+          <img
+            src="/artist/biography/berk-koksal-outdoor.webp"
+            alt="Berk Köksal looking toward the future"
+            class="aspect-[4/5] w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div>
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">
+            X · Looking Ahead
+          </p>
+
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">
+            Every work is the beginning of another journey
+          </h2>
+
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>
+              Berk Köksal's vision extends beyond releasing new albums. He aims
+              to continue expanding the Neo-Sacred Zikr universe, exploring new
+              sacred musical forms and developing projects that bring music,
+              technology and spiritual reflection together.
+            </p>
+
+            <p>
+              His future journey includes new albums, new arrangements, new
+              digital projects and new approaches to sacred music for the modern
+              world.
+            </p>
+
+            <p>
+              For him, creativity is never a completed process. Every finished
+              work opens the door to another idea, another sound and another
+              opportunity to glorify GOD.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative overflow-hidden rounded-[2rem] border border-accent/25 bg-accent/5 px-7 py-16 text-center md:px-14 md:py-20">
+        <div class="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"></div>
+
+        <div class="relative z-10">
+          <p class="mb-8 text-xs font-bold uppercase tracking-[0.4em] text-accent">
+            Final Statement
+          </p>
+
+          <blockquote class="mx-auto max-w-5xl">
+            <p class="text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl lg:text-6xl">
+              “Music is not merely sound to me. It is a universal language that
+              calls humanity to remember the ONE GOD.”
+            </p>
+
+            <footer class="mt-9 text-lg font-bold text-accent">
+              — Berk Köksal
+            </footer>
+          </blockquote>
+
+          <div class="mt-12 flex flex-col justify-center gap-5 sm:flex-row">
+            <a
+              href="/neo-sacred-zikr"
+              class="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 font-bold text-background transition-transform duration-300 hover:-translate-y-1"
+            >
+              Explore Neo-Sacred Zikr
+            </a>
+
+            <a
+              href="/#discography"
+              class="inline-flex items-center justify-center rounded-full border border-accent/40 px-8 py-4 font-bold text-maintext transition-colors duration-300 hover:bg-accent/10"
+            >
+              View the Albums
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>

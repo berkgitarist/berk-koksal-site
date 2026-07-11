@@ -6,338 +6,491 @@ import Nav from "../components/nav.astro";
 <Layout title="Berk KÖKSAL | Official Biography">
   <Nav />
 
-  <section class="min-h-screen py-28">
-    <div class="max-w-6xl mx-auto space-y-28">
+  <main>
+    <section class="min-h-screen px-5 py-28 md:px-8">
+      <div class="mx-auto max-w-6xl space-y-28">
 
-      <!-- HERO -->
-      <header class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
-        <div>
-          <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
-            Official Artist Biography
-          </p>
-
-          <h1 class="text-5xl md:text-7xl font-heading font-bold text-maintext mb-6">
-            Berk KÖKSAL
-          </h1>
-
-          <p class="text-xl text-accent leading-8 mb-8">
-            Composer • Guitarist • Music Producer • Software Engineer<br />
-            Founder of Neo-Sacred Zikr
-          </p>
-
-          <p class="text-subtext text-lg leading-8 max-w-2xl">
-            Berk KÖKSAL is a Turkish composer, guitarist, vocalist, songwriter,
-            arranger, music producer, mix and mastering engineer, software
-            engineer, Computer Science graduate and QUR'AN researcher.
-          </p>
-        </div>
-
-        <img
-          src="/artist/berk-portrait.webp"
-          alt="Berk Köksal portrait"
-          class="rounded-[2rem] border border-accent/20 shadow-2xl shadow-accent/10"
-        />
-      </header>
-
-      <!-- ABOUT -->
-      <section class="grid grid-cols-1 lg:grid-cols-[0.75fr_1.25fr] gap-12">
-        <div>
-          <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-4">
-            I
-          </p>
-          <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext">
-            About
-          </h2>
-        </div>
-
-        <div class="space-y-6 text-subtext text-lg leading-8">
-          <p>
-            Berk KÖKSAL's musical journey began with guitar performances and home
-            studio recordings. Over time, this journey evolved into a wider sound
-            world shaped by neoclassical guitars, symphonic choirs, ambient sound
-            design, sacred atmospheres, rap vocals, children's choirs, cathedral
-            organs, progressive rock and modern production techniques.
-          </p>
-
-          <p>
-            His work is not centered merely on genre, technique or production.
-            At the heart of his music is the desire to glorify <strong class="text-maintext">GOD</strong>.
-            For him, music is more than a career: it is a path of submission,
-            a call to remembrance and an effort to proclaim belief in the ONE GOD
-            through the sounds of the modern age.
-          </p>
-
-          <p>
-            This artistic direction became the foundation of the musical approach
-            he named <strong class="text-maintext">Neo-Sacred Zikr</strong>.
-          </p>
-        </div>
-      </section>
-
-      <!-- QURAN VERSE -->
-      <a
-        href="https://qurantft.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="block p-10 md:p-14 rounded-[2rem] border border-accent/30 bg-accent/5 hover:bg-accent/10 transition-all text-center"
-      >
-        <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
-          QURAN: THE FINAL TESTAMENT
-        </p>
-
-        <h2 class="text-3xl md:text-5xl font-heading font-bold text-maintext leading-tight">
-          [87:1] Glorify the name of your Lord, the Most High.
-        </h2>
-
-        <p class="mt-6 text-accent text-sm">
-          Quran: The Final Testament ↗
-        </p>
-      </a>
-
-      <!-- MISSION -->
-      <section class="rounded-[2rem] border border-accent/20 bg-accent/5 p-10 md:p-14">
-        <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
-          II · Mission
-        </p>
-
-        <h2 class="text-4xl md:text-6xl font-heading font-bold text-maintext mb-8">
-          Music as Remembrance
-        </h2>
-
-        <div class="space-y-5 text-subtext text-lg leading-8 max-w-4xl">
-          <p>
-            The reason Berk KÖKSAL began creating zikr music is rooted in his
-            QUR'AN-centered understanding of submission: to remember GOD, to
-            glorify GOD and to make the beautiful names of GOD heard throughout
-            the world.
-          </p>
-
-          <p>
-            In his works, phrases such as Allah, La ilaha illa Allah,
-            Allahu Akbar, Subhan Allah, Alhamdulillah, Ya Rahman, Ya Rahim,
-            Ya Nur and Ya Hannan are not merely words. They become musical
-            gestures of remembrance.
-          </p>
-
-          <p class="text-maintext font-bold text-2xl leading-9">
-            Every repetition is a turning toward GOD. Every choir is an ascent.
-            Every guitar is an inner search. Every atmosphere is part of submission.
-          </p>
-        </div>
-      </section>
-
-      <!-- BANNER -->
-      <section class="relative rounded-[2rem] overflow-hidden border border-accent/20">
-        <img
-          src="/artist/neo-sacred-zikr-banner-2.webp"
-          alt="Neo-Sacred Zikr banner"
-          class="w-full h-[360px] md:h-[480px] object-cover opacity-80"
-        />
-
-        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/65 to-transparent"></div>
-
-        <div class="absolute inset-0 flex items-center p-10 md:p-16">
+        <!-- HERO -->
+        <header
+          class="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]"
+        >
           <div>
-            <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-4">
-              Artistic Vision
+            <p
+              class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent"
+            >
+              Official Artist Biography
             </p>
 
-            <h2 class="text-4xl md:text-6xl font-heading font-bold text-maintext">
-              Neo-Sacred Zikr
-            </h2>
+            <h1
+              class="mb-6 text-5xl font-heading font-bold text-maintext md:text-7xl"
+            >
+              Berk KÖKSAL
+            </h1>
 
-            <p class="mt-5 max-w-2xl text-subtext text-lg leading-8">
-              A sacred sound universe where zikr, sacred music, spiritual music,
-              devotional music, symphonic zikr, ambient zikr, sacred rap and
-              choral music meet under one purpose: glorifying GOD.
+            <p class="mb-8 text-xl leading-8 text-accent">
+              Composer • Guitarist • Music Producer • Software Engineer<br />
+              Founder of Neo-Sacred Zikr
+            </p>
+
+            <p class="max-w-2xl text-lg leading-8 text-subtext">
+              Berk KÖKSAL is a Turkish composer, guitarist, vocalist, songwriter,
+              arranger, music producer, mix and mastering engineer, software
+              engineer, Computer Science graduate and QUR'AN researcher.
             </p>
           </div>
-        </div>
-      </section>
 
-      <!-- ARTISTIC PHILOSOPHY -->
-      <section>
-        <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
-          III · Artistic Philosophy
-        </p>
+          <img
+            src="/artist/berk-portrait.webp"
+            alt="Berk Köksal portrait"
+            class="w-full rounded-[2rem] border border-accent/20 shadow-2xl shadow-accent/10"
+            fetchpriority="high"
+          />
+        </header>
 
-        <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext mb-10">
-          Genres are tools, not the destination.
-        </h2>
+        <!-- ABOUT -->
+        <section
+          class="grid grid-cols-1 gap-12 lg:grid-cols-[0.75fr_1.25fr]"
+        >
+          <div>
+            <p
+              class="mb-4 text-xs font-bold uppercase tracking-[0.45em] text-accent"
+            >
+              I
+            </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            "Rock",
-            "Metal",
-            "Rap",
-            "Symphonic Choir",
-            "Ambient Zikr",
-            "Neoclassical",
-            "Sacred Music",
-            "Cathedral Organ",
-            "Children Choir"
-          ].map((item) => (
-            <div class="p-7 rounded-2xl border border-accent/20 bg-accent/5">
-              <p class="text-accent text-xs uppercase tracking-[0.25em] mb-3">
-                Neo-Sacred Element
-              </p>
-              <h3 class="text-2xl font-heading font-bold text-maintext">
-                {item}
-              </h3>
-            </div>
-          ))}
-        </div>
+            <h2
+              class="text-4xl font-heading font-bold text-maintext md:text-5xl"
+            >
+              About
+            </h2>
+          </div>
 
-        <p class="mt-10 text-subtext text-lg leading-8 max-w-4xl">
-          Berk KÖKSAL reinterprets the familiar idea of zikr through a contemporary
-          musical language. Rock, metal, rap, symphonic forms, church-music
-          aesthetics, organ textures, ambient atmospheres, cinematic production
-          and modern sound design are all used as instruments to glorify GOD and
-          invite the listener to remembrance.
-        </p>
-      </section>
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>
+              Berk KÖKSAL's musical journey began with guitar performances and
+              home studio recordings. Over time, this journey evolved into a
+              wider sound world shaped by neoclassical guitars, symphonic
+              choirs, ambient sound design, sacred atmospheres, rap vocals,
+              children's choirs, cathedral organs, progressive rock and modern
+              production techniques.
+            </p>
 
-      <!-- ONE MAN PRODUCTION -->
-      <section class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12 items-start">
+            <p>
+              His work is not centered merely on genre, technique or production.
+              At the heart of his music is the desire to glorify
+              <strong class="text-maintext">GOD</strong>. For him, music is more
+              than a career: it is a path of submission, a call to remembrance
+              and an effort to proclaim belief in the ONE GOD through the sounds
+              of the modern age.
+            </p>
+
+            <p>
+              This artistic direction became the foundation of the musical
+              approach he named
+              <strong class="text-maintext">Neo-Sacred Zikr</strong>.
+            </p>
+          </div>
+        </section>
+
+        <!-- FULL BIOGRAPHY BUTTON START -->
         <div>
-          <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
-            IV · Production
-          </p>
+          <a
+            href="/full-biography"
+            class="group flex w-full items-center justify-between rounded-2xl border border-accent/40 bg-accent/10 px-6 py-5 text-accent transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-background md:px-8 md:py-7"
+            aria-label="Read Berk Köksal's full biography"
+          >
+            <div>
+              <p
+                class="text-xs font-bold uppercase tracking-[0.3em] opacity-80"
+              >
+                Continue the Story
+              </p>
 
-          <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext">
-            One-Man Production Vision
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {[
-            "Composition",
-            "Lyrics",
-            "Guitars",
-            "Vocals",
-            "Recording",
-            "MIDI Programming",
-            "Orchestration",
-            "Sound Design",
-            "Mixing",
-            "Mastering",
-            "Album Artwork",
-            "Software Development"
-          ].map((item) => (
-            <div class="rounded-xl border border-accent/20 bg-accent/5 p-4 text-maintext font-bold">
-              {item}
+              <p class="mt-2 text-xl font-heading font-bold md:text-2xl">
+                Read Full Biography
+              </p>
             </div>
-          ))}
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-7 w-7 shrink-0 transition-transform duration-300 group-hover:translate-x-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </a>
         </div>
-      </section>
+        <!-- FULL BIOGRAPHY BUTTON END -->
 
-      <!-- ALBUMS -->
-      <section>
-        <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
-          V · Albums
-        </p>
+        <!-- QURAN VERSE -->
+        <a
+          href="https://qurantft.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block rounded-[2rem] border border-accent/30 bg-accent/5 p-10 text-center transition-all hover:bg-accent/10 md:p-14"
+        >
+          <p
+            class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent"
+          >
+            QURAN: THE FINAL TESTAMENT
+          </p>
 
-        <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext mb-10">
-          Albums and Sacred Music Universe
-        </h2>
+          <h2
+            class="text-3xl font-heading font-bold leading-tight text-maintext md:text-5xl"
+          >
+            [87:1] Glorify the name of your Lord, the Most High.
+          </h2>
 
-        <div class="space-y-5">
-          {[
-            ["2024", "Tanrı'nın Hediyesi", "Repentance, purification, forgiveness and turning toward GOD."],
-            ["2025", "Zikr Symphony", "Symphonic orchestra, choir, progressive rock, neoclassical metal, organ and zikr structures."],
-            ["2026", "Zikr Huu", "A minimal and peaceful album focused on the silent remembrance of the heart."],
-            ["2026", "Zikr Nur", "Female vocals, rain atmospheres, ney melodies and ambient sound design."],
-            ["2026", "ZIKR ROCK", "Rock and metal transformed into a powerful language of remembrance."],
-            ["2026", "Classical Chorus", "Sacred choral aesthetics, liturgical harmonies and cathedral atmosphere."],
-            ["2026", "One GOD One Love", "Children's choir, universal light and the message of One GOD, One Love, One Truth."],
-            ["2026", "ZIKR RAP", "Spiritual rap, sacred hip-hop and boom bap rhythms dedicated to remembrance."],
-            ["2026", "Zikr-i Batın", "A deeply personal album centered on inner zikr and the beautiful names of GOD."]
-          ].map(([year, title, description]) => (
-            <div class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-4 p-6 rounded-2xl border border-accent/20 bg-accent/5">
-              <p class="text-accent font-bold">{year}</p>
-              <div>
-                <h3 class="text-2xl font-heading font-bold text-maintext mb-2">
-                  {title}
-                </h3>
-                <p class="text-subtext leading-7">{description}</p>
-              </div>
+          <p class="mt-6 text-sm text-accent">
+            Quran: The Final Testament ↗
+          </p>
+        </a>
+
+        <!-- MISSION -->
+        <section
+          class="rounded-[2rem] border border-accent/20 bg-accent/5 p-10 md:p-14"
+        >
+          <p
+            class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent"
+          >
+            II · Mission
+          </p>
+
+          <h2
+            class="mb-8 text-4xl font-heading font-bold text-maintext md:text-6xl"
+          >
+            Music as Remembrance
+          </h2>
+
+          <div class="max-w-4xl space-y-5 text-lg leading-8 text-subtext">
+            <p>
+              The reason Berk KÖKSAL began creating zikr music is rooted in his
+              QUR'AN-centered understanding of submission: to remember GOD, to
+              glorify GOD and to make the beautiful names of GOD heard
+              throughout the world.
+            </p>
+
+            <p>
+              In his works, phrases such as Allah, La ilaha illa Allah, Allahu
+              Akbar, Subhan Allah, Alhamdulillah, Ya Rahman, Ya Rahim, Ya Nur and
+              Ya Hannan are not merely words. They become musical gestures of
+              remembrance.
+            </p>
+
+            <p class="text-2xl font-bold leading-9 text-maintext">
+              Every repetition is a turning toward GOD. Every choir is an
+              ascent. Every guitar is an inner search. Every atmosphere is part
+              of submission.
+            </p>
+          </div>
+        </section>
+
+        <!-- BANNER -->
+        <section
+          class="relative overflow-hidden rounded-[2rem] border border-accent/20"
+        >
+          <img
+            src="/artist/neo-sacred-zikr-banner-2.webp"
+            alt="Neo-Sacred Zikr banner"
+            class="h-[360px] w-full object-cover opacity-80 md:h-[480px]"
+            loading="lazy"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-background via-background/65 to-transparent"
+          ></div>
+
+          <div class="absolute inset-0 flex items-center p-10 md:p-16">
+            <div>
+              <p
+                class="mb-4 text-xs font-bold uppercase tracking-[0.45em] text-accent"
+              >
+                Artistic Vision
+              </p>
+
+              <h2
+                class="text-4xl font-heading font-bold text-maintext md:text-6xl"
+              >
+                Neo-Sacred Zikr
+              </h2>
+
+              <p class="mt-5 max-w-2xl text-lg leading-8 text-subtext">
+                A sacred sound universe where zikr, sacred music, spiritual
+                music, devotional music, symphonic zikr, ambient zikr, sacred
+                rap and choral music meet under one purpose: glorifying GOD.
+              </p>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <!-- QURAN RESEARCH -->
-      <section class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div class="p-8 rounded-2xl border border-accent/20 bg-accent/5">
-          <p class="text-accent text-xs uppercase tracking-[0.35em] font-bold mb-4">
-            QUR'AN Research
+        <!-- ARTISTIC PHILOSOPHY -->
+        <section>
+          <p
+            class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent"
+          >
+            III · Artistic Philosophy
           </p>
 
-          <h2 class="text-3xl font-heading font-bold text-maintext mb-5">
-            Kuransonahit and QUR'AN Study
+          <h2
+            class="mb-10 text-4xl font-heading font-bold text-maintext md:text-5xl"
+          >
+            Genres are tools, not the destination.
           </h2>
 
-          <p class="text-subtext leading-8">
-            In addition to music, Berk KÖKSAL has worked for many years in
-            QUR'AN research and software development. His aim is to encourage
-            people to reflect directly on the QUR'AN, verify information and
-            think deeply about GOD's message.
-          </p>
-        </div>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {
+              [
+                "Rock",
+                "Metal",
+                "Rap",
+                "Symphonic Choir",
+                "Ambient Zikr",
+                "Neoclassical",
+                "Sacred Music",
+                "Cathedral Organ",
+                "Children Choir"
+              ].map((item) => (
+                <div class="rounded-2xl border border-accent/20 bg-accent/5 p-7">
+                  <p class="mb-3 text-xs uppercase tracking-[0.25em] text-accent">
+                    Neo-Sacred Element
+                  </p>
 
-        <div class="p-8 rounded-2xl border border-accent/20 bg-accent/5">
-          <p class="text-accent text-xs uppercase tracking-[0.35em] font-bold mb-4">
-            Software & Education
+                  <h3 class="text-2xl font-heading font-bold text-maintext">
+                    {item}
+                  </h3>
+                </div>
+              ))
+            }
+          </div>
+
+          <p class="mt-10 max-w-4xl text-lg leading-8 text-subtext">
+            Berk KÖKSAL reinterprets the familiar idea of zikr through a
+            contemporary musical language. Rock, metal, rap, symphonic forms,
+            church-music aesthetics, organ textures, ambient atmospheres,
+            cinematic production and modern sound design are all used as
+            instruments to glorify GOD and invite the listener to remembrance.
+          </p>
+        </section>
+
+        <!-- ONE MAN PRODUCTION -->
+        <section
+          class="grid grid-cols-1 items-start gap-12 lg:grid-cols-[0.8fr_1.2fr]"
+        >
+          <div>
+            <p
+              class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent"
+            >
+              IV · Production
+            </p>
+
+            <h2
+              class="text-4xl font-heading font-bold text-maintext md:text-5xl"
+            >
+              One-Man Production Vision
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+            {
+              [
+                "Composition",
+                "Lyrics",
+                "Guitars",
+                "Vocals",
+                "Recording",
+                "MIDI Programming",
+                "Orchestration",
+                "Sound Design",
+                "Mixing",
+                "Mastering",
+                "Album Artwork",
+                "Software Development"
+              ].map((item) => (
+                <div class="rounded-xl border border-accent/20 bg-accent/5 p-4 font-bold text-maintext">
+                  {item}
+                </div>
+              ))
+            }
+          </div>
+        </section>
+
+        <!-- ALBUMS -->
+        <section>
+          <p
+            class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent"
+          >
+            V · Albums
           </p>
 
-          <h2 class="text-3xl font-heading font-bold text-maintext mb-5">
-            Computer Science and Certifications
+          <h2
+            class="mb-10 text-4xl font-heading font-bold text-maintext md:text-5xl"
+          >
+            Albums and Sacred Music Universe
           </h2>
 
-          <p class="text-subtext leading-8">
-            Berk KÖKSAL is a Computer Science graduate and software engineer.
-            He has completed professional programs in music production,
-            Pro Tools, digital marketing, analytics, cloud technologies,
-            data science, AI, cybersecurity and software development.
+          <div class="space-y-5">
+            {
+              [
+                [
+                  "2024",
+                  "Tanrı'nın Hediyesi",
+                  "Repentance, purification, forgiveness and turning toward GOD."
+                ],
+                [
+                  "2025",
+                  "Zikr Symphony",
+                  "Symphonic orchestra, choir, progressive rock, neoclassical metal, organ and zikr structures."
+                ],
+                [
+                  "2026",
+                  "Zikr Huu",
+                  "A minimal and peaceful album focused on the silent remembrance of the heart."
+                ],
+                [
+                  "2026",
+                  "Zikr Nur",
+                  "Female vocals, rain atmospheres, ney melodies and ambient sound design."
+                ],
+                [
+                  "2026",
+                  "ZIKR ROCK",
+                  "Rock and metal transformed into a powerful language of remembrance."
+                ],
+                [
+                  "2026",
+                  "Classical Chorus",
+                  "Sacred choral aesthetics, liturgical harmonies and cathedral atmosphere."
+                ],
+                [
+                  "2026",
+                  "One GOD One Love",
+                  "Children's choir, universal light and the message of One GOD, One Love, One Truth."
+                ],
+                [
+                  "2026",
+                  "ZIKR RAP",
+                  "Spiritual rap, sacred hip-hop and boom bap rhythms dedicated to remembrance."
+                ],
+                [
+                  "2026",
+                  "Zikr-i Batın",
+                  "A deeply personal album centered on inner zikr and the beautiful names of GOD."
+                ]
+              ].map(([year, title, description]) => (
+                <article class="grid grid-cols-1 gap-4 rounded-2xl border border-accent/20 bg-accent/5 p-6 md:grid-cols-[120px_1fr]">
+                  <p class="font-bold text-accent">{year}</p>
+
+                  <div>
+                    <h3 class="mb-2 text-2xl font-heading font-bold text-maintext">
+                      {title}
+                    </h3>
+
+                    <p class="leading-7 text-subtext">{description}</p>
+                  </div>
+                </article>
+              ))
+            }
+          </div>
+        </section>
+
+        <!-- QURAN RESEARCH -->
+        <section class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+          <div class="rounded-2xl border border-accent/20 bg-accent/5 p-8">
+            <p
+              class="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-accent"
+            >
+              QUR'AN Research
+            </p>
+
+            <h2
+              class="mb-5 text-3xl font-heading font-bold text-maintext"
+            >
+              Kuransonahit and QUR'AN Study
+            </h2>
+
+            <p class="leading-8 text-subtext">
+              In addition to music, Berk KÖKSAL has worked for many years in
+              QUR'AN research and software development. His aim is to encourage
+              people to reflect directly on the QUR'AN, verify information and
+              think deeply about GOD's message.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-accent/20 bg-accent/5 p-8">
+            <p
+              class="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-accent"
+            >
+              Software & Education
+            </p>
+
+            <h2
+              class="mb-5 text-3xl font-heading font-bold text-maintext"
+            >
+              Computer Science and Certifications
+            </h2>
+
+            <p class="leading-8 text-subtext">
+              Berk KÖKSAL is a Computer Science graduate and software engineer.
+              He has completed professional programs in music production, Pro
+              Tools, digital marketing, analytics, cloud technologies, data
+              science, AI, cybersecurity and software development.
+            </p>
+          </div>
+        </section>
+
+        <!-- FINAL -->
+        <section class="py-20 text-center">
+          <p
+            class="mb-8 text-xs font-bold uppercase tracking-[0.45em] text-accent"
+          >
+            Final Statement
           </p>
-        </div>
-      </section>
 
-      <!-- FINAL -->
-      <section class="text-center py-20">
-        <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-8">
-          Final Statement
-        </p>
+          <h2
+            class="mx-auto max-w-5xl text-4xl font-heading font-bold leading-tight text-maintext md:text-6xl"
+          >
+            Music is not my destination.<br />
+            It is my way of glorifying GOD.
+          </h2>
+        </section>
 
-        <h2 class="text-4xl md:text-6xl font-heading font-bold text-maintext leading-tight max-w-5xl mx-auto">
-          Music is not my destination.<br />
-          It is my way of glorifying GOD.
-        </h2>
-      </section>
+        <!-- FINAL QURAN LINK -->
+        <a
+          href="https://qurantft.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block rounded-[2rem] border border-accent/30 bg-accent/5 p-10 text-center transition-all hover:bg-accent/10 md:p-14"
+        >
+          <p
+            class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent"
+          >
+            QURAN: THE FINAL TESTAMENT
+          </p>
 
-      <a
-        href="https://qurantft.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="block p-10 md:p-14 rounded-[2rem] border border-accent/30 bg-accent/5 hover:bg-accent/10 transition-all text-center"
-      >
-        <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
-          QURAN: THE FINAL TESTAMENT
-        </p>
+          <p class="mb-6 text-sm text-subtext">
+            Authorized English Version · Translated by Rashad Khalifa
+          </p>
 
-        <p class="text-subtext text-sm mb-6">
-          Authorized English Version · Translated by Rashad Khalifa
-        </p>
+          <h2
+            class="text-3xl font-heading font-bold leading-tight text-maintext md:text-5xl"
+          >
+            [87:1] Glorify the name of your Lord, the Most High.
+          </h2>
 
-        <h2 class="text-3xl md:text-5xl font-heading font-bold text-maintext leading-tight">
-          [87:1] Glorify the name of your Lord, the Most High.
-        </h2>
+          <p class="mt-6 text-sm text-accent">
+            Quran: The Final Testament ↗
+          </p>
+        </a>
 
-        <p class="mt-6 text-accent text-sm">
-          Quran: The Final Testament ↗
-        </p>
-      </a>
-
-    </div>
-  </section>
+      </div>
+    </section>
+  </main>
 </Layout>
