@@ -134,7 +134,7 @@
 
 @layer components {
   .section-container {
-    @apply py-12 md:py-20 px-4 md:px-0;
+    @apply py-6 md:py-12 px-4 md:px-0;
   }
 
   .falling-letter {
@@ -454,4 +454,18 @@
 .group:hover img {
     transform: scale(1.02);
     filter: brightness(1.05);
+}
+
+.family-banner {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.family-banner img {
+  width: 100%;
+  display: block;
+  border-radius: 28px;
+  object-fit: cover;
+  box-shadow: 0 25px 60px rgba(0,0,0,.35);
 }
