@@ -634,51 +634,68 @@ const productionSkills = [
           </div>
         </div>
       </section>
-      <section class="pro-glass overflow-hidden p-8 md:p-10">
-  <div class="flex flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left">
-
-    <div class="max-w-3xl">
-      <p class="mb-3 text-xs font-bold uppercase tracking-[0.4em] text-accent">
-        Professional Development
-      </p>
-
-      <h2 class="mb-4 text-3xl font-heading font-bold text-maintext md:text-4xl">
-        Certificates & Continuous Learning
-      </h2>
-
-      <p class="text-base leading-7 text-subtext">
-        Berk Köksal continuously develops his expertise through professional
-        education in software engineering, music production, artificial
-        intelligence, digital technologies and related disciplines.
-        A complete collection of certificates and completed training programs
-        is available online.
-      </p>
-    </div>
-
-    <a
-      href="https://sites.google.com/view/berkkoksal/sertifikalar"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-bold text-background transition-all duration-300 hover:scale-105 hover:shadow-xl"
-    >
-      View All Certificates
-
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        stroke-width="2">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M14 3h7v7M10 14L21 3M21 14v7h-7M3 10V3h7M3 21l7-7"/>
-      </svg>
-    </a>
-
-  </div>
+      <!-- PHOTO JOURNEY SECTION START -->
+<section class="photo-journey-section" aria-labelledby="photo-journey-title">
+<button id="open-photo-journey" class="photo-journey-card" type="button" aria-label="Open Berk Köksal photo journey">
+<img src="/artist/biography/berk-koksal-photo-journey.webp" alt="Berk Köksal'ın çocukluktan müzik hayatına uzanan fotoğraf kolajı" class="photo-journey-preview" loading="lazy" />
+<span class="photo-journey-overlay"></span>
+<span class="photo-journey-content">
+<span class="photo-journey-label">Personal Archive</span>
+<span id="photo-journey-title" class="photo-journey-title">My Journey Through Photos</span>
+<span class="photo-journey-description">Childhood · First Guitar · First Band · Family</span>
+<span class="photo-journey-action">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+<path stroke-linecap="round" stroke-linejoin="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+</svg>
+Explore My Story
+</span>
+</span>
+</button>
 </section>
+
+<div id="photo-journey-lightbox" class="photo-journey-lightbox" role="dialog" aria-modal="true" aria-labelledby="photo-journey-modal-title" aria-hidden="true">
+<button id="close-photo-journey" class="photo-journey-close" type="button" aria-label="Close photo journey">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+<path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18" />
+</svg>
+</button>
+
+<div class="photo-journey-modal">
+<div class="photo-journey-modal-header">
+<p class="photo-journey-modal-label">Personal Archive</p>
+<h2 id="photo-journey-modal-title" class="photo-journey-modal-title">My Journey Through Photos</h2>
+<p class="photo-journey-modal-description">Every musician has a story before the stage. These are some moments from mine.</p>
+</div>
+
+<img src="/artist/biography/berk-koksal-photo-journey.webp" alt="Berk Köksal'ın çocukluk, aile ve müzik yolculuğundan fotoğraf kolajı" class="photo-journey-full-image" />
+</div>
+</div>
+<!-- PHOTO JOURNEY SECTION END -->
+
+<!-- CERTIFICATES SECTION START -->
+<section class="pro-glass overflow-hidden p-8 md:p-10">
+<div class="flex flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left">
+
+<div class="max-w-3xl">
+<p class="mb-3 text-xs font-bold uppercase tracking-[0.4em] text-accent">Professional Development</p>
+
+<h2 class="mb-4 text-3xl font-heading font-bold text-maintext md:text-4xl">Certificates & Continuous Learning</h2>
+
+<p class="text-base leading-7 text-subtext">
+Berk Köksal continuously develops his expertise through professional education in software engineering, music production, artificial intelligence, digital technologies and related disciplines. A complete collection of certificates and completed training programs is available online.
+</p>
+</div>
+
+<a href="https://sites.google.com/view/berkkoksal/sertifikalar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-bold text-background transition-all duration-300 hover:scale-105 hover:shadow-xl">
+View All Certificates
+<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M14 3h7v7M10 14L21 3M21 14v7h-7M3 10V3h7M3 21l7-7" />
+</svg>
+</a>
+
+</div>
+</section>
+<!-- CERTIFICATES SECTION END -->
 
       <section class="relative overflow-hidden rounded-[2rem] border border-accent/25 bg-accent/5 px-7 py-16 text-center md:px-14 md:py-20">
         <div class="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"></div>
@@ -720,3 +737,373 @@ const productionSkills = [
     </div>
   </main>
 </Layout>
+<!-- PHOTO JOURNEY STYLE START -->
+
+<style>
+  .photo-journey-section {
+    width: 100%;
+  }
+
+  .photo-journey-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 260px;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: left;
+    color: inherit;
+    background: rgba(20, 17, 48, 0.65);
+    border: 1px solid rgba(167, 139, 250, 0.22);
+    border-radius: 2rem;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+    isolation: isolate;
+  }
+
+  .photo-journey-preview {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition:
+      transform 700ms ease,
+      filter 500ms ease;
+  }
+
+  .photo-journey-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(8, 6, 28, 0.98) 0%,
+        rgba(8, 6, 28, 0.88) 38%,
+        rgba(8, 6, 28, 0.38) 72%,
+        rgba(8, 6, 28, 0.15) 100%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(8, 6, 28, 0.8) 0%,
+        transparent 60%
+      );
+    z-index: 1;
+  }
+
+  .photo-journey-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    min-height: 260px;
+    max-width: 720px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .photo-journey-label {
+    margin-bottom: 0.9rem;
+    color: rgb(167, 139, 250);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+  }
+
+  .photo-journey-title {
+    max-width: 650px;
+    color: white;
+    font-family: inherit;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 800;
+    line-height: 1.05;
+  }
+
+  .photo-journey-description {
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .photo-journey-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 1.5rem;
+    padding: 0.85rem 1.25rem;
+    color: white;
+    font-size: 0.86rem;
+    font-weight: 700;
+    background: rgba(167, 139, 250, 0.16);
+    border: 1px solid rgba(167, 139, 250, 0.38);
+    border-radius: 999px;
+    backdrop-filter: blur(12px);
+    transition:
+      background-color 300ms ease,
+      border-color 300ms ease,
+      transform 300ms ease;
+  }
+
+  .photo-journey-action svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .photo-journey-card:hover .photo-journey-preview {
+    transform: scale(1.045);
+    filter: brightness(1.08);
+  }
+
+  .photo-journey-card:hover .photo-journey-action {
+    transform: translateY(-2px);
+    background: rgb(167, 139, 250);
+    border-color: rgb(167, 139, 250);
+    color: rgb(10, 8, 30);
+  }
+
+  .photo-journey-card:focus-visible {
+    outline: 3px solid rgb(167, 139, 250);
+    outline-offset: 5px;
+  }
+
+  .photo-journey-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    visibility: hidden;
+    opacity: 0;
+    overflow-y: auto;
+    background: rgba(3, 2, 15, 0.94);
+    backdrop-filter: blur(18px);
+    transition:
+      opacity 300ms ease,
+      visibility 300ms ease;
+  }
+
+  .photo-journey-lightbox.is-open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .photo-journey-modal {
+    width: min(1180px, 100%);
+    margin: auto;
+    overflow: hidden;
+    transform: translateY(22px) scale(0.98);
+    background: rgb(13, 10, 38);
+    border: 1px solid rgba(167, 139, 250, 0.28);
+    border-radius: 1.75rem;
+    box-shadow: 0 35px 100px rgba(0, 0, 0, 0.6);
+    transition: transform 350ms ease;
+  }
+
+  .photo-journey-lightbox.is-open .photo-journey-modal {
+    transform: translateY(0) scale(1);
+  }
+
+  .photo-journey-modal-header {
+    padding: 1.8rem 2rem;
+    text-align: center;
+  }
+
+  .photo-journey-modal-label {
+    margin-bottom: 0.6rem;
+    color: rgb(167, 139, 250);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+  }
+
+  .photo-journey-modal-title {
+    color: white;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .photo-journey-modal-description {
+    max-width: 650px;
+    margin: 0.8rem auto 0;
+    color: rgba(255, 255, 255, 0.68);
+    line-height: 1.7;
+  }
+
+  /* PHOTO JOURNEY IMAGE STYLE START */
+  .photo-journey-full-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 74vh;
+  object-fit: contain;
+  transform: scale(1);
+  transform-origin: center center;
+  cursor: zoom-in;
+  transition: transform 0.35s ease;
+  background: rgb(4, 3, 16);
+  }
+
+  .photo-journey-full-image.is-zoomed {
+  transform: scale(1.5);
+  cursor: zoom-out;
+  }
+/* PHOTO JOURNEY IMAGE STYLE END */
+
+  .photo-journey-close {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 10001;
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    place-items: center;
+    cursor: pointer;
+    color: white;
+    background: rgba(20, 17, 48, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    backdrop-filter: blur(12px);
+    transition:
+      transform 250ms ease,
+      background-color 250ms ease;
+  }
+
+  .photo-journey-close:hover {
+    transform: rotate(90deg);
+    background: rgb(167, 139, 250);
+    color: rgb(10, 8, 30);
+  }
+
+  .photo-journey-close svg {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+
+  body.photo-journey-open {
+    overflow: hidden;
+  }
+
+  @media (max-width: 640px) {
+    .photo-journey-card {
+      min-height: 390px;
+    }
+
+    .photo-journey-preview {
+      object-position: center;
+    }
+
+    .photo-journey-overlay {
+      background:
+        linear-gradient(
+          0deg,
+          rgba(8, 6, 28, 0.98) 0%,
+          rgba(8, 6, 28, 0.82) 55%,
+          rgba(8, 6, 28, 0.25) 100%
+        );
+    }
+
+    .photo-journey-content {
+      min-height: 390px;
+      justify-content: flex-end;
+      padding: 1.5rem;
+    }
+
+    .photo-journey-description {
+      font-size: 0.92rem;
+    }
+
+    .photo-journey-modal-header {
+      padding: 1.5rem 1.2rem;
+    }
+
+    .photo-journey-close {
+      top: 0.75rem;
+      right: 0.75rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .photo-journey-preview,
+    .photo-journey-action,
+    .photo-journey-lightbox,
+    .photo-journey-modal,
+    .photo-journey-close {
+      transition: none;
+    }
+  }
+</style>
+
+<!-- PHOTO JOURNEY STYLE END -->
+ <!-- PHOTO JOURNEY SCRIPT START -->
+<script>
+const openPhotoJourneyButton = document.getElementById("open-photo-journey");
+const closePhotoJourneyButton = document.getElementById("close-photo-journey");
+const photoJourneyLightbox = document.getElementById("photo-journey-lightbox");
+/* PHOTO JOURNEY IMAGE VARIABLE START */
+const photoJourneyImage = document.querySelector(".photo-journey-full-image");
+/* PHOTO JOURNEY IMAGE VARIABLE END */
+
+function openPhotoJourney() {
+if (!photoJourneyLightbox) return;
+photoJourneyLightbox.classList.add("is-open");
+photoJourneyLightbox.setAttribute("aria-hidden", "false");
+document.body.classList.add("photo-journey-open");
+closePhotoJourneyButton?.focus();
+}
+
+function closePhotoJourney() {
+if (!photoJourneyLightbox) return;
+photoJourneyLightbox.classList.remove("is-open");
+photoJourneyLightbox.setAttribute("aria-hidden", "true");
+document.body.classList.remove("photo-journey-open");
+/* RESET PHOTO JOURNEY ZOOM START */
+photoJourneyImage?.classList.remove("is-zoomed");
+/* RESET PHOTO JOURNEY ZOOM END */
+openPhotoJourneyButton?.focus();
+}
+/* PHOTO JOURNEY ZOOM START */
+photoJourneyImage?.addEventListener("click", function(event) {
+event.stopPropagation();
+
+const imageRect = photoJourneyImage.getBoundingClientRect();
+const clickX = event.clientX - imageRect.left;
+const clickY = event.clientY - imageRect.top;
+
+const originX = (clickX / imageRect.width) * 100;
+const originY = (clickY / imageRect.height) * 100;
+
+if (photoJourneyImage.classList.contains("is-zoomed")) {
+photoJourneyImage.classList.remove("is-zoomed");
+photoJourneyImage.style.transformOrigin = "center center";
+return;
+}
+
+photoJourneyImage.style.transformOrigin = `${originX}% ${originY}%`;
+photoJourneyImage.classList.add("is-zoomed");
+});
+/* PHOTO JOURNEY ZOOM END */
+openPhotoJourneyButton?.addEventListener("click", openPhotoJourney);
+closePhotoJourneyButton?.addEventListener("click", closePhotoJourney);
+
+photoJourneyLightbox?.addEventListener("click", function(event) {
+if (event.target === photoJourneyLightbox) {
+closePhotoJourney();
+}
+});
+
+document.addEventListener("keydown", function(event) {
+if (event.key === "Escape" && photoJourneyLightbox?.classList.contains("is-open")) {
+closePhotoJourney();
+}
+});
+</script>
+<!-- PHOTO JOURNEY SCRIPT END -->
