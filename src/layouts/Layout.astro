@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+import SEO from "../components/seo.astro";
 import { SITE_CONFIG } from '../config.ts';
 
 interface Props {
@@ -10,6 +11,7 @@ const { title } = Astro.props;
 
 const baseTheme = SITE_CONFIG.baseTheme;
 const defaultTheme = `${baseTheme}-dark`;
+const siteUrl = "https://www.berkkoksal.com";
 ---
 
 <!doctype html>
@@ -19,7 +21,15 @@ const defaultTheme = `${baseTheme}-dark`;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/favicon.png?v=2" />
 <link rel="apple-touch-icon" href="/artist-logo.webp" />
-    <title>{title}</title>
+
+<SEO
+  title={title}
+  description="Berk KÖKSAL - Composer, Guitarist, Music Producer, Software Engineer. Founder of Neo-Sacred Zikr."
+  canonical={Astro.url.pathname}
+  ogImage="/artist/berk-portrait.webp"
+  ogType="website"
+  twitterCard="summary_large_image"
+/>
 
     <script is:inline define:vars={{ baseTheme, defaultTheme }}>
       const savedTheme = localStorage.getItem('theme');

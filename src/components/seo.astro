@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article' | 'music.album';
+  twitterCard?: 'summary' | 'summary_large_image';
+}
+
+const {
+  title,
+  description = "Berk KÖKSAL - Composer, Guitarist, Music Producer, Software Engineer. Founder of Neo-Sacred Zikr.",
+  canonical,
+  ogImage = "/artist/berk-portrait.webp",
+  ogType = "website",
+  twitterCard = "summary_large_image",
+} = Astro.props;
+
+const siteUrl = "https://www.berkkoksal.com";
+const canonicalUrl = new URL(canonical ?? "/", siteUrl).toString();
+const ogImageUrl = `${siteUrl}${ogImage}`;
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImageUrl} />
+<meta property="og:site_name" content="Berk KÖKSAL" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content={twitterCard} />
+<meta name="twitter:url" content={canonicalUrl} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImageUrl} />
