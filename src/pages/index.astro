@@ -7,34 +7,45 @@ import Tech from "../components/tech.astro";
 import Projects from "../components/projects.astro";
 import Contact from "../components/contact.astro";
 import Career from "../components/career.astro";
-import localData from '../data/home.json';
+import localData from "../data/home.json";
 
 interface ProfileData {
   webpageTitle: string;
 }
 
-const isApiLive = import.meta.env.PROD; // Auto true in production
+const isApiLive = import.meta.env.PROD;
 const BASE_URL = import.meta.env.PUBLIC_API_BASE_URL;
 
-let data: ProfileData; // data as ProfileData
+let data: ProfileData;
 
 if (isApiLive && BASE_URL) {
   try {
     const response = await fetch(`${BASE_URL}/home`);
-    if (!response.ok) throw new Error('Network response was not ok');
+
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
     data = await response.json();
   } catch (error) {
-    console.error("API Fetch failed, falling back to mock data", error);
+    console.error(
+      "API Fetch failed, falling back to mock data",
+      error
+    );
+
     data = localData as ProfileData;
   }
 } else {
   data = localData as ProfileData;
 }
-
-const { webpageTitle } = data;
 ---
 
-<Layout title={webpageTitle}>
+<Layout
+  title="Berk KÖKSAL | Official Website | Composer • Guitarist • Neo-Sacred Zikr"
+  description="Official website of Berk KÖKSAL — composer, guitarist, music producer, software engineer and founder of Neo-Sacred Zikr."
+  canonical="/"
+  ogImage="/artist/berk-portrait.webp"
+>
   <Nav />
   <Home />
   <Career />

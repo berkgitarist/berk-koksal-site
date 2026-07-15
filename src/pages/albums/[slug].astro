@@ -55,7 +55,14 @@ const spotifyEmbedUrl = spotifyAlbumId
   : null;
 ---
 
-<Layout title={`${album.title} | Berk KÖKSAL`}>
+<Layout
+  title={`${album.title} | Berk KÖKSAL`}
+  description={album.description}
+  canonical={`/albums/${album.slug}`}
+  ogImage={album.cover}
+  ogType="music.album"
+  twitterCard="summary_large_image"
+>
   <Nav />
 
   <section class="relative min-h-screen pt-32 pb-24 overflow-hidden">

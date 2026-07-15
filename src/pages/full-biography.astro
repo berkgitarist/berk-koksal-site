@@ -75,7 +75,12 @@ const productionSkills = [
 ];
 ---
 
-<Layout title="Berk KÖKSAL | Full Biography">
+<Layout
+  title="Full Biography | Berk KÖKSAL"
+  description="Read the complete life story of Berk KÖKSAL, including music, Neo-Sacred Zikr, software engineering, QUR'AN research and artistic journey."
+  canonical="/full-biography"
+  ogImage="/artist/biography/hero-neo-sacred-zikr.webp"
+>
   <Nav />
 
   <main>
@@ -1043,67 +1048,154 @@ View All Certificates
 </style>
 
 <!-- PHOTO JOURNEY STYLE END -->
- <!-- PHOTO JOURNEY SCRIPT START -->
+<!-- PHOTO JOURNEY SCRIPT START -->
 <script>
-const openPhotoJourneyButton = document.getElementById("open-photo-journey");
-const closePhotoJourneyButton = document.getElementById("close-photo-journey");
-const photoJourneyLightbox = document.getElementById("photo-journey-lightbox");
-/* PHOTO JOURNEY IMAGE VARIABLE START */
-const photoJourneyImage = document.querySelector(".photo-journey-full-image");
-/* PHOTO JOURNEY IMAGE VARIABLE END */
+  const openPhotoJourneyButton =
+    document.getElementById('open-photo-journey');
 
-function openPhotoJourney() {
-if (!photoJourneyLightbox) return;
-photoJourneyLightbox.classList.add("is-open");
-photoJourneyLightbox.setAttribute("aria-hidden", "false");
-document.body.classList.add("photo-journey-open");
-closePhotoJourneyButton?.focus();
-}
+  const closePhotoJourneyButton =
+    document.getElementById('close-photo-journey');
 
-function closePhotoJourney() {
-if (!photoJourneyLightbox) return;
-photoJourneyLightbox.classList.remove("is-open");
-photoJourneyLightbox.setAttribute("aria-hidden", "true");
-document.body.classList.remove("photo-journey-open");
-/* RESET PHOTO JOURNEY ZOOM START */
-photoJourneyImage?.classList.remove("is-zoomed");
-/* RESET PHOTO JOURNEY ZOOM END */
-openPhotoJourneyButton?.focus();
-}
-/* PHOTO JOURNEY ZOOM START */
-photoJourneyImage?.addEventListener("click", function(event) {
-event.stopPropagation();
+  const photoJourneyLightbox =
+    document.getElementById('photo-journey-lightbox');
 
-const imageRect = photoJourneyImage.getBoundingClientRect();
-const clickX = event.clientX - imageRect.left;
-const clickY = event.clientY - imageRect.top;
+  const photoJourneyImage =
+    document.querySelector<HTMLImageElement>(
+      '.photo-journey-full-image'
+    );
 
-const originX = (clickX / imageRect.width) * 100;
-const originY = (clickY / imageRect.height) * 100;
+  function openPhotoJourney(): void {
+    if (!photoJourneyLightbox) {
+      return;
+    }
 
-if (photoJourneyImage.classList.contains("is-zoomed")) {
-photoJourneyImage.classList.remove("is-zoomed");
-photoJourneyImage.style.transformOrigin = "center center";
-return;
-}
+    photoJourneyLightbox.classList.add('is-open');
 
-photoJourneyImage.style.transformOrigin = `${originX}% ${originY}%`;
-photoJourneyImage.classList.add("is-zoomed");
-});
-/* PHOTO JOURNEY ZOOM END */
-openPhotoJourneyButton?.addEventListener("click", openPhotoJourney);
-closePhotoJourneyButton?.addEventListener("click", closePhotoJourney);
+    photoJourneyLightbox.setAttribute(
+      'aria-hidden',
+      'false'
+    );
 
-photoJourneyLightbox?.addEventListener("click", function(event) {
-if (event.target === photoJourneyLightbox) {
-closePhotoJourney();
-}
-});
+    document.body.classList.add(
+      'photo-journey-open'
+    );
 
-document.addEventListener("keydown", function(event) {
-if (event.key === "Escape" && photoJourneyLightbox?.classList.contains("is-open")) {
-closePhotoJourney();
-}
-});
+    closePhotoJourneyButton?.focus();
+  }
+
+  function closePhotoJourney(): void {
+    if (!photoJourneyLightbox) {
+      return;
+    }
+
+    photoJourneyLightbox.classList.remove(
+      'is-open'
+    );
+
+    photoJourneyLightbox.setAttribute(
+      'aria-hidden',
+      'true'
+    );
+
+    document.body.classList.remove(
+      'photo-journey-open'
+    );
+
+    if (photoJourneyImage) {
+      photoJourneyImage.classList.remove(
+        'is-zoomed'
+      );
+
+      photoJourneyImage.style.transformOrigin =
+        'center center';
+    }
+
+    openPhotoJourneyButton?.focus();
+  }
+
+  function togglePhotoJourneyZoom(
+    event: MouseEvent
+  ): void {
+    event.stopPropagation();
+
+    if (!photoJourneyImage) {
+      return;
+    }
+
+    const imageRectangle =
+      photoJourneyImage.getBoundingClientRect();
+
+    const clickX =
+      event.clientX - imageRectangle.left;
+
+    const clickY =
+      event.clientY - imageRectangle.top;
+
+    const originX =
+      (clickX / imageRectangle.width) * 100;
+
+    const originY =
+      (clickY / imageRectangle.height) * 100;
+
+    if (
+      photoJourneyImage.classList.contains(
+        'is-zoomed'
+      )
+    ) {
+      photoJourneyImage.classList.remove(
+        'is-zoomed'
+      );
+
+      photoJourneyImage.style.transformOrigin =
+        'center center';
+
+      return;
+    }
+
+    photoJourneyImage.style.transformOrigin =
+      `${originX}% ${originY}%`;
+
+    photoJourneyImage.classList.add(
+      'is-zoomed'
+    );
+  }
+
+  openPhotoJourneyButton?.addEventListener(
+    'click',
+    openPhotoJourney
+  );
+
+  closePhotoJourneyButton?.addEventListener(
+    'click',
+    closePhotoJourney
+  );
+
+  photoJourneyImage?.addEventListener(
+    'click',
+    togglePhotoJourneyZoom
+  );
+
+  photoJourneyLightbox?.addEventListener(
+    'click',
+    (event: MouseEvent) => {
+      if (event.target === photoJourneyLightbox) {
+        closePhotoJourney();
+      }
+    }
+  );
+
+  document.addEventListener(
+    'keydown',
+    (event: KeyboardEvent) => {
+      if (
+        event.key === 'Escape' &&
+        photoJourneyLightbox?.classList.contains(
+          'is-open'
+        )
+      ) {
+        closePhotoJourney();
+      }
+    }
+  );
 </script>
 <!-- PHOTO JOURNEY SCRIPT END -->

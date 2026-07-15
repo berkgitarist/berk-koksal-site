@@ -1,107 +1,200 @@
 ---
-import '../styles/global.css'
-import SEO from "../components/seo.astro";
+import '../styles/global.css';
+
+import SEO from '../components/seo.astro';
 import { SITE_CONFIG } from '../config.ts';
 
 interface Props {
   title: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article' | 'music.album';
+  twitterCard?: 'summary' | 'summary_large_image';
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description = 'Berk KÖKSAL - Composer, Guitarist, Music Producer, Software Engineer. Founder of Neo-Sacred Zikr.',
+  canonical = Astro.url.pathname,
+  ogImage = '/artist/berk-portrait.webp',
+  ogType = 'website',
+  twitterCard = 'summary_large_image'
+} = Astro.props;
 
 const baseTheme = SITE_CONFIG.baseTheme;
 const defaultTheme = `${baseTheme}-dark`;
-const siteUrl = "https://www.berkkoksal.com";
 ---
 
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/favicon.png?v=2" />
-<link rel="apple-touch-icon" href="/artist-logo.webp" />
 
-<SEO
-  title={title}
-  description="Berk KÖKSAL - Composer, Guitarist, Music Producer, Software Engineer. Founder of Neo-Sacred Zikr."
-  canonical={Astro.url.pathname}
-  ogImage="/artist/berk-portrait.webp"
-  ogType="website"
-  twitterCard="summary_large_image"
-/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon.png?v=2"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      href="/artist-logo.webp"
+    />
+
+    <SEO
+      title={title}
+      description={description}
+      canonical={canonical}
+      ogImage={ogImage}
+      ogType={ogType}
+      twitterCard={twitterCard}
+    />
 
     <script is:inline define:vars={{ baseTheme, defaultTheme }}>
       const savedTheme = localStorage.getItem('theme');
 
-      if (savedTheme && savedTheme.startsWith(baseTheme)) {
-        document.documentElement.setAttribute('data-theme', savedTheme);
+      if (
+        savedTheme &&
+        savedTheme.startsWith(baseTheme)
+      ) {
+        document.documentElement.setAttribute(
+          'data-theme',
+          savedTheme
+        );
       } else {
-        document.documentElement.setAttribute('data-theme', defaultTheme);
-        localStorage.setItem('theme', defaultTheme);
+        document.documentElement.setAttribute(
+          'data-theme',
+          defaultTheme
+        );
+
+        localStorage.setItem(
+          'theme',
+          defaultTheme
+        );
       }
     </script>
   </head>
 
-  <body class="bg-container relative min-h-screen overflow-x-hidden antialiased">
-    <div 
-      id="matrix-container" 
-      class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"
+  <body
+    class="relative min-h-screen overflow-x-hidden antialiased bg-container"
+  >
+    <div
+      id="matrix-container"
+      aria-hidden="true"
+      class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10"
       style="mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);"
-    ></div>
+    >
+    </div>
 
-    <main class="px-2 sm:px-12 md:px-14 lg:px-28 max-w-360 mx-auto relative z-0">
+    <main
+      class="relative z-0 px-2 mx-auto sm:px-12 md:px-14 lg:px-28 max-w-360"
+    >
       <slot />
     </main>
 
     <button
       id="to-top"
-      class="fixed bottom-8 right-8 z-50 p-0 rounded-full bg-background border border-accent/10 shadow-2xl transition-all duration-500 translate-y-20 opacity-0 group flex items-center justify-center cursor-pointer"
+      type="button"
       aria-label="Back to top"
+      class="fixed bottom-8 right-8 z-50 flex items-center justify-center p-0 transition-all duration-500 translate-y-20 border rounded-full opacity-0 cursor-pointer group bg-background border-accent/10 shadow-2xl"
     >
-      <svg class="w-14 h-14 -rotate-90">
-        <circle cx="28" cy="28" r="24" fill="none" stroke="currentColor" stroke-width="3" class="text-accent/5"></circle>
+      <svg
+        class="w-14 h-14 -rotate-90"
+        aria-hidden="true"
+      >
+        <circle
+          cx="28"
+          cy="28"
+          r="24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          class="text-accent/5"
+        >
+        </circle>
+
         <circle
           id="progress-circle"
           cx="28"
           cy="28"
           r="24"
           fill="none"
-          stroke="currentColor" 
+          stroke="currentColor"
           stroke-width="3"
           stroke-dasharray="150.7"
           stroke-dashoffset="150.7"
           stroke-linecap="round"
-          class="text-accent transition-all duration-100"
-        ></circle>
+          class="transition-all duration-100 text-accent"
+        >
+        </circle>
       </svg>
-      
-      <div class="absolute text-accent group-hover:scale-110 transition-transform">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-          <path d="M13.0001 7.82843V20H11.0001V7.82843L5.63614 13.1924L4.22192 11.7782L12.0001 4L19.7783 11.7782L18.3641 13.1924L13.0001 7.82843Z"></path>
+
+      <div
+        class="absolute transition-transform text-accent group-hover:scale-110"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="M13.0001 7.82843V20H11.0001V7.82843L5.63614 13.1924L4.22192 11.7782L12.0001 4L19.7783 11.7782L18.3641 13.1924L13.0001 7.82843Z"
+          >
+          </path>
         </svg>
       </div>
     </button>
 
     <script>
-      const container = document.getElementById('matrix-container');
-      const notes = ["♪", "♫", "♬", "♩", "♭", "♯"];
+      const container =
+        document.getElementById('matrix-container');
 
-function randomSymbol() {
-  const r = Math.random();
+      const notes = [
+        '♪',
+        '♫',
+        '♬',
+        '♩',
+        '♭',
+        '♯'
+      ];
 
-  if (r < 0.02) return "هو";
-  if (r < 0.10) return "ﷲ";
+      function randomSymbol(): string {
+        const randomValue = Math.random();
 
-  return notes[Math.floor(Math.random() * notes.length)];
-}
+        if (randomValue < 0.02) {
+          return 'هو';
+        }
 
-      function createLetter() {
-        if (!container) return;
+        if (randomValue < 0.1) {
+          return 'ﷲ';
+        }
 
-        const span = document.createElement('span');
-        const char = randomSymbol();
-        const color = "#D4AF37";
+        const noteIndex =
+          Math.floor(Math.random() * notes.length);
+
+        return notes[noteIndex] ?? '♪';
+      }
+
+      function createLetter(): void {
+        if (!container) {
+          return;
+        }
+
+        const span =
+          document.createElement('span');
+
+        const character = randomSymbol();
+        const color = '#D4AF37';
 
         const left = Math.random() * 100;
         const duration = 8 + Math.random() * 10;
@@ -109,135 +202,313 @@ function randomSymbol() {
         const drift = -30 + Math.random() * 60;
         const rotate = -40 + Math.random() * 80;
 
-        span.innerText = char;
-        span.className = 'falling-letter falling-note';
+        span.innerText = character;
+        span.className =
+          'falling-letter falling-note';
+
         span.style.left = `${left}vw`;
         span.style.color = color;
         span.style.fontSize = `${size}px`;
-        span.style.animationDuration = `${duration}s`;
-        span.style.setProperty('--note-drift', `${drift}px`);
-        span.style.setProperty('--note-rotate', `${rotate}deg`);
-        span.style.textShadow = `0 0 8px ${color}, 0 0 20px rgba(212, 175, 55, 0.35)`;
+        span.style.animationDuration =
+          `${duration}s`;
+
+        span.style.setProperty(
+          '--note-drift',
+          `${drift}px`
+        );
+
+        span.style.setProperty(
+          '--note-rotate',
+          `${rotate}deg`
+        );
+
+        span.style.textShadow =
+          `0 0 8px ${color}, ` +
+          '0 0 20px rgba(212, 175, 55, 0.35)';
 
         container.appendChild(span);
 
-        setTimeout(() => {
-          span.remove();
-        }, duration * 1000);
+        window.setTimeout(
+          () => span.remove(),
+          duration * 1000
+        );
       }
 
-      function createStaticLetter() {
-        if (!container) return;
+      function createStaticLetter(): void {
+        if (!container) {
+          return;
+        }
 
-        const span = document.createElement('span');
-        const char = randomSymbol();
-        const color = "#D4AF37";
+        const span =
+          document.createElement('span');
+
+        const character = randomSymbol();
+        const color = '#D4AF37';
 
         const left = Math.random() * 100;
         const top = Math.random() * 90;
         const size = 12 + Math.random() * 14;
 
-        span.innerText = char;
-        span.className = 'falling-letter falling-note';
+        span.innerText = character;
+        span.className =
+          'falling-letter falling-note';
+
         span.style.animation = 'none';
         span.style.left = `${left}vw`;
         span.style.top = `${top}vh`;
         span.style.color = color;
         span.style.fontSize = `${size}px`;
-        span.style.opacity = (0.08 + Math.random() * 0.2).toString();
-        span.style.textShadow = `0 0 8px ${color}`;
+
+        span.style.opacity =
+          (0.08 + Math.random() * 0.2).toString();
+
+        span.style.textShadow =
+          `0 0 8px ${color}`;
 
         container.appendChild(span);
       }
 
-      if (window.innerWidth > 768) {
-        setInterval(createLetter, 450);
-      } else {
-        const mobileCount = 18;
-        for (let i = 0; i < mobileCount; i++) {
-          createStaticLetter();
-        }
-      }
+      const prefersReducedMotion =
+        window.matchMedia(
+          '(prefers-reduced-motion: reduce)'
+        ).matches;
 
-      const toTopBtn = document.getElementById('to-top');
-      const progressCircle = document.getElementById('progress-circle');
-      const circumference = 150.796;
-      const arrowIcon = toTopBtn?.querySelector('.absolute');
-
-      function handleScroll() {
-        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercentage = window.scrollY / scrollHeight;
-        const offset = circumference - (scrollPercentage * circumference);
-
-        if (progressCircle) {
-          progressCircle.style.strokeDashoffset = offset.toString();
-        }
-
-        if (scrollPercentage > 0.5) {
-          toTopBtn?.classList.remove('translate-y-20', 'opacity-0');
-          toTopBtn?.classList.add('translate-y-0', 'opacity-100');
+      if (!prefersReducedMotion) {
+        if (window.innerWidth > 768) {
+          window.setInterval(createLetter, 450);
         } else {
-          toTopBtn?.classList.add('translate-y-20', 'opacity-0');
-          toTopBtn?.classList.remove('translate-y-0', 'opacity-100');
-        }
+          const mobileCount = 18;
 
-        if (scrollPercentage > 0.98) {
-          arrowIcon?.classList.add('animate-bounce-twice');
-        } else {
-          arrowIcon?.classList.remove('animate-bounce-twice');
-        }
-      }
-
-      window.addEventListener('scroll', handleScroll, { passive: true });
-
-      toTopBtn?.addEventListener('click', () => {
-        arrowIcon?.classList.add('launching');
-
-        const startPosition = window.scrollY;
-        const duration = 750;
-        let startTime = null;
-        let requestID;
-
-        const stopAnimation = () => {
-          cancelAnimationFrame(requestID);
-          arrowIcon?.classList.remove('launching');
-          window.removeEventListener('wheel', stopAnimation);
-          window.removeEventListener('touchmove', stopAnimation);
-        };
-
-        function easeOutQuad(t, b, c, d) {
-          t /= d;
-          return -c * t * (t - 2) + b;
-        }
-
-        function animation(currentTime) {
-          if (startTime === null) startTime = currentTime;
-          const timeElapsed = currentTime - startTime;
-          const run = easeOutQuad(timeElapsed, startPosition, -startPosition, duration);
-
-          window.scrollTo(0, run);
-
-          if (timeElapsed < duration) {
-            requestID = requestAnimationFrame(animation);
-          } else {
-            stopAnimation();
+          for (
+            let index = 0;
+            index < mobileCount;
+            index += 1
+          ) {
+            createStaticLetter();
           }
         }
+      }
 
-        window.addEventListener('wheel', stopAnimation, { once: true });
-        window.addEventListener('touchmove', stopAnimation, { once: true });
+      const toTopButton =
+        document.getElementById('to-top');
 
-        requestID = requestAnimationFrame(animation);
-      });
+      const progressCircle =
+        document.getElementById(
+          'progress-circle'
+        );
+
+      const arrowIcon =
+        toTopButton?.querySelector<HTMLElement>(
+          '.absolute'
+        );
+
+      const circumference = 150.796;
+
+      function handleScroll(): void {
+        const scrollableHeight =
+          document.documentElement.scrollHeight -
+          window.innerHeight;
+
+        const scrollPercentage =
+          scrollableHeight > 0
+            ? window.scrollY / scrollableHeight
+            : 0;
+
+        const boundedPercentage =
+          Math.min(
+            Math.max(scrollPercentage, 0),
+            1
+          );
+
+        const offset =
+          circumference -
+          boundedPercentage * circumference;
+
+        if (progressCircle) {
+          progressCircle.style.strokeDashoffset =
+            offset.toString();
+        }
+
+        if (boundedPercentage > 0.5) {
+          toTopButton?.classList.remove(
+            'translate-y-20',
+            'opacity-0'
+          );
+
+          toTopButton?.classList.add(
+            'translate-y-0',
+            'opacity-100'
+          );
+        } else {
+          toTopButton?.classList.add(
+            'translate-y-20',
+            'opacity-0'
+          );
+
+          toTopButton?.classList.remove(
+            'translate-y-0',
+            'opacity-100'
+          );
+        }
+
+        if (boundedPercentage > 0.98) {
+          arrowIcon?.classList.add(
+            'animate-bounce-twice'
+          );
+        } else {
+          arrowIcon?.classList.remove(
+            'animate-bounce-twice'
+          );
+        }
+      }
+
+      window.addEventListener(
+        'scroll',
+        handleScroll,
+        { passive: true }
+      );
+
+      handleScroll();
+
+      toTopButton?.addEventListener(
+        'click',
+        () => {
+          if (prefersReducedMotion) {
+            window.scrollTo({
+              top: 0,
+              behavior: 'auto'
+            });
+
+            return;
+          }
+
+          arrowIcon?.classList.add(
+            'launching'
+          );
+
+          const startPosition = window.scrollY;
+          const duration = 750;
+
+          let startTime: number | null = null;
+          let requestId: number | null = null;
+
+          const stopAnimation = (): void => {
+            if (requestId !== null) {
+              cancelAnimationFrame(requestId);
+            }
+
+            arrowIcon?.classList.remove(
+              'launching'
+            );
+
+            window.removeEventListener(
+              'wheel',
+              stopAnimation
+            );
+
+            window.removeEventListener(
+              'touchmove',
+              stopAnimation
+            );
+          };
+
+          function easeOutQuad(
+            elapsed: number,
+            start: number,
+            change: number,
+            totalDuration: number
+          ): number {
+            const normalized =
+              elapsed / totalDuration;
+
+            return (
+              -change *
+                normalized *
+                (normalized - 2) +
+              start
+            );
+          }
+
+          function animation(
+            currentTime: number
+          ): void {
+            if (startTime === null) {
+              startTime = currentTime;
+            }
+
+            const timeElapsed =
+              currentTime - startTime;
+
+            const nextPosition =
+              easeOutQuad(
+                timeElapsed,
+                startPosition,
+                -startPosition,
+                duration
+              );
+
+            window.scrollTo(
+              0,
+              nextPosition
+            );
+
+            if (timeElapsed < duration) {
+              requestId =
+                requestAnimationFrame(
+                  animation
+                );
+            } else {
+              stopAnimation();
+            }
+          }
+
+          window.addEventListener(
+            'wheel',
+            stopAnimation,
+            { once: true }
+          );
+
+          window.addEventListener(
+            'touchmove',
+            stopAnimation,
+            { once: true }
+          );
+
+          requestId =
+            requestAnimationFrame(animation);
+        }
+      );
     </script>
+
     <script is:inline>
-  document.querySelectorAll(".pro-card").forEach((card) => {
-    card.addEventListener("mousemove", (event) => {
-      const rect = card.getBoundingClientRect();
-      card.style.setProperty("--mouse-x", `${event.clientX - rect.left}px`);
-      card.style.setProperty("--mouse-y", `${event.clientY - rect.top}px`);
-    });
-  });
-</script>
+      document
+        .querySelectorAll('.pro-card')
+        .forEach((card) => {
+          card.addEventListener(
+            'mousemove',
+            (event) => {
+              if (
+                !(card instanceof HTMLElement) ||
+                !(event instanceof MouseEvent)
+              ) {
+                return;
+              }
+
+              const rectangle =
+                card.getBoundingClientRect();
+
+              card.style.setProperty(
+                '--mouse-x',
+                `${event.clientX - rectangle.left}px`
+              );
+
+              card.style.setProperty(
+                '--mouse-y',
+                `${event.clientY - rectangle.top}px`
+              );
+            }
+          );
+        });
+    </script>
   </body>
 </html>
