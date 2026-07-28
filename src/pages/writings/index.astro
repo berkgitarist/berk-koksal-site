@@ -1,0 +1,90 @@
+---
+import { getCollection } from 'astro:content';
+import { Icon } from 'astro-icon/components';
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/nav.astro';
+import WritingCard from '../../components/writing-card.astro';
+
+const writings = (
+  await getCollection('writings', ({ data }) => {
+    return import.meta.env.PROD ? !data.draft : true;
+  })
+).sort((a, b) => {
+  const featuredDifference = Number(b.data.featured) - Number(a.data.featured);
+
+  if (featuredDifference !== 0) {
+    return featuredDifference;
+  }
+
+  return b.data.publishDate.getTime() - a.data.publishDate.getTime();
+});
+---
+
+<Layout
+  title="Writings | Berk KÖKSAL"
+  description="Essays and reflections by Berk KÖKSAL on the Qur'an, remembrance, spirituality, music and contemporary life."
+  canonical="/writings"
+  ogImage="/artist/berk-portrait.webp"
+>
+  <Nav />
+
+  <section class="relative mx-auto max-w-[1500px] px-4 pb-16 pt-24 sm:px-6 md:pt-28 lg:px-8">
+    <header class="mx-auto max-w-5xl text-center">
+      <div class="mb-4 inline-flex items-center gap-3 rounded-full border border-[#D4AF37]/25 bg-[#D4AF37]/8 px-5 py-2 text-xs font-bold uppercase tracking-[0.35em] text-[#D4AF37]">
+        <Icon name="mdi:book-open-page-variant" class="h-4 w-4" />
+        Writings
+      </div>
+
+      <h1 class="pro-gradient-text text-5xl font-bold leading-tight md:text-7xl">
+        Qur'an Reflections
+      </h1>
+
+      <p class="mx-auto mt-4 max-w-4xl text-lg leading-8 text-subtext md:text-xl">
+        Essays and reflections on the Qur'an, remembrance, spirituality,
+        music and contemporary life.
+      </p>
+
+      <p class="mt-2 text-sm text-accent">
+        Articles are currently published in Turkish.
+      </p>
+    </header>
+
+    <div class="mt-8 flex items-end justify-between gap-4 border-b border-accent/15 pb-4">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-[0.3em] text-accent">
+          Archive
+        </p>
+        <h2 class="mt-1 text-2xl font-bold text-maintext">
+          Latest articles
+        </h2>
+      </div>
+
+      <span class="shrink-0 rounded-full border border-accent/15 bg-accent/5 px-4 py-2 text-sm text-subtext">
+        {writings.length} {writings.length === 1 ? 'article' : 'articles'}
+      </span>
+    </div>
+
+    {
+      writings.length > 0 ? (
+        <div class="mt-5 flex flex-col gap-5">
+          {writings.map((entry, index) => (
+            <WritingCard entry={entry} priority={index < 2} />
+          ))}
+        </div>
+      ) : (
+        <div class="mt-5 rounded-[2rem] border border-accent/15 bg-accent/5 px-6 py-14 text-center">
+          <Icon
+            name="mdi:feather"
+            class="mx-auto h-12 w-12 text-[#D4AF37]/70"
+          />
+          <h2 class="mt-5 text-2xl font-bold text-maintext">
+            The first article is being prepared.
+          </h2>
+          <p class="mx-auto mt-3 max-w-xl leading-7 text-subtext">
+            New Turkish articles will appear here automatically when they are added to the writings collection.
+          </p>
+        </div>
+      )
+    }
+  </section>
+</Layout>

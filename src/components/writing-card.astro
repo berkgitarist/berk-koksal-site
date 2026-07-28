@@ -1,0 +1,105 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Icon } from 'astro-icon/components';
+import {
+  formatWritingDate,
+  getReadingMinutes,
+  getWritingHref,
+} from '../utils/writings';
+
+interface Props {
+  entry: CollectionEntry<'writings'>;
+  priority?: boolean;
+}
+
+const { entry, priority = false } = Astro.props;
+const { data } = entry;
+const minutes = getReadingMinutes(entry.body);
+const href = getWritingHref(entry.id);
+const languageLabel = data.language === 'tr' ? 'Türkçe' : 'English';
+const readingLabel = data.language === 'tr' ? `${minutes} dk okuma` : `${minutes} min read`;
+---
+
+<article class="writing-card group relative overflow-hidden rounded-[1.75rem] border border-accent/15 bg-accent/5 transition-all duration-500 hover:-translate-y-1 hover:border-[#D4AF37]/35 hover:shadow-[0_24px_70px_rgba(0,0,0,0.35)]">
+  <a
+    href={href}
+    class="grid min-h-[220px] grid-cols-1 md:grid-cols-[minmax(250px,32%)_1fr]"
+    aria-label={data.title}
+  >
+    <div class="relative min-h-[180px] overflow-hidden border-b border-accent/10 bg-gradient-to-br from-accent/15 via-background/30 to-[#D4AF37]/10 md:min-h-full md:border-b-0 md:border-r">
+      {
+        data.image ? (
+          <img
+            src={data.image}
+            alt=""
+            width="960"
+            height="540"
+            loading={priority ? 'eager' : 'lazy'}
+            class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.035]"
+          />
+        ) : (
+          <div class="absolute inset-0 flex items-center justify-center">
+            <Icon
+              name="mdi:book-open-page-variant"
+              class="h-14 w-14 text-[#D4AF37]/55 transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+        )
+      }
+
+      <div class="absolute inset-0 bg-gradient-to-t from-background/55 via-transparent to-transparent"></div>
+
+      <div class="absolute left-5 top-5 flex flex-wrap gap-2">
+        <span class="rounded-full border border-[#D4AF37]/30 bg-background/75 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#D4AF37] backdrop-blur-md">
+          {languageLabel}
+        </span>
+
+        {data.draft && !import.meta.env.PROD && (
+          <span class="rounded-full border border-accent/30 bg-background/75 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-accent backdrop-blur-md">
+            Draft
+          </span>
+        )}
+      </div>
+    </div>
+
+    <div class="flex min-w-0 flex-col p-6 md:p-8 lg:p-9">
+      <div class="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-subtext">
+        <span class="font-semibold uppercase tracking-[0.18em] text-accent">
+          {data.category}
+        </span>
+        <span aria-hidden="true">•</span>
+        <time datetime={data.publishDate.toISOString()}>
+          {formatWritingDate(data.publishDate, data.language)}
+        </time>
+        <span aria-hidden="true">•</span>
+        <span>{readingLabel}</span>
+      </div>
+
+      <h2 class="text-2xl font-bold leading-tight text-maintext transition-colors duration-300 group-hover:text-[#D4AF37] md:text-3xl lg:text-4xl">
+        {data.title}
+      </h2>
+
+      <p class="mt-3 max-w-5xl text-base leading-7 text-subtext md:text-lg md:leading-8">
+        {data.description}
+      </p>
+
+      {data.tags.length > 0 && (
+        <div class="mt-4 flex flex-wrap gap-2">
+          {data.tags.map((tag) => (
+            <span class="rounded-full border border-accent/15 bg-background/25 px-3 py-1 text-xs text-subtext">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      )}
+
+      <div class="mt-auto flex items-center gap-2 pt-5 text-sm font-bold text-maintext">
+        <span>{data.language === 'tr' ? 'Makaleyi oku' : 'Read article'}</span>
+        <Icon
+          name="mdi:arrow-right"
+          class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+        />
+      </div>
+    </div>
+  </a>
+</article>
