@@ -29,7 +29,22 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 const { data } = entry;
 const minutes = getReadingMinutes(entry.body);
-const canonical = getWritingHref(entry.id);
+
+const siteUrl = Astro.site ?? new URL('https://berkkoksal.com');
+
+const ensureTrailingSlash = (path: string) => {
+  if (path === '/' || path.endsWith('/')) {
+    return path;
+  }
+
+  return `${path}/`;
+};
+
+const getCanonicalWritingHref = (id: string) =>
+  ensureTrailingSlash(getWritingHref(id));
+
+const canonicalPath = getCanonicalWritingHref(entry.id);
+const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
 
 const allWritings = (
   await getCollection('writings', ({ data }) => {
@@ -46,7 +61,6 @@ const readingLabel = isTurkish ? `${minutes} dk okuma` : `${minutes} min read`;
 const publishedLabel = isTurkish ? 'Yayın tarihi' : 'Published';
 const updatedLabel = isTurkish ? 'Güncellendi' : 'Updated';
 
-const siteUrl = 'https://www.berkkoksal.com';
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -55,16 +69,17 @@ const structuredData = {
   datePublished: data.publishDate.toISOString(),
   dateModified: (data.updatedDate ?? data.publishDate).toISOString(),
   inLanguage: data.language,
-  mainEntityOfPage: new URL(canonical, siteUrl).toString(),
+  url: canonicalUrl,
+  mainEntityOfPage: canonicalUrl,
   author: {
     '@type': 'Person',
     name: data.author,
-    url: siteUrl,
+    url: siteUrl.toString(),
   },
   publisher: {
     '@type': 'Person',
     name: data.author,
-    url: siteUrl,
+    url: siteUrl.toString(),
   },
   ...(data.image
     ? { image: new URL(data.image, siteUrl).toString() }
@@ -75,7 +90,7 @@ const structuredData = {
 <Layout
   title={`${data.title} | Berk KÖKSAL`}
   description={data.description}
-  canonical={canonical}
+  canonical={canonicalUrl}
   ogImage={data.image ?? '/artist/berk-portrait.webp'}
   ogType="article"
   twitterCard="summary_large_image"
@@ -91,7 +106,7 @@ const structuredData = {
   <article class="relative mx-auto max-w-[1600px] px-4 pb-24 pt-24 sm:px-6 md:pt-28 lg:px-8">
     <header class="mx-auto max-w-6xl text-center">
       <a
-        href="/writings"
+        href="/writings/"
         class="inline-flex items-center gap-2 text-sm font-semibold text-accent transition-colors hover:text-maintext"
       >
         <Icon name="mdi:arrow-left" class="h-5 w-5" />
@@ -168,7 +183,7 @@ const structuredData = {
       <nav aria-label={isTurkish ? 'Makale gezintisi' : 'Article navigation'} class="mx-auto mt-12 grid max-w-[1400px] grid-cols-1 gap-5 md:grid-cols-2">
         {newerArticle ? (
           <a
-            href={getWritingHref(newerArticle.id)}
+            href={getCanonicalWritingHref(newerArticle.id)}
             class="group rounded-[1.75rem] border border-accent/15 bg-accent/5 p-7 transition-all hover:-translate-y-1 hover:border-[#D4AF37]/30"
           >
             <span class="text-xs font-bold uppercase tracking-[0.25em] text-accent">
@@ -182,7 +197,7 @@ const structuredData = {
 
         {olderArticle && (
           <a
-            href={getWritingHref(olderArticle.id)}
+            href={getCanonicalWritingHref(olderArticle.id)}
             class="group rounded-[1.75rem] border border-accent/15 bg-accent/5 p-7 text-right transition-all hover:-translate-y-1 hover:border-[#D4AF37]/30"
           >
             <span class="text-xs font-bold uppercase tracking-[0.25em] text-accent">

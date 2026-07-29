@@ -16,7 +16,11 @@ export function getReadingMinutes(content?: string): number {
     return 1;
   }
 
-  const wordCount = plainText.split(' ').filter(Boolean).length;
+  const wordCount = plainText
+    .split(' ')
+    .filter(Boolean)
+    .length;
+
   return Math.max(1, Math.ceil(wordCount / 200));
 }
 
@@ -36,6 +40,10 @@ export function formatWritingDate(
 }
 
 export function getWritingHref(id: string): string {
-  const normalizedId = id.replace(/\/index$/, '');
-  return `/writings/${normalizedId}`;
+  const normalizedId = id
+    .replace(/\.(md|mdx)$/i, '')
+    .replace(/\/index$/i, '')
+    .replace(/^\/+|\/+$/g, '');
+
+  return `/writings/${normalizedId}/`;
 }

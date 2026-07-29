@@ -17,9 +17,27 @@ const {
   twitterCard = "summary_large_image",
 } = Astro.props;
 
-const siteUrl = "https://www.berkkoksal.com";
-const canonicalUrl = new URL(canonical ?? "/", siteUrl).toString();
-const ogImageUrl = `${siteUrl}${ogImage}`;
+const siteUrl = Astro.site ?? new URL("https://berkkoksal.com");
+
+const canonicalUrlObject = new URL(
+  canonical ?? Astro.url.pathname,
+  siteUrl
+);
+
+// Canonical adreslerde sorgu ve hash kullanılmasın.
+canonicalUrlObject.search = "";
+canonicalUrlObject.hash = "";
+
+// Ana sayfa dışındaki bütün sayfalarda sondaki eğik çizgiyi standartlaştır.
+if (
+  canonicalUrlObject.pathname !== "/" &&
+  !canonicalUrlObject.pathname.endsWith("/")
+) {
+  canonicalUrlObject.pathname += "/";
+}
+
+const canonicalUrl = canonicalUrlObject.toString();
+const ogImageUrl = new URL(ogImage, siteUrl).toString();
 ---
 
 <!-- Primary Meta Tags -->

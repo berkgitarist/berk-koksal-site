@@ -5,8 +5,9 @@ import icon from "astro-icon";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://www.berkkoksal.com",
+  site: "https://berkkoksal.com",
   output: "static",
+  trailingSlash: "always",
 
   vite: {
     plugins: [tailwindcss()],
