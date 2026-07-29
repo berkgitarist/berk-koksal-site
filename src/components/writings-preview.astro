@@ -1,0 +1,199 @@
+---
+import { getCollection } from "astro:content";
+import {
+  formatWritingDate,
+  getReadingMinutes,
+  getWritingHref,
+} from "../utils/writings";
+
+const writingEntries = (await getCollection("writings"))
+  .filter(
+    (entry) =>
+      !entry.data.draft &&
+      entry.data.language === "tr"
+  )
+  .sort(
+    (a, b) =>
+      new Date(b.data.publishDate).getTime() -
+      new Date(a.data.publishDate).getTime()
+  )
+  .slice(0, 3);
+
+const articles = writingEntries.map((entry) => ({
+  title: entry.data.title,
+  description: entry.data.description,
+  image: entry.data.image,
+  imageAlt: entry.data.imageAlt,
+  tags: entry.data.tags ?? [],
+  date: formatWritingDate(
+    new Date(entry.data.publishDate),
+    "tr"
+  ),
+  dateTime: new Date(entry.data.publishDate)
+    .toISOString()
+    .slice(0, 10),
+  readingMinutes: getReadingMinutes(
+    (entry as { body?: string }).body
+  ),
+  href: getWritingHref(entry.id),
+}));
+---
+
+<section
+  aria-labelledby="writings-preview-title"
+  class="writings-preview mt-16 md:mt-20"
+>
+  <div
+    class="overflow-hidden rounded-[2rem] border border-accent/20 bg-accent/5 p-6 md:p-10"
+  >
+    <div
+      class="mb-8 flex flex-col gap-5 md:mb-10 md:flex-row md:items-end md:justify-between"
+    >
+      <div class="max-w-3xl">
+        <p
+          class="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-accent"
+        >
+          Kuran Tefekkürleri
+        </p>
+
+        <h2
+          id="writings-preview-title"
+          class="text-3xl font-bold leading-tight text-maintext font-heading md:text-5xl"
+        >
+          Tefekkür Yazıları
+        </h2>
+
+        <p
+          class="mt-4 max-w-2xl font-body leading-7 text-subtext"
+        >
+          Kuran ayetleri üzerine bilgi, tevhid, adalet,
+          doğru sözlülük ve teslimiyet merkezli tefekkürler.
+        </p>
+      </div>
+
+      <a
+        href="/writings"
+        class="group inline-flex w-fit items-center gap-3 rounded-full border border-accent/35 bg-accent/10 px-6 py-3 font-semibold text-maintext transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-background"
+        aria-label="Tüm tefekkür yazılarını görüntüle"
+      >
+        <span>Tüm Yazılar</span>
+        <span
+          aria-hidden="true"
+          class="transition-transform duration-300 group-hover:translate-x-1"
+        >
+          →
+        </span>
+      </a>
+    </div>
+
+    {
+      articles.length > 0 ? (
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+          {articles.map((article) => (
+            <a
+              href={article.href}
+              class="group flex h-full flex-col overflow-hidden rounded-[1.6rem] border border-accent/15 bg-background/35 transition-all duration-500 hover:-translate-y-2 hover:border-accent/55 hover:shadow-[0_24px_70px_rgba(0,0,0,0.35)]"
+              aria-label={`${article.title} makalesini oku`}
+            >
+              <div class="relative aspect-[16/10] overflow-hidden bg-black/15">
+                <img
+                  src={article.image}
+                  alt={article.imageAlt}
+                  loading="lazy"
+                  decoding="async"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+                />
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-background/85 via-transparent to-transparent"
+                ></div>
+
+                <span
+                  class="absolute left-4 top-4 rounded-full border border-[#D4AF37]/35 bg-background/75 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#D4AF37] backdrop-blur-md"
+                >
+                  Türkçe
+                </span>
+              </div>
+
+              <div class="flex flex-1 flex-col p-6">
+                <div
+                  class="mb-3 flex flex-wrap items-center gap-2 text-[11px] text-subtext"
+                >
+                  <span class="font-bold uppercase tracking-[0.18em] text-accent">
+                    Kuran Tefekkürleri
+                  </span>
+                  <span aria-hidden="true">•</span>
+                  <time datetime={article.dateTime}>
+                    {article.date}
+                  </time>
+                  <span aria-hidden="true">•</span>
+                  <span>{article.readingMinutes} dk okuma</span>
+                </div>
+
+                <h3
+                  class="text-2xl font-bold leading-tight text-maintext transition-colors duration-300 font-heading group-hover:text-accent"
+                >
+                  {article.title}
+                </h3>
+
+                <p
+                  class="mt-4 line-clamp-3 font-body leading-7 text-subtext"
+                >
+                  {article.description}
+                </p>
+
+                <div class="mt-5 flex flex-wrap gap-2">
+                  {article.tags.slice(0, 3).map((tag) => (
+                    <span
+                      class="rounded-full border border-accent/15 bg-accent/5 px-3 py-1 text-[11px] text-subtext"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div
+                  class="mt-auto flex items-center gap-2 pt-6 font-semibold text-maintext transition-colors duration-300 group-hover:text-accent"
+                >
+                  <span>Makaleyi oku</span>
+                  <span
+                    aria-hidden="true"
+                    class="transition-transform duration-300 group-hover:translate-x-2"
+                  >
+                    →
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div
+          class="rounded-2xl border border-accent/15 bg-background/25 p-8 text-center text-subtext"
+        >
+          Yayımlanmış tefekkür yazısı bulunamadı.
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .writings-preview {
+    opacity: 0;
+    transform: translateY(28px);
+    animation:
+      writingsPreviewReveal
+      0.9s
+      cubic-bezier(0.16, 1, 0.3, 1)
+      forwards;
+    animation-delay: 0.2s;
+  }
+
+  @keyframes writingsPreviewReveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

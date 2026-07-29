@@ -18,6 +18,11 @@ const minutes = getReadingMinutes(entry.body);
 const href = getWritingHref(entry.id);
 const languageLabel = data.language === 'tr' ? 'Türkçe' : 'English';
 const readingLabel = data.language === 'tr' ? `${minutes} dk okuma` : `${minutes} min read`;
+const categoryLabel =
+  data.language === 'tr' && data.category === "Qur'an Reflections"
+    ? 'Kuran Tefekkürleri'
+    : data.category;
+const draftLabel = data.language === 'tr' ? 'Taslak' : 'Draft';
 ---
 
 <article class="writing-card group relative overflow-hidden rounded-[1.75rem] border border-accent/15 bg-accent/5 transition-all duration-500 hover:-translate-y-1 hover:border-[#D4AF37]/35 hover:shadow-[0_24px_70px_rgba(0,0,0,0.35)]">
@@ -56,7 +61,7 @@ const readingLabel = data.language === 'tr' ? `${minutes} dk okuma` : `${minutes
 
         {data.draft && !import.meta.env.PROD && (
           <span class="rounded-full border border-accent/30 bg-background/75 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-accent backdrop-blur-md">
-            Draft
+            {draftLabel}
           </span>
         )}
       </div>
@@ -65,7 +70,7 @@ const readingLabel = data.language === 'tr' ? `${minutes} dk okuma` : `${minutes
     <div class="flex min-w-0 flex-col p-6 md:p-8 lg:p-9">
       <div class="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-subtext">
         <span class="font-semibold uppercase tracking-[0.18em] text-accent">
-          {data.category}
+          {categoryLabel}
         </span>
         <span aria-hidden="true">•</span>
         <time datetime={data.publishDate.toISOString()}>
