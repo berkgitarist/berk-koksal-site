@@ -138,18 +138,19 @@ const structuredData = {
     </header>
 
     {data.image && (
-      <figure class="mx-auto mt-10 max-w-[1400px] overflow-hidden rounded-[2rem] border border-accent/15 bg-accent/5 shadow-[0_24px_80px_rgba(0,0,0,0.3)]">
-        <img
-          src={data.image}
-          alt={data.title}
-          width="1600"
-          height="900"
-          class="block aspect-[16/9] w-full object-cover"
-        />
-      </figure>
-    )}
+      <figure class="mx-auto mt-10 max-w-6xl overflow-hidden rounded-[2rem] border border-accent/15 bg-accent/5 shadow-[0_24px_80px_rgba(0,0,0,0.3)]">
+    <img
+      src={data.image}
+      alt={data.imageAlt ?? data.title}
+      width="1600"
+      height="900"
+      loading="eager"
+      class="block h-[280px] w-full object-cover sm:h-[380px] md:h-[480px] lg:h-[560px]"
+    />
+  </figure>
+)}
 
-    <div class="writing-prose mx-auto mt-10 w-full max-w-[1400px] rounded-[2rem] border border-accent/12 bg-background/35 px-6 py-9 shadow-[0_20px_70px_rgba(0,0,0,0.2)] backdrop-blur-sm sm:px-10 md:px-14 md:py-14 lg:px-20 xl:px-24">
+    <div class="writing-prose mx-auto mt-10 w-full max-w-6xl rounded-[2rem] border border-accent/12 bg-background/35 px-6 py-9 shadow-[0_20px_70px_rgba(0,0,0,0.2)] backdrop-blur-sm sm:px-10 md:px-14 md:py-14 lg:px-20 xl:px-24">
       <Content />
     </div>
 

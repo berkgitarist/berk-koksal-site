@@ -6,6 +6,10 @@ description: >-
 publishDate: 2026-07-29
 category: "Qur'an Reflections"
 language: "tr"
+
+image: "/images/writings/muzik-ve-zikir.webp"
+imageAlt: "Müzik ve Zikir başlıklı, gitarlar ve müzik notaları içeren kapak görseli"
+
 tags:
   - "Kuran"
   - "Ala"

@@ -6,6 +6,10 @@ description: >-
 publishDate: 2026-07-28
 category: "Qur'an Reflections"
 language: "tr"
+
+image: "/images/writings/sahitligin-agirligi.jpg"
+imageAlt: "Şahitliğin Ağırlığı başlıklı, terazi ve açık kitap içeren kapak görseli"
+
 tags:
   - "Kur'an"
   - "Âl-i İmrân"

@@ -15,6 +15,7 @@ const writings = defineCollection({
     category: z.string().default("Qur'an Reflections"),
     language: z.enum(['tr', 'en']).default('tr'),
     image: z.string().optional(),
+    imageAlt: z.string().optional(),
     tags: z.array(z.string()).default([]),
     featured: z.boolean().default(false),
     draft: z.boolean().default(false),
