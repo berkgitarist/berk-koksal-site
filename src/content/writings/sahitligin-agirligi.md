@@ -26,6 +26,10 @@ author: "Berk KÖKSAL"
 
 **Yer:** Mersin
 
+### Ayet
+
+> **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
+
 ## Giriş
 
 Bazı ayetler vardır; insan onları bir defa okuyup geçemez. Kelimeleri zihinde dolaşmaya devam eder. Her dönüşte başka bir kapı açar, başka bir soruyu insanın önüne bırakır. 3:18 ayeti benim için böyle bir ayettir.

@@ -30,6 +30,9 @@ author: "Berk KÖKSAL"
 **Tarih:** 29.07.2026
 
 **Yer:** Mersin
+### Ayet
+
+> **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
 
 Makalenin temel amacı, ayetleri diğer ilgili ayetlerle birlikte düşünmek; TANRI’nın birliğine şahitliğin bilgi, adalet, doğruluk ve teslimiyet bakımından insan hayatında ne anlama geldiğini samimi ve derin bir dille ortaya koymaktır.
 
