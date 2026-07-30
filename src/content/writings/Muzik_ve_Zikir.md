@@ -264,7 +264,29 @@ Vardığım ihtiyatlı nokta şudur: Müzik ayetlerde özel bir ibadet olarak em
 
 *Ayet referansları: 5:87, 7:32, 16:116.*
 
-## 9. Şahitlik, Tevhid ve Adaletin Müziğe Koyduğu Ölçü
+## 9. TANRI’nın Bilerek Açıklamadığı Şeyleri Dini Yüke Dönüştürmemek
+
+### Ayet
+
+> **5:101** — Ey inananlar, henüz vakti gelmeden size açıklansaydı size zarar verecek olan meseleler hakkında soru sormayın. Eğer onları Kuran’ın ışığında sorarsanız, size apaçık olacaktır. TANRI onları kasıtlı olarak görmezden gelmiştir. TANRI Bağışlayıcıdır, Hoşgörülüdür.
+
+### Ayetin Tefekkürü
+
+5:101’i düşünürken önce önemli bir ayrımı korumak gerekir. Ayet, insanın hakikati samimiyetle araştırmasını veya Kuran’a soru yöneltmesini bütünüyle yasaklamıyor. Tam tersine, meselelerin Kuran’ın ışığında sorulması halinde açıklığa kavuşacağını bildiriyor. Sınır konulan şey, TANRI’nın açıklamadığı ayrıntıları zorlayarak yeni yükler ve hükümler üretme eğilimidir.
+
+Ayetin “TANRI onları kasıtlı olarak görmezden gelmiştir” ifadesi, ilahi sessizliğin dikkatsizlik olmadığını düşündürüyor. TANRI’nın hüküm koymadığı bir alan, insanların kendi korkularını, alışkanlıklarını veya katı tercihlerini ilahi yasa haline getirmeleri için bırakılmış bir boşluk değildir. Bazı ayrıntıların açıklanmamış olması da vahyin ölçüsünün bir parçasıdır. İnsanın görevi bu ölçüye teslim olmak, TANRI’nın sustuğu yerde O’nun adına konuşmaya kalkmamaktır.
+
+Müzik tartışması bu açıdan yeniden ele alınmalıdır. Kuran’da sesin doğru veya yanlış amaçlarla kullanılabileceğini gösteren ölçüler vardır; boş söz, ayartma, putlaştırma, sorumluluklardan uzaklaşma ve yalan elbette eleştirilir. Fakat müziğin, melodinin, ritmin veya çalgının adıyla bütününü kapsayan genel bir haram hükmü bu ayetlerde bulunmuyor. Böyle bir hükmü kesin biçimde TANRI’ya atfetmek, yalnız kişisel bir yorum ileri sürmek değildir; TANRI’nın açık bırakmış olduğu bir alana O’nun adına yasak yerleştirmek anlamına gelebilir.
+
+Bu düşünce, “Hakkında özel bir yasak yoksa her kullanım mutlaka doğrudur” demek değildir. Bir müzik eseri yalanı, haksızlığı, ahlaksızlığı, putlaştırmayı veya TANRI’yı anmaktan uzaklaşmayı besliyorsa, ayetlerin açık ahlaki ölçüleriyle değerlendirilir. Yanlış olan şey, bu sonuçları araştırmak yerine yalnız “müzik” adından hareket ederek bütün bir alanı haram ilan etmektir.
+
+İnsan kendi hayatında ihtiyatlı davranabilir ve belirli eserlerden uzak durmayı seçebilir. Fakat kişisel sakınmayı herkes için ilahi yasa haline getirmek başka bir şeydir. Kuran’da bulunmayan bir yasağı TANRI’nın kesin hükmü olarak sunmak, basit bir görüş ayrılığı olmaktan çıkar; TANRI’ya söylemediği bir hükmü isnat etme gibi ağır bir sorumluluğa dönüşür.
+
+Bu ayet bana şu soruyu yöneltiyor: TANRI’nın Kuran’da açıkça bildirdiği ölçülere mi teslim oluyorum, yoksa O’nun bilerek açıklamadığı alanları kendi hükümlerimle mi dolduruyorum? Müzik hakkında dürüst bir tefekkür, TANRI’nın söylediğini söylemek kadar, söylemediğini O’na söyletmemeyi de gerektirir.
+
+*Ayet referansı: 5:101.*
+
+## 10. Şahitlik, Tevhid ve Adaletin Müziğe Koyduğu Ölçü
 
 ### Ayet
 
@@ -292,7 +314,7 @@ Tevhid müziğe karşı kurulmuş bir korku değil; müziğin yönünü belirley
 
 *Ayet referansları: 3:18, 22:62, 39:3, 72:18.*
 
-## 10. Bilginin Sınırı: Bilmediğini TANRI’ya Söyletmemek
+## 11. Bilginin Sınırı: Bilmediğini TANRI’ya Söyletmemek
 
 ### Ayet
 
@@ -316,7 +338,7 @@ Bu bilgi sınırı makalenin sonucunu da belirler. Ayetlerden müziğin özel bi
 
 *Ayet referansları: 2:32, 10:68, 49:6.*
 
-## 11. Teslimiyet ve İnsanları Efendi Edinme Tehlikesi
+## 12. Teslimiyet ve İnsanları Efendi Edinme Tehlikesi
 
 ### Ayet
 
@@ -342,7 +364,7 @@ Teslimiyet insanı başka insanlara köle yapan bir düzen değildir. Tam tersin
 
 *Ayet referansları: 2:285, 3:79-80, 9:31.*
 
-## 12. Zikrin Ahlaki Meyvesi: Adalet, Doğru Söz ve Sorumluluk
+## 13. Zikrin Ahlaki Meyvesi: Adalet, Doğru Söz ve Sorumluluk
 
 ### Ayet
 
@@ -366,7 +388,7 @@ Benim için en ciddi ölçülerden biri budur: TANRI’yı anan ses, insanı dah
 
 *Ayet referansları: 4:135, 5:8, 16:90.*
 
-## 13. Kelimelerin Arapça Kökleri Üzerine
+## 14. Kelimelerin Arapça Kökleri Üzerine
 
 ### Ayet
 

@@ -39,37 +39,37 @@ const singles = [
 <Layout
   title="Neo-Sacred Zikr | Sacred Music Universe by Berk KÖKSAL"
   description="Discover Neo-Sacred Zikr, the sacred music universe created by Berk KÖKSAL, combining zikr, sacred choirs, symphonic orchestration, progressive rock, ambient sound design and modern production."
-  canonical="/neo-sacred-zikr"
+  canonical="/neo-sacred-zikr/"
   ogImage="/artist/neo-sacred-zikr-banner.webp"
   ogType="website"
   twitterCard="summary_large_image"
 >
   <Nav />
 
-  <section class="min-h-screen py-28">
-    <div class="max-w-6xl mx-auto space-y-28">
+  <section class="min-h-screen py-24 md:py-28">
+    <div class="mx-auto w-full max-w-6xl space-y-20 md:space-y-28">
 
       <!-- HERO -->
-      <header class="relative overflow-hidden rounded-[2rem] border border-accent/20">
+      <header class="relative w-full overflow-hidden border-y border-accent/20 sm:rounded-[2rem] sm:border">
         <img
           src="/artist/neo-sacred-zikr-banner.webp"
           alt="Neo-Sacred Zikr"
-          class="w-full h-[460px] md:h-[620px] object-cover opacity-75"
+          class="h-[460px] w-full object-cover opacity-75 md:h-[620px]"
         />
 
         <div class="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/10"></div>
 
-        <div class="absolute inset-0 flex items-center p-10 md:p-16">
+        <div class="absolute inset-0 flex items-center px-5 py-10 sm:p-10 md:p-16">
           <div class="max-w-3xl">
             <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
               Sacred Music Universe
             </p>
 
-            <h1 class="text-5xl md:text-7xl font-heading font-bold text-maintext mb-6">
+            <h1 class="mb-6 text-4xl font-heading font-bold text-maintext sm:text-5xl md:text-7xl">
               Neo-Sacred Zikr
             </h1>
 
-            <p class="text-xl md:text-2xl text-subtext leading-9">
+            <p class="text-lg leading-8 text-subtext sm:text-xl md:text-2xl md:leading-9">
               A sacred music universe developed by Berk KÖKSAL, bringing together
               zikr music, sacred choir tradition, symphonic orchestration,
               progressive rock, ambient sound design and modern production.
@@ -79,7 +79,7 @@ const singles = [
       </header>
 
       <!-- DEFINITION -->
-      <section class="grid grid-cols-1 lg:grid-cols-[0.75fr_1.25fr] gap-12">
+      <section class="grid grid-cols-1 gap-12 px-5 sm:px-0 lg:grid-cols-[0.75fr_1.25fr]">
         <div>
           <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-4">
             I
@@ -112,7 +112,7 @@ const singles = [
       </section>
 
       <!-- PRINCIPLES -->
-      <section class="rounded-[2rem] border border-accent/20 bg-accent/5 p-10 md:p-14">
+      <section class="w-full border-y border-accent/20 bg-accent/5 px-5 py-10 sm:rounded-[2rem] sm:border sm:p-10 md:p-14">
         <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
           II · Core Principles
         </p>
@@ -133,34 +133,45 @@ const singles = [
       </section>
 
       <!-- IMAGE -->
-      <section class="rounded-[2rem] overflow-hidden border border-accent/20">
-        <img
-          src="/artist/singles.webp"
-          alt="Neo-Sacred Zikr singles"
-          class="w-full object-cover"
-        />
+      <section class="w-full overflow-hidden border-y border-accent/20 sm:rounded-[2rem] sm:border">
+        <a
+          href="https://open.spotify.com/intl-tr/artist/1XO4b3ijvx48kFpjptciXp/discography/single"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Listen to Berk Köksal singles on Spotify"
+          class="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        >
+          <img
+            src="/artist/singles.webp"
+            alt="Neo-Sacred Zikr singles"
+            class="w-full cursor-pointer object-cover transition duration-500 group-hover:scale-[1.015] group-hover:brightness-110"
+            loading="lazy"
+          />
+        </a>
       </section>
 
       <!-- UNIVERSE -->
       <section>
-        <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
-          III · Universe
-        </p>
+        <div class="px-5 sm:px-0">
+          <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
+            III · Universe
+          </p>
 
-        <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext mb-8">
-          From symphonic sacred music to ambient meditation.
-        </h2>
+          <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext mb-8">
+            From symphonic sacred music to ambient meditation.
+          </h2>
 
-        <p class="text-subtext text-lg leading-8 max-w-4xl mb-10">
-          The Neo-Sacred Zikr universe gathers different musical approaches around
-          the same spiritual center: sacred choirs, symphonic music, ambient
-          meditation, progressive rock, spiritual rap, neoclassical textures and
-          devotional contemporary music.
-        </p>
+          <p class="text-subtext text-lg leading-8 max-w-4xl mb-10">
+            The Neo-Sacred Zikr universe gathers different musical approaches around
+            the same spiritual center: sacred choirs, symphonic music, ambient
+            meditation, progressive rock, spiritual rap, neoclassical textures and
+            devotional contemporary music.
+          </p>
+        </div>
 
-        <div class="space-y-5">
+        <div class="space-y-3 sm:space-y-5">
           {albums.map(([title, genre, description]) => (
-            <div class="p-6 rounded-2xl border border-accent/20 bg-accent/5">
+            <div class="border-y border-accent/20 bg-accent/5 px-5 py-6 sm:rounded-2xl sm:border sm:p-6">
               <p class="text-accent text-xs uppercase tracking-[0.3em] font-bold mb-3">
                 {genre}
               </p>
@@ -178,7 +189,7 @@ const singles = [
       </section>
 
       <!-- SINGLES -->
-      <section class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12">
+      <section class="grid grid-cols-1 gap-12 px-5 sm:px-0 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
             IV · First Works
@@ -200,21 +211,23 @@ const singles = [
 
       <!-- JOURNEY -->
       <section>
-        <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
-          V · Journey
-        </p>
+        <div class="px-5 sm:px-0">
+          <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
+            V · Journey
+          </p>
 
-        <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext mb-10">
-          Neo-Sacred Zikr Timeline
-        </h2>
+          <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext mb-10">
+            Neo-Sacred Zikr Timeline
+          </h2>
+        </div>
 
-        <div class="space-y-5">
+        <div class="space-y-3 sm:space-y-5">
           {[
             ["2024", "Tanrı'nın Hediyesi"],
             ["2025", "Zikr Symphony"],
             ["2026", "Zikr Huu · Zikr Nur · ZIKR ROCK · Classical Chorus · One God One Love · ZIKR RAP · Zikr-i Batın"],
           ].map(([year, title]) => (
-            <div class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-4 p-6 rounded-2xl border border-accent/20 bg-accent/5">
+            <div class="grid grid-cols-1 gap-4 border-y border-accent/20 bg-accent/5 px-5 py-6 sm:rounded-2xl sm:border sm:p-6 md:grid-cols-[120px_1fr]">
               <p class="text-accent font-bold">{year}</p>
               <h3 class="text-2xl font-heading font-bold text-maintext">
                 {title}
@@ -225,7 +238,7 @@ const singles = [
       </section>
 
       <!-- FINAL -->
-      <section class="text-center py-20">
+      <section class="px-5 py-16 text-center sm:px-0 md:py-20">
         <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-8">
           Final Statement
         </p>
@@ -241,7 +254,7 @@ const singles = [
         href="https://qurantft.com"
         target="_blank"
         rel="noopener noreferrer"
-        class="block p-10 md:p-14 rounded-[2rem] border border-accent/30 bg-accent/5 hover:bg-accent/10 transition-all text-center"
+        class="block w-full border-y border-accent/30 bg-accent/5 px-5 py-10 text-center transition-all hover:bg-accent/10 sm:rounded-[2rem] sm:border sm:p-10 md:p-14"
       >
         <p class="text-accent text-xs uppercase tracking-[0.45em] font-bold mb-5">
           QURAN: THE FINAL TESTAMENT

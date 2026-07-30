@@ -17,7 +17,7 @@ const navItems: NavItem[] = [
   },
   {
     label: "Biography",
-    href: "/biography",
+    href: "/biography/",
     icon: "mdi:account-music",
     matchPrefix: "/biography",
   },
@@ -28,13 +28,13 @@ const navItems: NavItem[] = [
   },
   {
     label: "Neo-Sacred Zikr",
-    href: "/neo-sacred-zikr",
+    href: "/neo-sacred-zikr/",
     icon: "mdi:music-circle",
     matchPrefix: "/neo-sacred-zikr",
   },
   {
     label: "Writings",
-    href: "/writings",
+    href: "/writings/",
     icon: "mdi:book-open-page-variant",
     matchPrefix: "/writings",
   },
@@ -51,6 +51,7 @@ function isItemActive(item: NavItem): boolean {
   if (item.matchPrefix) {
     return (
       currentPath === item.matchPrefix ||
+      currentPath === `${item.matchPrefix}/` ||
       currentPath.startsWith(`${item.matchPrefix}/`)
     );
   }
@@ -63,7 +64,11 @@ function isItemActive(item: NavItem): boolean {
 }
 ---
 
-<div id="theme-toggle-wrapper" class="fixed top-4 right-4 z-50 md:top-4 md:right-4 reveal-content" style="animation-delay: 700ms;">
+<div
+  id="theme-toggle-wrapper"
+  class="fixed top-4 right-4 z-50 md:top-4 md:right-4 reveal-content"
+  style="animation-delay: 700ms;"
+>
   <ThemeToggle />
 </div>
 
@@ -73,7 +78,10 @@ function isItemActive(item: NavItem): boolean {
     aria-label="Primary navigation"
     class="pro-glass fixed left-1/2 -translate-x-1/2 z-20 border-[1.2px] transition-all duration-500 ease-in-out md:top-6 md:bottom-auto bottom-0 w-[90%]"
   >
-    <div class="container mx-auto flex justify-center items-center p-3 reveal-content" style="animation-delay: 700ms;">
+    <div
+      class="container mx-auto flex justify-center items-center p-3 reveal-content"
+      style="animation-delay: 700ms;"
+    >
       <ul class="grid grid-cols-6 w-full items-center md:flex md:w-auto md:justify-center md:gap-8 lg:gap-12">
         {
           navItems.map((item) => {
@@ -95,8 +103,13 @@ function isItemActive(item: NavItem): boolean {
                     />
                   </span>
 
-                  <span class="hidden md:inline-block whitespace-nowrap">{item.label}</span>
-                  <span class="md:hidden block max-w-full truncate leading-tight">{item.label}</span>
+                  <span class="hidden md:inline-block whitespace-nowrap">
+                    {item.label}
+                  </span>
+
+                  <span class="md:hidden block max-w-full truncate leading-tight">
+                    {item.label}
+                  </span>
                 </a>
               </li>
             );
@@ -151,7 +164,10 @@ function isItemActive(item: NavItem): boolean {
   }
 
   nav a {
-    transition: transform 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease,
+      font-weight 0.3s ease;
   }
 
   nav a.active {
@@ -171,7 +187,10 @@ function isItemActive(item: NavItem): boolean {
   }
 
   .nav-icon {
-    transition: transform 0.3s ease, color 0.3s ease, filter 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease,
+      filter 0.3s ease;
   }
 
   nav a.active .nav-icon {
@@ -258,13 +277,18 @@ function isItemActive(item: NavItem): boolean {
 
       const minWidth = 900;
       const maxWidth = window.innerWidth * 0.9;
-      const currentWidth = maxWidth - (maxWidth - minWidth) * easeProgress;
+      const currentWidth =
+        maxWidth - (maxWidth - minWidth) * easeProgress;
 
       if (window.innerWidth >= 768) {
-        nav?.style.setProperty("width", `${Math.min(currentWidth, window.innerWidth - 32)}px`);
+        nav?.style.setProperty(
+          "width",
+          `${Math.min(currentWidth, window.innerWidth - 32)}px`
+        );
       }
     } else {
       nav?.classList.remove("scrolling");
+
       if (window.innerWidth >= 768) {
         nav?.style.removeProperty("width");
       }

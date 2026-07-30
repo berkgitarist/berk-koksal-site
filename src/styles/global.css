@@ -469,3 +469,49 @@
   object-fit: cover;
   box-shadow: 0 25px 60px rgba(0,0,0,.35);
 }
+/* === Mobile Compact Layout === */
+@media (max-width: 640px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Reduce the outer side gaps on all main pages. */
+  .section-container,
+  main > section,
+  main > article,
+  .family-banner {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  /* Let the main content use the available mobile width. */
+  .section-container > *,
+  main > section > .mx-auto,
+  main > article > .mx-auto {
+    width: 100%;
+    max-width: 100% !important;
+  }
+
+  /* Reduce the inner side padding of large cards and article panels. */
+  .pro-glass,
+  .pro-card,
+  .writing-prose,
+  main [class*="rounded-"][class*="border"][class*="p-"] {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Keep long-form articles readable without wasting horizontal space. */
+  .writing-prose {
+    font-size: 1rem !important;
+    line-height: 1.8 !important;
+  }
+
+  .writing-prose blockquote {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
