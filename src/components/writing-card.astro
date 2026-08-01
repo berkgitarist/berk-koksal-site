@@ -89,14 +89,18 @@ const draftLabel = data.language === 'tr' ? 'Taslak' : 'Draft';
       </p>
 
       {data.tags.length > 0 && (
-        <div class="mt-4 flex flex-wrap gap-2">
-          {data.tags.map((tag) => (
-            <span class="rounded-full border border-accent/15 bg-background/25 px-3 py-1 text-xs text-subtext">
-              #{tag}
-            </span>
-          ))}
-        </div>
-      )}
+  <div
+    class="mt-4 flex w-full min-w-0 flex-nowrap items-center gap-1 overflow-x-auto whitespace-nowrap pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+  >
+    {data.tags.map((tag) => (
+      <span
+        class="shrink-0 rounded-full border border-accent/15 bg-background/25 px-2 py-1 text-[10px] leading-none text-subtext"
+      >
+        #{tag}
+      </span>
+    ))}
+  </div>
+)}
 
       <div class="mt-auto flex items-center gap-2 pt-5 text-sm font-bold text-maintext">
         <span>{data.language === 'tr' ? 'Makaleyi oku' : 'Read article'}</span>

@@ -211,6 +211,84 @@ const structuredData = {
       </nav>
     )}
   </article>
+
+  <div
+    id="copy-protection-warning"
+    role="status"
+    aria-live="polite"
+    aria-atomic="true"
+  >
+    {isTurkish
+      ? 'Bu makalenin kopyalanmasına izin verilmemektedir. İçerik kullanımı için Berk KÖKSAL ile iletişime geçebilirsiniz.'
+      : 'Copying this article is not permitted.'}
+  </div>
+
+  <script is:inline>
+    (() => {
+      const setupCopyProtection = () => {
+        const article = document.querySelector('.writing-prose');
+        const warning = document.querySelector('#copy-protection-warning');
+
+        if (!(article instanceof HTMLElement)) return;
+        if (!(warning instanceof HTMLElement)) return;
+        if (article.dataset.copyProtectionReady === 'true') return;
+
+        article.dataset.copyProtectionReady = 'true';
+
+        let warningTimeout;
+
+        const showWarning = () => {
+          warning.classList.add('is-visible');
+          window.clearTimeout(warningTimeout);
+
+          warningTimeout = window.setTimeout(() => {
+            warning.classList.remove('is-visible');
+          }, 2200);
+        };
+
+        const blockAction = (event) => {
+          event.preventDefault();
+          showWarning();
+        };
+
+        article.addEventListener('copy', blockAction);
+        article.addEventListener('cut', blockAction);
+        article.addEventListener('contextmenu', blockAction);
+        article.addEventListener('dragstart', blockAction);
+        article.addEventListener('selectstart', blockAction);
+
+        document.addEventListener('keydown', (event) => {
+          const target = event.target;
+          const isEditable =
+            target instanceof HTMLElement &&
+            (target.matches('input, textarea, select') || target.isContentEditable);
+
+          if (isEditable) return;
+
+          const hasModifier = event.ctrlKey || event.metaKey;
+          if (!hasModifier) return;
+
+          const key = event.key.toLowerCase();
+          const blockedKeys = ['a', 'c', 'x', 's', 'u'];
+
+          if (!blockedKeys.includes(key)) return;
+
+          event.preventDefault();
+          showWarning();
+        });
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupCopyProtection, {
+          once: true,
+        });
+      } else {
+        setupCopyProtection();
+      }
+
+      document.addEventListener('astro:page-load', setupCopyProtection);
+    })();
+  </script>
 </Layout>
 
 <style>

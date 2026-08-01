@@ -515,3 +515,264 @@
     padding-right: 1rem !important;
   }
 }
+
+/* === Writing Article Summary === */
+.writing-prose .article-summary {
+  margin: 2.5rem 0;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--color-accent), transparent 68%);
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-maintext), transparent 96%),
+    color-mix(in srgb, var(--color-accent), transparent 94%)
+  );
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 color-mix(in srgb, var(--color-maintext), transparent 90%);
+}
+
+.writing-prose .article-summary > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-height: 64px;
+  padding: 1rem 1.25rem;
+  color: var(--color-maintext);
+  font-family: var(--font-heading);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.writing-prose .article-summary > summary::-webkit-details-marker {
+  display: none;
+}
+
+.writing-prose .article-summary > summary::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-right: 2px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+  transform: rotate(-45deg);
+  transition: transform 0.25s ease;
+}
+
+.writing-prose .article-summary > summary::after {
+  content: "Ayetleri göster";
+  margin-left: auto;
+  color: var(--color-subtext);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.writing-prose .article-summary[open] > summary::before {
+  transform: rotate(45deg) translate(-2px, -2px);
+}
+
+.writing-prose .article-summary[open] > summary::after {
+  content: "Ayetleri gizle";
+}
+
+.writing-prose .article-summary > summary:hover {
+  background: color-mix(in srgb, var(--color-accent), transparent 92%);
+}
+
+.writing-prose .article-summary > summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -4px;
+  border-radius: 18px;
+}
+
+.writing-prose .article-summary__content {
+  padding: 1.25rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-accent), transparent 76%);
+}
+
+.writing-prose .article-summary[open] .article-summary__content {
+  animation: articleSummaryReveal 0.28s ease both;
+}
+
+.writing-prose .article-summary__section + .article-summary__section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-maintext), transparent 90%);
+}
+
+.writing-prose .article-summary__section h3 {
+  margin: 0 0 0.8rem;
+  color: var(--color-maintext);
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 1.5vw, 1.16rem);
+  line-height: 1.45;
+}
+
+.writing-prose .article-summary__section blockquote {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 14px 14px 0;
+  background: color-mix(in srgb, var(--color-background), transparent 34%);
+  color: var(--color-subtext);
+}
+
+.writing-prose .article-summary__section blockquote p {
+  margin: 0;
+}
+
+.writing-prose .article-summary__section blockquote p + p {
+  margin-top: 0.75rem;
+}
+
+.writing-prose .article-summary__section blockquote strong {
+  color: var(--color-accent);
+}
+
+@keyframes articleSummaryReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .writing-prose .article-summary {
+    margin: 1.75rem 0;
+    border-radius: 18px;
+  }
+
+  .writing-prose .article-summary > summary {
+    min-height: 56px;
+    padding: 0.9rem 1rem;
+  }
+
+  .writing-prose .article-summary > summary::after {
+    content: "Göster";
+    font-size: 0.76rem;
+  }
+
+  .writing-prose .article-summary[open] > summary::after {
+    content: "Gizle";
+  }
+
+  .writing-prose .article-summary__content {
+    padding: 1rem;
+  }
+
+  .writing-prose .article-summary__section + .article-summary__section {
+    margin-top: 1.2rem;
+    padding-top: 1.2rem;
+  }
+
+  .writing-prose .article-summary__section blockquote {
+    padding: 0.9rem 1rem !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .writing-prose .article-summary > summary::before,
+  .writing-prose .article-summary[open] .article-summary__content {
+    animation: none;
+    transition: none;
+  }
+}
+/* === Writings Copy Protection === */
+
+.writing-prose,
+.writing-prose * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+}
+
+.writing-prose img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+/* Linkler ve butonlar kullanılmaya devam eder */
+.writing-prose a,
+.writing-prose button,
+.writing-prose summary {
+  pointer-events: auto;
+}
+
+#copy-protection-warning {
+  position: fixed;
+  left: 50%;
+  bottom: 2rem;
+  z-index: 99999;
+
+  width: max-content;
+  max-width: calc(100vw - 2rem);
+
+  padding: 0.85rem 1.2rem;
+
+  color: var(--color-maintext);
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--color-background), black 12%),
+      color-mix(in srgb, var(--color-accent), var(--color-background) 84%)
+    );
+
+  border: 1px solid
+    color-mix(in srgb, var(--color-accent), transparent 45%);
+  border-radius: 14px;
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.35),
+    0 0 30px
+      color-mix(in srgb, var(--color-accent), transparent 85%);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translate(-50%, 20px);
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease;
+}
+
+#copy-protection-warning.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 640px) {
+  #copy-protection-warning {
+    bottom: 1rem;
+    font-size: 0.82rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #copy-protection-warning {
+    transition: none;
+  }
+}
