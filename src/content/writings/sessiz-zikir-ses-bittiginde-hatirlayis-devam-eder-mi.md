@@ -40,7 +40,6 @@ author: "Berk KÖKSAL"
 
 > **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
 
-
 ## Giriş
 
 Ses insanın içine hızlı ulaşır. Bir melodi, bazen uzun bir açıklamanın açamadığı bir yeri açar. Bir kelime ritimle birleştiğinde hafızada kalır; bir isim tekrarlandığında kalbin yönünü değiştirebilir. Fakat sesin başka bir özelliği daha vardır: Başlar ve biter.

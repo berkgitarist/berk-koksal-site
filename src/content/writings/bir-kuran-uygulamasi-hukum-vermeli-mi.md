@@ -41,7 +41,6 @@ author: "Berk KÖKSAL"
 
 > **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
 
-
 ## Giriş
 
 Bir yazılım geliştirirken yalnızca kod yazmıyorum. Hangi bilginin önce gösterileceğine, hangi kelimenin düğmenin üzerinde yer alacağına, hangi sonucun daha görünür olacağına ve belirsizliğin kullanıcıya nasıl anlatılacağına da karar veriyorum. Bu kararların her biri küçük görünebilir. Fakat konu Kuran olduğunda, küçük bir arayüz tercihi insanın bir ayeti nasıl anlayacağını etkileyebilir.

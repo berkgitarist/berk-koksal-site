@@ -37,7 +37,6 @@ author: "Berk KÖKSAL"
 
 > **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
 
-
 ## Giriş
 
 İnsan bazen bir söze doğru olduğu için değil, çok tekrarlandığı için inanır. Bazen haberi getiren kişiye güvenir; bazen de söylenen şey kendi öfkesine veya beklentisine uyduğu için araştırma ihtiyacı duymaz.
