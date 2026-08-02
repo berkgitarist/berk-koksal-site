@@ -55,6 +55,48 @@ const allWritings = (
 const currentIndex = allWritings.findIndex((item) => item.id === entry.id);
 const newerArticle = currentIndex > 0 ? allWritings[currentIndex - 1] : undefined;
 const olderArticle = currentIndex >= 0 ? allWritings[currentIndex + 1] : undefined;
+const normalizeTag = (tag: string) =>
+  tag.trim().toLocaleLowerCase('tr-TR');
+
+const currentTags = new Set(
+  (data.tags ?? []).map(normalizeTag)
+);
+
+const relatedArticles = allWritings
+  .filter((item) => {
+    return (
+      item.id !== entry.id &&
+      item.data.language === data.language
+    );
+  })
+  .map((item) => {
+    const matchingTagCount = (item.data.tags ?? []).reduce(
+      (total, tag) => {
+        return total + (
+          currentTags.has(normalizeTag(tag)) ? 1 : 0
+        );
+      },
+      0
+    );
+
+    return {
+      entry: item,
+      matchingTagCount,
+    };
+  })
+  .filter(({ matchingTagCount }) => matchingTagCount > 0)
+  .sort((a, b) => {
+    if (b.matchingTagCount !== a.matchingTagCount) {
+      return b.matchingTagCount - a.matchingTagCount;
+    }
+
+    return (
+      b.entry.data.publishDate.getTime() -
+      a.entry.data.publishDate.getTime()
+    );
+  })
+  .slice(0, 3)
+  .map(({ entry }) => entry);
 
 const isTurkish = data.language === 'tr';
 const readingLabel = isTurkish ? `${minutes} dk okuma` : `${minutes} min read`;
@@ -63,26 +105,35 @@ const updatedLabel = isTurkish ? 'Güncellendi' : 'Updated';
 
 const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
+  '@type': 'BlogPosting',
   headline: data.title,
   description: data.description,
   datePublished: data.publishDate.toISOString(),
   dateModified: (data.updatedDate ?? data.publishDate).toISOString(),
-  inLanguage: data.language,
+  inLanguage: data.language === 'tr' ? 'tr-TR' : data.language,
   url: canonicalUrl,
-  mainEntityOfPage: canonicalUrl,
+
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonicalUrl,
+  },
+
   author: {
     '@type': 'Person',
     name: data.author,
-    url: siteUrl.toString(),
+    url: new URL('/biography/', siteUrl).toString(),
   },
+
   publisher: {
     '@type': 'Person',
     name: data.author,
     url: siteUrl.toString(),
   },
+
   ...(data.image
-    ? { image: new URL(data.image, siteUrl).toString() }
+    ? {
+        image: new URL(data.image, siteUrl).toString(),
+      }
     : {}),
 };
 ---
@@ -178,6 +229,86 @@ const structuredData = {
         ))}
       </footer>
     )}
+
+    {relatedArticles.length > 0 && (
+  <section
+    aria-labelledby="related-writings-title"
+    class="mx-auto mt-12 max-w-[1400px]"
+  >
+    <div class="mb-5 flex items-end justify-between gap-4">
+      <div>
+        <p
+          class="text-xs font-bold uppercase tracking-[0.3em] text-accent"
+        >
+          {isTurkish ? 'Keşfet' : 'Discover'}
+        </p>
+
+        <h2
+          id="related-writings-title"
+          class="mt-1 text-3xl font-bold text-maintext"
+        >
+          {isTurkish ? 'İlgili Yazılar' : 'Related Articles'}
+        </h2>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
+      {relatedArticles.map((article) => (
+        <a
+          href={getCanonicalWritingHref(article.id)}
+          class="group overflow-hidden rounded-[1.75rem] border border-accent/15 bg-accent/5 transition-all duration-300 hover:-translate-y-1 hover:border-[#D4AF37]/35"
+        >
+          {article.data.image && (
+            <div class="aspect-[16/9] overflow-hidden">
+              <img
+                src={article.data.image}
+                alt={article.data.imageAlt ?? article.data.title}
+                width="960"
+                height="540"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]"
+              />
+            </div>
+          )}
+
+          <div class="p-6">
+            <p
+              class="text-xs font-bold uppercase tracking-[0.2em] text-accent"
+            >
+              {isTurkish &&
+              article.data.category === "Qur'an Reflections"
+                ? 'Kuran Tefekkürleri'
+                : article.data.category}
+            </p>
+
+            <h3
+              class="mt-3 text-xl font-bold leading-snug text-maintext transition-colors group-hover:text-[#D4AF37]"
+            >
+              {article.data.title}
+            </h3>
+
+            <p class="mt-3 line-clamp-3 leading-7 text-subtext">
+              {article.data.description}
+            </p>
+
+            <span
+              class="mt-5 inline-flex items-center gap-2 font-semibold text-maintext"
+            >
+              {isTurkish ? 'Makaleyi oku' : 'Read article'}
+              <span
+                aria-hidden="true"
+                class="transition-transform group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
 
     {(newerArticle || olderArticle) && (
       <nav aria-label={isTurkish ? 'Makale gezintisi' : 'Article navigation'} class="mx-auto mt-12 grid max-w-[1400px] grid-cols-1 gap-5 md:grid-cols-2">
