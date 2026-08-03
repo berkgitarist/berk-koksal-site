@@ -6,7 +6,7 @@ import Nav from "../components/nav.astro";
 <Layout
   title="Biography | Berk KÖKSAL"
   description="Official biography of Berk KÖKSAL — composer, guitarist, producer, software engineer and founder of Neo-Sacred Zikr."
-  canonical="/biography"
+  canonical="/biography/"
   ogImage="/artist/berk-portrait.webp"
 >
   <Nav />
@@ -100,7 +100,7 @@ import Nav from "../components/nav.astro";
         <!-- FULL BIOGRAPHY BUTTON START -->
         <div>
           <a
-            href="/full-biography"
+            href="/full-biography/"
             class="group flex w-full items-center justify-between rounded-2xl border border-accent/40 bg-accent/10 px-6 py-5 text-accent transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-background md:px-8 md:py-7"
             aria-label="Read Berk Köksal's full biography"
           >
@@ -388,6 +388,11 @@ import Nav from "../components/nav.astro";
                   "2026",
                   "Zikr-i Batın",
                   "A deeply personal album centered on inner zikr and the beautiful names of GOD."
+                ],
+                [
+                  "2026",
+                  "ZIKR JAZZ",
+                  "An intimate Neo-Sacred Zikr album where spiritual jazz, warm acoustic instrumentation and the beautiful names of GOD meet in quiet remembrance."
                 ]
               ].map(([year, title, description]) => (
                 <article class="grid grid-cols-1 gap-4 rounded-2xl border border-accent/20 bg-accent/5 p-6 md:grid-cols-[120px_1fr]">

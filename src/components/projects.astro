@@ -1,24 +1,15 @@
 ---
 import ProjectCard from './project-card.astro';
-import projectsData from '../data/projects.json';
+import albumsData from '../data/albums.json';
 
-const projects = projectsData.map((project) => ({
-  ...project,
-  link:
-    project.link && project.link !== '#'
-      ? project.link
-      : `/albums/${project.title
-          .toLowerCase()
-          .replaceAll('neo-sacred zikr: ', '')
-          .replaceAll("tanrı'nın hediyesi", 'tanrinin-hediyesi')
-          .replaceAll('ı', 'i')
-          .replaceAll('ğ', 'g')
-          .replaceAll('ü', 'u')
-          .replaceAll('ş', 's')
-          .replaceAll('ö', 'o')
-          .replaceAll('ç', 'c')
-          .replaceAll(' ', '-')
-          .replaceAll('--', '-')}`,
+const projects = albumsData.map((album) => ({
+  title: album.title,
+  description: album.description,
+  category: `ALBUM • ${album.year}`,
+  images: [album.cover.replace(/^\//, '')],
+  platforms: ['web'],
+  tech: album.genre.split(' / '),
+  link: `/albums/${album.slug}/`,
 }));
 ---
 

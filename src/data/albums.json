@@ -1,5 +1,43 @@
 [
   {
+    "slug": "zikr-jazz",
+    "title": "ZIKR JAZZ",
+    "year": "2026",
+    "duration": "1 sa. 7 dk. 7 sn.",
+    "tracksCount": "19",
+    "cover": "/albums/zikr-jazz.webp",
+    "genre": "Neo-Sacred Zikr / Spiritual Jazz / Modal Jazz / Sacred Music",
+    "description": "An intimate Neo-Sacred Zikr album where spiritual jazz, warm acoustic instrumentation and the beautiful names of GOD meet in quiet remembrance.",
+    "story": "ZIKR JAZZ is one of the most introspective, elegant and melodic works in Berk Köksal’s Neo-Sacred Zikr universe. The album reflects upon the beautiful names of GOD and the divine attributes found in the Quran through the free harmonic language of jazz.\n\nWithin the Neo-Sacred Zikr approach, each album represents a different spiritual atmosphere. Zikr Symphony embodies grandeur, ZIKR ROCK expresses power, ZIKR RAP carries rhythm, Classical Chorus centers on monumental choirs, and Zikr-i Batin explores the silent remembrance of the heart. ZIKR JAZZ, by contrast, takes the form of a sincere prayer offered in the stillness of the night. Simplicity is placed above spectacle, depth above loudness, and submission above technical display.\n\nThe female vocal heard throughout the album is not merely a performer, but a bearer of remembrance. Fingerstyle hollow-body jazz guitar, warm grand piano, double bass, brushed drums, flugelhorn, tenor and soprano saxophones, together with occasional ney and oud textures, create a breathing sound world around the voice. Each instrument responds in support of the zikr; none is allowed to stand before the names of GOD.\n\nThe lyrics are shaped around the beautiful names of GOD, divine names mentioned in the Quran, attributes appearing at the ends of verses, and expressions of remembrance. Repetition is not used merely as a musical device; it represents the heart remembering the same truth again and again. With every return, the harmony changes and the emotion deepens, while the center remains unchanged: glorifying GOD.\n\nMusically, the album draws inspiration from modern modal jazz, spiritual jazz and classical jazz harmony. Maj7, maj9, min9, add9, 6/9 and suspended chords, melodic minor colors, diminished transitions and subtle chromatic movement create a warm, natural and deeply human sound. Improvisations are deliberately restrained, allowing silence itself to become part of the music.\n\nEach piece centers on a different name of GOD or on divine attributes that appear together in the Quran. The journey begins with Wallahu Azizun Hakim and moves through themes of forgiveness, mercy, knowledge, wisdom, power, light and the oneness of GOD, before reaching a peaceful conclusion with Dhul-Jalali Wal-Ikram. The album invites the listener not only to hear music, but also to reflect, give thanks, remember GOD and contemplate His names.\n\nZIKR JAZZ is the first expression of jazz within the Neo-Sacred Zikr universe. It does not approach jazz merely as a language of entertainment, but as the musical expression of sincere supplication, silent remembrance and heartfelt submission.",
+    "verse": {
+      "reference": "Quran 13:28",
+      "text": "They are the ones whose hearts rejoice in remembering GOD. Absolutely, by remembering GOD, the hearts rejoice.",
+      "source": "Rashad Khalifa Translation"
+    },
+    "spotify": "https://open.spotify.com/intl-tr/album/6PsbgqqNjK5C48LoPkEnnj",
+    "tracks": [
+      "Wallahu Azizun Hakim",
+      "Innallaha Sami'un Basir",
+      "Allahu Nurus-Samawati Wal-Ard",
+      "Ya Hannan, Ya Mannan",
+      "Ya Ghafur, Ya Rahim",
+      "Latifun Khabir",
+      "Ghaniyyun Hamid",
+      "Ya Ra'uf, Ya Rahim",
+      "Fattahun Alim",
+      "Alimun Hakim, Alimun Khabir",
+      "Ya Qawiyy, Ya Aziz",
+      "Ya Aliyy, Ya Kabir",
+      "Al-Malik Al-Quddus",
+      "Al-Mu'min Al-Muhaymin",
+      "Ya Wahid, Ya Samad",
+      "Al-Hayy Al-Qayyum",
+      "Ya Awwal, Ya Akhir",
+      "Az-Zahir Wal-Batin",
+      "Dhul-Jalali Wal-Ikram"
+    ]
+  },
+  {
     "slug": "zikr-i-batin",
     "title": "ZIKR-I BATIN",
     "year": "2026",

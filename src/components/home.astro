@@ -1,8 +1,6 @@
 ---
-import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 
-import zikrIBatinCover from '../assets/zikr-i-batin.webp';
 import localData from '../data/home.json';
 
 interface Social {
@@ -203,16 +201,12 @@ const {
       class="grid items-center grid-cols-1 gap-10 lg:grid-cols-[320px_1fr]"
     >
       <a
-        href="/albums/zikr-i-batin"
+        href="/albums/zikr-jazz/"
         class="group"
       >
-        <Image
-          src={zikrIBatinCover}
-          alt="ZIKR-I BATIN album cover by Berk KÖKSAL"
-          widths={[320, 480, 640]}
-          sizes="(max-width: 1023px) 100vw, 320px"
-          format="webp"
-          quality={82}
+        <img
+          src="/albums/zikr-jazz.webp"
+          alt="ZIKR JAZZ album cover by Berk KÖKSAL"
           loading="lazy"
           decoding="async"
           class="w-full rounded-3xl shadow-2xl transition duration-500 group-hover:scale-[1.02]"
@@ -227,20 +221,20 @@ const {
         </div>
 
         <h2 class="mb-4 text-5xl font-bold">
-          ZIKR-I BATIN
+          ZIKR JAZZ
         </h2>
 
         <p
           class="mb-8 text-lg leading-8 text-white/70"
         >
-          The latest chapter in the Neo-Sacred Zikr universe,
-          combining sacred choirs, orchestral textures,
-          contemplative remembrance and modern production.
+          An intimate Neo-Sacred Zikr album where spiritual jazz,
+          warm acoustic instrumentation and the beautiful names of GOD
+          meet in quiet remembrance.
         </p>
 
         <div class="flex flex-wrap gap-4">
           <a
-            href="https://open.spotify.com/intl-tr/album/64iYKr2840EvDibapiDZb9"
+            href="https://open.spotify.com/intl-tr/album/6PsbgqqNjK5C48LoPkEnnj"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center gap-3 rounded-full border border-[#1DB954]/30 bg-[#1DB954]/10 px-7 py-4 font-semibold text-white transition hover:bg-[#1DB954]/20"
@@ -254,7 +248,7 @@ const {
           </a>
 
           <a
-            href="/albums/zikr-i-batin"
+            href="/albums/zikr-jazz/"
             class="inline-flex items-center gap-3 px-7 py-4 font-semibold text-white transition border rounded-full border-accent/20 bg-accent/10 hover:bg-accent/20"
           >
             View Album
