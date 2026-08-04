@@ -99,6 +99,15 @@ const relatedArticles = allWritings
   .map(({ entry }) => entry);
 
 const isTurkish = data.language === 'tr';
+
+const articleMenuItems = allWritings
+  .filter((article) => article.data.language === data.language)
+  .map((article) => ({
+    href: getCanonicalWritingHref(article.id),
+    title: article.data.title,
+    date: formatWritingDate(article.data.publishDate, article.data.language),
+    isCurrent: article.id === entry.id,
+  }));
 const readingLabel = isTurkish ? `${minutes} dk okuma` : `${minutes} min read`;
 const publishedLabel = isTurkish ? 'Yayın tarihi' : 'Published';
 const updatedLabel = isTurkish ? 'Güncellendi' : 'Updated';
@@ -154,7 +163,103 @@ const structuredData = {
 
   <Nav />
 
+  <aside
+    class="article-page-menu-drawer hidden lg:block"
+    aria-label={isTurkish ? 'Makale menüsü' : 'Article menu'}
+  >
+    <details class="article-page-menu article-page-menu--desktop">
+      <summary class="article-page-menu__header">
+        <span class="article-page-menu__copy min-w-0">
+          <span class="block text-[0.62rem] font-bold uppercase tracking-[0.22em] text-accent">
+            {isTurkish ? 'Hızlı erişim' : 'Quick access'}
+          </span>
+          <span class="mt-0.5 block font-heading text-lg font-bold text-maintext">
+            {isTurkish ? 'Tüm Makaleler' : 'All Articles'}
+          </span>
+        </span>
+
+        <span class="article-page-menu__actions">
+          <span class="article-page-menu__count">{articleMenuItems.length}</span>
+          <span class="article-page-menu__icon" aria-hidden="true"></span>
+        </span>
+
+        <span class="sr-only">
+          {isTurkish ? 'Makale menüsünü aç veya kapat' : 'Open or close article menu'}
+        </span>
+      </summary>
+
+      <div class="article-page-menu__body">
+        <nav aria-label={isTurkish ? 'Tüm makaleler' : 'All articles'} class="article-page-menu__scroll">
+          <ol class="space-y-0.5">
+            {articleMenuItems.map((article, index) => (
+              <li>
+                <a
+                  href={article.href}
+                  class="article-page-menu__link"
+                  data-astro-reload
+                  aria-current={article.isCurrent ? 'page' : undefined}
+                >
+                  <span class="article-page-menu__number">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <span class="min-w-0">
+                    <span class="article-page-menu__title">{article.title}</span>
+                    <span class="article-page-menu__date">{article.date}</span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+
+        <a href="/writings/" class="article-page-menu__footer-link">
+          <span>{isTurkish ? 'Yazılar sayfasına dön' : 'Back to writings'}</span>
+          <span aria-hidden="true">&#8594;</span>
+        </a>
+      </div>
+    </details>
+  </aside>
+
   <article class="relative mx-auto max-w-[1600px] px-4 pb-24 pt-24 sm:px-6 md:pt-28 lg:px-8">
+    <details class="article-page-menu-mobile mx-auto mb-8 max-w-6xl lg:hidden">
+      <summary>
+        <span class="min-w-0">
+          <span class="block text-[0.62rem] font-bold uppercase tracking-[0.22em] text-accent">
+            {isTurkish ? 'Hızlı erişim' : 'Quick access'}
+          </span>
+          <span class="mt-0.5 block font-heading text-lg font-bold text-maintext">
+            {isTurkish ? 'Tüm Makaleler' : 'All Articles'}
+          </span>
+        </span>
+        <span class="article-page-menu__count">
+          {articleMenuItems.length} {isTurkish ? 'yazı' : 'articles'}
+        </span>
+      </summary>
+
+      <nav aria-label={isTurkish ? 'Tüm makaleler' : 'All articles'} class="article-page-menu-mobile__content">
+        <ol class="space-y-0.5">
+          {articleMenuItems.map((article, index) => (
+            <li>
+              <a
+                href={article.href}
+                class="article-page-menu__link"
+                data-astro-reload
+                aria-current={article.isCurrent ? 'page' : undefined}
+              >
+                <span class="article-page-menu__number">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <span class="min-w-0">
+                  <span class="article-page-menu__title">{article.title}</span>
+                  <span class="article-page-menu__date">{article.date}</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    </details>
+
     <header class="mx-auto max-w-6xl text-center">
       <a
         href="/writings/"
@@ -211,7 +316,7 @@ const structuredData = {
       width="1600"
       height="900"
       loading="eager"
-      class="block h-[280px] w-full object-cover sm:h-[380px] md:h-[480px] lg:h-[560px]"
+      class="block aspect-[16/9] w-full object-cover sm:h-[380px] sm:aspect-auto md:h-[480px] lg:h-[560px]"
     />
   </figure>
 )}
@@ -343,6 +448,51 @@ const structuredData = {
     )}
   </article>
 
+  <script is:inline>
+    (() => {
+      const setupArticleMenu = () => {
+        const desktopMenu = document.querySelector('.article-page-menu--desktop');
+        const mobileMenu = document.querySelector('.article-page-menu-mobile');
+
+        if (desktopMenu instanceof HTMLDetailsElement) {
+          desktopMenu.open = false;
+
+          if (desktopMenu.dataset.menuReady !== 'true') {
+            desktopMenu.dataset.menuReady = 'true';
+
+            document.addEventListener('keydown', (event) => {
+              if (event.key === 'Escape') {
+                desktopMenu.open = false;
+              }
+            });
+
+            document.addEventListener('pointerdown', (event) => {
+              const target = event.target;
+              if (!(target instanceof Node)) return;
+              if (!desktopMenu.open || desktopMenu.contains(target)) return;
+              desktopMenu.open = false;
+            });
+          }
+        }
+
+        if (mobileMenu instanceof HTMLDetailsElement) {
+          mobileMenu.open = false;
+        }
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupArticleMenu, {
+          once: true,
+        });
+      } else {
+        setupArticleMenu();
+      }
+
+      window.addEventListener('pageshow', setupArticleMenu);
+      document.addEventListener('astro:page-load', setupArticleMenu);
+    })();
+  </script>
+
   <div
     id="copy-protection-warning"
     role="status"
@@ -423,6 +573,339 @@ const structuredData = {
 </Layout>
 
 <style>
+  .article-page-menu,
+  .article-page-menu-mobile {
+    border: 1px solid color-mix(in srgb, var(--color-accent), transparent 72%);
+    background-color: color-mix(in srgb, var(--color-background), black 24%);
+    background-image: linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--color-background), black 30%),
+      color-mix(in srgb, var(--color-background), var(--color-accent) 7%)
+    );
+    box-shadow:
+      0 22px 58px rgba(0, 0, 0, 0.46),
+      inset 0 1px 0 color-mix(in srgb, var(--color-maintext), transparent 88%);
+    backdrop-filter: blur(24px) saturate(82%);
+    -webkit-backdrop-filter: blur(24px) saturate(82%);
+  }
+
+  .article-page-menu {
+    overflow: hidden;
+    width: clamp(15rem, 18vw, 18rem);
+    border-radius: 1.35rem;
+  }
+
+  .article-page-menu__header {
+    display: flex;
+    min-height: 4.15rem;
+    cursor: pointer;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.65rem;
+    padding: 0.8rem 0.85rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-accent), transparent 84%);
+    user-select: none;
+  }
+
+  .article-page-menu__header::-webkit-details-marker,
+  .article-page-menu-mobile > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .article-page-menu__actions {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .article-page-menu__count {
+    display: inline-flex;
+    flex: 0 0 auto;
+    min-width: 1.95rem;
+    min-height: 1.95rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.55rem;
+    border: 1px solid color-mix(in srgb, var(--color-accent), transparent 76%);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--color-accent), transparent 92%);
+    color: var(--color-subtext);
+    font-size: 0.66rem;
+    font-weight: 700;
+  }
+
+  .article-page-menu__icon {
+    display: inline-grid;
+    width: 1.9rem;
+    height: 1.9rem;
+    place-items: center;
+    border: 1px solid color-mix(in srgb, var(--color-accent), transparent 76%);
+    border-radius: 0.7rem;
+    background: color-mix(in srgb, var(--color-accent), transparent 93%);
+    color: var(--color-accent);
+  }
+
+  .article-page-menu__icon::before {
+    content: "\2039";
+    font-size: 1.05rem;
+    line-height: 1;
+  }
+
+  .article-page-menu__body {
+    overflow: hidden;
+  }
+
+  .article-page-menu__scroll {
+    max-height: calc(100vh - 16.5rem);
+    overflow-y: auto;
+    padding: 0.45rem;
+    scrollbar-width: thin;
+    scrollbar-color:
+      color-mix(in srgb, var(--color-accent), transparent 48%)
+      transparent;
+  }
+
+  .article-page-menu__link {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 0.5rem;
+    padding: 0.5rem 0.55rem;
+    border: 1px solid transparent;
+    border-radius: 0.78rem;
+    color: var(--color-subtext);
+    transition:
+      color 0.22s ease,
+      background-color 0.22s ease,
+      border-color 0.22s ease,
+      transform 0.22s ease;
+  }
+
+  .article-page-menu__link:hover {
+    transform: translateX(2px);
+    border-color: color-mix(in srgb, var(--color-accent), transparent 80%);
+    background: color-mix(in srgb, var(--color-accent), transparent 94%);
+    color: var(--color-maintext);
+  }
+
+  .article-page-menu__link[aria-current="page"] {
+    border-color: color-mix(in srgb, var(--color-accent), transparent 62%);
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--color-accent), transparent 87%),
+      color-mix(in srgb, #d4af37, transparent 94%)
+    );
+    color: var(--color-maintext);
+  }
+
+  .article-page-menu__number {
+    padding-top: 0.06rem;
+    color: var(--color-accent);
+    font-family: var(--font-heading);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+
+  .article-page-menu__title {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 650;
+    line-height: 1.25;
+  }
+
+  .article-page-menu__date {
+    display: block;
+    margin-top: 0.18rem;
+    color: var(--color-subtext);
+    font-size: 0.6rem;
+    opacity: 0.74;
+  }
+
+  .article-page-menu__footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.68rem 0.9rem;
+    border-top: 1px solid color-mix(in srgb, var(--color-accent), transparent 84%);
+    color: var(--color-subtext);
+    font-size: 0.68rem;
+    font-weight: 650;
+    transition:
+      color 0.22s ease,
+      background-color 0.22s ease;
+  }
+
+  .article-page-menu__footer-link:hover {
+    background: color-mix(in srgb, var(--color-accent), transparent 94%);
+    color: var(--color-maintext);
+  }
+
+  .article-page-menu-mobile {
+    overflow: hidden;
+    border-radius: 1.15rem;
+  }
+
+  .article-page-menu-mobile > summary {
+    display: flex;
+    min-height: 4.1rem;
+    cursor: pointer;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.78rem 0.95rem;
+  }
+
+  .article-page-menu-mobile > summary::after {
+    content: "";
+    flex: 0 0 auto;
+    width: 0.62rem;
+    height: 0.62rem;
+    border-right: 2px solid var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+    transform: rotate(45deg) translateY(-2px);
+    transition: transform 0.22s ease;
+  }
+
+  .article-page-menu-mobile[open] > summary::after {
+    transform: rotate(225deg) translate(-2px, -2px);
+  }
+
+  .article-page-menu-mobile__content {
+    max-height: min(65vh, 34rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.35rem 0.5rem 0.65rem;
+    border-top: 1px solid color-mix(in srgb, var(--color-accent), transparent 84%);
+  }
+
+  @media (max-width: 1023px) {
+    .article-page-menu,
+    .article-page-menu-mobile {
+      backdrop-filter: blur(14px) saturate(80%);
+      -webkit-backdrop-filter: blur(14px) saturate(80%);
+    }
+
+    .article-page-menu__link {
+      min-height: 2.75rem;
+      padding: 0.62rem 0.6rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .article-page-menu-mobile {
+      border-radius: 1rem;
+    }
+
+    .article-page-menu-mobile > summary {
+      min-height: 3.8rem;
+      padding: 0.72rem 0.8rem;
+    }
+
+    :global(.writing-prose) {
+      border-radius: 1.5rem;
+      padding: 1rem !important;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    :global(.writing-prose h2) {
+      margin-top: 2.4rem;
+      font-size: 1.65rem;
+    }
+
+    :global(.writing-prose h3) {
+      margin-top: 2rem;
+      font-size: 1.3rem;
+    }
+
+    :global(.writing-prose blockquote) {
+      padding: 1rem !important;
+    }
+
+    :global(.writing-prose pre) {
+      margin-inline: -0.25rem;
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .article-page-menu__count {
+      min-width: 1.75rem;
+      min-height: 1.75rem;
+      padding-inline: 0.4rem;
+      font-size: 0.6rem;
+    }
+  }
+
+  @media (hover: none) {
+    .article-page-menu__link:hover {
+      transform: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .article-page-menu-drawer {
+      position: fixed;
+      top: 7.5rem;
+      left: max(1rem, calc(50vw - 50rem));
+      z-index: 60;
+      width: clamp(15rem, 18vw, 18rem);
+      pointer-events: none;
+    }
+
+    .article-page-menu--desktop {
+      pointer-events: auto;
+    }
+
+    .article-page-menu--desktop:not([open]) {
+      width: 3.6rem;
+    }
+
+    .article-page-menu--desktop:not([open]) .article-page-menu__header {
+      min-height: 3.6rem;
+      justify-content: center;
+      padding: 0.55rem;
+      border-bottom: 0;
+    }
+
+    .article-page-menu--desktop:not([open]) .article-page-menu__copy,
+    .article-page-menu--desktop:not([open]) .article-page-menu__count {
+      display: none;
+    }
+
+    .article-page-menu--desktop:not([open]) .article-page-menu__actions {
+      gap: 0;
+    }
+
+    .article-page-menu--desktop:not([open]) .article-page-menu__icon {
+      width: 2.35rem;
+      height: 2.35rem;
+    }
+
+    .article-page-menu--desktop:not([open]) .article-page-menu__icon::before {
+      content: "\2630";
+      font-size: 0.95rem;
+      font-weight: 800;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .article-page-menu__link,
+    .article-page-menu-mobile > summary::after {
+      transition: none;
+    }
+  }
+
   :global(.writing-prose) {
     color: var(--color-subtext);
     font-size: 1.08rem;
@@ -538,10 +1021,4 @@ const structuredData = {
     border-radius: 1.25rem;
   }
 
-  @media (max-width: 640px) {
-    :global(.writing-prose) {
-      font-size: 1rem;
-      line-height: 1.85;
-    }
-  }
 </style>

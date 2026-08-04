@@ -413,9 +413,9 @@
 
     background: linear-gradient(
       90deg,
-      #ffffff,
+      var(--color-maintext),
       var(--color-accent),
-      #ffffff
+      var(--color-maintext)
     );
 
     background-size: 200% auto;

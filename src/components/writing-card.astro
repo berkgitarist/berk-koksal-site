@@ -10,9 +10,10 @@ import {
 interface Props {
   entry: CollectionEntry<'writings'>;
   priority?: boolean;
+  anchorId?: string;
 }
 
-const { entry, priority = false } = Astro.props;
+const { entry, priority = false, anchorId } = Astro.props;
 const { data } = entry;
 const minutes = getReadingMinutes(entry.body);
 const href = getWritingHref(entry.id);
@@ -25,7 +26,11 @@ const categoryLabel =
 const draftLabel = data.language === 'tr' ? 'Taslak' : 'Draft';
 ---
 
-<article class="writing-card group relative overflow-hidden rounded-[1.75rem] border border-accent/15 bg-accent/5 transition-all duration-500 hover:-translate-y-1 hover:border-[#D4AF37]/35 hover:shadow-[0_24px_70px_rgba(0,0,0,0.35)]">
+<article
+  id={anchorId}
+  data-writing-card
+  class="writing-card group relative scroll-mt-32 overflow-hidden rounded-[1.75rem] border border-accent/15 bg-accent/5 transition-all duration-500 hover:-translate-y-1 hover:border-[#D4AF37]/35 hover:shadow-[0_24px_70px_rgba(0,0,0,0.35)]"
+>
   <a
     href={href}
     class="grid min-h-[220px] grid-cols-1 md:grid-cols-[minmax(250px,32%)_1fr]"

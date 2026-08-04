@@ -1,123 +1,697 @@
 ---
-import { getCollection } from 'astro:content';
-import { Icon } from 'astro-icon/components';
-import Layout from '../../layouts/Layout.astro';
-import Nav from '../../components/nav.astro';
-import WritingCard from '../../components/writing-card.astro';
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/nav.astro";
+import WritingCard from "../../components/writing-card.astro";
+import { formatWritingDate } from "../../utils/writings";
 
-const writings = (
-  await getCollection('writings', ({ data }) => {
-    return import.meta.env.PROD ? !data.draft : true;
-  })
-).sort((a, b) => {
-  const featuredDifference =
-    Number(b.data.featured) - Number(a.data.featured);
-
-  if (featuredDifference !== 0) {
-    return featuredDifference;
-  }
-
-  return (
-    b.data.publishDate.getTime() -
-    a.data.publishDate.getTime()
+const writingEntries = (await getCollection("writings"))
+  .filter((entry) => !entry.data.draft && entry.data.language === "tr")
+  .sort(
+    (a, b) =>
+      new Date(b.data.publishDate).getTime() -
+      new Date(a.data.publishDate).getTime(),
   );
-});
+
+function getArticleAnchor(id: string): string {
+  const normalizedId = id
+    .replace(/\.(md|mdx)$/i, "")
+    .replace(/\/index$/i, "")
+    .replace(/^\/+|\/+$/g, "")
+    .toLocaleLowerCase("tr-TR")
+    .replaceAll("ç", "c")
+    .replaceAll("ğ", "g")
+    .replaceAll("ı", "i")
+    .replaceAll("ö", "o")
+    .replaceAll("ş", "s")
+    .replaceAll("ü", "u")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+  return `yazi-${normalizedId || "makale"}`;
+}
+
+const articles = writingEntries.map((entry) => ({
+  entry,
+  anchorId: getArticleAnchor(entry.id),
+  title: entry.data.title,
+  date: formatWritingDate(
+    new Date(entry.data.publishDate),
+    entry.data.language,
+  ),
+}));
 ---
 
 <Layout
-  title="Yazılar | Berk KÖKSAL"
+  title="Kuran Tefekkürleri | Berk KÖKSAL"
   description="Kuran, zikir, maneviyat, müzik ve çağdaş yaşam üzerine makaleler ve tefekkürler."
   canonical="/writings/"
-  ogImage="/artist/berk-portrait.webp"
-  lang="tr"
 >
   <Nav />
 
-  <section
-    class="relative mx-auto max-w-[1500px] px-4 pb-16 pt-24 sm:px-6 md:pt-28 lg:px-8"
-  >
-    <header class="mx-auto max-w-5xl text-center">
+  <main class="relative overflow-x-clip pb-20 md:pb-28">
+    <section
+      aria-labelledby="writings-title"
+      class="section-container relative mx-auto max-w-7xl pt-10 text-center md:pt-16"
+    >
+      <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+        <span class="absolute left-[22%] top-14 text-2xl text-[#D4AF37]/35">♭</span>
+        <span class="absolute right-[19%] top-24 text-xl text-[#D4AF37]/30">♪</span>
+      </div>
+
       <div
-        class="mb-4 inline-flex items-center gap-3 rounded-full border border-[#D4AF37]/25 bg-[#D4AF37]/8 px-5 py-2 text-xs font-bold uppercase tracking-[0.35em] text-[#D4AF37]"
+        class="mx-auto inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/25 bg-[#D4AF37]/10 px-5 py-2 text-[0.68rem] font-bold uppercase tracking-[0.32em] text-[#D4AF37]"
       >
-        <Icon
-          name="mdi:book-open-page-variant"
-          class="h-4 w-4"
-        />
-        YAZILAR
+        <span aria-hidden="true">♬</span>
+        <span>Yazılar</span>
       </div>
 
       <h1
-        class="pro-gradient-text text-5xl font-bold leading-tight md:text-7xl"
+        id="writings-title"
+        class="pro-gradient-text mx-auto mt-5 max-w-5xl font-heading text-4xl font-bold leading-tight md:text-6xl lg:text-7xl"
       >
         Kuran Tefekkürleri
       </h1>
 
-      <p
-        class="mx-auto mt-4 max-w-4xl text-lg leading-8 text-subtext md:text-xl"
-      >
-        Kuran, zikir, maneviyat, müzik ve çağdaş yaşam
-        üzerine makaleler ve tefekkürler.
+      <p class="mx-auto mt-5 max-w-3xl text-base leading-8 text-subtext md:text-lg">
+        Kuran, zikir, maneviyat, müzik ve çağdaş yaşam üzerine makaleler ve
+        tefekkürler.
       </p>
 
-      <p class="mt-2 text-sm text-accent">
+      <p class="mt-2 text-sm font-medium text-accent">
         Yazılar şu anda Türkçe yayımlanmaktadır.
       </p>
-    </header>
+    </section>
 
-    <div
-      class="mt-8 flex items-end justify-between gap-4 border-b border-accent/15 pb-4"
+    <section
+      aria-labelledby="latest-writings-title"
+      class="section-container writings-content-section pt-5 md:pt-8"
     >
-      <div>
-        <p
-          class="text-xs font-bold uppercase tracking-[0.3em] text-accent"
-        >
-          Arşiv
-        </p>
+      {
+        articles.length > 0 ? (
+          <>
+            <details class="article-menu-mobile mb-5 lg:hidden">
+              <summary>
+                <span class="min-w-0">
+                  <span class="block text-[0.66rem] font-bold uppercase tracking-[0.25em] text-accent">
+                    Hızlı erişim
+                  </span>
+                  <span class="mt-1 block font-heading text-lg font-bold text-maintext">
+                    Tüm Makaleler
+                  </span>
+                </span>
 
-        <h2 class="mt-1 text-2xl font-bold text-maintext">
-          Son Yazılar
-        </h2>
-      </div>
+                <span class="article-menu-count">
+                  {articles.length} yazı
+                </span>
+              </summary>
 
-      <span
-        class="shrink-0 rounded-full border border-accent/15 bg-accent/5 px-4 py-2 text-sm text-subtext"
-      >
-        {writings.length} yazı
-      </span>
-    </div>
+              <nav aria-label="Tüm makaleler" class="article-menu-mobile__content">
+                <ol class="space-y-0.5">
+                  {articles.map((article, index) => (
+                    <li>
+                      <a
+                        href={`#${article.anchorId}`}
+                        class="article-nav-link"
+                        data-writing-nav-link
+                        aria-current={index === 0 ? "true" : undefined}
+                      >
+                        <span class="article-nav-number">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <span class="min-w-0">
+                          <span class="article-nav-title">{article.title}</span>
+                          <span class="article-nav-date">{article.date}</span>
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            </details>
 
-    {
-      writings.length > 0 ? (
-        <div class="mt-5 flex flex-col gap-5">
-          {writings.map((entry, index) => (
-            <WritingCard
-              entry={entry}
-              priority={index < 2}
-            />
-          ))}
-        </div>
-      ) : (
-        <div
-          class="mt-5 rounded-[2rem] border border-accent/15 bg-accent/5 px-6 py-14 text-center"
-        >
-          <Icon
-            name="mdi:feather"
-            class="mx-auto h-12 w-12 text-[#D4AF37]/70"
-          />
+            <div class="writings-layout is-menu-collapsed">
+              <aside class="article-menu-drawer hidden lg:block" aria-label="Makale menüsü">
+                <details class="article-menu-panel article-menu-desktop">
+                  <summary class="article-menu-header">
+                    <span class="article-menu-toggle-copy min-w-0">
+                      <span class="block text-[0.62rem] font-bold uppercase tracking-[0.22em] text-accent">
+                        Hızlı erişim
+                      </span>
+                      <span class="mt-0.5 block font-heading text-lg font-bold text-maintext">
+                        Tüm Makaleler
+                      </span>
+                    </span>
 
-          <h2 class="mt-5 text-2xl font-bold text-maintext">
-            İlk yazı hazırlanıyor.
-          </h2>
+                    <span class="article-menu-toggle-actions">
+                      <span class="article-menu-count">
+                        {articles.length}
+                      </span>
+                      <span class="article-menu-toggle-icon" aria-hidden="true"></span>
+                    </span>
 
-          <p
-            class="mx-auto mt-3 max-w-xl leading-7 text-subtext"
-          >
-            Yeni Türkçe yazılar eklendiğinde burada otomatik
-            olarak yayımlanacaktır.
-          </p>
-        </div>
-      )
-    }
-  </section>
+                    <span class="sr-only">Makale menüsünü aç veya kapat</span>
+                  </summary>
+
+                  <div class="article-menu-body">
+                    <nav aria-label="Tüm makaleler" class="article-menu-scroll">
+                      <ol class="space-y-0.5">
+                        {articles.map((article, index) => (
+                          <li>
+                            <a
+                              href={`#${article.anchorId}`}
+                              class="article-nav-link"
+                              data-writing-nav-link
+                              aria-current={index === 0 ? "true" : undefined}
+                            >
+                              <span class="article-nav-number">
+                                {String(index + 1).padStart(2, "0")}
+                              </span>
+                              <span class="min-w-0">
+                                <span class="article-nav-title">{article.title}</span>
+                                <span class="article-nav-date">{article.date}</span>
+                              </span>
+                            </a>
+                          </li>
+                        ))}
+                      </ol>
+                    </nav>
+
+                    <a href="#writings-title" class="article-menu-top-link">
+                      <span>Sayfanın başına dön</span>
+                      <span aria-hidden="true">↑</span>
+                    </a>
+                  </div>
+                </details>
+              </aside>
+
+              <div class="writing-feed min-w-0">
+                <div class="mb-5 flex items-end justify-between gap-4 border-b border-accent/15 pb-4 md:mb-6">
+                  <div>
+                    <p class="text-[0.68rem] font-bold uppercase tracking-[0.25em] text-accent">
+                      Arşiv
+                    </p>
+                    <h2
+                      id="latest-writings-title"
+                      class="mt-1 font-heading text-2xl font-bold text-maintext md:text-3xl"
+                    >
+                      Son Yazılar
+                    </h2>
+                  </div>
+
+                  <span class="rounded-full border border-accent/15 bg-accent/5 px-4 py-2 text-xs font-medium text-subtext">
+                    {articles.length} yazı
+                  </span>
+                </div>
+
+                <div class="space-y-6 md:space-y-7">
+                  {articles.map((article, index) => (
+                    <WritingCard
+                      entry={article.entry}
+                      priority={index === 0}
+                      anchorId={article.anchorId}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </>
+        ) : (
+          <div class="mx-auto max-w-3xl rounded-[1.75rem] border border-accent/15 bg-accent/5 p-10 text-center text-subtext">
+            Yayımlanmış tefekkür yazısı bulunamadı.
+          </div>
+        )
+      }
+    </section>
+  </main>
 </Layout>
+
+<script>
+  const navLinks = Array.from(
+    document.querySelectorAll<HTMLAnchorElement>("[data-writing-nav-link]"),
+  );
+  const cards = Array.from(
+    document.querySelectorAll<HTMLElement>("[data-writing-card]"),
+  );
+
+  const setActiveArticle = (id: string) => {
+    navLinks.forEach((link) => {
+      const isActive = link.hash === `#${id}`;
+
+      if (isActive) {
+        link.setAttribute("aria-current", "true");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  if ("IntersectionObserver" in window && cards.length > 0) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntry = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleEntry?.target.id) {
+          setActiveArticle(visibleEntry.target.id);
+        }
+      },
+      {
+        rootMargin: "-22% 0px -62% 0px",
+        threshold: [0.05, 0.2, 0.45],
+      },
+    );
+
+    cards.forEach((card) => observer.observe(card));
+  }
+
+  const desktopMenu = document.querySelector<HTMLDetailsElement>(
+    ".article-menu-desktop",
+  );
+  const writingsLayout = desktopMenu?.closest<HTMLElement>(".writings-layout");
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+
+  const syncDesktopMenuState = () => {
+    writingsLayout?.classList.toggle(
+      "is-menu-collapsed",
+      desktopMenu ? !desktopMenu.open : false,
+    );
+  };
+
+  // Tarayıcı geri dönüşünde bile sayfa her zaman geniş ve menü kapalı başlasın.
+  if (desktopMenu) {
+    desktopMenu.open = false;
+  }
+  syncDesktopMenuState();
+  desktopMenu?.addEventListener("toggle", syncDesktopMenuState);
+
+  window.addEventListener("pageshow", () => {
+    if (desktopMenu) {
+      desktopMenu.open = false;
+    }
+    syncDesktopMenuState();
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetId = link.hash.slice(1);
+      const target = document.getElementById(targetId);
+
+      if (!target) return;
+
+      event.preventDefault();
+      setActiveArticle(targetId);
+
+      const mobileMenu = link.closest(".article-menu-mobile");
+      if (mobileMenu instanceof HTMLDetailsElement) {
+        mobileMenu.open = false;
+      }
+
+      // Menü artık içerik alanını daraltmayan bir katmandır. Önce kapatıp
+      // sonraki karede hedefe kaydırmak geçişteki sıçramayı engeller.
+      if (desktopMenu) {
+        desktopMenu.open = false;
+      }
+
+      const nextHash = `#${targetId}`;
+      if (window.location.hash === nextHash) {
+        history.replaceState(null, "", nextHash);
+      } else {
+        history.pushState(null, "", nextHash);
+      }
+
+      requestAnimationFrame(() => {
+        target.scrollIntoView({
+          behavior: prefersReducedMotion ? "auto" : "smooth",
+          block: "start",
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  .writings-content-section {
+    width: min(calc(100% - 2rem), 110rem);
+    margin-inline: auto;
+  }
+
+  .writings-layout {
+    display: grid;
+    align-items: start;
+    width: 100%;
+  }
+
+  .article-menu-panel,
+  .article-menu-mobile {
+    border: 1px solid color-mix(in srgb, var(--color-accent), transparent 72%);
+    background-color: color-mix(in srgb, var(--color-background), black 24%);
+    background-image: linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--color-background), black 30%),
+      color-mix(in srgb, var(--color-background), var(--color-accent) 7%)
+    );
+    box-shadow:
+      0 22px 58px rgba(0, 0, 0, 0.46),
+      inset 0 1px 0 color-mix(in srgb, var(--color-maintext), transparent 88%);
+    backdrop-filter: blur(24px) saturate(82%);
+    -webkit-backdrop-filter: blur(24px) saturate(82%);
+  }
+
+  .article-menu-panel {
+    overflow: hidden;
+    border-radius: 1.35rem;
+  }
+
+  .article-menu-header {
+    display: flex;
+    min-height: 4.15rem;
+    cursor: pointer;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.65rem;
+    padding: 0.8rem 0.85rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-accent), transparent 84%);
+    user-select: none;
+  }
+
+  .article-menu-header::-webkit-details-marker,
+  .article-menu-mobile > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .article-menu-toggle-actions {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .article-menu-toggle-icon {
+    display: inline-grid;
+    width: 1.9rem;
+    height: 1.9rem;
+    place-items: center;
+    border: 1px solid color-mix(in srgb, var(--color-accent), transparent 76%);
+    border-radius: 0.7rem;
+    background: color-mix(in srgb, var(--color-accent), transparent 93%);
+    color: var(--color-accent);
+  }
+
+  .article-menu-toggle-icon::before {
+    content: "‹";
+    font-size: 1.35rem;
+    line-height: 1;
+    transform: translateY(-1px);
+  }
+
+  .article-menu-count {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.95rem;
+    min-height: 1.95rem;
+    padding: 0.25rem 0.55rem;
+    border: 1px solid color-mix(in srgb, var(--color-accent), transparent 76%);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--color-accent), transparent 92%);
+    color: var(--color-subtext);
+    font-size: 0.66rem;
+    font-weight: 700;
+  }
+
+  .article-menu-body {
+    overflow: hidden;
+  }
+
+  .article-menu-scroll {
+    max-height: calc(100vh - 16.5rem);
+    overflow-y: auto;
+    padding: 0.45rem;
+    scrollbar-width: thin;
+    scrollbar-color:
+      color-mix(in srgb, var(--color-accent), transparent 48%)
+      transparent;
+  }
+
+  .article-nav-link {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 0.5rem;
+    padding: 0.5rem 0.55rem;
+    border: 1px solid transparent;
+    border-radius: 0.78rem;
+    color: var(--color-subtext);
+    transition:
+      color 0.22s ease,
+      background-color 0.22s ease,
+      border-color 0.22s ease,
+      transform 0.22s ease;
+  }
+
+  .article-nav-link:hover {
+    transform: translateX(2px);
+    border-color: color-mix(in srgb, var(--color-accent), transparent 80%);
+    background: color-mix(in srgb, var(--color-accent), transparent 94%);
+    color: var(--color-maintext);
+  }
+
+  .article-nav-link[aria-current="true"] {
+    border-color: color-mix(in srgb, var(--color-accent), transparent 62%);
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--color-accent), transparent 87%),
+      color-mix(in srgb, #d4af37, transparent 94%)
+    );
+    color: var(--color-maintext);
+  }
+
+  .article-nav-number {
+    padding-top: 0.06rem;
+    color: var(--color-accent);
+    font-family: var(--font-heading);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+
+  .article-nav-title {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 650;
+    line-height: 1.25;
+  }
+
+  .article-nav-date {
+    display: block;
+    margin-top: 0.18rem;
+    color: var(--color-subtext);
+    font-size: 0.6rem;
+    opacity: 0.74;
+  }
+
+  .article-menu-top-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.68rem 0.9rem;
+    border-top: 1px solid color-mix(in srgb, var(--color-accent), transparent 84%);
+    color: var(--color-subtext);
+    font-size: 0.68rem;
+    font-weight: 650;
+    transition:
+      color 0.22s ease,
+      background-color 0.22s ease;
+  }
+
+  .article-menu-top-link:hover {
+    background: color-mix(in srgb, var(--color-accent), transparent 94%);
+    color: var(--color-maintext);
+  }
+
+  .article-menu-mobile {
+    overflow: hidden;
+    border-radius: 1.15rem;
+  }
+
+  .article-menu-mobile > summary {
+    display: flex;
+    min-height: 4.1rem;
+    cursor: pointer;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.78rem 0.95rem;
+  }
+
+  .article-menu-mobile > summary::after {
+    content: "";
+    flex: 0 0 auto;
+    width: 0.62rem;
+    height: 0.62rem;
+    margin-left: 0.05rem;
+    border-right: 2px solid var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+    transform: rotate(45deg) translateY(-2px);
+    transition: transform 0.22s ease;
+  }
+
+  .article-menu-mobile[open] > summary::after {
+    transform: rotate(225deg) translate(-2px, -2px);
+  }
+
+  .article-menu-mobile__content {
+    max-height: min(65vh, 34rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.35rem 0.5rem 0.65rem;
+    border-top: 1px solid color-mix(in srgb, var(--color-accent), transparent 84%);
+  }
+
+  @media (max-width: 1023px) {
+    .writings-content-section {
+      width: min(calc(100% - 1rem), 110rem);
+    }
+
+    .article-menu-panel,
+    .article-menu-mobile {
+      backdrop-filter: blur(14px) saturate(80%);
+      -webkit-backdrop-filter: blur(14px) saturate(80%);
+    }
+
+    .article-nav-link {
+      min-height: 2.75rem;
+      padding: 0.62rem 0.6rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .article-menu-mobile > summary {
+      min-height: 3.8rem;
+      padding: 0.72rem 0.8rem;
+    }
+
+    .article-menu-mobile .article-menu-count {
+      min-width: 1.8rem;
+      min-height: 1.8rem;
+      padding-inline: 0.45rem;
+      font-size: 0.62rem;
+    }
+
+    .article-nav-title {
+      font-size: 0.76rem;
+    }
+  }
+
+  @media (hover: none) {
+    .article-nav-link:hover {
+      transform: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .writings-layout {
+      position: relative;
+      display: block;
+      min-height: 1px;
+    }
+
+    /*
+     * Masaüstü menüsü normal akıştan çıkarıldı. Böylece açılıp kapanırken
+     * yazı kartlarının genişliği, satır kırılımları ve görsel ölçüleri değişmez.
+     */
+    .article-menu-drawer {
+      position: absolute;
+      inset: 0 auto 0 0;
+      z-index: 40;
+      width: clamp(15rem, 18vw, 18rem);
+      pointer-events: none;
+    }
+
+    .article-menu-desktop {
+      position: sticky;
+      top: 7rem;
+      width: clamp(15rem, 18vw, 18rem);
+      pointer-events: auto;
+    }
+
+    .article-menu-desktop:not([open]) {
+      width: 3.6rem;
+    }
+
+    .writing-feed {
+      width: 100%;
+      max-width: none;
+    }
+
+    /* Menü düğmesi başlığın üzerine binmesin; bu boşluk her iki durumda da sabit. */
+    .writing-feed > :first-child {
+      padding-left: 4.5rem;
+    }
+
+    .article-menu-desktop[open] {
+      box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.42),
+        0 0 42px color-mix(in srgb, var(--color-accent), transparent 88%),
+        inset 0 1px 0 color-mix(in srgb, var(--color-maintext), transparent 90%);
+    }
+
+    .article-menu-desktop:not([open]) .article-menu-header {
+      min-height: 3.6rem;
+      justify-content: center;
+      padding: 0.55rem;
+      border-bottom: 0;
+    }
+
+    .article-menu-desktop:not([open]) .article-menu-toggle-copy,
+    .article-menu-desktop:not([open]) .article-menu-count {
+      display: none;
+    }
+
+    .article-menu-desktop:not([open]) .article-menu-toggle-actions {
+      gap: 0;
+    }
+
+    .article-menu-desktop:not([open]) .article-menu-toggle-icon {
+      width: 2.35rem;
+      height: 2.35rem;
+    }
+
+    .article-menu-desktop:not([open]) .article-menu-toggle-icon::before {
+      content: "☰";
+      font-size: 0.95rem;
+      transform: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :global(html) {
+      scroll-behavior: auto;
+    }
+
+    .writings-layout,
+    .article-nav-link,
+    .article-menu-mobile > summary::after {
+      transition: none;
+    }
+  }
+</style>
