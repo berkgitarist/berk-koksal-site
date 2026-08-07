@@ -349,9 +349,7 @@ Algoritmaya uyum teknik bir beceri olabilir. Algoritmaya teslimiyet ise ahlaki y
 
 ### Ayet
 
-> **2:79**
->
-> Bu nedenle, kendi elleriyle kutsal yazıyı tahrif eden, sonra da değmeyen maddi bir kazancın peşinde koşarak “TANRI’nın vahyettiği budur” diyenlere yazıklar olsun. Böylesi bir tahrifattan dolayı onlara yazıklar olsun ve haram kazançlarından dolayı onlara yazıklar olsun.
+> **2:79** — Bu nedenle, kendi elleriyle kutsal yazıyı tahrif eden, sonra da değmeyen maddi bir kazancın peşinde koşarak “TANRI’nın vahyettiği budur” diyenlere yazıklar olsun. Böylesi bir tahrifattan dolayı onlara yazıklar olsun ve haram kazançlarından dolayı onlara yazıklar olsun.
 >
 
 ### Ayetin Tefekkürü

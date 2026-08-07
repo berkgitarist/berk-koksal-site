@@ -257,7 +257,7 @@ Benim için asıl soru şudur: **Yapay zekâ Kuran hakkında ne kadar güzel kon
 > Kaynak: <a href="https://kuranteyit.com/" target="_blank" rel="noopener noreferrer">kuranteyit.com</a>
 
 > **17:35** — Ticaret yaptığınızda tam ölçüsüyle verin ve adil bir şekilde tartın. Bu daha iyidir ve daha doğrudur.
->
+
 > **17:37** — Yeryüzünde gururla yürüme—sen ne yeryüzünü delebilirsin ne de dağlar kadar uzun olabilirsin.
 
 ### Ayetin Tefekkürü

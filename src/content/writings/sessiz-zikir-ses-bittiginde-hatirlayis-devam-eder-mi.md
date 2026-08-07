@@ -221,6 +221,7 @@ Benim için bu makalenin merkezinde şu ihtiyatlı düşünce var: Müzik zikre 
 > *You shall remember your Lord within yourself, publicly, privately, and quietly, day and night; do not be unaware.*
 >
 ><br>
+>
 > Rabbini alenen, kendi başınayken ve sessiz sakin bir şekilde, gece gündüz kendinde hatırla; gafil olma.*
 >
 ><br>

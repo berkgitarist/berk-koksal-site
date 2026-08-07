@@ -214,6 +214,7 @@ Bu yazıda soruyu yalnızca “Müzik var mı, yok mu?” biçiminde kurmak iste
 > *Glorify the name of your Lord, the Most High.*
 > 
 ><br>
+>
 > Yüce Rabbinin adını yücelt.
 >
 ><br>

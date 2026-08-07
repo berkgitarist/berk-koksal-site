@@ -235,6 +235,8 @@ Benim için bu makalenin merkezindeki soru yalnızca “Uygulama ne söyleyebili
 > <br>
 > De ki: “Benim Rabbim yalnızca, açık ya da gizli olsun kötü eylemleri, günahları, haksız saldırganlığı, TANRI’nın yanında güçsüz putlar edinmeyi ve TANRI hakkında bilmediğiniz şeyler söylemeyi haram kılar.”
 >
+><br>
+>
 > Kaynak: <a href="https://kuranteyit.com/" target="_blank" rel="noopener noreferrer">kuranteyit.com</a>
 
 > **7:32** — De ki: “Yaratıkları için TANRI’nın yaratmış olduğu güzel şeyleri ve iyi rızıkları kim haram kıldı?” De ki: “Böylesi rızıklar, inananların bu hayatta keyfini çıkarması içindir. Dahası, iyi rızıklar Diriliş Günü’nde sadece onların olacaktır.” Biz böylece bilen insanlar için vahiyleri açıklarız.
@@ -255,9 +257,7 @@ Bir Kur’an uygulamasının ilk ahlakı, çok şey söylemesi değil, bilmediğ
 
 ### Ayet
 
-> **16:116**
->
-> Kendi dillerinizle, “Bu helaldir, bu ise haramdır” diyerek yalanlar uydurup onları TANRI’ya atfetmek için yalan söylemeyin. Şüphesiz, yalanlar uydurup onları TANRI’ya atfedenler asla başarılı olamayacaklardır.
+> **16:116** — Kendi dillerinizle, “Bu helaldir, bu ise haramdır” diyerek yalanlar uydurup onları TANRI’ya atfetmek için yalan söylemeyin. Şüphesiz, yalanlar uydurup onları TANRI’ya atfedenler asla başarılı olamayacaklardır.
 
 > **16:115** — O size sadece ölmüş hayvanları, kanı, domuzların etini* ve TANRI’dan başkasına adanmış yiyeceği haram kılar. Eğer biri kasten ya da kötü niyetle olmaksızın (bunları yemeye) zorlanırsa, o zaman TANRI Bağışlayıcıdır, En Merhametlidir.
 

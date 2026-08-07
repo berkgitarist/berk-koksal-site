@@ -165,12 +165,21 @@ Bu tekrarın boşuna olmadığı açıktır. İnsan zihni ortaklar üretmeye, ar
 
 ### Ayet
 
-> **3:18** — TANRI şahitlik eder ki O’ndan başka tanrı yoktur, melekler ve bilgi sahibi olanlar da böyle şahitlik ederler. Doğru ve adil bir şekilde O, mutlak tanrıdır; O’ndan başka tanrı yoktur, Kudretlidir, En Bilgedir.
+> **3:18**
+>
+> شَهِدَ ٱللَّهُ أَنَّهُۥ لَآ إِلَٰهَ إِلَّا هُوَ وَٱلْمَلَٰٓئِكَةُ وَأُو۟لُوا۟ ٱلْعِلْمِ قَآئِمًۢا بِٱلْقِسْطِ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ
+>
+> GOD bears witness that there is no god except He, and so do the angels and those who possess knowledge. Truthfully and equitably, He is the absolute god; there is no god but He, the Almighty, Most Wise.
+>
+><br>
+> TANRI şahitlik eder ki O’ndan başka tanrı yoktur, melekler ve bilgi sahibi olanlar da böyle şahitlik ederler. Doğru ve adil bir şekilde O, mutlak tanrıdır; O’ndan başka tanrı yoktur, Kudretlidir, En Bilgedir.
 >
 ><br>
 >
 > Kaynak: <a href="https://kuranteyit.com/" target="_blank" rel="noopener noreferrer">kuranteyit.com</a>
-
+>
+><br>
+>
 ### Ayetin Tefekkürü
 
 TANRI’nın kendi birliğine şahitlik etmesi, bu hakikatin insan kabulüne bağlı olmadığını gösterir. İnsanların tamamı başka bir şey söylese de O’ndan başka tanrı yoktur. Toplumlar başka varlıkları yüceltebilir, bazı insanlara kutsallık yükleyebilir, geleneklerini sorgulanamaz hale getirebilir. Fakat bütün bunlar TANRI’nın şahitliği karşısında bir değer taşımaz.
