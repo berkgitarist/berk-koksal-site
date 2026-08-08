@@ -4,7 +4,7 @@ description: >-
   Araf 7:33, Nahl 16:116, İsra 17:36 ve Hucurât 49:6 ayetleri üzerinden
   Kuran uygulamaları, dini otorite, helal-haram dili, bilginin teyidi,
   yazılımcının sorumluluğu ve aracın kendi sınırını bilmesi üzerine bir tefekkür.
-publishDate: 2026-08-08
+publishDate: 2026-08-09
 category: "Qur'an Reflections"
 language: "tr"
 image: "/images/writings/bir-kuran-uygulamasi-hukum-vermeli-mi.webp"
@@ -30,7 +30,7 @@ author: "Berk KÖKSAL"
 # Bir Kur’an Uygulaması Hüküm Vermeli mi? Araç ile Otorite Arasındaki Sınır
 
 **Yazar:** Berk KÖKSAL  
-**Tarih:** 08.08.2026  
+**Tarih:** 09.08.2026  
 **Yer:** Mersin
 
 Makalenin temel amacı, ayetleri diğer ilgili ayetlerle birlikte düşünmek; TANRI’nın birliğine şahitliğin bilgi, adalet, doğruluk ve teslimiyet bakımından insan hayatında ne anlama geldiğini samimi ve derin bir dille ortaya koymaktır.
