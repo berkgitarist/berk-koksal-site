@@ -62,7 +62,7 @@ Bu soru, daha önce mizan, söz-eylem bütünlüğü, yapay zekayla Kuran araşt
 Kaynak: <a href="https://kuranteyit.com/" target="_blank" rel="noopener noreferrer">kuranteyit.com</a>
 
 > **7:32** — De ki: “Yaratıkları için TANRI’nın yaratmış olduğu güzel şeyleri ve iyi rızıkları kim haram kıldı?” De ki: “Böylesi rızıklar, inananların bu hayatta keyfini çıkarması içindir. Dahası, iyi rızıklar Diriliş Günü’nde sadece onların olacaktır.” Biz böylece bilen insanlar için vahiyleri açıklarız.
->
+
 > **7:28** — Onlar büyük bir günah işlerler, sonra derler ki: “Biz ebeveynlerimizi bunu yaparken bulduk ve TANRI bize bunu yapmamızı emretmiştir.” De ki: “TANRI asla günahı savunmaz. TANRI hakkında bilmediğiniz şeyler mi söylüyorsunuz?”
 
 ### Ayetin Tefekkürü
@@ -78,9 +78,9 @@ Bir uygulama “TANRI bunu haram kıldı” dediğinde o cümle sıradan arayüz
 ### Ayet
 
 > **16:116** — Kendi dillerinizle, “Bu helaldir, bu ise haramdır” diyerek yalanlar uydurup onları TANRI’ya atfetmek için yalan söylemeyin. Şüphesiz, yalanlar uydurup onları TANRI’ya atfedenler asla başarılı olamayacaklardır.
->
+
 > **16:115** — O size sadece ölmüş hayvanları, kanı, domuzların etini* ve TANRI’dan başkasına adanmış yiyeceği haram kılar. Eğer biri kasten ya da kötü niyetle olmaksızın (bunları yemeye) zorlanırsa, o zaman TANRI Bağışlayıcıdır, En Merhametlidir.
->
+
 > **10:59** — De ki: “TANRI’nın size her türden rızıkları nasıl indirdiğine sonra sizin onlardan bir kısmını haram, bir kısmını da helal kıldığınıza dikkat ettiniz mi?” De ki: “TANRI mı size bunu yapmanız için izin verdi? Yoksa siz mi yalanlar uydurup onları TANRI’ya isnat ediyorsunuz?”
 
 ### Ayetin Tefekkürü
@@ -98,9 +98,9 @@ Sanatta bir cümleyi büyük bir koro söyleyince o cümle daha hakiki olmaz; ya
 ### Ayet
 
 > **3:78** — Onların arasında kutsal yazıdan olmadığı hâlde siz onun kutsal yazı olduğunu sanasınız diye kutsal yazıyı taklit etmek için dillerini eğip-büken ve TANRI’dan olmadığı hâlde bunun TANRI’dan olduğunu iddia edenler vardır. Böylece bilerek yalanlar uydururlar ve onları TANRI’ya isnat ederler.
->
+
 > **6:114** — O size bu kitabı tamamen detaylı olarak vahyetmişken, yasa kaynağı olarak TANRI’dan başkasını mı arayayım?* Kutsal yazıyı almış olanlar onun Rabbinden doğru bir şekilde vahyedilmiş olduğunu tanırlar. Hiçbir şüphe barındırma.
->
+
 > **10:15** — Vahiylerimiz kendilerine okunduğunda, bizimle buluşmayı beklemeyenler derler ki: “Bundan başka bir Kuran* getir ya da onu değiştir!” De ki: “Benim onu kendi başıma değiştirmem mümkün değil. Ben sadece bana vahyedilene uyarım. Eğer Rabbime itaatsizlik edersem, dehşet verici bir günün azabından korkarım.”
 
 ### Ayetin Tefekkürü
@@ -118,9 +118,9 @@ Bir yapımcı sesi işler; ama plug-in’i eserin kendisi sanmaz. Yazılımda da
 ### Ayet
 
 > **17:36** — Kendin için teyit etmediğin sürece, hiçbir bilgiyi kabul etme. Ben sana işitmeyi, görmeyi ve beyni verdim ve sen onları kullanmaktan sorumlusun.
->
+
 > **2:139** — De ki: “O bizim de Rabbimiz sizin de Rabbiniz iken bizimle TANRI hakkında mı tartışıyorsunuz? Biz kendi eylemlerimizden sorumluyuz siz de kendi eylemlerinizden sorumlusunuz. Biz yalnızca O’na adandık.”
->
+
 > **4:85** — Kim iyi bir eyleme aracılık ederse onun sevabından bir pay alır ve kim kötü bir işe aracılık ederse ondan bir payı üstüne çeker. TANRI her şeyi kontrol eder.
 
 ### Ayetin Tefekkürü
@@ -136,9 +136,9 @@ Bu nedenle kaynak gösterimi, hata düzeltme, sürüm notu ve belirsizlik uyarı
 ### Ayet
 
 > **49:6** — Ey inananlar, eğer kötü bir kişi size herhangi bir haber getirirse öncelikle araştırın, yoksa cahillikten bazı insanlara adaletsizlik yaparsınız, sonra da yaptığınız şey için üzgün ve pişman olursunuz.
->
+
 > **17:35** — Ticaret yaptığınızda tam ölçüsüyle verin ve adil bir şekilde tartın. Bu daha iyidir ve daha doğrudur.
->
+
 > **6:152** — Onlar olgunluğa erişene kadar, en doğru yöntemin dışında, yetimlerin parasına dokunmayın. Ticaret yaptığınızda, adil bir şekilde tam ağırlığında ve tam ölçüsünde verin. Biz hiçbir nefse imkânlarının ötesinde yük yüklemeyiz. Şahitlik ettiğinizde, akrabalarınıza karşı bile olsa kesinlikle adil olun. TANRI ile olan antlaşmanızı yerine getirin. Bunlar O’nun size buyruklarıdır ki dikkate alasınız.
 
 ### Ayetin Tefekkürü
@@ -154,9 +154,9 @@ Adil sunum, bütün görüşleri eşit derecede doğru ilan etmek değildir. Kay
 ### Ayet
 
 > **17:36** — Kendin için teyit etmediğin sürece, hiçbir bilgiyi kabul etme. Ben sana işitmeyi, görmeyi ve beyni verdim ve sen onları kullanmaktan sorumlusun.
->
+
 > **6:144** — İki tür deve ve iki tür sığırla ilgili olarak, de ki: “O’nun haram kıldığı iki erkek mi, ya da iki dişi mi, ya da iki dişinin rahimlerinin içindekileri mi? TANRI sizin için böylesi haramları hükme bağladığında siz şahit miydiniz? Böyle yalanlar uydurup onları TANRI’ya atfedenlerden daha kötü kimdir? Böylece insanları bilgi olmaksızın saptırırlar. TANRI böylesi kötü kimselere rehberlik etmez.”
->
+
 > **6:150** — De ki: “TANRI’nın bunu veya şunu haram kılmış olduğuna şahitlik edecek şahitlerinizi getirin.” Eğer onlar şahitlik ederlerse sen onlarla beraber şahitlik etme. Vahiylerimizi reddedenlerin, Ahireti inkâr edenlerin ve Rablerinden sapanların görüşlerini de takip etme.
 
 ### Ayetin Tefekkürü
@@ -172,9 +172,9 @@ Aynı ilke deneysel tema bağlantıları için de geçerli. İstatistiksel yakı
 ### Ayet
 
 > **5:101** — Ey inananlar, henüz vakti gelmeden size açıklansaydı size zarar verecek olan meseleler hakkında soru sormayın. Eğer onları Kuran’ın ışığında sorarsanız, size apaçık olacaktır. TANRI onları kasıtlı olarak görmezden gelmiştir. TANRI Bağışlayıcıdır, Hoşgörülüdür.
->
+
 > **6:119** — Neden üzerine TANRI’nın adı zikredilmiş olandan yemeyesiniz ki? O, mecbur bırakılmadığınız sürece, size haram kılınanları sizin için detaylandırdı. Gerçekten de birçok insan, bilgi olmaksızın, şahsi görüşleriyle başkalarını saptırır. Senin Rabbin haddi aşanların tamamen farkındadır.
->
+
 > **6:69** — Doğrular bu insanların sözlerinden sorumlu değildirler fakat onlara hatırlatmak yardımcı olabilir; belki de kurtarılabilirler.
 
 ### Ayetin Tefekkürü
@@ -190,9 +190,9 @@ Ben Kuranteyit’i insanların bana inanması için değil, benim seçimlerimi d
 ### Ayet
 
 > **7:33** — De ki: “Benim Rabbim yalnızca, açık ya da gizli olsun kötü eylemleri, günahları, haksız saldırganlığı, TANRI’nın yanında güçsüz putlar edinmeyi ve TANRI hakkında bilmediğiniz şeyler söylemeyi haram kılar.”
->
+
 > **16:116** — Kendi dillerinizle, “Bu helaldir, bu ise haramdır” diyerek yalanlar uydurup onları TANRI’ya atfetmek için yalan söylemeyin. Şüphesiz, yalanlar uydurup onları TANRI’ya atfedenler asla başarılı olamayacaklardır.
->
+
 > **17:36** — Kendin için teyit etmediğin sürece, hiçbir bilgiyi kabul etme. Ben sana işitmeyi, görmeyi ve beyni verdim ve sen onları kullanmaktan sorumlusun.
 
 ### Ayetin Tefekkürü
@@ -208,9 +208,9 @@ Kök bilgisi anlamın yerine geçen kısa yol değil, metne daha dikkatli bakmay
 ### Ayet
 
 > **7:33** — De ki: “Benim Rabbim yalnızca, açık ya da gizli olsun kötü eylemleri, günahları, haksız saldırganlığı, TANRI’nın yanında güçsüz putlar edinmeyi ve TANRI hakkında bilmediğiniz şeyler söylemeyi haram kılar.”
->
+
 > **16:116** — Kendi dillerinizle, “Bu helaldir, bu ise haramdır” diyerek yalanlar uydurup onları TANRI’ya atfetmek için yalan söylemeyin. Şüphesiz, yalanlar uydurup onları TANRI’ya atfedenler asla başarılı olamayacaklardır.
->
+
 > **17:36** — Kendin için teyit etmediğin sürece, hiçbir bilgiyi kabul etme. Ben sana işitmeyi, görmeyi ve beyni verdim ve sen onları kullanmaktan sorumlusun.
 
 ### Ayetin Tefekkürü
@@ -226,13 +226,13 @@ Geleneksel veya mezhepsel yapılarda dini liderlerin ve alimlerin yorumlarına f
 ### Ayet
 
 > **7:33** — De ki: “Benim Rabbim yalnızca, açık ya da gizli olsun kötü eylemleri, günahları, haksız saldırganlığı, TANRI’nın yanında güçsüz putlar edinmeyi ve TANRI hakkında bilmediğiniz şeyler söylemeyi haram kılar.”
->
+
 > **16:116** — Kendi dillerinizle, “Bu helaldir, bu ise haramdır” diyerek yalanlar uydurup onları TANRI’ya atfetmek için yalan söylemeyin. Şüphesiz, yalanlar uydurup onları TANRI’ya atfedenler asla başarılı olamayacaklardır.
->
+
 > **17:36** — Kendin için teyit etmediğin sürece, hiçbir bilgiyi kabul etme. Ben sana işitmeyi, görmeyi ve beyni verdim ve sen onları kullanmaktan sorumlusun.
->
+
 > **49:6** — Ey inananlar, eğer kötü bir kişi size herhangi bir haber getirirse öncelikle araştırın, yoksa cahillikten bazı insanlara adaletsizlik yaparsınız, sonra da yaptığınız şey için üzgün ve pişman olursunuz.
->
+
 > **6:114** — O size bu kitabı tamamen detaylı olarak vahyetmişken, yasa kaynağı olarak TANRI’dan başkasını mı arayayım?* Kutsal yazıyı almış olanlar onun Rabbinden doğru bir şekilde vahyedilmiş olduğunu tanırlar. Hiçbir şüphe barındırma.
 
 ### Ayetin Tefekkürü
