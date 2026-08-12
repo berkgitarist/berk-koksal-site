@@ -42,6 +42,8 @@ author: "Berk KÖKSAL"
 
 ## Giriş
 
+**Esenlikler. Esenlik üzerinize olsun.**
+
 “Elçi Kuran’dır, Kuran yaşayan Elçidir” sözü ilk duyulduğunda oldukça güçlü bir iddia gibi gelebilir. Bu sözün sınırı doğru çizilmezse, ayetlerin söylemediği bir anlamı ayetlere yükleme tehlikesi doğar. Bu nedenle daha başta neyi kastettiğimi açıkça belirtmek istiyorum: Kuran’ın insan gibi nefes alan, bağımsız iradeye sahip biyolojik bir varlık olduğunu söylemiyorum. “Yaşayan” kelimesini, mesajın elçilik işlevinin sürmesi anlamında kullanıyorum. Uyarı bugün de uyarıyor, müjde bugün de umut veriyor, rehberlik bugün de yol gösteriyor ve vahiy bugün de insanı kendi hayatı hakkında karar vermeye çağırıyor.
 
 İnsan elçi doğar, yaşar, konuşur ve ölür. Onun bedeni zamana bağlıdır. Fakat kendisine indirilen mesajın doğruluğu, insan elçinin bedensel varlığına bağlı değildir. Elçi aramızda olmadığı zaman TANRI’nın mesajı geçerliliğini kaybetmez. Tam tersine, insan elçinin görevini doğru anlamak, mesaj ile kişi arasındaki farkı korumayı gerektirir. Elçi kendisine ait bir dini kurmak için değil, Rabbinden kendisine vahyedileni iletmek için gönderilir. Değerini de mesajın önüne geçmesinden değil, mesajı sadakatle taşımasından alır.

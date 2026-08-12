@@ -45,6 +45,12 @@ author: "Berk KÖKSAL"
 
 **Yer:** Mersin
 
+### Ayet
+
+> **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
+
+**Esenlikler. Esenlik üzerinize olsun.**
+
 Makalenin temel amacı, ayetleri diğer ilgili ayetlerle birlikte düşünmek; TANRI’nın birliğine şahitliğin bilgi, adalet, doğruluk ve teslimiyet bakımından insan hayatında ne anlama geldiğini samimi ve derin bir dille ortaya koymaktır.
 
 ## Giriş

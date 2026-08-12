@@ -30,11 +30,14 @@ author: "Berk KÖKSAL"
 **Tarih:** 29.07.2026
 
 **Yer:** Mersin
+
 ### Ayet
 
 > **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
 
 ## Giriş
+
+**Esenlikler. Esenlik üzerinize olsun.**
 
 Müzik insanın içine hızlı ulaşır. Bazen tek bir ses, uzun bir konuşmanın yapamadığını yapar; unutulmuş bir duyguyu uyandırır, kalabalığı aynı anda susturur ya da aynı sözün çevresinde bir araya getirir. Zikir ise insanın yönünü TANRI’ya çevirmesi, O’nu hatırlaması ve Rabbinin adını yüceltmesidir. Bu iki alan yan yana geldiğinde hem güçlü bir imkan hem de ciddi bir sorumluluk doğar.
 

@@ -44,7 +44,9 @@ author: "Berk KÖKSAL"
 
 ### Ayet
 
-> **1:1** — En Lütufkâr, En Merhametli TANRI’nın adıyla.*
+> **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
+
+**Esenlikler. Esenlik üzerinize olsun.**
 
 Bu makalenin amacı, İbrahim 14:4 ayetinden hareketle her yeni sanat biçimini veya her teknolojik anlatım aracını doğrudan dinî olarak onaylanmış saymak değildir. Aynı şekilde, modern sesleri kullanan bir çalışmanın sırf modern olduğu için daha doğru, daha etkili veya daha anlamlı olduğunu ileri sürmek de değildir. Buradaki amaç; değişmeyen tevhid merkezi ile değişebilen ifade biçimi arasındaki sorumluluğu düşünmek, çağdaş insana ulaşmaya çalışırken mesajın çağın değerlerine teslim edilip edilmediğini sorgulamaktır.
 

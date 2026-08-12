@@ -41,10 +41,11 @@ author: "Berk KÖKSAL"
 
 ### Ayet
 
-> **1:1** — En Lütufkâr, En Merhametli TANRI’nın adıyla.*
-
+> **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
 
 ## Giriş
+
+**Esenlikler. Esenlik üzerinize olsun.**
 
 Telefonlarımız artık yalnızca iletişim araçları değil. Birçok insan için telefon, günlüğün, kütüphanenin, çalışma masasının, aile albümünün, özel konuşmaların, sağlık aramalarının, korkuların, umutların ve bazen kimseye anlatılmamış duaların aynı yerde bulunduğu kişisel bir odadır.
 

@@ -36,6 +36,12 @@ author: "Berk KÖKSAL"
 
 **Yer:** Mersin
 
+### Ayet
+
+> **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
+
+**Esenlikler. Esenlik üzerinize olsun.**
+
 Makalenin temel amacı, ayetleri diğer ilgili ayetlerle birlikte düşünmek; TANRI’nın birliğine şahitliğin bilgi, adalet, doğruluk ve teslimiyet bakımından insan hayatında ne anlama geldiğini samimi ve derin bir dille ortaya koymaktır.
 
 ## Giriş
@@ -880,7 +886,7 @@ Bu farklı iddiaları anmak, makalenin ana sonucunu değiştirmiyor. Benim için
 
 Bakara 2:40’a geri döndüğümde artık ayetin son cümlesini tek başına duymuyorum. “Bana derin saygı duyun” sözü, önündeki iki hareketle birlikte yankılanıyor: nimeti hatırla ve antlaşmanın sana düşen kısmını yerine getir.
 
-Bu makalede belgede “Ayet Analizi” başlığıyla yer alan 99 ayetin tamamını 19 başlık altında birlikte düşündüğümde, derin saygının tek bir duyguya indirgenemeyecek kadar geniş bir hayat ölçüsü olduğunu görüyorum. Ayetler onu tevhidle, doğru sözle, bilgiyle, adaletle, ibadetle, mahremiyetle, güvenle, çabayla, hesapla, umutla ve benliği sınırlamakla ilişkilendiriyor.
+Bu makalede www.kuranteyit.com üzerindeki “Ayet Analizi” başlığıyla yer alan 99 ayetin tamamını 19 başlık altında birlikte düşündüğümde, derin saygının tek bir duyguya indirgenemeyecek kadar geniş bir hayat ölçüsü olduğunu görüyorum. Ayetler onu tevhidle, doğru sözle, bilgiyle, adaletle, ibadetle, mahremiyetle, güvenle, çabayla, hesapla, umutla ve benliği sınırlamakla ilişkilendiriyor.
 
 En belirgin çizgi ise yön meselesi. 5:44 insanlara değil TANRI’ya derin saygı duymayı söylüyor. 16:51 “Yalnızca Bana derin saygı duyun” diyor. 33:39 mesajları iletenlerin yalnız O’na derin saygı duyduğunu bildiriyor. Bu üç vurgu benim için tevhidin duygusal ve ahlaki merkezini açık ediyor: İnsan birçok kişiye saygı gösterebilir, birçok kişiden öğrenebilir, birçok kişiyi sevebilir; fakat TANRI’ya ait olan nihai ağırlığı başka bir varlığa veremez.
 

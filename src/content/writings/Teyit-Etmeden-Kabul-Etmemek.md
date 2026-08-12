@@ -39,6 +39,8 @@ author: "Berk KÖKSAL"
 
 ## Giriş
 
+**Esenlikler. Esenlik üzerinize olsun.**
+
 İnsan bazen bir söze doğru olduğu için değil, çok tekrarlandığı için inanır. Bazen haberi getiren kişiye güvenir; bazen de söylenen şey kendi öfkesine veya beklentisine uyduğu için araştırma ihtiyacı duymaz.
 
 17:36 insanı bu kolaylıktan çıkarır. 49:6 ise araştırılmamış bir haberin yalnız zihinsel bir hata olmadığını; başka insanlara karşı adaletsizliğe, ardından pişmanlığa dönüşebileceğini gösterir. Biri insanın iç dünyasına, diğeri sözün toplum içinde açtığı yaraya bakar. Birlikte okunduklarında teyit, kuru bir araştırma yöntemi olmaktan çıkar; vicdanı, dili ve davranışı koruyan bir ahlak haline gelir.

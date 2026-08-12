@@ -48,6 +48,8 @@ author: "Berk KÖKSAL"
 
 ## Giriş
 
+**Esenlikler. Esenlik üzerinize olsun.**
+
 Ben normalde rap müzik dinleyen veya kendisini rap kültürünün içinde tanımlayan biri değilim. Müzikal yönelimim klasik müzik ile rock arasında, neoklasik, senfonik ve zaman zaman daha sert seslerin buluştuğu bir alana yakındır. Gitar, orkestra, koro, atmosfer ve ses tasarımı benim için daha tanıdık bir dildir. Buna rağmen Neo-Sacred Zikr evreninde rap albümü de yapmak istedim ve ZIKR RAP albümünü üretmek nasip oldu.
 
 Bu karar, sırf farklı bir tür denemek için verilmiş değildi. Benim üretim anlayışımda türler amaç değil, araçtır. Rock, klasik müzik, koro, elektronik sesler veya rap; ancak zikre, doğru söze ve TANRI’yı yüceltmeye hizmet ettikleri ölçüde anlam kazanır. Bu nedenle ZIKR RAP için “Rap müziğin beklediği albüm” sloganını kullandım. İddialı bir cümleydi. Çünkü o zamana kadar rapin TANRI’yı yüceltmek için merkezi bir araç olarak kullanıldığı bir çalışmayla ben karşılaşmamıştım. Bu, daha önce hiç yapılmadığına dair tarihsel bir hüküm değildir; benim karşılaşmadığım ve kendi üretimimde açmak istediğim bir alandır.

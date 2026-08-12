@@ -112,7 +112,13 @@ table tbody tr:hover {
 
 **Yer:** Mersin
 
+### Ayet
+
+> **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
+
 ## Giriş
+
+**Esenlikler. Esenlik üzerinize olsun.**
 
 Bir çeviride bazen tek bir kelime yalnızca kelime değildir. Cümlenin yönünü değiştirir, okuyucunun zihninde yeni bir sınıf oluşturur, kaynak metinde bulunmayan bir ilişkiyi çağrıştırır. Hele söz konusu olan TANRI’nın nasıl tanıtıldığıysa, çevirmenin sorumluluğu daha da ağırlaşır. Çünkü burada mesele güzel Türkçe kurmak değil; vahyin söylediğini mümkün olduğu kadar sadakatle taşımaktır.
 

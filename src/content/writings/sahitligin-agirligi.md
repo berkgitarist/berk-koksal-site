@@ -32,6 +32,8 @@ author: "Berk KÖKSAL"
 
 ## Giriş
 
+**Esenlikler. Esenlik üzerinize olsun.**
+
 Bazı ayetler vardır; insan onları bir defa okuyup geçemez. Kelimeleri zihinde dolaşmaya devam eder. Her dönüşte başka bir kapı açar, başka bir soruyu insanın önüne bırakır. 3:18 ayeti benim için böyle bir ayettir.
 
 Bu ayet, TANRI’nın birliğini bildirmekle yetinmez. Şahitlikten, bilgiden, adaletten, kudretten ve bilgelikten söz eder. Üstelik bütün bunları tek bir cümlenin içinde birbirine bağlar. TANRI’nın birliği bir inanç ifadesi olarak bırakılmaz; şahitlikle doğrulanır, adaletle ayakta tutulur, bilgiyle tanınır ve kudretle bilgelik içinde tamamlanır.

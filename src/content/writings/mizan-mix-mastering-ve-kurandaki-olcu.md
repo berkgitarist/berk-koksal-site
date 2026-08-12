@@ -45,8 +45,9 @@ author: "Berk KÖKSAL"
 
 > **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
 
-
 ## Giriş
+
+**Esenlikler. Esenlik üzerinize olsun.**
 
 Bir müzik eserinin ilk notası yazıldıktan sonra başlayan yolculuk, çoğu zaman son notanın kaydedilmesiyle bitmez. Beste, aranje, orkestrasyon, kayıt, sound design, düzenleme, mix ve mastering boyunca aynı esere defalarca geri dönerim. Bir sesi yükseltir, sonra onun başka bir sesi örttüğünü fark ederim. Bir frekansı güzelleştirdiğimi düşünürken bütünün yorulduğunu işitirim. Bir enstrümanı daha etkileyici kılmak için yaptığım müdahale, eserin merkezini fark etmeden değiştirebilir.
 

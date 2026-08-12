@@ -42,8 +42,9 @@ author: "Berk KÖKSAL"
 
 > **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
 
-
 ## Giriş
+
+**Esenlikler. Esenlik üzerinize olsun.**
 
 Yapay zekâ, insanın bilgiye ulaşma biçimini hızla değiştiriyor. Daha önce uzun süre aramayı, birçok kaynağı yan yana getirmeyi ve tekrar tekrar okumayı gerektiren işler artık saniyeler içinde yapılabiliyor. Bir sistem kelimeleri sınıflandırabiliyor, çevirileri karşılaştırabiliyor, benzer cümleleri bulabiliyor ve insanın ilk bakışta fark etmediği bağlantıları önerebiliyor.
 

@@ -42,7 +42,9 @@ author: "Berk KÖKSAL"
 
 ### Ayet
 
-> **1:1** — En Lütufkâr, En Merhametli TANRI’nın adıyla.*
+> **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
+
+**Esenlikler. Esenlik üzerinize olsun.**
 
 Bu makalenin amacı, dini çalışma karşılığında hiçbir gelir elde edilemeyeceği biçiminde yeni ve kesin bir hüküm üretmek değildir. Asıl amaç, dijital din içeriklerinde gelir ile mesaj arasındaki ilişkinin ne zaman bozulduğunu; ayetlerin, dini korkuların, manevi arayışların ve kullanıcı davranışlarının ne zaman kazanç aracına dönüştürüldüğünü dürüstçe sorgulamaktır.
 

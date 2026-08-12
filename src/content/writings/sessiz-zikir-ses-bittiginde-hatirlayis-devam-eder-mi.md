@@ -42,6 +42,8 @@ author: "Berk KÖKSAL"
 
 ## Giriş
 
+**Esenlikler. Esenlik üzerinize olsun.**
+
 Ses insanın içine hızlı ulaşır. Bir melodi, bazen uzun bir açıklamanın açamadığı bir yeri açar. Bir kelime ritimle birleştiğinde hafızada kalır; bir isim tekrarlandığında kalbin yönünü değiştirebilir. Fakat sesin başka bir özelliği daha vardır: Başlar ve biter.
 
 Bir müzisyen olarak sesin gücünü biliyorum. Bir eserde boşluğu, yankıyı, nefesi, ritmi ve sessizliği kullanarak dinleyenin yaşadığı atmosferi değiştirebilirim. Ancak hiçbir teknik, hiçbir melodi ve hiçbir düzenleme insanın kalbinde TANRI’yı benim yerime hatırlayamaz. Ben bir kapı gösterebilirim; o kapıdan kimin, hangi niyetle geçeceğine hükmedemem.
