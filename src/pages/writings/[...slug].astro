@@ -220,8 +220,8 @@ const structuredData = {
     </details>
   </aside>
 
-  <article class="relative mx-auto max-w-[1600px] px-4 pb-24 pt-24 sm:px-6 md:pt-28 lg:px-8">
-    <details class="article-page-menu-mobile mx-auto mb-8 max-w-6xl lg:hidden">
+ <article class="article-page-shell relative w-full max-w-none px-0 pb-24 pt-24 sm:px-0 md:pt-28 lg:mx-auto lg:max-w-[1600px] lg:px-8">
+    <details class="article-page-menu-mobile mb-8 w-full max-w-none rounded-none border-x-0 lg:hidden">
       <summary>
         <span class="min-w-0">
           <span class="block text-[0.62rem] font-bold uppercase tracking-[0.22em] text-accent">
@@ -309,7 +309,7 @@ const structuredData = {
     </header>
 
     {data.image && (
-      <figure class="mx-auto mt-10 max-w-6xl overflow-hidden rounded-[2rem] border border-accent/15 bg-accent/5 shadow-[0_24px_80px_rgba(0,0,0,0.3)]">
+      <figure class="mt-10 w-full max-w-none overflow-hidden rounded-none border-y border-accent/15 bg-accent/5 shadow-[0_24px_80px_rgba(0,0,0,0.3)] sm:mx-auto sm:max-w-6xl sm:rounded-[2rem] sm:border">
     <img
       src={data.image}
       alt={data.imageAlt ?? data.title}
@@ -321,7 +321,7 @@ const structuredData = {
   </figure>
 )}
 
-    <div class="writing-prose mx-auto mt-10 w-full max-w-6xl rounded-[2rem] border border-accent/12 bg-background/35 px-6 py-9 shadow-[0_20px_70px_rgba(0,0,0,0.2)] backdrop-blur-sm sm:px-10 md:px-14 md:py-14 lg:px-20 xl:px-24">
+    <div class="writing-prose mt-10 w-full max-w-none rounded-none border-y border-accent/12 bg-background/35 px-4 py-9 shadow-[0_20px_70px_rgba(0,0,0,0.2)] backdrop-blur-sm sm:mx-auto sm:max-w-6xl sm:rounded-[2rem] sm:border sm:px-10 md:px-14 md:py-14 lg:px-20 xl:px-24">
       <Content />
     </div>
 
@@ -801,43 +801,6 @@ const structuredData = {
     }
   }
 
-  @media (max-width: 640px) {
-    .article-page-menu-mobile {
-      border-radius: 1rem;
-    }
-
-    .article-page-menu-mobile > summary {
-      min-height: 3.8rem;
-      padding: 0.72rem 0.8rem;
-    }
-
-    :global(.writing-prose) {
-      border-radius: 1.5rem;
-      padding: 1rem !important;
-      font-size: 1rem;
-      line-height: 1.8;
-    }
-
-    :global(.writing-prose h2) {
-      margin-top: 2.4rem;
-      font-size: 1.65rem;
-    }
-
-    :global(.writing-prose h3) {
-      margin-top: 2rem;
-      font-size: 1.3rem;
-    }
-
-    :global(.writing-prose blockquote) {
-      padding: 1rem !important;
-    }
-
-    :global(.writing-prose pre) {
-      margin-inline: -0.25rem;
-      padding: 1rem;
-    }
-  }
-
   @media (max-width: 380px) {
     .article-page-menu__count {
       min-width: 1.75rem;
@@ -1019,6 +982,64 @@ const structuredData = {
   :global(.writing-prose img) {
     margin: 2rem auto;
     border-radius: 1.25rem;
+  }
+
+
+
+  /* === ARTICLE MOBILE FULL WIDTH === */
+  @media (max-width: 639px) {
+    .article-page-shell {
+      width: 100% !important;
+      max-width: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .article-page-menu-mobile {
+      width: 100% !important;
+      max-width: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      border-left: 0 !important;
+      border-right: 0 !important;
+      border-radius: 0 !important;
+    }
+
+    :global(.writing-prose) {
+      width: 100% !important;
+      max-width: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      border-left: 0 !important;
+      border-right: 0 !important;
+      border-radius: 0 !important;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+      font-size: 1rem !important;
+      line-height: 1.8 !important;
+    }
+
+    :global(.writing-prose h2) {
+      margin-top: 2.4rem;
+      font-size: 1.65rem;
+    }
+
+    :global(.writing-prose h3) {
+      margin-top: 2rem;
+      font-size: 1.3rem;
+    }
+
+    :global(.writing-prose blockquote) {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    :global(.writing-prose pre) {
+      margin-inline: 0;
+      padding: 1rem !important;
+    }
   }
 
 </style>

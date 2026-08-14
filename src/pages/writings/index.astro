@@ -86,13 +86,13 @@ const articles = writingEntries.map((entry) => ({
     </section>
 
     <section
-      aria-labelledby="latest-writings-title"
-      class="section-container writings-content-section pt-5 md:pt-8"
-    >
+  aria-labelledby="latest-writings-title"
+  class="writings-content-section w-full max-w-none px-0 pt-5 md:mx-auto md:max-w-7xl md:px-0 md:pt-8"
+>
       {
         articles.length > 0 ? (
           <>
-            <details class="article-menu-mobile mb-5 lg:hidden">
+            <details class="article-menu-mobile mb-5 w-full rounded-none border-x-0 lg:hidden">
               <summary>
                 <span class="min-w-0">
                   <span class="block text-[0.66rem] font-bold uppercase tracking-[0.25em] text-accent">

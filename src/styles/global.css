@@ -470,24 +470,42 @@
   box-shadow: 0 25px 60px rgba(0,0,0,.35);
 }
 /* === Mobile Compact Layout === */
-@media (max-width: 640px) {
+@media (max-width: 767px) {
+  :root {
+    /* Tüm sitenin mobil dış kenar boşluğu */
+    --mobile-gutter: 4px;
+
+    /* Kartların / makalelerin iç yatay boşluğu */
+    --mobile-panel-padding: 12px;
+  }
+
   html,
   body {
     width: 100%;
     max-width: 100%;
+    margin: 0;
     overflow-x: hidden;
   }
 
-  /* Reduce the outer side gaps on all main pages. */
+  /*
+   * ANA DIŞ BOŞLUKLAR
+   * Mobilde ekran genişliğini mümkün olduğunca kullan.
+   */
   .section-container,
   main > section,
   main > article,
-  .family-banner {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
+  main > .mx-auto[class*="px-"],
+  section > .mx-auto[class*="px-"],
+  article.mx-auto[class*="px-"],
+  .family-banner,
+  [class*="sm:px-0"][class*="px-"] {
+    padding-left: var(--mobile-gutter) !important;
+    padding-right: var(--mobile-gutter) !important;
   }
 
-  /* Let the main content use the available mobile width. */
+  /*
+   * max-w-* sınıfları mobilde içeriği gereksiz yere daraltmasın.
+   */
   .section-container > *,
   main > section > .mx-auto,
   main > article > .mx-auto {
@@ -495,24 +513,30 @@
     max-width: 100% !important;
   }
 
-  /* Reduce the inner side padding of large cards and article panels. */
+  /*
+   * KART / PANEL İÇ BOŞLUKLARI
+   * Dış kenar 6px, kart içi 12px.
+   */
   .pro-glass,
   .pro-card,
   .writing-prose,
-  main [class*="rounded-"][class*="border"][class*="p-"] {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+  main [class*="rounded-"][class*="border"][class*="p-"],
+  .section-container [class*="rounded-"][class*="border"][class*="p-"] {
+    padding-left: var(--mobile-panel-padding) !important;
+    padding-right: var(--mobile-panel-padding) !important;
   }
 
-  /* Keep long-form articles readable without wasting horizontal space. */
+  /*
+   * Uzun makaleler mobilde geniş alan kullansın.
+   */
   .writing-prose {
     font-size: 1rem !important;
-    line-height: 1.8 !important;
+    line-height: 1.75 !important;
   }
 
   .writing-prose blockquote {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
   }
 }
 
