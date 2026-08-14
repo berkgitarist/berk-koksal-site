@@ -519,11 +519,9 @@
    */
   .pro-glass,
   .pro-card,
-  .writing-prose,
-  main [class*="rounded-"][class*="border"][class*="p-"],
-  .section-container [class*="rounded-"][class*="border"][class*="p-"] {
-    padding-left: var(--mobile-panel-padding) !important;
-    padding-right: var(--mobile-panel-padding) !important;
+  main [class*="rounded-"][class*="border"][class*="p-"] {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 
   /*
@@ -798,5 +796,21 @@
 @media (prefers-reduced-motion: reduce) {
   #copy-protection-warning {
     transition: none;
+  }
+}
+
+@media (max-width: 639px) {
+  /*
+   * Mobil dikey ritim:
+   * İki ana bölüm arasında toplam yaklaşık 24px.
+   */
+  .section-container {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+
+  .family-banner {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
   }
 }
