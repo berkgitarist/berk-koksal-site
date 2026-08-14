@@ -321,7 +321,7 @@ const structuredData = {
   </figure>
 )}
 
-    <div class="writing-prose mt-10 w-full max-w-none rounded-none border-y border-accent/12 bg-background/35 px-2 py-7 shadow-[0_20px_70px_rgba(0,0,0,0.2)] backdrop-blur-sm sm:mx-auto sm:max-w-6xl sm:rounded-[2rem] sm:border sm:px-10 md:px-14 md:py-14 lg:px-20 xl:px-24">
+    <div class="writing-prose mt-10 w-full max-w-none rounded-none border-y border-accent/12 bg-background/35 px-[6px] py-7 ...">
       <Content />
     </div>
 
@@ -986,60 +986,76 @@ const structuredData = {
 
 
 
-  /* === ARTICLE MOBILE FULL WIDTH === */
-  @media (max-width: 639px) {
-    .article-page-shell {
-      width: 100% !important;
-      max-width: none !important;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
-
-    .article-page-menu-mobile {
-      width: 100% !important;
-      max-width: none !important;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-      border-left: 0 !important;
-      border-right: 0 !important;
-      border-radius: 0 !important;
-    }
-
-    :global(.writing-prose) {
-      width: 100% !important;
-      max-width: none !important;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-      border-left: 0 !important;
-      border-right: 0 !important;
-      border-radius: 0 !important;
-      padding-left: 0.5rem !important;
-      padding-right: 0.5rem !important;
-      font-size: 1rem !important;
-      line-height: 1.8 !important;
-    }
-
-    :global(.writing-prose h2) {
-      margin-top: 2.4rem;
-      font-size: 1.65rem;
-    }
-
-    :global(.writing-prose h3) {
-      margin-top: 2rem;
-      font-size: 1.3rem;
-    }
-
-    :global(.writing-prose blockquote) {
-      padding-left: 0.65rem !important;
-      padding-right: 0.65rem !important;
-    }
-
-    :global(.writing-prose pre) {
-      margin-inline: 0;
-      padding: 1rem !important;
-    }
+/* === ARTICLE MOBILE ULTRA WIDE === */
+@media (max-width: 639px) {
+  .article-page-menu-mobile {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
   }
+
+  :global(.writing-prose) {
+    box-sizing: border-box;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    /* Sadece 6px iç kenar */
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+
+    font-size: 1rem !important;
+    line-height: 1.75 !important;
+  }
+
+  :global(.writing-prose h2),
+  :global(.writing-prose h3),
+  :global(.writing-prose h4),
+  :global(.writing-prose p),
+  :global(.writing-prose ul),
+  :global(.writing-prose ol) {
+    max-width: none !important;
+  }
+
+  :global(.writing-prose h2) {
+    margin-top: 2.2rem;
+    font-size: 1.65rem;
+  }
+
+  :global(.writing-prose h3) {
+    margin-top: 1.8rem;
+    font-size: 1.3rem;
+  }
+
+  :global(.writing-prose blockquote) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  :global(.writing-prose pre) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 10px !important;
+  }
+
+  :global(.writing-prose .article-summary) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
 
 </style>
