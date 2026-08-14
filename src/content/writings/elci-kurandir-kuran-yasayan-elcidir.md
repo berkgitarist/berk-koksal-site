@@ -494,6 +494,8 @@ Benim için bu tefekkürün ulaştığı sonuç şudur: İnsan elçi aramızda o
 ## **Not**
 
 > **2:32** — Onlar, “Sana yücelik olsun. Senin bize öğrettiğinden başka bizim hiçbir bilgimiz yok. Sen Her Şeyi Bilensin, En Bilgesin.” dediler.
+>
+> **31:27** — Yeryüzündeki bütün ağaçlar kalemlere dönüştürülseydi ve okyanusa yedi okyanus daha da eklenmiş olarak mürekkebi tedarik etseydi, TANRI’nın sözleri tükenmezdi. TANRI Kudretlidir, En Bilgedir.
 
 En doğrusunu TANRI bilir.
 

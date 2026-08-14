@@ -395,6 +395,8 @@ Sonunda mesele kaç çeviri gördüğüm, kaç bağlantı açtığım veya kaç 
 ## Not
 
 > **2:32** — Onlar, “Sana yücelik olsun. Senin bize öğrettiğinden başka bizim hiçbir bilgimiz yok. Sen Her Şeyi Bilensin, En Bilgesin.” dediler.
+>
+> **7:33** — De ki: “Benim Rabbim yalnızca, açık ya da gizli olsun kötü eylemleri, günahları, haksız saldırganlığı, TANRI’nın yanında güçsüz putlar edinmeyi ve TANRI hakkında bilmediğiniz şeyler söylemeyi haram kılar.”
 
 En doğrusunu TANRI bilir.
 

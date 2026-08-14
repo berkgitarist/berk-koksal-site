@@ -1007,6 +1007,8 @@ O’nu yüceltmek için “<mark class="yy-warning">yüceler</mark>” üretmeye
 ## Not
 
 > **2:32** — Onlar, “Sana yücelik olsun. Senin bize öğrettiğinden başka bizim hiçbir bilgimiz yok. Sen Her Şeyi Bilensin, En Bilgesin.” dediler.
+>
+> **20:114** — Tek hakiki Kral TANRI En Yüksektir. Sana vahyedilmeden önce Kuran’ı dile getirmekte acele etme ve “Rabbim, bilgimi artır” de.
 
 Bu yazı, “<mark class="yy-warning">Yüceler</mark> <mark class="yy-warning">Yücesi</mark>” ifadesini kullanan herkes hakkında şirk, küfür veya inkâr hükmü verdiğini iddia etmez. İncelenen konu, Yetkilendirilmiş İngilizce Metnin Türkçeye aktarımında kaynakta bulunmayan çoğul bir yapının sistematik biçimde eklenmesi ve bunun tevhid dili açısından doğurduğu anlam riskidir.
 

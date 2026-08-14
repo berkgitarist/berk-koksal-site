@@ -258,6 +258,8 @@ Kuranteyit’i geliştirirken kendime bırakmak istediğim soru bu:
 ## Not
 
 > **2:32** — Onlar, “Sana yücelik olsun. Senin bize öğrettiğinden başka bizim hiçbir bilgimiz yok. Sen Her Şeyi Bilensin, En Bilgesin.” dediler.
+>
+> **17:36** — Kendin için teyit etmediğin sürece, hiçbir bilgiyi kabul etme. Ben sana işitmeyi, görmeyi ve beyni verdim ve sen onları kullanmaktan sorumlusun.
 
 En doğrusunu TANRI bilir.
 

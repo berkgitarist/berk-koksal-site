@@ -327,6 +327,8 @@ Benim için asıl soru artık “Aradığım ayeti buldum mu?” değil:
 ## Not
 
 > **2:32** — Onlar, “Sana yücelik olsun. Senin bize öğrettiğinden başka bizim hiçbir bilgimiz yok. Sen Her Şeyi Bilensin, En Bilgesin.” dediler.
+>
+> **20:114** — Tek hakiki Kral TANRI En Yüksektir. Sana vahyedilmeden önce Kuran’ı dile getirmekte acele etme ve “Rabbim, bilgimi artır” de.
 
 En doğrusunu TANRI bilir.
 

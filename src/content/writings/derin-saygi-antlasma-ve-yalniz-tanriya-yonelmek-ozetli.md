@@ -901,6 +901,8 @@ Bu yüzden kendi hayatımda derin saygıyı şu sorularla sınamak istiyorum: Ni
 ### Not
 
 > **2:32** — Onlar, “Sana yücelik olsun. Senin bize öğrettiğinden başka bizim hiçbir bilgimiz yok. Sen Her Şeyi Bilensin, En Bilgesin.” dediler.
+>
+> **18:109** — De ki: “Eğer okyanus Rabbimin sözleri için mürekkep olsaydı, hatta mürekkep tedariğini iki katına çıkarsak bile, Rabbimin sözleri tükenmeden önce okyanus tükenirdi.”
 
 En doğrusunu TANRI bilir.
 

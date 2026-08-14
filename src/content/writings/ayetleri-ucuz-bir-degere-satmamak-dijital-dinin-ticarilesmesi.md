@@ -497,6 +497,8 @@ Kuranteyit’te reklam ve davranış analizi bulunmaması, hesap açılmaması v
 ## Not
 
 > **2:32** — Onlar, “Sana yücelik olsun. Senin bize öğrettiğinden başka bizim hiçbir bilgimiz yok. Sen Her Şeyi Bilensin, En Bilgesin.” dediler.
+>
+> **31:27** — Yeryüzündeki bütün ağaçlar kalemlere dönüştürülseydi ve okyanusa yedi okyanus daha da eklenmiş olarak mürekkebi tedarik etseydi, TANRI’nın sözleri tükenmezdi. TANRI Kudretlidir, En Bilgedir.
 
 Bu yazı, 2:41, 2:79, 9:9 ve 16:95 ayetlerinden reklam, abonelik, ücretli eğitim veya dijital gelir modelleri hakkında doğrudan ve ayrıntılı teknik hükümler çıkardığını iddia etmez. Ayetlerdeki vahyi ve antlaşmayı değmeyen bir karşılığa değiştirmeme, insan eliyle üretileni TANRI’ya isnat etmeme ve geçici menfaat uğruna insanları TANRI’nın yolundan uzaklaştırmama uyarılarını dijital din içeriklerinin ekonomik ve ahlaki yapısı üzerine bir tefekkür için kullanır.
 
