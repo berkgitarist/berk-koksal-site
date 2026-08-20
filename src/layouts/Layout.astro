@@ -59,22 +59,32 @@ const defaultTheme = `${baseTheme}-dark`;
       twitterCard={twitterCard}
     />
 
-    <script is:inline define:vars={{ baseTheme, defaultTheme }}>
-      const savedTheme = localStorage.getItem('theme');
+    <script
+      is:inline
+      define:vars={{ baseTheme, defaultTheme }}
+    >
+      const savedTheme =
+        localStorage.getItem(
+          'theme'
+        );
 
       if (
         savedTheme &&
-        savedTheme.startsWith(baseTheme)
+        savedTheme.startsWith(
+          baseTheme
+        )
       ) {
-        document.documentElement.setAttribute(
-          'data-theme',
-          savedTheme
-        );
+        document.documentElement
+          .setAttribute(
+            'data-theme',
+            savedTheme
+          );
       } else {
-        document.documentElement.setAttribute(
-          'data-theme',
-          defaultTheme
-        );
+        document.documentElement
+          .setAttribute(
+            'data-theme',
+            defaultTheme
+          );
 
         localStorage.setItem(
           'theme',
@@ -87,6 +97,10 @@ const defaultTheme = `${baseTheme}-dark`;
   <body
     class="relative min-h-screen overflow-x-hidden antialiased bg-container"
   >
+    <!-- =====================================================
+         FALLING NOTES / ALLAH NAMES CONTAINER
+         ===================================================== -->
+
     <div
       id="matrix-container"
       aria-hidden="true"
@@ -95,11 +109,19 @@ const defaultTheme = `${baseTheme}-dark`;
     >
     </div>
 
+    <!-- =====================================================
+         PAGE CONTENT
+         ===================================================== -->
+
     <main
       class="relative z-0 px-2 mx-auto sm:px-12 md:px-14 lg:px-28 max-w-360"
     >
       <slot />
     </main>
+
+    <!-- =====================================================
+         BACK TO TOP
+         ===================================================== -->
 
     <button
       id="to-top"
@@ -157,9 +179,51 @@ const defaultTheme = `${baseTheme}-dark`;
       </div>
     </button>
 
+    <!-- =====================================================
+         AMBIENT SYMBOLS + BACK TO TOP SCRIPT
+         ===================================================== -->
+
     <script>
+      /* =====================================================
+         AMBIENT SYMBOL SYSTEM
+         ===================================================== */
+
+      const AMBIENT_STORAGE_KEY =
+        'ambient-symbols-enabled';
+
+      /*
+       * Astro View Transition gibi durumlarda
+       * önceki sayfadan kalan interval/listener varsa
+       * temizleyebilmek için global controller.
+       */
+      type AmbientController = {
+        destroy: () => void;
+      };
+
+      type AmbientWindow =
+        Window & {
+          __berkAmbientController?:
+            AmbientController;
+        };
+
+      const ambientWindow =
+        window as AmbientWindow;
+
+      /*
+       * Önceki sayfadan bir controller kaldıysa
+       * kapat.
+       */
+      ambientWindow
+        .__berkAmbientController
+        ?.destroy();
+
+      const ambientAbortController =
+        new AbortController();
+
       const container =
-        document.getElementById('matrix-container');
+        document.getElementById(
+          'matrix-container'
+        );
 
       const notes = [
         '♪',
@@ -170,47 +234,163 @@ const defaultTheme = `${baseTheme}-dark`;
         '♯'
       ];
 
-      function randomSymbol(): string {
-        const randomValue = Math.random();
+      /*
+       * Masaüstündeki sürekli üretim interval'i.
+       */
+      let ambientIntervalId:
+        number | null = null;
 
-        if (randomValue < 0.02) {
+      /*
+       * Ekran yeniden boyutlandırıldığında
+       * çok sık yeniden çizim yapılmasını engeller.
+       */
+      let ambientResizeTimeout:
+        number | null = null;
+
+      /*
+       * Her düşen sembolün kendi silme timeout'u
+       * burada tutulur.
+       *
+       * Damla kapatıldığında bunların tamamı
+       * iptal edilir.
+       */
+      const removalTimeoutIds =
+        new Set<number>();
+
+      type AmbientMode =
+        | 'desktop'
+        | 'mobile'
+        | null;
+
+      let currentAmbientMode:
+        AmbientMode = null;
+
+      /*
+       * Kullanıcının tercihi.
+       *
+       * localStorage'da false yoksa
+       * varsayılan olarak AÇIK.
+       */
+      let ambientSymbolsEnabled =
+        localStorage.getItem(
+          AMBIENT_STORAGE_KEY
+        ) !== 'false';
+
+      /*
+       * İşletim sisteminde Reduce Motion
+       * seçilmişse hareketli arka plan
+       * otomatik oluşturulmaz.
+       */
+      const prefersReducedMotion =
+        window.matchMedia(
+          '(prefers-reduced-motion: reduce)'
+        ).matches;
+
+      /* =====================================================
+         RANDOM SYMBOL
+         ===================================================== */
+
+      function randomSymbol(): string {
+        const randomValue =
+          Math.random();
+
+        /*
+         * Yaklaşık %2:
+         * هو
+         */
+        if (
+          randomValue < 0.02
+        ) {
           return 'هو';
         }
 
-        if (randomValue < 0.1) {
+        /*
+         * Yaklaşık %8:
+         * ﷲ
+         */
+        if (
+          randomValue < 0.1
+        ) {
           return 'ﷲ';
         }
 
+        /*
+         * Geri kalan:
+         * müzik notaları.
+         */
         const noteIndex =
-          Math.floor(Math.random() * notes.length);
+          Math.floor(
+            Math.random() *
+            notes.length
+          );
 
-        return notes[noteIndex] ?? '♪';
+        return (
+          notes[noteIndex] ??
+          '♪'
+        );
       }
 
+      /* =====================================================
+         DESKTOP FALLING SYMBOL
+         ===================================================== */
+
       function createLetter(): void {
-        if (!container) {
+        /*
+         * Kullanıcı sistemi kapattıysa
+         * hiçbir şey oluşturma.
+         */
+        if (
+          !container ||
+          !ambientSymbolsEnabled
+        ) {
           return;
         }
 
         const span =
-          document.createElement('span');
+          document.createElement(
+            'span'
+          );
 
-        const character = randomSymbol();
-        const color = '#D4AF37';
+        const character =
+          randomSymbol();
 
-        const left = Math.random() * 100;
-        const duration = 8 + Math.random() * 10;
-        const size = 12 + Math.random() * 16;
-        const drift = -30 + Math.random() * 60;
-        const rotate = -40 + Math.random() * 80;
+        const color =
+          '#D4AF37';
 
-        span.innerText = character;
+        const left =
+          Math.random() * 100;
+
+        const duration =
+          8 +
+          Math.random() * 10;
+
+        const size =
+          12 +
+          Math.random() * 16;
+
+        const drift =
+          -30 +
+          Math.random() * 60;
+
+        const rotate =
+          -40 +
+          Math.random() * 80;
+
+        span.innerText =
+          character;
+
         span.className =
           'falling-letter falling-note';
 
-        span.style.left = `${left}vw`;
-        span.style.color = color;
-        span.style.fontSize = `${size}px`;
+        span.style.left =
+          `${left}vw`;
+
+        span.style.color =
+          color;
+
+        span.style.fontSize =
+          `${size}px`;
+
         span.style.animationDuration =
           `${duration}s`;
 
@@ -228,71 +408,438 @@ const defaultTheme = `${baseTheme}-dark`;
           `0 0 8px ${color}, ` +
           '0 0 20px rgba(212, 175, 55, 0.35)';
 
-        container.appendChild(span);
+        container.appendChild(
+          span
+        );
 
-        window.setTimeout(
-          () => span.remove(),
-          duration * 1000
+        /*
+         * Normal şartlarda animasyon süresi
+         * bittiğinde span DOM'dan kaldırılır.
+         */
+        const removalTimeoutId =
+          window.setTimeout(
+            () => {
+              span.remove();
+
+              removalTimeoutIds
+                .delete(
+                  removalTimeoutId
+                );
+            },
+            duration * 1000
+          );
+
+        removalTimeoutIds.add(
+          removalTimeoutId
         );
       }
 
-      function createStaticLetter(): void {
-        if (!container) {
+      /* =====================================================
+         MOBILE STATIC SYMBOL
+         ===================================================== */
+
+      function createStaticLetter():
+        void {
+        /*
+         * Kullanıcı sistemi kapattıysa
+         * statik sembol de oluşturma.
+         */
+        if (
+          !container ||
+          !ambientSymbolsEnabled
+        ) {
           return;
         }
 
         const span =
-          document.createElement('span');
+          document.createElement(
+            'span'
+          );
 
-        const character = randomSymbol();
-        const color = '#D4AF37';
+        const character =
+          randomSymbol();
 
-        const left = Math.random() * 100;
-        const top = Math.random() * 90;
-        const size = 12 + Math.random() * 14;
+        const color =
+          '#D4AF37';
 
-        span.innerText = character;
+        const left =
+          Math.random() * 100;
+
+        const top =
+          Math.random() * 90;
+
+        const size =
+          12 +
+          Math.random() * 14;
+
+        span.innerText =
+          character;
+
         span.className =
           'falling-letter falling-note';
 
-        span.style.animation = 'none';
-        span.style.left = `${left}vw`;
-        span.style.top = `${top}vh`;
-        span.style.color = color;
-        span.style.fontSize = `${size}px`;
+        span.style.animation =
+          'none';
+
+        span.style.left =
+          `${left}vw`;
+
+        span.style.top =
+          `${top}vh`;
+
+        span.style.color =
+          color;
+
+        span.style.fontSize =
+          `${size}px`;
 
         span.style.opacity =
-          (0.08 + Math.random() * 0.2).toString();
+          (
+            0.08 +
+            Math.random() * 0.2
+          ).toString();
 
         span.style.textShadow =
           `0 0 8px ${color}`;
 
-        container.appendChild(span);
+        container.appendChild(
+          span
+        );
       }
 
-      const prefersReducedMotion =
-        window.matchMedia(
-          '(prefers-reduced-motion: reduce)'
-        ).matches;
+      /* =====================================================
+         REMOVE EVERYTHING
+         ===================================================== */
 
-      if (!prefersReducedMotion) {
-        if (window.innerWidth > 768) {
-          window.setInterval(createLetter, 450);
-        } else {
-          const mobileCount = 18;
+      function clearAmbientSymbols():
+        void {
+        if (
+          !container
+        ) {
+          return;
+        }
 
-          for (
-            let index = 0;
-            index < mobileCount;
-            index += 1
-          ) {
-            createStaticLetter();
+        /*
+         * EN ÖNEMLİ KISIM:
+         *
+         * Kullanıcı damlaya bastığında
+         * semboller oldukları yerde DONMUYOR.
+         *
+         * Tamamen DOM'dan SİLİNİYOR.
+         */
+        container.replaceChildren();
+      }
+
+      /* =====================================================
+         CLEAR SYMBOL REMOVAL TIMERS
+         ===================================================== */
+
+      function clearRemovalTimeouts():
+        void {
+        removalTimeoutIds.forEach(
+          (timeoutId) => {
+            window.clearTimeout(
+              timeoutId
+            );
           }
+        );
+
+        removalTimeoutIds.clear();
+      }
+
+      /* =====================================================
+         STOP AMBIENT SYSTEM
+         ===================================================== */
+
+      function stopAmbientSymbols():
+        void {
+        /*
+         * Yeni sembol üreten interval'i kapat.
+         */
+        if (
+          ambientIntervalId !==
+          null
+        ) {
+          window.clearInterval(
+            ambientIntervalId
+          );
+
+          ambientIntervalId =
+            null;
+        }
+
+        /*
+         * Eski sembollerin timeout'larını kapat.
+         */
+        clearRemovalTimeouts();
+
+        /*
+         * Ekranda o anda bulunan
+         * BÜTÜN nota / Allah / Hu sembollerini
+         * ANINDA tamamen sil.
+         */
+        clearAmbientSymbols();
+
+        currentAmbientMode =
+          null;
+      }
+
+      /* =====================================================
+         START AMBIENT SYSTEM
+         ===================================================== */
+
+      function startAmbientSymbols():
+        void {
+        /*
+         * Önce eski sistemden kalan ne varsa
+         * tamamen temizle.
+         */
+        stopAmbientSymbols();
+
+        if (
+          !container ||
+          !ambientSymbolsEnabled ||
+          prefersReducedMotion
+        ) {
+          return;
+        }
+
+        /*
+         * Masaüstü.
+         */
+        if (
+          window.innerWidth >
+          768
+        ) {
+          currentAmbientMode =
+            'desktop';
+
+          /*
+           * İlk sembolün görünmesi için
+           * 450 ms beklemek zorunda kalmasın.
+           */
+          createLetter();
+
+          /*
+           * Sonrasında eski sistemdeki gibi
+           * her 450 ms'de yeni sembol.
+           */
+          ambientIntervalId =
+            window.setInterval(
+              createLetter,
+              450
+            );
+
+          return;
+        }
+
+        /*
+         * Mobil.
+         *
+         * Orijinal tasarımındaki gibi
+         * 18 adet statik sembol.
+         */
+        currentAmbientMode =
+          'mobile';
+
+        const mobileCount =
+          18;
+
+        for (
+          let index = 0;
+          index < mobileCount;
+          index += 1
+        ) {
+          createStaticLetter();
         }
       }
 
+      /* =====================================================
+         TOGGLE EVENT
+         ===================================================== */
+
+      function handleAmbientChange(
+        event: Event
+      ): void {
+        const customEvent =
+          event as CustomEvent<{
+            enabled?: boolean;
+          }>;
+
+        const enabled =
+          customEvent.detail
+            ?.enabled;
+
+        if (
+          typeof enabled !==
+          'boolean'
+        ) {
+          return;
+        }
+
+        ambientSymbolsEnabled =
+          enabled;
+
+        /*
+         * localStorage'ı Layout tarafında da
+         * garanti altına al.
+         */
+        localStorage.setItem(
+          AMBIENT_STORAGE_KEY,
+          enabled
+            ? 'true'
+            : 'false'
+        );
+
+        if (
+          enabled
+        ) {
+          /*
+           * Tekrar açıldı.
+           * Sistemi sıfırdan başlat.
+           */
+          startAmbientSymbols();
+
+          return;
+        }
+
+        /*
+         * KAPATILDI.
+         *
+         * Interval kapanır.
+         * Timeout'lar kapanır.
+         * Mevcut tüm semboller silinir.
+         */
+        stopAmbientSymbols();
+      }
+
+      window.addEventListener(
+        'ambient-symbols-change',
+        handleAmbientChange,
+        {
+          signal:
+            ambientAbortController
+              .signal
+        }
+      );
+
+      /* =====================================================
+         RESPONSIVE AMBIENT SYSTEM
+         ===================================================== */
+
+      function handleAmbientResize():
+        void {
+        if (
+          !ambientSymbolsEnabled ||
+          prefersReducedMotion
+        ) {
+          return;
+        }
+
+        if (
+          ambientResizeTimeout !==
+          null
+        ) {
+          window.clearTimeout(
+            ambientResizeTimeout
+          );
+        }
+
+        ambientResizeTimeout =
+          window.setTimeout(
+            () => {
+              const nextMode:
+                AmbientMode =
+                window.innerWidth >
+                768
+                  ? 'desktop'
+                  : 'mobile';
+
+              /*
+               * Sadece breakpoint değiştiyse
+               * sistemi yeniden kur.
+               */
+              if (
+                nextMode !==
+                currentAmbientMode
+              ) {
+                startAmbientSymbols();
+              }
+
+              ambientResizeTimeout =
+                null;
+            },
+            180
+          );
+      }
+
+      window.addEventListener(
+        'resize',
+        handleAmbientResize,
+        {
+          passive: true,
+          signal:
+            ambientAbortController
+              .signal
+        }
+      );
+
+      /* =====================================================
+         INITIAL AMBIENT STATE
+         ===================================================== */
+
+      /*
+       * Sayfa ilk açıldığında kullanıcının
+       * daha önce kaydettiği tercihe bakılır.
+       *
+       * false ise:
+       * hiçbir sembol oluşturulmaz.
+       *
+       * true ise:
+       * normal sistem başlar.
+       */
+      if (
+        ambientSymbolsEnabled
+      ) {
+        startAmbientSymbols();
+      } else {
+        stopAmbientSymbols();
+      }
+
+      /* =====================================================
+         CONTROLLER CLEANUP
+         ===================================================== */
+
+      ambientWindow
+        .__berkAmbientController = {
+          destroy: () => {
+            ambientAbortController
+              .abort();
+
+            if (
+              ambientResizeTimeout !==
+              null
+            ) {
+              window.clearTimeout(
+                ambientResizeTimeout
+              );
+
+              ambientResizeTimeout =
+                null;
+            }
+
+            stopAmbientSymbols();
+          }
+        };
+
+      /* =====================================================
+         BACK TO TOP
+         ===================================================== */
+
       const toTopButton =
-        document.getElementById('to-top');
+        document.getElementById(
+          'to-top'
+        );
 
       const progressCircle =
         document.getElementById(
@@ -300,74 +847,101 @@ const defaultTheme = `${baseTheme}-dark`;
         );
 
       const arrowIcon =
-        toTopButton?.querySelector<HTMLElement>(
+        toTopButton?.querySelector<
+          HTMLElement
+        >(
           '.absolute'
         );
 
-      const circumference = 150.796;
+      const circumference =
+        150.796;
 
-      function handleScroll(): void {
+      function handleScroll():
+        void {
         const scrollableHeight =
-          document.documentElement.scrollHeight -
+          document.documentElement
+            .scrollHeight -
           window.innerHeight;
 
         const scrollPercentage =
           scrollableHeight > 0
-            ? window.scrollY / scrollableHeight
+            ? window.scrollY /
+              scrollableHeight
             : 0;
 
         const boundedPercentage =
           Math.min(
-            Math.max(scrollPercentage, 0),
+            Math.max(
+              scrollPercentage,
+              0
+            ),
             1
           );
 
         const offset =
           circumference -
-          boundedPercentage * circumference;
+          boundedPercentage *
+          circumference;
 
-        if (progressCircle) {
-          progressCircle.style.strokeDashoffset =
+        if (
+          progressCircle
+        ) {
+          progressCircle.style
+            .strokeDashoffset =
             offset.toString();
         }
 
-        if (boundedPercentage > 0.5) {
-          toTopButton?.classList.remove(
-            'translate-y-20',
-            'opacity-0'
-          );
+        if (
+          boundedPercentage >
+          0.5
+        ) {
+          toTopButton?.classList
+            .remove(
+              'translate-y-20',
+              'opacity-0'
+            );
 
-          toTopButton?.classList.add(
-            'translate-y-0',
-            'opacity-100'
-          );
+          toTopButton?.classList
+            .add(
+              'translate-y-0',
+              'opacity-100'
+            );
         } else {
-          toTopButton?.classList.add(
-            'translate-y-20',
-            'opacity-0'
-          );
+          toTopButton?.classList
+            .add(
+              'translate-y-20',
+              'opacity-0'
+            );
 
-          toTopButton?.classList.remove(
-            'translate-y-0',
-            'opacity-100'
-          );
+          toTopButton?.classList
+            .remove(
+              'translate-y-0',
+              'opacity-100'
+            );
         }
 
-        if (boundedPercentage > 0.98) {
-          arrowIcon?.classList.add(
-            'animate-bounce-twice'
-          );
+        if (
+          boundedPercentage >
+          0.98
+        ) {
+          arrowIcon?.classList
+            .add(
+              'animate-bounce-twice'
+            );
         } else {
-          arrowIcon?.classList.remove(
-            'animate-bounce-twice'
-          );
+          arrowIcon?.classList
+            .remove(
+              'animate-bounce-twice'
+            );
         }
       }
 
       window.addEventListener(
         'scroll',
         handleScroll,
-        { passive: true }
+        {
+          passive: true
+        }
       );
 
       handleScroll();
@@ -375,7 +949,9 @@ const defaultTheme = `${baseTheme}-dark`;
       toTopButton?.addEventListener(
         'click',
         () => {
-          if (prefersReducedMotion) {
+          if (
+            prefersReducedMotion
+          ) {
             window.scrollTo({
               top: 0,
               behavior: 'auto'
@@ -388,31 +964,46 @@ const defaultTheme = `${baseTheme}-dark`;
             'launching'
           );
 
-          const startPosition = window.scrollY;
-          const duration = 750;
+          const startPosition =
+            window.scrollY;
 
-          let startTime: number | null = null;
-          let requestId: number | null = null;
+          const duration =
+            750;
 
-          const stopAnimation = (): void => {
-            if (requestId !== null) {
-              cancelAnimationFrame(requestId);
-            }
+          let startTime:
+            number | null = null;
 
-            arrowIcon?.classList.remove(
-              'launching'
-            );
+          let requestId:
+            number | null = null;
 
-            window.removeEventListener(
-              'wheel',
-              stopAnimation
-            );
+          const stopAnimation =
+            (): void => {
+              if (
+                requestId !==
+                null
+              ) {
+                cancelAnimationFrame(
+                  requestId
+                );
+              }
 
-            window.removeEventListener(
-              'touchmove',
-              stopAnimation
-            );
-          };
+              arrowIcon?.classList
+                .remove(
+                  'launching'
+                );
+
+              window
+                .removeEventListener(
+                  'wheel',
+                  stopAnimation
+                );
+
+              window
+                .removeEventListener(
+                  'touchmove',
+                  stopAnimation
+                );
+            };
 
           function easeOutQuad(
             elapsed: number,
@@ -421,12 +1012,16 @@ const defaultTheme = `${baseTheme}-dark`;
             totalDuration: number
           ): number {
             const normalized =
-              elapsed / totalDuration;
+              elapsed /
+              totalDuration;
 
             return (
               -change *
                 normalized *
-                (normalized - 2) +
+                (
+                  normalized -
+                  2
+                ) +
               start
             );
           }
@@ -434,12 +1029,17 @@ const defaultTheme = `${baseTheme}-dark`;
           function animation(
             currentTime: number
           ): void {
-            if (startTime === null) {
-              startTime = currentTime;
+            if (
+              startTime ===
+              null
+            ) {
+              startTime =
+                currentTime;
             }
 
             const timeElapsed =
-              currentTime - startTime;
+              currentTime -
+              startTime;
 
             const nextPosition =
               easeOutQuad(
@@ -454,7 +1054,10 @@ const defaultTheme = `${baseTheme}-dark`;
               nextPosition
             );
 
-            if (timeElapsed < duration) {
+            if (
+              timeElapsed <
+              duration
+            ) {
               requestId =
                 requestAnimationFrame(
                   animation
@@ -467,50 +1070,73 @@ const defaultTheme = `${baseTheme}-dark`;
           window.addEventListener(
             'wheel',
             stopAnimation,
-            { once: true }
+            {
+              once: true
+            }
           );
 
           window.addEventListener(
             'touchmove',
             stopAnimation,
-            { once: true }
+            {
+              once: true
+            }
           );
 
           requestId =
-            requestAnimationFrame(animation);
+            requestAnimationFrame(
+              animation
+            );
         }
       );
     </script>
 
+    <!-- =====================================================
+         PRO CARD MOUSE EFFECT
+         ===================================================== -->
+
     <script is:inline>
       document
-        .querySelectorAll('.pro-card')
-        .forEach((card) => {
-          card.addEventListener(
-            'mousemove',
-            (event) => {
-              if (
-                !(card instanceof HTMLElement) ||
-                !(event instanceof MouseEvent)
-              ) {
-                return;
+        .querySelectorAll(
+          '.pro-card'
+        )
+        .forEach(
+          (card) => {
+            card.addEventListener(
+              'mousemove',
+              (event) => {
+                if (
+                  !(
+                    card instanceof
+                    HTMLElement
+                  ) ||
+                  !(
+                    event instanceof
+                    MouseEvent
+                  )
+                ) {
+                  return;
+                }
+
+                const rectangle =
+                  card
+                    .getBoundingClientRect();
+
+                card.style
+                  .setProperty(
+                    '--mouse-x',
+                    `${event.clientX - rectangle.left}px`
+                  );
+
+                card.style
+                  .setProperty(
+                    '--mouse-y',
+                    `${event.clientY - rectangle.top}px`
+                  );
               }
-
-              const rectangle =
-                card.getBoundingClientRect();
-
-              card.style.setProperty(
-                '--mouse-x',
-                `${event.clientX - rectangle.left}px`
-              );
-
-              card.style.setProperty(
-                '--mouse-y',
-                `${event.clientY - rectangle.top}px`
-              );
-            }
-          );
-        });
+            );
+          }
+        );
     </script>
   </body>
 </html>
