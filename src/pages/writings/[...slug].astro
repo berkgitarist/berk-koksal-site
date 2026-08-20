@@ -515,6 +515,26 @@ const structuredData = {
         if (article.dataset.copyProtectionReady === 'true') return;
 
         article.dataset.copyProtectionReady = 'true';
+        article.addEventListener('click', async (event) => {
+  const target = event.target;
+
+  if (!(target instanceof HTMLImageElement)) return;
+
+  event.preventDefault();
+
+  try {
+    if (document.fullscreenElement === target) {
+      await document.exitFullscreen();
+      return;
+    }
+
+    if (!document.fullscreenElement) {
+      await target.requestFullscreen();
+    }
+  } catch (error) {
+    console.error('Görsel tam ekran açılamadı:', error);
+  }
+});
 
         let warningTimeout;
 
