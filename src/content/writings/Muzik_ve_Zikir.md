@@ -474,7 +474,7 @@ Benim için en ciddi ölçülerden biri budur: TANRI’yı anan ses, insanı dah
 
 Ana ayetin Arapça kelimelerine yakından bakmak, emrin yoğunluğunu daha iyi hissettiriyor. Burada kök bilgisi ayetin yerine geçmez; yalnız kelimelerin açtığı anlam alanını dikkatle düşünmeye yardım eder.
 
-**ٱلْأَعْلَى (el-A'la)**, **ع-ل-و** köküyle ilişkilidir ve en yüksek, en yüce anlamını taşır. İnsan sesi yükselir ve söner; sanatçının ünü doğar ve kaybolur; toplulukların zevkleri değişir. En Yüce olan ise bunların hiçbirine bağlı değildir. Müzik TANRI’yı daha yüce hale getirmez. İnsan, müzik aracılığıyla kendi bilincini O’nun yüceliğine çevirebilir.
+**ٱلْأَعْلَى (el-A'la)**, **ع-ل-و (Ayn-Lam-Vav)** köküyle ilişkilidir ve en yüksek, en yüce anlamını taşır. İnsan sesi yükselir ve söner; sanatçının ünü doğar ve kaybolur; toplulukların zevkleri değişir. En Yüce olan ise bunların hiçbirine bağlı değildir. Müzik TANRI’yı daha yüce hale getirmez. İnsan, müzik aracılığıyla kendi bilincini O’nun yüceliğine çevirebilir.
 
 Kelimeler birlikte düşünüldüğünde ayet, yalnız sesi yükseltme çağrısından çok daha derin bir anlam kazanır: Rabbin adını eksik tasavvurlardan uzak tut, O’nun gözeten Rab oluşunu hatırla ve bütün insan büyüklüklerinin üzerinde yalnız O’nun En Yüce olduğunu kabul et. Müzik bu bilincin taşıyıcısı olabilir; fakat yönünü kaybettiğinde ses ne kadar etkileyici olursa olsun ayetin merkezinden uzaklaşır.
 

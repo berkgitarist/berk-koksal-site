@@ -476,7 +476,7 @@ Dinleyici olmadan da TANRI’yı anmak, sanatın değersiz olduğu anlamına gel
 
 Kökler, zikir ve gaflet kelimelerinin taşıdığı yönleri açabilir; fakat ayetin canlı bağlamını tek başına çözemez.
 
-**تَضَرُّعًا (tedarruan)** kelimesi **ض-ر-ع** köküyle ilişkilidir. Alçak gönüllülükle yalvarma, kendi güçsüzlüğünü fark ederek yönelme anlamlarını düşündürür. Sessizlik burada soğuk bir mesafe değil; kulun kendi sınırını bilmesidir.
+**تَضَرُّعًا (tedarruan)** kelimesi **ض-ر-ع (Dad-Re-Ayn)** köküyle ilişkilidir. Alçak gönüllülükle yalvarma, kendi güçsüzlüğünü fark ederek yönelme anlamlarını düşündürür. Sessizlik burada soğuk bir mesafe değil; kulun kendi sınırını bilmesidir.
 
 Kelimeler birlikte düşünüldüğünde 7:205, yalnız sessiz konuşmayı öğreten bir ayet olmaktan daha geniş görünür. Rabbin farkında olmak, kendi içinde alçak gönüllülükle yönelmek, ölçülü olmak, zamanı hatırlayışla kuşatmak ve gaflete teslim olmamak aynı çağrıda birleşir.
 

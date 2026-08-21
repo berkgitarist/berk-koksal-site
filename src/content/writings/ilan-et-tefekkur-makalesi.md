@@ -390,11 +390,11 @@ Büyük salon, güçlü mikrofon, yüksek takipçi sayısı veya kesin görünen
 
 *Meal Karşılaştırmak Şüphe mi, Sorumluluk mu?* yazısında kök bilgisini yararlı bir araştırma aracı olarak gördüğümü, fakat tek başına ayetin bütün anlamını belirleyen bir otorite saymadığımı belirtmiştim. Burada da aynı ihtiyatı koruyorum. Kelimenin kökü, cümledeki biçimi ve ayetin bütünü birlikte düşünülmelidir.
 
-2:159’daki **يَكْتُمُونَ**, **ك-ت-م** köküyle gizleme ve saklama alanına; aynı ayetteki **ٱلْبَيِّنَاتِ** ile **بَيَّنَّاهُ** ise **ب-ي-ن** köküyle açıklık ve belirginleştirme alanına bağlanır. 2:160’taki **بَيَّنُوا** da bu açıklığa dönüş hareketini sürdürür. Böylece tövbe, yalnız içsel pişmanlık değil, gizlenen şeyi yeniden görünür kılan bir düzeltme olarak belirir.
+2:159’daki **يَكْتُمُونَ** (yektumûne), **ك-ت-م (Kef-Te-Mim)** köküyle gizleme ve saklama alanına; aynı ayetteki **ٱلْبَيِّنَاتِ** (el-beyyinâti) ile **بَيَّنَّاهُ** (beyyennâhu) ise **ب-ي-ن (Be-Ya-Nun)** (b-y-n) köküyle açıklık ve belirginleştirme alanına bağlanır. 2:160’taki **بَيَّنُوا** (beyyenû) da bu açıklığa dönüş hareketini sürdürür. Böylece tövbe, yalnız içsel pişmanlık değil, gizlenen şeyi yeniden görünür kılan bir düzeltme olarak belirir.
 
-3:31’deki **قُلْ**, **ق-و-ل** köküyle söyleme ve bildirme çağrısını taşır. 71:9’daki **أَعْلَنتُ**, **ع-ل-ن** köküyle açık ilanı; 93:11’deki **فَحَدِّثْ**, **ح-د-ث** köküyle nimeti anlatmayı öne çıkarır. 5:119’daki **الصَّادِقِينَ** ve **صِدْقُهُمْ**, **ص-د-ق** köküyle doğru sözlülüğü; 21:108 ve 27:31’deki teslimiyet ifadeleri ise **س-ل-م** köküyle yönelişi hatırlatır.
+3:31’deki **قُلْ** (kul), **ق-و-ل (Kaf-Vav-Lam)** köküyle söyleme ve bildirme çağrısını taşır. 71:9’daki **أَعْلَنتُ** (a'lentu), **ع-ل-ن (Ayn-Lam-Nun)** köküyle açık ilanı; 93:11’deki **فَحَدِّثْ** (fehaddis), **ح-د-ث (Ha-Dal-Se)** köküyle nimeti anlatmayı öne çıkarır. 5:119’daki **الصَّادِقِينَ** (es-sâdikîne) ve **صِدْقُهُمْ** (sıdkuhum), **ص-د-ق (Sad-Dal-Kaf)** köküyle doğru sözlülüğü; 21:108 ve 27:31’deki teslimiyet ifadeleri ise **س-ل-م (Sin-Lam-Mim)** köküyle yönelişi hatırlatır.
 
-112:1’deki **أَحَدٌ** ve 16:51’deki **وَاحِدٌ**, kendi cümleleri içinde TANRI’nın ortak kabul etmeyen birliğini ilan eder. Kökler birlikte düşünüldüğünde yol sadeleşiyor: Gizleme bırakılıyor, açıklık kuruluyor, söz doğrulukla korunuyor ve bütün hareket teslimiyet içinde tek TANRI’ya yöneliyor.
+112:1’deki **أَحَدٌ** (ehadun) ve 16:51’deki **وَاحِدٌ** (vâhidun), kendi cümleleri içinde TANRI’nın ortak kabul etmeyen birliğini ilan eder. Kökler birlikte düşünüldüğünde yol sadeleşiyor: Gizleme bırakılıyor, açıklık kuruluyor, söz doğrulukla korunuyor ve bütün hareket teslimiyet içinde tek TANRI’ya yöneliyor.
 
 **Ayet referansları:** 2:159-160, 3:31, 5:119, 16:51, 21:108, 27:31, 71:9, 93:11, 112:1.
 
@@ -469,6 +469,8 @@ Sonunda kendime söylediğim cümle şudur: Hakikati gizleme, kendi yorumunu hak
 ## **Not**
 
 > **2:32** — Onlar, “Sana yücelik olsun. Senin bize öğrettiğinden başka bizim hiçbir bilgimiz yok. Sen Her Şeyi Bilensin, En Bilgesin.” dediler.
+
+> **93:11** Rabbinin sana ihsan etmiş olduğu nimeti ilan et.
 
 En doğrusunu TANRI bilir.
 

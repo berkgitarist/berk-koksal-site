@@ -279,9 +279,9 @@ Teyit sonsuz tereddüt üretmek için değil, doğru olana güvenle yönelmek i�
 
 Kök bilgisi ayetin yerine geçmez ve Reşat Halife’nin yetkilendirilmiş çevirisini değiştirmez; yalnız Arapça ifadenin açtığı anlam alanını düşünmeye yardım eder.
 
-**تَقْفُ (taqfu)** kelimesi **ق-ف-و** köküyle ilişkilidir. Ardından gitmek ve izlemek anlam alanına açılır. İnsan yanlış bilgiyi kabul ettiğinde çoğu zaman onun peşinden gider.
+**تَقْفُ (takfu)** kelimesi **ق-ف-و (Kaf-Fe-Vav)** köküyle ilişkilidir. Ardından gitmek ve izlemek anlam alanına açılır. İnsan yanlış bilgiyi kabul ettiğinde çoğu zaman onun peşinden gider.
 
-**مَسْـُٔولًا (mes'ulen)** kelimesi **س-أ-ل** köküyle ilişkilidir; soru sorma ve sorgulanma anlam alanına açılır. İşitme, görme ve beyin başıboş araçlar değildir.
+**مَسْـُٔولًا (mes’ûlen)** kelimesi **س-أ-ل (Sin-Hemze-Lam)** köküyle ilişkilidir; soru sorma ve sorgulanma anlam alanına açılır. İşitme, görme ve beyin başıboş araçlar değildir.
 
 ## 9. Diğer İddialar
 

@@ -563,9 +563,9 @@ Bu uyarı önemlidir. İnsan sevdiği mesleği veya düşünceyi ayetlerin merke
 
 Kök incelemesi, mizan kelimesinin anlam alanını görmeye yardım eder; yine de ayetin bütününü tek bir sözlük karşılığına indirmez.
 
-55:7’deki **ٱلْمِيزَانَ (el-mîzân)** kelimesi **و-ز-ن** köküyle ilişkilidir. Ağırlık, tartı ve ölçü alanlarını taşır. Kullanılan çeviride “law” ve “yasa” olarak karşılanması, ölçünün düzen kuran yönünü öne çıkarır. Türkçe başlıkta “mizan” kelimesini korumam, onu yalnız terazi veya yalnız müzik dengesiyle sınırlamamak içindir.
+55:7’deki **ٱلْمِيزَانَ (el-mîzân)** kelimesi **و-ز-ن (Vav-Ze-Nun)** köküyle ilişkilidir. Ağırlık, tartı ve ölçü alanlarını taşır. Kullanılan çeviride “law” ve “yasa” olarak karşılanması, ölçünün düzen kuran yönünü öne çıkarır. Türkçe başlıkta “mizan” kelimesini korumam, onu yalnız terazi veya yalnız müzik dengesiyle sınırlamamak içindir.
 
-**خَاسِئًا (hâsien)** kelimesi **خ-س-أ** köküyle geri çevrilmiş, aşağılanmış veya yenilmiş olma alanına; **حَسِيرٌ (hasîr)** ise **ح-س-ر** köküyle yorulmuş ve tükenmiş olma alanına açılır. İnsan bakışı yaratılış karşısında kendi sınırını fark eder.
+**خَاسِئًا (hâsien)** kelimesi **خ-س-أ (Hı-Sin-Hemze)** köküyle geri çevrilmiş, aşağılanmış veya yenilmiş olma alanına; **حَسِيرٌ (hasîr)** ise **ح-س-ر (Ha-Sin-Re)** köküyle yorulmuş ve tükenmiş olma alanına açılır. İnsan bakışı yaratılış karşısında kendi sınırını fark eder.
 
 ## Diğer İddialar
 

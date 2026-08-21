@@ -205,9 +205,9 @@ Ben Kuranteyit’i insanların bana inanması için değil, benim seçimlerimi d
 
 Kök bilgisi anlamın yerine geçen kısa yol değil, metne daha dikkatli bakmaya yarayan bir araştırma katmanıdır.
 
-7:33’teki **حَرَّمَ (harrame)** kelimesi **ح-ر-م** köküyle ilişkilidir. Sınır ve yasaklama alanı, “haram” demenin ne kadar ağır bir iddia olduğunu düşündürüyor. 16:116’daki **أَلْسِنَتُكُم (elsinetukum)** ifadesi **ل-س-ن**, **الْكَذِبَ (el-kezib)** ise **ك-ذ-ب** köküyle ilişkilidir. Dil yalnız iletişim aracı değil, doğruluk veya yalanın taşıyıcısıdır.
+7:33’teki **حَرَّمَ (harrame)** kelimesi **ح-ر-م (Ha-Re-Mim)** köküyle ilişkilidir. Sınır ve yasaklama alanı, “haram” demenin ne kadar ağır bir iddia olduğunu düşündürüyor. 16:116’daki **أَلْسِنَتُكُم (elsinetukum)** ifadesi **ل-س-ن (Lam-Sin-Nun)**, **الْكَذِبَ (el-kezib)** ise **ك-ذ-ب (Kef-Zel-Be)** köküyle ilişkilidir. Dil yalnız iletişim aracı değil, doğruluk veya yalanın taşıyıcısıdır.
 
-17:36’daki **مَسْـُٔولًا (mes’ûlen)** kelimesinin **س-أ-ل** köküyle ilişkisi de soru ve sorgulanma alanını düşündürüyor. İşitme, görme ve beyin başıboş değildir. Yine de kök bilgisi tek başına hüküm vermez; kelime, ayet ve bağlam birlikte düşünülmelidir.
+17:36’daki **مَسْـُٔولًا (mes’ûlen)** kelimesinin **س-أ-ل (Sin-Hemze-Lam)** köküyle ilişkisi de soru ve sorgulanma alanını düşündürüyor. İşitme, görme ve beyin başıboş değildir. Yine de kök bilgisi tek başına hüküm vermez; kelime, ayet ve bağlam birlikte düşünülmelidir.
 
 ## Diğer İddialar
 

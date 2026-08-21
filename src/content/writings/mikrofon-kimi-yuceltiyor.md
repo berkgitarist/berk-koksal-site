@@ -236,11 +236,11 @@ Türlerin zikre hizmet ettiği düşüncesi de burada sınanır. Hizmet etmek, k
 
 ### Ayetin Tefekkürü
 
-Kök bilgisi ayetin yerine geçmez ve tek başına kesin bir hüküm kurmaz. Yine de 26:224’te şairlerle ilgili **sh-ʿ-r (ش-ع-ر)** kökü sezme ve şiir söyleme alanlarına, sapma yönünü taşıyan **gh-w-y (غ-و-ي)** kökü ise yönünü kaybetme düşüncesine açılır. 26:225’teki **h-y-m (ه-ي-م)** kökü, şaşkın biçimde dolaşma çağrışımıyla sanatçının ortama göre merkez değiştirmesi üzerine düşünmeye imkan verir.
+Kök bilgisi ayetin yerine geçmez ve tek başına kesin bir hüküm kurmaz. Yine de 26:224’te şairlerle ilgili **ش-ع-ر (Şın-Ayn-Re)** kökü sezme ve şiir söyleme alanlarına, sapma yönünü taşıyan **غ-و-ي (Gayn-Vav-Ya)** kökü ise yönünü kaybetme düşüncesine açılır. 26:225’teki **ه-ي-م (He-Ya-Mim)** kökü, şaşkın biçimde dolaşma çağrışımıyla sanatçının ortama göre merkez değiştirmesi üzerine düşünmeye imkan verir.
 
-26:226’daki söyleme ve yapma karşıtlığı, **q-w-l (ق-و-ل)** ile **f-ʿ-l (ف-ع-ل)** kökleri arasındaki ahlaki mesafeyi görünür kılar. 26:227’deki **dh-k-r (ذ-ك-ر)** hatırlama ve anma, **n-ṣ-r (ن-ص-ر)** ise yardım etme, destekleme ve savunma alanlarını taşır.
+26:226’daki söyleme ve yapma karşıtlığı, **ق-و-ل (Kaf-Vav-Lam)** ile **ف-ع-ل (Fe-Ayn-Lam)** kökleri arasındaki ahlaki mesafeyi görünür kılar. 26:227’deki **ذ-ك-ر (Zel-Kef-Re)** hatırlama ve anma, **ن-ص-ر (Nun-Sad-Re)** ise yardım etme, destekleme ve savunma alanlarını taşır.
 
-33:70’teki **s-d-d (س-د-د)** doğru ve isabetli sözü, 17:53’teki **ḥ-s-n (ح-س-ن)** ise güzellik ile iyiliğin birlikteliğini düşündürür. Bu kökler hazır bir sanat teorisi vermez; fakat sözün yönü, biçimi ve hayattaki karşılığının hafif olmadığını hatırlatır.
+33:70’teki **س-د-د (Sin-Dal-Dal)** doğru ve isabetli sözü, 17:53’teki **ح-س-ن (Ha-Sin-Nun)** ise güzellik ile iyiliğin birlikteliğini düşündürür. Bu kökler hazır bir sanat teorisi vermez; fakat sözün yönü, biçimi ve hayattaki karşılığının hafif olmadığını hatırlatır.
 
 ## 10. Diğer İddialar
 

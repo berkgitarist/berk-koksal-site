@@ -480,7 +480,7 @@ Dini uygulama geliştirirken tevazu şu cümlede başlayabilir:
 
 Bu üç ayetteki bazı kelimelerin kökleri, mahremiyetin yalnız gizlilik değil, sınır ve ilişki ahlakı olduğunu daha iyi düşünmeme yardım ediyor.
 
-**Be-Ya-Te (ب-ي-ت)** kökü ev ve geceleme alanıyla ilişkilidir. Ev, insanın dışarıdan çekilip kendi düzenine döndüğü yerdir. Telefonun kişisel oda benzetisi bu anlam alanından doğar; fakat bu benzetme ayetin doğrudan teknik anlamı değil, çağdaş bir tefekkürdür.
+**ب-ي-ت (Be-Ya-Te)** kökü ev ve geceleme alanıyla ilişkilidir. Ev, insanın dışarıdan çekilip kendi düzenine döndüğü yerdir. Telefonun kişisel oda benzetisi bu anlam alanından doğar; fakat bu benzetme ayetin doğrudan teknik anlamı değil, çağdaş bir tefekkürdür.
 
 Kök bilgisi burada da bağlamın yerine geçmez. Ayetin bütününü tek bir kelime köküne indirgememek gerekir. Kökler, düşünceyi derinleştiren işaretlerdir; kesin teknoloji hükmü değildir.
 

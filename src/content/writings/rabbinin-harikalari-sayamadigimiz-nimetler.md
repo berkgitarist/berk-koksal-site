@@ -643,9 +643,9 @@ Bu sıra nimeti yalnız maddi bolluk olmaktan çıkarıyor. Kuran’ın öğreti
 
 *Meal Karşılaştırmak Şüphe mi, Sorumluluk mu?* yazısında kök bilgisini yararlı bir araştırma aracı olarak gördüğümü, fakat tek başına ayetin bütün anlamını belirleyen bir otorite saymadığımı belirtmiştim. Burada da aynı sınırı koruyorum. Kelimenin kökü, cümledeki biçimi ve ayetin bütünü birlikte düşünülmelidir.
 
-53:55 ve 55:13’te “harikalar” olarak çevrilen **آلاء / ءَالَاءِ (ālāʾ)** kelimesi nimetler, iyilikler ve ilahi bağışlar alanıyla ilişkilidir. Yetkilendirilmiş İngilizce metindeki **“marvels”** ve Türkçe metindeki **“harikalar”** karşılığı, yalnız faydayı değil hayranlık ve düşünme yönünü de öne çıkarıyor. **رَبّ (Rabb)** kelimesindeki **ر-ب-ب** kökü sahiplik, yetiştirme ve yönetme alanlarını taşır; harikaların “Rabbinin” olması onları bağımsız bir gösteri olmaktan çıkarır.
+53:55 ve 55:13’te “harikalar” olarak çevrilen **آلاء / ءَالَاءِ (ālāʾ)** kelimesi nimetler, iyilikler ve ilahi bağışlar alanıyla ilişkilidir. Yetkilendirilmiş İngilizce metindeki **“marvels”** ve Türkçe metindeki **“harikalar”** karşılığı, yalnız faydayı değil hayranlık ve düşünme yönünü de öne çıkarıyor. **رَبّ (Rabb)** kelimesindeki **ر-ب-ب (Re-Be-Be)** kökü sahiplik, yetiştirme ve yönetme alanlarını taşır; harikaların “Rabbinin” olması onları bağımsız bir gösteri olmaktan çıkarır.
 
-53:55’teki **تَتَمَارَىٰ (tatamārā)** fiili **م-ر-ي** köküyle şüphe, tartışma ve çekişme alanına açılır. 16:18’deki **نِعْمَة (ni‘mah)**, **ن-ع-م** köküyle iyilik, lütuf ve nimet anlam çevresini taşır. Yaratılış ayetlerindeki **خَلَقَ (khalaqa)**, **خ-ل-ق** köküyle yaratma ve biçim vermeyi; 3:191’deki düşünme ifadesi **ف-ك-ر** köküyle incelemeyi; şükür alanındaki **ش-ك-ر** ise nimeti tanıma ve karşılığını davranışla verme yönünü hatırlatır.
+53:55’teki **تَتَمَارَىٰ (tatamārā)** fiili **م-ر-ي (Mim-Re-Ya)** köküyle şüphe, tartışma ve çekişme alanına açılır. 16:18’deki **نِعْمَة (ni‘mah)**, **ن-ع-م (Nun-Ayn-Mim)** köküyle iyilik, lütuf ve nimet anlam çevresini taşır. Yaratılış ayetlerindeki **خَلَقَ (khalaqa)**, **خ-ل-ق (Hı-Lam-Kaf)** köküyle yaratma ve biçim vermeyi; 3:191’deki düşünme ifadesi **ف-ك-ر (Fe-Kef-Re)** köküyle incelemeyi; şükür alanındaki **ش-ك-ر (Şın-Kef-Re)** ise nimeti tanıma ve karşılığını davranışla verme yönünü hatırlatır.
 
 Kökler bana yeni bir hüküm vermiyor; ayetlerin içinde gördüğüm yolu daha dikkatli duymama yardım ediyor: Harikayı gör, Rabbine bağla, nimet olarak tanı, üzerinde düşün ve şükürle yaşa.
 
@@ -705,13 +705,13 @@ Ben bütün nimetleri kuşatamam, sayamam ve anlayamam. Yine de gördüklerimi s
 
 ## Arapça Kökler — Hızlı Not
 
-- **آلاء / ālāʾ:** Harikalar, nimetler, ilahi bağışlar alanı.
-- **ر-ب-ب / Rabb:** Sahiplik, yetiştirme, yönetme, rablik.
-- **م-ر-ي / tatamārā:** Şüphe, tartışma, çekişme alanı.
-- **ن-ع-م / ni‘mah:** Nimet, iyilik, rahatlık, lütuf.
-- **خ-ل-ق / khalaqa:** Yaratmak, biçim vermek.
-- **ف-ك-ر:** Düşünmek, zihni bir şey üzerinde çevirmek.
-- **ش-ك-ر:** Nimeti tanımak ve karşılığını vermek, şükretmek.
+- **آلاء (Elif-Lam-Elif-Hemze) / ālāʾ:** Harikalar, nimetler, ilahi bağışlar alanı.
+- **ر-ب-ب (Re-Be-Be) / Rabb:** Sahiplik, yetiştirme, yönetme, rablik.
+- **م-ر-ي (Mim-Re-Ya) / tatamārā:** Şüphe, tartışma, çekişme alanı.
+- **ن-ع-م (Nun-Ayn-Mim) / ni‘mah:** Nimet, iyilik, rahatlık, lütuf.
+- **خ-ل-ق (Hı-Lam-Kaf) / khalaqa:** Yaratmak, biçim vermek.
+- **ف-ك-ر (Fe-Kef-Re):** Düşünmek, zihni bir şey üzerinde çevirmek.
+- **ش-ك-ر (Şın-Kef-Re):** Nimeti tanımak ve karşılığını vermek, şükretmek.
 
 **Köklerin işlevi:** Yeni hüküm üretmek değil; ayette zaten görülen ilişkiyi daha dikkatli anlamaya yardımcı olmak.
 

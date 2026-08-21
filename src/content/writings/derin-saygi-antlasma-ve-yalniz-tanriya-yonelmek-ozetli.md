@@ -842,15 +842,15 @@ Benim vardığım yer şu: Derin saygı, TANRI’nın gerçek ağırlığını k
 
 2:40’ın Arapça cümlesine kökler açısından baktığımda ayetin anlam akışının kelimelerin içinde de birbirine bağlandığını görüyorum. Burada kökleri bağımsız bir hüküm kaynağı yapmak yerine, ayetin kendi Türkçe ve İngilizce karşılığıyla birlikte düşünmek daha güvenli geliyor.
 
-**ذ ك ر (dh-k-r)** kökü, ayetteki **ٱذْكُرُوا۟** ifadesinde karşımıza çıkıyor. Yetkilendirilmiş İngilizce metin “remember”, Türkçe metin “hatırlayın” diyor. Derin saygının ilk hareketi unutkanlığı kırmakla başlıyor. Nimet unutulduğunda antlaşma da kolayca yük gibi görülebilir; hatırlandığında ise sorumluluk, alınmış iyiliğe verilen bir cevap haline gelir.
+**ذ ك ر (Zel-Kef-Re)** kökü, ayetteki **ٱذْكُرُوا۟ (uzkurû)** ifadesinde karşımıza çıkıyor. Yetkilendirilmiş İngilizce metin “remember”, Türkçe metin “hatırlayın” diyor. Derin saygının ilk hareketi unutkanlığı kırmakla başlıyor. Nimet unutulduğunda antlaşma da kolayca yük gibi görülebilir; hatırlandığında ise sorumluluk, alınmış iyiliğe verilen bir cevap haline gelir.
 
-**ن ع م (n-ʿ-m)** kökü, **نِعْمَتِىَ** ve ayetteki ihsan fikriyle bağlantılı. Türkçe çeviri “Benim size ihsan ettiğim iyiliğimi hatırlayın” diyor. Böylece derin saygı yalnız ceza ihtimalinden değil, iyiliğin ve lütfun hatırlanmasından da besleniyor.
+**ن ع م (Nun-Ayn-Mim)** kökü, **نِعْمَتِىَ (ni'metî)** ve ayetteki ihsan fikriyle bağlantılı. Türkçe çeviri “Benim size ihsan ettiğim iyiliğimi hatırlayın” diyor. Böylece derin saygı yalnız ceza ihtimalinden değil, iyiliğin ve lütfun hatırlanmasından da besleniyor.
 
-**ع ه د (ʿ-h-d)** kökü, **بِعَهْدِىٓ / بِعَهْدِكُمْ** ifadelerinde antlaşmayı taşıyor. Ayetin merkezi yapısı karşılıklılık dili kuruyor: “Antlaşmanın size düşen kısmını yerine getirin ki Ben de antlaşmanın Bana düşen kısmını yerine getireyim.” Bu karşılıklılık TANRI ile insanı eşitlemiyor; insanın sorumluluğunu ve TANRI’nın vaadinin güvenilirliğini aynı cümlede görünür kılıyor.
+**ع ه د (Ayn-He-Dal)** kökü, **بِعَهْدِىٓ (bi-ahdî) / بِعَهْدِكُمْ (bi-ahdikum)** ifadelerinde antlaşmayı taşıyor. Ayetin merkezi yapısı karşılıklılık dili kuruyor: “Antlaşmanın size düşen kısmını yerine getirin ki Ben de antlaşmanın Bana düşen kısmını yerine getireyim.” Bu karşılıklılık TANRI ile insanı eşitlemiyor; insanın sorumluluğunu ve TANRI’nın vaadinin güvenilirliğini aynı cümlede görünür kılıyor.
 
-**و ف ي (w-f-y)** kökü, **أَوْفُوا۟ / أُوفِ** biçimleriyle yerine getirme fikrini taşıyor. Hatırlamak burada pasif bir zihinsel faaliyet olarak bırakılmıyor; sadakate dönüşüyor. Derin saygının davranışa açılan kapısı bu fiillerde çok belirgin.
+**و ف ي (Vav-Fe-Ya)** kökü, **أَوْفُوا۟ (evfû) / أُوفِ (ûfi)** biçimleriyle yerine getirme fikrini taşıyor. Hatırlamak burada pasif bir zihinsel faaliyet olarak bırakılmıyor; sadakate dönüşüyor. Derin saygının davranışa açılan kapısı bu fiillerde çok belirgin.
 
-**ر ه ب (r-h-b)** kökü, ayetin sonunda **فَٱرْهَبُونِ** biçiminde yer alıyor. Yetkilendirilmiş İngilizce metin bunu “reverence Me”, Türkçe metin ise “Bana derin saygı duyun” diye karşılıyor. Bu seçimin makaledeki diğer ayetlerle birlikte okunması, kelimeyi yalnız panik veya insanı felç eden korku şeklinde anlamamam gerektiğini düşündürüyor. Çünkü aynı derin saygı doğru söz, itaat, umut, mahremiyette yöneliş, adalet, bilgi ve benliği dizginlemekle beraber anılıyor.
+**ر ه ب (Re-He-Be)** kökü, ayetin sonunda **فَٱرْهَبُونِ (ferhebûnî)** biçiminde yer alıyor. Yetkilendirilmiş İngilizce metin bunu “reverence Me”, Türkçe metin ise “Bana derin saygı duyun” diye karşılıyor. Bu seçimin makaledeki diğer ayetlerle birlikte okunması, kelimeyi yalnız panik veya insanı felç eden korku şeklinde anlamamam gerektiğini düşündürüyor. Çünkü aynı derin saygı doğru söz, itaat, umut, mahremiyette yöneliş, adalet, bilgi ve benliği dizginlemekle beraber anılıyor.
 
 Kökler bana yeni bir din kurmuyor; ayetin içinde zaten gördüğüm bağı daha dikkatli fark ettiriyor: **hatırla → nimeti tanı → antlaşmaya sadık kal → yalnız TANRI’ya derin saygı duy.**
 

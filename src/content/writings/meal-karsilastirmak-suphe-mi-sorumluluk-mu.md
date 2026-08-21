@@ -344,11 +344,11 @@ Bu ölçü önce bana yönelir. Yazılımı geliştiren kişi olarak başkaları
 
 ### Ayetin Tefekkürü
 
-39:18’de işitme ve dikkatle dinleme alanı **س م ع** köküyle; söz ve söyleme alanı **ق و ل** köküyle; güzel ve iyi olan **ح س ن** köküyle; rehberlik **ه د ي** köküyle; öz, sağlam akıl ve kavrayış ise **ل ب ب** köküyle ilişkilidir. Ayetin hareketi yalnız kulağa gelen sesi duymak değildir. Sözleri incelemek, en güzel olana yönelmek ve rehberlikle bağ kurmak vardır.
+39:18’de işitme ve dikkatle dinleme alanı **س م ع (Sin-Mim-Ayn)** köküyle; söz ve söyleme alanı **ق و ل (Kaf-Vav-Lam)** köküyle; güzel ve iyi olan **ح س ن (Ha-Sin-Nun)** köküyle; rehberlik **ه د ي (He-Dal-Ya)** köküyle; öz, sağlam akıl ve kavrayış ise **ل ب ب (Lam-Be-Be)** köküyle ilişkilidir. Ayetin hareketi yalnız kulağa gelen sesi duymak değildir. Sözleri incelemek, en güzel olana yönelmek ve rehberlikle bağ kurmak vardır.
 
-17:36’da bilgi **ع ل م**, işitme **س م ع**, görme **ب ص ر** kök alanlarıyla birlikte anılır. Ayetin “peşine düşme” yönü ise **ق ف و** köküyle bağlantılıdır. Bu birliktelik, bilginin soyut bir iddia olmadığını düşündürüyor: İşitme, görme ve zihinsel sorumluluk birlikte çalışmalıdır.
+17:36’da bilgi **ع ل م (Ayn-Lam-Mim)**, işitme **س م ع (Sin-Mim-Ayn)**, görme ***ب ص ر (Be-Sad-Re)** kök alanlarıyla birlikte anılır. Ayetin “peşine düşme” yönü ise **ق ف و (Kaf-Fe-Vav)** köküyle bağlantılıdır. Bu birliktelik, bilginin soyut bir iddia olmadığını düşündürüyor: İşitme, görme ve zihinsel sorumluluk birlikte çalışmalıdır.
 
-47:24’te derinlemesine düşünme **د ب ر**, kilit ise **ق ف ل** köküyle bağlantılıdır. Buradaki tefekkür, kelimenin yüzeyinde dolaşmaktan daha fazlasını çağrıştırır; sözün arkasını, sonucunu ve bütün içindeki yerini düşünmeyi gerektirir.
+47:24’te derinlemesine düşünme **د ب ر (Dal-Be-Re)**, kilit ise **ق ف ل (Kaf-Fe-Lam)** köküyle bağlantılıdır. Buradaki tefekkür, kelimenin yüzeyinde dolaşmaktan daha fazlasını çağrıştırır; sözün arkasını, sonucunu ve bütün içindeki yerini düşünmeyi gerektirir.
 
 Kök bilgisi bu nedenle değerlidir, fakat tek başına hüküm değildir. Bir kökün anlam alanını görmek, ayetin cümle yapısını ve diğer ayetlerle ilişkisini gereksiz hale getirmez. Kuranteyit’te kökler kapı açmalı; kapının ardındaki bütün anlamı kendi başına belirlediği izlenimini vermemelidir.
 

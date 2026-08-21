@@ -276,9 +276,9 @@ Araç ne kadar güçlü olursa kendi sınırını o kadar açık anlatmalı. Ç�
 
 ### Ayetin Tefekkürü
 
-47:24 ve 38:29’daki **tedebbür** ifadesi **د-ب-ر** köküyle ilişkilidir. Bir şeyin ardını, sonucunu ve yönünü gözetme çağrışımı, benim için yüzeydeki eşleşmeden daha ileri bakma fikrini güçlendiriyor. 47:24’teki **kulub** sözcüğü **ق-ل-ب**, **aqfal** ise **ق-ف-ل** köküyle ilişkilidir; dönme ve kilit alanları, zihnin hem yön değiştirebilmesini hem de kapanabilmesini düşündürüyor.
+47:24 ve 38:29’daki tedebbür ifadesi د-ب-ر (Dal-Be-Re) köküyle ilişkilidir. Bir şeyin ardını, sonucunu ve yönünü gözetme çağrışımı, benim için yüzeydeki eşleşmeden daha ileri bakma fikrini güçlendiriyor. 47:24’teki kulub sözcüğü **ق-ل-ب (Kaf-Lam-Be)**, aqfal ise **ق-ف-ل (Kaf-Fe-Lam)** köküyle ilişkilidir; dönme ve kilit alanları, zihnin hem yön değiştirebilmesini hem de kapanabilmesini düşündürüyor.
 
-17:36’daki **ilm** **ع-ل-م**, işitme **س-م-ع**, görme **ب-ص-ر** ve sorumlulukla ilişkili **mes’ulen** ise **س-أ-ل** kök alanlarına açılır. Kökler tek başına ayetin anlamını çözmez. Fakat arama teknolojisinin bana yalnız kelime vermemesi; kelimenin cümle, bağlam ve sorumluluk içindeki yerini araştırmaya çağırması gerektiğini hatırlatır.
+17:36’daki ilm **ع-ل-م (Ayn-Lam-Mim)**, işitme **س-م-ع (Sin-Mim-Ayn)**, görme **ب-ص-ر (Be-Sad-Re)** ve sorumlulukla ilişkili mes’ulen ise **س-أ-ل (Sin-Hemze-Lam)** kök alanlarına açılır. Kökler tek başına ayetin anlamını çözmez. Fakat arama teknolojisinin bana yalnız kelime vermemesi; kelimenin cümle, bağlam ve sorumluluk içindeki yerini araştırmaya çağırması gerektiğini hatırlatır.
 
 ## Diğer İddialar
 

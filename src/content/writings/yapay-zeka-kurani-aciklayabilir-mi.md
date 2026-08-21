@@ -548,9 +548,9 @@ Yapay zekâ Kuran’ı insanın önünden çekip kendisini merkeze koyduğunda o
 
 Bir model kök bilgilerini sıralayabilir; fakat bu veriler ayetin bağlamını ve insanın anlama sorumluluğunu ortadan kaldırmaz.
 
-17:36’daki **تَقْفُ (takfu)** kelimesi **ق-ف-و** köküyle ilişkilidir. Ardından gitmek ve izlemek anlam alanına açılır. İnsan doğrulamadığı bir yapay zekâ çıktısını kabul ettiğinde yalnız bir cümleyi okumaz; onun peşinden gitme ihtimalini de büyütür.
+17:36’daki **تَقْفُ (takfu)** kelimesi **ق-ف-و (Kaf-Fe-Vav)** köküyle ilişkilidir. Ardından gitmek ve izlemek anlam alanına açılır. İnsan doğrulamadığı bir yapay zekâ çıktısını kabul ettiğinde yalnız bir cümleyi okumaz; onun peşinden gitme ihtimalini de büyütür.
 
-**أَقْفَالُهَا (akfâluhâ)** kelimesi **ق-ف-ل** köküyle kilitler alanına açılır. Hazır cevaplara sorgusuz bağlılık da insanın kendi zihnine taktığı yeni bir kilide dönüşebilir.
+**أَقْفَالُهَا (akfâluhâ)** kelimesi **ق-ف-ل (Kaf-Fe-Lam)** köküyle kilitler alanına açılır. Hazır cevaplara sorgusuz bağlılık da insanın kendi zihnine taktığı yeni bir kilide dönüşebilir.
 
 ## Diğer İddialar
 
