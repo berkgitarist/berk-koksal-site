@@ -42,7 +42,9 @@ const credits = [
 
 const features = genreItems.slice(0, 4);
 
-const spotifyAlbumId = album.spotify
+const spotifyEmbedSource = album.spotifyEmbed || album.spotify;
+
+const spotifyAlbumId = spotifyEmbedSource
   ?.split("/album/")
   ?.at(1)
   ?.split("?")
