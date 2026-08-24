@@ -380,6 +380,8 @@ Bu mesele, daha önce yazdığım *Meal Karşılaştırmak Şüphe mi, Sorumlulu
 </div>
 </details>
 
+![Başlık ](/images/writings/bir-kelimeyle-tevhid-nasil-bozulur2.png)
+
 ## 1. 2:255: Tevhidin Cümlenin Başından Sonuna Kurduğu Bütünlük
 
 ### Ayet
@@ -1003,6 +1005,8 @@ Bu makalenin sonunda benim için savunulabilir en güçlü hüküm şudur: **“
 O’nu yüceltmek için “<mark class="yy-warning">yüceler</mark>” üretmeye gerek yoktur.
 
 **Ayet referansları: 2:255, 3:18, 39:45, 7:180, 2:32.**
+
+![Başlık ](/images/writings/bir-kelimeyle-tevhid-nasil-bozulur2.png)
 
 ## Not
 

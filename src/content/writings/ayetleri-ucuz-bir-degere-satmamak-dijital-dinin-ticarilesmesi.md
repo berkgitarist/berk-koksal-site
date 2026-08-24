@@ -206,6 +206,8 @@ Dijital dinin ticarileşmesi, yalnız ödeme ekranında başlamaz. Bazen başlı
 </div>
 </details>
 
+![Başlık ](/images/writings/ayetleri-ucuz-bir-degere-satmamak2.png)
+
 ## 1. Ucuz Değer Yalnız Para mıdır?
 
 ### Ayet
@@ -493,6 +495,8 @@ Bazıları dini içerik üreticisinin kendi geçimini düşünmesinin niyetini b
 Dini çalışmanın sürdürülebilir olması gerekir. Emeğin karşılığı alınabilir. Yazılımcı, yazar, sanatçı, çevirmen ve araştırmacı hayatını devam ettirmek zorundadır.
 
 Kuranteyit’te reklam ve davranış analizi bulunmaması, hesap açılmaması ve notların geliştirici sunucusuna gönderilmemesi benim için bu sorumluluğun pratik ifadelerinden biridir. Fakat bu tercihler bir üstünlük madalyası değildir. Her yeni özellik, maliyet ve büyüme kararında yeniden korunması gereken sınırlardır.
+
+![Başlık ](/images/writings/ayetleri-ucuz-bir-degere-satmamak3.png)
 
 ## Not
 

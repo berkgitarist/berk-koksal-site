@@ -139,6 +139,8 @@ author: "Berk KÖKSAL"
 </div>
 </details>
 
+![Başlık ](/images/writings/Teyit-Etmeden-Kabul-Etmemek2.png)
+
 ## 1. Bilginin Eşiğinde Durmak
 
 ### Ayet
@@ -316,6 +318,8 @@ Ana ölçü ayetlerin kendisidir: Bilgi teyit edilmeli, haber araştırılmalı 
 Bu iki ayet birlikte düşünüldüğünde teyit yalnız kişisel doğruluk meselesi değildir. Başkasının hakkını koruyan bir ahlaktır. Söylentiye hemen inanmamak, hakkında konuşulan insanı kendi aceleciliğimizden korumaktır.
 
 Kendime sormam gereken soru artık yalnız “Bu haber doğru mu?” değildir. Bir soru daha vardır: “Ben bu habere inanarak kime haksızlık edebilirim?”
+
+![Başlık ](/images/writings/Teyit-Etmeden-Kabul-Etmemek3.png)
 
 ## **Not**
 

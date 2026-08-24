@@ -255,7 +255,7 @@ Bu soru, daha önce yazdığım *Mizan: Mix, Mastering ve Kur’an’daki Ölç�
 </div>
 </details>
 
-![Başlık ](/images/writings/rabbinin-harikalari-2.png)
+![Başlık ](/images/writings/rabbinin-harikalari4.png)
 
 ## 1. Rabbinin Harikalarından Hangisini Yalanlayabilirsin?
 
@@ -358,6 +358,8 @@ Bir günü gerçekten saymaya nereden başlayabilirim? Uyanmak, nefes almak, hat
 Müzikte yüzlerce küçük karar tek bir parçanın içinde birleşir; dinleyen çoğunu ayrı ayrı duymaz. Benim “bugün” dediğim deneyim de sayamadığım desteklerin içinde oluşuyor olabilir. Şükür bu yüzden yalnız teşekkür cümlesi değildir. Kendimi yeterli görmemek, sahip olduklarımı mutlak hakkım saymamak ve sayamadığım nimetler karşısında daha mütevazı yaşamaktır.
 
 **Ayet referansları:** 14:32-34.
+
+![Başlık ](/images/writings/rabbinin-harikalari-2.png)
 
 ## 6. Sofradan Yıldıza: Nimetin Haritası
 
@@ -464,6 +466,8 @@ Stüdyoda bazı unsurlar gösterişli değildir, fakat bütün yapının ayakta 
 Ayet suyun sızıp gitmesine izin verilebileceğini de hatırlatıyor. Bu, kullandığım nimetin garanti edilmiş kişisel mülk olmadığını gösteriyor. Buradan belirli bir tüketim miktarı çıkaramam; ayet böyle bir teknik sınır vermiyor. Fakat ölçüyle verilen bir şeyi değersizce kullanmak ile şükür arasında açık bir gerilim görüyorum. Bir bardak suyu içmek bile, kaynağını hatırladığımda sessiz bir zikre dönüşebilir.
 
 **Ayet referansları:** 23:18-22.
+
+![Başlık ](/images/writings/rabbinin-harikalari5.png)
 
 ## 11. İnsanın Kendisi de Harikanın İçinde
 
@@ -702,6 +706,7 @@ Ben bütün nimetleri kuşatamam, sayamam ve anlayamam. Yine de gördüklerimi s
 **Ayet referansları:** 53:55, 6:75-79, 3:190-191, 16:17, 16:53, 35:3, 41:37, 55:1-13, 93:11, 102:8.
 
 ![Başlık ](/images/writings/rabbinin-harikalari-3.png)
+
 
 ## Arapça Kökler — Hızlı Not
 

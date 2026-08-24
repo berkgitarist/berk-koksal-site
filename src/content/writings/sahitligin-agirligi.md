@@ -163,6 +163,8 @@ Bu tekrarın boşuna olmadığı açıktır. İnsan zihni ortaklar üretmeye, ar
 </div>
 </details>
 
+![Başlık ](/images/writings/sahitligin-agirligi2.png)
+
 ## 1. Birliğin İlk Şahidi
 
 ### Ayet
@@ -453,6 +455,8 @@ Bu söz gerçekten kalbe yerleştiğinde insanın korkuları değişir, bağlıl
 Ve O şahitlik eder ki O’ndan başka tanrı yoktur.
 
 *Ayet referansları: 3:18, 6:19.*
+
+![Başlık ](/images/writings/sahitligin-agirligi3.png)
 
 ## Not
 

@@ -247,6 +247,8 @@ Bu ayetleri mix ve mastering kavramlarına indirgemek istemiyorum. Kuran’daki 
 </div>
 </details>
 
+![Başlık ](/images/writings/mizan-mix-mastering-ve-kurandaki-olcu2.png)
+
 ## 1. Gökyüzünün Yükseltilmesi ve Mizanın Oluşturulması
 
 ### Ayet
@@ -614,6 +616,8 @@ Mix ve mastering bana denge hakkında çok şey öğretti. Fakat Kuran’daki mi
 67:3-4 tekrar tekrar bakmaya çağırıyor. Bu çağrı bana hem özen hem tevazu öğretiyor. İlk kanaatime güvenip geçemem; fakat kendi eserimden ilahi kusursuzluk da bekleyemem. Kontrol eder, düzeltir ve sonunda sınırlı olduğumu kabul ederim.
 
 Bu nedenle mix masasındaki faderlar bana yalnız sesleri değil, kendi içimdeki büyüklükleri de düşündürüyor.
+
+![Başlık ](/images/writings/mizan-mix-mastering-ve-kurandaki-olcu3.png)
 
 ## Not
 

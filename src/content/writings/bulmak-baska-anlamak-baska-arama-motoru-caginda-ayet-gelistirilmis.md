@@ -150,6 +150,8 @@ Bu yazı, daha önce araç ile otorite, meal karşılaştırması, yapay zeka ve
 </div>
 </details>
 
+![Başlık ](/images/writings/bulmak-baska-anlamak-baska2.png)
+
 ## 1. Dikkatlice İncelemek: Önce Zihnimdeki Kilitler
 
 ### Ayet
@@ -322,7 +324,7 @@ Benim için asıl soru artık “Aradığım ayeti buldum mu?” değil:
 
 **Bulduğum ayetin beni de araştırmasına izin verdim mi?**
 
-
+![Başlık ](/images/writings/bulmak-baska-anlamak-baska2.png)
 
 ## Not
 

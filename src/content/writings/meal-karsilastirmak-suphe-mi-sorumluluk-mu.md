@@ -175,6 +175,9 @@ Bu nedenle benim için asıl soru artık “Hangi çeviriyi otorite kabul etmeli
 </div>
 </details>
 
+
+![Başlık ](/images/writings/meal-karsilastirmak-suphe-mi-sorumluluk-mu2.png)
+
 ## 1. İnançta Dayandığım Metin
 
 ### Ayet
@@ -391,6 +394,8 @@ Kuranteyit bu anlayışla önce kendim ve eşim için gelişti. Sonra proje büy
 Müzikte bir eserin merkezini korumak için her katmanın yerini ve ölçüsünü dikkatle belirlemek gerekir. Kuranteyit’te de aynı hassasiyeti taşımaya çalışıyorum. Kök bilgisi, çeviri karşılaştırması, yapay zeka ve yazılım özellikleri ana mesajı örten katmanlara değil, onu daha temiz duymaya yardım eden araçlara dönüşmelidir.
 
 Sonunda mesele kaç çeviri gördüğüm, kaç bağlantı açtığım veya kaç özellik geliştirdiğim değildir. Mesele, işittiğim en güzel söze uyup uymadığım ve kabul ettiğim hakikatin hayatımda bir karşılık bulup bulmadığıdır.
+
+![Başlık ](/images/writings/meal-karsilastirmak-suphe-mi-sorumluluk-mu3.png)
 
 ## Not
 

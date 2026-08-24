@@ -42,6 +42,8 @@ author: "Berk KÖKSAL"
 
 **Yer:** Mersin
 
+![Başlık ](/images/writings/tevhidi-cagin-diliyle-soylemek2.png)
+
 ### Ayet
 
 > **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
@@ -477,6 +479,8 @@ Bunların hiçbiri tek başına kötü değildir. Fakat “zikir” iddiası ta�
 **Ses sustuğunda insan kimi hatırlıyor?**
 
 > **Ses çağın olabilir; yön TANRI’ya kalmalıdır.**
+
+![Başlık ](/images/writings/tevhidi-cagin-diliyle-soylemek3.png)
 
 ## Not
 

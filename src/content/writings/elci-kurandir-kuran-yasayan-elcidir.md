@@ -202,6 +202,8 @@ Bu tefekkürde “Elçi Kuran’dır” sözü, insan elçinin kimliğini silmek
 </div>
 </details>
 
+![Başlık ](/images/writings/elci-kurandir2.png)
+
 ## 1. İndirilen Mesaj ve Vahiyleri Okuyan Elçi
 
 ### Ayet
@@ -490,6 +492,8 @@ Kuran bütün insanlar için bir mesajdır. Bu ifade, onu yalnız geçmişte ya�
 İnsan elçi mesajı alır ve iletir. O, vahyin önüne geçen bağımsız bir kaynak değildir. Kendi sözünü değil, Kainatın Rabbinden gelen vahyi taşır. Bu nedenle elçinin şerefi mesajdan koparılamaz. Elçiye itaat de onun TANRI’dan bağımsız kişisel otoritesine boyun eğmek değil, taşıdığı rehberliğe cevap vermekle anlam kazanır.
 
 Benim için bu tefekkürün ulaştığı sonuç şudur: İnsan elçi aramızda olmayabilir; fakat onun sadakatle taşıdığı mesaj önümüzdedir. Uyarı bugün de uyarır. Müjde bugün de umut verir. Rehberlik bugün de en iyi yolu gösterir. Mesaj bugün de insanın hayatını ve bağlılıklarını sorgular.
+
+![Başlık ](/images/writings/elci-kurandir3.png)
 
 ## **Not**
 

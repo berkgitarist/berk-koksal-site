@@ -53,6 +53,8 @@ Bir algoritma binlerce bağlantıyı saniyeler içinde bulabilir; fakat hız do�
 
 Bu soru, daha önce mizan, söz-eylem bütünlüğü, yapay zekayla Kuran araştırmasının sınırları ve meal karşılaştırmasında teyit sorumluluğu üzerine düşündüğüm yazılarla aynı çizginin devamı. Hepsinde dönüp geldiğim yer aynı: **Araç ne kadar güçlü olursa olsun, kaynağın ve insanın sorumluluğunun yerine geçmemeli.** Önceki yazılarımın tamamına <a href="https://www.berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">buradan ulaşılabilir</a>.
 
+![Başlık ](/images/writings/bir-kuran-uygulamasi-hukum-vermeli-mi2.png)
+
 ## 1. TANRI Hakkında Bilmediğini Söylememek
 
 ### Ayet
@@ -254,6 +256,8 @@ Kuranteyit’i geliştirirken kendime bırakmak istediğim soru bu:
 **Ürettiğim şey insanı bana ve benim seçimlerime mi yaklaştırıyor, yoksa TANRI’nın ayetlerine daha dikkatli bakmasına ve kendi sorumluluğunu üstlenmesine mi yardım ediyor?**
 
 Önceki Kuran, teknoloji, sanat, teyit ve sorumluluk yazılarım için: <a href="https://www.berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">Tüm yazılarım</a>.
+
+![Başlık ](/images/writings/bir-kuran-uygulamasi-hukum-vermeli-mi3.png)
 
 ## Not
 

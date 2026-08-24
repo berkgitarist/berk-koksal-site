@@ -241,6 +241,8 @@ Benim için asıl soru şudur: **Yapay zekâ Kuran hakkında ne kadar güzel kon
 </div>
 </details>
 
+![Başlık ](/images/writings/yapay-zeka-kurani-aciklayabilir-mi2.png)
+
 ## 1. Bilgi Üretmek ile Bilgiye Sahip Olmak
 
 ### Ayet
@@ -593,6 +595,8 @@ Vardığım ihtiyatlı cevap şudur: Yapay zekâ Kuran hakkında açıklamalar �
 Bir geliştirici olarak benim sorumluluğum, yapay zekânın etkileyici görünmesini sağlamakla sınırlı değildir. Kaynak ile üretimi ayırmak, belirsizliği saklamamak, hatayı düzeltmeye açık olmak ve kullanıcıyı kendi sorumluluğundan uzaklaştırmamak zorundayım.
 
 Benim için doğru soru artık yalnız “Yapay zekâ doğru cevap verdi mi?” değildir. Bir soru daha vardır: **Bu cevap beni ayetleri daha dikkatli incelemeye mi yöneltti, yoksa düşünme sorumluluğumu rahatça devredebileceğim yeni bir otorite mi üretti?**
+
+![Başlık ](/images/writings/yapay-zeka-kurani-aciklayabilir-mi3.png)
 
 ## Not
 

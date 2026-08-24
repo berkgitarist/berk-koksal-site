@@ -212,6 +212,8 @@ Benim için bu makalenin merkezinde şu ihtiyatlı düşünce var: Müzik zikre 
 </div>
 </details>
 
+![Başlık ](/images/writings/sessiz-zikir2.png)
+
 ## 1. Kendi İçinde Hatırlamak
 
 ### Ayet
@@ -521,6 +523,8 @@ Ayetlerden çıkarabildiğim ihtiyatlı cevap şudur: Evet, devam edebilir; hatt
 Bir müzisyen olarak sesin gücüne inanıyorum; fakat o gücü mutlaklaştırmak istemiyorum. Müzik kalbe dokunabilir, fakat kalbin sahibi değildir. Bir eser insanı TANRI’yı hatırlamaya çağırabilir, fakat onun yerine hatırlayamaz. Ses, görevini tamamladıktan sonra geri çekilmeyi bilmelidir.
 
 Zikr-i Batın üzerine düşünürken kendime koyabileceğim en dürüst ölçü budur: Ürettiğim ses, sessizlikte de TANRI’yı hatırlamaya yardım ediyor mu? Dinleyeni bana ve esere mi bağlıyor, yoksa araç ortadan kalktığında da Rabbin adını taşıyabilecek bir iç yönelişe mi çağırıyor?
+
+![Başlık ](/images/writings/sessiz-zikir3.png)
 
 ## Not
 

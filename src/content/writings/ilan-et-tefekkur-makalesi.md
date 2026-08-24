@@ -59,6 +59,7 @@ Bu yazıda “ilan et” çağrısını yalnız konuşmak olarak değil; gizleme
 
 ![Başlık ](/images/writings/ilan-et-zihin-haritasi.webp)
 
+
 ## 1. İlanın Başladığı Yer: Açıklanmış Rehberliği Gizlememek
 
 ### Ayet
@@ -244,6 +245,8 @@ Uyarı ile müjdenin birlikte bulunması da önemlidir. Yalnız korku üreten bi
 
 **Ayet referansları:** 15:89, 18:29.
 
+![Başlık ](/images/writings/ilan-et2.png)
+
 ## 11. Teslimiyet: Kibirden TANRI’ya Dönmek
 
 ### Ayet
@@ -325,7 +328,7 @@ Bazı sözler kamusal açıklık ister. Hakikatin yalnız kapalı bir çevrenin 
 ### Ayet
 
 > **11:44** — Şöyle ilan edildi: “Ey yeryüzü, suyunu yut” ve “Ey gökyüzü, son ver.” Su o zaman yatıştı; hüküm yerine getirildi. Gemi sonunda Yahudiye* tepelerine oturdu. O zaman şöyle ilan edildi: “Haddi aşanlar helak oldular.”
->
+
 > **11:48** — İlan edildi: “Ey Nuh, senin ve yoldaşlarından gelecek ulusların üzerine esenlik ve nimetlerle karaya çık. Senin soyundan gelecek olan diğer uluslara gelince, biz onları bir süre nimetlendireceğiz sonra acı veren azaba bırakacağız.”
 
 > **79:23** — Topladı ve ilan etti.
@@ -465,6 +468,8 @@ Bilgi beni kibirli değil daha dikkatli hale getirmeli. Adalet, çoğunluğun et
 Sonunda kendime söylediğim cümle şudur: Hakikati gizleme, kendi yorumunu hakikatin yerine koyma, yanlışını savunmak yerine düzelt, sözü tek TANRI’ya bağla ve önce kendin o sözün muhatabı ol.
 
 **Ayet referansları:** 2:159-160, 3:31-32, 3:95, 3:187, 5:15, 5:100, 5:119, 6:91, 11:2, 11:44, 11:48, 15:89, 16:51, 17:100, 17:107, 17:111, 18:29, 21:108, 22:27, 27:31, 42:45, 43:81, 43:88, 44:18, 45:32, 45:34, 71:9, 79:23, 93:11, 112:1.
+
+![Başlık ](/images/writings/ilan-et3.png)
 
 ## **Not**
 

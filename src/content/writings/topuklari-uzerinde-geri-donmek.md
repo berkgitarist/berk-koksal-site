@@ -252,7 +252,7 @@ Bu yazının asıl sorusu budur: **Rehberlik geldikten sonra insanın yönünü 
 </div>
 </details>
 
-![Topukları Üzerinde Geri Dönmek — Rehberlikten Sonra Yönünü Korumak Mindmap](/images/writings/topuklari-uzerinde-geri-donmek-mindmap.webp)
+![Başlık ](/images/writings/topuklari-uzerinde-geri-donmek2.png)
 
 ## 1. Topukları Üzerinde Geri Dönmek: Kıblenin Açığa Çıkardığı Yön
 
@@ -416,6 +416,9 @@ Kendim için buradan şu dersi çıkarıyorum: Düşmemek kadar düştüğümde 
 
 
 **Ayet referansları:** 2:217, 5:54, 16:106, 63:3, 9:74.
+
+![Topukları Üzerinde Geri Dönmek — Rehberlikten Sonra Yönünü Korumak Mindmap](/images/writings/topuklari-uzerinde-geri-donmek-mindmap.webp)
+
 ## 7. Test: İddia ile Gerçek Yönün Ayrıldığı Yer
 
 ### Ayet
@@ -741,6 +744,8 @@ Alışkanlığıma mı, korkuma mı, çoğunluğa mı, bir insana mı, kendi ego
 Yoksa TANRI’nın rehberliğine dönüp orada sebat etmeyi mi öğreniyorum?
 
 **Ayet referansları:** 2:143, 3:144, 6:71, 2:101, 3:64, 3:18, 2:112, 16:94, 47:7.
+
+![Başlık ](/images/writings/topuklari-uzerinde-geri-donmek3.png)
 
 ## **Not**
 

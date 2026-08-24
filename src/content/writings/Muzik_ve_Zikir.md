@@ -206,6 +206,8 @@ Bu yazıda soruyu yalnızca “Müzik var mı, yok mu?” biçiminde kurmak iste
 </div>
 </details>
 
+![Başlık ](/images/writings/muzik-ve-zikir2.png)
+
 ## 1. Yüce Rabbinin Adını Yüceltmek: Tefekkürün Eşiği
 
 ### Ayet
@@ -513,6 +515,8 @@ Müzik ve zikir üzerine yapılan bu tefekkürün merkezinde tek bir emir kaldı
 73:8, Rabbin adını anmayı O’na daha da ve daha da yaklaşmakla bağlıyor. Bu nedenle bir müziğin zikre hizmet edip etmediği, yalnız sözlerinde TANRI adının bulunmasına göre anlaşılamaz. İnsan gerçekten kime yaklaşıyor? Sanatçıya, topluluğa ve manevi hazza bağımlılık üreten bir eser, TANRI adını kullansa bile yönünü kaybedebilir. Doğru sözlü, ölçülü, tevhide bağlı ve insanı sorumluluğa çağıran bir eser ise hatırlamaya yardım edebilir.
 
 Ayet bu soruyu her sesin, her susuşun ve her davranışın önüne koyuyor. İnsan sesi güzel olabilir; fakat Yüce olan yalnız Rabdir.
+
+![Başlık ](/images/writings/muzik-ve-zikir3.png)
 
 ## Not
 

@@ -42,6 +42,8 @@ author: "Berk KÖKSAL"
 
 **Yer:** Mersin
 
+![Başlık ](/images/writings/mikrofon-kimi-yuceltiyor2.png)
+
 ### Ayet
 
 > **1:1** —  En Lütufkâr, En Merhametli TANRI’nın adıyla.*
@@ -283,6 +285,8 @@ Bazı yaklaşımlar 26:224’ü şiir ve şairlik hakkında genel bir olumsuz h�
 Ben rapten gelen biri değilim. Rap benim için bir kimlikten önce araçtır. ZIKR RAP’i tür değiştirmek için değil, türü zikre hizmet ettirmek için yaptım. Fakat bu niyet beni eleştiriden muaf kılmaz; TANRI’nın adını taşıyan her söz beni daha dikkatli yaşamaya çağırır.
 
 Sonunda geriye şu soru kalıyor: Mikrofon kimi yüceltiyor? TANRI’yı mı, sanatçıyı mı? Cevap sloganlarda değil, söz ile hayat arasındaki mesafede görünür.
+
+![Başlık ](/images/writings/mikrofon-kimi-yuceltiyor2.png)
 
 ## **Not**
 

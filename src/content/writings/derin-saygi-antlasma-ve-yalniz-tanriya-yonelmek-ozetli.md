@@ -288,6 +288,8 @@ Bu tefekkürün merkezinde bir soru var: **TANRI’ya derin saygı duymak, hayat
 </div>
 </details>
 
+![Başlık ](/images/writings/derin-saygi2.png)
+
 ## 1. Hatırlamak, Nimet ve Antlaşma: Derin Saygının İlk Eşiği
 
 ### Ayet
@@ -897,6 +899,8 @@ Bu yüzden kendi hayatımda derin saygıyı şu sorularla sınamak istiyorum: Ni
 2:40 bana bir duygu emretmekten daha fazlasını yapıyor. Bana yönümü hatırlatıyor.
 
 **Nimeti hatırla. Antlaşmaya sadık kal. Yalnız TANRI’ya derin saygı duy.**
+
+![Başlık ](/images/writings/derin-saygi3.png)
 
 ### Not
 

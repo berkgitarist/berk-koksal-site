@@ -216,6 +216,8 @@ Bu yazıda telefonun yeni kişisel oda olup olmadığını, dini aramaların ned
 </div>
 </details>
 
+![Başlık ](/images/writings/dini-uygulamalarda-mahremiyet-2.png)
+
 ## 1. Telefon Yeni Bir Kişisel Oda mıdır?
 
 ### Ayet
@@ -519,6 +521,8 @@ Bu soruya yalnız teknik sözleşmelerle cevap veremem. Çünkü veri, soyut rak
 Kuranteyit’in hesap açmama, ad, telefon, konum veya kişi listesi istememe; notları geliştirici sunucusuna göndermeyip cihazda saklama ve geliştiriciye ait reklam ya da davranış analizi sistemi kullanmama yaklaşımı bu nedenle benim için yalnız ürün kararı değildir.
 
 **Bir dini uygulama, kullanıcının kalbine giden yolu açmaya çalışırken onun kişisel odasına izinsiz girmemelidir.**
+
+![Başlık ](/images/writings/dini-uygulamalarda-mahremiyet-3.png)
 
 ## Not
 
