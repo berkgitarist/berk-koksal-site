@@ -452,7 +452,7 @@ Bu ayetlerdeki bazı kökler, “satmak” meselesinin yalnız ticari işlem de�
 
 **ك-ت-ب (Kef-Te-Be)** kökü yazmak ve kaydetmek anlam alanıyla ilişkilidir. 2:79’da insanların kendi elleriyle yazması özellikle vurgulanır. Bugün yazmak yalnız kalemle değildir; kod, ekran metni, yapay zeka çıktısı ve algoritmik özet de insan yapımı yazıdır.
 
-\*\*ي-د-ي (Ya-Dal-Ya)\*\***  kökü el anlamına gelir. “Kendi elleriyle” ifadesi sorumluluğu görünür kılar. Üretilen metin, tasarlanan arayüz ve kurulan gelir modeli insanın elinin eseridir. “Algoritma yaptı” demek sorumluluğu tamamen ortadan kaldırmaz; algoritmayı seçen ve kullanan insan vardır.
+**ي-د-ي (Ya-Dal-Ya)**  kökü el anlamına gelir. “Kendi elleriyle” ifadesi sorumluluğu görünür kılar. Üretilen metin, tasarlanan arayüz ve kurulan gelir modeli insanın elinin eseridir. “Algoritma yaptı” demek sorumluluğu tamamen ortadan kaldırmaz; algoritmayı seçen ve kullanan insan vardır.
 
 ## Diğer İddialar
 
