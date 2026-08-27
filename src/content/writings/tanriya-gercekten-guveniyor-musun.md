@@ -5,9 +5,12 @@ description: >-
   güven, teslimiyet, tevhid, kontrol tutkusu, tedbir, rızık, sebat,
   dini otorite, insanları efendi edinme tehlikesi ve TANRI’yı yeterli
   görmenin insan hayatındaki anlamı üzerine sert ve derin bir tefekkür.
-publishDate: 2025-08-27
+publishDate: 2026-08-27
 category: "Qur'an Reflections"
 language: "tr"
+
+image: "/images/writings/tanriya-gercekten-guveniyormusun.webp"
+
 tags:
   - "Kuran"
   - "3:122"
@@ -31,7 +34,7 @@ author: "Berk KÖKSAL"
 
 **Yazar:** Berk KÖKSAL
 
-**Tarih:** 27.08.2025
+**Tarih:** 27.08.2026
 
 **Yer:** Mersin
 
@@ -245,6 +248,7 @@ Bu yazının merkezindeki soru şudur: **TANRI’ya gerçekten güveniyor muyum;
 </div>
 </details>
 
+![Başlık ](/images/writings/tanriya-gercekten-guveniyormusun2.png)
 
 ## 1. Güvenin İlk Sınavı: Tam Düşecekken Kime Dayanıyorsun?
 
@@ -1182,6 +1186,8 @@ Ve eğer arada bir boşluk görüyorsam, o boşluğu güzel cümlelerle kapatmay
 **TANRI yeter.**
 
 **Ayet referansları: 3:159, 4:81, 10:84, 11:88, 11:123, 12:67, 64:13, 65:3, 73:9.**
+
+![Başlık ](/images/writings/tanriya-gercekten-guveniyormusun3.png)
 
 ## **Not**
 
