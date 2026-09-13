@@ -5,33 +5,89 @@ import albumsData from '../data/albums.json';
 const projects = albumsData.map((album) => ({
   title: album.title,
   description: album.description,
-  category: `ALBUM • ${album.year}`,
+  category: `${album.releaseStatus === 'upcoming' ? 'UPCOMING • ' : ''}${album.universe ?? 'ALBUM'} • ${album.year}`,
   images: [album.cover.replace(/^\//, '')],
   platforms: ['web'],
   tech: album.genre.split(' / '),
   link: `/albums/${album.slug}/`,
+  universe: album.universe ?? 'Neo-Sacred Zikr',
 }));
+
+const quranicConcepts = projects.filter((project) => project.universe === 'QURANIC CONCEPTS');
+const neoSacred = projects.filter((project) => project.universe !== 'QURANIC CONCEPTS');
 ---
 
 <section id="projects" class="section-container !pt-4 md:!pt-6 overflow-hidden">
-  <div class="container mx-auto">
-    <div class="mb-10 project-header">
+  <div class="container mx-auto space-y-14">
+    <div class="project-header">
       <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext mb-2 flex items-center gap-4">
         <span class="text-accent">/</span> Discography
       </h2>
 
-      <p class="text-subtext font-body text-sm max-w-md">
-        Explore the official Neo-Sacred Zikr albums and musical universe of Berk Köksal.
+      <p class="text-subtext font-body text-sm max-w-2xl">
+        Explore Berk Köksal's two distinct musical universes: Neo-Sacred Zikr and QURANIC CONCEPTS.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {
-        projects.map((project) => (
+    {quranicConcepts.length > 0 && (
+      <section>
+        <div class="mb-7 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="mb-2 text-xs font-bold uppercase tracking-[0.35em] text-[#b74a4a]">
+              Concept Album Series
+            </p>
+            <h3 class="text-3xl font-heading font-bold text-maintext md:text-4xl">
+              QURANIC CONCEPTS
+            </h3>
+            <p class="mt-3 max-w-2xl text-sm leading-6 text-subtext">
+              One subject. One world. One album. Each work enters a specific theme, scene, voice or reality described in the Quran.
+            </p>
+          </div>
+
+          <a
+            href="/quranic-concepts/"
+            class="inline-flex items-center gap-2 text-sm font-bold text-[#d16c6c] transition hover:text-maintext"
+          >
+            Explore the series <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {quranicConcepts.map((project) => (
+            <ProjectCard project={project} />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section>
+      <div class="mb-7 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="mb-2 text-xs font-bold uppercase tracking-[0.35em] text-accent">
+            Sacred Music Universe
+          </p>
+          <h3 class="text-3xl font-heading font-bold text-maintext md:text-4xl">
+            Neo-Sacred Zikr
+          </h3>
+          <p class="mt-3 max-w-2xl text-sm leading-6 text-subtext">
+            Music centered on remembrance, devotion and the glorification of the ONE GOD through many contemporary musical languages.
+          </p>
+        </div>
+
+        <a
+          href="/neo-sacred-zikr/"
+          class="inline-flex items-center gap-2 text-sm font-bold text-accent transition hover:text-maintext"
+        >
+          Explore Neo-Sacred Zikr <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {neoSacred.map((project) => (
           <ProjectCard project={project} />
-        ))
-      }
-    </div>
+        ))}
+      </div>
+    </section>
   </div>
 </section>
 

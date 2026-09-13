@@ -6,6 +6,7 @@ interface NavItem {
   label: string;
   href: string;
   icon: string;
+  mobileLabel?: string;
   matchPrefix?: string;
 }
 
@@ -31,6 +32,13 @@ const navItems: NavItem[] = [
     href: "/neo-sacred-zikr/",
     icon: "mdi:music-circle",
     matchPrefix: "/neo-sacred-zikr",
+  },
+  {
+    label: "Quranic Concepts",
+    mobileLabel: "Quranic",
+    href: "/quranic-concepts/",
+    icon: "mdi:book-open-page-variant",
+    matchPrefix: "/quranic-concepts",
   },
   {
     label: "Writings",
@@ -82,7 +90,7 @@ function isItemActive(item: NavItem): boolean {
       class="container mx-auto flex justify-center items-center p-3 reveal-content"
       style="animation-delay: 700ms;"
     >
-      <ul class="grid grid-cols-6 w-full items-center md:flex md:w-auto md:justify-center md:gap-8 lg:gap-12">
+      <ul class="grid grid-cols-7 w-full items-center md:flex md:w-auto md:justify-center md:gap-6 lg:gap-9">
         {
           navItems.map((item) => {
             const isActive = isItemActive(item);
@@ -108,7 +116,7 @@ function isItemActive(item: NavItem): boolean {
                   </span>
 
                   <span class="md:hidden block max-w-full truncate leading-tight">
-                    {item.label}
+                    {item.mobileLabel ?? item.label}
                   </span>
                 </a>
               </li>
@@ -275,7 +283,7 @@ function isItemActive(item: NavItem): boolean {
       const scrollProgress = Math.min(window.scrollY / maxScroll, 1);
       const easeProgress = 1 - Math.pow(1 - scrollProgress, 4);
 
-      const minWidth = 900;
+      const minWidth = 1080;
       const maxWidth = window.innerWidth * 0.9;
       const currentWidth =
         maxWidth - (maxWidth - minWidth) * easeProgress;

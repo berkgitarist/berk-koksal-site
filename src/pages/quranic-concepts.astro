@@ -1,0 +1,261 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/nav.astro';
+import { Icon } from 'astro-icon/components';
+
+const futureConcepts = [
+  ['HEAVENN', 'Paradise', 'Peace • gardens • rivers • safety • abundance • no fear'],
+  ['THE DAY', 'Judgment Day', 'Resurrection • gathering • records • witnesses • separation'],
+  ['MIZAN', 'The Scale', 'Measure • weight • justice • deeds • balance • consequence'],
+  ['ANGELS', 'The Angels', 'Messengers • guardians • witnesses • obedience • recording'],
+  ['CREATION', 'Creation', 'Earth • heavens • life • signs • order'],
+  ['MOSES', 'Moses', 'Revelation • Pharaoh • confrontation • signs • exodus'],
+  ['SATAN', 'Satan & Human Choice', 'Pride • refusal • temptation • responsibility • blame'],
+];
+
+const sourceSteps = [
+  ['01', 'The subject', 'A defined Qur\'anic theme, place, event, character, dialogue or metaphysical reality comes first.'],
+  ['02', 'The verses', 'Relevant passages are collected and recurring ideas across suras are mapped before the album structure is finalized.'],
+  ['03', 'The voices', 'Speakers and scenes are separated. Direct source material is not intentionally blurred with artistic dramatization.'],
+  ['04', 'The laws', 'Tempo, instrumentation, repetition, silence, visual identity and structure are determined by the subject itself.'],
+  ['05', 'The music', 'Only after the conceptual architecture is clear does the final musical world take shape.'],
+];
+---
+
+<Layout
+  title="QURANIC CONCEPTS | Berk KÖKSAL"
+  description="QURANIC CONCEPTS is a series of concept albums by Berk Köksal exploring specific themes, scenes, voices and realities described in the Quran — one subject, one world, one album."
+  canonical="/quranic-concepts/"
+  ogImage="/albums/helll.png"
+  ogType="website"
+  pageClass="quranic-concepts-theme"
+  disableAmbient={true}
+>
+  <Nav />
+
+  <section class="qc-page py-24 md:py-32">
+    <div class="mx-auto max-w-6xl space-y-20 md:space-y-28">
+      <!-- HERO -->
+      <header class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black px-6 py-16 shadow-2xl md:px-14 md:py-24">
+        <div class="pointer-events-none absolute inset-0 opacity-80">
+          <div class="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#8d1010]/10 blur-3xl"></div>
+          <div class="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-white/[0.025] blur-3xl"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl">
+          <p class="mb-6 text-xs font-bold uppercase tracking-[0.5em] text-[#b74a4a]">
+            A Second Musical Universe by Berk Köksal
+          </p>
+
+          <h1 class="text-5xl font-heading font-bold leading-none text-white sm:text-6xl md:text-8xl">
+            QURANIC<br />CONCEPTS
+          </h1>
+
+          <p class="mt-8 text-2xl font-heading font-bold text-white md:text-3xl">
+            One subject. One world. One album.
+          </p>
+
+          <p class="mt-7 max-w-4xl text-lg leading-8 text-white/65 md:text-xl md:leading-9">
+            A series of concept albums exploring specific themes, scenes, voices and realities described in the Quran. Each work begins with a defined Qur'anic subject and develops its own musical language, structure and visual identity according to that subject.
+          </p>
+
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a
+              href="/albums/helll/"
+              class="inline-flex items-center gap-3 rounded-full border border-[#9e2525]/55 bg-[#7f1212]/15 px-7 py-4 font-bold text-white transition hover:border-[#c83d3d]/75 hover:bg-[#7f1212]/25"
+            >
+              Enter HELLL <span aria-hidden="true">→</span>
+            </a>
+
+            <a
+              href="#manifesto"
+              class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-7 py-4 font-bold text-white transition hover:bg-white/10"
+            >
+              Read the Manifesto
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- DEFINITION -->
+      <section class="grid grid-cols-1 gap-10 lg:grid-cols-[0.75fr_1.25fr]">
+        <div>
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">I</p>
+          <h2 class="text-4xl font-heading font-bold text-white md:text-5xl">
+            The subject determines the sound.
+          </h2>
+        </div>
+
+        <div class="space-y-6 text-lg leading-8 text-white/65">
+          <p>
+            QURANIC CONCEPTS is a long-form musical project built around specific subjects found in the Quran. Each album isolates one theme, place, event, character, dialogue or metaphysical reality and develops it as an independent musical universe.
+          </p>
+          <p>
+            The purpose is not to turn every verse into a song, nor to begin with a genre and search for sacred words to place inside it. The process moves in the opposite direction: first comes the subject, then the source research, the voices and the structure. Only after that does the music begin.
+          </p>
+          <p class="font-heading text-2xl font-bold leading-9 text-white">
+            There is no fixed genre. There is only the concept.
+          </p>
+        </div>
+      </section>
+
+      <!-- MANIFESTO -->
+      <section id="manifesto" class="rounded-[2rem] border border-white/10 bg-white/[0.025] p-7 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">II · Manifesto</p>
+        <h2 class="max-w-5xl text-4xl font-heading font-bold leading-tight text-white md:text-6xl">
+          The Quran is not decoration. The concept comes before the genre.
+        </h2>
+
+        <div class="mt-10 grid grid-cols-1 gap-8 text-lg leading-8 text-white/65 lg:grid-cols-2">
+          <div class="space-y-5">
+            <p>
+              QURANIC CONCEPTS does not attempt to turn the Quran into background music. It does not treat verses as visual or lyrical ornament. It does not begin with a musical style and then search for a Qur'anic phrase to justify it.
+            </p>
+            <p>
+              Every project asks a more difficult question: <strong class="text-white">What does this subject demand from sound?</strong>
+            </p>
+          </div>
+
+          <div class="space-y-5">
+            <p>
+              Hell cannot sound like Paradise. Judgment cannot move like Creation. Angels cannot be represented by the same musical language as human conflict. A narrative cannot obey the same architecture as a metaphysical concept.
+            </p>
+            <p>
+              The form must serve the subject. Never the opposite.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TWO UNIVERSES -->
+      <section>
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">III · Two Universes</p>
+        <h2 class="mb-10 text-4xl font-heading font-bold text-white md:text-6xl">
+          Remembrance and entry are not the same movement.
+        </h2>
+
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <a href="/neo-sacred-zikr/" class="rounded-[2rem] border border-accent/25 bg-accent/5 p-8 no-underline transition hover:border-accent/50 md:p-10">
+            <p class="text-xs font-bold uppercase tracking-[0.35em] text-accent">Neo-Sacred Zikr</p>
+            <h3 class="mt-4 text-3xl font-heading font-bold text-white">The center is remembrance.</h3>
+            <p class="mt-5 leading-7 text-white/60">
+              Music centered on zikr, repetition, devotion and sacred invocation. Its repetition is devotional and its movement is toward remembrance.
+            </p>
+            <p class="mt-8 font-heading text-xl font-bold text-white">
+              Neo-Sacred Zikr invites the listener to remember.
+            </p>
+          </a>
+
+          <div class="rounded-[2rem] border border-[#8f1c1c]/40 bg-[#7f1212]/10 p-8 md:p-10">
+            <p class="text-xs font-bold uppercase tracking-[0.35em] text-[#d16c6c]">QURANIC CONCEPTS</p>
+            <h3 class="mt-4 text-3xl font-heading font-bold text-white">The center is the subject.</h3>
+            <p class="mt-5 leading-7 text-white/60">
+              Music centered on subjects, narratives, voices, places and realities described in the Quran. Repetition may represent memory, eternity, judgment, imprisonment, peace or any other law demanded by the concept.
+            </p>
+            <p class="mt-8 font-heading text-xl font-bold text-white">
+              QURANIC CONCEPTS invites the listener to enter.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOURCE PRINCIPLE -->
+      <section>
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">IV · The Source Principle</p>
+        <h2 class="mb-6 text-4xl font-heading font-bold text-white md:text-6xl">
+          Research first. Music second.
+        </h2>
+        <p class="mb-10 max-w-4xl text-lg leading-8 text-white/60">
+          A fundamental distinction is maintained throughout the series: <strong class="text-white">Qur'anic source</strong> and <strong class="text-white">artistic dramatization</strong> are not the same thing. Original connective or dramatic lines remain artistic interpretation; they are not presented as Qur'anic text.
+        </p>
+
+        <div class="space-y-4">
+          {sourceSteps.map(([number, title, text]) => (
+            <article class="grid grid-cols-[72px_1fr] gap-5 rounded-2xl border border-white/10 bg-white/[0.02] p-6 md:grid-cols-[100px_1fr] md:p-7">
+              <div class="font-mono text-2xl font-bold text-[#9d2a2a]">{number}</div>
+              <div>
+                <h3 class="text-2xl font-heading font-bold text-white">{title}</h3>
+                <p class="mt-2 leading-7 text-white/60">{text}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <!-- HELLL -->
+      <section class="overflow-hidden rounded-[2rem] border border-[#8f1c1c]/45 bg-black">
+        <div class="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr]">
+          <a href="/albums/helll/" class="group block bg-black p-5 md:p-8">
+            <img
+              src="/albums/helll.png"
+              alt="HELLL album cover by Berk KÖKSAL"
+              class="w-full rounded-3xl border border-white/10 bg-black shadow-[0_0_90px_rgba(130,0,0,0.14)] transition duration-500 group-hover:scale-[1.015]"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="flex flex-col justify-center p-7 md:p-12 lg:p-14">
+            <p class="text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">V · The First World</p>
+            <h2 class="mt-4 text-6xl font-heading font-bold leading-none text-white md:text-8xl">HELLL</h2>
+            <p class="mt-5 text-sm font-bold uppercase tracking-[0.3em] text-white/45">HELL • 19 TRACKS • 2026</p>
+
+            <p class="mt-8 font-heading text-2xl font-bold uppercase leading-9 text-white md:text-3xl">
+              THIS ALBUM DOES NOT BELONG TO THIS WORLD.
+            </p>
+
+            <p class="mt-6 text-lg leading-8 text-white/60">
+              Punishment • regret • fire • thirst • accusation • no exit • permanence • nineteen. HELLL is the first QURANIC CONCEPTS album and the first complete demonstration of the method: a subject defining its own musical, visual and narrative laws.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-2">
+              {['A Magnificent Disturbance', '160 BPM', 'Black', 'Repetition becomes imprisonment', '19 × 19'].map((item) => (
+                <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-widest text-white/65">{item}</span>
+              ))}
+            </div>
+
+            <a
+              href="/albums/helll/"
+              class="mt-9 inline-flex w-fit items-center gap-3 rounded-full border border-[#a32d2d]/55 bg-[#7f1212]/15 px-7 py-4 font-bold text-white transition hover:bg-[#7f1212]/25"
+            >
+              Enter the album <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FUTURE -->
+      <section>
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">VI · Expanding Atlas</p>
+        <h2 class="mb-6 text-4xl font-heading font-bold text-white md:text-6xl">
+          One concept at a time.
+        </h2>
+        <p class="mb-10 max-w-4xl text-lg leading-8 text-white/60">
+          The series is designed as an expanding musical atlas of Qur'anic concepts. The albums may sound radically different while remaining part of the same system because the method — not a single genre — is the identity.
+        </p>
+
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {futureConcepts.map(([title, subtitle, text]) => (
+            <article class="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+              <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-[#9f3b3b]">Future Concept</p>
+              <h3 class="mt-3 text-2xl font-heading font-bold text-white">{title}</h3>
+              <p class="mt-1 font-bold text-white/55">{subtitle}</p>
+              <p class="mt-4 text-sm leading-6 text-white/45">{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <!-- CLOSING -->
+      <section class="rounded-[2rem] border border-white/10 bg-white/[0.02] px-6 py-14 text-center md:px-12 md:py-20">
+        <Icon name="mdi:book-open-page-variant" class="mx-auto h-8 w-8 text-[#9f3b3b]" />
+        <p class="mt-7 text-xs font-bold uppercase tracking-[0.5em] text-[#b74a4a]">The Long-Term Vision</p>
+        <h2 class="mx-auto mt-6 max-w-5xl text-4xl font-heading font-bold leading-tight text-white md:text-6xl">
+          An expanding musical atlas of Qur'anic concepts.
+        </h2>
+        <p class="mx-auto mt-7 max-w-3xl text-lg leading-8 text-white/55">
+          Not one album about the Quran. Not one musical style. Not one interpretation repeated indefinitely. A growing collection of independent worlds — each opening one subject, studying it, building its laws, and then moving to the next.
+        </p>
+      </section>
+    </div>
+  </section>
+</Layout>

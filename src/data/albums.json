@@ -1,43 +1,87 @@
 [
   {
-  "slug": "zikr-symphonic-metal",
-  "title": "ZIKR SYMPHONIC METAL",
-  "year": "2026",
-  "duration": "1 hr 12 min 6 sec",
-  "tracksCount": "19",
-  "cover": "/albums/zikr-symphonic-metal.webp",
-  "genre": "Neo-Sacred Zikr / Symphonic Metal / Progressive Metal / Neoclassical Metal",
-  "description": "A 19-movement Neo-Sacred Zikr cycle where a single sacred utterance, HÛ, rises from breath and silence into monumental choirs, symphonic orchestra, pipe organ and progressive neoclassical metal.",
-  "story": "ZIKR SYMPHONIC METAL opens a new chapter within Berk Köksal’s Neo-Sacred Zikr universe. Across nineteen interconnected works, the album is built around a single sacred utterance: HÛ. Rather than multiplying words, the music explores how one sound can carry different spiritual states — breath, mercy, surrender, awakening, devotion, ascension, majesty, unity, eternity and return.\n\nThe musical journey repeatedly moves from intimacy toward immensity. A fragile female voice, breath, silence, sacred choir, strings and organ gradually expand into brass, timpani, bass, drums, distorted guitars and virtuosic neoclassical solos. The classical world does not disappear when the metal enters; choir, orchestra, organ and guitars continue together as parts of the same act of remembrance.\n\nMetal is not used here as an expression of anger. Its weight and power represent divine majesty and the overwhelming scale of creation. The choir is not decoration, the orchestra is not a background layer, and the guitar is not merely a vehicle for virtuosity. Every musical element serves the same center: zikr.\n\nThe nineteen pieces are conceived not simply as separate songs, but as movements in a single spiritual cycle. The Breath begins with the most intimate human element, while the later works expand through surrender, evidence, instinct, awakening, the path, devotion, ascension, divine majesty, the throne, infinity, universal unity and eternity. Miracle & Return closes the journey by returning to the point from which it began, now transformed by everything that came before.\n\nThe central idea of ZIKR SYMPHONIC METAL is simple: the utterance does not change, but the world of sound around it does. One breath becomes a choir; the choir becomes an orchestra; the orchestra becomes symphonic metal; and all of them finally return to HÛ.",
-  "verse": {
-    "reference": "Quran 13:28",
-    "text": "They are the ones whose hearts rejoice in remembering GOD. Absolutely, by remembering GOD, the hearts rejoice.",
-    "source": "Rashad Khalifa Translation"
+    "slug": "helll",
+    "title": "HELLL",
+    "year": "2026",
+    "duration": "TBA",
+    "tracksCount": "19",
+    "cover": "/albums/helll.png",
+    "universe": "QURANIC CONCEPTS",
+    "releaseStatus": "upcoming",
+    "spotifyPlaceholder": true,
+    "genre": "QURANIC CONCEPTS / Progressive Metal / Symphonic Extreme Metal / Experimental Choral",
+    "description": "A 19-track Quran-centered concept album that turns warnings of Hell, judgment, regret, thirst, confinement and irreversible consequence into one uncompromising musical descent.",
+    "story": "HELLL is the first album within Berk KÖKSAL's QURANIC CONCEPTS series. It begins with a heartbeat, a hospital monitor and a flatline; only after the person dies do the voices of HELLL begin. Across nineteen tracks, Qur'anic scenes and recurring images of punishment, regret, thirst, hunger, confinement, testimony, responsibility and permanence are translated into composition, sound design, vocal architecture, repetition and silence. The final track, NINETEEN, contains nineteen independently composed movements and closes the album around the Qur'anic reference to nineteen in 74:30–31.",
+    "verse": {
+      "reference": "Quran 74:30–31",
+      "text": "Over it is nineteen.\n\nThis is a reminder for the people.",
+      "source": "Quran: The Final Testament — selected lines"
+    },
+    "spotify": "https://open.spotify.com/intl-tr/album/56NIHjClIqXsPabwrtHpQE",
+    "spotifyEmbed": "https://open.spotify.com/intl-tr/album/56NIHjClIqXsPabwrtHpQE",
+    "tracks": [
+      "WELCOME TO HELL",
+      "STAY",
+      "BURN",
+      "MALIK",
+      "NARROW",
+      "FUEL",
+      "GARMENTS OF FIRE",
+      "SKIN",
+      "NO DEATH",
+      "HOT SHADE",
+      "ZAQQUM",
+      "WATER",
+      "SCREAM",
+      "ONE DAY",
+      "NO END",
+      "NO EXIT",
+      "BLAME",
+      "MORE",
+      "NINETEEN"
+    ]
   },
-  "spotify": "https://open.spotify.com/intl-tr/album/56NIHjClIqXsPabwrtHpQE",
-  "spotifyEmbed": "https://open.spotify.com/intl-tr/album/56NIHjClIqXsPabwrtHpQE",
-  "tracks": [
-    "HÛ — The Breath",
-    "HÛ — Most Gracious",
-    "HÛ — Most Merciful",
-    "HÛ — Lord of the Universe",
-    "HÛ — Master of the Day of Judgment",
-    "HÛ — Surrender",
-    "HÛ — Physical Evidence",
-    "HÛ — Natural Instinct",
-    "HÛ — Awakening",
-    "HÛ — The Path",
-    "HÛ — Devotion",
-    "HÛ — Ascension",
-    "HÛ — Monotheist Submitter",
-    "HÛ — Divine Majesty",
-    "HÛ — The Throne",
-    "HÛ — Infinity",
-    "HÛ — Universal Unity",
-    "HÛ — Eternity",
-    "HÛ — Miracle & Return"
-  ]
-},
+  {
+    "slug": "zikr-symphonic-metal",
+    "title": "ZIKR SYMPHONIC METAL",
+    "year": "2026",
+    "duration": "1 hr 12 min 6 sec",
+    "tracksCount": "19",
+    "cover": "/albums/zikr-symphonic-metal.webp",
+    "genre": "Neo-Sacred Zikr / Symphonic Metal / Progressive Metal / Neoclassical Metal",
+    "description": "A 19-movement Neo-Sacred Zikr cycle where a single sacred utterance, HÛ, rises from breath and silence into monumental choirs, symphonic orchestra, pipe organ and progressive neoclassical metal.",
+    "story": "ZIKR SYMPHONIC METAL opens a new chapter within Berk Köksal’s Neo-Sacred Zikr universe. Across nineteen interconnected works, the album is built around a single sacred utterance: HÛ. Rather than multiplying words, the music explores how one sound can carry different spiritual states — breath, mercy, surrender, awakening, devotion, ascension, majesty, unity, eternity and return.\n\nThe musical journey repeatedly moves from intimacy toward immensity. A fragile female voice, breath, silence, sacred choir, strings and organ gradually expand into brass, timpani, bass, drums, distorted guitars and virtuosic neoclassical solos. The classical world does not disappear when the metal enters; choir, orchestra, organ and guitars continue together as parts of the same act of remembrance.\n\nMetal is not used here as an expression of anger. Its weight and power represent divine majesty and the overwhelming scale of creation. The choir is not decoration, the orchestra is not a background layer, and the guitar is not merely a vehicle for virtuosity. Every musical element serves the same center: zikr.\n\nThe nineteen pieces are conceived not simply as separate songs, but as movements in a single spiritual cycle. The Breath begins with the most intimate human element, while the later works expand through surrender, evidence, instinct, awakening, the path, devotion, ascension, divine majesty, the throne, infinity, universal unity and eternity. Miracle & Return closes the journey by returning to the point from which it began, now transformed by everything that came before.\n\nThe central idea of ZIKR SYMPHONIC METAL is simple: the utterance does not change, but the world of sound around it does. One breath becomes a choir; the choir becomes an orchestra; the orchestra becomes symphonic metal; and all of them finally return to HÛ.",
+    "verse": {
+      "reference": "Quran 13:28",
+      "text": "They are the ones whose hearts rejoice in remembering GOD. Absolutely, by remembering GOD, the hearts rejoice.",
+      "source": "Rashad Khalifa Translation"
+    },
+    "spotify": "https://open.spotify.com/intl-tr/album/56NIHjClIqXsPabwrtHpQE",
+    "spotifyEmbed": "https://open.spotify.com/intl-tr/album/56NIHjClIqXsPabwrtHpQE",
+    "tracks": [
+      "HÛ — The Breath",
+      "HÛ — Most Gracious",
+      "HÛ — Most Merciful",
+      "HÛ — Lord of the Universe",
+      "HÛ — Master of the Day of Judgment",
+      "HÛ — Surrender",
+      "HÛ — Physical Evidence",
+      "HÛ — Natural Instinct",
+      "HÛ — Awakening",
+      "HÛ — The Path",
+      "HÛ — Devotion",
+      "HÛ — Ascension",
+      "HÛ — Monotheist Submitter",
+      "HÛ — Divine Majesty",
+      "HÛ — The Throne",
+      "HÛ — Infinity",
+      "HÛ — Universal Unity",
+      "HÛ — Eternity",
+      "HÛ — Miracle & Return"
+    ],
+    "universe": "Neo-Sacred Zikr",
+    "releaseStatus": "released"
+  },
   {
     "slug": "zikr-jazz",
     "title": "ZIKR JAZZ",
@@ -74,7 +118,9 @@
       "Ya Awwal, Ya Akhir",
       "Az-Zahir Wal-Batin",
       "Dhul-Jalali Wal-Ikram"
-    ]
+    ],
+    "universe": "Neo-Sacred Zikr",
+    "releaseStatus": "released"
   },
   {
     "slug": "zikr-i-batin",
@@ -112,7 +158,9 @@
       "SubhanALLAH",
       "Zikr-i Batin",
       "Huruf al-Muqatta'at Alif Lam Mim"
-    ]
+    ],
+    "universe": "Neo-Sacred Zikr",
+    "releaseStatus": "released"
   },
   {
     "slug": "zikr-rap",
@@ -150,7 +198,9 @@
       "Ya Hayyu Ya Kayyum",
       "Ya Aziz Ya Kaviyy",
       "ZIKR RAP Neo-Sacred Zikr Huu"
-    ]
+    ],
+    "universe": "Neo-Sacred Zikr",
+    "releaseStatus": "released"
   },
   {
     "slug": "one-god-one-love",
@@ -188,7 +238,9 @@
       "La İlahe İllallah",
       "Submission Brings Happiness",
       "Submission Brings Peace"
-    ]
+    ],
+    "universe": "Neo-Sacred Zikr",
+    "releaseStatus": "released"
   },
   {
     "slug": "classical-chorus",
@@ -226,7 +278,9 @@
       "Ya Şafi",
       "Allah Gafurun Rahim",
       "Huuuu Huuuu"
-    ]
+    ],
+    "universe": "Neo-Sacred Zikr",
+    "releaseStatus": "released"
   },
   {
     "slug": "zikr-rock",
@@ -264,7 +318,9 @@
       "Inna Lillahi",
       "La Ilahe İllallah",
       "SubhanAllah"
-    ]
+    ],
+    "universe": "Neo-Sacred Zikr",
+    "releaseStatus": "released"
   },
   {
     "slug": "zikr-nur",
@@ -302,7 +358,9 @@
       "Ya Hannan Ya Mennan Zül Celâli vel İkrâm",
       "La Havle ve La Kuvvete İlla Billah",
       "Huuuu"
-    ]
+    ],
+    "universe": "Neo-Sacred Zikr",
+    "releaseStatus": "released"
   },
   {
     "slug": "zikr-huu",
@@ -330,7 +388,9 @@
       "Ya Rahman",
       "Ya Rahim",
       "Ya Melik"
-    ]
+    ],
+    "universe": "Neo-Sacred Zikr",
+    "releaseStatus": "released"
   },
   {
     "slug": "zikr-symphony",
@@ -368,7 +428,9 @@
       "Ya Hak Ya Hadi",
       "Estağfirullah",
       "19-Song Medley Potpourri"
-    ]
+    ],
+    "universe": "Neo-Sacred Zikr",
+    "releaseStatus": "released"
   },
   {
     "slug": "tanrinin-hediyesi",
@@ -390,6 +452,8 @@
       "Zikir (Zikr) [Tevbe Ettim Estağfirullah Ya GAFFAR]",
       "Zikir (Zikr) [Tevbe Ettim Estağfirullah Ya GAFFAR] (Vokalsiz)",
       "Zikir (Zikr) [Tevbe Ettim Estağfirullah Ya GAFFAR] (Vokal + Piano + Koro)"
-    ]
+    ],
+    "universe": "Neo-Sacred Zikr",
+    "releaseStatus": "released"
   }
 ]

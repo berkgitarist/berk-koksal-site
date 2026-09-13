@@ -12,6 +12,8 @@ interface Props {
   ogType?: 'website' | 'article' | 'music.album';
   twitterCard?: 'summary' | 'summary_large_image';
   lang?: 'en' | 'tr';
+  pageClass?: string;
+  disableAmbient?: boolean;
 }
 
 const {
@@ -21,7 +23,9 @@ const {
   ogImage = '/artist/berk-portrait.webp',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  lang = 'en'
+  lang = 'en',
+  pageClass = '',
+  disableAmbient = false
 } = Astro.props;
 
 const baseTheme = SITE_CONFIG.baseTheme;
@@ -95,19 +99,21 @@ const defaultTheme = `${baseTheme}-dark`;
   </head>
 
   <body
-    class="relative min-h-screen overflow-x-hidden antialiased bg-container"
+    class={`relative min-h-screen overflow-x-hidden antialiased bg-container ${pageClass}`}
   >
     <!-- =====================================================
          FALLING NOTES / ALLAH NAMES CONTAINER
          ===================================================== -->
 
-    <div
-      id="matrix-container"
-      aria-hidden="true"
-      class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10"
-      style="mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);"
-    >
-    </div>
+    {!disableAmbient && (
+      <div
+        id="matrix-container"
+        aria-hidden="true"
+        class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10"
+        style="mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 0%, black 80%, transparent 100%);"
+      >
+      </div>
+    )}
 
     <!-- =====================================================
          PAGE CONTENT

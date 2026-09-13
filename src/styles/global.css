@@ -823,3 +823,38 @@
     margin-bottom: 1.5rem !important;
   }
 }
+/* === QURANIC CONCEPTS / HELLL PAGE IDENTITY === */
+body.quranic-concepts-theme,
+body.helll-theme {
+  --color-background: #020202;
+  --color-accent: #8f2d2d;
+  --color-maintext: #ffffff;
+  --color-subtext: #a8a8aa;
+  --color-textrain: #4f2727;
+
+  background:
+    radial-gradient(circle at 50% -10%, rgba(105, 0, 0, 0.12), transparent 28%),
+    linear-gradient(180deg, #000000 0%, #030202 48%, #000000 100%);
+  background-attachment: fixed;
+}
+
+body.quranic-concepts-theme #theme-toggle-wrapper,
+body.helll-theme #theme-toggle-wrapper {
+  display: none;
+}
+
+body.quranic-concepts-theme #main-nav,
+body.helll-theme #main-nav {
+  border-color: rgba(145, 48, 48, 0.28);
+  background:
+    linear-gradient(135deg, rgba(5, 5, 5, 0.88), rgba(45, 8, 8, 0.48));
+  box-shadow:
+    0 18px 60px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+body.quranic-concepts-theme ::selection,
+body.helll-theme ::selection {
+  background: #7f1717;
+  color: #ffffff;
+}

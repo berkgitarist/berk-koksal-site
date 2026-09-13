@@ -2,6 +2,7 @@
 import { Icon } from 'astro-icon/components';
 
 import localData from '../data/home.json';
+import albumsData from '../data/albums.json';
 
 interface Social {
   name: string;
@@ -47,9 +48,14 @@ if (isApiLive && BASE_URL) {
 const {
   name,
   intro,
+  introHtml,
   resumeUrl,
   socials
 } = data;
+
+// Keep the site-level creative-universe identity in local content even when a legacy API response is active.
+const displayIntro = localData.introHtml || introHtml || intro;
+const helllAlbum = albumsData.find((album) => album.slug === 'helll');
 ---
 
 <section
@@ -101,7 +107,7 @@ const {
 
     <p
       class="text-lg leading-relaxed font-body text-subtext"
-      set:html={intro}
+      set:html={displayIntro}
     />
   </div>
 
@@ -180,79 +186,128 @@ const {
   </div>
 </section>
 
-<section class="-mt-6 mb-6">
-  <div
-    class="rounded-[2rem] border border-accent/20 bg-accent/5 p-8 backdrop-blur-xl"
-  >
-    <div class="flex items-center gap-2 mb-6">
-      <Icon
-        name="mdi:album"
-        class="w-5 h-5 text-accent"
-      />
+<section class="-mt-6 mb-8">
+  <div class="mb-6 flex items-center gap-2">
+    <Icon name="mdi:vector-arrange-above" class="h-5 w-5 text-accent" />
+    <span class="text-xs font-semibold uppercase tracking-[0.35em] text-accent">
+      CREATIVE UNIVERSES
+    </span>
+  </div>
 
-      <span
-        class="text-xs font-semibold text-accent uppercase tracking-[0.35em]"
-      >
-        LATEST RELEASE
+  <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+    <a
+      href="/neo-sacred-zikr/"
+      class="group rounded-[2rem] border border-accent/20 bg-accent/5 p-7 no-underline transition-all duration-300 hover:-translate-y-1 hover:border-accent/45 hover:bg-accent/10 md:p-9"
+    >
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.35em] text-accent">
+        Sacred Music Universe
+      </p>
+      <h2 class="text-3xl font-heading font-bold text-maintext md:text-4xl">
+        Neo-Sacred Zikr
+      </h2>
+      <p class="mt-4 max-w-xl leading-7 text-subtext">
+        Music centered on remembrance, repetition, devotion and sacred invocation.
+        Its center is Zikr.
+      </p>
+      <p class="mt-7 font-heading text-lg font-bold text-maintext">
+        Neo-Sacred Zikr invites the listener to remember.
+      </p>
+    </a>
+
+    <a
+      href="/quranic-concepts/"
+      class="group rounded-[2rem] border border-[#6f1010]/45 bg-black/25 p-7 no-underline transition-all duration-300 hover:-translate-y-1 hover:border-[#a51d1d]/70 hover:bg-black/40 md:p-9"
+    >
+      <p class="mb-3 text-xs font-bold uppercase tracking-[0.35em] text-[#b74a4a]">
+        Concept Album Series
+      </p>
+      <h2 class="text-3xl font-heading font-bold text-maintext md:text-4xl">
+        QURANIC CONCEPTS
+      </h2>
+      <p class="mt-4 max-w-xl leading-7 text-subtext">
+        Concept albums built around specific themes, scenes, voices and realities
+        described in the Quran. The subject determines the sound.
+      </p>
+      <p class="mt-7 font-heading text-lg font-bold text-maintext">
+        QURANIC CONCEPTS invites the listener to enter.
+      </p>
+    </a>
+  </div>
+</section>
+
+<section class="mb-6">
+  <div
+    class="overflow-hidden rounded-[2rem] border border-[#6f1010]/40 bg-black/35 p-6 backdrop-blur-xl md:p-8"
+  >
+    <div class="mb-6 flex items-center gap-2">
+      <Icon name="mdi:album" class="h-5 w-5 text-[#b74a4a]" />
+
+      <span class="text-xs font-semibold uppercase tracking-[0.35em] text-[#b74a4a]">
+        UPCOMING • QURANIC CONCEPTS
       </span>
     </div>
 
-    <div
-      class="grid items-center grid-cols-1 gap-10 lg:grid-cols-[320px_1fr]"
-    >
-      <a
-        href="/albums/zikr-symphonic-metal/"
-        class="group"
-      >
+    <div class="grid items-center grid-cols-1 gap-10 lg:grid-cols-[340px_1fr]">
+      <a href="/albums/helll/" class="group">
         <img
-          src="/albums/zikr-symphonic-metal.webp"
-          alt="ZIKR SYMPHONIC METAL album cover by Berk KÖKSAL"
+          src="/albums/helll.png"
+          alt="HELLL album cover by Berk KÖKSAL"
           loading="lazy"
           decoding="async"
-          class="w-full rounded-3xl shadow-2xl transition duration-500 group-hover:scale-[1.02]"
+          class="w-full rounded-3xl border border-white/10 bg-black shadow-[0_0_80px_rgba(120,0,0,0.16)] transition duration-500 group-hover:scale-[1.02]"
         />
       </a>
 
       <div>
-        <div
-          class="mb-2 text-sm uppercase tracking-[0.35em] text-accent"
-        >
-          ALBUM • 2026
+        <div class="mb-2 text-sm uppercase tracking-[0.35em] text-[#b74a4a]">
+          ALBUM • 2026 • 19 TRACKS
         </div>
 
-        <h2 class="mb-4 text-4xl font-bold leading-tight text-maintext md:text-5xl">
-          ZIKR SYMPHONIC METAL
+        <h2 class="mb-3 text-5xl font-bold leading-none text-maintext md:text-7xl">
+          HELLL
         </h2>
 
-        <p
-          class="mb-8 text-lg leading-8 text-subtext"
-        >
-          A 19-movement Neo-Sacred Zikr cycle where a single sacred
-          utterance, HÛ, rises from breath and silence into monumental
-          choirs, symphonic orchestra, pipe organ and progressive
-          neoclassical metal.
+        <p class="mb-5 font-heading text-xl font-bold uppercase tracking-[0.08em] text-maintext/90 md:text-2xl">
+          THIS ALBUM DOES NOT BELONG TO THIS WORLD.
         </p>
 
+        <p class="mb-8 max-w-3xl text-lg leading-8 text-subtext">
+          A 19-track Quran-centered concept album that transforms warnings of Hell,
+          judgment, regret, thirst, confinement and irreversible consequence into one
+          uncompromising musical descent — ending inside the architecture of nineteen.
+        </p>
+
+        <div class="mb-8 flex flex-wrap gap-2 text-xs uppercase tracking-widest">
+          <span class="rounded-full border border-[#8f1c1c]/35 bg-[#8f1c1c]/10 px-4 py-2 text-[#d16c6c]">A Magnificent Disturbance</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">19 × 19</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">XIX</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">The Warning Must Be Heard</span>
+        </div>
+
         <div class="flex flex-wrap gap-4">
+          <!-- TODO: Replace this temporary Spotify URL with HELLL's album URL after release. -->
           <a
-            href="https://open.spotify.com/intl-tr/artist/1XO4b3ijvx48kFpjptciXp/discography/all"
+            href={helllAlbum?.spotify ?? resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center gap-3 rounded-full border border-[#1DB954]/30 bg-[#1DB954]/10 px-7 py-4 font-semibold text-maintext transition hover:bg-[#1DB954]/20"
           >
-            <Icon
-              name="mdi:spotify"
-              class="w-5 h-5 text-[#1DB954]"
-            />
-
-            Listen on Spotify
+            <Icon name="mdi:spotify" class="h-5 w-5 text-[#1DB954]" />
+            Spotify
           </a>
 
           <a
-            href="/albums/zikr-symphonic-metal/"
-            class="inline-flex items-center gap-3 px-7 py-4 font-semibold text-maintext transition border rounded-full border-accent/30 bg-accent/10 hover:bg-accent/20"
+            href="/albums/helll/"
+            class="inline-flex items-center gap-3 rounded-full border border-[#8f1c1c]/45 bg-[#8f1c1c]/10 px-7 py-4 font-semibold text-maintext transition hover:bg-[#8f1c1c]/20"
           >
-            View Album
+            Enter HELLL
+          </a>
+
+          <a
+            href="/quranic-concepts/"
+            class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-7 py-4 font-semibold text-maintext transition hover:bg-white/10"
+          >
+            QURANIC CONCEPTS
           </a>
         </div>
       </div>
