@@ -5,7 +5,7 @@ description: >-
   hakikati gizlememe, doğru sözlülük, şahitlik, tevhid, adalet, teslimiyet
   ve dini otoritenin sınırları üzerine kişisel ve özlü bir tefekkür.
 publishDate: 2026-08-20
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/ilan-et-tefekkur-makalesi_gorsel.webp"

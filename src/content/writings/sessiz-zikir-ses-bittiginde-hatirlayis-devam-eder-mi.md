@@ -5,7 +5,7 @@ description: >-
   sessiz zikir, kalbin hatırlayışı, dua, yakınlık, gaflet, gösteriş ve
   zikrin hayata bıraktığı iz üzerine bir tefekkür.
 publishDate: 2026-07-30
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/sessiz-zikir.webp"

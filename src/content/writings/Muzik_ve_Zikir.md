@@ -4,7 +4,7 @@ description: >-
   A'la 87:1 ayeti üzerinden Rabbin adını yüceltme, zikir, ses, sanat,
   tevhid, doğru söz, adalet ve teslimiyet üzerine bir tefekkür.
 publishDate: 2026-07-29
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/muzik-ve-zikir.webp"

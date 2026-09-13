@@ -5,7 +5,7 @@ description: >-
   açık ve gizli nimetler, su, rızık, gökler, yeryüzü, insanın kendi yaratılışı,
   şükür, tevhid ve nimetlerin hesabı üzerine kişisel ve özlü bir tefekkür.
 publishDate: 2026-08-16
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/rabbinin-harikalari-sayamadigimiz-nimetler.webp"

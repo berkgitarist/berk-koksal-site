@@ -4,7 +4,7 @@ description: >-
   Âl-i İmrân 3:18 ayeti üzerinden şahitlik, tevhid, bilgi, adalet,
   teslimiyet ve insanın hayatıyla verdiği tanıklık üzerine bir tefekkür.
 publishDate: 2026-07-28
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/sahitligin-agirligi.jpg"

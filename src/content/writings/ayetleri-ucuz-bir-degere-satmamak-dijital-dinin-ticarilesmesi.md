@@ -5,7 +5,7 @@ description: >-
   dini içeriğin dikkat, görüntülenme, takipçi, üyelik, reklam ve kullanıcı verisiyle
   ekonomik değere dönüştürülmesi; gelir, mesaj, emek, tahrif ve dijital sorumluluk üzerine bir tefekkür.
 publishDate: 2026-08-07
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/ayetleri-ucuz-bir-degere-satmamak-dijital-dinin-ticarilesmesi.webp"

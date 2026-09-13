@@ -5,7 +5,7 @@ description: >-
   sonra geriye kaymak, dinden dönmek, kutsal yazıyı arkaya atmak, şahitlik,
   bilgi, adalet, doğru sözlülük, teslimiyet ve dini otoritenin sınırı üzerine bir tefekkür.
 publishDate: 2026-08-14
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/topuklari-uzerinde-geri-donmek.webp"

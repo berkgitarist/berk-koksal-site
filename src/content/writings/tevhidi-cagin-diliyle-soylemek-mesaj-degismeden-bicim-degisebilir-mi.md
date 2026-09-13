@@ -6,7 +6,7 @@ description: >-
   senfonik orkestrasyon, görsel tasarım, video ve dijital arayüzlerle ifade edilmesi;
   değişmeyen merkez ile değişebilen biçim arasındaki sorumluluk üzerine bir tefekkür.
 publishDate: 2026-08-08
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/tevhidi-cagin-diliyle-soylemek.webp"

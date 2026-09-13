@@ -5,7 +5,7 @@ description: >-
   rap, zikir, doğru söz, söz-eylem bütünlüğü, hak savunusu ve sanatçının
   dinleyici karşısındaki sorumluluğu üzerine kişisel bir tefekkür.
 publishDate: 2026-08-04
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/mikrofon-kimi-yuceltiyor.webp"

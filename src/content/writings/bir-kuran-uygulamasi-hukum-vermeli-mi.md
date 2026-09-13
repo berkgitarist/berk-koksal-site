@@ -5,7 +5,7 @@ description: >-
   Kuran uygulamaları, dini otorite, helal-haram dili, bilginin teyidi,
   yazılımcının sorumluluğu ve aracın kendi sınırını bilmesi üzerine bir tefekkür.
 publishDate: 2026-08-09
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 image: "/images/writings/bir-kuran-uygulamasi-hukum-vermeli-mi.webp"
 imageAlt: "Bir Kur’an Uygulaması Hüküm Vermeli mi başlıklı, açık bir kitap ile dijital arayüz arasındaki sınırı yansıtan kapak görseli"

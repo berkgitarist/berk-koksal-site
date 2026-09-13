@@ -6,7 +6,7 @@ description: >-
   Kuranteyit'in doğuşu, teyit sorumluluğu, dijital araçların sınırı
   ve araştırmanın davranışa dönüşmesi üzerine kişisel bir tefekkür.
 publishDate: 2026-08-05
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/meal-karsilastirmak-suphe-mi-sorumluluk-mu.webp"

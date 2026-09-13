@@ -5,7 +5,7 @@ description: >-
   yapay zekâ, bilgiye erişim, teyit, Kuran’ı dikkatlice inceleme, şahitlik,
   rehberlik, ahlaki sorumluluk ve dinî otoritenin sınırları üzerine bir tefekkür.
 publishDate: 2026-08-02
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/yapay-zeka-kurani-aciklayabilir-mi.webp"

@@ -5,7 +5,7 @@ description: >-
   ölçü, adalet, sınırı aşmamak, yaratılıştaki düzen, tekrar tekrar incelemek
   ve müzik üretiminde denge tecrübesinin insan hayatına tuttuğu ayna üzerine bir tefekkür.
 publishDate: 2026-08-03
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/mizan-mix-mastering-ve-kurandaki-olcu.webp"

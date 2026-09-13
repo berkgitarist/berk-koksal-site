@@ -5,7 +5,7 @@ description: >-
   Karun, ticaret, geçici dünya nimetleri, TANRI’ya yakınlık ve gerçek kazanç
   üzerine 19 bölümlük derin bir tefekkür.
 publishDate: 2026-08-26
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 image: "/images/writings/kurana-gore-gercek-zenginlik.webp"
 imageAlt: "Kuran’a Göre Gerçek Zenginlik başlıklı, maddi servet ile bilgi, paylaşma, adalet ve manevi ölçü arasındaki farkı simgeleyen kapak görseli"

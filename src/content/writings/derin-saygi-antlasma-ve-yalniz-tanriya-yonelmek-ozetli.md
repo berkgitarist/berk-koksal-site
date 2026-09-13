@@ -5,7 +5,7 @@ description: >-
   tevhid, şahitlik, bilgi, adalet, doğru sözlülük, teslimiyet, dini otoritenin sınırı,
   mahremiyette yöneliş, hesap bilinci ve yalnız TANRI’ya bağlanmak üzerine kapsamlı bir tefekkür.
 publishDate: 2026-08-12
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 image: "/images/writings/derin-saygi-antlasma-ve-yalniz-tanriya-yonelmek.webp"
 imageAlt: "Derin Saygı başlıklı, açık bir Kuran sayfası, antlaşmayı simgeleyen sade bir ışık çizgisi ve tek merkeze yönelen insan silueti"

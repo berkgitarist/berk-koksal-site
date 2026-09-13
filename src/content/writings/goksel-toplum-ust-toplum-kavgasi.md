@@ -5,7 +5,7 @@ description: >-
   insanın yaratılışı, Şeytan’ın kibri ve isyanı, tevhid, şahitlik, bilgi,
   adalet, teslimiyet, teyit ve dini otoritenin sınırları üzerine kapsamlı bir tefekkür.
 publishDate: 2026-08-24
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/goksel-toplum-ust-toplum-kavgasi.webp"

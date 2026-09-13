@@ -46,7 +46,7 @@ export const helllTracks = [
     title: "FUEL",
     hook: "People. Stones. Fire. The realization: WE ARE FUEL.",
     references: ["2:24", "66:6"],
-    concept: "The people inside the Fire are not merely surrounded by it; the Qur'anic image places people and stones within the language of its fuel."
+    concept: "The people inside the Fire are not merely surrounded by it; the Quranic image places people and stones within the language of its fuel."
   },
   {
     no: "07",
@@ -337,8 +337,8 @@ export const nineteenArchitecture = {
 
 export const helllManifesto = [
   "HELLL was not created to make suffering entertaining. It was created to make warning impossible to ignore.",
-  "The Qur'an does not approach Hell as decorative darkness. Its language confronts the human being with body, memory, regret, hunger, thirst, heat, confinement, responsibility and consequence. HELLL translates those recurring images into composition, sound design, vocal architecture, repetition and silence.",
+  "The Quran does not approach Hell as decorative darkness. Its language confronts the human being with body, memory, regret, hunger, thirst, heat, confinement, responsibility and consequence. HELLL translates those recurring images into composition, sound design, vocal architecture, repetition and silence.",
   "The screams are not there merely because screaming sounds extreme. The repetition is not there merely because repetition sounds heavy. The choirs are not there merely to make the music larger. Every device serves the concept.",
   "As the album descends, human language contracts. The requests become smaller: let me out; let me die; make it less; one day; one hour; one moment. The shrinking vocabulary is part of the narrative.",
-  "The listener does not stand outside the warning and observe it from a safe distance. The music tries to remove that distance — while keeping a clear distinction between Qur'anic source and artistic dramatization."
+  "The listener does not stand outside the warning and observe it from a safe distance. The music tries to remove that distance — while keeping a clear distinction between Quranic source and artistic dramatization."
 ];

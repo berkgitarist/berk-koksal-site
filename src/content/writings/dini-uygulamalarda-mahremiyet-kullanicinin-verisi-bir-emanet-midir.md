@@ -5,7 +5,7 @@ description: >-
   dijital mahremiyet, izin, veri minimizasyonu, yerel saklama,
   dini arama geçmişi, özel notlar ve yazılımcının emanet sorumluluğu üzerine bir tefekkür.
 publishDate: 2026-08-06
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/dini-uygulamalarda-mahremiyet-kullanicinin-verisi-bir-emanet-midir.webp"

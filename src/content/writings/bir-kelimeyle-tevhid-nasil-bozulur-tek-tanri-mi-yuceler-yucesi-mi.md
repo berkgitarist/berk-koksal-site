@@ -7,7 +7,7 @@ description: >-
   teyit, şahitlik, TANRI hakkında bilmediğini söyleme, dilbilgisi,
   şefaat, egemenlik ve dini otorite üzerine derin bir tefekkür.
 publishDate: 2026-08-10
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 image: "/images/writings/bir-kelimeyle-tevhid-nasil-bozulur-tek-tanri-mi-yuceler-yucesi-mi.webp"
 imageAlt: "Bir Kelimeyle Tevhid Nasıl Bozulur? Tek TANRI mı, Yüceler Yücesi mi başlıklı, açık bir kutsal kitap üzerinde yükselen tek güçlü ışık ile çevresindeki yapay çoğul yansımalar üzerinden tevhid ve çeviri farkını simgeleyen kapak görseli"

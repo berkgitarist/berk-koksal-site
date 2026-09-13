@@ -6,7 +6,7 @@ description: >-
   dini otorite, insanları efendi edinme tehlikesi ve TANRI’yı yeterli
   görmenin insan hayatındaki anlamı üzerine sert ve derin bir tefekkür.
 publishDate: 2026-08-27
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/tanriya-gercekten-guveniyormusun.webp"

@@ -6,7 +6,7 @@ description: >-
   anahtar kelime, bağlam, seçmeci okuma, yaklaşık eşleşme, meal farklılıkları,
   teyit ve davranış sorumluluğu üzerine bir tefekkür.
 publishDate: 2026-08-09
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 image: "/images/writings/bulmak-baska-anlamak-baska-arama-motoru-caginda-ayet.webp"
 imageAlt: "Bulmak Başka, Anlamak Başka başlıklı, bir arama kutusundan açılan Kuran sayfaları ile düşünce yollarını yansıtan kapak görseli"

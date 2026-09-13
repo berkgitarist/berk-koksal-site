@@ -5,7 +5,7 @@ description: >-
   doğruluk, tevhid, bilgi, adalet, teslimiyet ve insanın kendi şükür iddiasını
   ayetlerin önünde sınaması üzerine derin bir tefekkür.
 publishDate: 2026-08-22
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/gercekten-sukur-ediyormuyuz.webp"

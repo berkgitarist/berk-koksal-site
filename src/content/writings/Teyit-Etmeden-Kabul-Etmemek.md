@@ -5,7 +5,7 @@ description: >-
   araştırılması, şahitlik, adalet, kişisel sorumluluk, teslimiyet ve insan
   otoritesinin sınırları üzerine bir tefekkür.
 publishDate: 2026-07-29
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/Teyit-etmeden-kabul-etmemek.jpg"

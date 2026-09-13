@@ -5,7 +5,7 @@ description: >-
   insan elçinin ölümlülüğü, vahyin sürekliliği, tevhid, şahitlik,
   bilgi, adalet, teslimiyet ve dini otoritenin sınırları üzerine kapsamlı bir tefekkür.
 publishDate: 2026-08-01
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/Kuran-yasayan-elcidir.jpg"

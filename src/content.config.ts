@@ -12,7 +12,7 @@ const writings = defineCollection({
     description: z.string(),
     publishDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
-    category: z.string().default("Qur'an Reflections"),
+    category: z.string().default("Quran Reflections"),
     language: z.enum(['tr', 'en']).default('tr'),
     image: z.string().optional(),
     imageAlt: z.string().optional(),

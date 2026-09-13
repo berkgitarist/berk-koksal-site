@@ -5,7 +5,7 @@ description: >-
   ayetleri üzerinden TANRI’ya derin saygı, ego, kibir, sınırı aşma, doğru söz,
   bilgi, mahremiyet, teslimiyet ve insan otoritesinin sınırları üzerine bir tefekkür.
 publishDate: 2026-09-05
-category: "Qur'an Reflections"
+category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/tanriya-derin-saygi-ego-saygisizlik-siniri-asmak.webp"
