@@ -5,7 +5,7 @@ import albumsData from '../data/albums.json';
 const projects = albumsData.map((album) => ({
   title: album.title,
   description: album.description,
-  category: `${album.releaseStatus === 'upcoming' ? 'UPCOMING • ' : ''}${album.universe ?? 'ALBUM'} • ${album.year}`,
+  category: `${album.universe ?? 'ALBUM'} • ${album.year}`,
   images: [album.cover.replace(/^\//, '')],
   platforms: ['web'],
   tech: album.genre.split(' / '),

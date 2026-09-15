@@ -237,13 +237,23 @@ const helllAlbum = albumsData.find((album) => album.slug === 'helll');
 
 <section class="mb-6">
   <div
-    class="overflow-hidden rounded-[2rem] border border-[#6f1010]/40 bg-black/35 p-6 backdrop-blur-xl md:p-8"
+  class="relative overflow-hidden rounded-[2rem] border border-[#6f1010]/40 bg-black/35 p-6 backdrop-blur-xl md:p-8"
+>
+  <!-- HELLL / XIX BACKGROUND SYMBOL -->
+  <div
+    class="pointer-events-none absolute -right-10 top-1/2 -translate-y-1/2 select-none
+           text-[17rem] font-heading font-bold leading-none tracking-[-0.06em]
+           text-[#8f1c1c]/[0.12]
+           md:-right-16 md:text-[28rem]"
+    aria-hidden="true"
   >
+    XIX
+  </div>
     <div class="mb-6 flex items-center gap-2">
       <Icon name="mdi:album" class="h-5 w-5 text-[#b74a4a]" />
 
       <span class="text-xs font-semibold uppercase tracking-[0.35em] text-[#b74a4a]">
-        UPCOMING • QURANIC CONCEPTS
+        QURANIC CONCEPTS
       </span>
     </div>
 
