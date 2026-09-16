@@ -858,3 +858,115 @@ body.helll-theme ::selection {
   background: #7f1717;
   color: #ffffff;
 }
+
+.article-image-lightbox {
+position: fixed;
+inset: 0;
+z-index: 999999;
+display: flex;
+align-items: center;
+justify-content: center;
+background: rgba(0, 0, 0, 0.94);
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.article-image-lightbox.is-open {
+opacity: 1;
+visibility: visible;
+}
+
+.article-image-lightbox__viewport {
+position: absolute;
+inset: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+touch-action: none;
+cursor: grab;
+}
+
+.article-image-lightbox__viewport:active {
+cursor: grabbing;
+}
+
+.article-image-lightbox__image {
+display: block;
+width: auto;
+height: auto;
+max-width: 96vw;
+max-height: 92dvh;
+object-fit: contain;
+user-select: none;
+-webkit-user-select: none;
+-webkit-user-drag: none;
+transform: translate3d(0, 0, 0) scale(1);
+transform-origin: center center;
+will-change: transform;
+}
+
+.article-image-lightbox__close {
+position: absolute;
+top: max(1rem, env(safe-area-inset-top));
+right: 1rem;
+z-index: 3;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 46px;
+height: 46px;
+padding: 0;
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 999px;
+background: rgba(15, 13, 41, 0.8);
+color: #fff;
+font-size: 2rem;
+font-weight: 400;
+line-height: 1;
+cursor: pointer;
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+}
+
+.article-image-lightbox__hint {
+position: absolute;
+left: 50%;
+bottom: max(1.25rem, env(safe-area-inset-bottom));
+z-index: 3;
+transform: translateX(-50%);
+padding: 0.55rem 0.9rem;
+border: 1px solid rgba(255, 255, 255, 0.12);
+border-radius: 999px;
+background: rgba(15, 13, 41, 0.72);
+color: rgba(255, 255, 255, 0.75);
+font-size: 0.72rem;
+white-space: nowrap;
+pointer-events: none;
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+}
+
+html.article-image-lightbox-open,
+html.article-image-lightbox-open body {
+overflow: hidden !important;
+overscroll-behavior: none;
+}
+
+.writing-prose img {
+cursor: zoom-in;
+touch-action: manipulation;
+}
+
+@media (min-width: 768px) {
+.article-image-lightbox__hint {
+display: none;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+.article-image-lightbox {
+transition: none;
+}
+}

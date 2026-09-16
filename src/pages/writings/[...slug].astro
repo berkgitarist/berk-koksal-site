@@ -494,6 +494,41 @@ const structuredData = {
   </script>
 
   <div
+    id="article-image-lightbox"
+    class="article-image-lightbox"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-label={isTurkish ? 'Görsel önizleme' : 'Image preview'}
+  >
+    <button
+      id="article-image-lightbox-close"
+      class="article-image-lightbox__close"
+      type="button"
+      aria-label={isTurkish ? 'Görseli kapat' : 'Close image'}
+    >
+      ×
+    </button>
+
+    <div
+      id="article-image-lightbox-viewport"
+      class="article-image-lightbox__viewport"
+    >
+      <img
+        id="article-image-lightbox-image"
+        class="article-image-lightbox__image"
+        src=""
+        alt=""
+        draggable="false"
+      />
+    </div>
+
+    <div class="article-image-lightbox__hint">
+      {isTurkish ? 'İki parmakla büyütün' : 'Pinch with two fingers to zoom'}
+    </div>
+  </div>
+
+  <div
     id="copy-protection-warning"
     role="status"
     aria-live="polite"
@@ -515,26 +550,7 @@ const structuredData = {
         if (article.dataset.copyProtectionReady === 'true') return;
 
         article.dataset.copyProtectionReady = 'true';
-        article.addEventListener('click', async (event) => {
-  const target = event.target;
 
-  if (!(target instanceof HTMLImageElement)) return;
-
-  event.preventDefault();
-
-  try {
-    if (document.fullscreenElement === target) {
-      await document.exitFullscreen();
-      return;
-    }
-
-    if (!document.fullscreenElement) {
-      await target.requestFullscreen();
-    }
-  } catch (error) {
-    console.error('Görsel tam ekran açılamadı:', error);
-  }
-});
 
         let warningTimeout;
 
@@ -590,6 +606,224 @@ const structuredData = {
       document.addEventListener('astro:page-load', setupCopyProtection);
     })();
   </script>
+  <script is:inline>
+(() => {
+const setupArticleImageZoom = () => {
+const article = document.querySelector('.writing-prose');
+const lightbox = document.querySelector('#article-image-lightbox');
+const viewport = document.querySelector('#article-image-lightbox-viewport');
+const zoomImage = document.querySelector('#article-image-lightbox-image');
+const closeButton = document.querySelector('#article-image-lightbox-close');
+
+if (!(article instanceof HTMLElement)) return;
+if (!(lightbox instanceof HTMLElement)) return;
+if (!(viewport instanceof HTMLElement)) return;
+if (!(zoomImage instanceof HTMLImageElement)) return;
+if (!(closeButton instanceof HTMLButtonElement)) return;
+
+if (lightbox.dataset.zoomReady === 'true') return;
+
+lightbox.dataset.zoomReady = 'true';
+
+let scale = 1;
+let translateX = 0;
+let translateY = 0;
+
+const minScale = 1;
+const maxScale = 5;
+
+const pointers = new Map();
+
+let pinchStartDistance = 0;
+let pinchStartScale = 1;
+
+let dragStartX = 0;
+let dragStartY = 0;
+let dragTranslateX = 0;
+let dragTranslateY = 0;
+
+const clamp = (value, min, max) => {
+return Math.min(Math.max(value, min), max);
+};
+
+const distanceBetween = (a, b) => {
+const dx = b.clientX - a.clientX;
+const dy = b.clientY - a.clientY;
+return Math.hypot(dx, dy);
+};
+
+const applyTransform = () => {
+zoomImage.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`;
+};
+
+const resetZoom = () => {
+scale = 1;
+translateX = 0;
+translateY = 0;
+pointers.clear();
+applyTransform();
+};
+
+const openLightbox = (sourceImage) => {
+resetZoom();
+
+zoomImage.src = sourceImage.currentSrc || sourceImage.src;
+zoomImage.alt = sourceImage.alt || '';
+
+lightbox.classList.add('is-open');
+lightbox.setAttribute('aria-hidden', 'false');
+
+document.documentElement.classList.add('article-image-lightbox-open');
+};
+
+const closeLightbox = () => {
+lightbox.classList.remove('is-open');
+lightbox.setAttribute('aria-hidden', 'true');
+
+document.documentElement.classList.remove('article-image-lightbox-open');
+
+resetZoom();
+
+window.setTimeout(() => {
+zoomImage.src = '';
+}, 200);
+};
+
+article.addEventListener('click', (event) => {
+const target = event.target;
+
+if (!(target instanceof HTMLImageElement)) return;
+
+event.preventDefault();
+event.stopPropagation();
+
+openLightbox(target);
+});
+
+viewport.addEventListener('pointerdown', (event) => {
+pointers.set(event.pointerId, {
+clientX: event.clientX,
+clientY: event.clientY
+});
+
+viewport.setPointerCapture(event.pointerId);
+
+if (pointers.size === 1) {
+dragStartX = event.clientX;
+dragStartY = event.clientY;
+dragTranslateX = translateX;
+dragTranslateY = translateY;
+}
+
+if (pointers.size === 2) {
+const points = Array.from(pointers.values());
+
+pinchStartDistance = distanceBetween(points[0], points[1]);
+pinchStartScale = scale;
+}
+});
+
+viewport.addEventListener('pointermove', (event) => {
+if (!pointers.has(event.pointerId)) return;
+
+pointers.set(event.pointerId, {
+clientX: event.clientX,
+clientY: event.clientY
+});
+
+if (pointers.size === 2) {
+const points = Array.from(pointers.values());
+
+const currentDistance = distanceBetween(points[0], points[1]);
+
+if (pinchStartDistance > 0) {
+scale = clamp(
+pinchStartScale * (currentDistance / pinchStartDistance),
+minScale,
+maxScale
+);
+
+if (scale <= 1.02) {
+scale = 1;
+translateX = 0;
+translateY = 0;
+}
+
+applyTransform();
+}
+
+return;
+}
+
+if (pointers.size === 1 && scale > 1) {
+translateX = dragTranslateX + (event.clientX - dragStartX);
+translateY = dragTranslateY + (event.clientY - dragStartY);
+
+applyTransform();
+}
+});
+
+const removePointer = (event) => {
+pointers.delete(event.pointerId);
+
+if (pointers.size === 1) {
+const remaining = Array.from(pointers.values())[0];
+
+dragStartX = remaining.clientX;
+dragStartY = remaining.clientY;
+dragTranslateX = translateX;
+dragTranslateY = translateY;
+}
+
+if (pointers.size < 2) {
+pinchStartDistance = 0;
+}
+};
+
+viewport.addEventListener('pointerup', removePointer);
+viewport.addEventListener('pointercancel', removePointer);
+
+viewport.addEventListener('dblclick', (event) => {
+event.preventDefault();
+
+if (scale > 1) {
+resetZoom();
+return;
+}
+
+scale = 2.5;
+translateX = 0;
+translateY = 0;
+
+applyTransform();
+});
+
+closeButton.addEventListener('click', closeLightbox);
+
+lightbox.addEventListener('click', (event) => {
+if (event.target === lightbox) {
+closeLightbox();
+}
+});
+
+document.addEventListener('keydown', (event) => {
+if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+closeLightbox();
+}
+});
+};
+
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', setupArticleImageZoom, {
+once: true
+});
+} else {
+setupArticleImageZoom();
+}
+
+document.addEventListener('astro:page-load', setupArticleImageZoom);
+})();
+</script>
 </Layout>
 
 <style>
@@ -1077,5 +1311,114 @@ const structuredData = {
     margin-right: 0 !important;
   }
 }
+
+
+  /* === ARTICLE IMAGE LIGHTBOX / PINCH ZOOM === */
+  .article-image-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.94);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  .article-image-lightbox.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .article-image-lightbox__viewport {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    touch-action: none;
+    cursor: grab;
+  }
+
+  .article-image-lightbox__viewport:active {
+    cursor: grabbing;
+  }
+
+  .article-image-lightbox__image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 96vw;
+    max-height: 92dvh;
+    object-fit: contain;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    transform: translate3d(0, 0, 0) scale(1);
+    transform-origin: center center;
+    will-change: transform;
+  }
+
+  .article-image-lightbox__close {
+    position: absolute;
+    top: max(1rem, env(safe-area-inset-top));
+    right: 1rem;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    background: rgba(15, 13, 41, 0.8);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .article-image-lightbox__hint {
+    position: absolute;
+    left: 50%;
+    bottom: max(1.25rem, env(safe-area-inset-bottom));
+    z-index: 3;
+    transform: translateX(-50%);
+    padding: 0.55rem 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    background: rgba(15, 13, 41, 0.72);
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.72rem;
+    white-space: nowrap;
+    pointer-events: none;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  :global(html.article-image-lightbox-open),
+  :global(html.article-image-lightbox-open body) {
+    overflow: hidden !important;
+    overscroll-behavior: none;
+  }
+
+  @media (min-width: 768px) {
+    .article-image-lightbox__hint {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .article-image-lightbox {
+      transition: none;
+    }
+  }
 
 </style>

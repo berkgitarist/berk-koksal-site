@@ -39,8 +39,8 @@ const albums = [
   <Nav />
 
   <main>
-    <section class="min-h-screen px-5 py-28 md:px-8">
-      <div class="mx-auto max-w-6xl space-y-24 md:space-y-28">
+    <section class="min-h-screen px-5 py-10 md:px-8 md:py-28">
+      <div class="mx-auto max-w-6xl space-y-8 md:space-y-28">
 
         <!-- HERO -->
         <header class="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
@@ -78,7 +78,7 @@ const albums = [
         </header>
 
         <!-- ABOUT -->
-        <section class="grid grid-cols-1 gap-12 lg:grid-cols-[0.75fr_1.25fr]">
+        <section class="grid grid-cols-1 gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:gap-12">
           <div>
             <p class="mb-4 text-xs font-bold uppercase tracking-[0.45em] text-accent">I</p>
             <h2 class="text-4xl font-heading font-bold text-maintext md:text-5xl">
@@ -214,7 +214,7 @@ const albums = [
         </section>
 
         <!-- PRODUCTION -->
-        <section class="grid grid-cols-1 items-start gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+        <section class="grid grid-cols-1 items-start gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12">
           <div>
             <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">IV · Production</p>
             <h2 class="text-4xl font-heading font-bold text-maintext md:text-5xl">
@@ -573,6 +573,41 @@ const albums = [
           </div>
         </section>
 
+        <!-- FULL BIOGRAPHY BUTTON - BOTTOM -->
+<div>
+  <a
+    href="/full-biography/"
+    class="group flex w-full items-center justify-between rounded-2xl border border-accent/40 bg-accent/10 px-6 py-5 text-accent transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-background md:px-8 md:py-7"
+    aria-label="Read Berk Köksal's full biography"
+  >
+    <div>
+      <p class="text-xs font-bold uppercase tracking-[0.3em] opacity-80">
+        Continue the Story
+      </p>
+
+      <p class="mt-2 text-xl font-heading font-bold md:text-2xl">
+        Read Full Biography
+      </p>
+    </div>
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-7 w-7 shrink-0 transition-transform duration-300 group-hover:translate-x-2"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
+      aria-hidden="true"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M9 5l7 7-7 7"
+      />
+    </svg>
+  </a>
+</div>
+
         <!-- FINAL -->
         <section class="py-0 text-center md:py-20">
           <p class="mb-8 text-xs font-bold uppercase tracking-[0.45em] text-accent">Final Statement</p>
@@ -595,6 +630,7 @@ const albums = [
           </h2>
           <p class="mt-6 text-sm text-accent">Quran: The Final Testament ↗</p>
         </a>
+        
       </div>
     </section>
   </main>

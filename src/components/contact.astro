@@ -29,6 +29,7 @@ const baseSocials = localData.socials
   )
   .map((social) => ({
     ...social,
+
     displayUrl: social.url
       .replace('https://', '')
       .replace('http://', '')
@@ -43,6 +44,7 @@ const existingNames = new Set(
 
 const contactSocials = [
   ...baseSocials,
+
   ...extraSocials.filter(
     (social) => !existingNames.has(social.name.toLowerCase())
   ),
@@ -51,81 +53,201 @@ const contactSocials = [
 
 <section id="contact" class="section-container">
   <div class="container mx-auto">
-    <div class="space-y-12">
-      <div class="contact-header mb-16 opacity-0">
-        <h2 class="mb-2 flex items-center gap-4 font-heading text-3xl font-bold text-maintext md:text-4xl">
-          <span class="text-accent">/</span> Contact Me
-        </h2>
 
-        <p class="max-w-md font-body text-sm text-subtext">
-          Feel free to reach out. I'm always open to discussing new projects and opportunities.
-        </p>
-      </div>
+    <!-- CONTACT HEADER -->
+    <div class="contact-header mb-7 opacity-0 md:mb-12">
+      <h2
+        class="mb-2 flex items-center gap-4 font-heading text-3xl font-bold text-maintext md:text-4xl"
+      >
+        <span class="text-accent">/</span>
+        Contact Me
+      </h2>
 
-      <div class="grid grid-cols-1 gap-5 text-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-        {
-          contactSocials.map((social) => (
+      <p class="max-w-md font-body text-sm leading-6 text-subtext">
+        Feel free to reach out. I'm always open to discussing new projects and opportunities.
+      </p>
+    </div>
+
+
+    <!-- CONTACT CARDS -->
+    <div
+      class="grid grid-cols-3 gap-2 md:grid-cols-3 md:gap-4 xl:grid-cols-6"
+    >
+      {
+        contactSocials.map((social) => {
+
+          const isEmail = social.url.startsWith('mailto:');
+
+          return (
             <a
               href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${social.name} bağlantısını yeni sekmede aç`}
-              class="contact-card group flex min-h-[190px] flex-col items-center justify-center rounded-2xl border border-accent/10 bg-accent/5 p-5 opacity-0 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-accent/10 hover:shadow-[0_18px_50px_rgba(0,0,0,0.25)]"
+              target={isEmail ? undefined : '_blank'}
+              rel={isEmail ? undefined : 'noopener noreferrer'}
+              aria-label={`${social.name} bağlantısını aç`}
+              class="
+                contact-card
+                group
+                flex
+                min-w-0
+                min-h-[112px]
+                flex-col
+                items-center
+                justify-center
+                rounded-2xl
+                border
+                border-accent/10
+                bg-accent/5
+                px-2
+                py-4
+                text-center
+                opacity-0
+                transition-all
+                duration-300
+
+                hover:-translate-y-1
+                hover:border-accent/40
+                hover:bg-accent/10
+                hover:shadow-[0_18px_50px_rgba(0,0,0,0.25)]
+
+                md:min-h-[175px]
+                md:px-5
+                md:py-6
+              "
             >
+
               <Icon
                 name={social.icon}
-                class="mx-auto mb-4 h-10 w-10 text-accent transition-transform duration-300 group-hover:scale-110"
+                class="
+                  mb-2
+                  h-7
+                  w-7
+                  shrink-0
+                  text-accent
+                  transition-transform
+                  duration-300
+                  group-hover:scale-110
+
+                  md:mb-4
+                  md:h-10
+                  md:w-10
+                "
               />
 
-              <h3 class="mb-2 font-bold text-maintext">
+
+              <h3
+                class:list={[
+                  'font-heading font-bold leading-tight text-maintext',
+
+                  social.name === 'Kuran Derslerimiz'
+                    ? 'text-[10px] sm:text-xs md:text-base'
+                    : 'text-xs sm:text-sm md:text-base',
+                ]}
+              >
                 {social.name}
               </h3>
 
-              <p class="contact-url min-h-[2.5rem] w-full max-w-full px-1 text-center text-xs leading-5 text-subtext">
+
+              <!-- URL sadece tablet / masaüstünde -->
+              <p
+                class="
+                  contact-url
+                  mt-2
+                  hidden
+                  w-full
+                  max-w-full
+                  text-center
+                  text-xs
+                  leading-5
+                  text-subtext
+
+                  md:block
+                "
+              >
                 {social.displayUrl}
               </p>
-            </a>
-          ))
-        }
-      </div>
 
-      <div class="contact-footer border-t border-white/5 pt-8 opacity-0">
-        <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
-          <p class="order-2 font-body text-sm text-subtext md:order-1">
-            {localData.name} © 2026
+            </a>
+          );
+        })
+      }
+    </div>
+
+
+    <!-- FOOTER -->
+    <div
+      class="contact-footer mt-8 border-t border-white/5 pt-6 opacity-0 md:mt-12 md:pt-8"
+    >
+      <div
+        class="flex flex-col items-center justify-between gap-5 md:flex-row"
+      >
+
+        <p
+          class="order-2 font-body text-sm text-subtext md:order-1"
+        >
+          {localData.name} © 2026
+        </p>
+
+
+        <a
+          href="https://qurantft.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="
+            group
+            order-1
+            text-center
+            transition-all
+            duration-300
+
+            md:order-2
+            md:text-right
+          "
+        >
+
+          <p
+            class="text-sm italic text-subtext transition-colors group-hover:text-accent"
+          >
+            [87:1] Glorify the name of your Lord, the Most High.
           </p>
 
-          <a
-            href="https://qurantft.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group order-1 text-center transition-all duration-300 md:order-2 md:text-right"
+          <p
+            class="mt-1 text-xs text-accent opacity-70 transition-opacity group-hover:opacity-100"
           >
-            <p class="text-sm italic text-subtext transition-colors group-hover:text-accent">
-              [87:1] Glorify the name of your Lord, the Most High.
-            </p>
+            Quran: The Final Testament ↗
+          </p>
 
-            <p class="mt-1 text-xs text-accent opacity-70 transition-opacity group-hover:opacity-100">
-              Quran: The Final Testament ↗
-            </p>
-          </a>
-        </div>
+        </a>
+
       </div>
     </div>
+
   </div>
 </section>
 
+
 <style>
+
   .contact-header,
   .contact-footer {
     transform: translateY(20px);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+    transition:
+      opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
+
   .contact-card {
-    transform: translateY(20px) scale(0.95);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(20px) scale(0.96);
+
+    transition:
+      opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 0.3s ease,
+      background-color 0.3s ease,
+      box-shadow 0.3s ease;
   }
+
 
   .contact-url {
     overflow-wrap: anywhere;
@@ -133,51 +255,122 @@ const contactSocials = [
     white-space: normal;
   }
 
+
   .contact-header.reveal,
   .contact-card.reveal,
   .contact-footer.reveal {
     opacity: 1 !important;
     transform: translateY(0) scale(1);
   }
+
+
+  /* MOBİL */
+  @media (max-width: 767px) {
+
+    .contact-card {
+      aspect-ratio: 1 / 0.9;
+    }
+
+  }
+
+
+  /* Hareket azaltma tercihi */
+  @media (prefers-reduced-motion: reduce) {
+
+    .contact-header,
+    .contact-card,
+    .contact-footer {
+      transition: none;
+      transform: none;
+    }
+
+  }
+
 </style>
 
+
 <script>
+
   const revealContact = () => {
-    const header = document.querySelector('.contact-header');
-    const footer = document.querySelector('.contact-footer');
-    const cards = document.querySelectorAll('.contact-card');
+
+    const header =
+      document.querySelector('.contact-header');
+
+    const footer =
+      document.querySelector('.contact-footer');
+
+    const cards =
+      document.querySelectorAll('.contact-card');
+
 
     const observer = new IntersectionObserver(
+
       (entries) => {
+
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
 
-            if (target.classList.contains('contact-card')) {
-              const index = Array.from(cards).indexOf(target);
+          if (!entry.isIntersecting) return;
 
-              setTimeout(() => {
-                target.classList.add('reveal');
-              }, (index % 6) * 120);
-            } else {
+
+          const target =
+            entry.target as HTMLElement;
+
+
+          if (target.classList.contains('contact-card')) {
+
+            const index =
+              Array.from(cards).indexOf(target);
+
+
+            setTimeout(() => {
+
               target.classList.add('reveal');
-            }
 
-            observer.unobserve(target);
+            }, (index % 6) * 70);
+
           }
+
+          else {
+
+            target.classList.add('reveal');
+
+          }
+
+
+          observer.unobserve(target);
+
         });
+
       },
+
       {
-        threshold: 0.15,
+        threshold: 0.12,
         rootMargin: '0px 0px -10px 0px',
       }
+
     );
 
+
     if (header) observer.observe(header);
+
     if (footer) observer.observe(footer);
-    cards.forEach((card) => observer.observe(card));
+
+    cards.forEach(
+      (card) => observer.observe(card)
+    );
+
   };
 
-  window.addEventListener('load', revealContact);
-  document.addEventListener('astro:after-swap', revealContact);
+
+  window.addEventListener(
+    'load',
+    revealContact
+  );
+
+
+  document.addEventListener(
+    'astro:after-swap',
+    revealContact
+  );
+
 </script>
