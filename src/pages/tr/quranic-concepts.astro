@@ -1,0 +1,262 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/nav.astro';
+import { Icon } from 'astro-icon/components';
+
+const futureConcepts = [
+['HEAVENN', 'Cennet', 'Huzur • bahçeler • nehirler • güven • bolluk • korkunun yokluğu'],
+['THE DAY', 'Yargı Günü', 'Diriliş • toplanma • kayıtlar • tanıklar • ayrışma'],
+['MIZAN', 'Terazi', 'Ölçü • ağırlık • adalet • ameller • denge • sonuç'],
+['ANGELS', 'Melekler', 'Elçiler • koruyucular • tanıklar • itaat • kayıt'],
+['CREATION', 'Yaratılış', 'Yeryüzü • gökler • yaşam • deliller • düzen'],
+['MOSES', 'Musa', 'Vahiy • Firavun • yüzleşme • mucizeler • çıkış'],
+['SATAN', 'Şeytan ve İnsan Seçimi', 'Kibir • reddetme • ayartma • sorumluluk • suçlama'],
+];
+
+const sourceSteps = [
+['01', 'Konu', 'Önce KURAN’da yer alan belirli bir tema, mekân, olay, karakter, diyalog veya metafizik gerçeklik belirlenir.'],
+['02', 'Ayetler', 'Albüm yapısı kesinleşmeden önce ilgili pasajlar toplanır ve sureler boyunca tekrar eden fikirler eşleştirilir.'],
+['03', 'Sesler', 'Konuşan kişiler ve sahneler birbirinden ayrılır. Doğrudan kaynak metni, sanatsal dramatizasyonla bilinçli olarak birbirine karıştırılmaz.'],
+['04', 'Kurallar', 'Tempo, enstrümantasyon, tekrar, sessizlik, görsel kimlik ve yapı doğrudan konunun kendisi tarafından belirlenir.'],
+['05', 'Müzik', 'Ancak kavramsal mimari netleştikten sonra nihai müzikal dünya şekillenmeye başlar.'],
+];
+---
+
+<Layout
+title="QURANIC CONCEPTS | Berk KÖKSAL"
+description="QURANIC CONCEPTS, Berk Köksal’ın KURAN’da anlatılan belirli tema, sahne, ses ve gerçeklikleri araştıran konsept albüm serisidir — bir konu, bir dünya, bir albüm."
+canonical="/tr/quranic-concepts/"
+ogImage="/albums/helll.png"
+ogType="website"
+lang="tr"
+pageClass="quranic-concepts-theme"
+disableAmbient={true}
+>
+<Nav />
+
+<section class="qc-page py-10 md:py-32">
+<div class="mx-auto max-w-6xl space-y-8 md:space-y-28">
+<!-- HERO -->
+<header class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black px-6 py-16 shadow-2xl md:px-14 md:py-24">
+<div class="pointer-events-none absolute inset-0 opacity-80">
+<div class="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#8d1010]/10 blur-3xl"></div>
+<div class="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-white/[0.025] blur-3xl"></div>
+</div>
+
+<div class="relative z-10 max-w-5xl">
+<p class="mb-6 text-xs font-bold uppercase tracking-[0.5em] text-[#b74a4a]">
+Berk Köksal’dan İkinci Bir Müzikal Evren
+</p>
+
+<h1 class="text-5xl font-heading font-bold leading-none text-white sm:text-6xl md:text-8xl">
+QURANIC<br />CONCEPTS
+</h1>
+
+<p class="mt-8 text-2xl font-heading font-bold text-white md:text-3xl">
+Bir konu. Bir dünya. Bir albüm.
+</p>
+
+<p class="mt-7 max-w-4xl text-lg leading-8 text-white/65 md:text-xl md:leading-9">
+KURAN’da anlatılan belirli temaları, sahneleri, sesleri ve gerçeklikleri araştıran bir konsept albüm serisi. Her çalışma tanımlanmış bir KURAN konusuyla başlar ve müzikal dilini, yapısını ve görsel kimliğini o konunun ihtiyaçlarına göre geliştirir.
+</p>
+
+<div class="mt-10 flex flex-wrap gap-4">
+<a
+href="/albums/helll/"
+class="inline-flex items-center gap-3 rounded-full border border-[#9e2525]/55 bg-[#7f1212]/15 px-7 py-4 font-bold text-white transition hover:border-[#c83d3d]/75 hover:bg-[#7f1212]/25"
+>
+HELLL’e Gir <span aria-hidden="true">→</span>
+</a>
+
+<a
+href="#manifesto"
+class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-7 py-4 font-bold text-white transition hover:bg-white/10"
+>
+Manifestoyu Oku
+</a>
+</div>
+</div>
+</header>
+
+<!-- DEFINITION -->
+<section class="grid grid-cols-1 gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:gap-10">
+<div>
+<p class="mb-4 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">I</p>
+<h2 class="text-4xl font-heading font-bold text-white md:text-5xl">
+Sesi konu belirler.
+</h2>
+</div>
+
+<div class="space-y-6 text-lg leading-8 text-white/65">
+<p>
+QURANIC CONCEPTS, KURAN’da bulunan belirli konular etrafında kurulan uzun soluklu bir müzik projesidir. Her albüm bir temayı, mekânı, olayı, karakteri, diyaloğu veya metafizik gerçekliği ayrı bir müzikal evren olarak ele alır.
+</p>
+<p>
+Amaç her ayeti şarkıya dönüştürmek ya da önce bir müzik türü seçip içine yerleştirilecek kutsal sözler aramak değildir. Süreç bunun tersine ilerler: önce konu gelir; ardından kaynak araştırması, sesler ve yapı belirlenir. Müzik ancak bundan sonra başlar.
+</p>
+<p class="font-heading text-2xl font-bold leading-9 text-white">
+Sabit bir tür yoktur. Yalnızca konsept vardır.
+</p>
+</div>
+</section>
+
+<!-- MANIFESTO -->
+<section id="manifesto" class="rounded-[2rem] border border-white/10 bg-white/[0.025] p-7 md:p-14">
+<p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">II · Manifesto</p>
+<h2 class="max-w-5xl text-4xl font-heading font-bold leading-tight text-white md:text-6xl">
+KURAN bir dekor değildir. Konsept, türden önce gelir.
+</h2>
+
+<div class="mt-6 grid grid-cols-1 gap-6 text-lg leading-8 text-white/65 md:mt-10 lg:grid-cols-2 lg:gap-8">
+<div class="space-y-5">
+<p>
+QURANIC CONCEPTS, KURAN’ı arka plan müziğine dönüştürmeye çalışmaz. Ayetleri görsel veya sözsel bir süs olarak kullanmaz. Önce bir müzik tarzı seçip daha sonra onu meşrulaştıracak KURAN ifadeleri aramaz.
+</p>
+<p>
+Her proje daha zor bir soru sorar: <strong class="text-white">Bu konu sesten ne talep ediyor?</strong>
+</p>
+</div>
+
+<div class="space-y-5">
+<p>
+Cehennem, Cennet gibi duyulamaz. Yargı, Yaratılış gibi ilerleyemez. Melekler, insan çatışmasıyla aynı müzikal dille temsil edilemez. Bir anlatı, metafizik bir kavramla aynı mimariye uymak zorunda değildir.
+</p>
+<p>
+Biçim konuya hizmet etmelidir. Asla tersi değil.
+</p>
+</div>
+</div>
+</section>
+
+<!-- TWO UNIVERSES -->
+<section>
+<p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">III · İki Evren</p>
+<h2 class="mb-6 text-4xl font-heading font-bold text-white md:mb-10 md:text-6xl">
+Hatırlamak ve içine girmek aynı hareket değildir.
+</h2>
+
+<div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+<a href="/tr/neo-sacred-zikr/" class="rounded-[2rem] border border-accent/25 bg-accent/5 p-8 no-underline transition hover:border-accent/50 md:p-10">
+<p class="text-xs font-bold uppercase tracking-[0.35em] text-accent">Neo-Sacred Zikr</p>
+<h3 class="mt-4 text-3xl font-heading font-bold text-white">Merkezde hatırlama vardır.</h3>
+<p class="mt-5 leading-7 text-white/60">
+Zikir, tekrar, bağlılık ve kutsal çağrı merkezli müzik. Tekrarı ibadet yönelimlidir ve hareketi hatırlamaya doğrudur.
+</p>
+<p class="mt-8 font-heading text-xl font-bold text-white">
+Neo-Sacred Zikr dinleyiciyi hatırlamaya davet eder.
+</p>
+</a>
+
+<div class="rounded-[2rem] border border-[#8f1c1c]/40 bg-[#7f1212]/10 p-8 md:p-10">
+<p class="text-xs font-bold uppercase tracking-[0.35em] text-[#d16c6c]">QURANIC CONCEPTS</p>
+<h3 class="mt-4 text-3xl font-heading font-bold text-white">Merkezde konu vardır.</h3>
+<p class="mt-5 leading-7 text-white/60">
+KURAN’da anlatılan konular, anlatılar, sesler, mekânlar ve gerçeklikler merkezli müzik. Tekrar; hafızayı, sonsuzluğu, yargıyı, hapsedilmeyi, huzuru veya konseptin gerektirdiği başka herhangi bir kuralı temsil edebilir.
+</p>
+<p class="mt-8 font-heading text-xl font-bold text-white">
+QURANIC CONCEPTS dinleyiciyi içine girmeye davet eder.
+</p>
+</div>
+</div>
+</section>
+
+<!-- SOURCE PRINCIPLE -->
+<section>
+<p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">IV · Kaynak İlkesi</p>
+<h2 class="mb-6 text-4xl font-heading font-bold text-white md:text-6xl">
+Önce araştırma. Sonra müzik.
+</h2>
+<p class="mb-6 max-w-4xl text-lg leading-8 text-white/60 md:mb-10">
+Serinin tamamında temel bir ayrım korunur: <strong class="text-white">KURAN kaynağı</strong> ile <strong class="text-white">sanatsal dramatizasyon</strong> aynı şey değildir. Özgün bağlayıcı veya dramatik cümleler sanatsal yorum olarak kalır; KURAN metniymiş gibi sunulmaz.
+</p>
+
+<div class="space-y-4">
+{sourceSteps.map(([number, title, text]) => (
+<article class="grid grid-cols-[72px_1fr] gap-5 rounded-2xl border border-white/10 bg-white/[0.02] p-6 md:grid-cols-[100px_1fr] md:p-7">
+<div class="font-mono text-2xl font-bold text-[#9d2a2a]">{number}</div>
+<div>
+<h3 class="text-2xl font-heading font-bold text-white">{title}</h3>
+<p class="mt-2 leading-7 text-white/60">{text}</p>
+</div>
+</article>
+))}
+</div>
+</section>
+
+<!-- HELLL -->
+<section class="overflow-hidden rounded-[2rem] border border-[#8f1c1c]/45 bg-black">
+<div class="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr]">
+<a href="/albums/helll/" class="group block bg-black p-5 md:p-8">
+<img
+src="/albums/helll.png"
+alt="Berk KÖKSAL HELLL albüm kapağı"
+class="w-full rounded-3xl border border-white/10 bg-black shadow-[0_0_90px_rgba(130,0,0,0.14)] transition duration-500 group-hover:scale-[1.015]"
+loading="lazy"
+/>
+</a>
+
+<div class="flex flex-col justify-center p-7 md:p-12 lg:p-14">
+<p class="text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">V · İlk Dünya</p>
+<h2 class="mt-4 text-6xl font-heading font-bold leading-none text-white md:text-8xl">HELLL</h2>
+<p class="mt-5 text-sm font-bold uppercase tracking-[0.3em] text-white/45">CEHENNEM • 19 PARÇA • 2026</p>
+
+<p class="mt-8 font-heading text-2xl font-bold uppercase leading-9 text-white md:text-3xl">
+BU ALBÜM BU DÜNYAYA AİT DEĞİL.
+</p>
+
+<p class="mt-6 text-lg leading-8 text-white/60">
+Ceza • pişmanlık • ateş • susuzluk • suçlama • çıkışın olmaması • kalıcılık • on dokuz. HELLL, ilk QURANIC CONCEPTS albümüdür ve yöntemin ilk eksiksiz gösterimidir: kendi müzikal, görsel ve anlatısal yasalarını belirleyen bir konu.
+</p>
+
+<div class="mt-8 flex flex-wrap gap-2">
+{['Görkemli Bir Rahatsızlık', '160 BPM', 'Siyah', 'Tekrar hapsedilmeye dönüşür', '19 × 19'].map((item) => (
+<span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-widest text-white/65">{item}</span>
+))}
+</div>
+
+<a
+href="/albums/helll/"
+class="mt-9 inline-flex w-fit items-center gap-3 rounded-full border border-[#a32d2d]/55 bg-[#7f1212]/15 px-7 py-4 font-bold text-white transition hover:bg-[#7f1212]/25"
+>
+Albüme Gir <span aria-hidden="true">→</span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- FUTURE -->
+<section>
+<p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">VI · Genişleyen Atlas</p>
+<h2 class="mb-6 text-4xl font-heading font-bold text-white md:text-6xl">
+Her seferinde bir konsept.
+</h2>
+<p class="mb-6 max-w-4xl text-lg leading-8 text-white/60 md:mb-10">
+Seri, KURAN kavramlarının giderek genişleyen bir müzikal atlası olarak tasarlanmıştır. Albümler birbirinden radikal biçimde farklı duyulabilir; yine de aynı sistemin parçalarıdır. Çünkü kimliği belirleyen tek bir tür değil, yöntemdir.
+</p>
+
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+{futureConcepts.map(([title, subtitle, text]) => (
+<article class="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+<p class="text-[11px] font-bold uppercase tracking-[0.3em] text-[#9f3b3b]">Gelecek Konsept</p>
+<h3 class="mt-3 text-2xl font-heading font-bold text-white">{title}</h3>
+<p class="mt-1 font-bold text-white/55">{subtitle}</p>
+<p class="mt-4 text-sm leading-6 text-white/45">{text}</p>
+</article>
+))}
+</div>
+</section>
+
+<!-- CLOSING -->
+<section class="rounded-[2rem] border border-white/10 bg-white/[0.02] px-6 py-14 text-center md:px-12 md:py-20">
+<Icon name="mdi:book-open-page-variant" class="mx-auto h-8 w-8 text-[#9f3b3b]" />
+<p class="mt-7 text-xs font-bold uppercase tracking-[0.5em] text-[#b74a4a]">Uzun Vadeli Vizyon</p>
+<h2 class="mx-auto mt-6 max-w-5xl text-4xl font-heading font-bold leading-tight text-white md:text-6xl">
+KURAN kavramlarından oluşan genişleyen bir müzikal atlas.
+</h2>
+<p class="mx-auto mt-7 max-w-3xl text-lg leading-8 text-white/55">
+KURAN hakkında tek bir albüm değil. Tek bir müzik tarzı değil. Sürekli tekrar edilen tek bir yorum değil. Her biri bir konuyu açan, onu inceleyen, kendi kurallarını kuran ve ardından bir sonraki dünyaya geçen bağımsız evrenlerden oluşan büyüyen bir koleksiyon.
+</p>
+</section>
+</div>
+</section>
+</Layout>

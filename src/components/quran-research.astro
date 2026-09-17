@@ -1,5 +1,40 @@
 ---
 import { Icon } from "astro-icon/components";
+
+interface Props {
+  lang?: 'en' | 'tr';
+}
+
+const { lang = 'en' } = Astro.props;
+const isTurkish = lang === 'tr';
+
+const copy = isTurkish
+  ? {
+      platform: 'KURAN Araştırma Platformu',
+      tagline: 'KURAN çalışması, ayet analizi ve araştırma araçları.',
+      paragraph1: 'Berk KÖKSAL, müziğin yanı sıra KuranTeyit.com’un da yaratıcısıdır. KuranTeyit; KURAN ayetlerini okumak, incelemek ve analiz etmek için odaklı bir dijital deneyim sunan modern bir KURAN araştırma platformudur.',
+      paragraph2: 'Proje; KURAN okuma, Arapça metin, çeviriler, ayet tabanlı araçlar, notlar ve analiz özelliklerini daha derin tefekkür ve araştırma için tek bir yapıda bir araya getirir.',
+      paragraph3: "KuranTeyit, Neo-Sacred Zikr'in arkasındaki aynı vizyonun araştırma ve yazılım yönünü temsil eder: TANRI'yı hatırlamak, KURAN üzerinde tefekkür etmek ve kutsal bilgiyi daha erişilebilir hâle getirmek.",
+      paragraph4: 'KuranTeyit; modern web teknolojilerini KURAN merkezli araştırma araçlarıyla birleştiren, fikir aşamasından tasarımına ve geliştirilmesine kadar Berk KÖKSAL tarafından bağımsız olarak oluşturulmuş bir yazılım projesidir.',
+      visit: "KuranTeyit'i Ziyaret Et",
+      android: 'Android Uygulamasını İndir',
+      visitAria: "KuranTeyit.com'u ziyaret et",
+      androidAria: "KuranTeyit Android uygulamasını Google Play'den indir",
+      imageAlt: 'KuranTeyit.com masaüstü ve mobil KURAN araştırma platformu ön izlemesi',
+    }
+  : {
+      platform: 'Quran Research Platform',
+      tagline: 'Quran study, verse analysis and research tools.',
+      paragraph1: 'Beyond music, Berk KÖKSAL is also the creator of KuranTeyit.com — a modern Quran research platform designed for reading, studying and analyzing Quran verses with a focused digital experience.',
+      paragraph2: 'The project brings together Quran reading, Arabic text, translations, verse-based tools, notes and analysis features for deeper reflection and research.',
+      paragraph3: 'KuranTeyit represents the research and software side of the same vision behind Neo-Sacred Zikr: remembering GOD, reflecting on the Quran and making sacred knowledge more accessible.',
+      paragraph4: 'KuranTeyit is an independent software project fully conceived, designed and developed from the ground up by Berk KÖKSAL, combining modern web technologies with Quran-centered research tools.',
+      visit: 'Visit KuranTeyit',
+      android: 'Get Android App',
+      visitAria: 'Visit KuranTeyit.com',
+      androidAria: 'Download KuranTeyit for Android on Google Play',
+      imageAlt: 'KuranTeyit.com desktop and mobile Quran research platform preview',
+    };
 ---
 
 <section class="quran-research-section mt-6 md:mt-16">
@@ -13,11 +48,11 @@ import { Icon } from "astro-icon/components";
         target="_blank"
         rel="noopener noreferrer"
         class="relative block overflow-hidden rounded-[1.5rem] border border-accent/20 bg-black/10 p-2 md:p-3 shadow-2xl shadow-accent/10"
-        aria-label="Visit KuranTeyit.com"
+        aria-label={copy.visitAria}
       >
         <img
           src="/kuranteyit-preview-v3.png"
-          alt="KuranTeyit.com masaüstü ve mobil Kuran araştırma platformu ön izlemesi"
+          alt={copy.imageAlt}
           width="2560"
           height="3419"
           loading="lazy"
@@ -31,7 +66,7 @@ import { Icon } from "astro-icon/components";
 
       <div>
         <p class="text-accent text-xs uppercase tracking-[0.35em] font-bold mb-4">
-          Quran Research Platform
+          {copy.platform}
         </p>
 
         <h2 class="text-4xl md:text-5xl font-heading font-bold text-maintext leading-tight">
@@ -39,26 +74,15 @@ import { Icon } from "astro-icon/components";
         </h2>
 
         <p class="text-accent/90 mt-3 font-body">
-          Quran study, verse analysis and research tools.
+          {copy.tagline}
         </p>
       </div>
 
       <div class="space-y-4 text-subtext font-body leading-8">
-        <p>
-          Beyond music, Berk KÖKSAL is also the creator of KuranTeyit.com — a modern Quran research platform designed for reading, studying and analyzing Quran verses with a focused digital experience.
-        </p>
-
-        <p>
-          The project brings together Quran reading, Arabic text, translations, verse-based tools, notes and analysis features for deeper reflection and research.
-        </p>
-
-        <p>
-          KuranTeyit represents the research and software side of the same vision behind Neo-Sacred Zikr: remembering GOD, reflecting on the Quran and making sacred knowledge more accessible.
-        </p>
-
-        <p>
-          KuranTeyit is an independent software project fully conceived, designed and developed from the ground up by Berk KÖKSAL, combining modern web technologies with Quran-centered research tools.
-        </p>
+        <p>{copy.paragraph1}</p>
+        <p>{copy.paragraph2}</p>
+        <p>{copy.paragraph3}</p>
+        <p>{copy.paragraph4}</p>
       </div>
 
       <div class="flex flex-wrap gap-4 pt-2">
@@ -69,7 +93,7 @@ import { Icon } from "astro-icon/components";
           class="inline-flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-7 py-3 text-maintext hover:bg-accent/20 hover:scale-105 transition-all"
         >
           <Icon name="mdi:book-open-page-variant" class="w-5 h-5" />
-          Visit KuranTeyit
+          {copy.visit}
         </a>
 
         <a
@@ -77,10 +101,10 @@ import { Icon } from "astro-icon/components";
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center gap-3 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-7 py-3 text-maintext hover:bg-[#D4AF37]/20 hover:scale-105 transition-all"
-          aria-label="Download Kuran Teyit for Android on Google Play"
+          aria-label={copy.androidAria}
         >
           <Icon name="mdi:google-play" class="w-5 h-5" />
-          Get Android App
+          {copy.android}
         </a>
       </div>
 

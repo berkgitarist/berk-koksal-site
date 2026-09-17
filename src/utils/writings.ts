@@ -39,11 +39,22 @@ export function formatWritingDate(
   ).format(date);
 }
 
-export function getWritingHref(id: string): string {
+export function getWritingHref(
+  id: string,
+  language: WritingLanguage = 'en'
+): string {
   const normalizedId = id
     .replace(/\.(md|mdx)$/i, '')
     .replace(/\/index$/i, '')
     .replace(/^\/+|\/+$/g, '');
 
-  return `/writings/${normalizedId}/`;
+  const prefix = language === 'tr' ? '/tr/writings' : '/writings';
+
+  return `${prefix}/${normalizedId}/`;
+}
+
+export function getWritingsIndexHref(
+  language: WritingLanguage = 'en'
+): string {
+  return language === 'tr' ? '/tr/writings/' : '/writings/';
 }

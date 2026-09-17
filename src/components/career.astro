@@ -2,12 +2,66 @@
 import QuranResearch from "./quran-research.astro";
 import WritingsPreview from "./writings-preview.astro";
 
-const stats = [
-  { value: "12", label: "Album Projects" },
-  { value: "2", label: "Creative Universes" },
-  { value: "209 +", label: "Zikr Songs" },
-  { value: "One-Man", label: "Production Vision" },
-];
+interface Props {
+  lang?: 'en' | 'tr';
+}
+
+const { lang = 'en' } = Astro.props;
+const isTurkish = lang === 'tr';
+
+const copy = isTurkish
+  ? {
+      sectionTitle: 'Biyografi',
+      sectionDescription: "Besteci, gitarist, müzik prodüktörü, Neo-Sacred Zikr'in kurucusu ve QURANIC CONCEPTS'in yaratıcısı.",
+      officialBiography: 'Resmî Sanatçı Biyografisi',
+      roles: 'Besteci • Gitarist • Müzik Prodüktörü • Neo-Sacred Zikr • QURANIC CONCEPTS',
+      paragraph1: 'Berk KÖKSAL; besteci, gitarist, vokalist, söz yazarı, aranjör, müzik prodüktörü, miks ve mastering mühendisi, yazılım mühendisi ve KURAN araştırmacısıdır.',
+      paragraph2a: 'Bugünkü müzikal çalışmaları iki ayrı yaratıcı yapı üzerinden ilerler.',
+      paragraph2b: "zikir, adanmışlık ve TEK TANRI'yı yüceltme merkezli ilerlerken,",
+      paragraph2c: "KURAN'da anlatılan belirli konuları, sahneleri, sesleri ve gerçeklikleri bütünlüklü konsept albümler olarak ele alır.",
+      paragraph3: "Berk KÖKSAL için müzik bir kariyerden daha fazlasıdır. Teslimiyetin, zikrin ve modern çağın sesleriyle TEK TANRI'yı yüceltme çağrısının bir yoludur.",
+      continueStory: 'Hikâyeye Devam Et',
+      readFullBiography: 'Tam Biyografiyi Oku',
+      fullBiographyAria: "Berk Köksal'ın tam biyografisini oku",
+      stats: [
+        { value: '12', label: 'Albüm Projesi' },
+        { value: '2', label: 'Yaratıcı Evren' },
+        { value: '209 +', label: 'Zikir Parçası' },
+        { value: 'Tek Kişilik', label: 'Prodüksiyon Vizyonu' },
+      ],
+      bannerLabel: 'Kutsal Müzik Evreni',
+      bannerDescription: "Orkestra koroları, spiritüel atmosferler, progresif rock, kutsal rap ve adanmış ses tasarımının tek bir amaç etrafında birleştiği yeni bir kutsal müzik vizyonu: TEK TANRI'yı hatırlamak ve yüceltmek.",
+      exploreNeo: "Neo-Sacred Zikr'i Keşfet",
+      portraitAlt: 'Berk Köksal portresi',
+      bannerAlt: 'Neo-Sacred Zikr afişi',
+    }
+  : {
+      sectionTitle: 'Biography',
+      sectionDescription: 'Composer, guitarist, music producer, founder of Neo-Sacred Zikr and creator of QURANIC CONCEPTS.',
+      officialBiography: 'Official Artist Biography',
+      roles: 'Composer • Guitarist • Music Producer • Neo-Sacred Zikr • QURANIC CONCEPTS',
+      paragraph1: 'Berk KÖKSAL is a composer, guitarist, vocalist, songwriter, arranger, music producer, mix and mastering engineer, software engineer and Quran researcher.',
+      paragraph2a: 'His current musical work moves through two distinct creative structures.',
+      paragraph2b: 'centers on remembrance, devotion and glorification of the ONE GOD, while',
+      paragraph2c: 'develops specific Quranic subjects, scenes, voices and realities as complete concept albums.',
+      paragraph3: 'For Berk KÖKSAL, music is more than a career. It is a path of submission, remembrance and a call to glorify the One GOD through the sounds of the modern age.',
+      continueStory: 'Continue the Story',
+      readFullBiography: 'Read Full Biography',
+      fullBiographyAria: "Read Berk Köksal's full biography",
+      stats: [
+        { value: '12', label: 'Album Projects' },
+        { value: '2', label: 'Creative Universes' },
+        { value: '209 +', label: 'Zikr Songs' },
+        { value: 'One-Man', label: 'Production Vision' },
+      ],
+      bannerLabel: 'Sacred Music Universe',
+      bannerDescription: 'A new sacred music vision where orchestral choirs, spiritual ambience, progressive rock, sacred rap and devotional sound design unite around one purpose: remembering and glorifying the One GOD.',
+      exploreNeo: 'Explore Neo-Sacred Zikr',
+      portraitAlt: 'Berk Köksal portrait',
+      bannerAlt: 'Neo-Sacred Zikr banner',
+    };
+
+const stats = copy.stats;
 ---
 <section
   id="career"
@@ -19,11 +73,11 @@ const stats = [
         class="text-3xl md:text-4xl font-heading font-bold text-maintext mb-2 flex items-center gap-4"
       >
         <span class="text-accent">/</span>
-        Biography
+        {copy.sectionTitle}
       </h2>
 
       <p class="text-subtext font-body text-sm max-w-2xl">
-        Composer, guitarist, music producer, founder of Neo-Sacred Zikr and creator of QURANIC CONCEPTS.
+        {copy.sectionDescription}
       </p>
     </div>
 
@@ -37,7 +91,7 @@ const stats = [
 
         <img
           src="/artist/berk-portrait.webp"
-          alt="Berk Köksal portrait"
+          alt={copy.portraitAlt}
           class="relative w-full rounded-[2rem] border border-accent/20 shadow-2xl shadow-accent/10 object-cover"
         />
       </div>
@@ -47,7 +101,7 @@ const stats = [
           <p
             class="text-accent text-xs uppercase tracking-[0.35em] font-bold mb-4"
           >
-            Official Artist Biography
+            {copy.officialBiography}
           </p>
 
           <h3
@@ -57,46 +111,38 @@ const stats = [
           </h3>
 
           <p class="text-accent/90 mt-3 font-body">
-            Composer • Guitarist • Music Producer • Neo-Sacred Zikr • QURANIC CONCEPTS
+            {copy.roles}
           </p>
         </div>
 
         <div class="space-y-4 text-subtext font-body leading-8">
-          <p>
-            Berk KÖKSAL is a composer, guitarist, vocalist, songwriter,
-            arranger, music producer, mix and mastering engineer, software
-            engineer and Quran researcher.
-          </p>
+          <p>{copy.paragraph1}</p>
 
           <p>
-            His current musical work moves through two distinct creative structures.
-            <strong class="text-maintext">Neo-Sacred Zikr</strong> centers on remembrance,
-            devotion and glorification of the ONE GOD, while
-            <strong class="text-maintext">QURANIC CONCEPTS</strong> develops specific
-            Quranic subjects, scenes, voices and realities as complete concept albums.
+            {copy.paragraph2a}
+            {' '}
+            <strong class="text-maintext">{isTurkish ? 'Neo-Sacred Zikr (Yeni Çağın Zikri)' : 'Neo-Sacred Zikr'}</strong> {copy.paragraph2b}
+            {' '}
+            <strong class="text-maintext">{isTurkish ? 'QURANIC CONCEPTS (KURANİK KONSEPTLER)' : 'QURANIC CONCEPTS'}</strong> {copy.paragraph2c}
           </p>
 
-          <p>
-            For Berk KÖKSAL, music is more than a career. It is a path of
-            submission, remembrance and a call to glorify the One GOD through
-            the sounds of the modern age.
-          </p>
+          <p>{copy.paragraph3}</p>
         </div>
 
         <a
-          href="/full-biography/"
+          href={isTurkish ? "/tr/full-biography/" : "/full-biography/"}
           class="group flex w-full items-center justify-between rounded-2xl border border-accent/40 bg-accent/10 px-6 py-5 text-accent transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-background hover:shadow-[0_16px_45px_rgba(167,139,250,0.22)]"
-          aria-label="Read Berk Köksal's full biography"
+          aria-label={copy.fullBiographyAria}
         >
           <div>
             <p
               class="text-[11px] font-bold uppercase tracking-[0.3em] opacity-80"
             >
-              Continue the Story
+              {copy.continueStory}
             </p>
 
             <p class="mt-2 text-xl font-heading font-bold md:text-2xl">
-              Read Full Biography
+              {copy.readFullBiography}
             </p>
           </div>
 
@@ -117,15 +163,15 @@ const stats = [
           </svg>
         </a>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
+        <div class="grid grid-cols-2 gap-3 pt-2 sm:gap-4 md:grid-cols-4">
           {
             stats.map((stat) => (
-              <div class="rounded-2xl border border-accent/15 bg-accent/5 p-4 text-center">
-                <div class="text-2xl font-heading font-bold text-maintext">
+              <div class="flex min-h-[112px] flex-col items-center justify-center rounded-2xl border border-accent/15 bg-accent/5 p-3 text-center sm:min-h-[120px] sm:p-4">
+                <div class="whitespace-nowrap text-2xl font-heading font-bold leading-none text-maintext">
                   {stat.value}
                 </div>
 
-                <div class="text-[11px] text-subtext uppercase tracking-wider mt-1">
+                <div class="mt-2 flex min-h-[2rem] items-center justify-center text-center text-[10px] font-medium uppercase leading-4 tracking-wider text-subtext sm:text-[11px]">
                   {stat.label}
                 </div>
               </div>
@@ -135,16 +181,16 @@ const stats = [
       </div>
     </div>
 
-    <QuranResearch />
+    <QuranResearch lang={lang} />
 
-    <WritingsPreview />
+    <WritingsPreview lang={lang} />
 
     <div
       class="mt-16 md:mt-20 relative overflow-hidden rounded-[2rem] border border-accent/20 bg-accent/5"
     >
       <img
         src="/artist/neo-sacred-zikr-banner.webp"
-        alt="Neo-Sacred Zikr banner"
+        alt={copy.bannerAlt}
         class="w-full h-[380px] md:h-[420px] object-cover opacity-80"
       />
 
@@ -157,7 +203,7 @@ const stats = [
           <p
             class="text-accent text-xs uppercase tracking-[0.35em] font-bold mb-4"
           >
-            Sacred Music Universe
+            {copy.bannerLabel}
           </p>
 
           <h3
@@ -167,16 +213,14 @@ const stats = [
           </h3>
 
           <p class="text-subtext font-body leading-7">
-            A new sacred music vision where orchestral choirs, spiritual
-            ambience, progressive rock, sacred rap and devotional sound design
-            unite around one purpose: remembering and glorifying the One GOD.
+            {copy.bannerDescription}
           </p>
 
           <a
-            href="/neo-sacred-zikr"
+            href={isTurkish ? "/tr/neo-sacred-zikr/" : "/neo-sacred-zikr/"}
             class="group mt-7 inline-flex items-center gap-3 rounded-full border border-accent/40 bg-background/40 px-6 py-3 font-bold text-accent backdrop-blur-md transition-all duration-300 hover:border-accent hover:bg-accent hover:text-background"
           >
-            <span>Explore Neo-Sacred Zikr</span>
+            <span>{copy.exploreNeo}</span>
 
             <span
               aria-hidden="true"

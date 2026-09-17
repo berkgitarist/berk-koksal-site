@@ -1,6 +1,31 @@
 ---
 import { Icon } from 'astro-icon/components';
-import localData from '../data/home.json';
+import localDataEn from '../data/home.json';
+import localDataTr from '../data/home.tr.json';
+
+interface Props {
+  lang?: 'en' | 'tr';
+}
+
+const { lang = 'en' } = Astro.props;
+const isTurkish = lang === 'tr';
+const localData = isTurkish ? localDataTr : localDataEn;
+
+const copy = isTurkish
+  ? {
+      heading: 'İletişim',
+      description: 'Benimle iletişime geçebilirsiniz. Yeni projeleri, iş birliklerini ve fırsatları konuşmaya her zaman açığım.',
+      openLink: 'bağlantısını aç',
+      verse: '[87:1] Rabbinin adını yücelt, En Yüce olanı.',
+      testament: 'Kuran: Son Ahit ↗',
+    }
+  : {
+      heading: 'Contact Me',
+      description: "Feel free to reach out. I'm always open to discussing new projects, collaborations and opportunities.",
+      openLink: 'open link',
+      verse: '[87:1] Glorify the name of your Lord, the Most High.',
+      testament: 'Quran: The Final Testament ↗',
+    };
 
 const extraSocials = [
   {
@@ -60,11 +85,11 @@ const contactSocials = [
         class="mb-2 flex items-center gap-4 font-heading text-3xl font-bold text-maintext md:text-4xl"
       >
         <span class="text-accent">/</span>
-        Contact Me
+        {copy.heading}
       </h2>
 
       <p class="max-w-md font-body text-sm leading-6 text-subtext">
-        Feel free to reach out. I'm always open to discussing new projects and opportunities.
+        {copy.description}
       </p>
     </div>
 
@@ -83,7 +108,7 @@ const contactSocials = [
               href={social.url}
               target={isEmail ? undefined : '_blank'}
               rel={isEmail ? undefined : 'noopener noreferrer'}
-              aria-label={`${social.name} bağlantısını aç`}
+              aria-label={`${social.name} ${copy.openLink}`}
               class="
                 contact-card
                 group
@@ -207,13 +232,13 @@ const contactSocials = [
           <p
             class="text-sm italic text-subtext transition-colors group-hover:text-accent"
           >
-            [87:1] Glorify the name of your Lord, the Most High.
+            {copy.verse}
           </p>
 
           <p
             class="mt-1 text-xs text-accent opacity-70 transition-opacity group-hover:opacity-100"
           >
-            Quran: The Final Testament ↗
+            {copy.testament}
           </p>
 
         </a>

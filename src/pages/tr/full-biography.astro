@@ -1,0 +1,1069 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/nav.astro";
+
+const albums = [
+  {
+    year: "2024",
+    title: "Tanrı'nın Hediyesi",
+    description: "Albüm formatında yayımlanan ilk Neo-Sacred Zikr çalışması: Tövbe Ettim, Estağfurullah Ya Gaffar'ın vokalli, enstrümantal ve piyano-koro merkezli üç farklı yorumu."
+  },
+  {
+    year: "2025",
+    title: "Zikr Symphony",
+    description: "Yolculuğun ilk büyük ölçekli konsept albümü: 19 ana eser ve on dokuzuncu eserin içinde proje için üretilen diğer müzikal fikirlerden oluşan ek bir 19 bölümlük medley."
+  },
+  {
+    year: "2026",
+    title: "Zikr Huu",
+    description: "Kadın vokaller, tekrar, dinginlik ve bilinçli olarak seyrek tutulan enstrümantasyon etrafında şekillenen dokuz parçalık minimalist bir meditasyon."
+  },
+  {
+    year: "2026",
+    title: "Zikr Nur",
+    description: "Kadın vokaller, yağmur atmosferi, uzaktaki gök gürültüsü, piyano, ney ve yumuşak ritimlerle şekillenen 19 parçalık ambient zikir albümü."
+  },
+  {
+    year: "2026",
+    title: "ZIKR ROCK",
+    description: "Enerji ve distorsiyonun albüm boyunca giderek yükseldiği, Köksal'ın rock ve neoklasik gitar köklerine 19 parçalık dönüşü."
+  },
+  {
+    year: "2026",
+    title: "Neo-Sacred Zikr: Classical Chorus",
+    description: "Köksal'ın Mozart, Requiem yazımı ve büyük kutsal koro düzenlemeleriyle yıllara yayılan ilişkisinden beslenen 19 parçalık klasik ve koral çalışma."
+  },
+  {
+    year: "2026",
+    title: "Neo-Sacred Zikr: One God One Love",
+    description: "TEK TANRI'ya inanan çocukların da O'nu anabilecekleri ve yüceltebilecekleri çağdaş müziklere sahip olması fikrinden doğan 19 parçalık çocuk korosu projesi."
+  },
+  {
+    year: "2026",
+    title: "ZIKR RAP",
+    description: "Bismillahirrahmanirrahim ile başlayan ve rap müziğinin ritmik enerjisini zikir, hatırlama ve TANRI'ya övgü için kullanan 19 parçalık proje."
+  },
+  {
+    year: "2026",
+    title: "Zikr-i Batın",
+    description: "İçsel hatırlama, ilahî isimler ve KURAN'ın Huruf-u Mukattaa harflerinden kurulan final kompozisyonu etrafında şekillenen son derece kişisel 19 parçalık çalışma."
+  },
+  {
+    year: "2026",
+    title: "ZIKR JAZZ",
+    description: "Genişletilmiş ve modal armoniyi daha sıcak ve sakin bir ses dünyasıyla kullanan 19 parçalık kutsal caz projesi."
+  },
+  {
+    year: "2026",
+    title: "ZIKR SYMPHONIC METAL",
+    description: "Neredeyse bütünüyle HÛ etrafında kurulan; seçili bölümlerde Hay / Al-Hayy kullanılan; kadın sesi, kutsal koro, orkestra, borulu org ve progresif neoklasik metali birleştiren 19 bölümlük konsept albüm."
+  }
+];
+
+const productionSkills = [
+  "Beste",
+  "Şarkı Yazımı",
+  "Gitar Performansı",
+  "Vokal",
+  "Aranjman",
+  "Kayıt",
+  "MIDI Programlama",
+  "Orkestrasyon",
+  "Ses Tasarımı",
+  "Miks",
+  "Mastering",
+  "Görsel Konseptler",
+  "Yazılım Geliştirme"
+];
+
+const archiveLinks = [
+  ["SoundCloud Arşivi", "https://soundcloud.com/berkkoksal"],
+  ["MüzikOnair Profili / İçerikler", "https://muzikonair.com/baslik/berk-koksal/"],
+  ["Cem Köksal — Life Tab", "http://www.akormerkezi.net/cem-koksal-life-tab_sarki-dvhnl.html"],
+  ["Ahmet Kanneci — Aygız Tab", "https://tabs.ultimate-guitar.com/tab/ahmet-kanneci/aygiz-ay-giz-tabs-1498641"],
+  ["Cem Köksal — Kalbim Bomboş Tab", "https://www.songsterr.com/a/wsa/cem-koksal-kalbim-bombos-tab-s28045t0"],
+  ["Cem Köksal — Earthquake Part Tab", "https://e-akor.com/sarki/cem-koksal-earthquake-part-tab"]
+];
+---
+
+<Layout
+  title="Tam Biyografi | Berk KÖKSAL"
+  description="Berk KÖKSAL'ın çocukluk yıllarındaki gitardan berkgitarist dönemine, prodüksiyondan KURAN araştırmalarına, TANRI'ya teslimiyetten Neo-Sacred Zikr ve QURANIC CONCEPTS'e uzanan kapsamlı yaşam öyküsü."
+  canonical="/tr/full-biography/"
+  ogImage="/artist/biography/hero-neo-sacred-zikr.webp"
+  lang="tr"
+>
+  <Nav />
+
+  <main>
+    <!-- HERO -->
+    <section class="px-4 pb-12 pt-28 md:px-8 md:pb-16 md:pt-32">
+      <div class="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-accent/25 shadow-2xl shadow-black/30">
+        <div class="relative aspect-[4/5] sm:aspect-[16/10] md:aspect-[16/8] lg:aspect-[16/7]">
+          <img
+            src="/artist/biography/hero-neo-sacred-zikr.webp"
+            alt="Berk Köksal ve Neo-Sacred Zikr sanatsal evreni"
+            class="absolute inset-0 h-full w-full object-cover object-center"
+            fetchpriority="high"
+          />
+
+          <div class="absolute inset-0 bg-gradient-to-r from-background/95 via-background/60 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-background/20"></div>
+
+          <div class="relative z-10 flex h-full items-end p-6 sm:p-9 md:p-12 lg:p-16">
+            <div class="max-w-3xl">
+              <p class="mb-4 text-xs font-bold uppercase tracking-[0.4em] text-accent md:text-sm">
+                Tüm Hikâye
+              </p>
+
+              <h1 class="text-4xl font-heading font-bold leading-none text-maintext sm:text-5xl md:text-6xl lg:text-7xl">
+                Berk KÖKSAL
+              </h1>
+
+              <p class="mt-5 text-base leading-7 text-maintext/90 sm:text-lg md:text-xl">
+                Besteci • Gitarist • Müzik Prodüktörü • Yazılım Mühendisi
+              </p>
+
+              <p class="mt-1 text-lg font-bold text-accent md:text-2xl">
+                Neo-Sacred Zikr'in Kurucusu<br />
+                QURANIC CONCEPTS'in Yaratıcısı
+              </p>
+
+              <a
+                href="#biography"
+                class="group mt-7 inline-flex items-center gap-3 rounded-full border border-maintext/25 bg-background/40 px-5 py-3 text-xs font-bold uppercase tracking-[0.2em] text-maintext backdrop-blur-md transition-all duration-300 hover:border-accent hover:bg-accent hover:text-background sm:text-sm"
+              >
+                <span>Yolculuğu Keşfet</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-300 group-hover:translate-y-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="biography" class="mx-auto max-w-6xl space-y-10 px-5 pt-2 pb-8 md:space-y-20 md:px-8 md:pt-4 md:pb-24">
+
+      <!-- I -->
+      <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="biography-image">
+          <img src="/artist/biography/berk-koksal-portrait.webp" alt="Berk Köksal portresi" class="aspect-[4/5] w-full object-cover" loading="lazy" />
+        </div>
+        <div>
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">I · Kökenler</p>
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Ses, sorgulama ve dönüşümle şekillenen bir yaşam</h2>
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>Berk Köksal, 19 Aralık 1980'de İstanbul'da doğdu. Çocukluk yıllarının önemli bir bölümünü yaklaşık on dört yaşına kadar Rami'de geçirdi. Annesi Aynur, babası Hasan'dı; kendisinden küçük bir erkek kardeşiyle büyüdü.</p>
+            <p>Müzik hayatına neredeyse ilk anıları kadar erken girdi. Çocukken evde babasının gitarı vardı. Teoriyi, tekniği ve müziğin kavramlarını bilmeden önce enstrümana dokunuyor, sesleri deniyor ve gitarı keşfedilecek bir dünya gibi görüyordu.</p>
+            <p>Bir dönem gitarı yalnızca tek tel üzerinden keşfetmeye çalıştı. Küçük bir çocukluk ayrıntısı gibi görünen bu deneyim, daha sonra öğrenme biçiminin simgesine dönüştü: elde olanla başla, dikkatle dinle, yapıyı incele ve oradan dışarı doğru büyüt.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- II -->
+      <section class="pro-glass p-8 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">II · Çocukluk ve Klasik Gitar</p>
+        <h2 class="mb-9 max-w-4xl text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">İlk sistemli adımlar</h2>
+        <div class="grid grid-cols-1 gap-8 text-lg leading-8 text-subtext lg:grid-cols-2">
+          <div class="space-y-6">
+            <p>Yaklaşık on iki-on üç yaşlarında Gaziosmanpaşa'da özel klasik gitar derslerine başladı. Küçük bir özel eğitim ortamında aldığı bu dersler, enstrümanla kurduğu ilişkinin ilk sistematik teknik temelini oluşturdu.</p>
+            <p>Rami'den ayrıldıktan sonra bir süre Gaziosmanpaşa Yeni Doğan Çeşme bölgesinde yaşadı. Haydarpaşa Endüstri Meslek Lisesi'ne başladığında okula daha rahat devam edebilmek için Kayışdağı'nda anneannesiyle de bir dönem yaşadı.</p>
+          </div>
+          <div class="space-y-6">
+            <p>Klasik gitar kısa sürede yalnızca enstrüman tekniğinin ötesinde bir kapı açtı. Çok seslilik, armoni ve klasik müziğin yapısı giderek daha fazla ilgisini çekti. Bir eserin yalnızca nasıl çalındığını değil, notaların neden birlikte çalıştığını ve bütün bir müzik sisteminin nasıl kurulduğunu merak ediyordu.</p>
+            <p>Bu merak ilerleyen yıllarda bilgisayarlar, MIDI ve bağımsız müzisyenlerin erişebildiği ilk kuşak müzik yazılımlarıyla doğal biçimde birleşti.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- III -->
+      <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="biography-image lg:order-2">
+          <img src="/artist/biography/berk-koksal-metal-era.webp" alt="Berk Köksal'ın gitar ve rock müzik yılları" class="aspect-[4/5] w-full object-cover" loading="lazy" />
+        </div>
+        <div class="lg:order-1">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">III · MIDI, Guitar Pro ve berkgitarist</p>
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Müziği yeniden kurarak öğrenmek</h2>
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>Köksal'ın gelişim yılları MIDI'nin ve kişisel bilgisayar tabanlı müzik araçlarının hızla geliştiği döneme denk geldi. Özellikle Guitar Pro 3, onun için yalnızca tablatür okuyan bir program değil, şarkıları içten dışa yeniden kurabildiği bir laboratuvara dönüştü.</p>
+            <p>Müzikleri kulaktan çıkarıyor; gitar, bas, davul, yaylılar ve diğer partileri MIDI ve tablatür olarak yazıyordu. İnternetin erken döneminde <strong class="text-maintext">berkgitarist</strong> adını kullanarak tab, akor, MIDI dosyaları ve Guitar Pro düzenlemeleri paylaştı.</p>
+            <p>Yngwie Malmsteen, Jason Becker, Steve Vai, Cem Köksal ve başka gitar merkezli müziklerle bağlantılı transkripsiyonlar yaptı. Hazır notaları okumak yerine sesleri kulaktan bulması, yaşamındaki en önemli müzik eğitimlerinden birine dönüştü.</p>
+            <p>Bir düzenlemeyi bütünüyle yeniden kurabilmek için yalnız gitarı değil; ritim, bas, armoni, davul, yaylılar ve kontrpuan arasındaki ilişkiyi de anlaması gerekiyordu. Böylece transkripsiyon giderek kompozisyon eğitimine dönüştü.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARCHIVE -->
+      <section class="pro-glass p-8 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">Erken İnternet Arşivi</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">berkgitarist yıllarının izleri</h2>
+        <p class="mb-8 max-w-4xl text-lg leading-8 text-subtext">Köksal'ın erken internet dönemindeki bazı çalışmaları ve daha sonraki bağımsız üretimleri hâlâ çeşitli müzik arşivlerinde ve sanatçı platformlarında görülebiliyor. Bu bağlantılar o dönemin kamusal kayıtlarının bir parçası olarak korunuyor.</p>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          {archiveLinks.map(([label, href]) => (
+            <a href={href} target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between rounded-2xl border border-accent/20 bg-accent/5 p-5 font-bold text-maintext transition-all hover:-translate-y-1 hover:border-accent/50 hover:bg-accent/10">
+              <span>{label}</span><span class="text-accent transition-transform group-hover:translate-x-1">↗</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <!-- IV -->
+      <section class="pro-glass p-8 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">IV · Paganini, Malmsteen ve Klasik Müzik</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Virtüözite bir amaç değil, bir dile dönüştü</h2>
+        <div class="space-y-6 text-lg leading-8 text-subtext">
+          <p>Erken dönemindeki iddialı denemelerden biri Niccolò Paganini'nin <em>Caprice No. 24</em> eserine heavy-metal yaklaşımıydı. Teknik açıdan zorlayıcı klasik materyalle çalışmak, virtüözite, kompozisyon ve ağır gitar müziği arasında kurduğu köprüyü güçlendirdi.</p>
+          <p>Yngwie Malmsteen'i keşfetmesi bir başka belirleyici dönüm noktası oldu. Malmsteen'in erken dönem müziğinde kendisinin de aradığı sese yakın bir dil buldu: neoklasik cümleler, diminished armoni, armonik minör renkleri, hızlı arpejler, ifade gücü yüksek solo gitar ve gitarın yarım ses aşağı akort edilmesiyle oluşan daha karanlık karakter.</p>
+          <p>Aynı dönemde klasik müzik ilgisi derinleşti. Bach'ın yapısal ve matematiksel çok sesliliği onu etkilerken Handel ve Chopin de önemli referanslar olarak kaldı. Mozart ise çok daha güçlü bir duygusal bağ kurdu. Köksal, kendi eserleri dışında müzik tarihinden tek bir eser seçmesi gerekse Mozart'ın <em>Requiem</em>'ini seçeceğini ifade eder.</p>
+          <p>Ian Anderson ve Jethro Tull da müzikal hayal dünyasında iz bıraktı. Anderson'ın flütü rock müziğinin içine yerleştirme biçimi, bir enstrümanın geleneksel rolünden çıkıp son derece kişisel bir sese dönüşebileceğini gösterdi.</p>
+        </div>
+      </section>
+
+      <!-- V -->
+      <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="biography-image"><img src="/artist/biography/berk-koksal-outdoor.webp" alt="Berk Köksal dış mekân portresi" class="aspect-[4/5] w-full object-cover" loading="lazy" /></div>
+        <div>
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">V · 1996: Kayıp ve Müziğin Duygusal Dili</p>
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Şarkıların içinde kalan bir kayıp</h2>
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>1996'da, on altı yaşındayken Berk Köksal annesi Aynur'u bir trafik kazasında kaybetti. O dönemde anne ve babası ayrıydı; annesi ve küçük kardeşiyle yaşıyordu. Annesinin ölümünden sonra iki kardeş yeniden babalarının evine dönmek zorunda kaldı; babasının daha sonra yeniden evlenmesiyle aile yapısı bir kez daha değişti.</p>
+            <p>Köksal bugün annesinin ölümünü erken yaşamındaki en büyük duygusal kırılmalardan biri olarak görür. Daha sonraki TANRI'ya teslimiyetinden önce, annesine duyduğu özlem eserlerinde çoğu zaman adı konmamış bir tema olarak tekrar tekrar ortaya çıktı.</p>
+            <p><em>Ne Olur Geri Dön</em> ve <em>Git Hadi Durma</em> bu duygusal dünyanın parçalarıdır. Tamamlanamayan <em>Kurtuluş Ölümde</em> ise yasın daha doğrudan bir ifadesine dönüştü. Yaklaşık yirmi yıl boyunca esere tekrar tekrar döndü ve çok sayıda kayıt denemesi yaptı; fakat hiçbirinde tatmin olduğu son biçime ulaşamadı.</p>
+            <p>Yetişkinlikten geriye baktığında bu tamamlayamama hâlini yalnız teknik bir sorun değil, kaybın iç dünyasında ne kadar derin ve çözümsüz kaldığının bir göstergesi olarak da yorumlar.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- VI -->
+      <section class="pro-glass p-8 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">VI · Gruplar, Sahne ve Elektro Gitar</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Prova odalarından sahnelere</h2>
+        <div class="grid grid-cols-1 gap-8 text-lg leading-8 text-subtext lg:grid-cols-2">
+          <div class="space-y-6"><p>Köksal'ın ilk elektro gitarı İstanbul Unkapanı'ndan aldığı Prince modeliydi. Müzikal odağı giderek rock, metal ve solo gitara yönelirken bu enstrümanı uzun yıllar kullandı.</p><p>Yaklaşık 1998–1999 döneminden başlayarak ve askerlik sonrasında 2001'den İzmir'e taşınmasından önceki yıllara kadar farklı grup yapılanmalarında yer aldı. Gökmen Erdal ve Enver Meriç, iki ve zaman zaman üç gitar için düzenlemeler üzerinde uzun süre çalıştığı müzisyenler arasındaydı.</p></div>
+          <div class="space-y-6"><p>Köksal çoğunlukla solo gitarist ve vokalist olarak çalıştı. Okul konserleri, bar performansları, provalar ve geniş repertuvarlar ona yalnız başına yaptığı MIDI çalışmalarından çok farklı bir pratik sahne eğitimi kazandırdı.</p><p>Kompozisyon, aranjman ve prodüksiyon zamanla daha merkezi hâle gelse de solo gitar geçmişi müzikal kimliğinin önemli bir parçası olarak kaldı.</p></div>
+        </div>
+      </section>
+
+      <!-- VII -->
+      <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="biography-image lg:order-2"><img src="/artist/biography/berk-koksal-home-studio.webp" alt="Berk Köksal ev stüdyosunda" class="aspect-[4/5] w-full object-cover" loading="lazy" /></div>
+        <div class="lg:order-1">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">VII · One-Man Production</p>
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Bir enstrüman çalmaktan bütün kaydı inşa etmeye</h2>
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>MIDI bilgisi geliştikçe bas, davul, yaylılar ve diğer katmanları da kendisinin yazabileceğini fark etti. Bu durum geleneksel grup yapısına bağımlılığını giderek azalttı ve zamanla One-Man Production yaklaşımına dönüşecek yolu açtı.</p>
+            <p>İlk sanal enstrümanlar günümüz araçlarından çok daha az gerçekçiydi ve erken dönem prodüksiyonlarının önemli bir bölümü belirgin bir MIDI karakteri taşıyordu. Ancak bu sınırlamalar onu öğrenmeye zorladı; tek enstrümanda uzmanlaşmak yerine bütün aranjmanı düşünmek zorundaydı.</p>
+            <p>Kayıt teknolojisi yeni bir dünya açtı. Şarkı yazabilmek, onu kaydetmeyi, mikslemeyi ve master etmeyi otomatik olarak bilmeyi sağlamıyordu. Cool Edit ile başladı; Cubase, Propellerhead Reason ve Pro Tools kullandı; ilerleyen yıllarda iş akışının büyük bölümünü Studio One'a taşıdı.</p>
+            <p>Maddi imkânları geliştikçe stüdyo ekipmanına daha ciddi yatırım yaptı ve miks, mastering ve modern prodüksiyon çalışmaya devam etti. Gitar ve tablatür ile başlayan süreç, bağımsız ve bütüncül bir prodüksiyon sistemine dönüştü.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="pro-glass p-8 md:p-14">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div><p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">Prodüksiyon Pratiği</p><h2 class="text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Her aşamada tek bir sanatsal vizyon</h2></div>
+          <div class="grid grid-cols-2 gap-4 md:grid-cols-3">{productionSkills.map((skill) => (<div class="rounded-2xl border border-accent/20 bg-accent/5 p-5 font-bold text-maintext">{skill}</div>))}</div>
+        </div>
+      </section>
+
+      <!-- VIII -->
+      <section class="pro-glass p-8 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">VIII · İzmir, Aile ve Duraklama Dönemi</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Stüdyonun dışındaki yaşam da müziği şekillendirdi</h2>
+        <div class="space-y-6 text-lg leading-8 text-subtext">
+          <p>Aile hayatındaki büyük değişimlerin ardından bir süre anneannesiyle yaşayan Köksal daha sonra ilk evliliğini yaptı. 2008'de yaşamının İzmir dönemi başladı. Bu evlilik yaklaşık yedi yıl sürdü ve 2015'te sona erdi.</p>
+          <p>Bu yılları kişisel olgunlaşma açısından önemli, ancak müzikal üretimin belirgin biçimde azaldığı bir dönem olarak tanımlar. Kızı <strong class="text-maintext">Bernaz Su Köksal</strong> bu evlilikten dünyaya geldi ve daha sonra onun adına müzik besteledi.</p>
+          <p>2015'te İstanbul'a döndükten sonra <strong class="text-maintext">Hümeyra Can Köksal</strong> ile tanıştı ve evlendi. Bu dönemde yaratıcı üretimi yeniden hızlandı. Kızları <strong class="text-maintext">Arya Belinda Köksal</strong> da hem adına yapılan bestelerle hem de daha sonra çocuk sesiyle katıldığı bir zikir kaydıyla bu müzikal hikâyenin parçası oldu.</p>
+        </div>
+      </section>
+
+      <!-- IX -->
+      <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="biography-image"><img src="/artist/biography/berk-koksal-studio-portrait.webp" alt="Berk Köksal müzik ve yazılım teknolojileriyle çalışırken" class="aspect-[4/5] w-full object-cover" loading="lazy" /></div>
+        <div>
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">IX · Profesyonel Prodüksiyon ve İş Birlikleri</p>
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Miks, mastering, film müziği ve diğer sanatçılar için çalışmalar</h2>
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>Stüdyo bilgisi geliştikçe bunu başka sanatçıların çalışmalarına da uygulamaya başladı. Pop, rap ve saz temelli müzikler dahil farklı tarzlarda projelerin miks ve mastering süreçlerinde yer aldı. Saz müzisyeni <a href="https://youtube.com/@derdaliozdemir?si=cZlP--EeTUdc03LC" target="_blank" rel="noopener noreferrer" class="font-semibold text-maintext transition-colors duration-300 hover:text-accent">Derdali (Ali Özdemir)</a> ile çalıştı ve farklı yorumcular için bağımsız müzik projeleri üretti.</p>
+            <p>Söz yazarı <a href="https://www.youtube.com/@armaganunlu" target="_blank" rel="noopener noreferrer" class="font-semibold text-maintext transition-colors duration-300 hover:text-accent">Armağan Ünlü</a> ile de çalışarak bazı sözlerini besteledi; farklı projelerde aranjman, vokal, miks ve mastering sorumlulukları üstlendi.</p>
+            <p><em>Ölümün Gölgesinde</em>, <em>Başlangıç</em>, <em>İhanet</em> ve <em>Korku</em> gibi film odaklı çalışmalar, deneyimini geleneksel şarkı formunun ötesine ve dramatik, sinematik yazıma taşıdı.</p>
+            <p><em>Bebeğim</em>, <em>Tutkunum</em> ve <em>Kalbimi Verdim Sana</em> gibi daha eski eserler de profesyonel yayımlama süreçlerine taşındı ve daha görünür bir kamusal sanatçı kimliğinin oluşmasına katkı sağladı.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- X -->
+      <section class="relative overflow-hidden rounded-[2rem] border border-accent/20">
+        <div class="relative min-h-[560px]">
+          <img src="/artist/biography/hero-neo-sacred-zikr-alt.webp" alt="Kutsal ve senfonik sanatsal konsept" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/25"></div><div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/20"></div>
+          <div class="relative z-10 flex min-h-[560px] items-center p-8 md:p-14"><div class="max-w-3xl">
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">X · Requiem Concerto</p>
+            <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">TANRI'ya teslimiyetinden önceki son büyük eser</h2>
+            <div class="space-y-6 text-lg leading-8 text-maintext/80">
+              <p>Mozart'ın <em>Requiem</em>'iyle yıllara yayılan ilişkisi, 2022'de yayımlanan kendi <strong class="text-maintext">Requiem Concerto</strong> eserine de katkı sağladı.</p>
+              <p>Köksal bu çalışmayı TANRI'ya teslimiyetinden önceki yılların en önemli eserlerinden biri olarak görür. Neoklasik gitar ve dramatik yazım, TANRI'ya yönelen ruhsal bir arayışı taşır. Gitar soloları yalnızca teknik gösteriler değil, gökyüzüne uzanan duygusal çizgiler olarak tasarlandı.</p>
+              <p>Geriye bakıldığında Requiem Concerto iki dönemin sınırında durur: bir müzikal kimliğin doruk noktası ve çok daha derin bir dini dönüşümün yaklaşımı.</p>
+            </div>
+          </div></div>
+        </div>
+      </section>
+
+      <!-- XI -->
+      <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="biography-image lg:order-2"><img src="/artist/biography/kuranteyit-interface.webp" alt="KURAN araştırma yazılımı arayüzü" class="aspect-[4/5] w-full object-cover object-left" loading="lazy" /></div>
+        <div class="lg:order-1">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XI · KURAN Araştırmaları</p>
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Soru şuna dönüştü: TANRI bizden gerçekte ne istiyor?</h2>
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>Müziğin yanında Köksal giderek daha fazla KURAN'a odaklandı. TANRI'nın insanlardan gerçekte ne istediğini, doğru yolun ne olduğunu ve insanın ahiret konusunda ne yapması gerektiğini anlamak istiyordu.</p>
+            <p>Kendisine Hanefi olduğunun söylenmesi basit ama önemli bir soruyu doğurdu: <strong class="text-maintext">Neden Hanefiyim?</strong> Farklı ekolleri araştırdı ve bir dönem Hanbeli yönelimli bir uygulama takip etti. Hadisleri, mezhepsel gelenekleri ve miras alınan dini kabulleri incelemeyi sürdürmesi, zamanla içinde büyüdüğü dini çerçeveyi sorgulamasına yol açtı.</p>
+            <p>2019 civarında Rashad Khalifa'nın çalışmalarında sunulan KURAN'ın 19 temelli matematiksel sistemiyle karşılaştı. Sistemi kapsamlı biçimde inceledi ve KURAN'ın ilahî kaynağına ilişkin güçlü bir delil olarak değerlendirmeye başladı.</p>
+            <p>Köksal için en zor sorulardan biri <strong class="text-maintext">Rashad Khalifa</strong>'nın <strong class="text-maintext">TANRI'nın Antlaşma Elçisi</strong> olup olmadığıydı. Buradaki “elçi” kullanımını peygamberlikten ayrı değerlendirir. Yaklaşık beş yıl boyunca bu soruyu araştırmayı ve incelemeyi sürdürdü.</p>
+            <p>Bu yıllarda ateistler, deistler ve agnostiklerle din üzerine uzun tartışmalar yaptı; farklı dünya görüşlerinin doğrudan ele alınabildiği çevrimiçi toplulukların yönetiminde yer aldı.</p>
+            <p>Bu dönemdeki temel duasının sade olduğunu söyler: araştırma ve akıl yürütme tek başına kesinlik sağlamadığında TANRI'dan tekrar tekrar doğru yola iletilmeyi istedi.</p>
+            <div class="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
+              <a href="https://qurantft.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-accent/40 bg-accent/10 px-6 py-3 text-sm font-bold text-accent transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-background">KURAN'ı Oku ↗</a>
+              <a href="https://kuranteyit.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-accent/40 bg-accent/10 px-6 py-3 text-sm font-bold text-accent transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-background">KURAN Delillerini İncele ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- XII -->
+      <section class="pro-glass p-8 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XII · TANRI'ya Teslimiyet</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Önce yol gösterildi; sonra KURAN açıldı.</h2>
+        <div class="space-y-6 text-lg leading-8 text-subtext">
+          <p>Köksal bu yılları yalnızca araştırma ve sorgulama dönemi olarak değil, aynı zamanda kişisel sınavlarla dolu bir süreç olarak anlatır. Bu süreç boyunca TANRI'dan yol göstermesini ve doğru yola iletmesini istemeye devam etti.</p>
+          <p>Kişisel sınavlar olarak gördüğü bir dizi olayın ardından, TANRI'nın bu sınavları geçmesine imkân verdiğine ve yaklaşık 2024 civarında kendisine <strong class="text-maintext">TANRI'ya teslimiyet</strong> bahşettiğine inanır.</p>
+          <p>Bu yol gösterilişten sonra <strong class="text-maintext">“KURAN'ın açıldığını”</strong> söyler. Bununla, daha önce birçok kez okuduğu pasajların kendisi için yeni ve daha derin bir açıklık kazandığını ve gerçek anlamları olduğuna inandığı şeyleri kavramaya başladığını ifade eder.</p>
+          <p>Daha sonra miras aldığı dini inançları doğrudan KURAN'la yeniden karşılaştırmaya başladı. Bu anlayış içinde <strong class="text-maintext">Rashad Khalifa</strong>'nın <strong class="text-maintext">TANRI'nın Antlaşma Elçisi</strong> olduğuna kesin olarak inandı. Köksal, Rashad Khalifa'yı peygamber olarak görmez; buradaki Messenger kelimesini <strong class="text-maintext">Elçi</strong> anlamında kullanır.</p>
+          <p>Eşi Hümeyra Can Köksal daha sonra aynı yolu benimsedi ve süreç ailece birlikte okuma ve öğrenme yolculuğuna dönüştü. Köksal bu ortak yönelişi TANRI'nın ailelerine verdiği hediyelerden biri olarak görür.</p>
+          <p>Ardından yeni bir soru ortaya çıktı: müzik, prodüksiyon ve teknoloji öğrenmek için harcanan onlarca yıllık birikim, TANRI'yı anmak ve yüceltmek için nasıl kullanılabilirdi?</p>
+          <div class="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
+            <a href="https://qurantft.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-accent/40 bg-accent/10 px-6 py-3 text-sm font-bold text-accent transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-background">KURAN'ı Oku ↗</a>
+            <a href="https://kuranteyit.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-accent/40 bg-accent/10 px-6 py-3 text-sm font-bold text-accent transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-background">KURAN Delillerini İncele ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- XIII -->
+      <section class="pro-glass p-8 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XIII · İlk Zikr Çalışmaları</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Müziğin amacı değişti</h2>
+        <div class="space-y-6 text-lg leading-8 text-subtext">
+          <p>Köksal, TEK TANRI merkezli çağdaş zikir müziği üreterek katkı sağlayabileceği sonucuna vardı. Modern müzik türlerini ve prodüksiyon tekniklerini kullanırken müziğin merkezinde TANRI'yı hatırlama ve yüceltme amacının kalmasını istedi.</p>
+          <p>Bu dönemin temel eseri, 31 Ağustos 2024'te YouTube'da yayımlanan <strong class="text-maintext">Zikir (La ilahe illa Allah)</strong> oldu. Prodüksiyon sürecini alışılmadık derecede zor hatırlar: tempo sorunları, kayıt hataları, VST ve plug-in problemleri, kesintiler ve hatta elektrik kesintileri süreci tekrar tekrar engelledi.</p>
+          <p>Projeyi bırakmaya yaklaştığında, niyetinin TANRI'yı yüceltmek olduğunu söyleyerek yardım istediğini anlatır. Eseri tamamlayabilmesini daha sonra, kendi ruhsal anlayışı içinde, ardından gelecek daha geniş müzikal yolculuğa izin verilen an olarak yorumladı.</p>
+          <p>Üsküdar'daki bir camide yıllar önce duyduğu bir zikrin müzikal hafızası da fikre katkıda bulundu; ancak Köksal, ibadet ve zikrin yalnızca TANRI'ya yönelmesi gerektiği anlayışıyla formun merkezini bilinçli olarak yalnız TANRI'yı anmaya taşıdı.</p>
+        </div>
+      </section>
+
+      <!-- XIV -->
+      <section class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <article class="pro-card p-7 md:p-9">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-accent">Kayda Katılan Bir Aile Sesi</p>
+          <h2 class="mb-5 text-3xl font-heading font-bold text-maintext">Allah Allah La ilahe illa Allah</h2>
+          <div class="space-y-5 leading-8 text-subtext"><p>Köksal daha sonraki bir zikir çalışmasını Derdali / Ali ile hazırladı. Evdeki doğal bir anda, o sırada yaklaşık dört yaşında olan kızı Arya Belinda kucağına çıktı ve tekrar eden zikre katıldı.</p><p>Çocuk sesi bitmiş kaydın sonunda korundu ve bir stüdyo çalışması aynı zamanda kalıcı bir aile hatırasına dönüştü.</p></div>
+        </article>
+        <article class="pro-card p-7 md:p-9">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-accent">Tövbeye Katılım</p>
+          <h2 class="mb-5 text-3xl font-heading font-bold text-maintext">Tövbe Ettim, Estağfurullah Ya Gaffar</h2>
+          <div class="space-y-5 leading-8 text-subtext"><p>Köksal ana fikrin gece geç saatlerde geldiğini anlatır. Uyanıp telefonundaki ses kaydını açtı ve parçayı doğal akışı içinde kaydetti.</p><p>Vokali kaydederken dua eder gibi oturdu ve ellerini TANRI'ya açtı. Eseri yalnızca dinlenecek bir şarkı değil, dinleyenin açıp sözlere katılarak tövbeye bizzat eşlik edebileceği bir çalışma olarak düşündü.</p></div>
+        </article>
+      </section>
+
+      <!-- XV -->
+      <section class="pro-glass p-8 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XV · Allahu Lena, Tanrıya Övgüler ve İlk Tekliler</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Zikrin kelimeleri ve temaları genişlemeye başlıyor</h2>
+        <div class="space-y-6 text-lg leading-8 text-subtext">
+          <p>Köksal daha sonra Rashad Khalifa'nın topluluğuyla bağlantılı eski zikir kayıtlarıyla, Khalifa'nın 1990'daki ölümünden önce yapılmış kayıtlar dahil, karşılaştı. İlham aldığı formlardan biri <em>Allahu Lena</em> oldu ve bunu <strong class="text-maintext">Allahu Lena – Tanrı Bizimle</strong> çalışmasına dönüştürdü.</p>
+          <p><strong class="text-maintext">Tanrıya Övgüler</strong>, daha kolektif ve polifonik bir biçimi araştırdı; sakin başlayıp daha enerjik, rock yönelimli bir övgü yapısına dönüştü. Daha sonraki teolojik görüş ayrılıkları bazı katılımcılarla iş birliğini sona erdirdi ve kayıt yolculuğun belirli bir anının belgesi olarak kaldı.</p>
+          <p><em>Subhanallah</em>, <em>Ya Baki Entel Baki</em>, <em>Allahu Ekber</em> ve ilişkili başka tekliler ses dünyasını genişletmeye devam etti. <em>Allah / La ilahe illa Allah</em> merkezli başka bir erken eserde şiirsel bir dil denedi ve kendi sesinde beklediğinden daha yüksek ve hafif bir vokal alan keşfetti.</p>
+        </div>
+      </section>
+
+      <!-- XVI -->
+      <section class="pro-glass p-8 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XVI · Tanrı'nın Hediyesi</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Albüm formatındaki ilk yayın</h2>
+        <div class="space-y-6 text-lg leading-8 text-subtext"><p><strong class="text-maintext">Tanrı'nın Hediyesi</strong>, bu yeni dönemde Köksal'ın albüm formatındaki ilk yayını oldu. Geleneksel uzun albüm yerine <em>Tövbe Ettim, Estağfurullah Ya Gaffar</em> eserini üç tamamlayıcı biçimde sundu: vokalli, enstrümantal ve piyano-koro versiyonu.</p><p>Bu yayın, kutsal bir müzikal fikrin farklı düzenlemelerle ifade edilebileceği düşüncesini yerleştirdi. İlk gerçek büyük ölçekli albüm yapısı ise <em>Zikr Symphony</em> ile gelecekti.</p></div>
+      </section>
+
+      <!-- XVII -->
+      <section class="relative overflow-hidden rounded-[2rem] border border-accent/20">
+        <div class="relative min-h-[620px]">
+          <img src="/artist/neo-sacred-zikr-banner-2.webp" alt="Neo-Sacred Zikr senfonik sanatsal evreni" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-r from-background via-background/92 to-background/25"></div><div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/20"></div>
+          <div class="relative z-10 flex min-h-[620px] items-center p-8 md:p-14"><div class="max-w-3xl">
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XVII · Zikr Symphony</p>
+            <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">İlk büyük konsept albüm</h2>
+            <div class="space-y-6 text-lg leading-8 text-maintext/80">
+              <p>“Zikr senfonisi” fikri uzun zamandır Köksal'ın zihnindeydi. Zikri dar ve miras alınmış tek bir müzikal kalıptan çıkarıp TEK TANRI'yı anmayı büyük ölçekli modern bir sesle ifade etmek istiyordu: orkestra, koro, bas, davul, elektro gitar ve çağdaş kayıt teknolojisi.</p>
+              <p>Proje, Köksal'ın KURAN'ın 19 temelli sistemi hakkındaki anlayışına referansla 19 sayısı etrafında tasarlandı. Prodüksiyon sürecinde yaklaşık elli müzikal taslak üretti; albüm şekillendikçe materyal 19 ana esere indirildi ve düzenlendi.</p>
+              <p>On dokuzuncu eser yapıya ikinci bir katman ekledi: değer verdiği fikirleri çöpe atmak yerine onları 19 bölümlük ek bir medley içinde birleştirdi. Böylece 19 yalnızca parça sayısı değil, albümün yapısına işlenmiş bir unsur oldu.</p>
+              <p>Kapaktaki kadın ve erkek görünümlü figürler meleklerin cinsiyeti hakkında literal bir ifade değil, sanatsal bir metafor olarak tasarlandı. Köksal görseli, yaratılışın TANRI'yı yüceltmeye katıldığı sembolik bir kutlama olarak açıklar; rock el işareti de bu görsel metaforun parçasıdır.</p>
+              <p>Zikr Symphony aynı zamanda Köksal'ın kendi bas-bariton sesini baş vokal olarak belirgin biçimde kullandığı son büyük albümlerden biriydi. Daha sonraki çalışmalarda kendisini sürekli baş vokal tutmak yerine her kompozisyonun ihtiyacına göre vokalist seçmeye yöneldi.</p>
+            </div>
+          </div></div>
+        </div>
+      </section>
+
+      <!-- XVIII -->
+      <section>
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XVIII · Genişleyen Albüm Evreni</p>
+        <h2 class="mb-12 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Tek amaç, birçok müzikal dil</h2>
+        <div class="space-y-5">{albums.map((album) => (<article class="pro-card grid grid-cols-1 gap-4 p-6 md:grid-cols-[110px_1fr] md:p-8"><p class="font-bold tracking-[0.2em] text-accent">{album.year}</p><div><h3 class="mb-2 text-xl font-heading font-bold text-maintext">{album.title}</h3><p class="text-sm leading-6 text-subtext/90">{album.description}</p></div></article>))}</div>
+        <a href="/tr/#projects" class="group mt-10 inline-flex items-center gap-3 font-bold text-accent transition-colors hover:text-maintext"><span>Diskografiyi Keşfet</span><span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-2">→</span></a>
+      </section>
+
+      <!-- XIX -->
+      <section class="relative overflow-hidden rounded-[2rem] border border-red-500/25 bg-black p-8 md:p-14">
+        <div class="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-red-700/10 blur-3xl"></div><div class="absolute -bottom-32 -left-20 h-96 w-96 rounded-full bg-red-950/20 blur-3xl"></div>
+        <div class="relative z-10">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-red-400">XIX · QURANIC CONCEPTS</p>
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-white md:text-6xl">HELLL — uyarıyı uzaktan izlemek yerine onun içine girmek</h2>
+          <div class="space-y-6 text-lg leading-8 text-white/70">
+            <p>Neo-Sacred Zikr'i TEK TANRI'yı anma ve yüceltme etrafında kurduktan sonra Köksal ikinci ve bilinçli olarak ayrı bir sanatsal çerçeve geliştirdi: <strong class="text-white">QURANIC CONCEPTS</strong>. Bu bir müzik türü değildir. Her proje KURAN'da anlatılan belirli bir konu, sahne, ses veya gerçeklikle başlar; tempo, enstrümantasyon, vokal rolleri, tekrar, sessizlik, ses tasarımı ve görsel kimlik gibi albümün müzikal yasalarını konu belirler.</p>
+            <p>Bu çerçevede yaratılan ilk dünya <strong class="text-white">HELLL</strong>'dir: uyarı, cehennem, yargı, pişmanlık, susuzluk, hapsedilme, tanıklık, sorumluluk ve geri döndürülemez sonuçlarla ilgilenen 19 parçalık KURAN merkezli konsept albüm. Açılış cehennemde değil; kalp atışı, hastane monitörü ve flatline ile başlar. Ölümden sonra HELLL'in ses dünyası açılır.</p>
+            <p>On dokuz eser boyunca tekrar eden KURAN sahneleri ve imgeleri kompozisyon, ses tasarımı, vokaller, tekrar ve sessizlik aracılığıyla müziğe çevrilir. On dokuzuncu eser <strong class="text-white">NINETEEN</strong>, bağımsız bestelenmiş on dokuz bölümün kesintisiz bir medley hâlinde birleşmesinden oluşur ve projenin bilinçli 19 × 19 mimarisini taşır.</p>
+            <p>QURANIC CONCEPTS böylece Neo-Sacred Zikr'in yerini almak yerine onun yanında ikinci bir sanatsal yol açtı. İki çerçeve KURAN merkezli bir temeli paylaşırken dinleyiciyi müziğe farklı biçimlerde davet eder.</p>
+            <p class="text-2xl font-heading font-bold leading-9 text-white md:text-3xl">Neo-Sacred Zikr dinleyiciyi hatırlamaya davet eder.<br />QURANIC CONCEPTS dinleyiciyi içine girmeye davet eder.</p>
+            <div class="flex flex-col gap-3 pt-3 sm:flex-row sm:flex-wrap">
+              <a href="/tr/quranic-concepts/" class="inline-flex items-center justify-center rounded-full border border-red-400/40 bg-red-500/10 px-6 py-3 text-sm font-bold text-red-300 transition-all duration-300 hover:-translate-y-1 hover:border-red-300 hover:bg-red-500 hover:text-white">QURANIC CONCEPTS'i Keşfet →</a>
+              <a href="/albums/helll/" class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/50 hover:bg-white hover:text-black">HELLL'e Gir →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- XX -->
+      <section class="pro-glass p-8 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XX · Albümler Neden Bu Kadar Farklı Duyuluyor?</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Karşıtlık sanatsal felsefenin bir parçasına dönüştü</h2>
+        <div class="space-y-6 text-lg leading-8 text-subtext">
+          <p><em>Zikr Symphony</em>'den <em>Zikr Huu</em> ve <em>Zikr Nur</em>'a geçiş bilinçli olarak zıtlık taşıyordu. Senfonik yazımın ölçeği ve yoğunluğundan sonra Köksal neredeyse ağırlıksız bir hatırlama biçimini araştırmak istedi: kadın vokaller, minimal enstrümantasyon, meditasyon, yağmur, ney ve sessiz atmosfer.</p>
+          <p><em>ZIKR ROCK</em> ters yöne hareket ederek kutsal projeyi gençliğinden beri onu şekillendiren rock ve gitar diliyle yeniden buluşturdu. Albüm <em>Huu</em> ile açılır, ardından <em>Allahu Ekber</em> ve <em>Ya Hannan Ya Mennan Zül Celali vel İkram</em> gelir; finaldeki <em>Subhanallah</em>'a doğru distorsiyon ve enerji giderek yükselir.</p>
+          <p>Köksal albümün miks ve masteringini kişisel olarak yaklaşık on üzerinden sekiz seviyesinde değerlendirir ve çalışmayı Neo-Sacred Zikr içinde rock kimliğinin en güçlü ifadelerinden biri olarak görür.</p>
+        </div>
+      </section>
+
+      <!-- XXI -->
+      <section class="pro-glass p-8 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XXI · Classical Chorus ve Neo-Sacred Zikr İsmi</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Müzik, Neo-Sacred Zikr isminden önce vardı</h2>
+        <div class="space-y-6 text-lg leading-8 text-subtext">
+          <p>İlk zikir teklileri ve albümleri başlangıçta bütünüyle resmîleşmiş bir “Neo-Sacred Zikr” etiketi altında üretilmedi. İsim daha sonra <strong class="text-maintext">Classical Chorus</strong> dönemi ve Köksal'ın web sitesinin geliştirilmesi sırasında ortaya çıktı.</p>
+          <p>O zamana kadar çalışma kataloğu birbirinden çok farklı müzikal yönleri zaten içeriyordu. Bunları birbirine bağlayan şeyi açıklayabilecek daha geniş bir konsepte ihtiyaç vardı. Cevap tek bir tür değil, bir müzik evreniydi.</p>
+          <p>Classical Chorus, Köksal'ı yıllardır sevdiği kutsal koro müziğine yeniden yaklaştırdı. Bach yapısal bir referans olarak önemini korurken Mozart'ın dramatik ve duygusal etkisi — özellikle Requiem dünyası ve Kyrie benzeri koro yazımı — burada ifade etmek istediği ruha daha yakındı.</p>
+        </div>
+      </section>
+
+      <!-- XXII -->
+      <section class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <article class="pro-card p-7 md:p-9"><p class="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-accent">One God One Love</p><h2 class="mb-5 text-3xl font-heading font-bold text-maintext">Çocukların da TANRI'yı anabilecekleri müziğe ihtiyacı var</h2><div class="space-y-5 leading-8 text-subtext"><p>Arya Belinda'nın erken yaşta zikre ilgisi, çocuk korosu albümü fikrine ilham verdi. Köksal, TEK TANRI'ya inanan çocukların da O'nu hatırlayabilecekleri ve yüceltebilecekleri çağdaş şarkılara sahip olması gerektiğini düşündü.</p><p>Albüm 19 parçalık bir yapı kullanır ve daha evrensel yöneliminin parçası olarak İngilizceye de yer verir. Arya Belinda da kapak konseptindeki çocuklar arasında temsil edilir.</p></div></article>
+        <article class="pro-card p-7 md:p-9"><p class="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-accent">ZIKR RAP</p><h2 class="mb-5 text-3xl font-heading font-bold text-maintext">Sevilmeyen bir formu yeni bir ihtimale dönüştürmek</h2><div class="space-y-5 leading-8 text-subtext"><p>Rap başlangıçta Köksal'ın sevdiği müzikal formlardan biri değildi. Türün önemli bölümünü tekrar eden altyapılar, küfür ve olumsuz dil ile ilişkilendiriyordu.</p><p>Bu direnç zamanla albümü yapma nedenine dönüştü. Rap bu kadar farklı mesaj taşıyabiliyorsa neden TANRI'yı hatırlamayı taşımasındı? Sonuç beklentinin tersine kuruldu; Bismillahirrahmanirrahim ile başladı ve rap müziğinin ritmik gücünü kutsal içeriğe yöneltti.</p></div></article>
+      </section>
+
+      <!-- XXIII -->
+      <section class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <article class="pro-card p-7 md:p-9"><p class="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-accent">Zikr-i Batın</p><h2 class="mb-5 text-3xl font-heading font-bold text-maintext">İçsel boyut</h2><div class="space-y-5 leading-8 text-subtext"><p>Zikr-i Batın, Köksal'ın kişisel müzik zevkine en yakın albümlerden biri oldu. <em>Rahman Rahim Fert</em> ve <em>Ya Mübdi, Ya Muid, Ya Muhyi, Ya Mumit</em> gibi çalışmalar onun için özel bir yere sahiptir.</p><p>On dokuzuncu eser KURAN'ın Huruf-u Mukattaa'sı — Elif Lam Mim gibi harf dizileri — etrafında kurulur ve bu harfler doğrudan vokal müzikal malzeme olarak kullanılır. Köksal bunu kendi kataloğundaki en sıra dışı deneylerden biri olarak görür.</p></div></article>
+        <article class="pro-card p-7 md:p-9"><p class="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-accent">ZIKR JAZZ</p><h2 class="mb-5 text-3xl font-heading font-bold text-maintext">Genişletilmiş armoni, aynı merkez</h2><div class="space-y-5 leading-8 text-subtext"><p>Caz, büyüyen evrende eksik kalan başka bir müzikal dili temsil ediyordu. ZIKR JAZZ altılı, yedili, dokuzlu ve başka genişletilmiş akor renklerini modal düşünce ve cazın enstrümantal diliyle birleştirir.</p><p>Sonuç rock ve metal albümlerinden bilinçli olarak daha sıcak, sakin ve rahat bir ses dünyasıdır; ancak merkezde yine aynı hatırlama eylemi vardır.</p></div></article>
+      </section>
+
+      <!-- XXIV -->
+      <section class="relative overflow-hidden rounded-[2rem] border border-accent/20 bg-accent/5 p-8 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XXIV · ZIKR SYMPHONIC METAL</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-6xl">On dokuz bölüm. Tek bir zikir ifadesi: HÛ.</h2>
+        <div class="space-y-6 text-lg leading-8 text-subtext">
+          <p>23 Ağustos 2026'da Köksal <strong class="text-maintext">ZIKR SYMPHONIC METAL</strong>'i dijital dağıtımcılara gönderdi. Onu yıllardır oluşturmak istediği konsept albüm sesini en eksiksiz gerçekleştiren projelerden biri olarak görür.</p>
+          <p>Albüm 19 bölüm ve bilinçli olarak odaklanmış bir vokal konsept etrafında kurulur. Neredeyse bütün döngü tek bir tekrar eden zikir ifadesine dayanır: <strong class="text-maintext">HÛ</strong>. Seçili bölümlerde <strong class="text-maintext">Hay / Al-Hayy</strong> da yer alır. Uzun sözler yerine bu birkaç kutsal kelime değişen müzikal ortamlar içinde tekrar edilir.</p>
+          <p>Bu odak, kutsal kelimelerin taşıdığı anlamla ilgili ilgisini de yansıtır. <strong class="text-maintext">Hayy</strong> İngilizcedeki <em>hi</em> ya da Türkçedeki <em>hay hay</em> ifadesini çağrıştırabilir; ancak <strong class="text-maintext">Al-Hayy</strong> “Diri / Yaşayan” ilahî ismidir. <strong class="text-maintext">HÛ</strong> ise zikirde TANRI'ya işaret eden “O” anlamında kullanılır. Köksal'a göre kelimeyi anlamak, sesi duyma biçimini değiştirir.</p>
+          <p>Nefes ve yakın kadın sesi; kutsal koro, yaylılar, borulu org, bakır üflemeliler, timpani, bas, davul, distorsiyonlu gitarlar ve neoklasik sololara doğru genişler. Metal öfke olarak ele alınmaz; ağırlığı güç, ihtişam ve ilahî azameti temsil eder.</p>
+          <p>Orkestra arka plan süsü, koro yalnız bir efekt, gitar da virtüözite göstermek için eklenmiş değildir. Her unsur aynı merkeze hizmet eder: zikir.</p>
+          <p class="text-2xl font-heading font-bold leading-9 text-maintext md:text-3xl">Çevresindeki müzik değişirken merkezde HÛ kalır.</p>
+        </div>
+      </section>
+
+      <!-- XXV -->
+      <section class="pro-glass p-8 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XXV · Neo-Sacred Zikr Ne Anlama Geliyor?</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Yaratıcısından daha uzun yaşaması amaçlanan bir müzik evreni</h2>
+        <div class="space-y-6 text-lg leading-8 text-subtext">
+          <p>Berk Köksal için Neo-Sacred Zikr tek bir tür değildir. Farklı türlerin zikir için — TEK TANRI'yı hatırlamak ve yüceltmek için — kullanılabildiği çağdaş kutsal müzik evrenidir.</p>
+          <p>Bir Neo-Sacred Zikr eseri rock, metal, klasik, ambient, caz, rap, çocuk korosu, piyano merkezli müzik, progresif müzik veya henüz yaratılmamış başka bir biçim olabilir. Müzikal tarz değişebilir; amaç aynı kalır.</p>
+          <p>Köksal bu terimin yalnız kendi müziği için kullanılmasını istemez. TEK TANRI'ya inanan gelecekteki müzisyenlerin Neo-Sacred Zikr'i kullanmasını, geliştirmesini ve yeniden yorumlamasını; başkalarının devam ettirebileceği bir müzik alanına dönüşmesini umar.</p>
+          <p>Çalışmanın kendi zamanında bütünüyle anlaşılmayabileceğini de kabul eder. Sosyal medya sayıları ve anlık popülerlik projenin temel ölçüsü değildir. Müzikal fikrin onlarca yıl, hatta belki bir yüzyıl sonra daha açık anlaşılabileceğine inandığını birçok kez ifade etmiştir.</p>
+        </div>
+      </section>
+
+      <!-- XXVI -->
+      <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="biography-image lg:order-2"><img src="/artist/biography/berk-koksal-family.webp" alt="Berk Köksal ailesiyle" class="aspect-[4/5] w-full object-cover" loading="lazy" /></div>
+        <div class="lg:order-1">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XXVI · Aile ve Kişisel Hafıza</p>
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Müzik en yakınımızdaki insanları da korur</h2>
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>Köksal iki kızı <strong class="text-maintext">Bernaz Su Köksal</strong> ve <strong class="text-maintext">Arya Belinda Köksal</strong> ile bağlantılı kişisel besteler yazdı. Bu eserler büyük kamusal konseptlerden farklı bir yerde durur; aile duygusunu, hafızayı ve bir baba ile çocukları arasındaki ilişkiyi korur.</p>
+            <p>Aile hayatı kutsal müzik yolculuğuyla da doğrudan kesişti; bunun en açık örnekleri Arya Belinda'nın çocuk yaşta bir zikir kaydına katılması ve daha sonraki <em>One God One Love</em> çocuk korosu konseptidir.</p>
+            <p>Bu nedenle Köksal'ın biyografisi “sanat” ve “hayat” olarak kolayca ikiye ayrılamaz. Kayıp, evlilik, babalık, teknoloji, inanç, müzik ve araştırma aynı yaratıcı alanda tekrar tekrar buluşur.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="overflow-hidden rounded-[2rem] border border-accent/20 bg-background/30 shadow-2xl shadow-black/30" aria-label="Berk Köksal'ın yıllar içinde kızlarıyla fotoğrafları">
+        <img src="/berk_koksal_kizlariyla.webp" alt="Berk Köksal'ın farklı yıllardan kızlarıyla aile fotoğrafları" class="block h-auto w-full object-cover" loading="lazy" />
+      </section>
+
+      <!-- XXVII -->
+      <section class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="biography-image"><img src="/artist/biography/berk-koksal-wedding.webp" alt="Berk Köksal düğün fotoğrafı" class="aspect-[4/5] w-full object-cover" loading="lazy" /></div>
+        <div>
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XXVII · Müzik Yazılımla Buluşuyor</p>
+          <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Aynı analitik alışkanlık kodda, seste ve araştırmada ortaya çıkıyor</h2>
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>Köksal aynı zamanda Bilgisayar Bilimleri mezunu ve yazılım mühendisidir. Yazılım aracılığıyla gelişen analitik alışkanlıklar — karmaşık problemleri sistemlere ayırmak, ilişkileri test etmek ve çözümleri iyileştirmek — yıllar önce MIDI ve transkripsiyonla geliştirdiği yönteme büyük ölçüde benzer.</p>
+            <p>KURAN araştırmaları ve yazılım projeleri de doğrudan inceleme, karşılaştırma, doğrulama ve yapılandırılmış çalışmaya duyduğu ilgiyi yansıtır. Köksal için müzik ve teknoloji ayrı kimlikler değildir; fikirleri düzenlemek ve aktarmak için kullanılan araçlardır.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- XXVIII -->
+      <section class="pro-glass p-8 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XXVIII · Geleceğe Bakış</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Neo-Sacred Zikr sürüyor — yeni sanatsal projeler de başlıyor</h2>
+        <div class="space-y-6 text-lg leading-8 text-subtext">
+          <p>Köksal üretebildiği sürece Neo-Sacred Zikr'i geliştirmeyi sürdürmeyi amaçlıyor. Progresif albümler, yeni klasik yönelimler, piyano temelli projeler ve henüz keşfedilmemiş başka biçimler bu evren içinde mümkün.</p>
+          <p>Neo-Sacred Zikr'in yanında <strong class="text-maintext">QURANIC CONCEPTS</strong>'i ikinci yaratıcı çerçeve olarak geliştirmeye devam ediyor. <strong class="text-maintext">HELLL</strong> ilk dünyayı kurduktan sonra gelecekteki konsept albümler başka KURAN konularını araştırabilir; temel ilke aynı kalır: biçim konuya hizmet etmeli, konu biçime değil.</p>
+          <p>Yazarlık ve üreticilik anlayışı da onun için önemlidir. Adı besteci, prodüktör ve sanatçı olarak görünse de yaratma yeteneğini, öğrenme fırsatlarını ve tamamlanmış eserleri TANRI'nın hediyeleri olarak görür. Bu nedenle tekrar tekrar sade bir ifadeye döner: <strong class="text-maintext">Tüm övgüler TANRI'yadır.</strong></p>
+        </div>
+      </section>
+
+      <!-- PHOTO JOURNEY SECTION START -->
+      <section class="photo-journey-section" aria-labelledby="photo-journey-title">
+        <button id="open-photo-journey" class="photo-journey-card" type="button" aria-label="Berk Köksal'ın fotoğraf yolculuğunu aç">
+          <img src="/artist/biography/berk-koksal-photo-journey.webp" alt="Berk Köksal'ın çocukluk ve müzik yolculuğundan fotoğraf kolajı" class="photo-journey-preview" loading="lazy" />
+          <span class="photo-journey-overlay"></span>
+          <span class="photo-journey-content">
+            <span class="photo-journey-label">Kişisel Arşiv</span>
+            <span id="photo-journey-title" class="photo-journey-title">Fotoğraflarla Yolculuğum</span>
+            <span class="photo-journey-description">Çocukluk · İlk Gitar · İlk Grup · Aile</span>
+            <span class="photo-journey-action">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" /></svg>
+              Hikâyemi Keşfet
+            </span>
+          </span>
+        </button>
+      </section>
+
+      <div id="photo-journey-lightbox" class="photo-journey-lightbox" role="dialog" aria-modal="true" aria-labelledby="photo-journey-modal-title" aria-hidden="true">
+        <button id="close-photo-journey" class="photo-journey-close" type="button" aria-label="Fotoğraf yolculuğunu kapat">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18" /></svg>
+        </button>
+        <div class="photo-journey-modal">
+          <div class="photo-journey-modal-header">
+            <p class="photo-journey-modal-label">Kişisel Arşiv</p>
+            <h2 id="photo-journey-modal-title" class="photo-journey-modal-title">Fotoğraflarla Yolculuğum</h2>
+            <p class="photo-journey-modal-description">Her müzisyenin sahneden önce başlayan bir hikâyesi vardır. Bunlar benim yolculuğumdan bazı anlar.</p>
+          </div>
+          <img src="/artist/biography/berk-koksal-photo-journey.webp" alt="Berk Köksal'ın çocukluk, aile ve müzik yolculuğundan fotoğraf kolajı" class="photo-journey-full-image" />
+        </div>
+      </div>
+      <!-- PHOTO JOURNEY SECTION END -->
+
+      <!-- CERTIFICATES SECTION START -->
+      <section class="pro-glass overflow-hidden p-8 md:p-10">
+        <div class="flex flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left">
+          <div class="max-w-3xl">
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.4em] text-accent">Mesleki Gelişim</p>
+            <h2 class="mb-4 text-3xl font-heading font-bold text-maintext md:text-4xl">Sertifikalar ve Sürekli Öğrenme</h2>
+            <p class="text-base leading-7 text-subtext">Berk Köksal; yazılım mühendisliği, müzik prodüksiyonu, yapay zekâ, dijital teknolojiler ve ilişkili alanlarda profesyonel eğitimlerle uzmanlığını sürekli geliştirmektedir. Sertifikalarının ve tamamladığı eğitim programlarının tam koleksiyonu çevrimiçi olarak görülebilir.</p>
+          </div>
+          <a href="https://sites.google.com/view/berkkoksal/sertifikalar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 font-bold text-background transition-all duration-300 hover:scale-105 hover:shadow-xl">Tüm Sertifikaları Gör
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 3h7v7M10 14L21 3M21 14v7h-7M3 10V3h7M3 21l7-7" /></svg>
+          </a>
+        </div>
+      </section>
+      <!-- CERTIFICATES SECTION END -->
+
+      <section class="relative overflow-hidden rounded-[2rem] border border-accent/25 bg-accent/5 px-7 py-16 text-center md:px-14 md:py-20">
+        <div class="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"></div>
+        <div class="relative z-10">
+          <p class="mb-8 text-xs font-bold uppercase tracking-[0.4em] text-accent">Son Söz</p>
+          <blockquote class="mx-auto max-w-5xl">
+            <p class="text-3xl font-heading font-bold leading-tight text-maintext md:text-4xl lg:text-5xl">“Müzik benim için yalnızca ses değildir. İnsanlığı TEK TANRI'yı hatırlamaya çağıran evrensel bir dildir.”</p>
+            <footer class="mt-8 text-base font-semibold text-accent">— Berk Köksal</footer>
+          </blockquote>
+          <div class="mt-12 flex flex-col justify-center gap-5 sm:flex-row">
+            <a href="/tr/neo-sacred-zikr/" class="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 font-bold text-background transition-transform duration-300 hover:-translate-y-1">Neo-Sacred Zikr'i Keşfet</a>
+            <a href="/tr/#projects" class="inline-flex items-center justify-center rounded-full border border-accent/40 px-8 py-4 font-bold text-maintext transition-colors duration-300 hover:bg-accent/10">Albümleri Gör</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</Layout>
+
+<!-- PHOTO JOURNEY STYLE START -->
+
+<style>
+  .photo-journey-section {
+    width: 100%;
+  }
+
+  .photo-journey-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 260px;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: left;
+    color: inherit;
+    background: rgba(20, 17, 48, 0.65);
+    border: 1px solid rgba(167, 139, 250, 0.22);
+    border-radius: 2rem;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+    isolation: isolate;
+  }
+
+  .photo-journey-preview {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition:
+      transform 700ms ease,
+      filter 500ms ease;
+  }
+
+  .photo-journey-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(8, 6, 28, 0.98) 0%,
+        rgba(8, 6, 28, 0.88) 38%,
+        rgba(8, 6, 28, 0.38) 72%,
+        rgba(8, 6, 28, 0.15) 100%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(8, 6, 28, 0.8) 0%,
+        transparent 60%
+      );
+    z-index: 1;
+  }
+
+  .photo-journey-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    min-height: 260px;
+    max-width: 720px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .photo-journey-label {
+    margin-bottom: 0.9rem;
+    color: rgb(167, 139, 250);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+  }
+
+  .photo-journey-title {
+    max-width: 650px;
+    color: white;
+    font-family: inherit;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 800;
+    line-height: 1.05;
+  }
+
+  .photo-journey-description {
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .photo-journey-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 1.5rem;
+    padding: 0.85rem 1.25rem;
+    color: white;
+    font-size: 0.86rem;
+    font-weight: 700;
+    background: rgba(167, 139, 250, 0.16);
+    border: 1px solid rgba(167, 139, 250, 0.38);
+    border-radius: 999px;
+    backdrop-filter: blur(12px);
+    transition:
+      background-color 300ms ease,
+      border-color 300ms ease,
+      transform 300ms ease;
+  }
+
+  .photo-journey-action svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .photo-journey-card:hover .photo-journey-preview {
+    transform: scale(1.045);
+    filter: brightness(1.08);
+  }
+
+  .photo-journey-card:hover .photo-journey-action {
+    transform: translateY(-2px);
+    background: rgb(167, 139, 250);
+    border-color: rgb(167, 139, 250);
+    color: rgb(10, 8, 30);
+  }
+
+  .photo-journey-card:focus-visible {
+    outline: 3px solid rgb(167, 139, 250);
+    outline-offset: 5px;
+  }
+
+  .photo-journey-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    visibility: hidden;
+    opacity: 0;
+    overflow-y: auto;
+    background: rgba(3, 2, 15, 0.94);
+    backdrop-filter: blur(18px);
+    transition:
+      opacity 300ms ease,
+      visibility 300ms ease;
+  }
+
+  .photo-journey-lightbox.is-open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .photo-journey-modal {
+    width: min(1180px, 100%);
+    margin: auto;
+    overflow: hidden;
+    transform: translateY(22px) scale(0.98);
+    background: rgb(13, 10, 38);
+    border: 1px solid rgba(167, 139, 250, 0.28);
+    border-radius: 1.75rem;
+    box-shadow: 0 35px 100px rgba(0, 0, 0, 0.6);
+    transition: transform 350ms ease;
+  }
+
+  .photo-journey-lightbox.is-open .photo-journey-modal {
+    transform: translateY(0) scale(1);
+  }
+
+  .photo-journey-modal-header {
+    padding: 1.8rem 2rem;
+    text-align: center;
+  }
+
+  .photo-journey-modal-label {
+    margin-bottom: 0.6rem;
+    color: rgb(167, 139, 250);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+  }
+
+  .photo-journey-modal-title {
+    color: white;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .photo-journey-modal-description {
+    max-width: 650px;
+    margin: 0.8rem auto 0;
+    color: rgba(255, 255, 255, 0.68);
+    line-height: 1.7;
+  }
+
+  /* PHOTO JOURNEY IMAGE STYLE START */
+  .photo-journey-full-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 74vh;
+  object-fit: contain;
+  transform: scale(1);
+  transform-origin: center center;
+  cursor: zoom-in;
+  transition: transform 0.35s ease;
+  background: rgb(4, 3, 16);
+  }
+
+  .photo-journey-full-image.is-zoomed {
+  transform: scale(1.5);
+  cursor: zoom-out;
+  }
+/* PHOTO JOURNEY IMAGE STYLE END */
+
+  .photo-journey-close {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 10001;
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    place-items: center;
+    cursor: pointer;
+    color: white;
+    background: rgba(20, 17, 48, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    backdrop-filter: blur(12px);
+    transition:
+      transform 250ms ease,
+      background-color 250ms ease;
+  }
+
+  .photo-journey-close:hover {
+    transform: rotate(90deg);
+    background: rgb(167, 139, 250);
+    color: rgb(10, 8, 30);
+  }
+
+  .photo-journey-close svg {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+
+  body.photo-journey-open {
+    overflow: hidden;
+  }
+
+  @media (max-width: 640px) {
+    .photo-journey-card {
+      min-height: 390px;
+    }
+
+    .photo-journey-preview {
+      object-position: center;
+    }
+
+    .photo-journey-overlay {
+      background:
+        linear-gradient(
+          0deg,
+          rgba(8, 6, 28, 0.98) 0%,
+          rgba(8, 6, 28, 0.82) 55%,
+          rgba(8, 6, 28, 0.25) 100%
+        );
+    }
+
+    .photo-journey-content {
+      min-height: 390px;
+      justify-content: flex-end;
+      padding: 1.5rem;
+    }
+
+    .photo-journey-description {
+      font-size: 0.92rem;
+    }
+
+    .photo-journey-modal-header {
+      padding: 1.5rem 1.2rem;
+    }
+
+    .photo-journey-close {
+      top: 0.75rem;
+      right: 0.75rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .photo-journey-preview,
+    .photo-journey-action,
+    .photo-journey-lightbox,
+    .photo-journey-modal,
+    .photo-journey-close {
+      transition: none;
+    }
+  }
+</style>
+
+<!-- PHOTO JOURNEY STYLE END -->
+<!-- PHOTO JOURNEY SCRIPT START -->
+<script>
+  const openPhotoJourneyButton =
+    document.getElementById('open-photo-journey');
+
+  const closePhotoJourneyButton =
+    document.getElementById('close-photo-journey');
+
+  const photoJourneyLightbox =
+    document.getElementById('photo-journey-lightbox');
+
+  const photoJourneyImage =
+    document.querySelector<HTMLImageElement>(
+      '.photo-journey-full-image'
+    );
+
+  function openPhotoJourney(): void {
+    if (!photoJourneyLightbox) {
+      return;
+    }
+
+    photoJourneyLightbox.classList.add('is-open');
+
+    photoJourneyLightbox.setAttribute(
+      'aria-hidden',
+      'false'
+    );
+
+    document.body.classList.add(
+      'photo-journey-open'
+    );
+
+    closePhotoJourneyButton?.focus();
+  }
+
+  function closePhotoJourney(): void {
+    if (!photoJourneyLightbox) {
+      return;
+    }
+
+    photoJourneyLightbox.classList.remove(
+      'is-open'
+    );
+
+    photoJourneyLightbox.setAttribute(
+      'aria-hidden',
+      'true'
+    );
+
+    document.body.classList.remove(
+      'photo-journey-open'
+    );
+
+    if (photoJourneyImage) {
+      photoJourneyImage.classList.remove(
+        'is-zoomed'
+      );
+
+      photoJourneyImage.style.transformOrigin =
+        'center center';
+    }
+
+    openPhotoJourneyButton?.focus();
+  }
+
+  function togglePhotoJourneyZoom(
+    event: MouseEvent
+  ): void {
+    event.stopPropagation();
+
+    if (!photoJourneyImage) {
+      return;
+    }
+
+    const imageRectangle =
+      photoJourneyImage.getBoundingClientRect();
+
+    const clickX =
+      event.clientX - imageRectangle.left;
+
+    const clickY =
+      event.clientY - imageRectangle.top;
+
+    const originX =
+      (clickX / imageRectangle.width) * 100;
+
+    const originY =
+      (clickY / imageRectangle.height) * 100;
+
+    if (
+      photoJourneyImage.classList.contains(
+        'is-zoomed'
+      )
+    ) {
+      photoJourneyImage.classList.remove(
+        'is-zoomed'
+      );
+
+      photoJourneyImage.style.transformOrigin =
+        'center center';
+
+      return;
+    }
+
+    photoJourneyImage.style.transformOrigin =
+      `${originX}% ${originY}%`;
+
+    photoJourneyImage.classList.add(
+      'is-zoomed'
+    );
+  }
+
+  openPhotoJourneyButton?.addEventListener(
+    'click',
+    openPhotoJourney
+  );
+
+  closePhotoJourneyButton?.addEventListener(
+    'click',
+    closePhotoJourney
+  );
+
+  photoJourneyImage?.addEventListener(
+    'click',
+    togglePhotoJourneyZoom
+  );
+
+  photoJourneyLightbox?.addEventListener(
+    'click',
+    (event: MouseEvent) => {
+      if (event.target === photoJourneyLightbox) {
+        closePhotoJourney();
+      }
+    }
+  );
+
+  document.addEventListener(
+    'keydown',
+    (event: KeyboardEvent) => {
+      if (
+        event.key === 'Escape' &&
+        photoJourneyLightbox?.classList.contains(
+          'is-open'
+        )
+      ) {
+        closePhotoJourney();
+      }
+    }
+  );
+</script>
+<!-- PHOTO JOURNEY SCRIPT END -->

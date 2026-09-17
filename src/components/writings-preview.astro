@@ -4,10 +4,18 @@ import {
   formatWritingDate,
   getReadingMinutes,
   getWritingHref,
+  getWritingsIndexHref,
 } from "../utils/writings";
 
+interface Props {
+  lang?: 'en' | 'tr';
+}
+
+const { lang = 'en' } = Astro.props;
+const isTurkish = lang === 'tr';
+
 const writingEntries = (await getCollection("writings"))
-  .filter((entry) => !entry.data.draft && entry.data.language === "tr")
+  .filter((entry) => !entry.data.draft && entry.data.language === lang)
   .sort(
     (a, b) =>
       new Date(b.data.publishDate).getTime() -
@@ -21,11 +29,37 @@ const articles = writingEntries.map((entry) => ({
   image: entry.data.image,
   imageAlt: entry.data.imageAlt,
   tags: entry.data.tags ?? [],
-  date: formatWritingDate(new Date(entry.data.publishDate), "tr"),
+  date: formatWritingDate(new Date(entry.data.publishDate), lang),
   dateTime: new Date(entry.data.publishDate).toISOString().slice(0, 10),
   readingMinutes: getReadingMinutes((entry as { body?: string }).body),
-  href: getWritingHref(entry.id),
+  href: getWritingHref(entry.id, lang),
 }));
+
+const copy = isTurkish
+  ? {
+      eyebrow: 'Kuran Tefekkürleri',
+      title: 'Tefekkür Yazıları',
+      description: 'KURAN ayetleri üzerine bilgi, tevhid, adalet, doğru sözlülük ve teslimiyet merkezli tefekkürler.',
+      all: 'Tüm Yazılar',
+      allAria: 'Tüm tefekkür yazılarını görüntüle',
+      language: 'Türkçe',
+      category: 'Kuran Tefekkürleri',
+      read: 'Makaleyi oku',
+      empty: 'Yayımlanmış tefekkür yazısı bulunamadı.',
+      minutes: 'dk okuma',
+    }
+  : {
+      eyebrow: 'Quran Reflections',
+      title: 'Writings & Reflections',
+      description: 'Reflections on Quranic verses centered on knowledge, monotheism, justice, truthful speech and submission.',
+      all: 'All Writings',
+      allAria: 'View all writings and reflections',
+      language: 'English',
+      category: 'Quran Reflections',
+      read: 'Read article',
+      empty: 'No published writings found.',
+      minutes: 'min read',
+    };
 ---
 
 <section
@@ -42,28 +76,27 @@ const articles = writingEntries.map((entry) => ({
         <p
           class="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-accent"
         >
-          Kuran Tefekkürleri
+          {copy.eyebrow}
         </p>
 
         <h2
           id="writings-preview-title"
           class="text-3xl font-bold leading-tight text-maintext font-heading md:text-5xl"
         >
-          Tefekkür Yazıları
+          {copy.title}
         </h2>
 
         <p class="mt-4 max-w-2xl font-body leading-7 text-subtext">
-          Kuran ayetleri üzerine bilgi, tevhid, adalet, doğru sözlülük ve
-          teslimiyet merkezli tefekkürler.
+          {copy.description}
         </p>
       </div>
 
       <a
-        href="/writings"
+        href={getWritingsIndexHref(lang)}
         class="group inline-flex w-fit items-center gap-3 rounded-full border border-accent/35 bg-accent/10 px-6 py-3 font-semibold text-maintext transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-background"
-        aria-label="Tüm tefekkür yazılarını görüntüle"
+        aria-label={copy.allAria}
       >
-        <span>Tüm Yazılar</span>
+        <span>{copy.all}</span>
         <span
           aria-hidden="true"
           class="transition-transform duration-300 group-hover:translate-x-1"
@@ -80,7 +113,7 @@ const articles = writingEntries.map((entry) => ({
             <a
               href={article.href}
               class="group flex h-full flex-col overflow-hidden rounded-[1.6rem] border border-accent/15 bg-background/35 transition-all duration-500 hover:-translate-y-2 hover:border-accent/55 hover:shadow-[0_24px_70px_rgba(0,0,0,0.35)]"
-              aria-label={`${article.title} makalesini oku`}
+              aria-label={isTurkish ? `${article.title} makalesini oku` : `Read ${article.title}`}
             >
               <div class="relative aspect-[16/10] overflow-hidden bg-black/15">
                 <img
@@ -94,19 +127,19 @@ const articles = writingEntries.map((entry) => ({
                 <div class="absolute inset-0 bg-gradient-to-t from-background/85 via-transparent to-transparent" />
 
                 <span class="absolute left-4 top-4 rounded-full border border-[#D4AF37]/35 bg-background/75 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#D4AF37] backdrop-blur-md">
-                  Türkçe
+                  {copy.language}
                 </span>
               </div>
 
               <div class="flex flex-1 flex-col p-6">
                 <div class="mb-3 flex flex-wrap items-center gap-2 text-[11px] text-subtext">
                   <span class="font-bold uppercase tracking-[0.18em] text-accent">
-                    Kuran Tefekkürleri
+                    {copy.category}
                   </span>
                   <span aria-hidden="true">•</span>
                   <time datetime={article.dateTime}>{article.date}</time>
                   <span aria-hidden="true">•</span>
-                  <span>{article.readingMinutes} dk okuma</span>
+                  <span>{article.readingMinutes} {copy.minutes}</span>
                 </div>
 
                 <h3 class="text-2xl font-bold leading-tight text-maintext transition-colors duration-300 font-heading group-hover:text-accent">
@@ -126,7 +159,7 @@ const articles = writingEntries.map((entry) => ({
                 </div>
 
                 <div class="mt-auto flex items-center gap-2 pt-6 font-semibold text-maintext transition-colors duration-300 group-hover:text-accent">
-                  <span>Makaleyi oku</span>
+                  <span>{copy.read}</span>
                   <span
                     aria-hidden="true"
                     class="transition-transform duration-300 group-hover:translate-x-2"
@@ -140,7 +173,7 @@ const articles = writingEntries.map((entry) => ({
         </div>
       ) : (
         <div class="rounded-2xl border border-accent/15 bg-background/25 p-8 text-center text-subtext">
-          Yayımlanmış tefekkür yazısı bulunamadı.
+          {copy.empty}
         </div>
       )
     }

@@ -1,76 +1,132 @@
 ---
 import { Icon } from 'astro-icon/components';
 import ThemeToggle from './theme-toggle.astro';
+import {
+  getLanguageFromPath,
+  getLanguageSwitchHref,
+  localizePath,
+  stripLanguagePrefix,
+  type SiteLanguage,
+} from '../utils/i18n';
 
 interface NavItem {
-  label: string;
-  href: string;
+  label: Record<SiteLanguage, string>;
+  path: string;
   icon: string;
-  mobileLabel?: string;
+  mobileLabel?: Record<SiteLanguage, string>;
   matchPrefix?: string;
+  hash?: string;
 }
+
+const currentPath = Astro.url.pathname;
+const language = getLanguageFromPath(currentPath);
+const baseCurrentPath = stripLanguagePrefix(currentPath);
 
 const navItems: NavItem[] = [
   {
-    label: "Home",
-    href: "/#home",
-    icon: "mdi:home",
+    label: { en: 'Home', tr: 'Ana Sayfa' },
+    path: '/',
+    hash: 'home',
+    icon: 'mdi:home',
   },
   {
-    label: "Biography",
-    href: "/biography/",
-    icon: "mdi:account-music",
-    matchPrefix: "/biography",
+    label: { en: 'Biography', tr: 'Biyografi' },
+    path: '/biography/',
+    icon: 'mdi:account-music',
+    matchPrefix: '/biography',
   },
   {
-    label: "Discography",
-    href: "/#projects",
-    icon: "mdi:album",
+    label: { en: 'Discography', tr: 'Diskografi' },
+    path: '/',
+    hash: 'projects',
+    icon: 'mdi:album',
   },
   {
-    label: "Neo-Sacred Zikr",
-    href: "/neo-sacred-zikr/",
-    icon: "mdi:music-circle",
-    matchPrefix: "/neo-sacred-zikr",
+    label: { en: 'Neo-Sacred Zikr', tr: 'Neo-Sacred Zikr' },
+    path: '/neo-sacred-zikr/',
+    icon: 'mdi:music-circle',
+    matchPrefix: '/neo-sacred-zikr',
   },
   {
-    label: "Quranic Concepts",
-    mobileLabel: "Quranic",
-    href: "/quranic-concepts/",
-    icon: "mdi:book-open-page-variant",
-    matchPrefix: "/quranic-concepts",
+    label: { en: 'Quranic Concepts', tr: 'Quranic Concepts' },
+    mobileLabel: { en: 'Quranic', tr: 'Quranic' },
+    path: '/quranic-concepts/',
+    icon: 'mdi:book-open-page-variant',
+    matchPrefix: '/quranic-concepts',
   },
   {
-    label: "Writings",
-    href: "/writings/",
-    icon: "mdi:book-open-page-variant",
-    matchPrefix: "/writings",
+    label: { en: 'Writings', tr: 'Yazılar' },
+    path: '/writings/',
+    icon: 'mdi:book-open-page-variant',
+    matchPrefix: '/writings',
   },
   {
-    label: "Contact",
-    href: "/#contact",
-    icon: "mdi:email",
-  }
+    label: { en: 'Contact', tr: 'İletişim' },
+    path: '/',
+    hash: 'contact',
+    icon: 'mdi:email',
+  },
 ];
 
-const currentPath = Astro.url.pathname;
+function itemHref(item: NavItem): string {
+  const localizedPath = localizePath(item.path, language);
+
+  if (item.hash) {
+    return `${localizedPath}#${item.hash}`;
+  }
+
+  return localizedPath;
+}
 
 function isItemActive(item: NavItem): boolean {
   if (item.matchPrefix) {
     return (
-      currentPath === item.matchPrefix ||
-      currentPath === `${item.matchPrefix}/` ||
-      currentPath.startsWith(`${item.matchPrefix}/`)
+      baseCurrentPath === item.matchPrefix ||
+      baseCurrentPath === `${item.matchPrefix}/` ||
+      baseCurrentPath.startsWith(`${item.matchPrefix}/`)
     );
   }
 
-  if (item.href === "/#home") {
-    return currentPath === "/";
+  if (item.path === '/' && item.hash === 'home') {
+    return baseCurrentPath === '/';
   }
 
-  return currentPath === item.href;
+  return baseCurrentPath === item.path;
 }
+
+const englishHref = getLanguageSwitchHref(currentPath, 'en');
+const turkishHref = getLanguageSwitchHref(currentPath, 'tr');
 ---
+
+<div
+  id="language-toggle-wrapper"
+  class="fixed left-2 top-4 z-50 reveal-content sm:left-4 md:top-4"
+  style="animation-delay: 700ms;"
+>
+  <div class="language-switcher" aria-label={language === 'tr' ? 'Dil seçimi' : 'Language selector'}>
+    <a
+      href={englishHref}
+      hreflang="en"
+      lang="en"
+      aria-current={language === 'en' ? 'page' : undefined}
+      class:list={['language-switcher__item', { active: language === 'en' }]}
+    >
+      EN
+    </a>
+
+    <span class="language-switcher__divider" aria-hidden="true">/</span>
+
+    <a
+      href={turkishHref}
+      hreflang="tr"
+      lang="tr"
+      aria-current={language === 'tr' ? 'page' : undefined}
+      class:list={['language-switcher__item', { active: language === 'tr' }]}
+    >
+      TR
+    </a>
+  </div>
+</div>
 
 <div
   id="theme-toggle-wrapper"
@@ -83,7 +139,7 @@ function isItemActive(item: NavItem): boolean {
 <div class="flex justify-center w-full">
   <nav
     id="main-nav"
-    aria-label="Primary navigation"
+    aria-label={language === 'tr' ? 'Ana menü' : 'Primary navigation'}
     class="pro-glass fixed left-1/2 -translate-x-1/2 z-20 border-[1.2px] transition-all duration-500 ease-in-out md:top-6 md:bottom-auto bottom-0 w-[90%]"
   >
     <div
@@ -94,13 +150,14 @@ function isItemActive(item: NavItem): boolean {
         {
           navItems.map((item) => {
             const isActive = isItemActive(item);
+            const href = itemHref(item);
 
             return (
               <li class="flex min-w-0 justify-center md:flex-none">
                 <a
-                  href={item.href}
-                  aria-current={isActive ? "page" : undefined}
-                  class={`flex min-w-0 flex-col items-center gap-1 text-accent transition-colors text-[0.6rem] sm:text-xs md:text-base relative group ${isActive ? "active" : ""}`}
+                  href={href}
+                  aria-current={isActive ? 'page' : undefined}
+                  class={`flex min-w-0 flex-col items-center gap-1 text-accent transition-colors text-[0.6rem] sm:text-xs md:text-base relative group ${isActive ? 'active' : ''}`}
                 >
                   <div class="absolute -left-6 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full transition-all duration-300 scale-0 opacity-0 nav-indicator hidden md:block" />
 
@@ -112,11 +169,11 @@ function isItemActive(item: NavItem): boolean {
                   </span>
 
                   <span class="hidden md:inline-block whitespace-nowrap">
-                    {item.label}
+                    {item.label[language]}
                   </span>
 
                   <span class="md:hidden block max-w-full truncate leading-tight">
-                    {item.mobileLabel ?? item.label}
+                    {item.mobileLabel?.[language] ?? item.label[language]}
                   </span>
                 </a>
               </li>
@@ -140,6 +197,60 @@ function isItemActive(item: NavItem): boolean {
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  .language-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    min-height: 2.55rem;
+    padding: 0.35rem 0.55rem;
+    border: 1px solid color-mix(in srgb, var(--color-accent), transparent 72%);
+    border-radius: 9999px;
+    background:
+      linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--color-background), transparent 18%),
+        color-mix(in srgb, var(--color-accent), transparent 92%)
+      );
+    box-shadow:
+      0 12px 38px rgba(0, 0, 0, 0.22),
+      inset 0 1px 0 color-mix(in srgb, var(--color-maintext), transparent 88%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .language-switcher__item {
+    display: inline-flex;
+    min-width: 1.6rem;
+    min-height: 1.7rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    color: var(--color-subtext);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    transition:
+      color 0.25s ease,
+      background-color 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .language-switcher__item:hover {
+    color: var(--color-maintext);
+    transform: translateY(-1px);
+  }
+
+  .language-switcher__item.active {
+    background: color-mix(in srgb, var(--color-accent), transparent 84%);
+    color: var(--color-maintext);
+  }
+
+  .language-switcher__divider {
+    color: color-mix(in srgb, var(--color-accent), transparent 38%);
+    font-size: 0.68rem;
+    user-select: none;
   }
 
   nav {
@@ -255,20 +366,23 @@ function isItemActive(item: NavItem): boolean {
       backdrop-filter: blur(0px);
     }
 
-    #theme-toggle-wrapper {
+    #theme-toggle-wrapper,
+    #language-toggle-wrapper {
       will-change: transform;
       transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    #theme-toggle-wrapper.theme-hidden {
+    #theme-toggle-wrapper.theme-hidden,
+    #language-toggle-wrapper.language-hidden {
       transform: translateY(-150%) !important;
     }
   }
 </style>
 
 <script>
-  const nav = document.getElementById("main-nav");
-  const themeWrapper = document.getElementById("theme-toggle-wrapper");
+  const nav = document.getElementById('main-nav');
+  const themeWrapper = document.getElementById('theme-toggle-wrapper');
+  const languageWrapper = document.getElementById('language-toggle-wrapper');
 
   const maxScroll = 1000;
   let lastScrollY = window.scrollY;
@@ -278,7 +392,7 @@ function isItemActive(item: NavItem): boolean {
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > 0) {
-      nav?.classList.add("scrolling");
+      nav?.classList.add('scrolling');
 
       const scrollProgress = Math.min(window.scrollY / maxScroll, 1);
       const easeProgress = 1 - Math.pow(1 - scrollProgress, 4);
@@ -290,25 +404,27 @@ function isItemActive(item: NavItem): boolean {
 
       if (window.innerWidth >= 768) {
         nav?.style.setProperty(
-          "width",
+          'width',
           `${Math.min(currentWidth, window.innerWidth - 32)}px`
         );
       }
     } else {
-      nav?.classList.remove("scrolling");
+      nav?.classList.remove('scrolling');
 
       if (window.innerWidth >= 768) {
-        nav?.style.removeProperty("width");
+        nav?.style.removeProperty('width');
       }
     }
 
     if (window.innerWidth < 768) {
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        nav?.classList.add("nav-hidden");
-        themeWrapper?.classList.add("theme-hidden");
+        nav?.classList.add('nav-hidden');
+        themeWrapper?.classList.add('theme-hidden');
+        languageWrapper?.classList.add('language-hidden');
       } else {
-        nav?.classList.remove("nav-hidden");
-        themeWrapper?.classList.remove("theme-hidden");
+        nav?.classList.remove('nav-hidden');
+        themeWrapper?.classList.remove('theme-hidden');
+        languageWrapper?.classList.remove('language-hidden');
       }
     }
 
@@ -317,7 +433,7 @@ function isItemActive(item: NavItem): boolean {
   }
 
   window.addEventListener(
-    "scroll",
+    'scroll',
     () => {
       if (!rafId) {
         rafId = requestAnimationFrame(updateNav);
@@ -326,5 +442,5 @@ function isItemActive(item: NavItem): boolean {
     { passive: true }
   );
 
-  window.addEventListener("resize", updateNav, { passive: true });
+  window.addEventListener('resize', updateNav, { passive: true });
 </script>

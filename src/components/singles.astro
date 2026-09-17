@@ -1,14 +1,36 @@
+---
+interface Props {
+  lang?: 'en' | 'tr';
+}
+
+const { lang = 'en' } = Astro.props;
+const isTurkish = lang === 'tr';
+
+const copy = isTurkish
+  ? {
+      title: 'Son Tekliler',
+      description: "Zikir, tefekkür ve TANRI'nın güzel isimleri etrafında şekillenen bağımsız Neo-Sacred Zikr yayınlarından bir seçki.",
+      aria: "Berk KÖKSAL'ın Spotify tekli diskografisini aç",
+      alt: "Berk KÖKSAL'ın son tekli çalışmaları",
+    }
+  : {
+      title: 'Latest Singles',
+      description: 'A collection of standalone Neo-Sacred Zikr releases centered on remembrance, reflection and the beautiful names of GOD.',
+      aria: "Open Berk KÖKSAL's Spotify singles discography",
+      alt: "Berk KÖKSAL's latest singles",
+    };
+---
+
 <section id="singles" class="section-container max-w-6xl mx-auto">
 
   <div class="mb-12">
     <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext flex items-center gap-4">
       <span class="text-accent">/</span>
-      Latest Singles
+      {copy.title}
     </h2>
 
     <p class="text-subtext mt-2 max-w-xl">
-      A collection of standalone Neo-Sacred Zikr releases centered on remembrance,
-      reflection and the beautiful names of GOD.
+      {copy.description}
     </p>
   </div>
 
@@ -16,12 +38,12 @@
     href="https://open.spotify.com/intl-tr/artist/1XO4b3ijvx48kFpjptciXp/discography/single"
     target="_blank"
     rel="noopener noreferrer"
-    aria-label="Berk KÖKSAL'ın Spotify single diskografisini aç"
+    aria-label={copy.aria}
     class="group block rounded-[30px] overflow-hidden border border-accent/20 bg-accent/5 cursor-pointer transition-all duration-500 hover:-translate-y-1 hover:border-accent/50 hover:shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
   >
     <img
       src="/artist/singles.webp"
-      alt="Berk KÖKSAL son single çalışmaları"
+      alt={copy.alt}
       class="w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
     />
   </a>

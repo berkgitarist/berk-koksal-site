@@ -1,0 +1,34 @@
+{
+  "name": "Berk KÖKSAL",
+  "photoUrl": "/artist-logo.webp",
+  "intro": "Besteci • Gitarist • Müzik Prodüktörü • Neo-Sacred Zikr'in Kurucusu • QURANIC CONCEPTS'in Yaratıcısı",
+  "introHtml": "Besteci • Gitarist • Müzik Prodüktörü<br/><span class='text-maintext font-bold'>Neo-Sacred Zikr'in Kurucusu</span><br/><span class='text-maintext font-bold'>QURANIC CONCEPTS'in Yaratıcısı</span><br/><span class='text-subtext'>İki ayrı müzikal evren: zikir ve KURAN merkezli konsept albümler.</span>",
+  "webpageTitle": "Berk KÖKSAL | Neo-Sacred Zikr • QURANIC CONCEPTS",
+  "resumeUrl": "https://open.spotify.com/artist/1XO4b3ijvx48kFpjptciXp",
+  "socials": [
+    {
+      "name": "Spotify",
+      "url": "https://open.spotify.com/artist/1XO4b3ijvx48kFpjptciXp",
+      "icon": "mdi:spotify",
+      "showInContact": true
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@berkgitarist",
+      "icon": "mdi:youtube",
+      "showInContact": true
+    },
+    {
+      "name": "Kuran Derslerimiz",
+      "url": "https://www.youtube.com/@Kuran_Derslerimiz",
+      "icon": "mdi:youtube",
+      "showInContact": true
+    },
+    {
+      "name": "E-posta",
+      "url": "mailto:berkgitarist@gmail.com",
+      "icon": "mdi:email",
+      "showInContact": true
+    }
+  ]
+}

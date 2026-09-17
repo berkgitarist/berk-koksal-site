@@ -1,4 +1,12 @@
 ---
+const isTurkish = Astro.url.pathname === '/tr/' || Astro.url.pathname.startsWith('/tr/');
+const hideAmbientLabel = isTurkish
+  ? 'Düşen notaları ve Allah isimlerini gizle'
+  : 'Hide falling notes and Allah names';
+const showAmbientLabel = isTurkish
+  ? 'Düşen notaları ve Allah isimlerini göster'
+  : 'Show falling notes and Allah names';
+const toggleThemeLabel = isTurkish ? 'Temayı değiştir' : 'Toggle theme';
 ---
 
 <div class="top-controls">
@@ -8,10 +16,12 @@
   <button
     id="ambient-toggle"
     type="button"
-    aria-label="Hide falling notes and Allah names"
+    aria-label={hideAmbientLabel}
     aria-pressed="false"
     data-enabled="true"
-    title="Hide falling notes and Allah names"
+    data-label-hide={hideAmbientLabel}
+    data-label-show={showAmbientLabel}
+    title={hideAmbientLabel}
   >
     <svg
       class="drop-icon"
@@ -48,7 +58,7 @@
   <button
     id="theme-toggle"
     type="button"
-    aria-label="Toggle Theme"
+    aria-label={toggleThemeLabel}
   >
     <!-- SUN -->
     <svg
@@ -329,8 +339,8 @@
 
     const label =
       enabled
-        ? 'Hide falling notes and Allah names'
-        : 'Show falling notes and Allah names';
+        ? (button.dataset.labelHide ?? 'Hide falling notes and Allah names')
+        : (button.dataset.labelShow ?? 'Show falling notes and Allah names');
 
     button.setAttribute(
       'aria-label',

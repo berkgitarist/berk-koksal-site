@@ -2,30 +2,102 @@
 import ProjectCard from './project-card.astro';
 import albumsData from '../data/albums.json';
 
+interface Props {
+  lang?: 'en' | 'tr';
+}
+
+const { lang = 'en' } = Astro.props;
+const isTurkish = lang === 'tr';
+
+const albumDescriptionTr: Record<string, string> = {
+  helll: 'Cehennem, hesap, pişmanlık, susuzluk, hapsedilme ve geri dönüşü olmayan sonuçlara ilişkin KURAN merkezli uyarıları tavizsiz tek bir müzikal inişe dönüştüren 19 parçalık konsept albüm.',
+  'zikr-symphonic-metal': "Tek bir kutsal ifade olan HÛ'nun nefes ve sessizlikten yükselerek anıtsal korolara, senfonik orkestraya, borulu orga ve progresif neoklasik metale dönüştüğü 19 bölümlük bir Neo-Sacred Zikr döngüsü.",
+  'zikr-jazz': "Spiritüel cazın, sıcak akustik enstrümantasyonun ve TANRI'nın güzel isimlerinin sessiz bir zikirde buluştuğu samimi bir Neo-Sacred Zikr albümü.",
+  'zikr-i-batin': "Kalbin sessiz zikrine, içsel tefekküre ve TANRI'nın güzel isimlerine odaklanan son derece kişisel bir Neo-Sacred Zikr albümü.",
+  'zikr-rap': 'Zikrin rap vokalleri, boom bap ritimleri ve modern spiritüel anlatımın ritmik diliyle buluştuğu kutsal bir hip-hop albümü.',
+  'one-god-one-love': 'TEK TANRI, Tek Sevgi ve Tek Hakikat mesajını çocuk korosu merkezli aydınlık ve evrensel bir kutsal müzik diliyle taşıyan albüm.',
+  'classical-chorus': 'Klasik koro estetiğini, neoklasik orkestrasyonu, katedral atmosferini ve zikri birleştiren anıtsal bir kutsal koro albümü.',
+  'zikr-rock': 'Rock, metal, neoklasik gitarlar, katedral orgları ve kutsal koroların bir zikir diline dönüştüğü güçlü bir Neo-Sacred Zikr albümü.',
+  'zikr-nur': 'Kadın vokalleri, yağmur atmosferleri, ney melodileri ve ilahi nur temasıyla şekillenen huzurlu bir ambient zikir albümü.',
+  'zikr-huu': 'Tekrar, kadın vokalleri ve kalbin sessiz zikrine odaklanan minimalist bir kutsal meditasyon albümü.',
+  'zikr-symphony': 'Senfonik orkestrayı, koroyu, progresif rockı ve kutsal zikri bir araya getiren Neo-Sacred Zikr evreninin ilk büyük manifestosu.',
+  'tanrinin-hediyesi': "Tövbe, arınma, bağışlanma ve TANRI'ya yöneliş etrafında şekillenen ilk Neo-Sacred Zikr çalışması.",
+};
+
+const genreTr: Record<string, string> = {
+  'Progressive Metal': 'Progresif Metal',
+  'Symphonic Extreme Metal': 'Senfonik Ekstrem Metal',
+  'Experimental Choral': 'Deneysel Koro',
+  'Symphonic Metal': 'Senfonik Metal',
+  'Neoclassical Metal': 'Neoklasik Metal',
+  'Spiritual Jazz': 'Spiritüel Caz',
+  'Modal Jazz': 'Modal Caz',
+  'Sacred Music': 'Kutsal Müzik',
+  'Sacred Choral Music': 'Kutsal Koro Müziği',
+  'Neoclassical': 'Neoklasik',
+  'Spiritual Music': 'Spiritüel Müzik',
+  'Spiritual Rap': 'Spiritüel Rap',
+  'Sacred Hip-Hop': 'Kutsal Hip-Hop',
+  'Spiritual Contemporary': 'Çağdaş Spiritüel Müzik',
+  'Choral & Ambient': 'Koro & Ambient',
+  'Sacred Rock': 'Kutsal Rock',
+  'Progressive Rock': 'Progresif Rock',
+  'Ambient Spiritual Music': 'Ambient Spiritüel Müzik',
+  'Sacred Meditation': 'Kutsal Meditasyon',
+  'Contemporary Devotional Music': 'Çağdaş Adanmışlık Müziği',
+  'Spiritual Ambient': 'Spiritüel Ambient',
+  'Symphonic Sacred Music': 'Senfonik Kutsal Müzik',
+  'Choral Music': 'Koro Müziği',
+};
+
+const translateGenre = (value: string) => isTurkish ? (genreTr[value] ?? value) : value;
+
 const projects = albumsData.map((album) => ({
   title: album.title,
-  description: album.description,
-  category: `${album.universe ?? 'ALBUM'} • ${album.year}`,
+  description: isTurkish ? (albumDescriptionTr[album.slug] ?? album.description) : album.description,
+  category: `${album.universe ?? (isTurkish ? 'ALBÜM' : 'ALBUM')} • ${album.year}`,
   images: [album.cover.replace(/^\//, '')],
   platforms: ['web'],
-  tech: album.genre.split(' / '),
+  tech: album.genre.split(' / ').map(translateGenre),
   link: `/albums/${album.slug}/`,
   universe: album.universe ?? 'Neo-Sacred Zikr',
 }));
 
 const quranicConcepts = projects.filter((project) => project.universe === 'QURANIC CONCEPTS');
 const neoSacred = projects.filter((project) => project.universe !== 'QURANIC CONCEPTS');
+
+const copy = isTurkish
+  ? {
+      discography: 'Diskografi',
+      discographyDescription: "Berk Köksal'ın iki ayrı müzikal evrenini keşfedin: Neo-Sacred Zikr ve QURANIC CONCEPTS.",
+      conceptSeries: 'Konsept Albüm Serisi',
+      conceptDescription: "Tek konu. Tek dünya. Tek albüm. Her çalışma KURAN'da anlatılan belirli bir tema, sahne, ses veya gerçekliğin içine girer.",
+      exploreSeries: 'Seriyi Keşfet',
+      sacredUniverse: 'Kutsal Müzik Evreni',
+      neoDescription: "Birçok çağdaş müzik dili aracılığıyla zikri, adanmışlığı ve TEK TANRI'yı yüceltmeyi merkezine alan bir müzik evreni.",
+      exploreNeo: "Neo-Sacred Zikr'i Keşfet",
+    }
+  : {
+      discography: 'Discography',
+      discographyDescription: "Explore Berk Köksal's two distinct musical universes: Neo-Sacred Zikr and QURANIC CONCEPTS.",
+      conceptSeries: 'Concept Album Series',
+      conceptDescription: 'One subject. One world. One album. Each work enters a specific theme, scene, voice or reality described in the Quran.',
+      exploreSeries: 'Explore the series',
+      sacredUniverse: 'Sacred Music Universe',
+      neoDescription: 'Music centered on remembrance, devotion and the glorification of the ONE GOD through many contemporary musical languages.',
+      exploreNeo: 'Explore Neo-Sacred Zikr',
+    };
 ---
 
 <section id="projects" class="section-container !pt-4 md:!pt-6 overflow-hidden">
   <div class="container mx-auto space-y-14">
     <div class="project-header">
       <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext mb-2 flex items-center gap-4">
-        <span class="text-accent">/</span> Discography
+        <span class="text-accent">/</span> {copy.discography}
       </h2>
 
       <p class="text-subtext font-body text-sm max-w-2xl">
-        Explore Berk Köksal's two distinct musical universes: Neo-Sacred Zikr and QURANIC CONCEPTS.
+        {copy.discographyDescription}
       </p>
     </div>
 
@@ -34,27 +106,27 @@ const neoSacred = projects.filter((project) => project.universe !== 'QURANIC CON
         <div class="mb-7 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p class="mb-2 text-xs font-bold uppercase tracking-[0.35em] text-[#b74a4a]">
-              Concept Album Series
+              {copy.conceptSeries}
             </p>
             <h3 class="text-3xl font-heading font-bold text-maintext md:text-4xl">
               QURANIC CONCEPTS
             </h3>
             <p class="mt-3 max-w-2xl text-sm leading-6 text-subtext">
-              One subject. One world. One album. Each work enters a specific theme, scene, voice or reality described in the Quran.
+              {copy.conceptDescription}
             </p>
           </div>
 
           <a
-            href="/quranic-concepts/"
+            href={isTurkish ? "/tr/quranic-concepts/" : "/quranic-concepts/"}
             class="inline-flex items-center gap-2 text-sm font-bold text-[#d16c6c] transition hover:text-maintext"
           >
-            Explore the series <span aria-hidden="true">→</span>
+            {copy.exploreSeries} <span aria-hidden="true">→</span>
           </a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {quranicConcepts.map((project) => (
-            <ProjectCard project={project} />
+            <ProjectCard project={project} lang={lang} />
           ))}
         </div>
       </section>
@@ -64,27 +136,27 @@ const neoSacred = projects.filter((project) => project.universe !== 'QURANIC CON
       <div class="mb-7 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p class="mb-2 text-xs font-bold uppercase tracking-[0.35em] text-accent">
-            Sacred Music Universe
+            {copy.sacredUniverse}
           </p>
           <h3 class="text-3xl font-heading font-bold text-maintext md:text-4xl">
             Neo-Sacred Zikr
           </h3>
           <p class="mt-3 max-w-2xl text-sm leading-6 text-subtext">
-            Music centered on remembrance, devotion and the glorification of the ONE GOD through many contemporary musical languages.
+            {copy.neoDescription}
           </p>
         </div>
 
         <a
-          href="/neo-sacred-zikr/"
+          href={isTurkish ? "/tr/neo-sacred-zikr/" : "/neo-sacred-zikr/"}
           class="inline-flex items-center gap-2 text-sm font-bold text-accent transition hover:text-maintext"
         >
-          Explore Neo-Sacred Zikr <span aria-hidden="true">→</span>
+          {copy.exploreNeo} <span aria-hidden="true">→</span>
         </a>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {neoSacred.map((project) => (
-          <ProjectCard project={project} />
+          <ProjectCard project={project} lang={lang} />
         ))}
       </div>
     </section>

@@ -1,0 +1,614 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/nav.astro";
+
+const milestones = [
+  ["1980", "İstanbul'da doğdu", "19 Aralık 1980'de (19.12.1980) İstanbul'da doğdu ve çocukluğunun ilk yıllarını ağırlıklı olarak Rami ve Gaziosmanpaşa çevresinde geçirdi. Kan grubu O Rh negatiftir (O−). Kendisi için anlamlı olan kişisel bir ayrıntı olarak, doğum tarihinde 19 sayısının iki kez yer aldığını belirtir. Tarih 19121980 biçiminde yazıldığında tam sayı da 19'a tam bölünmektedir. Köksal, 19'u kişisel uğurlu sayısı olarak da görür ve bu sayısal ayrıntıları bağımsız bir dinî iddia olarak değil, 19 sayısına duyduğu saygının kişisel bir ifadesi olarak korur."],
+  ["yak. 1992–1993", "Klasik gitar", "Gaziosmanpaşa'da özel klasik gitar derslerine başladı ve müzik yaşamının teknik temelini oluşturdu."],
+  ["1996", "Hayatını etkileyen kişisel bir kayıp", "On altı yaşındayken annesi Aynur'u bir trafik kazasında kaybetti. Bu deneyim, TANRI'ya teslimiyetinden önce ürettiği müziğin duygusal dilini derinden şekillendirdi."],
+  ["1990'ların sonu–2000'ler", "Gitar, gruplar ve berkgitarist", "Gitarist ve vokalist olarak sahne aldı, gruplarla çalıştı ve kulaktan çıkardığı tabları, akorları ve MIDI/Guitar Pro dosyalarını berkgitarist adıyla internette yayımladı."],
+  ["2000'ler–2010'lar", "Tek Kişilik Prodüksiyon", "Performanstan besteciliğe, MIDI programlamaya, kayda, orkestrasyona, miks ve masteringe uzanan bir üretim alanı geliştirdi."],
+  ["2022", "Requiem Concerto", "TANRI'ya teslimiyetinden önceki yıllardan, Mozart'ın Requiem'ine duyduğu uzun süreli sevgi, neoklasik gitar ve ruhsal arayışla şekillenen önemli bir eser yayımladı."],
+  ["2019–2024", "KURAN araştırması ve TANRI'ya teslimiyete giden yol", "Rashad Khalifa ile ilişkilendirilen KURAN'ın 19 tabanlı matematiksel sistemini incelerken tekrar tekrar TANRI'dan doğru yola iletilmeyi istedi. Bu yılları, dinî anlayışında büyük bir değişime götüren araştırma, sorgulama ve kişisel sınavlar dönemi olarak tanımlar."],
+  ["2024", "İlk zikir çalışmaları", "Zikir (La ilahe illa Allah) eserini yayımladı ve müzikal yeteneklerini TEK TANRI'yı anma ve yüceltme yönünde kullanmaya başladı."],
+  ["2025–2026", "Neo-Sacred Zikr", "Senfonik müzikten ambient meditasyona, rock müziğinden klasik koroya, çocuk korosundan rap, caz ve senfonik metale uzanan büyüyen bir kutsal müzik evreni geliştirdi."],
+  ["2026", "QURANIC CONCEPTS ve HELLL", "KURAN'da anlatılan belirli temalara, sahnelere, seslere ve gerçekliklere girmek için ayrı bir konsept albüm çerçevesi olarak QURANIC CONCEPTS'i oluşturdu. HELLL, bu evrenin 19 parçalık ilk dünyası oldu."],
+];
+
+const albums = [
+  ["2024", "Tanrı'nın Hediyesi", "Tövbe Ettim, Estağfurullah Ya Gaffar etrafında kurulan; vokalli, enstrümantal ve piyano/koro merkezli biçimlerde sunulan üç bölümlük bir albüm."],
+  ["2025", "Zikr Symphony", "İlk büyük ölçekli Neo-Sacred Zikr konsept albümü: 19 ana eser; on dokuzuncu eserin içinde ayrıca 19 bölümlük bir medley bulunur."],
+  ["2026", "Zikr Huu", "Kadın vokalleri, tekrar, dinginlik ve anma etrafında kurulan dokuz parçalık minimalist bir meditasyon."],
+  ["2026", "Zikr Nur", "Kadın vokalleri, yağmur atmosferi, piyano, ney ve yumuşak ritimlerle şekillenen 19 parçalık atmosferik bir çalışma."],
+  ["2026", "ZIKR ROCK", "Köksal'ın rock ve neoklasik gitar köklerine 19 parçalık bir dönüş; albüm boyunca yoğunluk ve distorsiyon giderek artar."],
+  ["2026", "Neo-Sacred Zikr: Classical Chorus", "Neo-Sacred Zikr adının daha geniş müzikal evreni tanımlamasında etkili olan 19 parçalık koro ve klasik müzik projesi."],
+  ["2026", "Neo-Sacred Zikr: One God One Love", "TEK TANRI'ya inanan çocukların da TANRI'yı anıp yüceltebilecekleri müziklere sahip olması düşüncesinden doğan 19 parçalık çocuk korosu projesi."],
+  ["2026", "ZIKR RAP", "Rap müziğinin ritmini ve enerjisini zikir, anma ve TANRI'ya övgü için kullanan; Bismillahirrahmanirrahim ile açılan 19 parçalık proje."],
+  ["2026", "Zikr-i Batın", "İçsel anma, ilahî isimler ve KURAN'ın başlangıç harfleri olan Huruf-u Mukattaa'dan kurulan final bestesine odaklanan son derece kişisel 19 parçalık çalışma."],
+  ["2026", "ZIKR JAZZ", "Daha sıcak ve sakin bir tınıyla genişletilmiş ve modal armoniyi kullanan 19 parçalık kutsal caz projesi."],
+  ["2026", "ZIKR SYMPHONIC METAL", "Neredeyse bütünüyle HÛ etrafında kurulan; yer yer Hay / Al-Hayy kullanımını kutsal koro, orkestra, org ve progresif neoklasik metal ile birleştiren 19 bölümlük konsept albüm."],
+];
+---
+
+<Layout
+  title="Biyografi | Berk KÖKSAL"
+  description="Berk KÖKSAL'ın resmî biyografisi — besteci, gitarist, müzik prodüktörü, yazılım mühendisi, KURAN araştırmacısı, Neo-Sacred Zikr'in kurucusu ve QURANIC CONCEPTS'in yaratıcısı."
+  canonical="/tr/biography/"
+  ogImage="/artist/berk-portrait.webp"
+  lang="tr"
+>
+  <Nav />
+
+  <main>
+    <section class="min-h-screen px-5 py-10 md:px-8 md:py-28">
+      <div class="mx-auto max-w-6xl space-y-8 md:space-y-28">
+
+        <!-- HERO -->
+        <header class="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">
+              Resmî Sanatçı Biyografisi
+            </p>
+
+            <h1 class="mb-6 text-5xl font-heading font-bold text-maintext md:text-7xl">
+              Berk KÖKSAL
+            </h1>
+
+            <p class="mb-8 text-xl leading-8 text-accent">
+              Besteci • Gitarist • Müzik Prodüktörü • Yazılım Mühendisi<br />
+              Neo-Sacred Zikr'in Kurucusu<br />
+              QURANIC CONCEPTS'in Yaratıcısı
+            </p>
+
+            <p class="max-w-2xl text-lg leading-8 text-subtext">
+              19 Aralık 1980'de İstanbul'da doğan Berk KÖKSAL; besteci, gitarist,
+              vokalist, söz yazarı, aranjör, müzik prodüktörü, miks ve mastering
+              mühendisi, yazılım mühendisi, Bilgisayar Bilimleri mezunu ve KURAN
+              araştırmacısıdır. Klasik gitar ve MIDI programlamayla başlayan yaratıcı
+              yolculuğu zamanla iki ayrı çağdaş kutsal müzik çerçevesine dönüştü:
+              Neo-Sacred Zikr ve QURANIC CONCEPTS.
+            </p>
+          </div>
+
+          <img
+            src="/artist/berk-portrait.webp"
+            alt="Berk Köksal portresi"
+            class="w-full rounded-[2rem] border border-accent/20 shadow-2xl shadow-accent/10"
+            fetchpriority="high"
+          />
+        </header>
+
+        <!-- ABOUT -->
+        <section class="grid grid-cols-1 gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:gap-12">
+          <div>
+            <p class="mb-4 text-xs font-bold uppercase tracking-[0.45em] text-accent">I</p>
+            <h2 class="text-4xl font-heading font-bold text-maintext md:text-5xl">
+              Tek bir gitar telinden bir müzik evrenine
+            </h2>
+          </div>
+
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>
+              Köksal'ın müzikle ilişkisi çocukluk yıllarında babasının gitarıyla başladı.
+              Resmî bir eğitim almadan önce en temel biçimde enstrüman üzerinde melodiyi
+              keşfetmeye çalıştı; bir dönem bunu yalnızca tek bir telle yaptı. Yaklaşık
+              on iki veya on üç yaşlarında Gaziosmanpaşa'da özel klasik gitar derslerine
+              başladı.
+            </p>
+
+            <p>
+              Bilgisayarlar ve MIDI giderek daha erişilebilir hâle geldikçe Guitar Pro 3,
+              onun için önemli bir öz eğitim aracına dönüştü. Gitar, bas, davul, yaylılar
+              ve diğer partileri MIDI ve tablatür biçiminde yazarak müziği kulaktan yeniden
+              kurmayı öğrendi. İnternette kullandığı
+              <strong class="text-maintext">berkgitarist</strong> adıyla tablar, akorlar
+              ve Guitar Pro dosyaları paylaştı; bunlar arasında Yngwie Malmsteen, Jason
+              Becker, Steve Vai ve Cem Köksal gibi sanatçılarla ilişkili transkripsiyonlar
+              da bulunuyordu.
+            </p>
+
+            <p>
+              Bu çalışma biçimi zamanla gayriresmî bir kompozisyon okuluna dönüştü.
+              Yalnızca gitar sololarını öğrenmek yerine tüm düzenlemeleri yeniden kurarak
+              armoni, ritim, orkestrasyon, aranjman ve enstrümanlar arasındaki ilişkiye
+              dair daha geniş bir anlayış geliştirdi.
+            </p>
+          </div>
+        </section>
+
+        <!-- FULL BIOGRAPHY BUTTON -->
+        <div>
+          <a
+            href="/tr/full-biography/"
+            class="group flex w-full items-center justify-between rounded-2xl border border-accent/40 bg-accent/10 px-6 py-5 text-accent transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-background md:px-8 md:py-7"
+            aria-label="Berk Köksal'ın tam biyografisini oku"
+          >
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[0.3em] opacity-80">Hikâyeye Devam Et</p>
+              <p class="mt-2 text-xl font-heading font-bold md:text-2xl">Tam Biyografiyi Oku</p>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 shrink-0 transition-transform duration-300 group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- QURAN VERSE -->
+        <a
+          href="https://qurantft.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block rounded-[2rem] border border-accent/30 bg-accent/5 p-10 text-center transition-all hover:bg-accent/10 md:p-14"
+        >
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">KURAN: SON AHİT</p>
+          <h2 class="text-3xl font-heading font-bold leading-tight text-maintext md:text-5xl">
+            [87:1] Yüce Rabbinin adını yücelt.
+          </h2>
+          <p class="mt-6 text-sm text-accent">Quran: The Final Testament ↗</p>
+        </a>
+
+        <!-- FORMATIVE YEARS -->
+        <section class="rounded-[2rem] border border-accent/20 bg-accent/5 p-8 md:p-14">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">II · Biçimlenme Yılları</p>
+          <h2 class="mb-8 text-4xl font-heading font-bold text-maintext md:text-6xl">
+            Klasik müzik, neoklasik gitar ve duygusal derinlik
+          </h2>
+
+          <div class="grid grid-cols-1 gap-8 text-lg leading-8 text-subtext lg:grid-cols-2">
+            <div class="space-y-5">
+              <p>
+                Paganini'nin 24 No'lu Kaprisi, klasik virtüözite ile heavy metali
+                birleştirmek için erken dönem bir laboratuvar hâline geldi. Yngwie
+                Malmsteen'i keşfetmesi ise Köksal'a zaten aradığı şeye yakın bir müzikal
+                dil sundu: neoklasik cümleler, diminished armoni, armonik minör renk,
+                virtüöz gitar ve yarım ses aşağı akorttan gelen daha karanlık bir tını.
+              </p>
+              <p>
+                Bach, Handel ve Chopin önemli referans noktaları hâline gelirken Mozart
+                özellikle kalıcı bir duygusal etki bıraktı. Mozart'ın
+                <em>Requiem</em>'i, Köksal'ın kendi kataloğu dışında en derinden değer
+                verdiği eserlerden biri olmaya devam etmektedir.
+              </p>
+            </div>
+
+            <div class="space-y-5">
+              <p>
+                Köksal, 1996'da on altı yaşındayken annesi Aynur'u bir trafik kazasında
+                kaybetti. Daha sonra bu yasın, TANRI'ya teslimiyetinden önce ürettiği
+                müzikteki belirleyici duygusal güçlerden biri olduğunu fark etti.
+                <em>Ne Olur Geri Dön</em> ve <em>Git Hadi Durma</em> gibi şarkılar annesine
+                duyduğu özlemi taşıdı; <em>Kurtuluş Ölümde</em> ise yıllar boyunca defalarca
+                kaydedilmeye çalışılmasına rağmen tamamlanmadan kaldı.
+              </p>
+              <p>
+                Aynı zamanda <em>Makber</em> gibi yoğun duygulu Türk müziğine ve Müslüm
+                Gürses ile Cengiz Kurtoğlu gibi sanatçıların repertuvarlarına da yakınlık
+                duydu. Bugünden geriye baktığında, acıyı müzik aracılığıyla sürekli canlı
+                tutmanın hem yaratıcı değerini hem de duygusal bedelini görmektedir.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section>
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">III · Yolculuk</p>
+          <h2 class="mb-10 text-4xl font-heading font-bold text-maintext md:text-5xl">
+            Önemli dönüm noktaları
+          </h2>
+
+          <div class="space-y-4">
+            {milestones.map(([year, title, description]) => (
+              <article class="grid grid-cols-1 gap-4 rounded-2xl border border-accent/20 bg-accent/5 p-6 md:grid-cols-[150px_1fr]">
+                <p class="font-bold text-accent">{year}</p>
+                <div>
+                  <h3 class="mb-2 text-2xl font-heading font-bold text-maintext">{title}</h3>
+                  <p class="leading-7 text-subtext">{description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <!-- PRODUCTION -->
+        <section class="grid grid-cols-1 items-start gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12">
+          <div>
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">IV · Prodüksiyon</p>
+            <h2 class="text-4xl font-heading font-bold text-maintext md:text-5xl">
+              Tek Kişilik Prodüksiyon Vizyonu
+            </h2>
+          </div>
+
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>
+              Askerlik dönüşünde Köksal gitar çalışmalarını derinleştirmeyi sürdürdü ve
+              bir dönem <strong class="text-maintext">Hasan Cihat Örter</strong>'den özel
+              gitar dersleri aldı. Bu dönem, gitarist olarak teknik gelişimine katkıda
+              bulunurken klasik eğitim, kulaktan transkripsiyon, MIDI çalışmaları ve
+              bağımsız öğrenme yoluyla oluşturduğu müzikal bakış açısını da genişletti.
+            </p>
+            <p>
+              Gökmen Erdal ve Enver Meriç'in de aralarında bulunduğu müzisyenlerle yaptığı
+              grup çalışmaları, 1990'ların sonlarından 2000'lere uzanan dönemde canlı gitar
+              ve vokal deneyimini güçlendirdi. Ancak zamanla MIDI ve stüdyo teknolojileri,
+              prodüksiyon zincirinin giderek daha büyük bir bölümünü tek başına üstlenmesini
+              mümkün kıldı.
+            </p>
+
+            <p>
+              Kayıt çalışma düzeni Cool Edit, Cubase, Propellerhead Reason, Pro Tools ve
+              sonunda Studio One üzerinden gelişti. İmkânları arttıkça daha iyi stüdyo
+              ekipmanlarına yatırım yaptı; kayıt, miks ve mastering çalışmalarını sürdürdü.
+              Pop, rap ve saz temelli projeler dâhil olmak üzere başka müzisyenlerin
+              prodüksiyonlarında da çalıştı; söz yazarı
+              <a
+                href="https://www.youtube.com/@armaganunlu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Armağan Ünlü
+              </a>
+              ve Derdali adıyla bilinen saz müzisyeni
+              <a
+                href="https://youtube.com/@derdaliozdemir?si=cZlP--EeTUdc03LC"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ali Özdemir
+              </a>
+              ile ortak çalışmalar yaptı.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+              {["Beste", "Şarkı Yazımı", "Gitarlar", "Vokaller", "Kayıt", "MIDI Programlama", "Orkestrasyon", "Ses Tasarımı", "Miks", "Mastering", "Görsel Konseptler", "Yazılım Geliştirme"].map((item) => (
+                <div class="rounded-xl border border-accent/20 bg-accent/5 p-4 font-bold text-maintext">{item}</div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <!-- SUBMISSION -->
+        <section class="relative overflow-hidden rounded-[2rem] border border-accent/20">
+          <img
+            src="/artist/neo-sacred-zikr-banner-2.webp"
+            alt="Neo-Sacred Zikr bannerı"
+            class="absolute inset-0 h-full w-full object-cover opacity-70"
+            loading="lazy"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/35"
+          ></div>
+
+          <div class="relative z-10 flex min-h-[600px] items-center p-8 md:p-14 lg:p-16">
+            <div class="max-w-4xl">
+              <p
+                class="mb-4 text-xs font-bold uppercase tracking-[0.45em] text-accent"
+              >
+                V · TANRI'ya Teslimiyet
+              </p>
+
+              <h2
+                class="text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl lg:text-6xl"
+              >
+                Rehberlik, teslimiyet ve müzik için yeni bir amaç
+              </h2>
+
+              <div class="mt-7 space-y-6 text-lg leading-8 text-maintext/85">
+                <p>
+                  Köksal, 2019 civarında KURAN'ın 19 tabanlı matematiksel sistemini,
+                  <strong class="text-maintext">Rashad Khalifa</strong>'nın ortaya koyduğu
+                  biçimiyle uzun süreli olarak incelemeye başladı. Sonraki yılları araştırma,
+                  sorgulama, dua ve kişisel sınavlarla geçen bir dönem olarak tanımlar.
+                  19 tabanlı matematiksel sistemin ilahî kökenine ikna olmuş olmasına rağmen,
+                  yaklaşık beş yıl boyunca Rashad Khalifa'nın
+                  <strong class="text-maintext">TANRI'nın Antlaşma Elçisi</strong>
+                  olup olmadığını incelemeyi sürdürdü. Buradaki kullanımda
+                  <strong class="text-maintext">elçi, peygamber anlamına gelmemektedir.</strong>
+                </p>
+
+                <p>
+                  Köksal, bu dönem boyunca temel duasının TANRI'nın kendisini doğru yola
+                  iletmesi olduğunu söyler. Kendisinin kişisel sınavlar olarak gördüğü bir
+                  dizi süreçten sonra, TANRI'nın bu sınavları geçmesini mümkün kıldığına ve
+                  2024 civarında kendisine
+                  <strong class="text-maintext">TANRI'ya teslimiyeti</strong>
+                  nasip ettiğine inanır.
+                </p>
+
+                <p>
+                  Ardından gelen rehberlikle Köksal'ın ifadesiyle
+                  <strong class="text-maintext">“KURAN açıldı.”</strong>
+                  Daha önce okuduğu ayetler ona yeni ve daha derin bir biçimde anlaşılır
+                  hâle geldi ve onların gerçek anlamı olarak gördüğü anlayışın kendisine
+                  verildiğine inanır.
+                </p>
+
+                <p>
+                  Bu anlayış içinde Köksal,
+                  <strong class="text-maintext">Rashad Khalifa</strong>'nın
+                  <strong class="text-maintext">TANRI'nın Antlaşma Elçisi</strong>
+                  olduğuna kesin olarak kanaat getirdi; onu peygamber olarak görmez.
+                  Bu noktadan sonra müzikal yaşamının amacı da değişti: soru artık yalnızca
+                  müzik aracılığıyla kendisini nasıl ifade edeceği değil, onlarca yıllık
+                  müzikal ve teknik deneyimini TANRI'yı anmak ve yüceltmek için nasıl
+                  kullanacağıydı.
+                </p>
+
+                <!-- QURAN RESEARCH LINKS -->
+                <div class="flex flex-col gap-3 pt-3 sm:flex-row sm:flex-wrap">
+                  <a
+                    href="https://qurantft.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center rounded-full border border-accent/40 bg-accent/10 px-6 py-3 text-sm font-bold text-accent transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-background"
+                  >
+                    KURAN'ı Oku ↗
+                  </a>
+
+                  <a
+                    href="https://kuranteyit.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center rounded-full border border-accent/40 bg-accent/10 px-6 py-3 text-sm font-bold text-accent transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-background"
+                  >
+                    KURAN Delillerini İncele ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FIRST ZIKR -->
+        <section class="rounded-[2rem] border border-accent/20 bg-accent/5 p-8 md:p-14">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">VI · İlk Zikir Eserleri</p>
+          <h2 class="mb-8 text-4xl font-heading font-bold text-maintext md:text-5xl">
+            La ilahe illa Allah'tan yeni bir kutsal dile
+          </h2>
+
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>
+              <strong class="text-maintext">Zikir (La ilahe illa Allah)</strong>,
+              31 Ağustos 2024'te YouTube'da yayımlandı ve bu yeni dönemin temel eserine
+              dönüştü. Köksal, teknik sorunlar ve kesintilerle dolu zor bir prodüksiyon
+              süreci hatırlar. Eseri tamamlayamayacağını hissettiğinde, TANRI'yı yüceltmek
+              amacıyla başladığı çalışmayı bitirebilmek için yardım diledi. Daha sonra bu
+              eserin tamamlanmasını, daha geniş Neo-Sacred Zikr yolculuğunun açıldığı kapı
+              olarak görmeye başladı.
+            </p>
+
+            <p>
+              Diğer erken dönem eserler bu fikri genişletti.
+              <strong class="text-maintext">Zikir (Allah Allah La ilahe illa Allah)</strong>
+              çalışmasında o sırada yaklaşık dört yaşında olan kızı Arya Belinda evde
+              kendiliğinden zikre katıldı ve sesi son kayıtta korundu.
+              <strong class="text-maintext">Tövbe Ettim, Estağfurullah Ya Gaffar</strong>
+              ise Köksal'ın gece geç saatlerde ortaya çıkan melodik fikri telefonuna hemen
+              kaydetmesiyle doğdu; daha sonra eseri dua eder gibi bir duruşla seslendirdi.
+              Parçayı yalnızca dinlenecek bir eser olarak değil, dinleyenin tövbeye aktif
+              biçimde katılabileceği bir çalışma olarak tasarladı.
+            </p>
+
+            <p>
+              <strong class="text-maintext">Allahu Lena – Tanrı Bizimle</strong>,
+              <strong class="text-maintext">Tanrıya Övgüler</strong>,
+              <strong class="text-maintext">Subhanallah</strong>,
+              <strong class="text-maintext">Ya Baki Entel Baki</strong> ve
+              <strong class="text-maintext">Allahu Ekber</strong> gibi çalışmalar bu
+              dönemin kutsal sözlerini, temalarını ve müzikal yaklaşımlarını genişletmeye
+              devam etti.
+            </p>
+          </div>
+        </section>
+
+        <!-- NEO SACRED ZIKR -->
+        <section>
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">VII · Sanatsal Felsefe</p>
+          <h2 class="mb-8 text-4xl font-heading font-bold text-maintext md:text-5xl">
+            Neo-Sacred Zikr tek bir tür değil, bir müzik evrenidir
+          </h2>
+
+          <div class="space-y-6 text-lg leading-8 text-subtext">
+            <p>
+              <strong class="text-maintext">Neo-Sacred Zikr</strong> adı daha sonra,
+              <strong class="text-maintext">Classical Chorus</strong> dönemi ve Köksal'ın
+              web sitesinin gelişimi sırasında netleşti. O zamana kadar birbirinden oldukça
+              farklı müzik tarzlarında kutsal eserler üretmişti ve bunların tümünü tek bir
+              geniş kavram altında bir araya getirmek istiyordu.
+            </p>
+
+            <p>
+              Bu nedenle Neo-Sacred Zikr tek bir tempo, enstrüman, armoni veya prodüksiyon
+              tarzı dayatmaz. Rock, metal, klasik koro, ambient meditasyon, rap, caz, çocuk
+              korosu ve senfonik metal aynı evren içinde bulunabilir. Türler araçtır;
+              ortak amaç zikirdir — TEK TANRI'yı anmak ve yüceltmek.
+            </p>
+
+            <p>
+              Kelimelerin kendisi de bu felsefenin bir parçasıdır.
+              <strong class="text-maintext">Hayy</strong>, İngilizcedeki <em>hi</em> ya da
+              Türkçedeki <em>hay hay</em> ifadelerine benzeyebilir; buna karşılık
+              <strong class="text-maintext">Al-Hayy</strong>, “Diri / Yaşayan” anlamındaki
+              ilahî isimdir. <strong class="text-maintext">HÛ</strong> ise İngilizcedeki
+              <em>who?</em> sözcüğüne veya basit bir çağrıya benzeyebilir; ancak zikirde
+              TANRI'ya işaret eden “O” anlamında kullanılır. Köksal için özellikle
+              <em>Zikr Huu</em> ve <em>ZIKR SYMPHONIC METAL</em> çalışmalarında kelimenin
+              anlamını bilmek, sesin nasıl işitildiğini değiştirir. Kelimeler önemlidir;
+              TANRI'nın isimleri ve anılması için kullanılan kelimeler ise en çok önem taşır.
+            </p>
+
+            <p class="text-2xl font-bold leading-9 text-maintext">
+              Müzik tarzı değişebilir. Amaç aynı kalır: TANRI'yı anmak ve yüceltmek.
+            </p>
+          </div>
+        </section>
+
+        <!-- ALBUMS -->
+        <section>
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">VIII · Albümler</p>
+          <h2 class="mb-10 text-4xl font-heading font-bold text-maintext md:text-5xl">
+            Genişleyen Neo-Sacred Zikr evreni
+          </h2>
+
+          <div class="space-y-5">
+            {albums.map(([year, title, description]) => (
+              <article class="grid grid-cols-1 gap-4 rounded-2xl border border-accent/20 bg-accent/5 p-6 md:grid-cols-[120px_1fr]">
+                <p class="font-bold text-accent">{year}</p>
+                <div>
+                  <h3 class="mb-2 text-2xl font-heading font-bold text-maintext">{title}</h3>
+                  <p class="leading-7 text-subtext">{description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <!-- QURANIC CONCEPTS -->
+        <section class="relative overflow-hidden rounded-[2rem] border border-red-500/25 bg-black p-8 md:p-14">
+          <div class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-red-700/10 blur-3xl"></div>
+          <div class="relative z-10">
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-red-400">IX · QURANIC CONCEPTS</p>
+            <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-white md:text-5xl">
+              HELLL — QURANIC CONCEPTS'in ilk dünyası
+            </h2>
+
+            <div class="space-y-6 text-lg leading-8 text-white/70">
+              <p>
+                Köksal, Neo-Sacred Zikr'i TEK TANRI'yı anmak ve yüceltmek merkezli bir
+                müzik evreni olarak kurduktan sonra
+                <strong class="text-white">QURANIC CONCEPTS</strong>'i ayrı bir sanatsal
+                çerçeve olarak oluşturdu. Her albüm KURAN'da anlatılan belirli bir konuya,
+                sahneye, sese veya gerçekliğe girer; konunun kendisi tempo, enstrümantasyon,
+                vokal mimarisi, tekrar, sessizlik, ses tasarımı ve görsel dili belirler.
+              </p>
+
+              <p>
+                Serinin ilk albümü <strong class="text-white">HELLL</strong>, uyarı,
+                Cehennem, hesap, pişmanlık, susuzluk, hapsedilme, sorumluluk ve kalıcılık
+                etrafında kurulan KURAN merkezli 19 parçalık bir konsept çalışmadır.
+                Açılış bir kalp atışı ve hastane monitörüyle başlar; kalp durup monitör
+                düz çizgiye geçtiğinde HELLL'in ses dünyası açılır. Albüm KURAN'ı estetik
+                bir süs olarak değil, müzikal dünyanın kurulduğu kaynak olarak ele alır.
+              </p>
+
+              <p>
+                On dokuzuncu ve son eser olan <strong class="text-white">NINETEEN</strong>,
+                bağımsız olarak bestelenmiş on dokuz bölümün kesintisiz tek bir formda
+                birleştirilmesiyle oluşturulmuştur. Proje boyunca Köksal, doğrudan KURAN
+                kaynağı ile sanatsal dramatizasyon arasında bilinçli bir ayrım gözetir.
+              </p>
+
+              <p class="text-2xl font-heading font-bold leading-9 text-white md:text-3xl">
+                Neo-Sacred Zikr dinleyiciyi hatırlamaya davet eder.<br />
+                QURANIC CONCEPTS dinleyiciyi içine girmeye davet eder.
+              </p>
+
+              <div class="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
+                <a
+                  href="/tr/quranic-concepts/"
+                  class="inline-flex items-center justify-center rounded-full border border-red-400/40 bg-red-500/10 px-6 py-3 text-sm font-bold text-red-300 transition-all duration-300 hover:-translate-y-1 hover:border-red-300 hover:bg-red-500 hover:text-white"
+                >
+                  QURANIC CONCEPTS'i Keşfet →
+                </a>
+
+                <a
+                  href="/albums/helll/"
+                  class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:border-white/50 hover:bg-white hover:text-black"
+                >
+                  HELLL'e Gir →
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAMILY -->
+        <section class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+          <div class="rounded-2xl border border-accent/20 bg-accent/5 p-8">
+            <p class="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-accent">Aile ve Hatıra</p>
+            <h2 class="mb-5 text-3xl font-heading font-bold text-maintext">Kişisel bir arşiv olarak müzik</h2>
+            <p class="leading-8 text-subtext">
+              Köksal, kızları <strong class="text-maintext">Bernaz Su Köksal</strong> ve
+              <strong class="text-maintext">Arya Belinda Köksal</strong> için kişisel
+              eserler bestelemiştir. Onun için müzik yalnızca kamusal bir sanat biçimi
+              değildir; aile hatıralarını, sevgiyi ve aksi hâlde zaman içinde kaybolacak
+              anları da koruyabilir.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-accent/20 bg-accent/5 p-8">
+            <p class="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-accent">KURAN Araştırması ve Yazılım</p>
+            <h2 class="mb-5 text-3xl font-heading font-bold text-maintext">Araştırma, teknoloji ve sürekli öğrenme</h2>
+            <p class="leading-8 text-subtext">
+              Köksal, müziğin yanında yazılım mühendisliği ve KURAN araştırmalarıyla da
+              ilgilenmektedir. Müziğe, koda ve metinsel araştırmaya yaklaşımındaki analitik
+              tavır, erken MIDI yıllarında geliştirdiği aynı alışkanlığı yansıtır:
+              yapıyı incelemek, parçaları doğrulamak, sistemi anlamak ve öğrenmeye devam etmek.
+            </p>
+          </div>
+        </section>
+
+        <!-- FULL BIOGRAPHY BUTTON - BOTTOM -->
+        <div>
+          <a
+            href="/tr/full-biography/"
+            class="group flex w-full items-center justify-between rounded-2xl border border-accent/40 bg-accent/10 px-6 py-5 text-accent transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:bg-accent hover:text-background md:px-8 md:py-7"
+            aria-label="Berk Köksal'ın tam biyografisini oku"
+          >
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[0.3em] opacity-80">
+                Hikâyeye Devam Et
+              </p>
+
+              <p class="mt-2 text-xl font-heading font-bold md:text-2xl">
+                Tam Biyografiyi Oku
+              </p>
+            </div>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-7 w-7 shrink-0 transition-transform duration-300 group-hover:translate-x-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- FINAL -->
+        <section class="py-0 text-center md:py-20">
+          <p class="mb-8 text-xs font-bold uppercase tracking-[0.45em] text-accent">Son Söz</p>
+          <h2 class="mx-auto max-w-5xl text-4xl font-heading font-bold leading-tight text-maintext md:text-6xl">
+            Müzik benim varış noktam değil.<br />
+            TANRI'yı yüceltme biçimimdir.
+          </h2>
+        </section>
+
+        <a
+          href="https://qurantft.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block rounded-[2rem] border border-accent/30 bg-accent/5 p-6 text-center transition-all hover:bg-accent/10 md:p-14"
+        >
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">KURAN: SON AHİT</p>
+          <p class="mb-6 text-sm text-subtext">Yetkili İngilizce Sürüm · Rashad Khalifa tarafından çevrilmiştir</p>
+          <h2 class="text-3xl font-heading font-bold leading-tight text-maintext md:text-5xl">
+            [87:1] Yüce Rabbinin adını yücelt.
+          </h2>
+          <p class="mt-6 text-sm text-accent">Quran: The Final Testament ↗</p>
+        </a>
+
+      </div>
+    </section>
+  </main>
+</Layout>

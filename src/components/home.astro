@@ -1,13 +1,15 @@
 ---
 import { Icon } from 'astro-icon/components';
 
-import localData from '../data/home.json';
+import localDataEn from '../data/home.json';
+import localDataTr from '../data/home.tr.json';
 import albumsData from '../data/albums.json';
 
 interface Social {
   name: string;
   url: string;
   icon: string;
+  showInContact?: boolean;
 }
 
 interface ProfileData {
@@ -19,12 +21,23 @@ interface ProfileData {
   socials: Social[];
 }
 
+interface Props {
+  lang?: 'en' | 'tr';
+}
+
+const { lang = 'en' } = Astro.props;
+const isTurkish = lang === 'tr';
+
+const selectedLocalData = isTurkish
+  ? localDataTr
+  : localDataEn;
+
 const isApiLive = import.meta.env.PROD;
 const BASE_URL = import.meta.env.PUBLIC_API_BASE_URL;
 
 let data: ProfileData;
 
-if (isApiLive && BASE_URL) {
+if (!isTurkish && isApiLive && BASE_URL) {
   try {
     const response = await fetch(`${BASE_URL}/home`);
 
@@ -39,10 +52,10 @@ if (isApiLive && BASE_URL) {
       error
     );
 
-    data = localData as ProfileData;
+    data = selectedLocalData as ProfileData;
   }
 } else {
-  data = localData as ProfileData;
+  data = selectedLocalData as ProfileData;
 }
 
 const {
@@ -53,9 +66,62 @@ const {
   socials
 } = data;
 
-// Keep the site-level creative-universe identity in local content even when a legacy API response is active.
-const displayIntro = localData.introHtml || introHtml || intro;
-const helllAlbum = albumsData.find((album) => album.slug === 'helll');
+const displayIntro =
+  selectedLocalData.introHtml ||
+  introHtml ||
+  intro;
+
+const helllAlbum = albumsData.find(
+  (album) => album.slug === 'helll'
+);
+
+const copy = isTurkish
+  ? {
+      officialArtistWebsite: 'Resmî Sanatçı Sitesi',
+      listenOnSpotify: "Spotify'da Dinle",
+      officialArtistPage: 'Resmî Sanatçı Sayfası',
+      creativeUniverses: 'YARATICI EVRENLER',
+      sacredMusicUniverse: 'Kutsal Müzik Evreni',
+      neoDescription:
+        'Zikir, tekrar, adanmışlık ve kutsal anış etrafında şekillenen bir müzik evreni. Merkezinde zikir vardır.',
+      neoStatement:
+        'Neo-Sacred Zikr dinleyiciyi hatırlamaya davet eder.',
+      conceptAlbumSeries: 'Konsept Albüm Serisi',
+      quranicDescription:
+        'KURAN’da anlatılan belirli temalar, sahneler, sesler ve gerçeklikler etrafında kurulan konsept albümler. Müziğin biçimini konu belirler.',
+      quranicStatement:
+        'QURANIC CONCEPTS dinleyiciyi bu dünyaların içine girmeye davet eder.',
+      albumMeta: 'ALBÜM • 2026 • 19 PARÇA',
+      helllStatement: 'BU ALBÜM BU DÜNYAYA AİT DEĞİL.',
+      helllDescription:
+        'Cehennem, hesap, pişmanlık, susuzluk, hapsedilme ve geri dönüşü olmayan sonuçlara ilişkin KURAN merkezli uyarıları tek bir tavizsiz müzikal inişe dönüştüren 19 parçalık bir konsept albüm — on dokuzun mimarisinin içinde sona eriyor.',
+      magnificentDisturbance: 'Muhteşem Bir Sarsıntı',
+      warningMustBeHeard: 'Uyarı Duyulmalı',
+      enterHelll: "HELLL'e Gir",
+    }
+  : {
+      officialArtistWebsite: 'Official Artist Website',
+      listenOnSpotify: 'Listen on Spotify',
+      officialArtistPage: 'Official Artist Page',
+      creativeUniverses: 'CREATIVE UNIVERSES',
+      sacredMusicUniverse: 'Sacred Music Universe',
+      neoDescription:
+        'Music centered on remembrance, repetition, devotion and sacred invocation. Its center is Zikr.',
+      neoStatement:
+        'Neo-Sacred Zikr invites the listener to remember.',
+      conceptAlbumSeries: 'Concept Album Series',
+      quranicDescription:
+        'Concept albums built around specific themes, scenes, voices and realities described in the Quran. The subject determines the sound.',
+      quranicStatement:
+        'QURANIC CONCEPTS invites the listener to enter these worlds.',
+      albumMeta: 'ALBUM • 2026 • 19 TRACKS',
+      helllStatement: 'THIS ALBUM DOES NOT BELONG TO THIS WORLD.',
+      helllDescription:
+        'A 19-track Quran-centered concept album that transforms warnings of Hell, judgment, regret, thirst, confinement and irreversible consequence into one uncompromising musical descent — ending inside the architecture of nineteen.',
+      magnificentDisturbance: 'A Magnificent Disturbance',
+      warningMustBeHeard: 'The Warning Must Be Heard',
+      enterHelll: 'Enter HELLL',
+    };
 ---
 
 <section
@@ -71,7 +137,7 @@ const helllAlbum = albumsData.find((album) => album.slug === 'helll');
     >
       <img
         src="/artist-logo.webp"
-        alt="Berk Köksal artist logo"
+        alt={isTurkish ? 'Berk Köksal sanatçı logosu' : 'Berk Köksal artist logo'}
         class="object-cover w-full h-full scale-110"
         loading="eager"
         decoding="async"
@@ -89,7 +155,7 @@ const helllAlbum = albumsData.find((album) => album.slug === 'helll');
     style="animation-delay: 200ms;"
   >
     <p class="font-light leading-relaxed font-body text-subtext">
-      Official Artist Website
+      {copy.officialArtistWebsite}
     </p>
   </div>
 
@@ -119,7 +185,7 @@ const helllAlbum = albumsData.find((album) => album.slug === 'helll');
       href={resumeUrl}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Listen on Spotify"
+      aria-label={copy.listenOnSpotify}
       class="relative inline-flex items-center justify-center px-10 py-3 transition-all duration-300 border rounded-full group border-accent/50 text-maintext font-body bg-accent/10 hover:bg-accent/20 md:shadow-none md:hover:shadow-[0_0_20px_rgba(var(--accent-rgb),0.3)] hover:scale-105"
     >
       <div class="flex items-center gap-3">
@@ -132,13 +198,13 @@ const helllAlbum = albumsData.find((album) => album.slug === 'helll');
           <span
             class="text-sm font-medium tracking-wide md:text-base"
           >
-            Listen on Spotify
+            {copy.listenOnSpotify}
           </span>
 
           <span
             class="text-[10px] text-subtext font-light whitespace-nowrap"
           >
-            Official Artist Page
+            {copy.officialArtistPage}
           </span>
         </div>
       </div>
@@ -151,9 +217,9 @@ const helllAlbum = albumsData.find((album) => album.slug === 'helll');
   </div>
 
   <div
-  class="flex w-full items-center justify-center gap-6 mt-4 mb-4 md:mb-0 reveal-content"
-  style="animation-delay: 500ms;"
->
+    class="flex w-full items-center justify-center gap-6 mt-4 mb-4 md:mb-0 reveal-content"
+    style="animation-delay: 500ms;"
+  >
     {
       socials
         .filter(
@@ -190,46 +256,44 @@ const helllAlbum = albumsData.find((album) => album.slug === 'helll');
   <div class="mb-6 flex items-center gap-2">
     <Icon name="mdi:vector-arrange-above" class="h-5 w-5 text-accent" />
     <span class="text-xs font-semibold uppercase tracking-[0.35em] text-accent">
-      CREATIVE UNIVERSES
+      {copy.creativeUniverses}
     </span>
   </div>
 
   <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
     <a
-      href="/neo-sacred-zikr/"
+      href={isTurkish ? "/tr/neo-sacred-zikr/" : "/neo-sacred-zikr/"}
       class="group rounded-[2rem] border border-accent/20 bg-accent/5 p-7 no-underline transition-all duration-300 hover:-translate-y-1 hover:border-accent/45 hover:bg-accent/10 md:p-9"
     >
       <p class="mb-3 text-xs font-bold uppercase tracking-[0.35em] text-accent">
-        Sacred Music Universe
+        {copy.sacredMusicUniverse}
       </p>
       <h2 class="text-3xl font-heading font-bold text-maintext md:text-4xl">
         Neo-Sacred Zikr
       </h2>
       <p class="mt-4 max-w-xl leading-7 text-subtext">
-        Music centered on remembrance, repetition, devotion and sacred invocation.
-        Its center is Zikr.
+        {copy.neoDescription}
       </p>
       <p class="mt-7 font-heading text-lg font-bold text-maintext">
-        Neo-Sacred Zikr invites the listener to remember.
+        {copy.neoStatement}
       </p>
     </a>
 
     <a
-      href="/quranic-concepts/"
+      href={isTurkish ? "/tr/quranic-concepts/" : "/quranic-concepts/"}
       class="group rounded-[2rem] border border-[#6f1010]/45 bg-black/25 p-7 no-underline transition-all duration-300 hover:-translate-y-1 hover:border-[#a51d1d]/70 hover:bg-black/40 md:p-9"
     >
       <p class="mb-3 text-xs font-bold uppercase tracking-[0.35em] text-[#b74a4a]">
-        Concept Album Series
+        {copy.conceptAlbumSeries}
       </p>
       <h2 class="text-3xl font-heading font-bold text-maintext md:text-4xl">
         QURANIC CONCEPTS
       </h2>
       <p class="mt-4 max-w-xl leading-7 text-subtext">
-        Concept albums built around specific themes, scenes, voices and realities
-        described in the Quran. The subject determines the sound.
+        {copy.quranicDescription}
       </p>
       <p class="mt-7 font-heading text-lg font-bold text-maintext">
-        QURANIC CONCEPTS invites the listener to enter.
+        {copy.quranicStatement}
       </p>
     </a>
   </div>
@@ -237,18 +301,15 @@ const helllAlbum = albumsData.find((album) => album.slug === 'helll');
 
 <section class="mb-6">
   <div
-  class="relative overflow-hidden rounded-[2rem] border border-[#6f1010]/40 bg-black/35 p-6 backdrop-blur-xl md:p-8"
->
-  <!-- HELLL / XIX BACKGROUND SYMBOL -->
-  <div
-    class="pointer-events-none absolute -right-10 top-1/2 -translate-y-1/2 select-none
-           text-[17rem] font-heading font-bold leading-none tracking-[-0.06em]
-           text-[#8f1c1c]/[0.12]
-           md:-right-16 md:text-[28rem]"
-    aria-hidden="true"
+    class="relative overflow-hidden rounded-[2rem] border border-[#6f1010]/40 bg-black/35 p-6 backdrop-blur-xl md:p-8"
   >
-    XIX
-  </div>
+    <div
+      class="pointer-events-none absolute -right-10 top-1/2 -translate-y-1/2 select-none text-[17rem] font-heading font-bold leading-none tracking-[-0.06em] text-[#8f1c1c]/[0.12] md:-right-16 md:text-[28rem]"
+      aria-hidden="true"
+    >
+      XIX
+    </div>
+
     <div class="mb-6 flex items-center gap-2">
       <Icon name="mdi:album" class="h-5 w-5 text-[#b74a4a]" />
 
@@ -261,7 +322,7 @@ const helllAlbum = albumsData.find((album) => album.slug === 'helll');
       <a href="/albums/helll/" class="group">
         <img
           src="/albums/helll.png"
-          alt="HELLL album cover by Berk KÖKSAL"
+          alt={isTurkish ? 'Berk KÖKSAL imzalı HELLL albüm kapağı' : 'HELLL album cover by Berk KÖKSAL'}
           loading="lazy"
           decoding="async"
           class="w-full rounded-3xl border border-white/10 bg-black shadow-[0_0_80px_rgba(120,0,0,0.16)] transition duration-500 group-hover:scale-[1.02]"
@@ -270,7 +331,7 @@ const helllAlbum = albumsData.find((album) => album.slug === 'helll');
 
       <div>
         <div class="mb-2 text-sm uppercase tracking-[0.35em] text-[#b74a4a]">
-          ALBUM • 2026 • 19 TRACKS
+          {copy.albumMeta}
         </div>
 
         <h2 class="mb-3 text-5xl font-bold leading-none text-maintext md:text-7xl">
@@ -278,24 +339,21 @@ const helllAlbum = albumsData.find((album) => album.slug === 'helll');
         </h2>
 
         <p class="mb-5 font-heading text-xl font-bold uppercase tracking-[0.08em] text-maintext/90 md:text-2xl">
-          THIS ALBUM DOES NOT BELONG TO THIS WORLD.
+          {copy.helllStatement}
         </p>
 
         <p class="mb-8 max-w-3xl text-lg leading-8 text-subtext">
-          A 19-track Quran-centered concept album that transforms warnings of Hell,
-          judgment, regret, thirst, confinement and irreversible consequence into one
-          uncompromising musical descent — ending inside the architecture of nineteen.
+          {copy.helllDescription}
         </p>
 
         <div class="mb-8 flex flex-wrap gap-2 text-xs uppercase tracking-widest">
-          <span class="rounded-full border border-[#8f1c1c]/35 bg-[#8f1c1c]/10 px-4 py-2 text-[#d16c6c]">A Magnificent Disturbance</span>
+          <span class="rounded-full border border-[#8f1c1c]/35 bg-[#8f1c1c]/10 px-4 py-2 text-[#d16c6c]">{copy.magnificentDisturbance}</span>
           <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">19 × 19</span>
           <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">XIX</span>
-          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">The Warning Must Be Heard</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">{copy.warningMustBeHeard}</span>
         </div>
 
         <div class="flex flex-wrap gap-4">
-          <!-- TODO: Replace this temporary Spotify URL with HELLL's album URL after release. -->
           <a
             href={helllAlbum?.spotify ?? resumeUrl}
             target="_blank"
@@ -310,11 +368,11 @@ const helllAlbum = albumsData.find((album) => album.slug === 'helll');
             href="/albums/helll/"
             class="inline-flex items-center gap-3 rounded-full border border-[#8f1c1c]/45 bg-[#8f1c1c]/10 px-7 py-4 font-semibold text-maintext transition hover:bg-[#8f1c1c]/20"
           >
-            Enter HELLL
+            {copy.enterHelll}
           </a>
 
           <a
-            href="/quranic-concepts/"
+            href={isTurkish ? "/tr/quranic-concepts/" : "/quranic-concepts/"}
             class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-7 py-4 font-semibold text-maintext transition hover:bg-white/10"
           >
             QURANIC CONCEPTS

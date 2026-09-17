@@ -1,0 +1,478 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/nav.astro";
+
+const principles = [
+  "TEK TANRI’yı yüceltmek",
+  "Hatırlamayı yalnızca TANRI merkezinde tutmak",
+  "Zikri modern çağın sesleriyle ifade etmek",
+  "TANRI’nın güzel isimlerini ve niteliklerini müzik aracılığıyla duyurmak",
+  "Türleri hedef değil, araç olarak görmek",
+  "Dinleyicinin hatırlamaya katılan bir kişi olmasına alan açmak",
+];
+
+const albums = [
+  [
+    "ZIKR SYMPHONIC METAL",
+    "Neo-Sacred Zikr / Senfonik Metal / Progresif Metal / Neoklasik Metal",
+    "Neredeyse bütünüyle HÛ etrafında merkezlenen, yer yer Hay / Al-Hayy kullanılan 19 bölümlük bir konsept albüm. Nefes, kadın sesi, kutsal koro, senfonik orkestra, borulu org, bakır üflemeliler ve progresif neoklasik metal kesintisiz bir hatırlama eylemine dönüşür."
+  ],
+  [
+    "ZIKR JAZZ",
+    "Neo-Sacred Zikr / Spiritüel Caz / Modal Caz / Kutsal Müzik",
+    "Genişletilmiş armoni, modal renkler, sıcak akustik enstrümantasyon ve daha sakin, daha içten bir hatırlama biçimiyle şekillenen 19 parçalık kutsal caz yolculuğu."
+  ],
+  [
+    "Zikr-i Batın",
+    "Neo-Sacred Zikr / Kutsal Koro Müziği / Spiritüel Ambient",
+    "Hatırlama, ilahî isimler ve içsel tefekkür etrafında şekillenen, deneysel bir Huruf-u Mukattaa bestesiyle sona eren 19 parçalık içe dönük yolculuk."
+  ],
+  [
+    "ZIKR RAP",
+    "Neo-Sacred Zikr / Spiritüel Rap / Kutsal Hip-Hop",
+    "Rap’in ritmik dilini TANRI’yı hatırlamaya ve yüceltmeye yönelten, Bismillahirrahmanirrahim ile başlayan 19 parçalık bir proje."
+  ],
+  [
+    "Neo-Sacred Zikr: One God One Love",
+    "Neo-Sacred Zikr / Çocuk Korosu / Kutsal Müzik / Çağdaş Spiritüel",
+    "TEK TANRI’ya inanan çocukların da O’nu hatırlayıp yüceltebilecekleri çağdaş bir müzik diline sahip olması fikrinden doğan 19 parçalık çocuk korosu projesi."
+  ],
+  [
+    "Neo-Sacred Zikr: Classical Chorus",
+    "Neo-Sacred Zikr / Kutsal Koro Müziği / Klasik / Neoklasik",
+    "Büyük kutsal koro dokuları, Köksal’ın Mozart’la ömür boyu süren ilişkisi ve Requiem ile Kyrie benzeri yazımın dramatik diliyle şekillenen 19 parçalık klasik ve koral proje."
+  ],
+  [
+    "ZIKR ROCK",
+    "Neo-Sacred Zikr / Kutsal Rock / Progresif Rock / Neoklasik",
+    "Köksal’ın rock ve solo gitar köklerine 19 parçalık bir dönüş. Albüm Huu ile başlar ve finaldeki Subhanallah’a doğru giderek daha ritmik, distorsiyon ağırlıklı ve enerjik hâle gelir."
+  ],
+  [
+    "Zikr Nur",
+    "Neo-Sacred Zikr / Ambient Spiritüel Müzik / Kutsal Meditasyon",
+    "Kadın sesleri, yağmur ambiyansı, uzaktaki gök gürültüsü, piyano, ney ve yumuşak ritim etrafında kurulan 19 parçalık atmosferik çalışma — ilahî ışığın yağmur gibi yağdığı müzikal bir imge."
+  ],
+  [
+    "Zikr Huu",
+    "Neo-Sacred Zikr / Spiritüel Ambient / Kutsal Meditasyon",
+    "Kadın sesleri, tekrar ve neredeyse sessizliğe yaklaşan düzenlemelerle huzurlu ve meditatif bir hatırlama biçimi kuran dokuz parçalık minimalist albüm."
+  ],
+  [
+    "Zikr Symphony",
+    "Neo-Sacred Zikr / Senfonik Kutsal Müzik / Progresif Rock / Neoklasik Metal",
+    "Evrenin ilk büyük ölçekli konsept albümü: 19 ana eser ve on dokuzuncu eserin içinde ayrıca 19 bölümlük bir medley. Böylece Köksal’ın KURAN’ın 19 temelli sistemine ilişkin anlayışına iki katmanlı bir gönderme oluşur."
+  ],
+  [
+    "Tanrı'nın Hediyesi",
+    "Neo-Sacred Zikr / Spiritüel Müzik / Çağdaş Adanış Müziği",
+    "Yolculuğun albüm formatındaki ilk yayını; Tövbe Ettim, Estağfurullah Ya Gaffar eserinin birbirini tamamlayan üç biçimi etrafında kuruldu: vokalli, enstrümantal ve piyano/koro merkezli."
+  ],
+];
+
+const singles = [
+  "Zikir (La ilahe illa Allah)",
+  "Zikir (Allah Allah La ilahe illa Allah)",
+  "Tövbe Ettim, Estağfurullah Ya Gaffar",
+  "Allahu Lena – Tanrı Bizimle",
+  "Tanrıya Övgüler – All Praising Be to GOD",
+  "Subhanallah",
+  "Allahu Ekber",
+  "Ya Baki Entel Baki",
+  "Rabbi Eûzu Bike",
+  "Allahu Allah",
+];
+---
+
+<Layout
+  title="Neo-Sacred Zikr | Berk KÖKSAL’ın Kutsal Müzik Evreni"
+  description="Berk KÖKSAL tarafından geliştirilen, zikrin klasik müzik, korolar, ambient meditasyon, rock, rap, caz, senfonik metal ve farklı çağdaş müzik dilleriyle ifade edildiği TEK TANRI merkezli Neo-Sacred Zikr kutsal müzik evrenini keşfedin."
+  canonical="/tr/neo-sacred-zikr/"
+  ogImage="/artist/neo-sacred-zikr-banner.webp"
+  ogType="website"
+  twitterCard="summary_large_image"
+  lang="tr"
+>
+  <Nav />
+
+  <section class="min-h-screen py-10 md:py-28">
+    <div class="mx-auto w-full max-w-6xl space-y-10 md:space-y-28">
+
+      <!-- HERO -->
+      <header class="relative w-full overflow-hidden border-y border-accent/20 sm:rounded-[2rem] sm:border">
+        <img
+          src="/artist/neo-sacred-zikr-banner.webp"
+          alt="Neo-Sacred Zikr"
+          class="h-[460px] w-full object-cover opacity-75 md:h-[620px]"
+        />
+
+        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/75 to-background/10"></div>
+
+        <div class="absolute inset-0 flex items-center px-5 py-10 sm:p-10 md:p-16">
+          <div class="max-w-3xl">
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">
+              TEK TANRI Merkezli Kutsal Müzik Evreni
+            </p>
+
+            <h1 class="mb-6 text-4xl font-heading font-bold text-maintext sm:text-5xl md:text-7xl">
+              Neo-Sacred Zikr
+            </h1>
+
+            <p class="text-lg leading-8 text-subtext sm:text-xl md:text-2xl md:leading-9">
+              Berk KÖKSAL tarafından geliştirilen çağdaş bir kutsal müzik evreni.
+              Bu evrende zikir; klasik koro, ambient meditasyon, progresif rock, rap,
+              caz, senfonik metal ve başka müzik dilleri aracılığıyla ifade edilirken
+              merkezde TEK TANRI’yı hatırlama ve yüceltme amacı kalır.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <!-- DEFINITION -->
+      <section class="grid grid-cols-1 gap-12 px-5 sm:px-0 lg:grid-cols-[0.75fr_1.25fr]">
+        <div>
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.45em] text-accent">I</p>
+          <h2 class="text-4xl font-heading font-bold text-maintext md:text-5xl">
+            Neo-Sacred Zikr Nedir?
+          </h2>
+        </div>
+
+        <div class="space-y-6 text-lg leading-8 text-subtext">
+          <p>
+            Neo-Sacred Zikr tek bir tempo, tek bir enstrüman, tek bir vokal yaklaşımı
+            ya da tek bir türle tanımlanmaz. Çağdaş müziğin farklı biçimlerinin aynı
+            manevi merkeze hizmet etmesine imkân veren üst bir müzik kavramıdır:
+            TANRI’yı hatırlamak.
+          </p>
+
+          <p>
+            Köksal’ın anlayışında bir Neo-Sacred Zikr eseri; senfonik orkestra, kutsal
+            koro, rock gitarları, caz armonisi, rap ritmi, çocuk sesleri, ambient
+            sesler, piyano, ney, org ya da henüz kataloğa girmemiş teknolojileri
+            kullanabilir. Müzikal dil özgürdür; merkez TEK TANRI’dır.
+          </p>
+
+          <p>
+            Bu nedenle amaç, sabit bir tür içinde şarkılar üretmekten daha büyüktür.
+            Hedef; modern çağın ses dünyası aracılığıyla TEK TANRI’nın hatırlanıp
+            yüceltilebileceği bir müzikal alan oluşturmaktır.
+          </p>
+        </div>
+      </section>
+
+      <!-- ORIGIN OF NAME -->
+      <section class="w-full border-y border-accent/20 bg-accent/5 px-5 py-10 sm:rounded-[2rem] sm:border sm:p-10 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">II · İsmin Kökeni</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold text-maintext md:text-6xl">
+          Önce müzik vardı. İsim daha sonra geldi.
+        </h2>
+
+        <div class="space-y-6 text-lg leading-8 text-subtext">
+          <p>
+            Köksal’ın ilk zikir teklileri ve erken dönem albümleri,
+            <strong class="text-maintext">Neo-Sacred Zikr</strong> ifadesi henüz
+            resmîleşmeden önce üretildi. İsim daha sonra,
+            <strong class="text-maintext">Classical Chorus</strong> dönemi ve
+            web sitesinin geliştirilmesi sırasında ortaya çıktı.
+          </p>
+
+          <p>
+            O zamana gelindiğinde katalogda senfonik, meditatif, rock ve koral
+            yaklaşımlar zaten vardı. Köksal, bütün bu çalışmaları tek bir geleneksel
+            türe zorlamadan bir araya getirebilecek üst bir yapı aradı. Neo-Sacred Zikr
+            bu yapı hâline geldi.
+          </p>
+
+          <p class="text-2xl font-heading font-bold leading-9 text-maintext">
+            Türler araçtır. Kimliği belirleyen manevi merkezdir.
+          </p>
+        </div>
+      </section>
+
+                <!-- NEO-SACRED ZIKR COLLAGE -->
+      <section class="w-full overflow-hidden border-y border-accent/20 sm:rounded-[2rem] sm:border">
+        <a
+          href="/tr/#projects"
+          aria-label="Neo-Sacred Zikr diskografisini keşfet"
+          class="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        >
+          <img
+            src="/images/writings/collage.webp"
+            alt="Berk Köksal’ın Neo-Sacred Zikr albüm görselleri koleksiyonu"
+            width="2048"
+            height="1536"
+            loading="lazy"
+            decoding="async"
+            class="block h-auto w-full cursor-pointer object-cover transition duration-500 group-hover:scale-[1.01] group-hover:brightness-105"
+          />
+        </a>
+      </section>
+
+      <!-- PRINCIPLES -->
+      <section class="px-5 sm:px-0">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">III · Temel İlkeler</p>
+        <h2 class="mb-10 text-4xl font-heading font-bold text-maintext md:text-6xl">
+          Hatırlama, tefekkür ve yüceltme olarak müzik.
+        </h2>
+
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+          {principles.map((item) => (
+            <div class="rounded-2xl border border-accent/20 bg-accent/5 p-6">
+              <p class="text-xl font-heading font-bold text-maintext">{item}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- FIRST WORK -->
+      <section class="grid grid-cols-1 gap-12 px-5 sm:px-0 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">IV · İlk Kapı</p>
+          <h2 class="text-4xl font-heading font-bold text-maintext md:text-5xl">
+            Zikir (La ilahe illa Allah)
+          </h2>
+        </div>
+
+        <div class="space-y-6 text-lg leading-8 text-subtext">
+          <p>
+            Yolculuğun temelini oluşturan çalışma
+            <strong class="text-maintext">Zikir (La ilahe illa Allah)</strong> oldu.
+            Eser 31 Ağustos 2024’te YouTube’da yayımlandı. Köksal, prodüksiyon sürecini
+            tempo, kayıt, yazılım ve başka teknik sorunların yaşandığı zorlu bir dönem
+            olarak anlatır.
+          </p>
+
+          <p>
+            Eseri bırakmaya yaklaştığını hissettiğinde, amacı TANRI’yı yüceltmek olan
+            bu müziği tamamlayabilmek için yardım dilediğini söyler. Daha sonra bu kaydın
+            tamamlanmasını, daha büyük kutsal müzik yolculuğunun kendisine açıldığı
+            nokta olarak görmeye başladı.
+          </p>
+
+          <p>
+            Bu çalışma aynı zamanda önemli bir yön belirledi: geleneksel biçimler
+            müzikal hafızaya ilham verebilirdi; ancak yeni besteler Köksal’ın yalnızca
+            TANRI’yı hatırlamaya dayanan TEK TANRI merkezli anlayışı etrafında kurulacaktı.
+          </p>
+        </div>
+      </section>
+
+      <!-- SINGLES IMAGE -->
+      <section class="w-full overflow-hidden border-y border-accent/20 sm:rounded-[2rem] sm:border">
+        <a
+          href="https://open.spotify.com/intl-tr/artist/1XO4b3ijvx48kFpjptciXp/discography/single"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Berk Köksal teklilerini Spotify’da dinle"
+          class="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        >
+          <img
+            src="/artist/singles.webp"
+            alt="Neo-Sacred Zikr singles"
+            class="w-full cursor-pointer object-cover transition duration-500 group-hover:scale-[1.015] group-hover:brightness-110"
+            loading="lazy"
+          />
+        </a>
+      </section>
+
+      <!-- EARLY SINGLES -->
+      <section class="grid grid-cols-1 gap-12 px-5 sm:px-0 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">V · İlk Çalışmalar</p>
+          <h2 class="text-4xl font-heading font-bold text-maintext md:text-5xl">Müzikal sözlük genişliyor</h2>
+        </div>
+
+        <div>
+          <p class="mb-7 text-lg leading-8 text-subtext">
+            Albüm evreni bütünüyle şekillenmeden önce yayımlanan bir dizi tekli; tövbe,
+            övgü, ilahî isimler, toplu zikir ve farklı vokal yaklaşımlarını araştırdı.
+            Kayıtlardan birinde Arya Belinda Köksal’ın çocukluk sesi, evde zikir sırasında
+            kendiliğinden babasına katılmasının ardından kayıtta korundu.
+          </p>
+
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {singles.map((single) => (
+              <div class="rounded-xl border border-accent/20 bg-accent/5 p-5 font-bold text-maintext">{single}</div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- UNIVERSE -->
+      <section>
+        <div class="px-5 sm:px-0">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">VI · Evren</p>
+          <h2 class="mb-8 text-4xl font-heading font-bold text-maintext md:text-5xl">
+            Neredeyse sessizlikten senfonik metale.
+          </h2>
+
+          <p class="mb-10 max-w-4xl text-lg leading-8 text-subtext">
+            Katalog bilinçli olarak uçlar arasında hareket eder. Bazı projeler
+            düzenlemeyi neredeyse yalnız insan sesi ve atmosfere indirgerken, diğerleri
+            tam orkestra, koro, distorsiyonlu gitarlar ve progresif yapılar kullanır.
+            Bu karşıtlık bir çelişki değil, kavramın parçasıdır.
+          </p>
+        </div>
+
+        <div class="space-y-3 sm:space-y-5">
+          {albums.map(([title, genre, description]) => (
+            <div class="border-y border-accent/20 bg-accent/5 px-5 py-6 sm:rounded-2xl sm:border sm:p-6">
+              <p class="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-accent">{genre}</p>
+              <h3 class="mb-3 text-2xl font-heading font-bold text-maintext md:text-3xl">{title}</h3>
+              <p class="leading-7 text-subtext">{description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- ZIKR SYMPHONY FEATURE -->
+      <section class="w-full border-y border-accent/20 bg-accent/5 px-5 py-10 sm:rounded-[2rem] sm:border sm:p-10 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">VII · İlk Büyük Konsept Albüm</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold text-maintext md:text-6xl">Zikr Symphony</h2>
+
+        <div class="space-y-6 text-lg leading-8 text-subtext">
+          <p>
+            “Zikr senfonisi” fikri albüm tamamlanmadan çok önce Köksal’ın zihninde vardı.
+            TEK TANRI merkezli zikri çağdaş ve büyük ölçekli bir ses dünyasının içinde
+            duymak istiyordu: koro, orkestra, bas, davul, metal gitarlar, org ve modern
+            prodüksiyon.
+          </p>
+
+          <p>
+            Proje 19 ana eser etrafında planlandı. Prodüksiyon sırasında yaklaşık elli
+            müzikal taslak oluşturuldu. Nihai yapı 19 ana parçayı korudu; on dokuzuncu
+            eser ise ek müzikal fikirlerin de albümde kalabilmesi için ayrıca 19 bölümlük
+            bir medleye dönüştürüldü.
+          </p>
+
+          <p>
+            Köksal için bu yaklaşım albümün 19 sayısıyla ilişkisini dekoratif olmaktan
+            çıkarıp yapısal hâle getirdi. Üst başlık olan Neo-Sacred Zikr ismi daha sonra
+            resmîleşmiş olsa da Zikr Symphony’yi ilk gerçek büyük ölçekli Neo-Sacred Zikr
+            konsept albümü olarak görür.
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTRAST -->
+      <section class="grid grid-cols-1 gap-8 px-5 sm:px-0 lg:grid-cols-3">
+        <article class="rounded-2xl border border-accent/20 bg-accent/5 p-7">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-accent">Dinginlik</p>
+          <h3 class="mb-4 text-2xl font-heading font-bold text-maintext">Zikr Huu</h3>
+          <p class="leading-7 text-subtext">
+            Dokuz eser, kadın sesleri, minimal enstrümantasyon ve boşluk ile tekrarın
+            merkezde olduğu meditatif bir yaklaşım.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-accent/20 bg-accent/5 p-7">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-accent">Doğa</p>
+          <h3 class="mb-4 text-2xl font-heading font-bold text-maintext">Zikr Nur</h3>
+          <p class="leading-7 text-subtext">
+            Yağmur, uzaktaki gök gürültüsü, piyano, ney, yumuşak ritim ve kadın sesleri
+            ilahî ışığın yağmur gibi yağdığı bir imge oluşturur.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-accent/20 bg-accent/5 p-7">
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-accent">Enerji</p>
+          <h3 class="mb-4 text-2xl font-heading font-bold text-maintext">ZIKR ROCK</h3>
+          <p class="leading-7 text-subtext">
+            Albüm 19 parça boyunca giderek daha fazla distorsiyon ve enerji kazanırken
+            rock ve neoklasik gitar yeniden ön plana çıkar.
+          </p>
+        </article>
+      </section>
+
+      <!-- NEWEST -->
+      <section class="w-full border-y border-accent/20 bg-accent/5 px-5 py-10 sm:rounded-[2rem] sm:border sm:p-10 md:p-14">
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">VIII · 2026 Konsept Dönüm Noktası</p>
+        <h2 class="mb-8 text-4xl font-heading font-bold text-maintext md:text-6xl">ZIKR SYMPHONIC METAL</h2>
+
+        <div class="space-y-6 text-lg leading-8 text-subtext">
+          <p>
+            ZIKR SYMPHONIC METAL, evreni daha sıkı bir konsept biçimine taşır. Albümün
+            19 bölümü neredeyse bütünüyle tek bir kutsal ifadeye odaklanır:
+            <strong class="text-maintext">HÛ</strong>. Seçilmiş bölümlerde
+            <strong class="text-maintext">Hay / Al-Hayy</strong> da kullanılır.
+          </p>
+
+          <p>
+            Kırılgan bir kadın sesi ve nefes; kutsal koro, yaylılar, bakır üflemeliler,
+            timpani, borulu org, bas, davul, distorsiyonlu gitar ve neoklasik sololara kadar
+            genişleyebilir. Metal öfkenin değil, güç ve ihtişamın dili olarak kullanılır.
+          </p>
+
+          <p class="text-2xl font-heading font-bold leading-9 text-maintext">
+            Tek ifade. On dokuz bölüm. Ses değişir; merkez aynı kalır.
+          </p>
+        </div>
+      </section>
+
+      <!-- JOURNEY -->
+      <section>
+        <div class="px-5 sm:px-0">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">IX · Yolculuk</p>
+          <h2 class="mb-10 text-4xl font-heading font-bold text-maintext md:text-5xl">Neo-Sacred Zikr Zaman Çizelgesi</h2>
+        </div>
+
+        <div class="space-y-3 sm:space-y-5">
+          {[
+            ["2024", ["Zikir (La ilahe illa Allah) ve ilk zikir teklileri", "Tanrı’nın Hediyesi"]],
+            ["2025", ["Zikr Symphony"]],
+            [
+              "2026",
+              [
+                "Zikr Huu",
+                "Zikr Nur",
+                "ZIKR ROCK",
+                "Neo-Sacred Zikr: Classical Chorus",
+                "Neo-Sacred Zikr: One God One Love",
+                "ZIKR RAP",
+                "Zikr-i Batın",
+                "ZIKR JAZZ",
+                "ZIKR SYMPHONIC METAL",
+              ],
+            ],
+          ].map(([year, titles]) => (
+            <div class="grid grid-cols-1 gap-4 border-y border-accent/20 bg-accent/5 px-5 py-6 sm:rounded-2xl sm:border sm:p-6 md:grid-cols-[120px_1fr]">
+              <p class="font-bold text-accent">{year}</p>
+              <div class="space-y-2">
+                {(titles as string[]).map((title) => (
+                  <h3 class="text-xl font-heading font-bold leading-snug text-maintext md:text-2xl">{title}</h3>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- LEGACY -->
+      <section class="px-5 py-8 text-center sm:px-0 md:py-16">
+        <p class="mb-8 text-xs font-bold uppercase tracking-[0.45em] text-accent">X · Yaşayan Bir Tanım</p>
+        <h2 class="mx-auto max-w-5xl text-4xl font-heading font-bold leading-tight text-maintext md:text-6xl">
+          Neo-Sacred Zikr, TEK TANRI inancını benimseyen başka müzisyenlerin de sürdürebileceği bir alan olarak tasarlanmıştır.
+        </h2>
+        <p class="mx-auto mt-8 max-w-4xl text-lg leading-8 text-subtext">
+          Köksal bu terimi yalnızca kendi diskografisinin adı olarak görmez. Umudu,
+          gelecekteki sanatçıların TEK TANRI’yı hatırlamayı merkezde tutarken yeni sesler
+          geliştirebileceği kalıcı bir müzikal tanıma ve alana dönüşmesidir.
+        </p>
+      </section>
+
+      <!-- QURAN LINK -->
+      <a
+        href="https://qurantft.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block w-full border-y border-accent/30 bg-accent/5 px-5 py-10 text-center transition-all hover:bg-accent/10 sm:rounded-[2rem] sm:border sm:p-10 md:p-14"
+      >
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-accent">KURAN: SON AHİT</p>
+        <h2 class="text-3xl font-heading font-bold leading-tight text-maintext md:text-5xl">
+          [87:1] Yüceler Yücesi Rabbinin adını yücelt.
+        </h2>
+        <p class="mt-6 text-sm text-accent">Kuran: Son Ahit ↗</p>
+      </a>
+
+    </div>
+  </section>
+</Layout>

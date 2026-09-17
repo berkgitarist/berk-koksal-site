@@ -1,12 +1,12 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
-import Nav from "../../components/nav.astro";
-import WritingCard from "../../components/writing-card.astro";
-import { formatWritingDate } from "../../utils/writings";
+import Layout from "../../../layouts/Layout.astro";
+import Nav from "../../../components/nav.astro";
+import WritingCard from "../../../components/writing-card.astro";
+import { formatWritingDate } from "../../../utils/writings";
 
 const writingEntries = (await getCollection("writings"))
-  .filter((entry) => !entry.data.draft && entry.data.language === "en")
+  .filter((entry) => !entry.data.draft && entry.data.language === "tr")
   .sort(
     (a, b) =>
       new Date(b.data.publishDate).getTime() -
@@ -18,7 +18,7 @@ function getArticleAnchor(id: string): string {
     .replace(/\.(md|mdx)$/i, "")
     .replace(/\/index$/i, "")
     .replace(/^\/+|\/+$/g, "")
-    .toLocaleLowerCase("en-US")
+    .toLocaleLowerCase("tr-TR")
     .replaceAll("ç", "c")
     .replaceAll("ğ", "g")
     .replaceAll("ı", "i")
@@ -30,7 +30,7 @@ function getArticleAnchor(id: string): string {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 
-  return `article-${normalizedId || "writing"}`;
+  return `yazi-${normalizedId || "makale"}`;
 }
 
 const articles = writingEntries.map((entry) => ({
@@ -45,10 +45,10 @@ const articles = writingEntries.map((entry) => ({
 ---
 
 <Layout
-  title="Writings & Reflections | Berk KÖKSAL"
-  description="Articles and reflections on the Quran, remembrance, spirituality, music and contemporary life."
-  canonical="/writings/"
-  lang="en"
+  title="Kuran Tefekkürleri | Berk KÖKSAL"
+  description="Kuran, zikir, maneviyat, müzik ve çağdaş yaşam üzerine makaleler ve tefekkürler."
+  canonical="/tr/writings/"
+  lang="tr"
 >
   <Nav />
 
@@ -66,22 +66,23 @@ const articles = writingEntries.map((entry) => ({
         class="mx-auto inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/25 bg-[#D4AF37]/10 px-5 py-2 text-[0.68rem] font-bold uppercase tracking-[0.32em] text-[#D4AF37]"
       >
         <span aria-hidden="true">♬</span>
-        <span>Writings</span>
+        <span>Yazılar</span>
       </div>
 
       <h1
         id="writings-title"
         class="pro-gradient-text mx-auto mt-5 max-w-5xl font-heading text-4xl font-bold leading-tight md:text-6xl lg:text-7xl"
       >
-        Quran Reflections
+        Kuran Tefekkürleri
       </h1>
 
       <p class="mx-auto mt-5 max-w-3xl text-base leading-8 text-subtext md:text-lg">
-        Articles and reflections on the Quran, remembrance, spirituality, music and contemporary life.
+        Kuran, zikir, maneviyat, müzik ve çağdaş yaşam üzerine makaleler ve
+        tefekkürler.
       </p>
 
       <p class="mt-2 text-sm font-medium text-accent">
-        Originally written in Turkish • Translated into English
+        Yazılar şu anda Türkçe yayımlanmaktadır.
       </p>
     </section>
 
@@ -96,19 +97,19 @@ const articles = writingEntries.map((entry) => ({
               <summary>
                 <span class="min-w-0">
                   <span class="block text-[0.66rem] font-bold uppercase tracking-[0.25em] text-accent">
-                    Quick access
+                    Hızlı erişim
                   </span>
                   <span class="mt-1 block font-heading text-lg font-bold text-maintext">
-                    All Articles
+                    Tüm Makaleler
                   </span>
                 </span>
 
                 <span class="article-menu-count">
-                  {articles.length} articles
+                  {articles.length} yazı
                 </span>
               </summary>
 
-              <nav aria-label="All articles" class="article-menu-mobile__content">
+              <nav aria-label="Tüm makaleler" class="article-menu-mobile__content">
                 <ol class="space-y-0.5">
                   {articles.map((article, index) => (
                     <li>
@@ -138,10 +139,10 @@ const articles = writingEntries.map((entry) => ({
                   <summary class="article-menu-header">
                     <span class="article-menu-toggle-copy min-w-0">
                       <span class="block text-[0.62rem] font-bold uppercase tracking-[0.22em] text-accent">
-                        Quick access
+                        Hızlı erişim
                       </span>
                       <span class="mt-0.5 block font-heading text-lg font-bold text-maintext">
-                        All Articles
+                        Tüm Makaleler
                       </span>
                     </span>
 
@@ -152,11 +153,11 @@ const articles = writingEntries.map((entry) => ({
                       <span class="article-menu-toggle-icon" aria-hidden="true"></span>
                     </span>
 
-                    <span class="sr-only">Open or close article menu</span>
+                    <span class="sr-only">Makale menüsünü aç veya kapat</span>
                   </summary>
 
                   <div class="article-menu-body">
-                    <nav aria-label="All articles" class="article-menu-scroll">
+                    <nav aria-label="Tüm makaleler" class="article-menu-scroll">
                       <ol class="space-y-0.5">
                         {articles.map((article, index) => (
                           <li>
@@ -180,7 +181,7 @@ const articles = writingEntries.map((entry) => ({
                     </nav>
 
                     <a href="#writings-title" class="article-menu-top-link">
-                      <span>Back to top</span>
+                      <span>Sayfanın başına dön</span>
                       <span aria-hidden="true">↑</span>
                     </a>
                   </div>
@@ -191,18 +192,18 @@ const articles = writingEntries.map((entry) => ({
                 <div class="mb-5 flex items-end justify-between gap-4 border-b border-accent/15 pb-4 md:mb-6">
                   <div>
                     <p class="text-[0.68rem] font-bold uppercase tracking-[0.25em] text-accent">
-                      Archive
+                      Arşiv
                     </p>
                     <h2
                       id="latest-writings-title"
                       class="mt-1 font-heading text-2xl font-bold text-maintext md:text-3xl"
                     >
-                      Latest Writings
+                      Son Yazılar
                     </h2>
                   </div>
 
                   <span class="rounded-full border border-accent/15 bg-accent/5 px-4 py-2 text-xs font-medium text-subtext">
-                    {articles.length} articles
+                    {articles.length} yazı
                   </span>
                 </div>
 
@@ -220,7 +221,7 @@ const articles = writingEntries.map((entry) => ({
           </>
         ) : (
           <div class="mx-auto max-w-3xl rounded-[1.75rem] border border-accent/15 bg-accent/5 p-10 text-center text-subtext">
-            No published English writings found.
+            Yayımlanmış tefekkür yazısı bulunamadı.
           </div>
         )
       }

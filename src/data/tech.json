@@ -12,7 +12,7 @@
     {
       "title": "Vocal Universe",
       "skills": [
-        { "name": "Children Choir", "level": 3, "icon": "mdi:account-child-circle" },
+        { "name": "Children's Choir", "level": 3, "icon": "mdi:account-child-circle" },
         { "name": "Female Vocals", "level": 3, "icon": "mdi:microphone-variant" },
         { "name": "Male Vocals", "level": 2, "icon": "mdi:microphone" },
         { "name": "Choral Layers", "level": 3, "icon": "mdi:account-group" }

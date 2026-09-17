@@ -2,18 +2,18 @@
 import type { CollectionEntry } from 'astro:content';
 import { getCollection, render } from 'astro:content';
 import { Icon } from 'astro-icon/components';
-import Layout from '../../layouts/Layout.astro';
-import Nav from '../../components/nav.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Nav from '../../../components/nav.astro';
 import {
   formatWritingDate,
   getReadingMinutes,
   getWritingHref,
-} from '../../utils/writings';
+} from '../../../utils/writings';
 
 export async function getStaticPaths() {
   const writings = await getCollection('writings', ({ data }) => {
     const isVisible = import.meta.env.PROD ? !data.draft : true;
-    return isVisible && data.language === 'en';
+    return isVisible && data.language === 'tr';
   });
 
   return writings.map((entry) => ({

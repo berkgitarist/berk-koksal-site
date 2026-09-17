@@ -16,7 +16,7 @@ interface Props {
 const { entry, priority = false, anchorId } = Astro.props;
 const { data } = entry;
 const minutes = getReadingMinutes(entry.body);
-const href = getWritingHref(entry.id);
+const href = getWritingHref(entry.id, data.language);
 const languageLabel = data.language === 'tr' ? 'Türkçe' : 'English';
 const readingLabel = data.language === 'tr' ? `${minutes} dk okuma` : `${minutes} min read`;
 const categoryLabel =

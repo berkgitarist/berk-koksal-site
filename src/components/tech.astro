@@ -2,6 +2,13 @@
 import { Icon } from 'astro-icon/components';
 import localTechData from '../data/tech.json';
 
+interface Props {
+  lang?: 'en' | 'tr';
+}
+
+const { lang = 'en' } = Astro.props;
+const isTurkish = lang === 'tr';
+
 interface Skill {
   name: string;
   level: number;
@@ -27,6 +34,66 @@ try {
 } catch {
   categories = localTechData.categories;
 }
+
+const categoryTr: Record<string, string> = {
+  'Composition & Songwriting': 'Beste & Söz Yazımı',
+  'Music Production': 'Müzik Prodüksiyonu',
+  'Audio Production': 'Ses Prodüksiyonu',
+  'Performance': 'Performans',
+  'Orchestration': 'Orkestrasyon',
+  'Software & Technology': 'Yazılım & Teknoloji',
+  'Research': 'Araştırma',
+  'Creative Direction': 'Yaratıcı Yönetim',
+  'Music & Production': 'Müzik & Prodüksiyon',
+};
+
+const skillTr: Record<string, string> = {
+  'Composition': 'Beste',
+  'Songwriting': 'Söz Yazımı',
+  'Guitar': 'Gitar',
+  'Guitar Performance': 'Gitar Performansı',
+  'Vocals': 'Vokal',
+  'Arrangement': 'Düzenleme',
+  'Recording': 'Kayıt',
+  'MIDI Programming': 'MIDI Programlama',
+  'Orchestration': 'Orkestrasyon',
+  'Sound Design': 'Ses Tasarımı',
+  'Mixing': 'Miks',
+  'Mastering': 'Mastering',
+  'Visual Concepts': 'Görsel Konseptler',
+  'Software Development': 'Yazılım Geliştirme',
+  'Music Production': 'Müzik Prodüksiyonu',
+  'Quran Research': 'KURAN Araştırması',
+};
+
+const displayCategories = categories.map((category) => ({
+  ...category,
+  title: isTurkish ? (categoryTr[category.title] ?? category.title) : category.title,
+  skills: category.skills.map((skill) => ({
+    ...skill,
+    name: isTurkish ? (skillTr[skill.name] ?? skill.name) : skill.name,
+  })),
+}));
+
+const copy = isTurkish
+  ? {
+      title: 'Neo-Sacred Zikr Evreni',
+      description: 'Zikri; senfonik ses, koro dokuları, ambient atmosferler, rock enerjisi ve modern prodüksiyonla birleştiren kutsal bir müzik evreni.',
+      levels: [
+        { label: 'Uzman', level: 3 },
+        { label: 'Yetkin', level: 2 },
+        { label: 'Başlangıç', level: 1 },
+      ],
+    }
+  : {
+      title: 'Neo-Sacred Zikr Universe',
+      description: 'A sacred music universe combining zikr, symphonic sound, choral textures, ambient atmospheres, rock energy and modern production.',
+      levels: [
+        { label: 'Expert', level: 3 },
+        { label: 'Proficient', level: 2 },
+        { label: 'Beginner', level: 1 },
+      ],
+    };
 ---
 
 <section id="tech" class="section-container overflow-hidden">
@@ -34,19 +101,15 @@ try {
     <div class="tech-header flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
       <div>
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext mb-2 flex items-center gap-4">
-          <span class="text-accent">/</span> Neo-Sacred Zikr Universe
+          <span class="text-accent">/</span> {copy.title}
         </h2>
         <p class="text-subtext font-body text-sm max-w-md">
-          A sacred music universe combining zikr, symphonic sound, choral textures, ambient atmospheres, rock energy and modern production.
+          {copy.description}
         </p>
       </div>
 
       <div class="flex flex-wrap gap-4 p-3 rounded-xl bg-accent/5 border border-accent/10 backdrop-blur-sm">
-        {[
-          { label: "Expert", level: 3 },
-          { label: "Proficient", level: 2 },
-          { label: "Beginner", level: 1 }
-        ].map((item, index) => (
+        {copy.levels.map((item, index) => (
           <div class={`flex items-center gap-2 ${index > 0 ? 'md:border-l md:border-white/10 md:pl-4' : ''}`}>
             <div class="flex gap-0.5">
               {[1, 2, 3].map((star) => (
@@ -63,7 +126,7 @@ try {
     </div>
 
     <div class="space-y-10">
-      {categories.map((category) => (
+      {displayCategories.map((category) => (
         <div class="space-y-3">
           <h3 class="text-maintext font-body text-[11px] uppercase tracking-[0.4em] ml-1">
             {category.title}
