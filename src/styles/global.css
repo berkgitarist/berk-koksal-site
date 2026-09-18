@@ -970,3 +970,211 @@ display: none;
 transition: none;
 }
 }
+/* === Kıyamet Saati / writing visualization === */
+.writing-prose .doomsday-article-hero {
+  position: relative;
+  overflow: hidden;
+  margin: 2.25rem 0 3rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid color-mix(in srgb, var(--color-accent), transparent 52%);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 78% 18%, color-mix(in srgb, var(--color-accent), transparent 76%), transparent 27%),
+    linear-gradient(145deg, rgba(2, 2, 14, 0.84), color-mix(in srgb, var(--color-background), black 4%));
+  box-shadow:
+    0 30px 85px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.writing-prose .doomsday-article-hero__orbit {
+  position: absolute;
+  right: clamp(-7rem, -3vw, -2rem);
+  top: 50%;
+  width: clamp(16rem, 34vw, 26rem);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  border: 1px solid color-mix(in srgb, var(--color-accent), transparent 72%);
+  border-radius: 999px;
+  box-shadow:
+    0 0 0 34px color-mix(in srgb, var(--color-accent), transparent 95%),
+    0 0 0 82px color-mix(in srgb, var(--color-accent), transparent 97%);
+  pointer-events: none;
+}
+
+.writing-prose .doomsday-article-hero__kicker,
+.writing-prose .doomsday-article-hero__author {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.writing-prose .doomsday-article-hero__date {
+  position: relative;
+  z-index: 1;
+  margin: 1.05rem 0 0;
+  color: var(--color-maintext);
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 4.2rem);
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: 0.03em;
+}
+
+.writing-prose .doomsday-article-hero__time {
+  position: relative;
+  z-index: 1;
+  margin: 0.6rem 0 0;
+  color: #fff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: clamp(3.2rem, 9vw, 7.6rem);
+  font-weight: 650;
+  line-height: 0.95;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 36px color-mix(in srgb, var(--color-accent), transparent 48%);
+}
+
+.writing-prose .doomsday-article-hero__time span {
+  margin-left: 0.35rem;
+  color: var(--color-subtext);
+  font-size: 0.18em;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  vertical-align: middle;
+}
+
+.writing-prose .doomsday-article-hero__author {
+  margin-top: 1.2rem;
+  color: var(--color-subtext);
+  letter-spacing: 0.16em;
+  text-transform: none;
+}
+
+.writing-prose .doomsday-signal-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 1.75rem 0 2.25rem;
+}
+
+.writing-prose .doomsday-signal-grid p {
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid color-mix(in srgb, var(--color-accent), transparent 72%);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--color-accent), transparent 95%);
+  color: var(--color-maintext);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.writing-prose .doomsday-signal-grid p:last-child {
+  grid-column: 1 / -1;
+  color: var(--color-subtext);
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
+.writing-prose .doomsday-equation,
+.writing-prose .doomsday-target-card {
+  margin: 1.8rem 0 2.4rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid color-mix(in srgb, var(--color-accent), transparent 60%);
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--color-accent), transparent 94%), rgba(0, 0, 0, 0.16));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.writing-prose .doomsday-equation--single {
+  text-align: center;
+}
+
+.writing-prose .doomsday-equation p,
+.writing-prose .doomsday-target-card p {
+  margin: 0;
+}
+
+.writing-prose .doomsday-equation p + p,
+.writing-prose .doomsday-target-card p + p,
+.writing-prose .doomsday-target-card blockquote + p,
+.writing-prose .doomsday-target-card p + blockquote {
+  margin-top: 0.95rem;
+}
+
+.writing-prose .doomsday-equation__headline {
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 2.3vw, 1.65rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.writing-prose .doomsday-equation__result,
+.writing-prose .doomsday-target-card__time {
+  color: var(--color-maintext);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: clamp(1.15rem, 2.6vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.writing-prose .doomsday-target-card {
+  border-color: color-mix(in srgb, var(--color-accent), transparent 42%);
+  background:
+    radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--color-accent), transparent 82%), transparent 30%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.2), color-mix(in srgb, var(--color-accent), transparent 95%));
+}
+
+.writing-prose .doomsday-target-card blockquote {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.writing-prose .doomsday-arabic {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid color-mix(in srgb, var(--color-accent), transparent 68%);
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--color-accent), transparent 96%);
+  color: var(--color-maintext);
+  font-size: clamp(1.65rem, 4vw, 2.5rem);
+  line-height: 2;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .writing-prose .doomsday-signal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .writing-prose .doomsday-signal-grid p:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .writing-prose .doomsday-article-hero {
+    border-radius: 22px;
+  }
+
+  .writing-prose .doomsday-article-hero__orbit {
+    right: -10rem;
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 420px) {
+  .writing-prose .doomsday-signal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-prose .doomsday-signal-grid p:last-child {
+    grid-column: auto;
+  }
+}

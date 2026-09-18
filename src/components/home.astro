@@ -91,6 +91,16 @@ const copy = isTurkish
         'KURAN’da anlatılan belirli temalar, sahneler, sesler ve gerçeklikler etrafında kurulan konsept albümler. Müziğin biçimini konu belirler.',
       quranicStatement:
         'QURANIC CONCEPTS dinleyiciyi bu dünyaların içine girmeye davet eder.',
+      hourEyebrow: '• KURAN TEFEKKÜRÜ •',
+      hourTitle: 'KIYAMET SAATİ',
+      hourTarget: '24 EYLÜL 2280 • 19:33 UTC',
+      hourRead: 'Tefekkürü oku',
+      hourYears: 'YIL',
+      hourMonths: 'AY',
+      hourDays: 'GÜN',
+      hourHours: 'SAAT',
+      hourMinutes: 'DAKİKA',
+      hourSeconds: 'SANİYE',
       albumMeta: 'ALBÜM • 2026 • 19 PARÇA',
       helllStatement: 'BU ALBÜM BU DÜNYAYA AİT DEĞİL.',
       helllDescription:
@@ -114,6 +124,16 @@ const copy = isTurkish
         'Concept albums built around specific themes, scenes, voices and realities described in the Quran. The subject determines the sound.',
       quranicStatement:
         'QURANIC CONCEPTS invites the listener to enter these worlds.',
+      hourEyebrow: '• QURAN REFLECTION •',
+      hourTitle: 'DOOMSDAY CLOCK',
+      hourTarget: '24 SEPTEMBER 2280 • 19:33 UTC',
+      hourRead: 'Read the reflection',
+      hourYears: 'YEARS',
+      hourMonths: 'MONTHS',
+      hourDays: 'DAYS',
+      hourHours: 'HOURS',
+      hourMinutes: 'MINUTES',
+      hourSeconds: 'SECONDS',
       albumMeta: 'ALBUM • 2026 • 19 TRACKS',
       helllStatement: 'THIS ALBUM DOES NOT BELONG TO THIS WORLD.',
       helllDescription:
@@ -122,6 +142,11 @@ const copy = isTurkish
       warningMustBeHeard: 'The Warning Must Be Heard',
       enterHelll: 'Enter HELLL',
     };
+
+const hourHref = isTurkish
+  ? '/tr/writings/kiyamet-saati/'
+  : '/writings/doomsday-clock/';
+const hourTarget = '2280-09-24T19:33:00Z';
 ---
 
 <section
@@ -250,6 +275,63 @@ const copy = isTurkish
         ))
     }
   </div>
+
+  <a
+    href={hourHref}
+    class="doomsday-clock reveal-content"
+    style="animation-delay: 575ms;"
+    aria-label={`${copy.hourTitle} — ${copy.hourRead}`}
+  >
+    <span class="doomsday-clock__glow" aria-hidden="true"></span>
+
+    <div class="doomsday-clock__topline">
+      <span class="doomsday-clock__seal-spacer" aria-hidden="true"></span>
+
+      <div class="doomsday-clock__titles">
+        <p class="doomsday-clock__eyebrow">{copy.hourEyebrow}</p>
+        <h2 class="doomsday-clock__title">{copy.hourTitle}</h2>
+      </div>
+
+      <span class="doomsday-clock__seal" aria-hidden="true">19:33</span>
+    </div>
+
+    <div
+      class="doomsday-clock__digits"
+      data-doomsday-clock
+      data-target={hourTarget}
+      aria-hidden="true"
+    >
+      <div class="doomsday-clock__unit">
+        <span class="doomsday-clock__value" data-clock-years>000</span>
+        <span class="doomsday-clock__label">{copy.hourYears}</span>
+      </div>
+      <div class="doomsday-clock__unit">
+        <span class="doomsday-clock__value" data-clock-months>00</span>
+        <span class="doomsday-clock__label">{copy.hourMonths}</span>
+      </div>
+      <div class="doomsday-clock__unit">
+        <span class="doomsday-clock__value" data-clock-days>00</span>
+        <span class="doomsday-clock__label">{copy.hourDays}</span>
+      </div>
+      <div class="doomsday-clock__unit">
+        <span class="doomsday-clock__value" data-clock-hours>00</span>
+        <span class="doomsday-clock__label">{copy.hourHours}</span>
+      </div>
+      <div class="doomsday-clock__unit">
+        <span class="doomsday-clock__value" data-clock-minutes>00</span>
+        <span class="doomsday-clock__label">{copy.hourMinutes}</span>
+      </div>
+      <div class="doomsday-clock__unit">
+        <span class="doomsday-clock__value" data-clock-seconds>00</span>
+        <span class="doomsday-clock__label">{copy.hourSeconds}</span>
+      </div>
+    </div>
+
+    <div class="doomsday-clock__footer">
+      <time datetime={hourTarget}>{copy.hourTarget}</time>
+      <span class="doomsday-clock__cta">{copy.hourRead} <span aria-hidden="true">→</span></span>
+    </div>
+  </a>
 </section>
 
 <section class="mt-6 mb-8 md:-mt-6">
@@ -435,4 +517,405 @@ const copy = isTurkish
         rotate(0deg);
     }
   }
+
+
+  /* === Kıyamet Saati / homepage countdown === */
+  .doomsday-clock {
+    position: relative;
+    isolation: isolate;
+    width: min(980px, calc(100% - 1.5rem));
+    margin-top: 2.15rem;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--color-accent), transparent 48%);
+    border-radius: 30px;
+    padding: 1.35rem 1.45rem 1.15rem;
+    color: var(--color-maintext);
+    text-align: left;
+    text-decoration: none;
+    background:
+      radial-gradient(circle at 82% 15%, color-mix(in srgb, var(--color-accent), transparent 78%), transparent 26%),
+      linear-gradient(135deg, rgba(3, 2, 18, 0.88), color-mix(in srgb, var(--color-background), black 8%));
+    box-shadow:
+      0 28px 90px rgba(0, 0, 0, 0.38),
+      0 0 70px color-mix(in srgb, var(--color-accent), transparent 88%),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition:
+      transform 0.35s ease,
+      border-color 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+  .doomsday-clock::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.045) 50%, transparent 100%);
+    transform: translateX(-110%);
+    transition: transform 0.9s ease;
+  }
+
+  .doomsday-clock:hover {
+    transform: translateY(-5px);
+    border-color: color-mix(in srgb, var(--color-accent), transparent 22%);
+    box-shadow:
+      0 34px 100px rgba(0, 0, 0, 0.44),
+      0 0 95px color-mix(in srgb, var(--color-accent), transparent 78%),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .doomsday-clock:hover::before {
+    transform: translateX(110%);
+  }
+
+  .doomsday-clock__glow {
+    position: absolute;
+    right: -8rem;
+    top: -8rem;
+    z-index: -1;
+    width: 22rem;
+    height: 22rem;
+    border: 1px solid color-mix(in srgb, var(--color-accent), transparent 84%);
+    border-radius: 999px;
+    box-shadow:
+      0 0 0 28px color-mix(in srgb, var(--color-accent), transparent 95%),
+      0 0 0 74px color-mix(in srgb, var(--color-accent), transparent 97%);
+  }
+
+  .doomsday-clock__topline {
+    display: grid;
+    grid-template-columns: 68px minmax(0, 1fr) 68px;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .doomsday-clock__titles {
+    min-width: 0;
+    text-align: center;
+  }
+
+  .doomsday-clock__seal-spacer {
+    width: 68px;
+    height: 68px;
+  }
+
+  .doomsday-clock__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .doomsday-clock__eyebrow {
+    margin: 0;
+    color: var(--color-accent);
+    font-size: 0.68rem;
+    font-weight: 750;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+
+  .doomsday-clock__title {
+    margin: 0.3rem 0 0;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: clamp(1.65rem, 3vw, 2.45rem);
+    font-weight: 750;
+    letter-spacing: 0.02em;
+  }
+
+  .doomsday-clock__seal {
+    display: grid;
+    place-items: center;
+    width: 68px;
+    height: 68px;
+    flex: 0 0 auto;
+    border: 1px solid color-mix(in srgb, var(--color-accent), transparent 48%);
+    border-radius: 999px;
+    color: var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent), transparent 94%);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.86rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    box-shadow: inset 0 0 28px color-mix(in srgb, var(--color-accent), transparent 90%);
+  }
+
+  .doomsday-clock__digits {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.2rem;
+    padding: 1.15rem 1rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    background: rgba(0, 0, 0, 0.24);
+    box-shadow: inset 0 14px 34px rgba(0, 0, 0, 0.2);
+  }
+
+  .doomsday-clock__unit {
+    position: relative;
+    min-width: 0;
+    text-align: center;
+  }
+
+  .doomsday-clock__unit + .doomsday-clock__unit {
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .doomsday-clock__value {
+    display: block;
+    overflow: hidden;
+    color: #fff;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums lining-nums;
+    font-size: clamp(1.7rem, 3.15vw, 3.35rem);
+    font-weight: 650;
+    line-height: 0.95;
+    letter-spacing: 0.035em;
+    text-shadow:
+      0 0 18px color-mix(in srgb, var(--color-accent), transparent 52%),
+      0 0 42px color-mix(in srgb, var(--color-accent), transparent 78%);
+  }
+
+  .doomsday-clock__label {
+    display: block;
+    margin-top: 0.75rem;
+    color: var(--color-subtext);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+  }
+
+  .doomsday-clock__footer {
+    margin-top: 1rem;
+    color: var(--color-subtext);
+    font-size: 0.74rem;
+    letter-spacing: 0.08em;
+  }
+
+  .doomsday-clock__cta {
+    color: var(--color-maintext);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+
+  @media (max-width: 900px) {
+    .doomsday-clock__digits {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .doomsday-clock__unit:nth-child(4) {
+      border-left: 0;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .doomsday-clock {
+      width: calc(100% - 0.5rem);
+      margin-top: 1.75rem;
+      padding: 1.1rem;
+      border-radius: 22px;
+    }
+
+    .doomsday-clock__topline {
+      grid-template-columns: 54px minmax(0, 1fr) 54px;
+      gap: 0.55rem;
+    }
+
+    .doomsday-clock__seal-spacer,
+    .doomsday-clock__seal {
+      width: 54px;
+      height: 54px;
+    }
+
+    .doomsday-clock__seal {
+      font-size: 0.72rem;
+    }
+
+    .doomsday-clock__eyebrow {
+      font-size: 0.58rem;
+      letter-spacing: 0.22em;
+    }
+
+    .doomsday-clock__digits {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+      padding: 0.8rem;
+    }
+
+    .doomsday-clock__unit {
+      padding: 0.7rem 0.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.018);
+    }
+
+    .doomsday-clock__unit + .doomsday-clock__unit {
+      border-left: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .doomsday-clock__unit:nth-child(odd) {
+      border-left: 0;
+    }
+
+    .doomsday-clock__unit:nth-child(even) {
+      border-left: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .doomsday-clock__value {
+      font-size: clamp(2rem, 13vw, 3.2rem);
+    }
+
+    .doomsday-clock__footer {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.68rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .doomsday-clock,
+    .doomsday-clock::before {
+      transition: none;
+    }
+  }
 </style>
+
+
+<script>
+  const initDoomsdayClocks = () => {
+    document.querySelectorAll('[data-doomsday-clock]').forEach((clock) => {
+      if (!(clock instanceof HTMLElement) || clock.dataset.clockReady === 'true') {
+        return;
+      }
+
+      const target = Date.parse(clock.dataset.target ?? '');
+      const yearsNode = clock.querySelector('[data-clock-years]');
+      const monthsNode = clock.querySelector('[data-clock-months]');
+      const daysNode = clock.querySelector('[data-clock-days]');
+      const hoursNode = clock.querySelector('[data-clock-hours]');
+      const minutesNode = clock.querySelector('[data-clock-minutes]');
+      const secondsNode = clock.querySelector('[data-clock-seconds]');
+
+      if (
+        Number.isNaN(target) ||
+        !yearsNode ||
+        !monthsNode ||
+        !daysNode ||
+        !hoursNode ||
+        !minutesNode ||
+        !secondsNode
+      ) {
+        return;
+      }
+
+      const pad = (value, width = 2) => String(value).padStart(width, '0');
+      const DAY_MS = 24 * 60 * 60 * 1000;
+      const HOUR_MS = 60 * 60 * 1000;
+      const MINUTE_MS = 60 * 1000;
+      const SECOND_MS = 1000;
+
+      const daysInUtcMonth = (year, month) =>
+        new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
+
+      const buildUtcDate = (source, year, month) => {
+        const day = Math.min(
+          source.getUTCDate(),
+          daysInUtcMonth(year, month)
+        );
+
+        return new Date(
+          Date.UTC(
+            year,
+            month,
+            day,
+            source.getUTCHours(),
+            source.getUTCMinutes(),
+            source.getUTCSeconds(),
+            source.getUTCMilliseconds()
+          )
+        );
+      };
+
+      const addUtcYears = (source, years) =>
+        buildUtcDate(
+          source,
+          source.getUTCFullYear() + years,
+          source.getUTCMonth()
+        );
+
+      const addUtcMonths = (source, months) => {
+        const totalMonths =
+          source.getUTCFullYear() * 12 +
+          source.getUTCMonth() +
+          months;
+        const year = Math.floor(totalMonths / 12);
+        const month = totalMonths - year * 12;
+
+        return buildUtcDate(source, year, month);
+      };
+
+      const update = () => {
+        const now = new Date();
+        const targetDate = new Date(target);
+
+        if (now.getTime() >= target) {
+          yearsNode.textContent = '000';
+          monthsNode.textContent = '00';
+          daysNode.textContent = '00';
+          hoursNode.textContent = '00';
+          minutesNode.textContent = '00';
+          secondsNode.textContent = '00';
+          return;
+        }
+
+        let years = targetDate.getUTCFullYear() - now.getUTCFullYear();
+        let cursor = addUtcYears(now, years);
+
+        if (cursor.getTime() > target) {
+          years -= 1;
+          cursor = addUtcYears(now, years);
+        }
+
+        let months =
+          (targetDate.getUTCFullYear() - cursor.getUTCFullYear()) * 12 +
+          (targetDate.getUTCMonth() - cursor.getUTCMonth());
+        let monthCursor = addUtcMonths(cursor, months);
+
+        if (monthCursor.getTime() > target) {
+          months -= 1;
+          monthCursor = addUtcMonths(cursor, months);
+        }
+
+        const remainingAfterMonths = target - monthCursor.getTime();
+        const days = Math.floor(remainingAfterMonths / DAY_MS);
+        let remainder = remainingAfterMonths - days * DAY_MS;
+
+        const hours = Math.floor(remainder / HOUR_MS);
+        remainder -= hours * HOUR_MS;
+
+        const minutes = Math.floor(remainder / MINUTE_MS);
+        remainder -= minutes * MINUTE_MS;
+
+        const seconds = Math.floor(remainder / SECOND_MS);
+
+        yearsNode.textContent = pad(years, 3);
+        monthsNode.textContent = pad(months);
+        daysNode.textContent = pad(days);
+        hoursNode.textContent = pad(hours);
+        minutesNode.textContent = pad(minutes);
+        secondsNode.textContent = pad(seconds);
+      };
+
+      clock.dataset.clockReady = 'true';
+      update();
+      window.setInterval(update, 1000);
+    });
+  };
+
+  initDoomsdayClocks();
+  document.addEventListener('astro:page-load', initDoomsdayClocks);
+</script>
