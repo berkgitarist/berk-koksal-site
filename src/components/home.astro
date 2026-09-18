@@ -107,7 +107,7 @@ const copy = isTurkish
         'Cehennem, hesap, pişmanlık, susuzluk, hapsedilme ve geri dönüşü olmayan sonuçlara ilişkin KURAN merkezli uyarıları tek bir tavizsiz müzikal inişe dönüştüren 19 parçalık bir konsept albüm — on dokuzun mimarisinin içinde sona eriyor.',
       magnificentDisturbance: 'Muhteşem Bir Sarsıntı',
       warningMustBeHeard: 'Uyarı Duyulmalı',
-      enterHelll: "HELLL'e Gir",
+      enterHelll: "CEHENNEM'i Dinle",
     }
   : {
       officialArtistWebsite: 'Official Artist Website',
@@ -401,7 +401,7 @@ const hourTarget = '2280-09-24T19:33:00Z';
     </div>
 
     <div class="grid items-center grid-cols-1 gap-10 lg:grid-cols-[340px_1fr]">
-      <a href="/albums/helll/" class="group">
+      <a href={isTurkish ? "/tr/albums/helll/" : "/albums/helll/"} class="group">
         <img
           src="/albums/helll.png"
           alt={isTurkish ? 'Berk KÖKSAL imzalı HELLL albüm kapağı' : 'HELLL album cover by Berk KÖKSAL'}
@@ -417,7 +417,7 @@ const hourTarget = '2280-09-24T19:33:00Z';
         </div>
 
         <h2 class="mb-3 text-5xl font-bold leading-none text-maintext md:text-7xl">
-          HELLL
+          CEHENNEMM
         </h2>
 
         <p class="mb-5 font-heading text-xl font-bold uppercase tracking-[0.08em] text-maintext/90 md:text-2xl">
@@ -447,7 +447,7 @@ const hourTarget = '2280-09-24T19:33:00Z';
           </a>
 
           <a
-            href="/albums/helll/"
+            href={isTurkish ? "/tr/albums/helll/" : "/albums/helll/"}
             class="inline-flex items-center gap-3 rounded-full border border-[#8f1c1c]/45 bg-[#8f1c1c]/10 px-7 py-4 font-semibold text-maintext transition hover:bg-[#8f1c1c]/20"
           >
             {copy.enterHelll}
@@ -714,79 +714,65 @@ const hourTarget = '2280-09-24T19:33:00Z';
   @media (max-width: 640px) {
     .doomsday-clock {
       width: calc(100% - 0.5rem);
-      margin-top: 1.25rem;
-      padding: 0.85rem;
-      border-radius: 18px;
+      margin-top: 1.75rem;
+      padding: 1.1rem;
+      border-radius: 22px;
     }
 
     .doomsday-clock__topline {
-      grid-template-columns: 44px minmax(0, 1fr) 44px;
-      gap: 0.4rem;
+      grid-template-columns: 54px minmax(0, 1fr) 54px;
+      gap: 0.55rem;
     }
 
     .doomsday-clock__seal-spacer,
     .doomsday-clock__seal {
-      width: 44px;
-      height: 44px;
+      width: 54px;
+      height: 54px;
     }
 
     .doomsday-clock__seal {
-      font-size: 0.62rem;
+      font-size: 0.72rem;
     }
 
     .doomsday-clock__eyebrow {
-      font-size: 0.5rem;
-      letter-spacing: 0.16em;
+      font-size: 0.58rem;
+      letter-spacing: 0.22em;
     }
 
-    .doomsday-clock__title {
-      margin-top: 0.18rem;
-      font-size: clamp(1.15rem, 5.5vw, 1.45rem);
-    }
-
-    /* Mobil: Yıl - Ay - Gün / Saat - Dakika - Saniye */
     .doomsday-clock__digits {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-template-rows: repeat(2, auto);
-      gap: 0.42rem;
-      margin-top: 0.7rem;
-      padding: 0.55rem;
-      border-radius: 16px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+      padding: 0.8rem;
     }
 
     .doomsday-clock__unit {
-      min-width: 0;
-      padding: 0.5rem 0.12rem;
+      padding: 0.7rem 0.25rem;
       border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 11px;
+      border-radius: 14px;
       background: rgba(255, 255, 255, 0.018);
     }
 
-    .doomsday-clock__unit + .doomsday-clock__unit,
-    .doomsday-clock__unit:nth-child(4) {
+    .doomsday-clock__unit + .doomsday-clock__unit {
+      border-left: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .doomsday-clock__unit:nth-child(odd) {
+      border-left: 0;
+    }
+
+    .doomsday-clock__unit:nth-child(even) {
       border-left: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .doomsday-clock__value {
-      font-size: clamp(1.55rem, 8vw, 2.05rem);
-      line-height: 1;
-      letter-spacing: 0.015em;
-    }
-
-    .doomsday-clock__label {
-      margin-top: 0.38rem;
-      font-size: 0.48rem;
-      letter-spacing: 0.12em;
-      white-space: nowrap;
+      font-size: clamp(2rem, 13vw, 3.2rem);
     }
 
     .doomsday-clock__footer {
-      margin-top: 0.7rem;
       align-items: flex-start;
       flex-direction: column;
-      gap: 0.3rem;
-      font-size: 0.6rem;
-      line-height: 1.35;
+      gap: 0.5rem;
+      font-size: 0.68rem;
     }
   }
 

@@ -1,0 +1,1406 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Nav from "../../../components/nav.astro";
+import { Icon } from "astro-icon/components";
+import albums from "../../../data/albums.tr.json";
+import {
+  helllManifesto,
+  helllTaglines,
+  helllTracks,
+  nineteenArchitecture,
+  quranicSourceMap,
+} from "../../../data/helll.tr";
+
+export async function getStaticPaths() {
+  return albums.map((album) => ({
+    params: { slug: album.slug },
+    props: { album },
+  }));
+}
+
+const { album } = Astro.props;
+const isHelll = album.slug === "helll";
+const spotifyPlaceholder =
+  "spotifyPlaceholder" in album && album.spotifyPlaceholder === true;
+
+const currentIndex = albums.findIndex((item) => item.slug === album.slug);
+const previous = albums[currentIndex - 1] ?? albums[albums.length - 1];
+const next = albums[currentIndex + 1] ?? albums[0];
+
+const genreItems = album.genre?.split("/").map((item) => item.trim()) ?? [];
+
+const credits = [
+  "Bestecilik",
+  "Söz Yazımı",
+  "Aranjman",
+  "Prodüksiyon",
+  "Vokaller",
+  "Gitarlar",
+  "Orkestrasyon",
+  "Korolar",
+  "Programlama",
+  "Ses Tasarımı",
+  "Miks",
+  "Mastering",
+  "Görsel Tasarım",
+  "Konsept",
+];
+
+const features = genreItems.slice(0, 4);
+
+const spotifyEmbedSource = album.spotifyEmbed || album.spotify;
+const spotifyAlbumId = spotifyEmbedSource
+  ?.split("/album/")
+  ?.at(1)
+  ?.split("?")
+  ?.at(0)
+  ?.split("/")
+  ?.at(0);
+
+const spotifyEmbedUrl = spotifyAlbumId
+  ? `https://open.spotify.com/embed/album/${spotifyAlbumId}?utm_source=generator`
+  : null;
+
+
+const albumVisuals = {
+  "zikr-symphonic-metal": {
+    symbol: "XIX",
+    secondarySymbol: "XIX",
+    structureLabel: "XIX • 19 BÖLÜM",
+    variant: "monumental",
+    accent: "#D6B56B",
+    symbolOpacity: "0.105",
+  },
+  "zikr-jazz": {
+    symbol: "XIX",
+    secondarySymbol: "XIX",
+    structureLabel: "XIX • 19 PARÇA",
+    variant: "jazz",
+    accent: "#C9A77C",
+    symbolOpacity: "0.09",
+  },
+  "zikr-i-batin": {
+    symbol: "XIX",
+    secondarySymbol: "XIX",
+    structureLabel: "XIX • 19 PARÇA",
+    variant: "inner",
+    accent: "#9B8CC7",
+    symbolOpacity: "0.08",
+  },
+  "zikr-rap": {
+    symbol: "XIX",
+    secondarySymbol: "XIX",
+    structureLabel: "XIX • 19 PARÇA",
+    variant: "rhythm",
+    accent: "#D9B64D",
+    symbolOpacity: "0.115",
+  },
+  "one-god-one-love": {
+    symbol: "XIX",
+    secondarySymbol: "XIX",
+    structureLabel: "XIX • 19 PARÇA",
+    variant: "bright",
+    accent: "#E3C98E",
+    symbolOpacity: "0.085",
+  },
+  "classical-chorus": {
+    symbol: "XIX",
+    secondarySymbol: "XIX",
+    structureLabel: "XIX • 19 PARÇA",
+    variant: "cathedral",
+    accent: "#D4AF37",
+    symbolOpacity: "0.10",
+  },
+  "zikr-rock": {
+    symbol: "XIX",
+    secondarySymbol: "XIX",
+    structureLabel: "XIX • 19 PARÇA",
+    variant: "rock",
+    accent: "#C86A4C",
+    symbolOpacity: "0.11",
+  },
+  "zikr-nur": {
+    symbol: "XIX",
+    secondarySymbol: "XIX",
+    structureLabel: "XIX • 19 PARÇA",
+    variant: "light",
+    accent: "#E4DFA8",
+    symbolOpacity: "0.085",
+  },
+  "zikr-huu": {
+    symbol: "HÛ",
+    secondarySymbol: "HÛ",
+    structureLabel: "HÛ • 9 PARÇA",
+    variant: "breath",
+    accent: "#B9C9D8",
+    symbolOpacity: "0.075",
+  },
+  "zikr-symphony": {
+    symbol: "XIX",
+    secondarySymbol: "XIX × XIX",
+    structureLabel: "XIX × XIX • 19 + 19",
+    variant: "symphony",
+    accent: "#D4AF37",
+    symbolOpacity: "0.11",
+  },
+  "tanrinin-hediyesi": {
+    symbol: "XIX",
+    secondarySymbol: "XIX",
+    structureLabel: "III • 3 PARÇA",
+    variant: "origin",
+    accent: "#CFAD78",
+    symbolOpacity: "0.075",
+  },
+} as const;
+
+const defaultAlbumVisual = {
+  symbol: album.tracksCount === "19" ? "XIX" : album.tracksCount,
+  secondarySymbol: album.tracksCount === "19" ? "XIX" : album.tracksCount,
+  structureLabel: `${album.tracksCount} PARÇA`,
+  variant: "default",
+  accent: "#D4AF37",
+  symbolOpacity: "0.09",
+};
+
+const albumVisual =
+  albumVisuals[album.slug as keyof typeof albumVisuals] ?? defaultAlbumVisual;
+---
+
+<Layout
+  title={`${album.title} | Berk KÖKSAL`}
+  description={album.description}
+  canonical={`/tr/albums/${album.slug}/`}
+  ogImage={album.cover}
+  ogType="music.album"
+  twitterCard="summary_large_image"
+  lang="tr"
+  pageClass={isHelll ? "helll-theme" : ""}
+  disableAmbient={isHelll}
+>
+  <Nav />
+
+  {isHelll && (
+    <>
+      <!-- HELLL HERO -->
+      <section class="relative overflow-hidden pb-8 pt-28 md:pt-32">
+        <div class="absolute inset-0 -z-30 bg-black"></div>
+        <div class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_50%_18%,rgba(104,0,0,0.12),transparent_34%),linear-gradient(to_bottom,#000_0%,#030101_58%,#000_100%)]"></div>
+
+        <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 md:px-6 lg:grid-cols-[minmax(420px,0.85fr)_minmax(0,1.3fr)] lg:gap-12">
+          <button
+            type="button"
+            class="album-cover-button group relative"
+            aria-label={`${album.title} kapağını aç`}
+          >
+            <div class="absolute -inset-8 rounded-full bg-[#730000]/10 blur-3xl transition-opacity duration-700 group-hover:bg-[#920000]/15"></div>
+            <img
+              src={album.cover}
+              alt={album.title}
+              class="relative mx-auto w-full max-w-xl rounded-[2rem] border border-white/10 bg-black shadow-[0_0_100px_rgba(120,0,0,0.14)] transition-transform duration-700 group-hover:scale-[1.018]"
+            />
+          </button>
+
+          <div class="min-w-0 text-center lg:text-left">
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.48em] text-[#b74a4a]">
+              QURANIC CONCEPTS • CEHENNEM • 2026
+            </p>
+
+            <h1 class="max-w-full whitespace-nowrap font-heading text-[clamp(4rem,6vw,7rem)] font-bold leading-none tracking-[-0.04em] text-white">
+  CEHENNEMM
+</h1>
+
+            <p class="mt-5 text-sm font-bold uppercase tracking-[0.35em] text-white/40">
+              19 PARÇA • TEK İNİŞ • TEK SON HATIRLATMA
+            </p>
+
+            <h2 class="mt-9 text-2xl font-heading font-bold uppercase leading-9 text-white md:text-3xl">
+              {helllTaglines[0]}
+            </h2>
+
+            <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/58 lg:mx-0">
+              {album.description}
+            </p>
+
+            <div class="mt-8 flex flex-wrap justify-center gap-2 lg:justify-start">
+              <span class="rounded-full border border-[#8f1c1c]/45 bg-[#7f1212]/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#d16c6c]">
+                Muhteşem Bir Rahatsız Edicilik.
+              </span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-widest text-white/60">XIX</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-widest text-white/60">19 × 19</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-widest text-white/60">NINETEEN • 19:19</span>
+            </div>
+
+            <div class="mt-9 flex flex-wrap justify-center gap-4 lg:justify-start">
+              <!-- TODO: Replace HELLL's temporary Spotify URL and set spotifyPlaceholder to false after release. -->
+              <a
+                href={album.spotify}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-3 rounded-full border border-[#1DB954]/30 bg-[#1DB954]/10 px-7 py-3 font-bold text-white transition hover:bg-[#1DB954]/20"
+              >
+                <Icon name="mdi:spotify" class="h-5 w-5 text-[#1DB954]" />
+                Spotify
+              </a>
+
+              <a
+                href="/tr/quranic-concepts/"
+                class="inline-flex items-center gap-3 rounded-full border border-[#8f1c1c]/45 bg-[#7f1212]/10 px-7 py-3 font-bold text-white transition hover:bg-[#7f1212]/20"
+              >
+                QURANIC CONCEPTS
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {spotifyEmbedUrl && (
+        <div class="max-w-6xl mx-auto px-4 mt-6 mb-16 md:mt-8 md:mb-24">
+          <div class="rounded-[2rem] border border-[#1DB954]/25 bg-[#1DB954]/5 p-4 md:p-5 shadow-[0_0_60px_rgba(29,185,84,0.08)]">
+            <div class="flex items-center gap-3 mb-4">
+              <Icon name="mdi:spotify" class="w-5 h-5 text-[#1DB954]" />
+              <p class="text-[#1DB954] text-xs uppercase tracking-[0.35em] font-bold">
+                Resmî Spotify Yayını
+              </p>
+            </div>
+
+            <div class="overflow-hidden rounded-[1.25rem] border border-[#1DB954]/20 bg-background/40">
+              <iframe
+                src={spotifyEmbedUrl}
+                width="100%"
+                height="492"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                class="block h-[352px] sm:h-[420px] lg:h-[492px]"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div class="mx-auto max-w-6xl space-y-20 pb-28 md:space-y-28">
+        <!-- OPENING -->
+        <section class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.018] p-7 md:p-14">
+          <div
+            class="pointer-events-none absolute -right-10 -top-10 select-none text-[16rem] font-heading font-bold leading-none tracking-[-0.06em] text-white/[0.055] md:-right-16 md:-top-16 md:text-[26rem]"
+            aria-hidden="true"
+          >
+            XIX
+          </div>
+
+          <div class="relative z-10">
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">I · İlk Sözden Önce</p>
+            <h2 class="max-w-5xl text-4xl font-heading font-bold leading-tight text-white md:text-6xl">
+              Önce kalp durur. Sonra sesler başlar.
+            </h2>
+
+            <div class="mt-10 grid grid-cols-1 gap-7 lg:grid-cols-[0.8fr_1.2fr]">
+            <div class="rounded-2xl border border-[#8f1c1c]/35 bg-black p-7">
+              <div class="space-y-3 font-mono text-xl font-bold uppercase tracking-[0.18em] text-white/80 md:text-2xl">
+                <p>KALP ATIŞI.</p>
+                <p>HASTANE MONİTÖRÜ.</p>
+                <p>DÜZ ÇİZGİ.</p>
+                <p class="text-[#c24f4f]">ÖLÜM.</p>
+              </div>
+            </div>
+
+            <div class="space-y-5 text-lg leading-8 text-white/58">
+              <p>
+                HELLL ilk sözden önce başlar. Kalp atışı ve hastane monitörü sıradan yaşamın son saniyelerini kurar. Nabız zayıflar. Monitör kesintisiz bir tona dönüşür. Kişi ölür.
+              </p>
+              <p>
+                Ancak bu geçişten sonra HELLL’in koroları, ateşi ve sesleri devreye girer. Bunların altında iki tekrar eden varlık zaten çalışmaktadır: felaket boyunca çalmayı sürdüren yalnız bir kemancı ve müziğin daha da altından yükseliyormuş gibi duyulan gömülü bir koro. Ölüm albümün son sahnesi olarak kullanılmaz; albümün başladığı eşiktir.
+              </p>
+              <p class="font-heading text-2xl font-bold leading-9 text-white">
+                HELLL ölümle başlar. Uyarı yaşayanlar içindir.
+              </p>
+            </div>
+          </div>
+          </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="relative grid grid-cols-1 gap-10 overflow-hidden lg:grid-cols-[0.75fr_1.25fr]">
+          <div
+            class="pointer-events-none absolute -right-10 -top-12 select-none text-[15rem] font-heading font-bold leading-none tracking-[-0.06em] text-white/[0.05] md:-right-14 md:-top-16 md:text-[24rem]"
+            aria-hidden="true"
+          >
+            XIX
+          </div>
+
+          <div class="relative z-10">
+            <p class="mb-4 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">II</p>
+            <h2 class="text-4xl font-heading font-bold text-white md:text-5xl">
+              Cehennemin bir tasviri değil. İşitilebilir hâle getirilmiş bir uyarı.
+            </h2>
+          </div>
+
+          <div class="relative z-10 space-y-6 text-lg leading-8 text-white/58">
+            <p>
+              HELLL, Berk Köksal’ın QURANIC CONCEPTS serisindeki ilk albümdür. Kavramsal mimarisi; yargı, ceza, pişmanlık, susuzluk, açlık, hapsedilme, tanıklık, sorumluluk ve kalıcılığa ilişkin KURAN sahneleri ve tekrar eden imgeler üzerine kuruludur.
+            </p>
+            <p>
+              Proje KURAN’ı estetik bir dekor olarak kullanmaz. Doğrudan kaynak referansları KURAN kaynağı olarak belirtilir; bağlayıcı diyaloglar, dramatik çerçeve ve ses tasarımı ise sanatsal yorum olarak kalır.
+            </p>
+            <p class="font-heading text-2xl font-bold uppercase leading-9 text-white">
+              {helllTaglines[2]}
+            </p>
+          </div>
+        </section>
+
+        <!-- MANIFESTO -->
+        <section class="relative overflow-hidden rounded-[2rem] border border-[#8f1c1c]/35 bg-[#5b0909]/[0.06] p-7 md:p-14">
+          <div
+            class="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-[16rem] font-heading font-bold leading-none tracking-[-0.06em] text-[#8f1c1c]/[0.12] md:text-[26rem]"
+            aria-hidden="true"
+          >
+            XIX
+          </div>
+
+          <div class="relative z-10">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">III · Manifesto</p>
+          <h2 class="max-w-5xl text-4xl font-heading font-bold leading-tight text-white md:text-6xl">
+            UYARI DUYULMALI.
+          </h2>
+
+          <div class="mt-10 grid grid-cols-1 gap-6 text-lg leading-8 text-white/58 lg:grid-cols-2">
+            {helllManifesto.map((paragraph, index) => (
+              <p class={index === helllManifesto.length - 1 ? "lg:col-span-2" : ""}>{paragraph}</p>
+            ))}
+          </div>
+
+          <blockquote class="mt-12 border-l-2 border-[#a62d2d] pl-6 font-heading text-2xl font-bold italic leading-9 text-white md:text-3xl">
+            “Şeytanın bile gözyaşları içinde dinleyeceği kadar sarsıcı bir albüm.”
+          </blockquote>
+          </div>
+        </section>
+
+        <!-- MUSICAL IDENTITY -->
+        <section class="relative overflow-hidden">
+          <div
+            class="pointer-events-none absolute -right-8 top-10 select-none text-[15rem] font-heading font-bold leading-none tracking-[-0.06em] text-white/[0.055] md:-right-14 md:text-[24rem]"
+            aria-hidden="true"
+          >
+            XIX
+          </div>
+
+          <div class="relative z-10">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">IV · Müzikal Kimlik</p>
+          <h2 class="mb-6 text-4xl font-heading font-bold text-white md:text-6xl">
+            Uç ses dünyasıyla ifade edilen kutsal bir uyarı.
+          </h2>
+          <p class="mb-10 max-w-4xl text-lg leading-8 text-white/55">
+            HELLL; progresif metal, senfonik ekstrem metal, funeral doom, endüstriyel dokular, thrash, neoklasik biçimler, kutsal ve lanetlenmiş korolar, sinematik ses tasarımı ve sessizlik arasında hareket eder. Sahne değiştiği için türler değişir. Uyarı değişmez.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            {[
+              'Qur\'anic Concept Metal',
+              'Progresif Metal',
+              'Senfonik / Ekstrem Metal',
+              'Kutsal & Lanetlenmiş Korolar',
+              'Sinematik Ses Tasarımı',
+              'Barok & Neoklasik Biçimler',
+              'Funeral Doom',
+              'Endüstriyel Metal',
+            ].map((item) => (
+              <div class="rounded-2xl border border-white/10 bg-white/[0.025] p-5 font-heading font-bold text-white/75">
+                {item}
+              </div>
+            ))}
+          </div>
+
+          <div class="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-2">
+            <article class="rounded-[2rem] border border-[#8f1c1c]/35 bg-[#650c0c]/[0.06] p-7 md:p-9">
+              <p class="text-xs font-bold uppercase tracking-[0.35em] text-[#b74a4a]">Tekrar Eden Figür · Sarsılmayan Kemancı</p>
+              <h3 class="mt-4 text-3xl font-heading font-bold leading-tight text-white md:text-4xl">
+                Her şey çökerken o çalmaya devam eder.
+              </h3>
+              <div class="mt-5 space-y-4 leading-7 text-white/52">
+                <p>
+                  On dokuz eserin tamamında yalnız bir kemancı arka planda kalır. Çevresindeki şiddete tepki vermez; dış dünya çöküyor olsa bile yay hareket etmeye devam eder. İcra, felaketten bilinçli biçimde kopuktur; sanki bu müzisyen oradan korkmak yerine o yere aitmiş gibidir.
+                </p>
+                <p>
+                  Bu figür, Niccolò Paganini’ye ve onun virtüözitesi çevresinde oluşan şeytani mitolojiye bilinçli bir göndermedir. 19. yüzyılda — HELLL’in on dokuz mimarisini sessizce yansıtan tarihsel bir ayrıntı — Paganini’nin insanüstü görünen icrası, Şeytan’la anlaşma yaptığına dair yaygın efsaneleri besledi; dönemin bir anlatısında bir dinleyicinin onun dirseğinin yanında yayı yönlendiren Şeytan’ı gördüğünü iddia ettiği bile aktarılır. HELLL bu efsaneyi tarihsel gerçek olarak sunmaz. Efsanenin geride bıraktığı imgeyi kullanır: çevresindeki felakete kayıtsız, sanki Cehennemin içinden çalıyormuş gibi duyulan bir kemancı.
+                </p>
+              </div>
+            </article>
+
+            <article class="rounded-[2rem] border border-white/10 bg-white/[0.02] p-7 md:p-9">
+              <p class="text-xs font-bold uppercase tracking-[0.35em] text-white/40">Tekrar Eden Katman · Cehennem Korosu</p>
+              <h3 class="mt-4 text-3xl font-heading font-bold leading-tight text-white md:text-4xl">
+                Koronun altında başka bir koro bekliyor.
+              </h3>
+              <div class="mt-5 space-y-4 leading-7 text-white/52">
+                <p>
+                  HELLL, ana müzikal korolarının altında ikinci bir koro varlığı taşır: Cehennem Korosu. Sesleri bilinçli biçimde miksin çok derinine yerleştirilir; neredeyse yeraltındaki bir ses katmanı gibi, uzak, örtülü ve görünür müziğin altından yükseliyormuş gibi duyulur.
+                </p>
+                <p>
+                  Bu gizli koro, geleneksel bir ön plan performansı olmaktan çok albümün çevresinin bir parçası olarak on dokuz eserin tamamına yerleştirilmiştir. Amacı Cehennemin kendisine ilişkin imgeyi yoğunlaştırmaktır: şarkılar yalnızca mekânı anlatmaz; içeriden geliyormuş gibi duyulan seslerle çevrilir.
+                </p>
+              </div>
+            </article>
+          </div>
+          </div>
+        </section>
+
+        <!-- 19 TRACK DESCENT -->
+        <section class="relative overflow-hidden">
+          <div
+            class="pointer-events-none absolute -right-6 top-4 select-none text-[17rem] font-heading font-bold leading-none tracking-[-0.06em] text-[#8f1c1c]/[0.12] md:-right-10 md:text-[26rem]"
+            aria-hidden="true"
+          >
+            XIX
+          </div>
+
+          <div class="relative z-10">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">V · 19 Parçalık İniş</p>
+          <h2 class="mb-6 text-4xl font-heading font-bold text-white md:text-6xl">
+            On dokuz aşama. Geri döndürülemez tek bir hareket.
+          </h2>
+          <p class="mb-10 max-w-4xl text-lg leading-8 text-white/55">
+            Her parça farklı bir KURAN imgesini veya tekrar eden fikri ayırarak ele alır. Aşağıdaki kartlar her şarkının kavramsal rolünü ve kaynak haritasında kullanılan ayet referanslarını gösterir.
+          </p>
+
+          <div class="space-y-4">
+            {helllTracks.map((track) => (
+              <article class={`rounded-2xl border p-6 md:p-7 ${track.no === '19' ? 'border-[#9d2929]/60 bg-[#6d0d0d]/10' : 'border-white/10 bg-white/[0.018]'}`}>
+                <div class="grid grid-cols-1 gap-5 md:grid-cols-[72px_1fr_auto] md:items-start">
+                  <div class="font-mono text-2xl font-bold text-[#9e3232]">{track.no}</div>
+                  <div>
+                    <h3 class="text-2xl font-heading font-bold text-white md:text-3xl">{track.title}</h3>
+                    <p class="mt-2 font-heading font-bold text-white/75">{track.hook}</p>
+                    <p class="mt-4 max-w-4xl leading-7 text-white/50">{track.concept}</p>
+                  </div>
+                  <div class="flex flex-wrap gap-2 md:max-w-[260px] md:justify-end">
+                    {track.references.map((reference) => (
+                      <span class="rounded-full border border-[#8f1c1c]/35 bg-[#7f1212]/10 px-3 py-1.5 text-xs font-bold text-[#d16c6c]">
+                        {reference}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+          </div>
+        </section>
+
+        <!-- QURAN SOURCE MAP -->
+        <section class="relative overflow-hidden">
+          <div
+            class="pointer-events-none absolute -right-8 top-2 select-none text-[15rem] font-heading font-bold leading-none tracking-[-0.06em] text-white/[0.055] md:-right-12 md:-top-4 md:text-[24rem]"
+            aria-hidden="true"
+          >
+            XIX
+          </div>
+
+          <div class="relative z-10">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">VI · KURAN Kaynak Haritası</p>
+          <h2 class="mb-6 text-4xl font-heading font-bold text-white md:text-6xl">
+            İnişin arkasındaki ayetler.
+          </h2>
+          <p class="mb-10 max-w-4xl text-lg leading-8 text-white/55">
+            Bu harita HELLL’i kurmak için kullanılan KURAN pasajlarını listeler ve her pasajın albümdeki rolünü belirtir. Aşağıdaki ifadeler açıklayıcı özetlerdir; kaynak metnin yerine geçmez.
+          </p>
+
+          <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+            {quranicSourceMap.map((item) => (
+              <details class="group rounded-2xl border border-white/10 bg-white/[0.018] p-6 open:border-[#8f1c1c]/40 open:bg-[#650c0c]/[0.06]">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-5 font-heading font-bold text-white">
+                  <span>{item.reference}</span>
+                  <span class="text-[#a53b3b] transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p class="mt-5 leading-7 text-white/52">{item.idea}</p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  {item.tracks.map((track) => (
+                    <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-wider text-white/50">{track}</span>
+                  ))}
+                </div>
+              </details>
+            ))}
+          </div>
+
+          <a
+            href="https://qurantft.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-8 inline-flex items-center gap-2 text-sm font-bold text-[#d16c6c] transition hover:text-white"
+          >
+            KURAN kaynak metnini oku — Quran: The Final Testament <span aria-hidden="true">↗</span>
+          </a>
+          </div>
+        </section>
+
+        <!-- NINETEEN -->
+        <section class="relative overflow-hidden rounded-[2rem] border border-[#9d2929]/55 bg-black p-7 shadow-[0_0_100px_rgba(120,0,0,0.10)] md:p-14">
+          <div
+            class="pointer-events-none absolute -right-16 -top-16 select-none text-[17rem] font-heading font-bold leading-none tracking-[-0.06em] text-white/[0.05] md:text-[25rem]"
+            aria-hidden="true"
+          >
+            XIX
+          </div>
+
+          <div class="relative z-10">
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">VII · Son Mimari</p>
+            <h2 class="text-5xl font-heading font-bold leading-none text-white md:text-8xl">
+              19 — NINETEEN
+            </h2>
+            <p class="mt-7 max-w-4xl text-xl leading-9 text-white/65">
+              {nineteenArchitecture.lead}
+            </p>
+
+            <div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+              {nineteenArchitecture.pillars.map((pillar) => (
+                <div class="rounded-2xl border border-white/10 bg-white/[0.025] p-5 text-center font-heading font-bold text-white/75">
+                  {pillar}
+                </div>
+              ))}
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
+              <div class="rounded-[2rem] border border-[#8f1c1c]/40 bg-[#6d0d0d]/10 p-8 md:p-10">
+                <p class="text-xs font-bold uppercase tracking-[0.35em] text-[#b74a4a]">Kuran 74:30</p>
+                <p class="mt-5 text-4xl font-heading font-bold leading-tight text-white md:text-5xl">
+                  {nineteenArchitecture.verse30}
+                </p>
+              </div>
+
+              <div class="rounded-[2rem] border border-white/10 bg-white/[0.025] p-8 md:p-10">
+                <p class="text-xs font-bold uppercase tracking-[0.35em] text-white/40">Kuran 74:31</p>
+                <p class="mt-5 text-lg font-heading font-bold leading-8 text-white md:text-xl md:leading-9">
+                  {nineteenArchitecture.verse31}
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-12 space-y-6 text-lg leading-8 text-white/58">
+              <p>
+                Sayı; parça sırasına, besteye, başlığa, süreye ve albüm görseline yerleştirilmiştir. Berk Köksal’ın kendi KURAN araştırma çerçevesinde bu 19 × 19 mimarisi, KURAN’ın 19 tabanlı matematiksel sistemiyle bilinçli bir ilişki kurar.
+              </p>
+              <p>
+                Son parça bağımsız olarak bestelenmiş on dokuz müzikal dünyadan geçer. Bir beste geleneksel biçimde bitmek yerine bir sonrakine çözülür; böylece son eser yan yana dizilmiş on dokuz ayrı şarkıdan çok tek ve kesintisiz bir yapı gibi davranır.
+              </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-3">
+              {nineteenArchitecture.finalMovements.map((movement) => (
+                <article class="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+                  <p class="font-mono text-sm font-bold text-[#a83c3c]">BÖLÜM {movement.no}</p>
+                  <h3 class="mt-3 text-2xl font-heading font-bold text-white">{movement.title}</h3>
+                  <p class="mt-4 leading-7 text-white/50">{movement.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <!-- HIDDEN COVER -->
+        <section class="relative grid grid-cols-1 gap-10 overflow-hidden lg:grid-cols-[0.8fr_1.2fr]">
+          <div
+            class="pointer-events-none absolute -right-8 top-1/2 -translate-y-1/2 select-none text-[17rem] font-heading font-bold leading-none tracking-[-0.06em] text-[#8f1c1c]/[0.14] md:-right-12 md:text-[26rem]"
+            aria-hidden="true"
+          >
+            XIX
+          </div>
+
+          <div class="relative z-10">
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">VIII · XIX / Gizli Kapak</p>
+            <h2 class="text-4xl font-heading font-bold leading-tight text-white md:text-5xl">
+              Sayı görünür. Mesaj görünmez.
+            </h2>
+          </div>
+
+          <div class="relative z-10 space-y-6 text-lg leading-8 text-white/58">
+            <p>
+              HELLL görselindeki XIX, 19’un Roma rakamıdır; aynı zamanda görsel yapının ilk anahtarı olarak işlev görür. Başka bir katman ise KURAN’daki Siccin ve İlliyyin kavramlarına işaret eder.
+            </p>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+                <p class="text-xs font-bold uppercase tracking-[0.3em] text-[#b74a4a]">Kuran 83:7–9</p>
+                <h3 class="mt-3 text-3xl font-heading font-bold text-white">SİCCİN</h3>
+                <p class="mt-3 text-sm leading-6 text-white/45">Kötülerin kaydıyla ilişkilendirilir.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
+                <p class="text-xs font-bold uppercase tracking-[0.3em] text-white/40">Kuran 83:18–21</p>
+                <h3 class="mt-3 text-3xl font-heading font-bold text-white">İLLİYYİN</h3>
+                <p class="mt-3 text-sm leading-6 text-white/45">Doğruların kaydıyla ilişkilendirilir.</p>
+              </div>
+            </div>
+            <p class="font-heading text-2xl font-bold uppercase leading-9 text-white">
+              XIX ilk anahtardır. Geri kalanı keşfedilmelidir.
+            </p>
+          </div>
+        </section>
+
+        <!-- PRODUCTION -->
+        <section class="relative overflow-hidden">
+          <div
+            class="pointer-events-none absolute -right-8 top-1/2 -translate-y-1/2 select-none text-[15rem] font-heading font-bold leading-none tracking-[-0.06em] text-white/[0.055] md:-right-12 md:text-[24rem]"
+            aria-hidden="true"
+          >
+            XIX
+          </div>
+
+          <div class="relative z-10">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">IX · Prodüksiyon</p>
+          <h2 class="mb-10 text-4xl font-heading font-bold text-white md:text-5xl">
+            Tek Kişilik Prodüksiyon Vizyonu
+          </h2>
+
+          <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            {credits.map((credit) => (
+              <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
+                <p class="text-[11px] uppercase tracking-widest text-[#a83c3c]">{credit}</p>
+                <p class="mt-2 font-bold text-white">Berk KÖKSAL</p>
+              </div>
+            ))}
+          </div>
+          </div>
+        </section>
+
+        <!-- FINAL -->
+        <section class="relative overflow-hidden rounded-[2rem] border border-[#8f1c1c]/40 bg-black px-6 py-16 text-center md:px-12 md:py-24">
+          <div
+            class="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-[18rem] font-heading font-bold leading-none tracking-[-0.06em] text-[#8f1c1c]/[0.13] md:text-[30rem]"
+            aria-hidden="true"
+          >
+            XIX
+          </div>
+
+          <div class="relative z-10">
+          <p class="text-xs font-bold uppercase tracking-[0.5em] text-[#b74a4a]">Son Hatırlatma</p>
+          <p class="mx-auto mt-8 max-w-5xl text-4xl font-heading font-bold leading-tight text-white md:text-6xl">
+            {nineteenArchitecture.verse30}
+          </p>
+          <p class="mt-4 text-sm text-white/35">Kuran 74:30</p>
+
+          <div class="mx-auto my-10 h-px max-w-xl bg-gradient-to-r from-transparent via-[#8f1c1c]/60 to-transparent"></div>
+
+          <p class="mx-auto max-w-5xl text-lg font-heading font-bold leading-8 text-white md:text-2xl md:leading-10">
+            {nineteenArchitecture.verse31}
+          </p>
+          <p class="mt-4 text-sm text-white/35">Kuran 74:31</p>
+
+          <p class="mx-auto mt-14 max-w-4xl text-2xl font-heading font-bold uppercase leading-10 text-white/80 md:text-3xl">
+            HELLL ÖLÜMLE BAŞLAR.<br />UYARI YAŞAYANLAR İÇİNDİR.
+          </p>
+          </div>
+        </section>
+
+        <!-- NAVIGATION -->
+        <section class="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <a
+            href="/tr/quranic-concepts/"
+            class="group rounded-[2rem] border border-[#8f1c1c]/30 bg-[#7f1212]/10 p-8 transition-all hover:border-[#b33a3a]/55"
+          >
+            <p class="mb-3 text-xs uppercase tracking-widest text-[#b74a4a]">Ana Seri</p>
+            <h3 class="text-2xl font-heading font-bold text-white transition-colors group-hover:text-[#d16c6c]">QURANIC CONCEPTS</h3>
+          </a>
+
+          <a
+            href={`/tr/albums/${next.slug}/`}
+            class="group rounded-[2rem] border border-white/10 bg-white/[0.02] p-8 text-right transition-all hover:border-white/20"
+          >
+            <p class="mb-3 text-xs uppercase tracking-widest text-white/35">Diskografideki Sonraki Albüm</p>
+            <h3 class="text-2xl font-heading font-bold text-white transition-colors group-hover:text-white/70">{next.title}</h3>
+          </a>
+        </section>
+      </div>
+
+      <div id="cover-lightbox" class="fixed inset-0 z-[999] hidden items-center justify-center bg-black/95 p-6">
+        <button
+          id="close-lightbox"
+          class="absolute right-6 top-6 text-white/70 transition hover:text-white"
+          aria-label="Kapağı kapat"
+        >
+          <Icon name="mdi:close" class="h-9 w-9" />
+        </button>
+
+        <img
+          src={album.cover}
+          alt={album.title}
+          class="max-h-[90vh] max-w-[90vw] rounded-3xl border border-white/10 bg-black shadow-[0_0_100px_rgba(120,0,0,0.18)]"
+        />
+      </div>
+    </>
+  )}
+
+  {!isHelll && (
+    <div
+      class={`album-world album-world--${albumVisual.variant}`}
+      style={`--album-accent:${albumVisual.accent}; --album-symbol-opacity:${albumVisual.symbolOpacity};`}
+    >
+      <!-- ALBUM HERO -->
+      <section class="album-hero relative min-h-screen overflow-hidden pb-24 pt-32">
+        <div class="absolute inset-0 -z-30">
+          <img
+            src={album.cover}
+            alt=""
+            class="h-full w-full scale-125 object-cover opacity-30 blur-3xl"
+          />
+        </div>
+
+        <div class="absolute inset-0 -z-20 bg-gradient-to-b from-background/65 via-background/94 to-background"></div>
+        <div class="album-hero-glow pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"></div>
+
+        <div class="album-watermark album-watermark--hero" aria-hidden="true">
+          {albumVisual.symbol}
+        </div>
+
+        <div class="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-4 lg:grid-cols-[0.9fr_1.1fr]">
+          <button
+            type="button"
+            class="album-cover-button group relative"
+            aria-label={`${album.title} kapağını aç`}
+          >
+            <div class="album-cover-glow absolute -inset-8 rounded-full blur-3xl opacity-65 transition-opacity duration-700 group-hover:opacity-100"></div>
+            <img
+              src={album.cover}
+              alt={album.title}
+              class="album-cover-image relative mx-auto w-full max-w-xl rounded-[2rem] transition-transform duration-700 group-hover:scale-[1.025]"
+            />
+          </button>
+
+          <div class="relative space-y-7 text-center lg:text-left">
+            <p class="album-accent-text text-xs font-bold uppercase tracking-[0.45em]">
+              Neo-Sacred Zikr • Albüm • {album.year}
+            </p>
+
+            <h1 class="text-5xl font-heading font-bold leading-tight text-maintext md:text-7xl">
+              {album.title}
+            </h1>
+
+            <div class="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+              <span class="album-structure-chip">
+                {albumVisual.structureLabel}
+              </span>
+              <span class="text-base text-subtext md:text-lg">{album.duration}</span>
+            </div>
+
+            <p class="mx-auto max-w-2xl text-lg leading-8 text-subtext lg:mx-0">
+              {album.description}
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-2 lg:justify-start">
+              {genreItems.map((item) => (
+                <span class="album-genre-chip">{item}</span>
+              ))}
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 pt-4 lg:justify-start">
+              <a
+                href={album.spotify}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="album-primary-button inline-flex items-center gap-3 rounded-full px-7 py-3 font-semibold text-maintext transition-all hover:scale-105"
+              >
+                <Icon name="mdi:spotify" class="h-5 w-5" />
+                Spotify’da Dinle
+              </a>
+
+              <a
+                href="/tr/#projects"
+                class="album-secondary-button inline-flex items-center gap-3 rounded-full px-7 py-3 font-semibold text-maintext transition-all hover:scale-105"
+              >
+                Diskografiye Dön
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {spotifyEmbedUrl && (
+          <div class="relative z-10 mx-auto mt-16 max-w-6xl px-4">
+            <div class="rounded-[2rem] border border-[#1DB954]/25 bg-[#1DB954]/5 p-4 shadow-[0_0_60px_rgba(29,185,84,0.08)] md:p-5">
+              <div class="mb-4 flex items-center gap-3">
+                <Icon name="mdi:spotify" class="h-5 w-5 text-[#1DB954]" />
+                <p class="text-xs font-bold uppercase tracking-[0.35em] text-[#1DB954]">
+                  Resmî Spotify Yayını
+                </p>
+              </div>
+              <div class="overflow-hidden rounded-[1.25rem] border border-[#1DB954]/20 bg-background/40">
+                <iframe
+                  src={spotifyEmbedUrl}
+                  width="100%"
+                  height="492"
+                  frameborder="0"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  class="block h-[352px] sm:h-[420px] lg:h-[492px]"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        )}
+      </section>
+
+      <section class="section-container mx-auto max-w-6xl space-y-24 md:space-y-28">
+        <!-- I · HAKKINDA -->
+        <section class="album-section relative grid grid-cols-1 gap-12 overflow-hidden lg:grid-cols-[0.75fr_1.25fr]">
+          <div class="album-watermark album-watermark--about" aria-hidden="true">
+            {albumVisual.symbol}
+          </div>
+
+          <div class="relative z-10">
+            <p class="album-accent-text mb-4 text-xs font-bold uppercase tracking-[0.45em]">I</p>
+            <h2 class="text-4xl font-heading font-bold text-maintext md:text-5xl">
+              Albüm Hakkında
+            </h2>
+          </div>
+
+          <div class="relative z-10 space-y-6 text-lg leading-8 text-subtext">
+            <p class="whitespace-pre-line">{album.story}</p>
+            <p>
+              Bu albüm, müziğin TANRI’yı hatırlamanın, tefekkürün ve yüceltmenin bir yolu olarak kullanıldığı Berk KÖKSAL’ın Neo-Sacred Zikr evreninin bir parçasıdır.
+            </p>
+            <p>
+              Ses dünyası kutsal atmosferi, modern prodüksiyonu ve manevi niyeti bir araya getirirken odağını zikir, tefekkür ve içsel farkındalık üzerinde tutar.
+            </p>
+          </div>
+        </section>
+
+        <!-- II · MUSICAL IDENTITY -->
+        <section class="album-panel relative overflow-hidden rounded-[2rem] p-8 md:p-14">
+          <div class="album-watermark album-watermark--identity" aria-hidden="true">
+            {albumVisual.symbol}
+          </div>
+
+          <div class="relative z-10">
+            <p class="album-accent-text mb-5 text-xs font-bold uppercase tracking-[0.45em]">
+              II · Müzikal Kimlik
+            </p>
+            <h2 class="mb-10 max-w-5xl text-4xl font-heading font-bold text-maintext md:text-6xl">
+              Hatırlamayla şekillenen kutsal bir ses dili.
+            </h2>
+
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+              {features.map((feature) => (
+                <div class="album-feature-card rounded-2xl p-6">
+                  <p class="album-accent-text mb-3 text-xs font-bold uppercase tracking-[0.3em]">
+                    Neo-Sacred Unsur
+                  </p>
+                  <h3 class="text-2xl font-heading font-bold text-maintext">{feature}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <!-- III · TRACK LIST -->
+        <section class="album-section relative grid grid-cols-1 gap-12 overflow-hidden lg:grid-cols-[0.85fr_1.15fr]">
+          <div class="album-watermark album-watermark--tracks" aria-hidden="true">
+            {albumVisual.secondarySymbol}
+          </div>
+
+          <div class="relative z-10">
+            <p class="album-accent-text mb-5 text-xs font-bold uppercase tracking-[0.45em]">
+              III · Parça Listesi
+            </p>
+            <h2 class="text-4xl font-heading font-bold text-maintext md:text-5xl">
+              {album.tracksCount} Kutsal Eser
+            </h2>
+
+            <div class="album-structure-note mt-7 max-w-sm rounded-2xl px-5 py-4">
+              <p class="album-accent-text text-xs font-bold uppercase tracking-[0.32em]">
+                Yapısal İmza
+              </p>
+              <p class="mt-2 text-2xl font-heading font-bold text-maintext">
+                {albumVisual.structureLabel}
+              </p>
+            </div>
+          </div>
+
+          <ol class="album-track-list relative z-10 space-y-1 rounded-[2rem] p-6 md:p-8">
+            {album.tracks.map((track, index) => (
+              <li class="album-track-row group flex items-center gap-4 rounded-xl px-2 py-4 text-subtext transition-colors">
+                <span class="album-accent-text w-8 font-mono text-sm">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <Icon
+                  name="mdi:play-circle-outline"
+                  class="album-track-icon h-5 w-5 transition-colors"
+                />
+                <span class="transition-colors group-hover:text-maintext">{track}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <!-- IV · PRODUCTION -->
+        <section class="album-section relative overflow-hidden">
+          <div class="album-watermark album-watermark--production" aria-hidden="true">
+            {albumVisual.symbol}
+          </div>
+
+          <div class="relative z-10">
+            <p class="album-accent-text mb-5 text-xs font-bold uppercase tracking-[0.45em]">
+              IV · Prodüksiyon
+            </p>
+            <h2 class="mb-10 text-4xl font-heading font-bold text-maintext md:text-5xl">
+              Tek Kişilik Prodüksiyon Vizyonu
+            </h2>
+
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+              {credits.map((credit) => (
+                <div class="album-credit-card rounded-2xl p-5">
+                  <p class="album-accent-text mb-2 text-xs uppercase tracking-widest">
+                    {credit}
+                  </p>
+                  <p class="font-bold text-maintext">Berk KÖKSAL</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <!-- FINAL TESTAMENT -->
+        <section class="album-final relative overflow-hidden rounded-[2rem] px-8 py-14 text-center md:px-14 md:py-20">
+          <div class="album-watermark album-watermark--final" aria-hidden="true">
+            {albumVisual.symbol}
+          </div>
+
+          <div class="relative z-10">
+            <p class="album-accent-text mb-8 text-xs font-bold uppercase tracking-[0.45em]">
+              Son Ahit
+            </p>
+            <p class="mx-auto mb-6 max-w-3xl text-sm leading-6 text-subtext">Ayet metni, kaynakta yer aldığı biçimiyle değiştirilmeden korunmuştur.</p>
+            <blockquote class="mx-auto max-w-4xl">
+              <p class="text-3xl font-heading font-bold italic leading-tight text-maintext whitespace-pre-line md:text-5xl">
+                {album.verse.text}
+              </p>
+              <p class="mt-8 text-sm text-subtext whitespace-pre-line">
+                {album.verse.reference} — {album.verse.source}
+              </p>
+            </blockquote>
+          </div>
+        </section>
+
+        <!-- NAVIGATION -->
+        <section class="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <a
+            href={`/tr/albums/${previous.slug}/`}
+            class="album-nav-card group rounded-[2rem] p-8 transition-all"
+          >
+            <p class="album-accent-text mb-3 text-xs uppercase tracking-widest">Önceki Albüm</p>
+            <h3 class="text-2xl font-heading font-bold text-maintext transition-colors">
+              {previous.title}
+            </h3>
+          </a>
+
+          <a
+            href={`/tr/albums/${next.slug}/`}
+            class="album-nav-card group rounded-[2rem] p-8 text-right transition-all"
+          >
+            <p class="album-accent-text mb-3 text-xs uppercase tracking-widest">Sonraki Albüm</p>
+            <h3 class="text-2xl font-heading font-bold text-maintext transition-colors">
+              {next.title}
+            </h3>
+          </a>
+        </section>
+      </section>
+
+      <div id="cover-lightbox" class="fixed inset-0 z-[999] hidden items-center justify-center bg-black/90 p-6">
+        <button
+          id="close-lightbox"
+          class="album-accent-text absolute right-6 top-6 transition hover:text-maintext"
+          aria-label="Kapağı kapat"
+        >
+          <Icon name="mdi:close" class="h-9 w-9" />
+        </button>
+        <img
+          src={album.cover}
+          alt={album.title}
+          class="album-lightbox-image max-h-[90vh] max-w-[90vw] rounded-3xl"
+        />
+      </div>
+    </div>
+  )}
+
+  <style>
+    .album-world {
+      --album-accent: #D4AF37;
+      --album-symbol-opacity: 0.09;
+    }
+
+    .album-accent-text {
+      color: var(--album-accent);
+    }
+
+    .album-hero-glow,
+    .album-cover-glow {
+      background: color-mix(in srgb, var(--album-accent) 22%, transparent);
+    }
+
+    .album-cover-image,
+    .album-lightbox-image {
+      border: 1px solid color-mix(in srgb, var(--album-accent) 42%, transparent);
+      box-shadow:
+        0 0 90px color-mix(in srgb, var(--album-accent) 24%, transparent),
+        0 24px 80px rgba(0, 0, 0, 0.38);
+    }
+
+    .album-structure-chip,
+    .album-genre-chip,
+    .album-structure-note,
+    .album-primary-button,
+    .album-secondary-button,
+    .album-feature-card,
+    .album-track-list,
+    .album-credit-card,
+    .album-final,
+    .album-nav-card {
+      border: 1px solid color-mix(in srgb, var(--album-accent) 26%, transparent);
+      background: color-mix(in srgb, var(--album-accent) 7%, transparent);
+    }
+
+    .album-structure-chip {
+      border-radius: 9999px;
+      padding: 0.55rem 0.9rem;
+      color: var(--album-accent);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .album-genre-chip {
+      border-radius: 9999px;
+      padding: 0.5rem 1rem;
+      color: color-mix(in srgb, var(--album-accent) 80%, white 20%);
+      font-size: 0.75rem;
+    }
+
+    .album-primary-button {
+      border-color: color-mix(in srgb, var(--album-accent) 48%, transparent);
+      box-shadow: 0 0 34px color-mix(in srgb, var(--album-accent) 12%, transparent);
+    }
+
+    .album-primary-button:hover,
+    .album-secondary-button:hover,
+    .album-nav-card:hover {
+      border-color: color-mix(in srgb, var(--album-accent) 66%, transparent);
+      background: color-mix(in srgb, var(--album-accent) 13%, transparent);
+      box-shadow: 0 0 42px color-mix(in srgb, var(--album-accent) 14%, transparent);
+    }
+
+    .album-panel,
+    .album-final {
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.035),
+        0 24px 80px rgba(0, 0, 0, 0.2);
+    }
+
+    .album-feature-card,
+    .album-credit-card {
+      background: color-mix(in srgb, var(--color-background) 78%, transparent);
+      backdrop-filter: blur(10px);
+    }
+
+    .album-track-list {
+      background: linear-gradient(
+        145deg,
+        color-mix(in srgb, var(--album-accent) 7%, transparent),
+        color-mix(in srgb, var(--color-background) 84%, transparent)
+      );
+      backdrop-filter: blur(10px);
+    }
+
+    .album-track-row {
+      border-bottom: 1px solid color-mix(in srgb, var(--album-accent) 12%, transparent);
+    }
+
+    .album-track-row:hover {
+      background: color-mix(in srgb, var(--album-accent) 8%, transparent);
+    }
+
+    .album-track-icon {
+      color: color-mix(in srgb, var(--album-accent) 48%, transparent);
+    }
+
+    .album-track-row:hover .album-track-icon {
+      color: var(--album-accent);
+    }
+
+    .album-final {
+      background:
+        radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--album-accent) 8%, transparent), transparent 64%),
+        color-mix(in srgb, var(--color-background) 92%, black 8%);
+    }
+
+    .album-watermark {
+      position: absolute;
+      z-index: 0;
+      pointer-events: none;
+      user-select: none;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      line-height: 0.78;
+      letter-spacing: -0.07em;
+      color: var(--album-accent);
+      opacity: var(--album-symbol-opacity);
+      white-space: nowrap;
+    }
+
+    .album-watermark--hero {
+      right: -0.07em;
+      top: 13%;
+      font-size: clamp(15rem, 35vw, 38rem);
+    }
+
+    .album-watermark--about {
+      right: -0.08em;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: clamp(13rem, 27vw, 29rem);
+    }
+
+    .album-watermark--identity {
+      right: -0.08em;
+      top: -0.05em;
+      font-size: clamp(15rem, 30vw, 31rem);
+    }
+
+    .album-watermark--tracks {
+      left: -0.08em;
+      top: 0.04em;
+      font-size: clamp(12rem, 23vw, 24rem);
+    }
+
+    .album-watermark--production {
+      right: -0.08em;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: clamp(13rem, 25vw, 26rem);
+    }
+
+    .album-watermark--final {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: clamp(15rem, 34vw, 36rem);
+    }
+
+    /* Symphonic Metal: monumental and vertical. */
+    .album-world--monumental .album-watermark {
+      letter-spacing: -0.1em;
+      text-shadow: 0 0 70px color-mix(in srgb, var(--album-accent) 24%, transparent);
+    }
+
+    .album-world--monumental .album-watermark--hero {
+      top: 8%;
+      transform: scaleY(1.08);
+    }
+
+    /* Jazz: looser, slanted and more fluid. */
+    .album-world--jazz .album-watermark {
+      font-weight: 560;
+      letter-spacing: -0.03em;
+      font-style: italic;
+    }
+
+    .album-world--jazz .album-watermark--hero,
+    .album-world--jazz .album-watermark--identity {
+      transform: rotate(-8deg);
+      transform-origin: center;
+    }
+
+    .album-world--jazz .album-watermark--tracks {
+      transform: rotate(6deg);
+    }
+
+    /* Zikr-i Batin: symbol sits deeper, as if inside the page. */
+    .album-world--inner .album-watermark {
+      filter: blur(0.6px);
+      mask-image: radial-gradient(circle, black 25%, transparent 78%);
+      -webkit-mask-image: radial-gradient(circle, black 25%, transparent 78%);
+    }
+
+    .album-world--inner .album-watermark--hero,
+    .album-world--inner .album-watermark--identity {
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    /* Rap: blocky and offset. */
+    .album-world--rhythm .album-watermark {
+      letter-spacing: -0.12em;
+      transform: skewX(-7deg);
+    }
+
+    .album-world--rhythm .album-watermark--tracks {
+      left: auto;
+      right: -0.08em;
+    }
+
+    /* One God One Love: softer and more open. */
+    .album-world--bright .album-watermark {
+      letter-spacing: 0.01em;
+      text-shadow: 0 0 90px color-mix(in srgb, var(--album-accent) 28%, transparent);
+    }
+
+    .album-world--bright .album-watermark--about,
+    .album-world--bright .album-watermark--final {
+      opacity: 0.07;
+    }
+
+    /* Classical Chorus: symmetrical cathedral-like placement. */
+    .album-world--cathedral .album-watermark {
+      letter-spacing: 0.035em;
+      font-weight: 700;
+    }
+
+    /* Keep Classical Chorus readable like Zikr Nur: XIX stays right-anchored instead of being centered/cropped. */
+    .album-world--cathedral .album-watermark--hero {
+      right: -0.07em;
+      left: auto;
+      top: 13%;
+      transform: none;
+      font-size: clamp(15rem, 35vw, 38rem);
+    }
+
+    .album-world--cathedral .album-watermark--identity {
+      right: -0.08em;
+      left: auto;
+      transform: none;
+    }
+
+    .album-world--cathedral .album-watermark--final {
+      left: 50%;
+      right: auto;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Rock: sharper, skewed, stage-like. */
+    .album-world--rock .album-watermark {
+      transform: skewX(-9deg) rotate(2deg);
+      letter-spacing: -0.11em;
+      text-shadow: 0 0 65px color-mix(in srgb, var(--album-accent) 24%, transparent);
+    }
+
+    .album-world--rock .album-watermark--about,
+    .album-world--rock .album-watermark--production {
+      transform: translateY(-50%) skewX(-9deg) rotate(2deg);
+    }
+
+    .album-world--rock .album-watermark--final {
+      transform: translate(-50%, -50%) skewX(-9deg) rotate(2deg);
+    }
+
+    /* Nur: luminous, fading toward the edges. */
+    .album-world--light .album-watermark {
+      text-shadow:
+        0 0 45px color-mix(in srgb, var(--album-accent) 45%, transparent),
+        0 0 110px color-mix(in srgb, var(--album-accent) 20%, transparent);
+      mask-image: linear-gradient(90deg, transparent 0%, black 25%, black 72%, transparent 100%);
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 25%, black 72%, transparent 100%);
+    }
+
+    /* Huu: breath-like spacing instead of an XIX motif. */
+    .album-world--breath .album-watermark {
+      letter-spacing: 0.12em;
+      font-weight: 560;
+      filter: blur(0.25px);
+      text-shadow: 0 0 80px color-mix(in srgb, var(--album-accent) 24%, transparent);
+    }
+
+    .album-world--breath .album-watermark--hero {
+      right: 7%;
+      top: 23%;
+      font-size: clamp(9rem, 20vw, 21rem);
+    }
+
+    .album-world--breath .album-watermark--about {
+      font-size: clamp(9rem, 18vw, 19rem);
+    }
+
+    .album-world--breath .album-watermark--identity {
+      font-size: clamp(10rem, 20vw, 21rem);
+    }
+
+    .album-world--breath .album-watermark--tracks {
+      font-size: clamp(8rem, 16vw, 17rem);
+    }
+
+    .album-world--breath .album-watermark--production {
+      font-size: clamp(9rem, 18vw, 19rem);
+    }
+
+    .album-world--breath .album-watermark--final {
+      font-size: clamp(11rem, 23vw, 24rem);
+    }
+
+    /* Zikr Symphony: strongest non-HELLL XIX architecture. */
+    .album-world--symphony .album-watermark {
+      letter-spacing: -0.045em;
+      text-shadow: 0 0 80px color-mix(in srgb, var(--album-accent) 20%, transparent);
+    }
+
+    .album-world--symphony .album-watermark--tracks {
+      left: -0.03em;
+      font-size: clamp(9rem, 17vw, 19rem);
+      opacity: 0.13;
+    }
+
+    /* Tanrinin Hediyesi: XIX is a quiet universe signature; the factual chip still says III / 3 tracks. */
+    .album-world--origin .album-watermark {
+      letter-spacing: -0.05em;
+      font-weight: 700;
+    }
+
+    .album-world--origin .album-watermark--hero {
+      right: -0.04em;
+      top: 15%;
+      font-size: clamp(13rem, 31vw, 33rem);
+    }
+
+    .album-world--origin .album-watermark--identity {
+      right: -0.06em;
+      font-size: clamp(13rem, 27vw, 28rem);
+    }
+
+    @media (max-width: 767px) {
+      .album-watermark {
+        opacity: 0.055;
+      }
+
+      .album-watermark--hero {
+        top: 18%;
+        right: -0.12em;
+      }
+
+      .album-watermark--about,
+      .album-watermark--production {
+        right: -0.12em;
+      }
+
+      .album-watermark--tracks {
+        left: -0.12em;
+      }
+    }
+  </style>
+
+  <script>
+    const openButton = document.querySelector(".album-cover-button");
+    const lightbox = document.querySelector("#cover-lightbox");
+    const closeButton = document.querySelector("#close-lightbox");
+
+    openButton?.addEventListener("click", () => {
+      lightbox?.classList.remove("hidden");
+      lightbox?.classList.add("flex");
+    });
+
+    const closeLightbox = () => {
+      lightbox?.classList.add("hidden");
+      lightbox?.classList.remove("flex");
+    };
+
+    closeButton?.addEventListener("click", closeLightbox);
+    lightbox?.addEventListener("click", (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeLightbox();
+    });
+  </script>
+</Layout>

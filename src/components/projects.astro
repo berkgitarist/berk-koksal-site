@@ -59,7 +59,7 @@ const projects = albumsData.map((album) => ({
   images: [album.cover.replace(/^\//, '')],
   platforms: ['web'],
   tech: album.genre.split(' / ').map(translateGenre),
-  link: `/albums/${album.slug}/`,
+  link: isTurkish ? `/tr/albums/${album.slug}/` : `/albums/${album.slug}/`,
   universe: album.universe ?? 'Neo-Sacred Zikr',
 }));
 
