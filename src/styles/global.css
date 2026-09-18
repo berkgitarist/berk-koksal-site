@@ -1430,3 +1430,45 @@ transition: none;
   }
 }
 
+/* === FINAL MOBILE FIXES: CEHENNEMM + HOMEPAGE DOOMSDAY CLOCK === */
+@media (max-width: 640px) {
+  /* HELLL / CEHENNEMM hero title: keep the full word visible on phones */
+  body.helll-theme h1.whitespace-nowrap {
+    max-width: 100% !important;
+    font-size: clamp(2.7rem, 11vw, 3.4rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -0.045em !important;
+    white-space: nowrap !important;
+  }
+
+  /* Homepage Doomsday Clock: 3 columns × 2 rows */
+  .doomsday-clock__digits {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, auto) !important;
+    gap: 0.55rem !important;
+    padding: 0.7rem !important;
+  }
+
+  .doomsday-clock__unit {
+    min-width: 0 !important;
+    padding: 0.7rem 0.15rem !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.06) !important;
+  }
+
+  .doomsday-clock__unit + .doomsday-clock__unit,
+  .doomsday-clock__unit:nth-child(odd),
+  .doomsday-clock__unit:nth-child(even),
+  .doomsday-clock__unit:nth-child(4) {
+    border-left: 1px solid rgba(255, 255, 255, 0.06) !important;
+  }
+
+  .doomsday-clock__value {
+    font-size: clamp(1.55rem, 8vw, 2.4rem) !important;
+  }
+
+  .doomsday-clock__label {
+    margin-top: 0.55rem !important;
+    font-size: 0.48rem !important;
+    letter-spacing: 0.18em !important;
+  }
+}
