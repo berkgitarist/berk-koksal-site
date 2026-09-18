@@ -51,10 +51,17 @@ author: "Sibel Yıldırım"
 <div class="article-doomsday-clock__footer"><p>24 SEPTEMBER 2280 • 19:33 UTC</p></div>
 </div>
 
+<div class="doomsday-article-hero">
+  <div class="doomsday-article-hero__orbit" aria-hidden="true"></div>
+  <p class="doomsday-article-hero__kicker">DOOMSDAY CLOCK</p>
+  <p class="doomsday-article-hero__date">24 · 09 · 2280</p>
+  <p class="doomsday-article-hero__time">19:33 <span>UTC</span></p>
+  <p class="doomsday-article-hero__author">A reflection by Sibel Yıldırım</p>
+</div>
 
 ## PART ONE
 
-What is the 3rd day Jesus referred to when he said, "I will return on the 3rd day"? When does it begin? And we know from the Quran that Doomsday will take place in the year 2280. So which season, which day, which hour? Now we will look at these, GOD willing.
+What is the 3rd day Jesus referred to when he said, "I will return on the 3rd day"? When does it begin? We know from the Quran that Doomsday will take place in the year 2280. So which season, which day, which hour? Now let us look at these, GOD willing.
 
 **(Jesus and Year Calculations)**
 
@@ -64,7 +71,7 @@ The Quran tells us about Jesus, and his birth and death are markers for us. Let 
 
 We know that years in the Quran are according to the lunar calendar. Thus, 1000 lunar years are equivalent to 970 solar years.
 
-In Luke 3:22 Jesus will return on the 3rd day. THEREFORE;
+In Luke 3:22, Jesus will return on the 3rd day. THEREFORE:
 
 The 3rd day after Jesus left this world at the age of 33.
 
@@ -81,25 +88,25 @@ Therefore, beginning with 1974, we are in the 3rd day Jesus spoke of. (The year 
 Now let us come to some markers from the verses in the Quran that state how many days and how many hours the disbelievers remained in this world:
 
 <div class="doomsday-signal-grid">
-  <p>20:104 -- 1 day</p>
-  <p>23:113 -- 1 day</p>
-  <p>10:45 -- 1 hour</p>
-  <p>30:55 -- 1 hour</p>
-  <p>46:35 -- 1 hour</p>
-  <p>79:46 -- 1 evening or half a day. (This means a period when the nights are long (equinox periods March 21 - September 23). The Quran tells us about the day and night cycle; therefore, according to this verse, we should understand that it must be a period when the night is longer than the day, which is after September 23. Now let me clarify this with the verses as well.)</p>
+  <p>20:104 — 1 day</p>
+  <p>23:113 — 1 day</p>
+  <p>10:45 — 1 hour</p>
+  <p>30:55 — 1 hour</p>
+  <p>46:35 — 1 hour</p>
+  <p>79:46 — 1 evening or half a day. (This means a period when the nights are long; the equinox period is March 21 - September 23. The Quran tells us about the day and night cycle. Therefore, according to this verse, we should understand that it must be a period when the night is longer than the day; this is after September 23. Now let me clarify this with the verses as well.)</p>
 </div>
 
 As you can see above, let us add together these stated days and hours.
 
 <div class="doomsday-equation">
-  <p class="doomsday-equation__headline">2 celestial days +                  3 celestial hours +                1 celestial evening</p>
-  <p>2*970=1940</p>
-  <p>As for 3 celestial hours; 1 celestial hour corresponds to 1/12 of a celestial day. So 970/12=80.8 years. 3*80.83=242.5 years.</p>
-  <p>(The hours mentioned in the Quran are solar hours and are always 1/12 of the day.)</p>
-  <p>1 celestial evening is 1/10 of the night. So 970/10=97 years.</p>
-  <p>(According to the Quran, 1 evening is the time when the altitude of the sun is astronomically between 0 degrees and -18 degrees, that is, 1/10 of 180 degrees.</p>
+  <p class="doomsday-equation__headline">2 celestial days + 3 celestial hours + 1 celestial evening</p>
+  <p>2 × 970 = 1940</p>
+  <p>As for 3 celestial hours: 1 celestial hour corresponds to 1 / 12 of a celestial day. So 970 / 12 = 80.8 years. 3 × 80.83 = 242.5 years.</p>
+  <p>(The hours mentioned in the Quran are solar hours and are always 1 / 12 of the day.)</p>
+  <p>1 celestial evening is 1 / 10 of the night. So 970 / 10 = 97 years.</p>
+  <p>(According to the Quran, 1 evening is the time when the altitude of the sun is astronomically between 0° and -18°; that is, 1 / 10 of 180°.)</p>
   <p>And as you can see, now let us add them all together:</p>
-  <p class="doomsday-equation__result">1940+242.5+97 = corresponds to the year 2279.5. This corresponds to the lunar year 1709. In other words, it means the first half of the year 2280 (1710) is about to end.</p>
+  <p class="doomsday-equation__result">1940 + 242.5 + 97 = 2279.5. This corresponds to the lunar year 1709. In other words, it means the first half of the year 2280 (1710) is about to end.</p>
 </div>
 
 **FOOTNOTE: THIS HAS ALSO BECOME EVIDENCE OF WHY SURAH AL-QADR IS THE 97TH SURAH AND WHY WE SHOULD SEEK THE NIGHT OF DESTINY IN THE LAST 10 DAYS OF RAMADAN. (1 CELESTIAL EVENING CALCULATION)**
@@ -121,8 +128,8 @@ Our Lord has given such clear evidence on this subject that I will list it for y
 
 > [88:17] Why do they not reflect deeply on the camels and how they are created?
 
-- Secondly; we know that Jesus serves, in every sense, as a marker for us concerning the period of Doomsday.
-- We can now better understand from here why the word date palm appears so often in the Quran in the sense of harvest (that is, in the Arabian Peninsula, the harvest fruit is generally the date). First, the birth of Jesus is also a marker; remember the verse, while Mary was giving birth to Jesus beneath the date palm tree, she was told to shake the tree and eat the fruit that fell.
+- Secondly, we know that Jesus serves, in every sense, as a marker for us concerning the period of Doomsday.
+- We can now better understand why the date palm appears so often in the Quran in connection with harvest. (In the Arabian Peninsula, dates are a prominent harvest fruit.) First, the birth of Jesus is also a marker; remember that while Mary was giving birth to Jesus beneath the date palm tree, she was told to shake the tree and eat the fruit that fell.
 
 > [19:23] The birth process came to her by the trunk of a palm tree. She said, "(I am so ashamed;) I wish I had died before this happened and been completely forgotten."
 >
@@ -134,7 +141,7 @@ As Rashad Khalifa also stated in his footnote to 19:25, in the Arabian Peninsula
 
 **In other words, the end of the world will come in the autumn season.**
 
-As another example, we can understand why our Lord gave the example of the garden owners. (68:17)
+As another example, we can understand why our Lord gave the example of the garden owners (68:17).
 
 > [68:17] We tested them like we tested the owners of a garden who swore that they would harvest it in the morning.
 >
@@ -170,14 +177,14 @@ Now let us look at the day and the hour.
 
 > [34:30] Say, "You have a specific day at a specific time that you cannot delay by one hour, nor advance."
 
-- There are only 2 religious days mentioned in the Quran: Friday and Saturday. (SABBATH)
+- There are only 2 religious days mentioned in the Quran: Friday and Saturday (SABBATH).
 
 > [10:24] The analogy of this worldly life is this: We send down water from the sky to produce with it all kinds of plants from the earth, providing food for people and animals. Then, while the earth is perfectly adorned and its people think that they are in control of it, our judgment comes by night or by day,* leaving it completely barren, as if nothing had existed the day before. We thus explain the revelations for people who reflect deeply.
 
 *10:24 GOD, of course, knows whether His judgment will come during the day or during the night. But notice that when the end of the world comes, the earth will be half day and half night. Another "scientific miracle" of the Quran.
 
-- In other words, half of the world will be Friday and the other half Saturday. In Mecca and Jerusalem, immediately after sunset on Friday, according to the Quran, as of Friday sunset, the regions farther east will have entered Saturday. (Every day-night cycle is related to sunrise and sunset.)
-- In other words, sunset, (not night); that is, they will be resurrected on Saturday.
+- In other words, half of the world will be Friday and the other half Saturday. In Mecca and Jerusalem, immediately after sunset on Friday, the regions farther east will, according to the Quran, have entered Saturday. (Every day-night cycle is related to sunrise and sunset.)
+- In other words, it is sunset (not night); that is, they will be resurrected on Saturday.
 
 ### The Sabbath Day Is Abolished
 
@@ -195,22 +202,22 @@ Now let us look at the day and the hour.
 
 ## PART FIVE
 
-- We can now calculate which one of the last 19 Fridays of the year 2280 it is. (It will be before the year 2280 ends.)
+- We can now calculate which one of the last 19 Fridays of the year 2280 it is. (It will occur before the year 2280 ends.)
 - The Quran reminds us of the phase of the moon at that time. Most of the phases of the moon coincide with Friday. We now know that on the night when the Night of Destiny begins, the moon is a new moon, meaning that when you look at the sky it cannot be seen. At dawn, however, it is in the crescent phase.
 - According to astronomical calculations, in the last week of September 2280, the new moon (the first formation of the crescent / conjunction position) will occur on the night of Friday, September 24, 2280.
 - According to the longitudes of Mecca and Jerusalem, the religious and geographical details of this natural event are as follows:
-- Astronomical Time: The new moon phase will reach its exact conjunction position at around 19:16 in Universal Time (UT) on the evening of Friday, September 24 (22:16 local time in Mecca and Jerusalem).
+- Astronomical time: The new moon phase will reach its exact conjunction position at around 19:16 in Universal Time (UT) on the evening of Friday, September 24 (22:16 local time in Mecca and Jerusalem).
 
 <div class="doomsday-target-card">
   <p>IN OTHER WORDS, in Mecca and Jerusalem it appears with Friday sunset, while in the regions farther east Saturday, September 25 appears to have begun.</p>
-  <p>THEREFORE, FROM HERE; September 24, 2280 becomes the beginning of the new moon. 19:16 UNIVERSAL TIME (This also historically corresponds to the 14th Friday from the end of the year 2280.)</p>
-  <p>Of course, these are estimated times; the exact hour my Lord makes me feel is through the verse number;</p>
+  <p>THEREFORE, FROM HERE: September 24, 2280 becomes the beginning of the new moon, at 19:16 UNIVERSAL TIME. (This also historically corresponds to the 14th Friday from the end of the year 2280.)</p>
+  <p>Of course, these are estimated times. The exact hour my Lord makes me feel is through the verse number:</p>
   <blockquote>[19:33] "And peace be upon me the day I was born, the day I die, and the day I am resurrected alive."</blockquote>
-  <p class="doomsday-target-card__time">I think of it as 19.33.</p>
+  <p class="doomsday-target-card__time">I think of it as 19:33.</p>
   <p>Only GOD knows the exact date. Our Lord knows best.</p>
 </div>
 
-The 2280th verse of the Quran is 19:32 and the following verse,
+The 2280th verse of the Quran is 19:32, followed by the next verse:
 
 > [19:33] "And peace be upon me the day I was born, the day I die, and the day I am resurrected alive."
 
@@ -222,11 +229,9 @@ The 2280th verse of the Quran is 19:32 and the following verse,
 
 Including both verses, there are exactly 19 verses.
 
-The 2280th verse from the beginning of the Quran, excluding the Basmalah,
+The 2280th verse from the beginning of the Quran, excluding the Basmalah, corresponds to 19:15.
 
-corresponds to 19:15.
-
-Including the Basmalah, it is 19:32 and the following verse is resurrection.
+Including the Basmalah, it is 19:32; the following verse concerns resurrection.
 
 ---
 
@@ -317,7 +322,7 @@ The Quran provides many signs, and states that the means for unveiling the end o
 
 ### It Will Not Remain Hidden [20:15]
 
-Verse 15 of Sura 20 informs us that the end of the world will be revealed by GOD before the end of the world, and Sura 15, Verse 87, gives the time for that event:
+Verse 15 of Sura 20 informs us that the end of the world will be revealed by GOD before it occurs; Sura 15, Verse 87, gives the time for that event:
 
 > **[20:15]** “The Hour (end of the world) is surely coming; I will keep it almost hidden. For each soul must be paid for its works.
 
@@ -329,7 +334,7 @@ Appendix 25 then considers 15:85-87 together:
 >
 > **[15:87]** We have given you the seven pairs, and the great Quran.
 
-The seven pairs are the 14 Quranic Initials. The total gematrical value of these profound pillars of the Quran’s miracle pinpoints the year of the end of the world. It is noteworthy that Verse 85 of Sura 15 states: “The end of the world will surely come to pass.” The next verse, 15:86, tells us that GOD is the Creator of this world, and, of course, He knows when it will end. The following verse, 15:87, tells us when the world will end. As shown in Table 1, the gematrical values of “The Seven Pairs” of Quranic Initials total 1709 (see also Table 1 of Appendix 1). According to 15:87, the world will survive for 1709 lunar years from the time this prophecy is stated in the Quran. This means that the world will end in the year 1710 AH. This number is a multiple of 19; 1710 = 19 x 90.
+The seven pairs are the 14 Quranic Initials. The total gematrical value of these profound pillars of the Quran’s miracle pinpoints the year of the end of the world. It is noteworthy that Verse 85 of Sura 15 states: “The end of the world will surely come to pass.” The next verse, 15:86, tells us that GOD is the Creator of this world, and, of course, He knows when it will end. The following verse, 15:87, tells us when the world will end. As shown in Table 1, the gematrical values of “The Seven Pairs” of Quranic Initials total 1709 (see also Table 1 of Appendix 1). According to 15:87, the world will survive for 1709 lunar years from the time this prophecy is stated in the Quran. This means that the world will end in the year 1710 AH. This number is a multiple of 19; 1710 = 19 × 90.
 
 ### Total Gematrical Value of “The Seven Pairs” of Quranic Initials
 
@@ -356,7 +361,7 @@ The seven pairs are the 14 Quranic Initials. The total gematrical value of these
 
 ### The 309-Year Connection
 
-The unveiling of this information took place in the year 1400 AH, 309 years before the prophesied end of the world (1709-1400 = 309). The number 309 is a Quranic number (18:25), and is connected with the end of the world (18:21). The peculiar way of writing 309 in 18:25, “Three hundred years, increased by nine,” indicates that the 309 are lunar years. The difference between 300 solar years and 300 lunar years is 9 years.
+The unveiling of this information took place in the year 1400 AH, 309 years before the prophesied end of the world (1709 - 1400 = 309). The number 309 is a Quranic number (18:25), and is connected with the end of the world (18:21). The peculiar way of writing 309 in 18:25, “Three hundred years, increased by nine,” indicates that the 309 are lunar years. The difference between 300 solar years and 300 lunar years is 9 years.
 
 > **[18:25]** They stayed in their cave three hundred years, increased by nine.*
 >
@@ -372,7 +377,7 @@ The unveiling of this information took place in the year 1400 AH, 309 years befo
   <p class="doomsday-equation__result">2280 = 19 × 120</p>
 </div>
 
-The year of this discovery, 1400 AH, coincided with 1980 AD, and 1980 plus 300 solar years is 2280, also a multiple of 19, 19 x 120. Thus the world ends in 1710 AH, 19 x 90, which coincides with 2280 AD, 19 x 120. For the disbelievers who do not accept these powerful Quranic proofs, the end of the world will come suddenly (6:31, 6:44, 6:47; 7:95, 7:187; 12:107; 21:40, 22:55; 26:202; 29:53; 39:55; 43:66; and 47:18).
+The year of this discovery, 1400 AH, coincided with 1980 AD, and 1980 plus 300 solar years is 2280, also a multiple of 19, 19 × 120. Thus the world ends in 1710 AH, 19 × 90, which coincides with 2280 AD, 19 × 120. For the disbelievers who do not accept these powerful Quranic proofs, the end of the world will come suddenly (6:31, 6:44, 6:47; 7:95, 7:187; 12:107; 21:40, 22:55; 26:202; 29:53; 39:55; 43:66; and 47:18).
 
 ### Verses Stating That the End Will Come Suddenly
 
