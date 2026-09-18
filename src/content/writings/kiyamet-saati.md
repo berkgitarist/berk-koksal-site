@@ -54,7 +54,7 @@ author: "Sibel Yıldırım"
 
 ## BİRİNCİ KISIM
 
-İsa'nın sözü olan "3. gün geri döneceğim" dediği 3. gün nedir? Ne zaman başlar? Ve Kur'an'da biliyoruz ki kıyamet 2280 yılında kopacak. Peki bu hangi mevsim, hangi gün, hangi saat? Şimdi bunlara bakacağız inşallah.
+İsa'nın sözü olan "3. gün geri döneceğim" dediği 3. gün nedir? Ne zaman başlar? Ve Kuran'da biliyoruz ki kıyamet 2280 yılında kopacak. Peki bu hangi mevsim, hangi gün, hangi saat? Şimdi bunlara bakacağız inşallah.
 
 **(İsa ve Yıl Hesaplamaları)**
 
@@ -62,7 +62,7 @@ Kuran bize İsa'yı duyurur ve onun doğumu ,ölümü bizlere bir işaretleyicid
 
 > [32:5] Gökten yeryüzüne kadar bütün işler O’nun tarafından kontrol edilir. O’na göre gün, sizin bin yılınıza eş değerdir.
 
-Biz biliyoruz ki Kur'an'da yıllar kameri takvime göredir. Böylece 1000 ay yılı, 970 güneş yılına eşittir.
+Biz biliyoruz ki Kuran'da yıllar kameri takvime göredir. Böylece 1000 ay yılı, 970 güneş yılına eşittir.
 
 Luka 3.22'de İsa 3. gün geri dönecek.ÖYLEYSE;
 
@@ -78,7 +78,7 @@ Bu nedenle 1974 yılından itibaren, İsa'nın bahsettiği 3. gündeyiz.(Kur’a
 
 ## İKİNCİ KISIM
 
-Şimdi gelelim Kur'an-ı Kerim'de inkarcıların bu dünyada ne kadar gün, ne kadar saat olarak kaldığını bildiren ayetlerden bazı işaretleyicilere:
+Şimdi gelelim Kuran-ı Kerim'de inkarcıların bu dünyada ne kadar gün, ne kadar saat olarak kaldığını bildiren ayetlerden bazı işaretleyicilere:
 
 <div class="doomsday-signal-grid">
   <p>20:104 -- 1gün</p>
@@ -112,7 +112,7 @@ Bu konuya o kadar net delil vermiş ki Rabbimiz sizler için sıralayayım İnş
 
 ### ‘İŞAR’ KELİMESİ (10 AYLIK HAMİLE DEVE DEMEKTİR.)
 
-- Kur'an'ın 81:4 ayetinde  ‘ÜREME DURDURULDUĞUNDA anlamı aynı zamanda "gebe develer salıverildiğinde" anlamına gelir.Bu ayette Arapçasında "işar" kelimesi kullanılmıştır. Bu işar kelimesi Arap dünyasında on aylık dişi hamile deve anlamına denk gelir. Hatırlayın hatta, Kur'an neden "Develerin nasıl yaratıldığına bakmıyorlar mı?" demesinin sebebini buradan anlayabiliriz.YANİ; Saat geldiğinde arap toplumu için çok ama çok önemli olan bu 10 aylık deve bile terkedilecektir.
+- Kuran'ın 81:4 ayetinde  ‘ÜREME DURDURULDUĞUNDA anlamı aynı zamanda "gebe develer salıverildiğinde" anlamına gelir.Bu ayette Arapçasında "işar" kelimesi kullanılmıştır. Bu işar kelimesi Arap dünyasında on aylık dişi hamile deve anlamına denk gelir. Hatırlayın hatta, Kuran neden "Develerin nasıl yaratıldığına bakmıyorlar mı?" demesinin sebebini buradan anlayabiliriz.YANİ; Saat geldiğinde arap toplumu için çok ama çok önemli olan bu 10 aylık deve bile terkedilecektir.
 - Saat geldiğinde 10 aylık hamile deve terk edilir.
 - Arap develerinin çiftleşme mevsimi kış mevsimidir. Ek olarak 10 aylık hamilelik konusu da vardır.
 - Sonbahar mevsimi olan (kıştan sonra) 10 aylık hamile deve.(Eylül ayına denk gelir)
@@ -122,7 +122,7 @@ Bu konuya o kadar net delil vermiş ki Rabbimiz sizler için sıralayayım İnş
 > [88:17] Neden develerin ve onların nasıl yaratıldıklarının üzerine derinlemesine düşünmüyorlar?
 
 - İkinci olarak; biliyoruz ki İsa, her anlamda bize kıyametin  dönemiyle ilgili de bir işaretleyici görevi görüyor.
-- Kur'an'da çok fazla hasat anlamında hurma (yani Arap Yarımadası'nın hasadı meyve olarak genelde hurmadır) kelimesinin geçmesinin sebebini şimdi buradan daha iyi anlayabiliriz. Çünkü birinci olarak İsa'nın doğumu da bir işaretleyicidir; ayette hatırlayın, Meryem, hurma ağacının altında İsa'yı doğururken ona ağacı sallaması ve düşen meyveyi yemesini söylemişti.
+- Kuran'da çok fazla hasat anlamında hurma (yani Arap Yarımadası'nın hasadı meyve olarak genelde hurmadır) kelimesinin geçmesinin sebebini şimdi buradan daha iyi anlayabiliriz. Çünkü birinci olarak İsa'nın doğumu da bir işaretleyicidir; ayette hatırlayın, Meryem, hurma ağacının altında İsa'yı doğururken ona ağacı sallaması ve düşen meyveyi yemesini söylemişti.
 
 > [19:23] Doğum süreci ona bir hurma ağacının gövdesinin yanında geldi. Dedi ki: “(Ben çok utanıyorum;) keşke bu olmadan önce ölmüş ve tamamen unutulmuş olsaydım.”
 >
