@@ -1178,3 +1178,70 @@ transition: none;
     grid-column: auto;
   }
 }
+
+/* === FINAL MOBILE DOOMSDAY CLOCK: 3 COLUMNS x 2 ROWS === */
+@media (max-width: 760px) {
+  .writing-prose .doomsday-signal-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, auto) !important;
+    gap: 0.4rem !important;
+    margin: 0.9rem 0 1.1rem !important;
+  }
+
+  .writing-prose .doomsday-signal-grid p {
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0.55rem 0.25rem !important;
+    border-radius: 11px !important;
+    font-size: 0.68rem !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+
+  /* 1. satır: Yıl - Ay - Gün */
+  .writing-prose .doomsday-signal-grid p:nth-child(1) {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+  .writing-prose .doomsday-signal-grid p:nth-child(2) {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+  .writing-prose .doomsday-signal-grid p:nth-child(3) {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+  }
+
+  /* 2. satır: Saat - Dakika - Saniye */
+  .writing-prose .doomsday-signal-grid p:nth-child(4) {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+  }
+  .writing-prose .doomsday-signal-grid p:nth-child(5) {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+  }
+  .writing-prose .doomsday-signal-grid p:nth-child(6) {
+    grid-column: 3 !important;
+    grid-row: 2 !important;
+  }
+
+  .writing-prose .doomsday-signal-grid p:last-child {
+    grid-column: auto !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .writing-prose .doomsday-signal-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, auto) !important;
+    gap: 0.3rem !important;
+  }
+
+  .writing-prose .doomsday-signal-grid p {
+    padding: 0.48rem 0.18rem !important;
+    font-size: 0.62rem !important;
+    border-radius: 9px !important;
+  }
+}
