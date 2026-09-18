@@ -1178,3 +1178,255 @@ transition: none;
     grid-column: auto;
   }
 }
+
+/* === Article Doomsday Countdown === */
+.writing-prose .article-doomsday-clock {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  margin: 2rem 0 2.75rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--color-accent), transparent 48%);
+  border-radius: 30px;
+  padding: 1.35rem 1.45rem 1.15rem;
+  color: var(--color-maintext);
+  text-align: left;
+  background:
+    radial-gradient(circle at 82% 15%, color-mix(in srgb, var(--color-accent), transparent 78%), transparent 26%),
+    linear-gradient(135deg, rgba(3, 2, 18, 0.88), color-mix(in srgb, var(--color-background), black 8%));
+  box-shadow:
+    0 28px 90px rgba(0, 0, 0, 0.38),
+    0 0 70px color-mix(in srgb, var(--color-accent), transparent 88%),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.writing-prose .article-doomsday-clock::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.045) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.writing-prose .article-doomsday-clock__glow {
+  position: absolute;
+  right: -8rem;
+  top: -8rem;
+  z-index: -1;
+  width: 22rem;
+  height: 22rem;
+  border: 1px solid color-mix(in srgb, var(--color-accent), transparent 84%);
+  border-radius: 999px;
+  box-shadow:
+    0 0 0 28px color-mix(in srgb, var(--color-accent), transparent 95%),
+    0 0 0 74px color-mix(in srgb, var(--color-accent), transparent 97%);
+  pointer-events: none;
+}
+
+.writing-prose .article-doomsday-clock__topline {
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr) 68px;
+  align-items: center;
+  gap: 1rem;
+}
+
+.writing-prose .article-doomsday-clock__titles {
+  min-width: 0;
+  text-align: center;
+}
+
+.writing-prose .article-doomsday-clock__seal-spacer {
+  width: 68px;
+  height: 68px;
+}
+
+.writing-prose .article-doomsday-clock__eyebrow,
+.writing-prose .article-doomsday-clock__title,
+.writing-prose .article-doomsday-clock__footer p {
+  margin: 0;
+}
+
+.writing-prose .article-doomsday-clock__eyebrow {
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.writing-prose .article-doomsday-clock__title {
+  margin-top: 0.3rem;
+  color: var(--color-maintext);
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: clamp(1.65rem, 3vw, 2.45rem);
+  font-weight: 750;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.writing-prose .article-doomsday-clock__seal {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  border: 1px solid color-mix(in srgb, var(--color-accent), transparent 48%);
+  border-radius: 999px;
+  color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent), transparent 94%);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  box-shadow: inset 0 0 28px color-mix(in srgb, var(--color-accent), transparent 90%);
+}
+
+.writing-prose .article-doomsday-clock__digits {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 1.2rem;
+  padding: 1.15rem 0 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  background: rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0 14px 34px rgba(0, 0, 0, 0.2);
+}
+
+.writing-prose .article-doomsday-clock__unit {
+  position: relative;
+  min-width: 0;
+  padding: 0 0.55rem;
+  text-align: center;
+}
+
+.writing-prose .article-doomsday-clock__unit + .article-doomsday-clock__unit {
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.writing-prose .article-doomsday-clock__value {
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-variant-numeric: tabular-nums lining-nums;
+  font-size: clamp(1.7rem, 3.15vw, 3.35rem);
+  font-weight: 650;
+  line-height: 0.95;
+  letter-spacing: 0.035em;
+  text-shadow:
+    0 0 18px color-mix(in srgb, var(--color-accent), transparent 52%),
+    0 0 42px color-mix(in srgb, var(--color-accent), transparent 78%);
+}
+
+.writing-prose .article-doomsday-clock__label {
+  display: block;
+  margin-top: 0.75rem;
+  color: var(--color-subtext);
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.writing-prose .article-doomsday-clock__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  color: var(--color-subtext);
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 900px) {
+  .writing-prose .article-doomsday-clock__digits {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.65rem;
+    padding: 0.85rem;
+  }
+
+  .writing-prose .article-doomsday-clock__unit {
+    padding: 0.65rem 0.3rem;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.018);
+  }
+}
+
+@media (max-width: 640px) {
+  .writing-prose .article-doomsday-clock {
+    margin: 1.25rem 0 1.75rem;
+    padding: 0.85rem;
+    border-radius: 20px;
+  }
+
+  .writing-prose .article-doomsday-clock__topline {
+    grid-template-columns: 46px minmax(0, 1fr) 46px;
+    gap: 0.4rem;
+  }
+
+  .writing-prose .article-doomsday-clock__seal-spacer,
+  .writing-prose .article-doomsday-clock__seal {
+    width: 46px;
+    height: 46px;
+  }
+
+  .writing-prose .article-doomsday-clock__seal {
+    font-size: 0.62rem;
+  }
+
+  .writing-prose .article-doomsday-clock__eyebrow {
+    font-size: 0.5rem;
+    letter-spacing: 0.18em;
+  }
+
+  .writing-prose .article-doomsday-clock__title {
+    margin-top: 0.2rem;
+    font-size: clamp(1.05rem, 5.2vw, 1.45rem);
+  }
+
+  .writing-prose .article-doomsday-clock__digits {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, auto);
+    gap: 0.42rem;
+    margin-top: 0.75rem;
+    padding: 0.55rem;
+    border-radius: 16px;
+  }
+
+  .writing-prose .article-doomsday-clock__unit {
+    min-width: 0;
+    padding: 0.55rem 0.12rem;
+    border-radius: 10px;
+  }
+
+  .writing-prose .article-doomsday-clock__value {
+    font-size: clamp(1.35rem, 8vw, 2rem);
+  }
+
+  .writing-prose .article-doomsday-clock__label {
+    margin-top: 0.42rem;
+    font-size: 0.48rem;
+    letter-spacing: 0.12em;
+  }
+
+  .writing-prose .article-doomsday-clock__footer {
+    margin-top: 0.7rem;
+    font-size: 0.62rem;
+  }
+
+  .writing-prose .article-doomsday-clock__glow {
+    right: -10rem;
+    top: -10rem;
+  }
+}
+

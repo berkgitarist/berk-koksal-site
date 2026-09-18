@@ -29,13 +29,28 @@ author: "Sibel Yıldırım"
 
 **Tarih:** 18.09.2026
 
-<div class="doomsday-article-hero">
-  <div class="doomsday-article-hero__orbit" aria-hidden="true"></div>
-  <p class="doomsday-article-hero__kicker">KIYAMET SAATİ</p>
-  <p class="doomsday-article-hero__date">24 · 09 · 2280</p>
-  <p class="doomsday-article-hero__time">19:33 <span>UTC</span></p>
-  <p class="doomsday-article-hero__author">Sibel Yıldırım'ın tefekkürü</p>
+
+<div class="article-doomsday-clock">
+<span class="article-doomsday-clock__glow" aria-hidden="true"></span>
+<div class="article-doomsday-clock__topline">
+<span class="article-doomsday-clock__seal-spacer" aria-hidden="true"></span>
+<div class="article-doomsday-clock__titles">
+<p class="article-doomsday-clock__eyebrow">• KURAN TEFEKKÜRÜ •</p>
+<h2 class="article-doomsday-clock__title">KIYAMET SAATİ</h2>
 </div>
+<span class="article-doomsday-clock__seal" aria-hidden="true">19:33</span>
+</div>
+<div class="article-doomsday-clock__digits" data-article-doomsday-clock data-target="2280-09-24T19:33:00Z" aria-label="24 Eylül 2280 19:33 UTC tarihine kalan süre">
+<div class="article-doomsday-clock__unit"><span class="article-doomsday-clock__value" data-clock-years>000</span><span class="article-doomsday-clock__label">YIL</span></div>
+<div class="article-doomsday-clock__unit"><span class="article-doomsday-clock__value" data-clock-months>00</span><span class="article-doomsday-clock__label">AY</span></div>
+<div class="article-doomsday-clock__unit"><span class="article-doomsday-clock__value" data-clock-days>00</span><span class="article-doomsday-clock__label">GÜN</span></div>
+<div class="article-doomsday-clock__unit"><span class="article-doomsday-clock__value" data-clock-hours>00</span><span class="article-doomsday-clock__label">SAAT</span></div>
+<div class="article-doomsday-clock__unit"><span class="article-doomsday-clock__value" data-clock-minutes>00</span><span class="article-doomsday-clock__label">DAKİKA</span></div>
+<div class="article-doomsday-clock__unit"><span class="article-doomsday-clock__value" data-clock-seconds>00</span><span class="article-doomsday-clock__label">SANİYE</span></div>
+</div>
+<div class="article-doomsday-clock__footer"><p>24 EYLÜL 2280 • 19:33 UTC</p></div>
+</div>
+
 
 ## BİRİNCİ KISIM
 
@@ -407,3 +422,115 @@ Bu anlatım iyi biliniyor olsa da, birçok âlim Kuranî Başlangıç Harfleri i
 En doğrusunu TANRI bilir.
 
 Kaynak: <a href="https://kuranteyit.com/" target="_blank" rel="noopener noreferrer">kuranteyit.com</a>
+
+<script>
+  (() => {
+    const initArticleDoomsdayClocks = () => {
+      document.querySelectorAll('[data-article-doomsday-clock]').forEach((clock) => {
+        if (!(clock instanceof HTMLElement) || clock.dataset.clockReady === 'true') return;
+
+        const target = Date.parse(clock.dataset.target ?? '');
+        const yearsNode = clock.querySelector('[data-clock-years]');
+        const monthsNode = clock.querySelector('[data-clock-months]');
+        const daysNode = clock.querySelector('[data-clock-days]');
+        const hoursNode = clock.querySelector('[data-clock-hours]');
+        const minutesNode = clock.querySelector('[data-clock-minutes]');
+        const secondsNode = clock.querySelector('[data-clock-seconds]');
+
+        if (
+          Number.isNaN(target) ||
+          !yearsNode || !monthsNode || !daysNode ||
+          !hoursNode || !minutesNode || !secondsNode
+        ) return;
+
+        const pad = (value, width = 2) => String(value).padStart(width, '0');
+        const DAY_MS = 24 * 60 * 60 * 1000;
+        const HOUR_MS = 60 * 60 * 1000;
+        const MINUTE_MS = 60 * 1000;
+        const SECOND_MS = 1000;
+
+        const daysInUtcMonth = (year, month) =>
+          new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
+
+        const buildUtcDate = (source, year, month) => {
+          const day = Math.min(source.getUTCDate(), daysInUtcMonth(year, month));
+          return new Date(Date.UTC(
+            year,
+            month,
+            day,
+            source.getUTCHours(),
+            source.getUTCMinutes(),
+            source.getUTCSeconds(),
+            source.getUTCMilliseconds()
+          ));
+        };
+
+        const addUtcYears = (source, years) =>
+          buildUtcDate(source, source.getUTCFullYear() + years, source.getUTCMonth());
+
+        const addUtcMonths = (source, months) => {
+          const totalMonths = source.getUTCFullYear() * 12 + source.getUTCMonth() + months;
+          const year = Math.floor(totalMonths / 12);
+          const month = totalMonths - year * 12;
+          return buildUtcDate(source, year, month);
+        };
+
+        const update = () => {
+          const now = new Date();
+          const targetDate = new Date(target);
+
+          if (now.getTime() >= target) {
+            yearsNode.textContent = '000';
+            monthsNode.textContent = '00';
+            daysNode.textContent = '00';
+            hoursNode.textContent = '00';
+            minutesNode.textContent = '00';
+            secondsNode.textContent = '00';
+            return;
+          }
+
+          let years = targetDate.getUTCFullYear() - now.getUTCFullYear();
+          let cursor = addUtcYears(now, years);
+
+          if (cursor.getTime() > target) {
+            years -= 1;
+            cursor = addUtcYears(now, years);
+          }
+
+          let months =
+            (targetDate.getUTCFullYear() - cursor.getUTCFullYear()) * 12 +
+            (targetDate.getUTCMonth() - cursor.getUTCMonth());
+          let monthCursor = addUtcMonths(cursor, months);
+
+          if (monthCursor.getTime() > target) {
+            months -= 1;
+            monthCursor = addUtcMonths(cursor, months);
+          }
+
+          const remainingAfterMonths = target - monthCursor.getTime();
+          const days = Math.floor(remainingAfterMonths / DAY_MS);
+          let remainder = remainingAfterMonths - days * DAY_MS;
+          const hours = Math.floor(remainder / HOUR_MS);
+          remainder -= hours * HOUR_MS;
+          const minutes = Math.floor(remainder / MINUTE_MS);
+          remainder -= minutes * MINUTE_MS;
+          const seconds = Math.floor(remainder / SECOND_MS);
+
+          yearsNode.textContent = pad(years, 3);
+          monthsNode.textContent = pad(months);
+          daysNode.textContent = pad(days);
+          hoursNode.textContent = pad(hours);
+          minutesNode.textContent = pad(minutes);
+          secondsNode.textContent = pad(seconds);
+        };
+
+        clock.dataset.clockReady = 'true';
+        update();
+        window.setInterval(update, 1000);
+      });
+    };
+
+    initArticleDoomsdayClocks();
+    document.addEventListener('astro:page-load', initArticleDoomsdayClocks);
+  })();
+</script>
