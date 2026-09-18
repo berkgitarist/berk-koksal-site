@@ -241,7 +241,7 @@ Including the Basmalah, it is 19:32 and the following verse is resurrection.
 
 > **[72:27]** Only to a messenger that He chooses,* does He reveal from the past and the future, specific news.*
 
-Among the duties charged to me as God’s Messenger of the Covenant is unveiling the end of the world (Page 415). We learn from 18:7-8 and 69:13-15 that this world will come to an end. A new earth and new heavens will replace the present heavens and earth (14:48).
+Among the duties charged to me as GOD’s Messenger of the Covenant is unveiling the end of the world (Page 415). We learn from 18:7-8 and 69:13-15 that this world will come to an end. A new earth and new heavens will replace the present heavens and earth (14:48).
 
 ### Verses Stating That This World Will End
 
@@ -291,25 +291,25 @@ The Quran provides many signs, and states that the means for unveiling the end o
 
 #### 3. The Creature
 
-3. The creature (27:82): “Made from the earth, it alerts the people that they have been oblivious to their Creator.” The Creature, made from the earth, did appear and was instrumental in unveiling the Quran’s numerical code, and proclaiming that the world has neglected God’s message; the creature is the computer. Note that the digits that make up 27:82 add up to 19.
+3. The creature (27:82): “Made from the earth, it alerts the people that they have been oblivious to their Creator.” The Creature, made from the earth, did appear and was instrumental in unveiling the Quran’s numerical code, and proclaiming that the world has neglected GOD’s message; the creature is the computer. Note that the digits that make up 27:82 add up to 19.
 
 > **[27:82]** At the right time, we will produce for them a creature, made of earthly materials, declaring that the people are not certain about our revelations.
 
-#### 4. Appearance of God's Messenger of the Covenant
+#### 4. Appearance of GOD's Messenger of the Covenant
 
-4. Appearance of God’s Messenger of the Covenant (3:81): As detailed in Appendix 2, a consolidating messenger, prophesied in the Quran, comes after all the prophets have delivered the scriptures, to purify and unify. This prophecy was fulfilled in Ramadan 1408.
+4. Appearance of GOD’s Messenger of the Covenant (3:81): As detailed in Appendix 2, a consolidating messenger, prophesied in the Quran, comes after all the prophets have delivered the scriptures, to purify and unify. This prophecy was fulfilled in Ramadan 1408.
 
 > **[3:81]** GOD took a covenant from the prophets, saying, “I will give you the scripture and wisdom. Afterwards, a messenger will come to confirm all existing scriptures. You shall believe in him and support him.” He said, “Do you agree with this, and pledge to fulfill this covenant?” They said, “We agree.” He said, “You have thus borne witness, and I bear witness along with you.”
 
 #### 5. The Smoke
 
-5. The Smoke (44:10): occurs after God’s Messenger of the Covenant has delivered the unified message and proclaimed Islam (Submission) as the only religion acceptable by God.
+5. The Smoke (44:10): occurs after GOD’s Messenger of the Covenant has delivered the unified message and proclaimed Islam (Submission) as the only religion acceptable by GOD.
 
 > **[44:10]** Therefore, watch for the day when the sky brings a profound smoke.*
 
 #### 6. Gog and Magog
 
-6. Gog and Magog: they re-appear, in accordance with God’s plan, in the year 1700 AH (2271 AD). Gog and Magog are mentioned in 18:94 and 21:96. If you count the verses from 18:94 to the end of Sura 18, you find them 17. If you count the verses from 21:96 to the end of Sura 21, you find them also 17. This is the Quran’s sign that Gog and Magog will re-appear in 1700 AH.
+6. Gog and Magog: they re-appear, in accordance with GOD’s plan, in the year 1700 AH (2271 AD). Gog and Magog are mentioned in 18:94 and 21:96. If you count the verses from 18:94 to the end of Sura 18, you find them 17. If you count the verses from 21:96 to the end of Sura 21, you find them also 17. This is the Quran’s sign that Gog and Magog will re-appear in 1700 AH.
 
 > **[18:94]** They said, “O Zul-Qarnain, Gog and Magog are corruptors of the earth. Can we pay you to create a barrier between us and them?”
 >
@@ -317,7 +317,7 @@ The Quran provides many signs, and states that the means for unveiling the end o
 
 ### It Will Not Remain Hidden [20:15]
 
-Verse 15 of Sura 20 informs us that the end of the world will be revealed by God before the end of the world, and Sura 15, Verse 87, gives the time for that event:
+Verse 15 of Sura 20 informs us that the end of the world will be revealed by GOD before the end of the world, and Sura 15, Verse 87, gives the time for that event:
 
 > **[20:15]** “The Hour (end of the world) is surely coming; I will keep it almost hidden. For each soul must be paid for its works.
 
@@ -329,7 +329,7 @@ Appendix 25 then considers 15:85-87 together:
 >
 > **[15:87]** We have given you the seven pairs, and the great Quran.
 
-The seven pairs are the 14 Quranic Initials. The total gematrical value of these profound pillars of the Quran’s miracle pinpoints the year of the end of the world. It is noteworthy that Verse 85 of Sura 15 states: “The end of the world will surely come to pass.” The next verse, 15:86, tells us that God is the Creator of this world, and, of course, He knows when it will end. The following verse, 15:87, tells us when the world will end. As shown in Table 1, the gematrical values of “The Seven Pairs” of Quranic Initials total 1709 (see also Table 1 of Appendix 1). According to 15:87, the world will survive for 1709 lunar years from the time this prophecy is stated in the Quran. This means that the world will end in the year 1710 AH. This number is a multiple of 19; 1710 = 19 x 90.
+The seven pairs are the 14 Quranic Initials. The total gematrical value of these profound pillars of the Quran’s miracle pinpoints the year of the end of the world. It is noteworthy that Verse 85 of Sura 15 states: “The end of the world will surely come to pass.” The next verse, 15:86, tells us that GOD is the Creator of this world, and, of course, He knows when it will end. The following verse, 15:87, tells us when the world will end. As shown in Table 1, the gematrical values of “The Seven Pairs” of Quranic Initials total 1709 (see also Table 1 of Appendix 1). According to 15:87, the world will survive for 1709 lunar years from the time this prophecy is stated in the Quran. This means that the world will end in the year 1710 AH. This number is a multiple of 19; 1710 = 19 x 90.
 
 ### Total Gematrical Value of “The Seven Pairs” of Quranic Initials
 

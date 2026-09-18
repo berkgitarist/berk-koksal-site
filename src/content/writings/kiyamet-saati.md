@@ -174,7 +174,7 @@ Görüldüğü üzere inkarcıların saat, gün kavramları,bahçe hasadı,devel
 
 > [10:24] Bu dünyevi hayatın analojisi şöyledir: Biz, onunla yeryüzünden her türden bitkiyi üretmek, insanlara ve hayvanlara yiyecek sağlamak için gökyüzünden su indiririz. Sonra, yeryüzü mükemmel bir şekilde süslenmişken ve insanları onun kontrolünün kendilerinde olduğunu sanırlarken hükmümüz geceleyin veya gündüzleyin gelir,* sanki bir önceki gün hiçbir şey yokmuş gibi onu tamamen çorak bırakır. Biz böylece derinlemesine düşünen insanlar için vahiyleri açıklarız.
 
-*10:24 Tanrı, elbette, Kendi hükmünün gündüz sırasında mı yoksa gece sırasında mı geleceğini bilir. Ancak şu işe bakın ki dünyanın sonu geldiğinde yeryüzü yarı gündüz ve yarı gece olacaktır. Kuran’ın bir başka “bilimsel mucizesi”.
+*10:24 TANRI, elbette, Kendi hükmünün gündüz sırasında mı yoksa gece sırasında mı geleceğini bilir. Ancak şu işe bakın ki dünyanın sonu geldiğinde yeryüzü yarı gündüz ve yarı gece olacaktır. Kuran’ın bir başka “bilimsel mucizesi”.
 
 - Yani dünyanın yarısı Cuma, diğer yarısı da Cumartesi olacak. Mekke ve Kudüs'te Cuma gün batımından hemen sonra Kuran'a göre Cuma günbatımı itibariyle daha Doğu bölgeleri Cumartesi'ye girmiş demektir.(Her gün-gece döngüsü güneş doğumu ve batımı ile ilişkilidir.)
 - Yani gün batımı, (gece değil); Yani Cumartesi dirilecekler.
@@ -207,7 +207,7 @@ Görüldüğü üzere inkarcıların saat, gün kavramları,bahçe hasadı,devel
   <p>Tabiki bunlar tahmini saatlerdir,Rabbimin bana tam olarak hissettirdiği saat ayet numarası ile;</p>
   <blockquote>[19:33] “Ve doğduğum gün, öldüğüm gün ve diriltildiğim gün esenlik benim üzerime olsun.”</blockquote>
   <p class="doomsday-target-card__time">19.33 olarak düşünüyorum.</p>
-  <p>Kesin tarihi yalnızca Tanrı bilir. En doğrusunu Rabbimiz bilir.</p>
+  <p>Kesin tarihi yalnızca TANRI bilir. En doğrusunu Rabbimiz bilir.</p>
 </div>
 
 Kuranın 2280. Ayeti 19:32 ve sonraki ayet,
@@ -241,7 +241,7 @@ Besmele dahil ise 19:32 ve sonra'ki ayet diriliş
 
 > **[72:27]** Sadece O’nun seçtiği bir elçiye,* geçmişten ve gelecekten spesifik haberler vahyeder.*
 
-Bana Tanrı’nın Antlaşma Elçisi olarak yüklenen görevler arasında dünyanın sonunu ortaya çıkarmak da vardır (Sayfa 415). 18:7-8 ve 69:13-15’ten bu dünyanın sona ereceğini öğreniriz. Yeni bir yeryüzü ve yeni gökler, mevcut göklerin ve yeryüzünün yerini alacaktır (14:48).
+Bana TANRI’nın Antlaşma Elçisi olarak yüklenen görevler arasında dünyanın sonunu ortaya çıkarmak da vardır (Sayfa 415). 18:7-8 ve 69:13-15’ten bu dünyanın sona ereceğini öğreniriz. Yeni bir yeryüzü ve yeni gökler, mevcut göklerin ve yeryüzünün yerini alacaktır (14:48).
 
 ### Bu Dünyanın Sona Ereceğini Bildiren Ayetler
 
@@ -291,25 +291,25 @@ Kuran birçok işaret sağlar ve dünyanın sonunu ortaya çıkarmanın araçlar
 
 #### 3. Yaratık
 
-3. Yaratık (27:82): “Yeryüzünden yapılmıştır, insanları Yaratıcılarına karşı gaflette oldukları konusunda ikaz eder.” Yeryüzünden yapılmış Yaratık gerçekten ortaya çıktı ve Kuran’ın sayısal kodunun ortaya çıkarılmasında, ayrıca dünyanın Tanrı’nın mesajını ihmal ettiğini ilan etmede etkili oldu; o yaratık bilgisayardır. 27:82’yi oluşturan rakamların toplamının 19 ettiğine dikkat edin.
+3. Yaratık (27:82): “Yeryüzünden yapılmıştır, insanları Yaratıcılarına karşı gaflette oldukları konusunda ikaz eder.” Yeryüzünden yapılmış Yaratık gerçekten ortaya çıktı ve Kuran’ın sayısal kodunun ortaya çıkarılmasında, ayrıca dünyanın TANRI’nın mesajını ihmal ettiğini ilan etmede etkili oldu; o yaratık bilgisayardır. 27:82’yi oluşturan rakamların toplamının 19 ettiğine dikkat edin.
 
 > **[27:82]** Uygun zamanı gelince, onlara yeryüzündeki materyallerden yapılmış, insanların vahiylerimizden emin olmadıklarını beyan eden bir yaratık çıkaracağız.
 
-#### 4. Tanrı'nın Antlaşma Elçisi'nin Ortaya Çıkışı
+#### 4. TANRI'nın Antlaşma Elçisi'nin Ortaya Çıkışı
 
-4. Tanrı’nın Antlaşma Elçisi’nin Ortaya Çıkışı (3:81): Ek 2’de ayrıntılandırıldığı gibi, Kuran’da kehanet edilen sağlamlaştıran bir elçi, bütün peygamberler kutsal yazıları ilettikten sonra arındırmak ve birleştirmek için gelir. Bu kehanet HS 1408 Ramazanda gerçekleşti.
+4. TANRI’nın Antlaşma Elçisi’nin Ortaya Çıkışı (3:81): Ek 2’de ayrıntılandırıldığı gibi, Kuran’da kehanet edilen sağlamlaştıran bir elçi, bütün peygamberler kutsal yazıları ilettikten sonra arındırmak ve birleştirmek için gelir. Bu kehanet HS 1408 Ramazanda gerçekleşti.
 
 > **[3:81]** TANRI şöyle diyerek peygamberlerle bir antlaşma yaptı: “Size kutsal yazıyı ve bilgelik vereceğim. Sonra, mevcut olan bütün kutsal yazıları doğrulamak üzere bir elçi gelecek. Siz ona inanın ve onu destekleyin.” O dedi ki: “Buna katılıyor ve bu antlaşmayı yerine getirmeye söz veriyor musunuz?” Dediler ki: “Katılıyoruz.” O dedi ki: “Siz böylece şahitlik ettiniz Ben de sizinle beraber şahitlik ediyorum.”
 
 #### 5. Duman
 
-5. Duman (44:10): Tanrı’nın Antlaşma Elçisi birleştirilmiş mesajı ilettikten ve İslam’ı (Teslimiyet’i) Tanrı tarafından kabul edilen tek din olarak ilan ettikten sonra meydana gelir.
+5. Duman (44:10): TANRI’nın Antlaşma Elçisi birleştirilmiş mesajı ilettikten ve İslam’ı (Teslimiyet’i) TANRI tarafından kabul edilen tek din olarak ilan ettikten sonra meydana gelir.
 
 > **[44:10]** Bu nedenle, gökyüzünün esaslı bir duman getireceği günü gözle.*
 
 #### 6. Yecüc ve Mecüc
 
-6. Yecüc ve Mecüc: onlar, Tanrı’nın planına uygun olarak, HS 1700 yılında (MS 2271) yeniden ortaya çıkarlar. Yecüc ve Mecüc’den 18:94 ve 21:96’da bahsedilir. Eğer 18:94’ten 18. surenin sonuna kadar ayetleri sayarsanız, bunun 17 olduğunu görürsünüz. Eğer 21:96’dan 21. surenin sonuna kadar ayetleri sayarsanız, bunun yine 17 olduğunu görürsünüz. Bu, Yecüc ve Mecüc’ün HS 1700 yılında yeniden ortaya çıkacağına dair Kuran’ın işaretidir.
+6. Yecüc ve Mecüc: onlar, TANRI’nın planına uygun olarak, HS 1700 yılında (MS 2271) yeniden ortaya çıkarlar. Yecüc ve Mecüc’den 18:94 ve 21:96’da bahsedilir. Eğer 18:94’ten 18. surenin sonuna kadar ayetleri sayarsanız, bunun 17 olduğunu görürsünüz. Eğer 21:96’dan 21. surenin sonuna kadar ayetleri sayarsanız, bunun yine 17 olduğunu görürsünüz. Bu, Yecüc ve Mecüc’ün HS 1700 yılında yeniden ortaya çıkacağına dair Kuran’ın işaretidir.
 
 > **[18:94]** Dediler ki: “Ey Zülkarneyn, Yecüc ve Mecüc yeryüzünün bozguncularıdır. Onlarla aramıza bir bariyer oluşturman için sana ödeme yapabilir miyiz?”
 >
@@ -317,7 +317,7 @@ Kuran birçok işaret sağlar ve dünyanın sonunu ortaya çıkarmanın araçlar
 
 ### Gizli Kalmayacaktır [20:15]
 
-20. surenin 15. ayeti bize, dünyanın sonunun dünyanın sonundan önce Tanrı tarafından ortaya çıkarılacağını bildirir ve 15. surenin 87. ayeti o olayın zamanını verir:
+20. surenin 15. ayeti bize, dünyanın sonunun dünyanın sonundan önce TANRI tarafından ortaya çıkarılacağını bildirir ve 15. surenin 87. ayeti o olayın zamanını verir:
 
 > **[20:15]** “Saat (dünyanın sonu) mutlaka gelmektedir; onu neredeyse gizli tutacağım. Zira her nefse çalışmalarının bedeli ödenmelidir.
 
@@ -329,7 +329,7 @@ Ek 25, ardından 15:85-87 ayetlerini birlikte ele alır:
 >
 > **[15:87]** Biz sana yedi çifti ve büyük Kuran’ı verdik.
 
-Yedi çift, 14 Kuranî Başlangıç Harfidir. Kuran’ın mucizesinin bu esaslı direklerinin toplam sayısal değeri, dünyanın sonunun yılını tam olarak belirler. Şu dikkate değerdir ki 15. surenin 85. ayeti şöyle der: “Dünyanın sonu mutlaka gerçekleşecektir.” Bir sonraki ayet olan 15:86 bize Tanrı’nın bu dünyanın Yaratıcısı olduğunu söyler ve elbette onun ne zaman sona ereceğini O bilir. Onu izleyen ayet olan 15:87 bize dünyanın ne zaman sona ereceğini söyler. Tablo 1’de gösterildiği gibi, Kuranî Başlangıç Harflerinin “Yedi Çift”inin sayısal değerleri toplam 1709 eder (ayrıca bkz. Ek 1’in Tablo 1’i). 15:87’ye göre, bu kehanetin Kuran’da ifade edildiği zamandan itibaren dünya 1709 kamerî yıl süresince varlığını sürdürecektir. Bu şu anlama gelir: dünya HS 1710 yılında sona erecektir. Bu sayı 19’un katıdır; 1710 = 19 x 90.
+Yedi çift, 14 Kuranî Başlangıç Harfidir. Kuran’ın mucizesinin bu esaslı direklerinin toplam sayısal değeri, dünyanın sonunun yılını tam olarak belirler. Şu dikkate değerdir ki 15. surenin 85. ayeti şöyle der: “Dünyanın sonu mutlaka gerçekleşecektir.” Bir sonraki ayet olan 15:86 bize TANRI’nın bu dünyanın Yaratıcısı olduğunu söyler ve elbette onun ne zaman sona ereceğini O bilir. Onu izleyen ayet olan 15:87 bize dünyanın ne zaman sona ereceğini söyler. Tablo 1’de gösterildiği gibi, Kuranî Başlangıç Harflerinin “Yedi Çift”inin sayısal değerleri toplam 1709 eder (ayrıca bkz. Ek 1’in Tablo 1’i). 15:87’ye göre, bu kehanetin Kuran’da ifade edildiği zamandan itibaren dünya 1709 kamerî yıl süresince varlığını sürdürecektir. Bu şu anlama gelir: dünya HS 1710 yılında sona erecektir. Bu sayı 19’un katıdır; 1710 = 19 x 90.
 
 ### Kuranî Başlangıç Harflerinin “Yedi Çift”inin Toplam Sayısal Değeri
 
