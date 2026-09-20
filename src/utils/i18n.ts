@@ -1,27 +1,36 @@
 export type SiteLanguage = 'en' | 'tr';
 
-export const DEFAULT_LANGUAGE: SiteLanguage = 'en';
+const TURKISH_PREFIX = '/tr';
 
-/*
- * Türkçe karşılığı hazır olan route'ları burada tutuyoruz.
- * Yeni bir Türkçe sayfa eklediğimizde sadece bu listeye ekleyeceğiz.
- */
-export const translatedRoutes = new Set<string>([
-  '/',
-  '/biography/',
-  '/full-biography/',
-  '/quranic-concepts/',
-  '/neo-sacred-zikr/',
-  '/writings/',
-]);
+type UrlParts = {
+  pathname: string;
+  suffix: string;
+};
 
-export function normalizePath(pathname: string): string {
-  if (!pathname) return '/';
+function splitUrlParts(value: string): UrlParts {
+  const match = value.match(/^([^?#]*)(.*)$/);
 
-  let path = pathname.split('?')[0]?.split('#')[0] ?? '/';
+  return {
+    pathname: match?.[1] || '/',
+    suffix: match?.[2] || '',
+  };
+}
+
+function normalizePathname(pathname: string): string {
+  let path = pathname.trim();
+
+  if (!path) {
+    return '/';
+  }
 
   if (!path.startsWith('/')) {
     path = `/${path}`;
+  }
+
+  path = path.replace(/\/{2,}/g, '/');
+
+  if (path === TURKISH_PREFIX) {
+    return `${TURKISH_PREFIX}/`;
   }
 
   if (path !== '/' && !path.endsWith('/')) {
@@ -31,80 +40,81 @@ export function normalizePath(pathname: string): string {
   return path;
 }
 
-export function getLanguageFromPath(pathname: string): SiteLanguage {
-  const path = normalizePath(pathname);
+export function getLanguageFromPath(
+  value: string
+): SiteLanguage {
+  const { pathname } = splitUrlParts(value);
+  const path = normalizePathname(pathname);
 
-  return path === '/tr/' || path.startsWith('/tr/')
+  return path === `${TURKISH_PREFIX}/` ||
+    path.startsWith(`${TURKISH_PREFIX}/`)
     ? 'tr'
     : 'en';
 }
 
-export function stripLanguagePrefix(pathname: string): string {
-  const path = normalizePath(pathname);
+export function stripLanguagePrefix(
+  value: string
+): string {
+  const { pathname, suffix } = splitUrlParts(value);
+  const path = normalizePathname(pathname);
 
-  if (path === '/tr/') {
-    return '/';
+  if (
+    path === TURKISH_PREFIX ||
+    path === `${TURKISH_PREFIX}/`
+  ) {
+    return `/${suffix}`;
   }
 
-  if (path.startsWith('/tr/')) {
-    const withoutPrefix = path.slice(3);
-    return normalizePath(withoutPrefix || '/');
+  if (path.startsWith(`${TURKISH_PREFIX}/`)) {
+    const withoutPrefix = path.slice(TURKISH_PREFIX.length);
+
+    return `${withoutPrefix || '/'}${suffix}`;
   }
 
-  return path;
-}
-
-export function hasTurkishVersion(pathname: string): boolean {
-  return translatedRoutes.has(stripLanguagePrefix(pathname));
+  return `${path}${suffix}`;
 }
 
 export function localizePath(
-  pathname: string,
+  value: string,
   language: SiteLanguage
 ): string {
-  const basePath = stripLanguagePrefix(pathname);
+  const { pathname, suffix } = splitUrlParts(value);
+  const basePath = normalizePathname(
+    splitUrlParts(stripLanguagePrefix(pathname)).pathname
+  );
 
-  if (language === 'en') {
-    return basePath;
+  if (language === 'tr') {
+    const localized =
+      basePath === '/'
+        ? `${TURKISH_PREFIX}/`
+        : `${TURKISH_PREFIX}${basePath}`;
+
+    return `${localized}${suffix}`;
   }
 
-  if (!translatedRoutes.has(basePath)) {
-    return basePath;
-  }
-
-  if (basePath === '/') {
-    return '/tr/';
-  }
-
-  return `/tr${basePath}`;
+  return `${basePath}${suffix}`;
 }
 
 export function getLanguageSwitchHref(
-  pathname: string,
+  currentUrl: string,
   targetLanguage: SiteLanguage
 ): string {
-  const basePath = stripLanguagePrefix(pathname);
-
-  // Yazı detaylarında birebir çevrilmiş karşı slug olup olmadığını
-  // henüz eşleştirmiyoruz. Dil değiştirildiğinde güvenli biçimde
-  // ilgili dilin Yazılar ana sayfasına dönüyoruz.
-  const isWritingDetail =
-    basePath.startsWith('/writings/') &&
-    basePath !== '/writings/';
-
-  if (isWritingDetail) {
-    return targetLanguage === 'tr'
-      ? '/tr/writings/'
-      : '/writings/';
-  }
-
-  if (targetLanguage === 'en') {
-    return basePath;
-  }
-
-  if (translatedRoutes.has(basePath)) {
-    return localizePath(basePath, 'tr');
-  }
-
-  return '/tr/';
+  /*
+   * Universal language switcher.
+   * There is intentionally NO page whitelist here.
+   * Any mirrored EN/TR route keeps the same page automatically.
+   *
+   * Examples:
+   * /poems/                  <-> /tr/poems/
+   * /full-biography/         <-> /tr/full-biography/
+   * /biography/              <-> /tr/biography/
+   * /albums/helll/           <-> /tr/albums/helll/
+   * /writings/example/       <-> /tr/writings/example/
+   * /anything/new/in/future/ <-> /tr/anything/new/in/future/
+   *
+   * Query parameters are preserved here. URL fragments (#section)
+   * are preserved by nav.astro in the browser because fragments are
+   * not sent to Astro on the server.
+   */
+  return localizePath(currentUrl, targetLanguage);
 }

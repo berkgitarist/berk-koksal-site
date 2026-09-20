@@ -36,6 +36,13 @@ const extraSocials = [
     showInContact: true,
   },
   {
+    name: isTurkish ? 'Şiir' : 'Poetry',
+    url: isTurkish ? '/tr/poems/' : '/poems/',
+    displayUrl: isTurkish ? '/tr/poems/' : '/poems/',
+    icon: 'mdi:book-open-page-variant',
+    showInContact: true,
+  },
+  {
     name: 'LinkedIn',
     url: 'https://linkedin.com/in/berkkoksal/',
     displayUrl: 'linkedin.com/in/berkkoksal',
@@ -96,18 +103,19 @@ const contactSocials = [
 
     <!-- CONTACT CARDS -->
     <div
-      class="grid grid-cols-3 gap-2 md:grid-cols-3 md:gap-4 xl:grid-cols-6"
+      class="grid grid-cols-3 gap-2 md:grid-cols-3 md:gap-4 xl:grid-cols-7"
     >
       {
         contactSocials.map((social) => {
 
           const isEmail = social.url.startsWith('mailto:');
+          const isInternal = social.url.startsWith('/');
 
           return (
             <a
               href={social.url}
-              target={isEmail ? undefined : '_blank'}
-              rel={isEmail ? undefined : 'noopener noreferrer'}
+              target={isEmail || isInternal ? undefined : '_blank'}
+              rel={isEmail || isInternal ? undefined : 'noopener noreferrer'}
               aria-label={`${social.name} ${copy.openLink}`}
               class="
                 contact-card

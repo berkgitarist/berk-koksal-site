@@ -19,6 +19,7 @@ interface NavItem {
 }
 
 const currentPath = Astro.url.pathname;
+const currentUrl = `${Astro.url.pathname}${Astro.url.search}`;
 const language = getLanguageFromPath(currentPath);
 const baseCurrentPath = stripLanguagePrefix(currentPath);
 
@@ -94,8 +95,8 @@ function isItemActive(item: NavItem): boolean {
   return baseCurrentPath === item.path;
 }
 
-const englishHref = getLanguageSwitchHref(currentPath, 'en');
-const turkishHref = getLanguageSwitchHref(currentPath, 'tr');
+const englishHref = getLanguageSwitchHref(currentUrl, 'en');
+const turkishHref = getLanguageSwitchHref(currentUrl, 'tr');
 ---
 
 <div
@@ -106,6 +107,7 @@ const turkishHref = getLanguageSwitchHref(currentPath, 'tr');
   <div class="language-switcher" aria-label={language === 'tr' ? 'Dil seçimi' : 'Language selector'}>
     <a
       href={englishHref}
+      data-language-switch
       hreflang="en"
       lang="en"
       aria-current={language === 'en' ? 'page' : undefined}
@@ -118,6 +120,7 @@ const turkishHref = getLanguageSwitchHref(currentPath, 'tr');
 
     <a
       href={turkishHref}
+      data-language-switch
       hreflang="tr"
       lang="tr"
       aria-current={language === 'tr' ? 'page' : undefined}
@@ -443,4 +446,27 @@ const turkishHref = getLanguageSwitchHref(currentPath, 'tr');
   );
 
   window.addEventListener('resize', updateNav, { passive: true });
+
+  /* =====================================================
+     UNIVERSAL LANGUAGE SWITCH
+     =====================================================
+     Astro.url cannot receive the browser fragment (#section),
+     because URL fragments never reach the server. Preserve it
+     at click time so /#projects becomes /tr/#projects, etc.
+  */
+  document
+    .querySelectorAll<HTMLAnchorElement>('[data-language-switch]')
+    .forEach((link) => {
+      link.addEventListener('click', () => {
+        const currentHash = window.location.hash;
+
+        if (!currentHash) {
+          return;
+        }
+
+        const target = new URL(link.href, window.location.origin);
+        target.hash = currentHash;
+        link.href = `${target.pathname}${target.search}${target.hash}`;
+      });
+    });
 </script>

@@ -1,0 +1,628 @@
+---
+import { readdir } from 'node:fs/promises';
+import { join } from 'node:path';
+
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/nav.astro';
+
+type Poet = 'berk' | 'humeyra';
+
+type Poem = {
+  author: Poet;
+  order: number;
+  title: string;
+  filename: string;
+  src: string;
+};
+
+const poemsDirectory = join(process.cwd(), 'public', 'artist', 'poems');
+
+const supportedImage = /\.(?:jpe?g|png|webp|avif)$/i;
+const filenamePattern = /^(berk|humeyra)_(\d+)_(.+)\.(jpe?g|png|webp|avif)$/i;
+
+let filenames: string[] = [];
+
+try {
+  filenames = await readdir(poemsDirectory);
+} catch {
+  // İlk şiir yüklenmeden önce de sayfa boş durum mesajıyla sorunsuz açılır.
+  filenames = [];
+}
+
+const normalizeTitle = (value: string) =>
+  value
+    .replace(/[_]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const poems = filenames
+  .filter((filename) => supportedImage.test(filename))
+  .map((filename): Poem | null => {
+    const match = filename.match(filenamePattern);
+
+    if (!match) return null;
+
+    const [, rawAuthor, rawOrder, rawTitle] = match;
+    const author = rawAuthor.toLowerCase() as Poet;
+    const order = Number.parseInt(rawOrder, 10);
+
+    if (!Number.isFinite(order)) return null;
+
+    return {
+      author,
+      order,
+      title: normalizeTitle(rawTitle),
+      filename,
+      src: `/artist/poems/${encodeURIComponent(filename)}`,
+    };
+  })
+  .filter((poem): poem is Poem => poem !== null)
+  .sort((a, b) => {
+    if (a.author !== b.author) {
+      return a.author === 'berk' ? -1 : 1;
+    }
+
+    return (
+      a.order - b.order ||
+      a.title.localeCompare(b.title, 'tr', { sensitivity: 'base' })
+    );
+  });
+
+const berkPoems = poems.filter((poem) => poem.author === 'berk');
+const humeyraPoems = poems.filter((poem) => poem.author === 'humeyra');
+
+const authors = [
+  {
+    key: 'berk',
+    name: 'Berk Köksal',
+    poems: berkPoems,
+  },
+  {
+    key: 'humeyra',
+    name: 'Hümeyra Can Köksal',
+    poems: humeyraPoems,
+  },
+] as const;
+---
+
+<Layout
+  title="Şiirlerimiz | Berk KÖKSAL"
+  description="Berk Köksal ve Hümeyra Can Köksal şiir arşivi."
+  canonical="/tr/poems/"
+  ogImage="/artist/berk-portrait.webp"
+  lang="tr"
+  pageClass="poems-page"
+>
+  <Nav />
+
+  <main class="px-4 pb-24 pt-28 md:px-8 md:pb-32 md:pt-36">
+    <div class="mx-auto max-w-7xl">
+      <header class="mx-auto mb-14 max-w-4xl text-center md:mb-20">
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.42em] text-accent">
+          Kişisel Şiir Arşivi
+        </p>
+
+        <h1 class="text-5xl font-heading font-bold tracking-tight text-maintext md:text-7xl">
+          ŞİİRLERİMİZ
+        </h1>
+
+        <p class="mx-auto mt-6 max-w-2xl text-base leading-7 text-subtext md:text-lg">
+          Berk Köksal ve Hümeyra Can Köksal'ın şiirleri. Küçük görsele tıklayarak şiiri
+          tam ekran açabilir; mobilde iki parmağınızla yakınlaştırabilirsiniz.
+        </p>
+      </header>
+
+      <div class="space-y-20 md:space-y-28">
+        {
+          authors.map((author) => (
+            <section aria-labelledby={`${author.key}-poems-title`}>
+              <div class="mb-8 flex items-end justify-between gap-6 border-b border-accent/15 pb-5 md:mb-10">
+                <div>
+                  <p class="mb-2 text-xs font-bold uppercase tracking-[0.35em] text-accent">
+                    Şiir Arşivi
+                  </p>
+                  <h2
+                    id={`${author.key}-poems-title`}
+                    class="text-3xl font-heading font-bold text-maintext md:text-5xl"
+                  >
+                    {author.name}
+                  </h2>
+                </div>
+
+                <p class="shrink-0 text-sm font-semibold text-subtext">
+                  {author.poems.length} şiir
+                </p>
+              </div>
+
+              {
+                author.poems.length > 0 ? (
+                  <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+                    {author.poems.map((poem) => (
+                      <article class="poem-card group min-w-0">
+                        <h3 class="mb-4 min-h-[3.5rem] text-xl font-heading font-bold leading-tight text-maintext md:text-2xl">
+                          {poem.title}
+                        </h3>
+
+                        <button
+                          type="button"
+                          class="poem-open relative block w-full overflow-hidden rounded-[1.6rem] border border-accent/15 bg-background/40 shadow-xl shadow-black/15 transition-all duration-300 hover:-translate-y-1 hover:border-accent/45 hover:shadow-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                          data-poem-src={poem.src}
+                          data-poem-title={poem.title}
+                          data-poem-author={author.name}
+                          aria-label={`${poem.title} şiirini tam ekran aç`}
+                        >
+                          <span class="absolute right-3 top-3 z-10 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/45 px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-white backdrop-blur-md">
+                            Tam Ekran
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                            </svg>
+                          </span>
+
+                          <div class="aspect-[210/297] w-full overflow-hidden bg-black/15 p-2 sm:p-3">
+                            <img
+                              src={poem.src}
+                              alt={`${poem.title} — ${author.name}`}
+                              class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.015]"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </div>
+                        </button>
+                      </article>
+                    ))}
+                  </div>
+                ) : (
+                  <div class="rounded-[1.75rem] border border-dashed border-accent/25 bg-accent/5 p-8 text-center md:p-12">
+                    <p class="text-lg font-semibold text-maintext">Henüz görsel bulunamadı.</p>
+                    <p class="mx-auto mt-3 max-w-2xl text-sm leading-6 text-subtext">
+                      Görselleri <code class="rounded bg-black/15 px-2 py-1 text-accent">public/artist/poems/</code>
+                      klasörüne <strong>{author.key}_1_Şiir adı.jpg</strong> biçiminde eklediğinizde burada otomatik listelenir.
+                    </p>
+                  </div>
+                )
+              }
+            </section>
+          ))
+        }
+      </div>
+    </div>
+  </main>
+
+  <div
+    id="poem-lightbox"
+    class="poem-lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+    aria-labelledby="poem-lightbox-title"
+  >
+    <div class="poem-lightbox__backdrop" data-poem-close></div>
+
+    <div class="poem-lightbox__stage">
+      <div class="poem-lightbox__caption">
+        <p id="poem-lightbox-title" class="poem-lightbox__title"></p>
+        <p class="poem-lightbox__author"></p>
+      </div>
+
+      <button
+        id="poem-lightbox-close"
+        type="button"
+        class="poem-lightbox__close"
+        aria-label="Şiiri kapat"
+        title="Kapat"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+
+      <div class="poem-lightbox__viewport" id="poem-lightbox-viewport">
+        <img
+          id="poem-lightbox-image"
+          class="poem-lightbox__image"
+          src=""
+          alt=""
+          draggable="false"
+        />
+      </div>
+
+      <p class="poem-lightbox__hint">
+        Mobil: iki parmakla yakınlaştır • Yakınlaştırınca tek parmakla sürükle
+      </p>
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  .poems-page .poem-card {
+    min-width: 0;
+  }
+
+  .poem-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .poem-lightbox.is-open {
+    display: flex;
+  }
+
+  .poem-lightbox__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(4, 4, 10, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .poem-lightbox__stage {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 100dvh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding:
+      max(4.6rem, calc(env(safe-area-inset-top, 0px) + 4rem))
+      0.75rem
+      max(3.5rem, calc(env(safe-area-inset-bottom, 0px) + 3rem));
+  }
+
+  .poem-lightbox__caption {
+    position: absolute;
+    top: max(0.9rem, env(safe-area-inset-top, 0px));
+    left: 1rem;
+    z-index: 4;
+    max-width: min(70vw, 50rem);
+    pointer-events: none;
+  }
+
+  .poem-lightbox__title {
+    color: white;
+    font-family: var(--font-heading);
+    font-size: clamp(0.95rem, 2.8vw, 1.25rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .poem-lightbox__author {
+    margin-top: 0.25rem;
+    color: rgba(255,255,255,0.62);
+    font-size: 0.78rem;
+  }
+
+  .poem-lightbox__close {
+    position: absolute;
+    top: max(0.75rem, env(safe-area-inset-top, 0px));
+    right: max(0.75rem, env(safe-area-inset-right, 0px));
+    z-index: 5;
+    display: inline-flex;
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 9999px;
+    background: rgba(20,20,26,0.72);
+    color: white;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 180ms ease, background-color 180ms ease;
+  }
+
+  .poem-lightbox__close:hover {
+    transform: rotate(90deg) scale(1.05);
+    background: color-mix(in srgb, var(--color-accent), black 25%);
+  }
+
+  .poem-lightbox__close svg {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+
+  .poem-lightbox__viewport {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .poem-lightbox__image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transform: translate3d(0, 0, 0) scale(1);
+    transform-origin: center center;
+    will-change: transform;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+  }
+
+  .poem-lightbox__hint {
+    position: absolute;
+    bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
+    left: 50%;
+    z-index: 4;
+    width: max-content;
+    max-width: calc(100vw - 2rem);
+    transform: translateX(-50%);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 9999px;
+    background: rgba(10,10,16,0.62);
+    padding: 0.55rem 0.9rem;
+    color: rgba(255,255,255,0.66);
+    font-size: 0.72rem;
+    line-height: 1.2;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  body.poem-lightbox-open {
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+
+  @media (min-width: 768px) {
+    .poem-lightbox__stage {
+      padding: 4.6rem 2rem 3.4rem;
+    }
+
+    .poem-lightbox__image {
+      max-width: min(92vw, 1100px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .poem-lightbox__close,
+    .poem-open,
+    .poem-open img {
+      transition: none !important;
+    }
+  }
+</style>
+
+<script>
+  type PoemPointer = {
+    x: number;
+    y: number;
+  };
+
+  type PoemGalleryWindow = Window & {
+    __poemGalleryCleanup?: () => void;
+  };
+
+  const poemGalleryWindow = window as PoemGalleryWindow;
+
+  function initPoemGallery(): void {
+    poemGalleryWindow.__poemGalleryCleanup?.();
+
+    const controller = new AbortController();
+    const { signal } = controller;
+
+    const lightbox = document.getElementById('poem-lightbox');
+    const closeButton = document.getElementById('poem-lightbox-close');
+    const viewport = document.getElementById('poem-lightbox-viewport');
+    const image = document.getElementById('poem-lightbox-image') as HTMLImageElement | null;
+    const title = lightbox?.querySelector<HTMLElement>('.poem-lightbox__title');
+    const author = lightbox?.querySelector<HTMLElement>('.poem-lightbox__author');
+    const openButtons = document.querySelectorAll<HTMLButtonElement>('.poem-open');
+    const closeTargets = lightbox?.querySelectorAll<HTMLElement>('[data-poem-close]') ?? [];
+
+    if (!lightbox || !closeButton || !viewport || !image) {
+      poemGalleryWindow.__poemGalleryCleanup = () => controller.abort();
+      return;
+    }
+
+    let lastTrigger: HTMLElement | null = null;
+    let scale = 1;
+    let translateX = 0;
+    let translateY = 0;
+    let pinchStartDistance = 0;
+    let pinchStartScale = 1;
+    let panPointerId: number | null = null;
+    let panLastX = 0;
+    let panLastY = 0;
+
+    const pointers = new Map<number, PoemPointer>();
+
+    const clamp = (value: number, min: number, max: number) =>
+      Math.min(max, Math.max(min, value));
+
+    const pointerDistance = (): number => {
+      const points = Array.from(pointers.values());
+      if (points.length < 2) return 0;
+
+      const [a, b] = points;
+      return Math.hypot(b.x - a.x, b.y - a.y);
+    };
+
+    const constrainPan = (): void => {
+      if (scale <= 1) {
+        translateX = 0;
+        translateY = 0;
+        return;
+      }
+
+      const rect = viewport.getBoundingClientRect();
+      const maxX = (rect.width * (scale - 1)) / (2 * scale);
+      const maxY = (rect.height * (scale - 1)) / (2 * scale);
+
+      translateX = clamp(translateX, -maxX, maxX);
+      translateY = clamp(translateY, -maxY, maxY);
+    };
+
+    const applyTransform = (): void => {
+      constrainPan();
+      image.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`;
+    };
+
+    const resetZoom = (): void => {
+      scale = 1;
+      translateX = 0;
+      translateY = 0;
+      pinchStartDistance = 0;
+      pinchStartScale = 1;
+      panPointerId = null;
+      pointers.clear();
+      applyTransform();
+    };
+
+    const openLightbox = (button: HTMLButtonElement): void => {
+      const src = button.dataset.poemSrc;
+      if (!src) return;
+
+      lastTrigger = button;
+      resetZoom();
+
+      image.src = src;
+      image.alt = `${button.dataset.poemTitle ?? 'Şiir'} — ${button.dataset.poemAuthor ?? ''}`;
+
+      if (title) title.textContent = button.dataset.poemTitle ?? '';
+      if (author) author.textContent = button.dataset.poemAuthor ?? '';
+
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('poem-lightbox-open');
+      closeButton.focus();
+    };
+
+    const closeLightbox = (): void => {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('poem-lightbox-open');
+      resetZoom();
+      image.removeAttribute('src');
+      lastTrigger?.focus();
+      lastTrigger = null;
+    };
+
+    openButtons.forEach((button) => {
+      button.addEventListener('click', () => openLightbox(button), { signal });
+    });
+
+    closeButton.addEventListener('click', closeLightbox, { signal });
+    closeTargets.forEach((target) => {
+      target.addEventListener('click', closeLightbox, { signal });
+    });
+
+    document.addEventListener(
+      'keydown',
+      (event: KeyboardEvent) => {
+        if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+          closeLightbox();
+        }
+      },
+      { signal }
+    );
+
+    image.addEventListener(
+      'dblclick',
+      (event: MouseEvent) => {
+        event.preventDefault();
+        scale = scale > 1 ? 1 : 2.25;
+        translateX = 0;
+        translateY = 0;
+        applyTransform();
+      },
+      { signal }
+    );
+
+    image.addEventListener(
+      'pointerdown',
+      (event: PointerEvent) => {
+        event.preventDefault();
+        image.setPointerCapture?.(event.pointerId);
+        pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+
+        if (pointers.size === 2) {
+          pinchStartDistance = pointerDistance();
+          pinchStartScale = scale;
+          panPointerId = null;
+        } else if (pointers.size === 1 && scale > 1) {
+          panPointerId = event.pointerId;
+          panLastX = event.clientX;
+          panLastY = event.clientY;
+        }
+      },
+      { signal }
+    );
+
+    image.addEventListener(
+      'pointermove',
+      (event: PointerEvent) => {
+        if (!pointers.has(event.pointerId)) return;
+
+        event.preventDefault();
+        pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+
+        if (pointers.size >= 2 && pinchStartDistance > 0) {
+          const distance = pointerDistance();
+          scale = clamp(pinchStartScale * (distance / pinchStartDistance), 1, 5);
+          applyTransform();
+          return;
+        }
+
+        if (pointers.size === 1 && scale > 1 && panPointerId === event.pointerId) {
+          const dx = event.clientX - panLastX;
+          const dy = event.clientY - panLastY;
+          translateX += dx / scale;
+          translateY += dy / scale;
+          panLastX = event.clientX;
+          panLastY = event.clientY;
+          applyTransform();
+        }
+      },
+      { signal }
+    );
+
+    const endPointer = (event: PointerEvent): void => {
+      pointers.delete(event.pointerId);
+
+      if (pointers.size < 2) {
+        pinchStartDistance = 0;
+        pinchStartScale = scale;
+      }
+
+      if (pointers.size === 1 && scale > 1) {
+        const [remainingId, remainingPoint] = Array.from(pointers.entries())[0];
+        panPointerId = remainingId;
+        panLastX = remainingPoint.x;
+        panLastY = remainingPoint.y;
+      } else if (pointers.size === 0) {
+        panPointerId = null;
+        if (scale <= 1.01) resetZoom();
+      }
+    };
+
+    image.addEventListener('pointerup', endPointer, { signal });
+    image.addEventListener('pointercancel', endPointer, { signal });
+    image.addEventListener('lostpointercapture', endPointer, { signal });
+
+    poemGalleryWindow.__poemGalleryCleanup = () => {
+      controller.abort();
+      document.body.classList.remove('poem-lightbox-open');
+    };
+  }
+
+  initPoemGallery();
+  document.addEventListener('astro:after-swap', initPoemGallery);
+</script>
