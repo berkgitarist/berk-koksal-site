@@ -1,0 +1,378 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/nav.astro";
+
+const pageTitle = "Neden 19? | Berk KÖKSAL";
+const pageDescription = "KURAN’da 19 sayısının yeri, 74:30–37 ayetleri ve Ek 1’de sunulan 19-tabanlı matematiksel sistem üzerine kısa bir giriş.";
+const canonical = "/tr/why-19/";
+const pageLang = "tr" as const;
+const copy = {
+  "eyebrow": "KURAN • XIX • TEFEKKÜR",
+  "h1": "NEDEN 19?",
+  "hero": "19 benim için bir marka ya da dekoratif bir sayı değil. KURAN’a geri yönelten bir işaret. Bu sayfa, bu işaretin KURAN’daki yerini ve gönderdiğim kaynaklarda sunulan matematiksel örnekleri tek yerde topluyor.",
+  "source": "Bu sayfadaki ayet metinleri ve sayısal veriler yalnızca gönderilen Türkçe KURAN verisi ile Ek 1’den alınmıştır. Ek 1’deki sayımların orijinal Arapça metne ait olduğu özellikle belirtilir.",
+  "jump1": "KURAN 74:30–37",
+  "jump2": "19 Basit Gerçek",
+  "jump3": "Yakından Bak",
+  "jump4": "Ben Neden Kullanıyorum?",
+  "sec1": "I · KURAN’DA ON DOKUZ",
+  "sec1h": "Başlangıç noktası metnin kendisi.",
+  "sec1p": "74. Surenin 30. ayeti doğrudan on dokuzdan söz eder. Devamındaki ayet, bu sayının insanlarda farklı tepkiler ortaya çıkaracağını söyler; 35. ayet ise bunu “büyük mucizelerden biri” olarak adlandırır.",
+  "noteLabel": "KAYNAK NOTU",
+  "sec2": "II · EK 1",
+  "sec2h": "Basit gerçeklerden başlayan matematiksel yapı.",
+  "sec2p": "Ek 1, sistemi “çok basitten çok komplekse” uzanan bir yapı olarak tanımlar. Aşağıdaki 19 madde, Ek 1’de “Basit Gerçekler” başlığı altında verilen kısaltılmış listedir.",
+  "tableNum": "NO",
+  "tableObs": "GÖZLEM",
+  "tableRel": "19 İLE İLİŞKİ",
+  "sec3": "III · İKİ YAKIN ÖRNEK",
+  "sec3h": "Sayıların nasıl birbirine bağlandığını görmek.",
+  "godTitle": "“TANRI” kelimesi",
+  "godText": "Ek 1’e göre KURAN metninde “Tanrı” (Allah) kelimesinin toplam geçiş sayısı 2698’dir ve bu sayı 19 × 142’dir. Bu kelimenin geçtiği ayet numaralarının toplamı ise 118123’tür; bu da 19 × 6217’dir.",
+  "qTitle": "Q başlangıç harfi",
+  "qText": "Ek 1’deki Q örneğinde, Q başlangıç harfli 42. ve 50. surelerin her birinde 57 adet Q bulunduğu; toplamın 114 = 19 × 6 olduğu belirtilir. Ayrıca 42 + 53 ve 50 + 45 toplamlarının her ikisi de 95 = 19 × 5’tir.",
+  "fatihaTitle": "Fatiha üzerinden bir örnek",
+  "fatihaP": "Gönderilen KURAN verisinin 1:1 notunda Besmelenin 19 Arapça harften oluştuğu belirtilir. Aynı veri, Fatiha’nın ayet numarası, harf sayısı ve sayısal değerlerini aşağıdaki tabloda verir.",
+  "fcol1": "Ayet",
+  "fcol2": "Harf",
+  "fcol3": "Sayısal Değer",
+  "sec4": "IV · NEDEN BENİM ÇALIŞMALARIMDA?",
+  "sec4h": "XIX bir varış noktası değil; bir yön işaretidir.",
+  "personal1": "KURAN’ın 19-tabanlı matematiksel sistemini yıllarca incelemem, 19’u müzikte ve görsel dilimde bilinçli bir yapısal işarete dönüştürdü.",
+  "personal2": "Bu yüzden bazı albümlerde 19 parça bulunuyor; Zikr Symphony ise 19 ana eser ve on dokuzuncu eserin içinde ayrıca 19 bölümlük bir yapı kullanıyor. Ama amaç dikkati sayının üzerinde sonlandırmak değil: merakı yeniden KURAN’a yöneltmek.",
+  "path": "19 → merak → KURAN → araştırma → tefekkür",
+  "sec5": "V · KENDİN İNCELE",
+  "sec5h": "Sözüme değil, kaynağa bak.",
+  "sec5p": "Bu sayfa bir başlangıç özeti. Sayısal iddiaların ayrıntıları Ek 1’de, ayetler ise gönderilen KURAN metninde yer alıyor. İstersen sayıları tek tek kontrol et; amaç zaten araştırmanın burada bitmemesi.",
+  "quranBtn": "KURAN’I OKU ↗",
+  "evidenceBtn": "KURAN DELİLLERİNİ İNCELE ↗",
+  "footer": "Kaynak kapsamı: gönderilen KURAN Türkçe verisi • Ek 1 Türkçe • BerkKoksal.com mevcut içerik verileri"
+};
+
+const simpleFacts = [
+  {
+    "no": "1",
+    "observation": "“Besmele” olarak bilinen ilk ayet (1:1) ...",
+    "relation": "19 harftir."
+  },
+  {
+    "no": "2",
+    "observation": "Kuran 114 sureden oluşur, bu sayı ...",
+    "relation": "19 x 6."
+  },
+  {
+    "no": "3",
+    "observation": "Kuran’daki toplam ayet sayısı 6346’dır. [6234 numaralı ayet ve 112 numarasız ayet (Besmeleler); 6234 + 112 = 6346] Şuna da dikkat edin: 6 + 3 + 4 + 6 = 19.",
+    "relation": "19 x 334."
+  },
+  {
+    "no": "4",
+    "observation": "Besmele, 9. Suredeki göze çarpan yokluğuna rağmen 114 kez geçer (27. Surede iki kez geçer) ve 114 = ...",
+    "relation": "19 x 6."
+  },
+  {
+    "no": "5",
+    "observation": "9. Surenin eksik Besmelesinden 27. Surenin ekstra Besmelesine kadar tam olarak ...",
+    "relation": "19 sure vardır."
+  },
+  {
+    "no": "6",
+    "observation": "Buradan şu sonuç çıkar ki 9’dan 27’ye kadar olan sure numaralarının toplamı (9 + 10 + 11 + 12 + ... + 26 + 27) 342’dir, yani ...",
+    "relation": "19 x 18."
+  },
+  {
+    "no": "7",
+    "observation": "Bu toplam (342) ayrıca 27. Surenin iki Besmelesi arasındaki kelime sayısına eşittir ve 342 = ...",
+    "relation": "19 x 18."
+  },
+  {
+    "no": "8",
+    "observation": "Ünlü ilk vahiy (96:1-5) tam olarak ...",
+    "relation": "19 kelimedir."
+  },
+  {
+    "no": "9",
+    "observation": "Bu 19 kelimelik ilk vahiyin harf sayısı: 76 ...",
+    "relation": "19 x 4."
+  },
+  {
+    "no": "10",
+    "observation": "Kronolojik sırada ilk olan bu 96. Sure ...",
+    "relation": "19 ayettir."
+  },
+  {
+    "no": "11",
+    "observation": "Bu kronolojik olarak ilk sure son surenin şu kadar sure üstüne yerleştirilmiştir ...",
+    "relation": "19"
+  },
+  {
+    "no": "12",
+    "observation": "96. Sure, 304 Arapça harften oluşur ve 304 şuna eşittir ...",
+    "relation": "19 x 16."
+  },
+  {
+    "no": "13",
+    "observation": "Son vahiy (Sure 110) ...",
+    "relation": "19 kelimeden oluşur."
+  },
+  {
+    "no": "14",
+    "observation": "Son vahyin ilk ayeti (110:1) ...",
+    "relation": "19 harftir."
+  },
+  {
+    "no": "15",
+    "observation": "14 farklı Arapça harf, 14 farklı “Kuranî Başlangıç Harfli” seti oluşturur (2:1’deki A.L.M. gibi) ve 29 surenin başında yer alır. Bu sayılar toplanınca 14 + 14 + 29 = 57 eder, yani ...",
+    "relation": "19 x 3."
+  },
+  {
+    "no": "16",
+    "observation": "Kuranî Başlangıç Harflerinin geçtiği 29 surenin numaralarının toplamı 2 + 3 + 7 + ... + 50 + 68 = 822’dir ve 822 + 14 (14 başlangıç harf seti) 836 eder, yani ...",
+    "relation": "19 x 44."
+  },
+  {
+    "no": "17",
+    "observation": "İlk başlangıç harfli sure (2. Sure) ile son başlangıç harfli sure (68. Sure) arasında 38 başlangıç harfsiz sure vardır ...",
+    "relation": "19 x 2."
+  },
+  {
+    "no": "18",
+    "observation": "İlk ve son başlangıç harfli sure arasında “başlangıç harfli” ve “başlangıç harfsiz” surelerden dönüşümlü ...",
+    "relation": "19 set vardır"
+  },
+  {
+    "no": "19",
+    "observation": "Kuran 30 sayıdan bahseder: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 19, 20, 30, 40, 50, 60, 70, 80, 99, 100, 200, 300, 1000, 2000, 3000, 5000, 50.000 ve 100.000. Bu sayıların toplamı 162146 eder, yani ...",
+    "relation": "19 x 8534."
+  }
+];
+
+const verses = [
+  {
+    "ref": "74:30",
+    "text": "Üzerinde on dokuz var."
+  },
+  {
+    "ref": "74:31",
+    "text": "Biz, Cehennemin bekçileri olmaları için melekleri görevlendirdik ve onların sayısını (19) tayin ettik ki (1) inkârcıları rahatsız etsin, (2) Hristiyanları ve Yahudileri (bunun göksel bir kutsal yazı olduğuna) ikna etsin, (3) imanlıların imanını güçlendirsin, (4) Hristiyanların, Yahudilerin ve inananların kalplerinden tüm şüphe izlerini gidersin, (5) kalplerinde şüphe barındıranları ve inkârcıları ifşa etsin; onlar şöyle diyecekler: “TANRI bu alegoriyle ne demek istedi?” TANRI böylece irade ettiği kimseyi saptırır ve irade ettiği kimseye rehberlik eder. Rabbinin askerlerini O’ndan başka hiç kimse bilmez. Bu, insanlar için bir hatırlatmadır."
+  },
+  {
+    "ref": "74:32",
+    "text": "Kesinlikle, (yemin ederim) aya."
+  },
+  {
+    "ref": "74:33",
+    "text": "Ve geçtiğinde geceye."
+  },
+  {
+    "ref": "74:34",
+    "text": "Ve ışıldadığında sabaha."
+  },
+  {
+    "ref": "74:35",
+    "text": "Bu, büyük mucizelerden biridir."
+  },
+  {
+    "ref": "74:36",
+    "text": "İnsanlığa bir uyarıdır."
+  },
+  {
+    "ref": "74:37",
+    "text": "Aranızdan ilerlemeyi ya da gerilemeyi arzu edenler için."
+  }
+];
+
+const fatihaRows = [
+  {
+    "verse": "1",
+    "letters": "19",
+    "value": "786"
+  },
+  {
+    "verse": "2",
+    "letters": "17",
+    "value": "581"
+  },
+  {
+    "verse": "3",
+    "letters": "12",
+    "value": "618"
+  },
+  {
+    "verse": "4",
+    "letters": "11",
+    "value": "241"
+  },
+  {
+    "verse": "5",
+    "letters": "19",
+    "value": "836"
+  },
+  {
+    "verse": "6",
+    "letters": "18",
+    "value": "1072"
+  },
+  {
+    "verse": "7",
+    "letters": "43",
+    "value": "6009"
+  },
+  {
+    "verse": "Toplamlar",
+    "letters": "139",
+    "value": "10143"
+  }
+];
+
+const sourceNote = "74:30-35 Bu “Büyük mucizelerden biri” Kuran’ın Tanrı’nın dünyaya mesajı olduğunun ilk fiziksel delilini sunmaktadır. Bu 19-tabanlı mucize, Ek 1’de ayrıntılı bir şekilde anlatılmıştır.";
+const appendixOpening = "Bu kitabın herhangi bir okuru Kuran’ın matematiksel mucizesini kolayca teyit edebilir. “Tanrı” (Allah) kelimesi metin boyunca kalın büyük harflerle yazılmıştır. “Tanrı” kelimesinin kümülatif geçiş sayısı her sayfanın altındaki sol köşede belirtilmiştir. Sağ alt köşedeki sayı, “Tanrı” kelimesini içeren ayetlerin numaralarının kümülatif toplamıdır. Metnin son sayfası olan 372. sayfa, “Tanrı” kelimesinin toplam geçiş sayısının 2698 olduğunu, yani 19 x 142 olduğunu gösterir. “Tanrı” kelimesini içeren bütün ayetler için ayet numaralarının toplamı 118123’tür; bu da 19’un bir katıdır (118123 = 19 x 6217).";
+const qExampleSource = [
+  "Bilgisayar verileri, Q başlangıç harfli yegâne sureler olan 42 ve 50’nin metninin aynı sayıda Q içerdiğini gösterdi, 57 ve 57. Bu, Kuran’da kasıtlı bir matematiksel sistemin var olabileceğine dair ilk ipucuydu.",
+  "50. Surenin başlığı “Q”dur, “Q” başlangıç harfiyle başlar ve ilk ayet şöyle der: “Q ve şanlı Kuran.” Bu, “Q”nun “Kuran”ı temsil ettiğini ve Q başlangıç harfli iki suredeki toplam Q sayısının Kuran’ın 114 suresini temsil ettiğini gösterdi (57 + 57 = 114 = 19 x 6). Bu fikir, “Kuran” ifadesinin Kuran’da 57 kez geçtiği gerçeğiyle güçlendi.",
+  "42. Sure 53 ayetten oluşur ve 42 + 53 = 95 = 19 x 5.",
+  "50. Sure 45 ayetten oluşur ve 50 + 45 = 95, 42. Suredekiyle aynı toplam."
+];
+const discoveryNote = "“19”un Kuran’ın ortak paydası olduğu yönündeki çok önemli keşif, Hicri 1393 Zilhiccesine denk gelerek, Ocak 1974’te gerçeklik kazandı. Kuran H.Ö. (Hicretten Önce) 13’te vahyedildi. Bu, Kuran’ın vahyinden mucizesinin açığa çıkarılmasına kadar yıl sayısını 1393 + 13 = 1406 = 19 x 74 yapar. Yukarıda belirtildiği gibi, Mucizenin açığa çıkarılması Ocak 1974’te gerçekleşti. 19 x 74 kameri yıl ile 1974 güneş yılı arasındaki korelasyon gözden kaçamazdı. Bu, “19”un 74. Surede anıldığı gerçeği göz önünde bulundurulduğunda özellikle esrarengizdir.";
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={canonical}
+  ogImage="/artist/berk-portrait.webp"
+  lang={pageLang}
+>
+  <Nav />
+
+  <section class="why19-shell py-10 md:py-28">
+    <div class="mx-auto max-w-6xl space-y-10 md:space-y-24">
+      <header class="relative overflow-hidden rounded-[2rem] border border-accent/20 bg-accent/[0.045] px-6 py-14 shadow-2xl shadow-black/20 md:px-12 md:py-20 lg:px-16">
+        <div class="pointer-events-none absolute -right-8 -top-14 select-none font-heading text-[11rem] font-bold leading-none text-[#D4AF37]/[0.07] sm:text-[15rem] md:text-[22rem]" aria-hidden="true">XIX</div>
+        <div class="pointer-events-none absolute inset-x-12 top-0 h-px xix-rule" aria-hidden="true"></div>
+        <div class="relative z-10 max-w-4xl">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.42em] text-[#D4AF37]">{copy.eyebrow}</p>
+          <h1 class="xix-glow text-5xl font-heading font-bold leading-none text-maintext sm:text-6xl md:text-8xl">{copy.h1}</h1>
+          <p class="mt-7 max-w-3xl text-lg leading-8 text-subtext md:text-xl md:leading-9">{copy.hero}</p>
+          <div class="mt-8 rounded-2xl border border-[#D4AF37]/20 bg-[#D4AF37]/[0.055] p-5 text-sm leading-7 text-subtext md:p-6">
+            <strong class="text-[#E7C966]">{copy.noteLabel}:</strong> {copy.source}
+          </div>
+          <div class="mt-8 flex flex-wrap gap-3 text-xs font-bold uppercase tracking-[0.14em]">
+            <a href="#quran-74" class="rounded-full border border-accent/25 bg-accent/5 px-4 py-2.5 text-accent transition hover:border-accent/55 hover:bg-accent/10">{copy.jump1}</a>
+            <a href="#simple-facts" class="rounded-full border border-accent/25 bg-accent/5 px-4 py-2.5 text-accent transition hover:border-accent/55 hover:bg-accent/10">{copy.jump2}</a>
+            <a href="#closer-look" class="rounded-full border border-accent/25 bg-accent/5 px-4 py-2.5 text-accent transition hover:border-accent/55 hover:bg-accent/10">{copy.jump3}</a>
+            <a href="#why-i-use-it" class="rounded-full border border-accent/25 bg-accent/5 px-4 py-2.5 text-accent transition hover:border-accent/55 hover:bg-accent/10">{copy.jump4}</a>
+          </div>
+        </div>
+      </header>
+
+      <section id="quran-74" class="scroll-mt-28">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-12">
+          <div>
+            <p class="mb-4 text-xs font-bold uppercase tracking-[0.4em] text-[#D4AF37]">{copy.sec1}</p>
+            <h2 class="text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">{copy.sec1h}</h2>
+            <p class="mt-6 text-lg leading-8 text-subtext">{copy.sec1p}</p>
+          </div>
+          <div class="overflow-hidden rounded-[2rem] border border-accent/15 bg-background/35">
+            {verses.map((verse, index) => (
+              <div class:list={[
+                'grid grid-cols-[64px_1fr] gap-4 px-5 py-5 md:grid-cols-[82px_1fr] md:px-7 md:py-6',
+                index !== verses.length - 1 && 'border-b border-accent/10',
+                verse.ref === '74:30' && 'bg-[#D4AF37]/[0.055]',
+                verse.ref === '74:35' && 'bg-accent/[0.04]'
+              ]}>
+                <div class="font-mono text-sm font-bold text-[#D4AF37]">{verse.ref}</div>
+                <p class:list={[
+                  'leading-7 text-subtext md:text-lg md:leading-8',
+                  (verse.ref === '74:30' || verse.ref === '74:35') && 'font-heading text-xl font-bold text-maintext md:text-2xl'
+                ]}>{verse.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="mt-7 rounded-2xl border border-accent/15 bg-accent/[0.035] p-6 text-sm leading-7 text-subtext md:px-8">
+          <span class="font-bold text-accent">{copy.noteLabel} — 74:30–35:</span> {sourceNote}
+        </div>
+      </section>
+
+      <section id="simple-facts" class="scroll-mt-28 rounded-[2rem] border border-accent/15 bg-accent/[0.025] p-6 md:p-10 lg:p-12">
+        <div class="max-w-4xl">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.4em] text-[#D4AF37]">{copy.sec2}</p>
+          <h2 class="text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">{copy.sec2h}</h2>
+          <p class="mt-6 text-lg leading-8 text-subtext">{copy.sec2p}</p>
+        </div>
+        <div class="mt-7 border-l-2 border-[#D4AF37]/45 pl-5 text-sm leading-7 text-subtext md:max-w-5xl md:text-base">{appendixOpening}</div>
+
+        <div class="xix-fact-desktop mt-10 overflow-hidden rounded-2xl border border-accent/15 bg-background/25">
+          <table class="xix-table">
+            <thead><tr><th class="w-[72px]">{copy.tableNum}</th><th>{copy.tableObs}</th><th class="w-[190px]">{copy.tableRel}</th></tr></thead>
+            <tbody>
+              {simpleFacts.map((fact) => (
+                <tr><td class="font-mono font-bold text-[#D4AF37]">{fact.no}</td><td class="leading-7 text-subtext">{fact.observation}</td><td class="font-heading font-bold text-maintext">{fact.relation}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="xix-fact-mobile mt-8 gap-3">
+          {simpleFacts.map((fact) => (
+            <article class="rounded-2xl border border-accent/15 bg-background/30 p-5">
+              <div class="flex items-center justify-between gap-4"><span class="font-mono text-sm font-bold text-[#D4AF37]">{fact.no.padStart(2,'0')}</span><span class="rounded-full border border-[#D4AF37]/25 bg-[#D4AF37]/[0.06] px-3 py-1 text-xs font-bold text-[#E7C966]">{fact.relation}</span></div>
+              <p class="mt-4 text-sm leading-7 text-subtext">{fact.observation}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="closer-look" class="scroll-mt-28">
+        <div class="mb-9 max-w-4xl"><p class="mb-4 text-xs font-bold uppercase tracking-[0.4em] text-[#D4AF37]">{copy.sec3}</p><h2 class="text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">{copy.sec3h}</h2></div>
+        <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+          <article class="rounded-[2rem] border border-accent/15 bg-accent/[0.035] p-7 md:p-9">
+            <p class="text-xs font-bold uppercase tracking-[0.35em] text-accent">19 × 142</p><h3 class="mt-3 text-3xl font-heading font-bold text-maintext">{copy.godTitle}</h3><p class="mt-5 leading-8 text-subtext">{copy.godText}</p>
+            <div class="mt-7 grid grid-cols-2 gap-3"><div class="rounded-2xl border border-accent/10 bg-background/35 p-4"><div class="text-3xl font-heading font-bold text-[#D4AF37]">2698</div><div class="mt-1 text-xs text-subtext">19 × 142</div></div><div class="rounded-2xl border border-accent/10 bg-background/35 p-4"><div class="text-3xl font-heading font-bold text-[#D4AF37]">118123</div><div class="mt-1 text-xs text-subtext">19 × 6217</div></div></div>
+          </article>
+          <article class="rounded-[2rem] border border-accent/15 bg-accent/[0.035] p-7 md:p-9">
+            <p class="text-xs font-bold uppercase tracking-[0.35em] text-accent">57 + 57 = 114</p><h3 class="mt-3 text-3xl font-heading font-bold text-maintext">{copy.qTitle}</h3><p class="mt-5 leading-8 text-subtext">{copy.qText}</p>
+            <div class="mt-7 grid grid-cols-3 gap-3 text-center"><div class="rounded-2xl border border-accent/10 bg-background/35 p-4"><div class="text-2xl font-heading font-bold text-[#D4AF37]">57</div><div class="mt-1 text-[11px] text-subtext">Q · 42</div></div><div class="rounded-2xl border border-accent/10 bg-background/35 p-4"><div class="text-2xl font-heading font-bold text-[#D4AF37]">57</div><div class="mt-1 text-[11px] text-subtext">Q · 50</div></div><div class="rounded-2xl border border-accent/10 bg-background/35 p-4"><div class="text-2xl font-heading font-bold text-[#D4AF37]">114</div><div class="mt-1 text-[11px] text-subtext">19 × 6</div></div></div>
+          </article>
+        </div>
+
+        <article class="mt-5 rounded-[2rem] border border-accent/15 bg-background/30 p-6 md:p-9">
+          <div class="grid grid-cols-1 gap-8 lg:grid-cols-[0.75fr_1.25fr]">
+            <div><p class="text-xs font-bold uppercase tracking-[0.35em] text-accent">1:1–7</p><h3 class="mt-3 text-3xl font-heading font-bold text-maintext">{copy.fatihaTitle}</h3><p class="mt-5 leading-8 text-subtext">{copy.fatihaP}</p></div>
+            <div class="overflow-hidden rounded-2xl border border-accent/15"><table class="xix-table"><thead><tr><th>{copy.fcol1}</th><th>{copy.fcol2}</th><th>{copy.fcol3}</th></tr></thead><tbody>{fatihaRows.map((row) => (<tr><td class="font-mono font-bold text-[#D4AF37]">{row.verse}</td><td class="text-subtext">{row.letters}</td><td class="font-heading font-bold text-maintext">{row.value}</td></tr>))}</tbody></table></div>
+          </div>
+        </article>
+
+        <details class="mt-5 rounded-2xl border border-accent/15 bg-accent/[0.025] p-6 open:bg-accent/[0.035]">
+          <summary class="cursor-pointer font-heading text-lg font-bold text-maintext">{copy.noteLabel} · Q / XIX</summary>
+          <div class="mt-5 space-y-4 text-sm leading-7 text-subtext">{qExampleSource.map((line) => <p>{line}</p>)}<p class="border-t border-accent/10 pt-4">{discoveryNote}</p></div>
+        </details>
+      </section>
+
+      <section id="why-i-use-it" class="scroll-mt-28 relative overflow-hidden rounded-[2rem] border border-[#D4AF37]/25 bg-[#D4AF37]/[0.04] p-7 md:p-12">
+        <div class="pointer-events-none absolute -bottom-14 -right-8 select-none font-heading text-[12rem] font-bold leading-none text-[#D4AF37]/[0.055] md:text-[20rem]" aria-hidden="true">19</div>
+        <div class="relative z-10 max-w-4xl"><p class="mb-4 text-xs font-bold uppercase tracking-[0.4em] text-[#D4AF37]">{copy.sec4}</p><h2 class="text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">{copy.sec4h}</h2><div class="mt-7 space-y-5 text-lg leading-8 text-subtext"><p>{copy.personal1}</p><p>{copy.personal2}</p></div><div class="mt-9 inline-flex max-w-full flex-wrap items-center rounded-2xl border border-[#D4AF37]/25 bg-background/25 px-5 py-4 font-heading text-base font-bold text-[#E7C966] md:text-xl">{copy.path}</div></div>
+      </section>
+
+      <section class="rounded-[2rem] border border-accent/15 bg-accent/[0.025] p-7 text-center md:p-12">
+        <p class="mb-4 text-xs font-bold uppercase tracking-[0.4em] text-[#D4AF37]">{copy.sec5}</p><h2 class="mx-auto max-w-4xl text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">{copy.sec5h}</h2><p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-subtext">{copy.sec5p}</p>
+        <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row"><a href="https://qurantft.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-accent/40 bg-accent/10 px-6 py-3 text-sm font-bold text-accent transition hover:-translate-y-0.5 hover:border-accent hover:bg-accent hover:text-background">{copy.quranBtn}</a><a href="https://kuranteyit.com/#appendices" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-[#D4AF37]/35 bg-[#D4AF37]/[0.06] px-6 py-3 text-sm font-bold text-[#E7C966] transition hover:-translate-y-0.5 hover:border-[#D4AF37]/70 hover:bg-[#D4AF37]/10">{copy.evidenceBtn}</a></div>
+        <p class="mx-auto mt-8 max-w-3xl text-xs leading-6 text-subtext/65">{copy.footer}</p>
+      </section>
+    </div>
+  </section>
+
+  <style>
+    .why19-shell { --xix-gold: #D4AF37; }
+    .xix-glow { text-shadow: 0 0 42px rgba(212,175,55,.18); }
+    .xix-rule { background: linear-gradient(90deg, transparent, rgba(212,175,55,.55), transparent); }
+    .xix-table { width:100%; border-collapse:collapse; }
+    .xix-table th,.xix-table td { padding:1rem 1.1rem; vertical-align:top; border-bottom:1px solid color-mix(in srgb,var(--color-accent),transparent 84%); }
+    .xix-table th { text-align:left; font-size:.72rem; line-height:1rem; text-transform:uppercase; letter-spacing:.18em; color:color-mix(in srgb,var(--color-accent),white 18%); background:color-mix(in srgb,var(--color-accent),transparent 94%); }
+    .xix-table tbody tr:last-child td { border-bottom:0; }
+    .xix-table tbody tr:hover td { background:color-mix(in srgb,var(--color-accent),transparent 96%); }
+    .xix-fact-mobile { display:none; }
+    @media (max-width:767px) { .xix-fact-desktop{display:none}.xix-fact-mobile{display:grid} }
+  </style>
+</Layout>
