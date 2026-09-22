@@ -88,12 +88,18 @@ const navItems: NavItem[] = [
       },
     ],
   },
-  {
-    label: { en: 'Contact', tr: 'İletişim' },
-    path: '/',
-    hash: 'contact',
-    icon: 'mdi:email',
-  },
+{
+  label: { en: 'Career', tr: 'Kariyer' },
+  path: '/career/',
+  icon: 'mdi:briefcase-outline',
+  matchPrefix: '/career',
+},
+{
+  label: { en: 'Contact', tr: 'İletişim' },
+  path: '/',
+  hash: 'contact',
+  icon: 'mdi:email',
+},
 ];
 
 function itemHref(item: NavItem): string {
@@ -188,7 +194,7 @@ const turkishHref = getLanguageSwitchHref(currentUrl, 'tr');
       class="container mx-auto flex justify-center items-center p-3 reveal-content"
       style="animation-delay: 700ms;"
     >
-      <ul class="grid grid-cols-7 w-full items-center md:flex md:w-auto md:justify-center md:gap-6 lg:gap-9">
+      <ul class="grid grid-cols-8 w-full items-center md:flex md:w-auto md:justify-center md:gap-6 lg:gap-9">
         {
           navItems.map((item) => {
             const isActive = isItemActive(item);
