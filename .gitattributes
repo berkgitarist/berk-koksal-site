@@ -1,0 +1,23 @@
+﻿# Normalize text files to LF
+* text=auto eol=lf
+
+# Windows-specific scripts may keep CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.mp3 binary
+*.wav binary
+*.mp4 binary
+*.webm binary
