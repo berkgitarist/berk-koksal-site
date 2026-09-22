@@ -1,105 +1,131 @@
-# CareerPortfolio: Data-Driven Astro SSG
-Live Demo: [careerportofio.netlify.app](https://careerportofio.netlify.app)
+# Berk Köksal Official Site
 
-[![Astro](https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=white)](https://astro.build/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Contributions Welcome](https://img.shields.io/badge/🤝_Contributions-Welcome-blue)](CONTRIBUTING.md)
+The official website of Berk Köksal — composer, guitarist, music producer,
+software engineer, founder of Neo-Sacred Zikr and creator of QURANIC CONCEPTS.
 
-A high-performance, responsive portfolio built with **Astro**, **Tailwind CSS**, and **Native Browser Animations**. Designed to be 100% data-driven and easy to customize as a reusable template.
+Production: https://berkkoksal.com
 
-## 🌟 Highlights
-- **Zero-JS by Default:** Leveraging Astro's islands architecture.
-- **JSON-First:** Update your information in `src/data/` without touching any code.
-- **Built-in Themes**: Switch between multiple professional color palettes and light/dark modes from a single config file.
-- **Fully Responsive:** Optimized for mobile, tablet, and desktop.
-- **Performance:** Optimized for perfect Lighthouse scores.
+This repository contains the production source code for the official Berk Köksal
+website. It has evolved beyond its original portfolio-template foundation and is
+maintained as a dedicated artist, music, writing and career platform.
 
-## 🛠️ Tech Stack
-- **Frontend:** [Astro](https://astro.build/) (Static Site Generation)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **Icons:** [Iconify](https://iconify.design/) via `astro-icon`
-- **Deployment:** [Netlify](https://www.netlify.com)
-- **Backend:** [FastAPI](https://fastapi.tiangolo.com/) *(Works without backend — open source release coming soon)*
+## Creative Universes
 
-## 🚀 Getting Started
-Follow these instructions to get a local copy up and running.
+### Neo-Sacred Zikr
 
-### Prerequisites
-Make sure you have **Astro v6** and **Node.js** (v22.12.0 or higher) installed on your machine.
+A contemporary sacred music universe centered on remembrance and the
+glorification of the ONE GOD, expressed through different musical languages
+including symphonic music, ambient, rock, choral music, rap, jazz and metal.
 
-### Installation
-1. Click **Use this template** on this repository.
-2. Choose **Create a new repository**.
-3. Clone your new repository: `git clone <your-repo-url>`
-4. Navigate to your repo: `cd <your-repo-name>`
-5. Install dependencies: `npm install`
-6. Start development server: `npm run dev`
-7. Update your content in `/src/data/`
-8. Build and deploy on your preferred platform
+### QURANIC CONCEPTS
 
+A separate concept-album framework in which specific Quranic subjects, scenes,
+voices and realities determine the musical language, structure and visual world
+of each project.
 
-## 🛠️ How to Customize
-To make this portfolio yours, simply edit the JSON files in `src/data/`.
+HELLL is the first major album world within QURANIC CONCEPTS.
 
-### 🎨 Switching Themes
-This template comes with multiple built-in color palettes. To change the theme of your portfolio, open `src/config.ts` and update the `baseTheme` variable to one of the available options:
+## Main Sections
 
-```typescript
-export const SITE_CONFIG = {
-  // Options: 'default', 'strategic', 'innovator', 'executive'
-  baseTheme: 'default', 
-};
-```
-*(The template will automatically handle the dark/light mode toggles for whichever base theme you choose!)*
+The website currently includes:
 
-### 📁 Directory Structure
-```
-├── public/              # Global static assets (placeholder.jpg, favicon)
-├── src/
-│   ├── assets/          # Project & Profile images (Supports automatic Astro optimization)
-│   ├── components/      # Reusable Astro components
-│   ├── data/            # JSON files for project data
-│   ├── layouts/         # Layout templates with Meta tags
-│   ├── pages/           # Site routes (index.astro)
-│   └── styles/          # global css styles
-│   └── config.ts        # Global site configuration
-├── astro.config.mjs     # Astro configuration
-└── tsconfig.json        # Typescript configuration
-```
+- Home and discography
+- Official biography
+- Full biography
+- Neo-Sacred Zikr
+- QURANIC CONCEPTS
+- Album and project pages
+- Quran-centered writings and reflections
+- Poetry archive
+- Why 19?
+- Career profile
+- Contact and external music platforms
 
+The site is available in English and Turkish.
 
+English content uses the main route structure, while Turkish pages are served
+under `/tr/`.
 
+## Writings
 
-#### Useful commands and links for reference:
+Articles are managed through Astro Content Collections.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+The writing system supports:
 
-Tailwind CSS: `npx astro add tailwind`
+- English and Turkish content
+- Publish and updated dates
+- Categories
+- Tags
+- Featured articles
+- Draft filtering
+- Article metadata
+- SEO-ready static pages
 
-Inter font: `npm install @fontsource-variable/inter` 
+Content is stored under:
 
-Space Grotesk font: `npm install @fontsource-variable/space-grotesk`
+`src/content/writings/`
 
-Astro-icon: `npx astro add astro-icon`
+## KuranTeyit
 
-Material Desing Icons: `npm install @iconify-json/mdi`
+KuranTeyit is a separate Quran research web application developed by Berk Köksal.
 
-https://docs.astro.build/en/guides/styling/#add-tailwind-4
+The official Berk Köksal website links to KuranTeyit from relevant research,
+biography and career contexts. KuranTeyit remains an independent software project
+with its own repository and production site.
 
-https://www.astroicon.dev
+It should therefore be understood as a related research project rather than part
+of this site's runtime architecture.
 
-https://icon-sets.iconify.design/mdi/?category=Material
+## Technology
 
-## 🤝 Contributing
-Contributions are welcome!  
-Please read the [Contributing Guide](CONTRIBUTING.md) before opening a PR.
+- Astro 6
+- TypeScript
+- Tailwind CSS 4
+- Astro Content Collections
+- Iconify / astro-icon
+- Static Site Generation
+- Responsive mobile and desktop layouts
+- English / Turkish localization
+- Light and dark theme support
+- Responsive navigation
+- Open Graph and social metadata
+- Canonical URL support
+- Automatically generated XML sitemap
+- robots.txt
+- Structured content architecture
 
-## 📝 License
-This project is licensed under the [MIT License](LICENSE)
+## Architecture
+
+The website is generated as a static Astro site.
+
+The production domain is configured in `astro.config.mjs` and the sitemap is
+generated automatically with `@astrojs/sitemap`.
+
+Main project areas:
+
+```text
+public/
+  Static assets, artist images, album artwork, poems and robots.txt
+
+src/
+  components/
+    Shared UI components and navigation
+
+  content/
+    writings/
+      English and Turkish articles
+
+  layouts/
+    Shared page layout and SEO infrastructure
+
+  pages/
+    English site routes
+
+    tr/
+      Turkish site routes
+
+  styles/
+    Global design system and responsive styles
+
+  utils/
+    Localization and shared utilities
