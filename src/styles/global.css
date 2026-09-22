@@ -1472,3 +1472,8 @@ transition: none;
     letter-spacing: 0.18em !important;
   }
 }
+@media (max-width: 767px) {
+  #main-nav {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
