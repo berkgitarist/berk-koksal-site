@@ -1,9 +1,9 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 
-import localDataEn from '../data/home.json';
-import localDataTr from '../data/home.tr.json';
-import albumsData from '../data/albums.json';
+import localDataEn from "../data/home.json";
+import localDataTr from "../data/home.tr.json";
+import albumsData from "../data/albums.json";
 
 interface Social {
   name: string;
@@ -22,15 +22,13 @@ interface ProfileData {
 }
 
 interface Props {
-  lang?: 'en' | 'tr';
+  lang?: "en" | "tr";
 }
 
-const { lang = 'en' } = Astro.props;
-const isTurkish = lang === 'tr';
+const { lang = "en" } = Astro.props;
+const isTurkish = lang === "tr";
 
-const selectedLocalData = isTurkish
-  ? localDataTr
-  : localDataEn;
+const selectedLocalData = isTurkish ? localDataTr : localDataEn;
 
 const isApiLive = import.meta.env.PROD;
 const BASE_URL = import.meta.env.PUBLIC_API_BASE_URL;
@@ -42,15 +40,12 @@ if (!isTurkish && isApiLive && BASE_URL) {
     const response = await fetch(`${BASE_URL}/home`);
 
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
 
     data = await response.json();
   } catch (error) {
-    console.error(
-      'API Fetch failed, falling back to mock data',
-      error
-    );
+    console.error("API Fetch failed, falling back to mock data", error);
 
     data = selectedLocalData as ProfileData;
   }
@@ -58,95 +53,82 @@ if (!isTurkish && isApiLive && BASE_URL) {
   data = selectedLocalData as ProfileData;
 }
 
-const {
-  name,
-  intro,
-  introHtml,
-  resumeUrl,
-  socials
-} = data;
+const { name, intro, introHtml, resumeUrl, socials } = data;
 
-const displayIntro =
-  selectedLocalData.introHtml ||
-  introHtml ||
-  intro;
+const displayIntro = selectedLocalData.introHtml || introHtml || intro;
 
-const helllAlbum = albumsData.find(
-  (album) => album.slug === 'helll'
-);
+const helllAlbum = albumsData.find((album) => album.slug === "helll");
 
 const copy = isTurkish
   ? {
-      officialArtistWebsite: 'Resmî Sanatçı Sitesi',
+      officialArtistWebsite: "Resmî Sanatçı Sitesi",
       listenOnSpotify: "Spotify'da Dinle",
-      officialArtistPage: 'Resmî Sanatçı Sayfası',
-      creativeUniverses: 'MÜZİKAL EVRENLER',
-      sacredMusicUniverse: 'Yeni Çağın Zikiri',
+      officialArtistPage: "Resmî Sanatçı Sayfası",
+      creativeUniverses: "MÜZİKAL EVRENLER",
+      sacredMusicUniverse: "Yeni Çağın Zikiri",
       neoDescription:
-        'Zikir, tekrar, adanmışlık ve kutsal anış etrafında şekillenen bir müzik evreni. Merkezinde zikir vardır.',
-      neoStatement:
-        'Neo-Sacred Zikr dinleyiciyi hatırlamaya davet eder.',
-      conceptAlbumSeries: 'Konsept Albüm Serisi',
+        "Zikir, tekrar, adanmışlık ve kutsal anış etrafında şekillenen bir müzik evreni. Merkezinde zikir vardır.",
+      neoStatement: "Neo-Sacred Zikr dinleyiciyi hatırlamaya davet eder.",
+      conceptAlbumSeries: "Konsept Albüm Serisi",
       quranicDescription:
-        'KURAN’da anlatılan belirli temalar, sahneler, sesler ve gerçeklikler etrafında kurulan konsept albümler. Müziğin biçimini konu belirler.',
+        "KURAN’da anlatılan belirli temalar, sahneler, sesler ve gerçeklikler etrafında kurulan konsept albümler. Müziğin biçimini konu belirler.",
       quranicStatement:
-        'QURANIC CONCEPTS dinleyiciyi bu dünyaların içine girmeye davet eder.',
-      hourEyebrow: '• KURAN TEFEKKÜRÜ •',
-      hourTitle: 'KIYAMET SAATİ',
-      hourTarget: '24 EYLÜL 2280 • 19:33 UTC',
-      hourRead: 'Tefekkürü oku',
-      hourYears: 'YIL',
-      hourMonths: 'AY',
-      hourDays: 'GÜN',
-      hourHours: 'SAAT',
-      hourMinutes: 'DAKİKA',
-      hourSeconds: 'SANİYE',
-      albumMeta: 'ALBÜM • 2026 • 19 PARÇA',
-      helllStatement: 'BU ALBÜM BU DÜNYAYA AİT DEĞİL.',
+        "QURANIC CONCEPTS dinleyiciyi bu dünyaların içine girmeye davet eder.",
+      hourEyebrow: "• KURAN TEFEKKÜRÜ •",
+      hourTitle: "KIYAMET SAATİ",
+      hourTarget: "24 EYLÜL 2280 • 19:33 UTC",
+      hourRead: "Tefekkürü oku",
+      hourYears: "YIL",
+      hourMonths: "AY",
+      hourDays: "GÜN",
+      hourHours: "SAAT",
+      hourMinutes: "DAKİKA",
+      hourSeconds: "SANİYE",
+      albumMeta: "ALBÜM • 2026 • 19 PARÇA",
+      helllStatement: "BU ALBÜM BU DÜNYAYA AİT DEĞİL.",
       helllDescription:
-        'Cehennem, hesap, pişmanlık, susuzluk, hapsedilme ve geri dönüşü olmayan sonuçlara ilişkin KURAN merkezli uyarıları tek bir tavizsiz müzikal inişe dönüştüren 19 parçalık bir konsept albüm — on dokuzun mimarisinin içinde sona eriyor.',
-      magnificentDisturbance: 'Muhteşem Bir Rahatsız Edicilik.',
-      warningMustBeHeard: 'Uyarı Duyulmalı',
+        "Cehennem, hesap, pişmanlık, susuzluk, hapsedilme ve geri dönüşü olmayan sonuçlara ilişkin KURAN merkezli uyarıları tek bir tavizsiz müzikal inişe dönüştüren 19 parçalık bir konsept albüm — on dokuzun mimarisinin içinde sona eriyor.",
+      magnificentDisturbance: "Muhteşem Bir Rahatsız Edicilik.",
+      warningMustBeHeard: "Uyarı Duyulmalı",
       enterHelll: "CEHENNEM'i Dinle",
     }
   : {
-      officialArtistWebsite: 'Official Artist Website',
-      listenOnSpotify: 'Listen on Spotify',
-      officialArtistPage: 'Official Artist Page',
-      creativeUniverses: 'CREATIVE UNIVERSES',
-      sacredMusicUniverse: 'Sacred Music Universe',
+      officialArtistWebsite: "Official Artist Website",
+      listenOnSpotify: "Listen on Spotify",
+      officialArtistPage: "Official Artist Page",
+      creativeUniverses: "CREATIVE UNIVERSES",
+      sacredMusicUniverse: "Sacred Music Universe",
       neoDescription:
-        'Music centered on remembrance, repetition, devotion and sacred invocation. Its center is Zikr.',
-      neoStatement:
-        'Neo-Sacred Zikr invites the listener to remember.',
-      conceptAlbumSeries: 'Concept Album Series',
+        "Music centered on remembrance, repetition, devotion and sacred invocation. Its center is Zikr.",
+      neoStatement: "Neo-Sacred Zikr invites the listener to remember.",
+      conceptAlbumSeries: "Concept Album Series",
       quranicDescription:
-        'Concept albums built around specific themes, scenes, voices and realities described in the Quran. The subject determines the sound.',
+        "Concept albums built around specific themes, scenes, voices and realities described in the Quran. The subject determines the sound.",
       quranicStatement:
-        'QURANIC CONCEPTS invites the listener to enter these worlds.',
-      hourEyebrow: '• QURAN REFLECTION •',
-      hourTitle: 'DOOMSDAY CLOCK',
-      hourTarget: '24 SEPTEMBER 2280 • 19:33 UTC',
-      hourRead: 'Read the reflection',
-      hourYears: 'YEARS',
-      hourMonths: 'MONTHS',
-      hourDays: 'DAYS',
-      hourHours: 'HOURS',
-      hourMinutes: 'MINUTES',
-      hourSeconds: 'SECONDS',
-      albumMeta: 'ALBUM • 2026 • 19 TRACKS',
-      helllStatement: 'THIS ALBUM DOES NOT BELONG TO THIS WORLD.',
+        "QURANIC CONCEPTS invites the listener to enter these worlds.",
+      hourEyebrow: "• QURAN REFLECTION •",
+      hourTitle: "DOOMSDAY CLOCK",
+      hourTarget: "24 SEPTEMBER 2280 • 19:33 UTC",
+      hourRead: "Read the reflection",
+      hourYears: "YEARS",
+      hourMonths: "MONTHS",
+      hourDays: "DAYS",
+      hourHours: "HOURS",
+      hourMinutes: "MINUTES",
+      hourSeconds: "SECONDS",
+      albumMeta: "ALBUM • 2026 • 19 TRACKS",
+      helllStatement: "THIS ALBUM DOES NOT BELONG TO THIS WORLD.",
       helllDescription:
-        'A 19-track Quran-centered concept album that transforms warnings of Hell, judgment, regret, thirst, confinement and irreversible consequence into one uncompromising musical descent — ending inside the architecture of nineteen.',
-      magnificentDisturbance: 'A Magnificent Disturbance',
-      warningMustBeHeard: 'The Warning Must Be Heard',
-      enterHelll: 'Enter HELLL',
+        "A 19-track Quran-centered concept album that transforms warnings of Hell, judgment, regret, thirst, confinement and irreversible consequence into one uncompromising musical descent — ending inside the architecture of nineteen.",
+      magnificentDisturbance: "A Magnificent Disturbance",
+      warningMustBeHeard: "The Warning Must Be Heard",
+      enterHelll: "Enter HELLL",
     };
 
 const hourHref = isTurkish
-  ? '/tr/writings/kiyamet-saati/'
-  : '/writings/doomsday-clock/';
-const hourTarget = '2280-09-24T19:33:00Z';
+  ? "/tr/writings/kiyamet-saati/"
+  : "/writings/doomsday-clock/";
+const hourTarget = "2280-09-24T19:33:00Z";
 ---
 
 <section
@@ -162,7 +144,9 @@ const hourTarget = '2280-09-24T19:33:00Z';
     >
       <img
         src="/artist-logo.webp"
-        alt={isTurkish ? 'Berk Köksal sanatçı logosu' : 'Berk Köksal artist logo'}
+        alt={isTurkish
+          ? "Berk Köksal sanatçı logosu"
+          : "Berk Köksal artist logo"}
         class="object-cover w-full h-full scale-110"
         loading="eager"
         decoding="async"
@@ -175,10 +159,7 @@ const hourTarget = '2280-09-24T19:33:00Z';
     </div>
   </div>
 
-  <div
-    class="reveal-content"
-    style="animation-delay: 200ms;"
-  >
+  <div class="reveal-content" style="animation-delay: 200ms;">
     <p class="font-light leading-relaxed font-body text-subtext">
       {copy.officialArtistWebsite}
     </p>
@@ -202,10 +183,7 @@ const hourTarget = '2280-09-24T19:33:00Z';
     />
   </div>
 
-  <div
-    class="mt-8 mb-4 reveal-content"
-    style="animation-delay: 400ms;"
-  >
+  <div class="mt-8 mb-4 reveal-content" style="animation-delay: 400ms;">
     <a
       href={resumeUrl}
       target="_blank"
@@ -220,15 +198,11 @@ const hourTarget = '2280-09-24T19:33:00Z';
         />
 
         <div class="flex flex-col items-start text-left">
-          <span
-            class="text-sm font-medium tracking-wide md:text-base"
-          >
+          <span class="text-sm font-medium tracking-wide md:text-base">
             {copy.listenOnSpotify}
           </span>
 
-          <span
-            class="text-[10px] text-subtext font-light whitespace-nowrap"
-          >
+          <span class="text-[10px] text-subtext font-light whitespace-nowrap">
             {copy.officialArtistPage}
           </span>
         </div>
@@ -248,10 +222,7 @@ const hourTarget = '2280-09-24T19:33:00Z';
     {
       socials
         .filter(
-          (social) =>
-            social.url &&
-            social.url !== '#' &&
-            social.url !== ''
+          (social) => social.url && social.url !== "#" && social.url !== "",
         )
         .map((social) => (
           <a
@@ -266,9 +237,7 @@ const hourTarget = '2280-09-24T19:33:00Z';
               class="w-8 h-8 transition-colors duration-300 text-maintext group-hover:text-accent"
             />
 
-            <span
-              class="absolute -bottom-6 scale-0 opacity-0 transition-all duration-300 text-xs text-accent font-body group-hover:scale-100 group-hover:opacity-100"
-            >
+            <span class="absolute -bottom-6 scale-0 opacity-0 transition-all duration-300 text-xs text-accent font-body group-hover:scale-100 group-hover:opacity-100">
               {social.name}
             </span>
           </a>
@@ -329,7 +298,9 @@ const hourTarget = '2280-09-24T19:33:00Z';
 
     <div class="doomsday-clock__footer">
       <time datetime={hourTarget}>{copy.hourTarget}</time>
-      <span class="doomsday-clock__cta">{copy.hourRead} <span aria-hidden="true">→</span></span>
+      <span class="doomsday-clock__cta"
+        >{copy.hourRead} <span aria-hidden="true">→</span></span
+      >
     </div>
   </a>
 </section>
@@ -365,7 +336,9 @@ const hourTarget = '2280-09-24T19:33:00Z';
       href={isTurkish ? "/tr/quranic-concepts/" : "/quranic-concepts/"}
       class="group rounded-[2rem] border border-[#6f1010]/45 bg-black/25 p-7 no-underline transition-all duration-300 hover:-translate-y-1 hover:border-[#a51d1d]/70 hover:bg-black/40 md:p-9"
     >
-      <p class="mb-3 text-xs font-bold uppercase tracking-[0.35em] text-[#b74a4a]">
+      <p
+        class="mb-3 text-xs font-bold uppercase tracking-[0.35em] text-[#b74a4a]"
+      >
         {copy.conceptAlbumSeries}
       </p>
       <h2 class="text-3xl font-heading font-bold text-maintext md:text-4xl">
@@ -395,16 +368,23 @@ const hourTarget = '2280-09-24T19:33:00Z';
     <div class="mb-6 flex items-center gap-2">
       <Icon name="mdi:album" class="h-5 w-5 text-[#b74a4a]" />
 
-      <span class="text-xs font-semibold uppercase tracking-[0.35em] text-[#b74a4a]">
+      <span
+        class="text-xs font-semibold uppercase tracking-[0.35em] text-[#b74a4a]"
+      >
         QURANIC CONCEPTS
       </span>
     </div>
 
     <div class="grid items-center grid-cols-1 gap-10 lg:grid-cols-[340px_1fr]">
-      <a href={isTurkish ? "/tr/albums/helll/" : "/albums/helll/"} class="group">
+      <a
+        href={isTurkish ? "/tr/albums/helll/" : "/albums/helll/"}
+        class="group"
+      >
         <img
           src="/albums/helll.png"
-          alt={isTurkish ? 'Berk KÖKSAL imzalı HELLL albüm kapağı' : 'HELLL album cover by Berk KÖKSAL'}
+          alt={isTurkish
+            ? "Berk KÖKSAL imzalı HELLL albüm kapağı"
+            : "HELLL album cover by Berk KÖKSAL"}
           loading="lazy"
           decoding="async"
           class="w-full rounded-3xl border border-white/10 bg-black shadow-[0_0_80px_rgba(120,0,0,0.16)] transition duration-500 group-hover:scale-[1.02]"
@@ -416,11 +396,15 @@ const hourTarget = '2280-09-24T19:33:00Z';
           {copy.albumMeta}
         </div>
 
-        <h2 class="mb-3 text-5xl font-bold leading-none text-maintext md:text-7xl">
+        <h2
+          class="mb-3 text-5xl font-bold leading-none text-maintext md:text-7xl"
+        >
           HELLL CEHENNEMM
         </h2>
 
-        <p class="mb-5 font-heading text-xl font-bold uppercase tracking-[0.08em] text-maintext/90 md:text-2xl">
+        <p
+          class="mb-5 font-heading text-xl font-bold uppercase tracking-[0.08em] text-maintext/90 md:text-2xl"
+        >
           {copy.helllStatement}
         </p>
 
@@ -428,11 +412,25 @@ const hourTarget = '2280-09-24T19:33:00Z';
           {copy.helllDescription}
         </p>
 
-        <div class="mb-8 flex flex-wrap gap-2 text-xs uppercase tracking-widest">
-          <span class="rounded-full border border-[#8f1c1c]/35 bg-[#8f1c1c]/10 px-4 py-2 text-[#d16c6c]">{copy.magnificentDisturbance}</span>
-          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">19 × 19</span>
-          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">XIX</span>
-          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">{copy.warningMustBeHeard}</span>
+        <div
+          class="mb-8 flex flex-wrap gap-2 text-xs uppercase tracking-widest"
+        >
+          <span
+            class="rounded-full border border-[#8f1c1c]/35 bg-[#8f1c1c]/10 px-4 py-2 text-[#d16c6c]"
+            >{copy.magnificentDisturbance}</span
+          >
+          <span
+            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75"
+            >19 × 19</span
+          >
+          <span
+            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75"
+            >XIX</span
+          >
+          <span
+            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75"
+            >{copy.warningMustBeHeard}</span
+          >
         </div>
 
         <div class="flex flex-wrap gap-4">
@@ -469,11 +467,7 @@ const hourTarget = '2280-09-24T19:33:00Z';
   .reveal-content {
     opacity: 0;
     transform: translateY(20px);
-    animation:
-      revealIn
-      0.8s
-      cubic-bezier(0.2, 0.8, 0.2, 1)
-      forwards;
+    animation: revealIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   }
 
   @keyframes revealIn {
@@ -485,39 +479,26 @@ const hourTarget = '2280-09-24T19:33:00Z';
 
   .balloon-float {
     will-change: transform;
-    animation:
-      floating-balloon
-      8s
-      ease-in-out
-      infinite;
+    animation: floating-balloon 8s ease-in-out infinite;
   }
 
   @keyframes floating-balloon {
     0% {
-      transform:
-        translate(0, 0)
-        rotate(0deg);
+      transform: translate(0, 0) rotate(0deg);
     }
 
     33% {
-      transform:
-        translate(3px, -8px)
-        rotate(1deg);
+      transform: translate(3px, -8px) rotate(1deg);
     }
 
     66% {
-      transform:
-        translate(-3px, -4px)
-        rotate(-1deg);
+      transform: translate(-3px, -4px) rotate(-1deg);
     }
 
     100% {
-      transform:
-        translate(0, 0)
-        rotate(0deg);
+      transform: translate(0, 0) rotate(0deg);
     }
   }
-
 
   /* === Kıyamet Saati / homepage countdown === */
   .doomsday-clock {
@@ -533,8 +514,16 @@ const hourTarget = '2280-09-24T19:33:00Z';
     text-align: left;
     text-decoration: none;
     background:
-      radial-gradient(circle at 82% 15%, color-mix(in srgb, var(--color-accent), transparent 78%), transparent 26%),
-      linear-gradient(135deg, rgba(3, 2, 18, 0.88), color-mix(in srgb, var(--color-background), black 8%));
+      radial-gradient(
+        circle at 82% 15%,
+        color-mix(in srgb, var(--color-accent), transparent 78%),
+        transparent 26%
+      ),
+      linear-gradient(
+        135deg,
+        rgba(3, 2, 18, 0.88),
+        color-mix(in srgb, var(--color-background), black 8%)
+      );
     box-shadow:
       0 28px 90px rgba(0, 0, 0, 0.38),
       0 0 70px color-mix(in srgb, var(--color-accent), transparent 88%),
@@ -550,8 +539,12 @@ const hourTarget = '2280-09-24T19:33:00Z';
     position: absolute;
     inset: 0;
     z-index: -1;
-    background:
-      linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.045) 50%, transparent 100%);
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.045) 50%,
+      transparent 100%
+    );
     transform: translateX(-110%);
     transition: transform 0.9s ease;
   }
@@ -635,11 +628,13 @@ const hourTarget = '2280-09-24T19:33:00Z';
     border-radius: 999px;
     color: var(--color-accent);
     background: color-mix(in srgb, var(--color-accent), transparent 94%);
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     font-size: 0.86rem;
     font-weight: 800;
     letter-spacing: 0.08em;
-    box-shadow: inset 0 0 28px color-mix(in srgb, var(--color-accent), transparent 90%);
+    box-shadow: inset 0 0 28px
+      color-mix(in srgb, var(--color-accent), transparent 90%);
   }
 
   .doomsday-clock__digits {
@@ -668,7 +663,8 @@ const hourTarget = '2280-09-24T19:33:00Z';
     display: block;
     overflow: hidden;
     color: #fff;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     font-variant-numeric: tabular-nums lining-nums;
     font-size: clamp(1.7rem, 3.15vw, 3.35rem);
     font-weight: 650;
@@ -784,21 +780,23 @@ const hourTarget = '2280-09-24T19:33:00Z';
   }
 </style>
 
-
 <script>
   const initDoomsdayClocks = () => {
-    document.querySelectorAll('[data-doomsday-clock]').forEach((clock) => {
-      if (!(clock instanceof HTMLElement) || clock.dataset.clockReady === 'true') {
+    document.querySelectorAll("[data-doomsday-clock]").forEach((clock) => {
+      if (
+        !(clock instanceof HTMLElement) ||
+        clock.dataset.clockReady === "true"
+      ) {
         return;
       }
 
-      const target = Date.parse(clock.dataset.target ?? '');
-      const yearsNode = clock.querySelector('[data-clock-years]');
-      const monthsNode = clock.querySelector('[data-clock-months]');
-      const daysNode = clock.querySelector('[data-clock-days]');
-      const hoursNode = clock.querySelector('[data-clock-hours]');
-      const minutesNode = clock.querySelector('[data-clock-minutes]');
-      const secondsNode = clock.querySelector('[data-clock-seconds]');
+      const target = Date.parse(clock.dataset.target ?? "");
+      const yearsNode = clock.querySelector("[data-clock-years]");
+      const monthsNode = clock.querySelector("[data-clock-months]");
+      const daysNode = clock.querySelector("[data-clock-days]");
+      const hoursNode = clock.querySelector("[data-clock-hours]");
+      const minutesNode = clock.querySelector("[data-clock-minutes]");
+      const secondsNode = clock.querySelector("[data-clock-seconds]");
 
       if (
         Number.isNaN(target) ||
@@ -812,20 +810,22 @@ const hourTarget = '2280-09-24T19:33:00Z';
         return;
       }
 
-      const pad = (value, width = 2) => String(value).padStart(width, '0');
+      const pad = (value: number, width = 2) =>
+        String(value).padStart(width, "0");
       const DAY_MS = 24 * 60 * 60 * 1000;
       const HOUR_MS = 60 * 60 * 1000;
       const MINUTE_MS = 60 * 1000;
       const SECOND_MS = 1000;
 
-      const daysInUtcMonth = (year, month) =>
+      const daysInUtcMonth = (year: number, month: number) =>
         new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
 
-      const buildUtcDate = (source, year, month) => {
-        const day = Math.min(
-          source.getUTCDate(),
-          daysInUtcMonth(year, month)
-        );
+      const buildUtcDate = (
+        source: Date,
+        year: number,
+        month: number,
+      ): Date => {
+        const day = Math.min(source.getUTCDate(), daysInUtcMonth(year, month));
 
         return new Date(
           Date.UTC(
@@ -835,23 +835,21 @@ const hourTarget = '2280-09-24T19:33:00Z';
             source.getUTCHours(),
             source.getUTCMinutes(),
             source.getUTCSeconds(),
-            source.getUTCMilliseconds()
-          )
+            source.getUTCMilliseconds(),
+          ),
         );
       };
 
-      const addUtcYears = (source, years) =>
+      const addUtcYears = (source: Date, years: number): Date =>
         buildUtcDate(
           source,
           source.getUTCFullYear() + years,
-          source.getUTCMonth()
+          source.getUTCMonth(),
         );
 
-      const addUtcMonths = (source, months) => {
+      const addUtcMonths = (source: Date, months: number): Date => {
         const totalMonths =
-          source.getUTCFullYear() * 12 +
-          source.getUTCMonth() +
-          months;
+          source.getUTCFullYear() * 12 + source.getUTCMonth() + months;
         const year = Math.floor(totalMonths / 12);
         const month = totalMonths - year * 12;
 
@@ -863,12 +861,12 @@ const hourTarget = '2280-09-24T19:33:00Z';
         const targetDate = new Date(target);
 
         if (now.getTime() >= target) {
-          yearsNode.textContent = '000';
-          monthsNode.textContent = '00';
-          daysNode.textContent = '00';
-          hoursNode.textContent = '00';
-          minutesNode.textContent = '00';
-          secondsNode.textContent = '00';
+          yearsNode.textContent = "000";
+          monthsNode.textContent = "00";
+          daysNode.textContent = "00";
+          hoursNode.textContent = "00";
+          minutesNode.textContent = "00";
+          secondsNode.textContent = "00";
           return;
         }
 
@@ -910,12 +908,12 @@ const hourTarget = '2280-09-24T19:33:00Z';
         secondsNode.textContent = pad(seconds);
       };
 
-      clock.dataset.clockReady = 'true';
+      clock.dataset.clockReady = "true";
       update();
       window.setInterval(update, 1000);
     });
   };
 
   initDoomsdayClocks();
-  document.addEventListener('astro:page-load', initDoomsdayClocks);
+  document.addEventListener("astro:page-load", initDoomsdayClocks);
 </script>

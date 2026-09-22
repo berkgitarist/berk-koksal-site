@@ -20,8 +20,6 @@ export async function getStaticPaths() {
 
 const { album } = Astro.props;
 const isHelll = album.slug === "helll";
-const spotifyPlaceholder =
-  "spotifyPlaceholder" in album && album.spotifyPlaceholder === true;
 
 const currentIndex = albums.findIndex((item) => item.slug === album.slug);
 const previous = albums[currentIndex - 1] ?? albums[albums.length - 1];
@@ -230,7 +228,7 @@ const albumVisual =
             </div>
 
             <div class="mt-9 flex flex-wrap justify-center gap-4 lg:justify-start">
-              <!-- TODO: Replace HELLL's temporary Spotify URL and set spotifyPlaceholder to false after release. -->
+              <!-- TODO: Replace HELLL's temporary Spotify URL after release. -->
               <a
                 href={album.spotify}
                 target="_blank"
@@ -267,10 +265,9 @@ const albumVisual =
                 src={spotifyEmbedUrl}
                 width="100%"
                 height="492"
-                frameborder="0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
-                class="block h-[352px] sm:h-[420px] lg:h-[492px]"
+                class="block border-0 h-[352px] sm:h-[420px] lg:h-[492px]"
               ></iframe>
             </div>
           </div>
@@ -822,7 +819,6 @@ const albumVisual =
                   src={spotifyEmbedUrl}
                   width="100%"
                   height="492"
-                  frameborder="0"
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
                   class="block h-[352px] sm:h-[420px] lg:h-[492px]"

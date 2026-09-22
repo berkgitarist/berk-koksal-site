@@ -12,7 +12,6 @@ interface Props {
 
 const { item, variant } = Astro.props;
 
-const isMobile = variant === 'mobile';
 const isLeft = variant === 'desktop-left';
 
 const alignmentClass = isLeft ? "text-right" : "";
