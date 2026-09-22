@@ -1,23 +1,38 @@
-## Contributions are Welcome & Appreciated! 
+# Contributing
 
-Every contribution matters
-— fixing a bug, adding a feature, improving the UI/Animation, optimizing performance, enhancing accessibility.
+Thank you for your interest in the Berk Köksal Official Site.
 
-### 📌 How to contribute
-1. Fork the repository
-2. Create a new branch based on your change:
-   - Feature: `git checkout -b feature/topic-name`
-   - Bug fix: `git checkout -b fix/topic-name`
-   - Documentation: `git checkout -b docs/topic-name`
-3. Make your changes while following the existing project structure and coding style
-4. Commit your changes with a clear message
-5. Open a Pull Request with a short description of **what changed and why**
+This repository contains the production source code for
+[berkkoksal.com](https://berkkoksal.com).
 
-### 💡 Contribution tips
-- Keep PRs focused and small (one improvement per PR)
-- Update documentation if needed
-- If applicable, include screenshots for UI changes
-- Feel free to contribute even for minor fixes like wording, formatting, or typo corrections
+Contributions related to technical improvements are welcome, including:
 
+- Bug fixes
+- Accessibility improvements
+- Performance improvements
+- Responsive layout fixes
+- SEO and metadata improvements
+- Code quality improvements
+- Browser compatibility fixes
 
-Thank you for helping make this portfolio template better 🚀
+## Creative and Editorial Content
+
+The website contains original artistic, musical, written and conceptual work.
+
+Changes to the following areas should not be made without prior approval:
+
+- Artist biography
+- Music and discography information
+- Neo-Sacred Zikr
+- QURANIC CONCEPTS
+- Quran-centered writings
+- Poetry
+- Artwork and photographs
+- Creative descriptions and editorial content
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install

@@ -1,6 +1,7 @@
 {
-  "name": "career-portfolio",
+  "name": "berk-koksal-official-site",
   "type": "module",
+  "private": true,
   "version": "0.1.6",
   "scripts": {
     "dev": "astro dev --host",

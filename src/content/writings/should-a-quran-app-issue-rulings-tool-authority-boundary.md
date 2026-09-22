@@ -51,7 +51,7 @@ While developing Kuranteyit, I often ask myself this question: Should a Quran ap
 
 An algorithm can find thousands of connections in seconds, but speed is not accuracy. Artificial intelligence can construct persuasive sentences, but persuasiveness is not testimony. An interface can create a feeling of certainty, but confidence on a screen does not grant authority to speak on behalf of GOD.
 
-This question continues the same line of thought as my earlier writings on balance, consistency between word and action, the limits of Quran research with artificial intelligence, and the responsibility of verification when comparing translations. I keep returning to the same point in all of them: **No matter how powerful a tool becomes, it should not replace the source or the human being's own responsibility.** All of my previous writings can be found <a href="https://www.berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">here</a>.
+This question continues the same line of thought as my earlier writings on balance, consistency between word and action, the limits of Quran research with artificial intelligence, and the responsibility of verification when comparing translations. I keep returning to the same point in all of them: **No matter how powerful a tool becomes, it should not replace the source or the human being's own responsibility.** All of my previous writings can be found <a href=https://berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">here</a>.
 
 ![Title ](/images/writings/bir-kuran-uygulamasi-hukum-vermeli-mi2.png)
 
@@ -255,7 +255,7 @@ This is the question I want to leave with myself as I continue developing Kurant
 
 **Does what I am building bring people closer to me and my choices, or does it help them look more carefully at GOD's verses and take responsibility for themselves?**
 
-For my previous writings on the Quran, technology, art, verification, and responsibility: <a href="https://www.berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">All my writings</a>.
+For my previous writings on the Quran, technology, art, verification, and responsibility: <a href=https://berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">All my writings</a>.
 
 ![Title ](/images/writings/bir-kuran-uygulamasi-hukum-vermeli-mi3.png)
 
