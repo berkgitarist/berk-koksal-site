@@ -48,7 +48,7 @@ author: "Berk KÖKSAL"
 
 The central purpose of this article is to think about the verses together with other related verses, and to express sincerely and deeply what bearing witness to the oneness of GOD means in human life in terms of knowledge, justice, truthfulness, and submission.
 
-Previously, in *Proclaim: Not Concealing the Truth and Tying the Word to GOD*, I reflected on not concealing revealed guidance, carrying the word truthfully, and keeping the direction of proclamation tied to GOD. In *Whom Does the Microphone Glorify? ZIKR RAP, Word, and Responsibility*, I questioned how a visible medium can amplify a voice without purifying the intention behind it. In *The Weight of Testimony* and *Should a Quran App Give Rulings? The Boundary Between Tool and Authority*, I returned to knowledge, testimony, and the limits of human authority. All my previous writings can be found <a href=https://berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">here</a>.
+Previously, in *Proclaim: Not Concealing the Truth and Tying the Word to GOD*, I reflected on not concealing revealed guidance, carrying the word truthfully, and keeping the direction of proclamation tied to GOD. In *Whom Does the Microphone Glorify? ZIKR RAP, Word, and Responsibility*, I questioned how a visible medium can amplify a voice without purifying the intention behind it. In *The Weight of Testimony* and *Should a Quran App Give Rulings? The Boundary Between Tool and Authority*, I returned to knowledge, testimony, and the limits of human authority. All my previous writings can be found <a href="https://berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">here</a>.
 
 This time a more unsettling question stands before me:
 

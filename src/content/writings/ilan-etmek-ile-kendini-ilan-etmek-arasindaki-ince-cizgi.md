@@ -48,7 +48,7 @@ author: "Berk KÖKSAL"
 
 Makalenin temel amacı, ayetleri diğer ilgili ayetlerle birlikte düşünmek; TANRI’nın birliğine şahitliğin bilgi, adalet, doğruluk ve teslimiyet bakımından insan hayatında ne anlama geldiğini samimi ve derin bir dille ortaya koymaktır.
 
-Daha önce *İlan Et: Hakikati Gizlememek, Sözü TANRI’ya Bağlamak* yazısında açıklanmış rehberliği gizlememek, sözü doğru taşımak ve ilanın yönünü TANRI’ya bağlamak üzerine düşünmüştüm. *Mikrofon Kimi Yüceltiyor? ZIKR RAP, Söz ve Sorumluluk* yazısında ise görünür bir aracın sesi yükseltirken niyeti arındırmadığını sorgulamıştım. *Şahitliğin Ağırlığı* ve *Bir Kuran Uygulaması Hüküm Vermeli mi? Araç ile Otorite Arasındaki Sınır* yazılarında da bilgi, şahitlik ve insan otoritesinin sınırına dönmüştüm. Önceki yazılarımın tamamına <a href=https://berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">buradan</a> ulaşılabilir.
+Daha önce *İlan Et: Hakikati Gizlememek, Sözü TANRI’ya Bağlamak* yazısında açıklanmış rehberliği gizlememek, sözü doğru taşımak ve ilanın yönünü TANRI’ya bağlamak üzerine düşünmüştüm. *Mikrofon Kimi Yüceltiyor? ZIKR RAP, Söz ve Sorumluluk* yazısında ise görünür bir aracın sesi yükseltirken niyeti arındırmadığını sorgulamıştım. *Şahitliğin Ağırlığı* ve *Bir Kuran Uygulaması Hüküm Vermeli mi? Araç ile Otorite Arasındaki Sınır* yazılarında da bilgi, şahitlik ve insan otoritesinin sınırına dönmüştüm. Önceki yazılarımın tamamına <a href="https://berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">buradan</a> ulaşılabilir.
 
 Bu kez beni daha rahatsız edici bir soru bekliyor:
 

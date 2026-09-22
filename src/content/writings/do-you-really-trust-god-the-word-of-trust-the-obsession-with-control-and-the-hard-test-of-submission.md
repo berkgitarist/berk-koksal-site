@@ -56,7 +56,7 @@ It is easy to trust when everything is going as I want. When there is money, hea
 
 That is when the inside of the statement opens up.
 
-Previously, in *Deep Reverence: Remembering, Faithfulness to the Covenant, and Turning to GOD Alone*, *The Weight of Witnessing*, *Do Not Accept Without Verifying*, and *How Can Monotheism Be Broken by a Single Word?*, I reflected on why direction must be turned toward GOD alone, how knowledge places responsibility upon a person, and how human speech is tested. All my previous writings can be found <a href=https://berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">here</a>.
+Previously, in *Deep Reverence: Remembering, Faithfulness to the Covenant, and Turning to GOD Alone*, *The Weight of Witnessing*, *Do Not Accept Without Verifying*, and *How Can Monotheism Be Broken by a Single Word?*, I reflected on why direction must be turned toward GOD alone, how knowledge places responsibility upon a person, and how human speech is tested. All my previous writings can be found <a href="https://berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">here</a>.
 
 This time the question is more disturbing.
 

@@ -46,7 +46,7 @@ This question is not unfamiliar to me. In *Not Accepting Without Verification*, 
 
 Sound and software, the two major fields in which I produce, have taught me a similar lesson. As a composer and mix-mastering engineer, I know that raising a single sound too much can change the balance of an entire work. As a software developer and Quran researcher, I also see how an interface, a ranking, or an explanation that looks authoritative can give a person a sense of authority without the person noticing. So when thinking about the High Society and the dispute there, what I most want to guard against is drowning out the verse with my own interpretation. The verse should speak first; my thought should follow it only as far as the verse allows.
 
-All of my previous reflection essays can be found at <a href=https://berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">berkkoksal.com/writings</a>.
+All of my previous reflection essays can be found at <a href="https://berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">berkkoksal.com/writings</a>.
 
 ![Title ](/images/writings/goksel-toplum-ust-toplum-kavgasi2.png)
 

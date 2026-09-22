@@ -56,7 +56,7 @@ Her şey istediğim gibi giderken güvenmek kolaydır. Para varken, sağlık yer
 
 İşte o zaman sözün içi açılıyor.
 
-Daha önce *Derin Saygı: Hatırlamak, Antlaşmaya Sadakat ve Yalnız TANRI’ya Yönelmek*, *Şahitliğin Ağırlığı*, *Teyit Etmeden Kabul Etmemek* ve *Bir Kelimeyle Tevhid Nasıl Bozulur?* başlıklı yazılarda yönün neden yalnız TANRI’ya çevrilmesi gerektiği, bilginin insana nasıl sorumluluk yüklediği ve insan sözünün nasıl sınandığı üzerinde durmuştum. Önceki yazılara <a href=https://berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">buradan ulaşılabilir</a>.
+Daha önce *Derin Saygı: Hatırlamak, Antlaşmaya Sadakat ve Yalnız TANRI’ya Yönelmek*, *Şahitliğin Ağırlığı*, *Teyit Etmeden Kabul Etmemek* ve *Bir Kelimeyle Tevhid Nasıl Bozulur?* başlıklı yazılarda yönün neden yalnız TANRI’ya çevrilmesi gerektiği, bilginin insana nasıl sorumluluk yüklediği ve insan sözünün nasıl sınandığı üzerinde durmuştum. Önceki yazılara <a href="https://berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">buradan</a> ulaşılabilir.
 
 Bu kez soru daha rahatsız edici.
 

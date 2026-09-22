@@ -46,7 +46,7 @@ Bu soru benim için yabancı değil. *Teyit Etmeden Kabul Etmemek* yazımda bilg
 
 Hayatımın iki büyük üretim alanı olan ses ve yazılım da bana benzer bir ders öğretti. Bir besteci ve mix-mastering mühendisi olarak tek bir sesi gereğinden fazla yükseltmenin bütün eserin dengesini değiştirebildiğini biliyorum. Bir yazılımcı ve Kuran araştırmacısı olarak da bir arayüzün, bir sıralamanın veya güçlü görünen bir açıklamanın insana fark ettirmeden otorite hissi verebildiğini görüyorum. Bu yüzden Üst Toplum ve oradaki kavga hakkında düşünürken en çok dikkat etmek istediğim şey, ayetin sesini kendi yorumumla bastırmamak. Önce ayet konuşmalı; benim düşüncem onun ardından, onun izin verdiği kadar ilerlemeli.
 
-Önceki tefekkür yazılarımın tamamına <a href=https://berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">berkkoksal.com/writings</a> üzerinden ulaşılabilir.
+Önceki tefekkür yazılarımın tamamına <a href="https://berkkoksal.com/writings/" target="_blank" rel="noopener noreferrer">berkkoksal.com/writings</a> üzerinden ulaşılabilir.
 
 ![Başlık ](/images/writings/goksel-toplum-ust-toplum-kavgasi2.png)
 
