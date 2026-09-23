@@ -7,7 +7,7 @@ description: >-
 publishDate: 2026-09-18
 category: "Quran Reflections"
 language: "en"
-image: "/images/writings/doomsday-clock.svg"
+image: "/images/writings/kiyamet-saati-en.png"
 imageAlt: "Doomsday Clock digital clock design symbolizing September 24, 2280 and 19:33"
 tags:
   - "Quran"
@@ -420,6 +420,7 @@ Although this narration is well known, many scholars have been reluctant to acce
   <p><strong>Point of contact with the reflection above:</strong> both sections center on the year 2280; this appendix presents Rashad Khalifa's own Appendix 25 calculations and interpretations as a distinct source.</p>
 </div>
 
+![Başlık ](/images/writings/doomsday-clock.svg)
 
 ## **Note**
 

@@ -7,7 +7,7 @@ description: >-
 publishDate: 2026-09-18
 category: "Quran Reflections"
 language: "tr"
-image: "/images/writings/kiyamet-saati.svg"
+image: "/images/writings/kiyamet-saati-tr.png"
 imageAlt: "Kıyamet Saati başlıklı, 24 Eylül 2280 ve 19:33 zamanını simgeleyen dijital saat tasarımı"
 tags:
   - "Kuran"
@@ -418,6 +418,8 @@ Bu anlatım iyi biliniyor olsa da birçok âlim, Kuranî Başlangıç Harfleri i
   <p><strong>Ek 25'in hesap çizgisi:</strong> “Yedi Çift” toplamı 1709 → HS 1710 → MS 2280.</p>
   <p><strong>Yukarıdaki tefekkürle ortak nokta:</strong> Her iki bölüm de 2280 yılını merkezine alır; bu ek bölüm Reşad Halife'nin kendi Ek 25 hesap ve yorumlarını ayrı kaynak olarak sunar.</p>
 </div>
+
+![Başlık ](/images/writings/doomsday-clock.svg)
 
 ## Not
 
