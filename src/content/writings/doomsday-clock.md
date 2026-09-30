@@ -7,7 +7,7 @@ description: >-
 publishDate: 2026-09-18
 category: "Quran Reflections"
 language: "en"
-image: "/images/writings/kiyamet-saati-en.png"
+image: "/images/writings/doomsday-clock.png"
 imageAlt: "Doomsday Clock digital clock design symbolizing September 24, 2280 and 19:33"
 tags:
   - "Quran"
