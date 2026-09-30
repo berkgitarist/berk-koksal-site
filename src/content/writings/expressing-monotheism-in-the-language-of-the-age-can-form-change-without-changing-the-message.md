@@ -9,7 +9,7 @@ publishDate: 2026-08-08
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/tevhidi-cagin-diliyle-soylemek.webp"
+image: "/images/writings/expressing-monotheism-in-the-language-of-the-age.webp"
 imageAlt: "Cover image titled Expressing Monotheism in the Language of the Age, bringing a traditional sacred choir together with a modern electronic wave, rock guitar, and digital interface around the same center"
 
 tags:

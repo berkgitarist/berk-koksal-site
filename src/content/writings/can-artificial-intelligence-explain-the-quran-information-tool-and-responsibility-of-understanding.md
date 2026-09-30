@@ -9,7 +9,7 @@ publishDate: 2026-08-02
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/yapay-zeka-kurani-aciklayabilir-mi.webp"
+image: "/images/writings/can-artificial-intelligence.webp"
 imageAlt: "Cover image titled Can Artificial Intelligence Explain the Quran?, reflecting the relationship between an open Quran and a digital network of mind"
 
 tags:

@@ -8,7 +8,7 @@ description: >-
 publishDate: 2026-08-10
 category: "Quran Reflections"
 language: "en"
-image: "/images/writings/bir-kelimeyle-tevhid-nasil-bozulur-tek-tanri-mi-yuceler-yucesi-mi.webp"
+image: "/images/writings/how-can-tawhid-be-distorted.webp"
 imageAlt: "Cover image titled How Can Tawhid Be Distorted by a Single Word? One GOD or Highest of the High?, symbolizing tawhid and the translation difference through one powerful light rising above an open scripture and artificial plural reflections around it"
 tags:
   - "Quran"

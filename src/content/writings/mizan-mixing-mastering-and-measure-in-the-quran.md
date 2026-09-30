@@ -8,7 +8,7 @@ publishDate: 2026-08-03
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/mizan-mix-mastering-ve-kurandaki-olcu.webp"
+image: "/images/writings/mizan-mixing-mastering.webp"
 imageAlt: "Cover image for Mizan: Mixing, Mastering, and Measure in the Quran, bringing together channels on an audio mixing console and the order of the sky"
 
 tags:

@@ -8,7 +8,7 @@ publishDate: 2026-08-20
 category: "Quran Reflections"
 language: "tr"
 
-image: "/images/writings/ilan-et-tefekkur-makalesi_gorsel.webp"
+image: "/images/writings/ilan-et-tefekkur-makalesi_gorsel2.webp"
 imageAlt: "İlan Et: Hakikati Gizlememek, Sözü TANRI’ya Bağlamak başlıklı tefekkür yazısını temsil eden görsel"
 
 tags:

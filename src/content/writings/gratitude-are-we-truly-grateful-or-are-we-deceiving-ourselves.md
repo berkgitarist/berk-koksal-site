@@ -13,7 +13,7 @@ category: "Quran Reflections"
 
 language: "en"
 
-image: "/images/writings/gercekten-sukur-ediyormuyuz.webp"
+image: "/images/writings/gratitude-are-we-truly.webp"
 
 tags:
   - "Quran"

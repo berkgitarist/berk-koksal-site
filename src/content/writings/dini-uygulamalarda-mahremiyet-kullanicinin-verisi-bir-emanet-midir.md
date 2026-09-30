@@ -8,7 +8,7 @@ publishDate: 2026-08-06
 category: "Quran Reflections"
 language: "tr"
 
-image: "/images/writings/dini-uygulamalarda-mahremiyet-kullanicinin-verisi-bir-emanet-midir.webp"
+image: "/images/writings/dini-uygulamalarda-mahremiyet1.webp"
 imageAlt: "Dini Uygulamalarda Mahremiyet başlıklı, kapalı bir dijital oda, kilitli bir telefon ve açık bir Kuran sayfasını simgeleyen görsel"
 
 tags:

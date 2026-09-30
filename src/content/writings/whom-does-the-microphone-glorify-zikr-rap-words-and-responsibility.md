@@ -8,7 +8,7 @@ publishDate: 2026-08-04
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/mikrofon-kimi-yuceltiyor.webp"
+image: "/images/writings/whom-does-the-microphone.webp"
 imageAlt: "Cover image for Whom Does the Microphone Glorify? ZIKR RAP, Words and Responsibility, symbolizing the bond between a microphone, a notebook, and the artist's words and life"
 
 tags:

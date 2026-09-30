@@ -7,7 +7,7 @@ description: >-
 publishDate: 2026-08-09
 category: "Quran Reflections"
 language: "en"
-image: "/images/writings/bir-kuran-uygulamasi-hukum-vermeli-mi.webp"
+image: "/images/writings/should-a-quran-app-issue.webp"
 imageAlt: "Cover image titled Should a Quran App Issue Rulings?, reflecting the boundary between an open book and a digital interface"
 tags:
   - "Quran"

@@ -7,7 +7,7 @@ description: >-
 publishDate: 2026-08-12
 category: "Quran Reflections"
 language: "en"
-image: "/images/writings/derin-saygi-antlasma-ve-yalniz-tanriya-yonelmek.webp"
+image: "/images/writings/deep-reverence-remembering.webp"
 imageAlt: "Cover titled Deep Reverence, showing an open Quran page, a simple line of light symbolizing the covenant, and a human silhouette turning toward a single center"
 tags:
   - "Quran"

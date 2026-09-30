@@ -8,7 +8,7 @@ publishDate: 2026-08-22
 category: "Quran Reflections"
 language: "tr"
 
-image: "/images/writings/gercekten-sukur-ediyormuyuz.webp"
+image: "/images/writings/gercekten-sukur-ediyormuyuz9.webp"
 
 tags:
   - "Kuran"

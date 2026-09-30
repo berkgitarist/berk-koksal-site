@@ -8,7 +8,7 @@ publishDate: 2026-08-05
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/meal-karsilastirmak-suphe-mi-sorumluluk-mu.webp"
+image: "/images/writings/is-comparing-quran-translations.webp"
 imageAlt: "Desk image symbolizing the authorized English translation, Turkish renderings, and the Kuranteyit project for the article Is Comparing Quran Translations Doubt or Responsibility?"
 
 tags:

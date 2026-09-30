@@ -8,7 +8,7 @@ publishDate: 2026-08-20
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/ilan-et-tefekkur-makalesi_gorsel.webp"
+image: "/images/writings/proclaim-do-not-conceal.webp"
 imageAlt: "Image representing the reflection titled Proclaim: Do Not Conceal the Truth, Tie the Word to GOD"
 
 tags:

@@ -8,7 +8,7 @@ description: >-
 publishDate: 2026-08-09
 category: "Quran Reflections"
 language: "en"
-image: "/images/writings/bulmak-baska-anlamak-baska-arama-motoru-caginda-ayet.webp"
+image: "/images/writings/finding-is-one-thing-understanding.webp"
 imageAlt: "Cover image titled Finding Is One Thing, Understanding Is Another, depicting Quran pages opening from a search box and pathways of thought"
 tags:
   - "Quran"

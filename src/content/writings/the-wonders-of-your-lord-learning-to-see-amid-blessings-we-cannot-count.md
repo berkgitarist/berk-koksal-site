@@ -8,7 +8,7 @@ publishDate: 2026-08-16
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/rabbinin-harikalari-sayamadigimiz-nimetler.webp"
+image: "/images/writings/the-wonders-of-your-lord-learning.webp"
 imageAlt: "Cover image for The Wonders of Your Lord, bringing together the sky, sea, rain, plants, and human reflection on creation"
 
 tags:

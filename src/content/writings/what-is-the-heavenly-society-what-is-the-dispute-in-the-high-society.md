@@ -8,7 +8,7 @@ publishDate: 2026-08-24
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/goksel-toplum-ust-toplum-kavgasi.webp"
+image: "/images/writings/what-is-the-heavenly-society.webp"
 imageAlt: "Cover image titled What Is the Heavenly Society? What Is the Dispute in the High Society?, reflecting the themes of the High Society, human creation, obedience, pride, and tawhid"
 
 tags:

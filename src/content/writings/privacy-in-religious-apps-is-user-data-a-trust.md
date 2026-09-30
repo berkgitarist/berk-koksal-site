@@ -8,7 +8,7 @@ publishDate: 2026-08-06
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/dini-uygulamalarda-mahremiyet-kullanicinin-verisi-bir-emanet-midir.webp"
+image: "/images/writings/privacy-in-religious-apps-is-user-data-a-trust.webp"
 imageAlt: "Image titled Privacy in Religious Apps, symbolizing a closed digital room, a locked phone, and an open Quran page"
 
 tags:

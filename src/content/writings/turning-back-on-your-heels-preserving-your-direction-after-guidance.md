@@ -9,7 +9,7 @@ publishDate: 2026-08-14
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/topuklari-uzerinde-geri-donmek.webp"
+image: "/images/writings/turning-back-on-your-heels.webp"
 imageAlt: "Cover image titled Turning Back on Your Heels, symbolizing two directions at a crossroads: one moving toward the light and one turning back"
 
 tags:
