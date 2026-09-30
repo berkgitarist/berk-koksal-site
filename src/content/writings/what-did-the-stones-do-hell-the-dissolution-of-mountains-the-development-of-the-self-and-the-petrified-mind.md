@@ -8,7 +8,7 @@ publishDate: 2026-09-15
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/taslarin-sucu-ne.webp"
+image: "/images/writings/what-did-the-stones-do.webp"
 
 tags:
   - "Quran"

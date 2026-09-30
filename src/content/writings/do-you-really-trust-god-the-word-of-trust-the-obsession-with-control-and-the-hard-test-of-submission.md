@@ -9,7 +9,7 @@ publishDate: 2026-08-27
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/tanriya-gercekten-guveniyormusun.webp"
+image: "/images/writings/do-you-really-trust-god.webp"
 
 tags:
   - "Quran"

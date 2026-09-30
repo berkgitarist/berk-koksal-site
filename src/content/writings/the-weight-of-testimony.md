@@ -6,7 +6,7 @@ description: >-
 publishDate: 2026-07-28
 category: "Quran Reflections"
 language: "en"
-image: "/images/writings/sahitligin-agirligi.jpg"
+image: "/images/writings/the-weight-of-testimony.webp"
 imageAlt: "Cover image titled The Weight of Testimony, featuring scales and an open book"
 tags:
   - "Quran"

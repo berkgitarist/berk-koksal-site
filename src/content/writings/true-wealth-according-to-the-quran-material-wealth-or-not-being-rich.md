@@ -7,7 +7,7 @@ description: >-
 publishDate: 2026-08-26
 category: "Quran Reflections"
 language: "en"
-image: "/images/writings/kurana-gore-gercek-zenginlik.webp"
+image: "/images/writings/true-wealth-according.webp"
 imageAlt: "Cover image titled True Wealth According to the Quran, symbolizing the difference between material wealth and knowledge, sharing, justice, and spiritual measure"
 tags:
   - "Quran"

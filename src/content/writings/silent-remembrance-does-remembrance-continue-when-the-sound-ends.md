@@ -7,7 +7,7 @@ description: >-
 publishDate: 2026-07-30
 category: "Quran Reflections"
 language: "en"
-image: "/images/writings/sessiz-zikir.webp"
+image: "/images/writings/silent-remembrance.webp"
 imageAlt: "Cover image titled Silent Remembrance: Does Remembrance Continue When the Sound Ends?, reflecting the themes of silence and inner reflection"
 tags:
   - "Quran"

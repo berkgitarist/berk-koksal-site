@@ -7,7 +7,7 @@ publishDate: 2026-07-29
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/muzik-ve-zikir.webp"
+image: "/images/writings/music-and-remembrance.webp"
 imageAlt: "Cover image for Music and Remembrance, featuring guitars and musical notes"
 
 tags:

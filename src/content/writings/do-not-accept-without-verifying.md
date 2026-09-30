@@ -8,7 +8,7 @@ publishDate: 2026-07-29
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/Teyit-etmeden-kabul-etmemek.jpg"
+image: "/images/writings/do-not-accept-without-verifying.webp"
 imageAlt: "Cover image titled Do Not Accept Without Verifying, reflecting the themes of information verification and investigation"
 
 tags:

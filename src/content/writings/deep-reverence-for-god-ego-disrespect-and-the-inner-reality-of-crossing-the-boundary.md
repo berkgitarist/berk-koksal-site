@@ -8,7 +8,7 @@ publishDate: 2026-09-05
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/tanriya-derin-saygi-ego-saygisizlik-siniri-asmak.webp"
+image: "/images/writings/deep-reverence-for-god.webp"
 imageAlt: "Cover image titled Deep Reverence for GOD: Ego, Disrespect, and the Inner Reality of Crossing the Boundary, reflecting the inner boundary between ego and submission"
 
 tags:

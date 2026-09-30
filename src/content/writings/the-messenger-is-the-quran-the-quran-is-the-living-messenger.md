@@ -8,7 +8,7 @@ publishDate: 2026-08-01
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/Kuran-yasayan-elcidir.jpg"
+image: "/images/writings/the-messenger-is-the-quran-the-quran.webp"
 imageAlt: ""
 
 tags:
