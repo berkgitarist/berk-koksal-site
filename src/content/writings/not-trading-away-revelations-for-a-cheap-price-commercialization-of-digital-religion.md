@@ -8,7 +8,7 @@ publishDate: 2026-08-07
 category: "Quran Reflections"
 language: "en"
 
-image: "/images/writings/ayetleri-ucuz-bir-degere-satmamak-dijital-dinin-ticarilesmesi.webp"
+image: "/images/writings/not-trading-away-revelations-for.webp"
 imageAlt: "Image titled Not Trading Away the Revelations for a Cheap Price, reflecting the tension between an open Quran page and symbols of digital advertising, followers, and payment"
 
 tags:
