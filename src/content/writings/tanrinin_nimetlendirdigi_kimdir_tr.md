@@ -29,7 +29,7 @@ author: "Berk KÖKSAL"
 # TANRI’nın Nimetlendirdiği Kimdir? 1:7’de İstenen Yolun Kuran İçindeki İzleri
 
 **Yazar:** Berk KÖKSAL  
-**Tarih:** 30.09.2026  
+**Tarih:** 27.09.2026  
 **Yer:** Mersin
 
 Makalenin temel amacı, ayetleri diğer ilgili ayetlerle birlikte düşünmek; TANRI’nın birliğine şahitliğin bilgi, adalet, doğruluk ve teslimiyet bakımından insan hayatında ne anlama geldiğini samimi ve derin bir dille ortaya koymaktır.

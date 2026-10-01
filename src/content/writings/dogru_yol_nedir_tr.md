@@ -27,7 +27,7 @@ author: "Berk KÖKSAL"
 # Doğru Yol Nedir? — [1:6] “Bize doğru yolda rehberlik et;”
 
 **Yazar:** Berk KÖKSAL  
-**Tarih:** 30 Eylül 2026  
+**Tarih:** 28 Eylül 2026  
 **Yer:** Mersin
 
 Makalenin temel amacı, ayetleri diğer ilgili ayetlerle birlikte düşünmek; TANRI’nın birliğine şahitliğin bilgi, adalet, doğruluk ve teslimiyet bakımından insan hayatında ne anlama geldiğini samimi ve derin bir dille ortaya koymaktır.

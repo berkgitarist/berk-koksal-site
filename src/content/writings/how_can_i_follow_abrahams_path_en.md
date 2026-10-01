@@ -27,7 +27,7 @@ author: "Berk KÖKSAL"
 # How Can I Follow Abraham’s Path? How Can I Find the Way Abraham Found?
 
 **Author:** Berk KÖKSAL  
-**Date:** September 30, 2026  
+**Date:** September 29, 2026  
 **Place:** Mersin
 
 The central aim of this article is to contemplate the verses together with other related verses, and to explore—in a sincere and deep way—what bearing witness to the oneness of GOD means in human life in terms of knowledge, justice, truthfulness, and submission.

@@ -29,7 +29,7 @@ author: "Berk KÖKSAL"
 # Whom Has GOD Blessed? Tracing the Path Asked for in 1:7 Through the Quran
 
 **Author:** Berk KÖKSAL  
-**Date:** 30.09.2026  
+**Date:** 27.09.2026  
 **Place:** Mersin
 
 The main purpose of this article is to reflect on the verses together with other related verses and to explore, in a sincere and profound language, what witnessing the oneness of GOD means in human life in terms of knowledge, justice, truthfulness, and submission.

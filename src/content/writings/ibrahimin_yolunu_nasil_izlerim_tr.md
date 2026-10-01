@@ -27,7 +27,7 @@ author: "Berk KÖKSAL"
 # İbrahim’in Yolunu Nasıl İzleyeceğim? İbrahim’in Bulduğu Yolu Ben Nasıl Bulurum?
 
 **Yazar:** Berk KÖKSAL  
-**Tarih:** 30 Eylül 2026  
+**Tarih:** 29 Eylül 2026  
 **Yer:** Mersin
 
 Makalenin temel amacı, ayetleri diğer ilgili ayetlerle birlikte düşünmek; TANRI’nın birliğine şahitliğin bilgi, adalet, doğruluk ve teslimiyet bakımından insan hayatında ne anlama geldiğini samimi ve derin bir dille ortaya koymaktır.

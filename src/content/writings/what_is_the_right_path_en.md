@@ -27,7 +27,7 @@ author: "Berk KÖKSAL"
 # What Is the Right Path? — [1:6] “Guide us in the right path;”
 
 **Author:** Berk KÖKSAL  
-**Date:** September 30, 2026  
+**Date:** September 28, 2026  
 **Place:** Mersin
 
 The central purpose of this article is to contemplate the verses together with other related verses, and to consider—sincerely and deeply—what bearing witness to the oneness of GOD means in human life in terms of knowledge, justice, truthfulness, and submission.
