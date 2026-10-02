@@ -7,7 +7,7 @@ description: >-
 publishDate: 2026-09-18
 category: "Quran Reflections"
 language: "tr"
-image: "/images/writings/kiyamet-saati-tr.png"
+image: "/images/writings/kiyamet-saaati-2280.png"
 imageAlt: "Kıyamet Saati başlıklı, 24 Eylül 2280 ve 19:33 zamanını simgeleyen dijital saat tasarımı"
 tags:
   - "Kuran"
