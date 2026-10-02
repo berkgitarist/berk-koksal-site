@@ -989,17 +989,17 @@ Arapça kelime köklerine bakarken onları ayetlerin üzerine yeni hükümler ku
 | **أُنِيبُ** | **unibu** | **ن-و-ب (N-W-B)** | TANRI’ya dönme ve yönelme anlam alanında kullanılan biçim. |
 | **وَلِيُّهُمَا** | **veliyyuhuma** | **و-ل-ي (W-L-Y)** | 3:122’de iki grubun TANRI ile ilişkisini bildiren ifade. |
 
-Güven ayetlerinde en belirgin köklerden biri **و-ك-ل (V-K-L / W-K-L)** köküdür. Türkçede yerleşmiş **tevekkül** kelimesi de bu kelime ailesindendir. 3:122’deki **فَلْيَتَوَكَّلِ — felyetevekkel** biçimi, Türkçe yetkilendirilmiş çeviride “İnananlar TANRI’ya güvensinler” olarak karşımıza çıkıyor. 73:9’daki **وَكِيلًا — vekilen** ise çeviride “Savunucun olarak O’nu seçmelisin” biçiminde yer alıyor.
+Güven ayetlerinde en belirgin köklerden biri **و-ك-ل (V-K-L / W-K-L)** köküdür. Türkçede yerleşmiş **tevekkül** kelimesi de bu kelime ailesindendir. 3:122’deki **فَلْيَتَوَكَّلِ — felyetevekkel** biçimi, Yetkilendirilmiş İngilizce Çevirinin Türkçe çevirisinde “İnananlar TANRI’ya güvensinler” olarak karşımıza çıkıyor. 73:9’daki **وَكِيلًا — vekilen** ise çeviride “Savunucun olarak O’nu seçmelisin” biçiminde yer alıyor.
 
 Bu bağlantı benim için önemli: Güven yalnız içimde ürettiğim bir his değil; kimi dayanak ve savunucu seçtiğimle de ilişkili.
 
-10:84’te güven çağrısının hemen yanında **مُسْلِمِينَ — müslimin** ifadesi bulunuyor. Bu kelime **س-ل-م (S-L-M)** kök ailesindedir ve yetkilendirilmiş Türkçe metinde “teslimolanlar” olarak yer alır. Ayetin kendi cümle yapısında iman, güven ve teslimiyet yan yana geliyor. Bu nedenle güveni teslimiyetten bütünüyle koparmak zorlaşıyor.
+10:84’te güven çağrısının hemen yanında **مُسْلِمِينَ — müslimin** ifadesi bulunuyor. Bu kelime **س-ل-م (S-L-M)** kök ailesindedir ve Yetkilendirilmiş İngilizce Çevirinin Türkçe çevirisinde “teslimolanlar” olarak yer alır. Ayetin kendi cümle yapısında iman, güven ve teslimiyet yan yana geliyor. Bu nedenle güveni teslimiyetten bütünüyle koparmak zorlaşıyor.
 
-65:3’te **حَسْبُهُ — hasbuhu** ifadesi **ح-س-ب (H-S-B)** kök ailesindedir. Yetkilendirilmiş Türkçe metin düşüncenin merkezini açık biçimde veriyor: **“TANRI’ya güvenen birine O yeter.”** Güven, yeterliliği başka yerlerde sonsuz biçimde arama ihtiyacına bir sınır koyuyor.
+65:3’te **حَسْبُهُ — hasbuhu** ifadesi **ح-س-ب (H-S-B)** kök ailesindedir. Yetkilendirilmiş İngilizce Çevirinin Türkçe çevirisi düşüncenin merkezini açık biçimde veriyor: **“TANRI’ya güvenen birine O yeter.”** Güven, yeterliliği başka yerlerde sonsuz biçimde arama ihtiyacına bir sınır koyuyor.
 
 11:88 ve 42:10’daki TANRI’ya yönelme çizgisini düşünürken **أُنِيبُ — unibu** biçimi de dikkat çekiyor. Bu kelime **ن-و-ب (N-W-B)** kök ailesindedir. Buradaki dil bağlantısı bana güvenin hareketsiz bir duruş değil, yönünü tekrar TANRI’ya çevirmekle beraber düşünülebileceğini gösteriyor.
 
-3:122’de TANRI ile ilgili kullanılan **وَلِيُّهُمَا — veliyyuhuma** biçimi **و-ل-ي (W-L-Y)** kök ailesindedir. Yetkilendirilmiş Türkçe metin bunu **“TANRI onların Rabbiydi”** diye verir. Güven emrinden hemen önce bu ilişkinin anılması dikkat çekicidir.
+3:122’de TANRI ile ilgili kullanılan **وَلِيُّهُمَا — veliyyuhuma** biçimi **و-ل-ي (W-L-Y)** kök ailesindedir. Yetkilendirilmiş İngilizce Çevirinin Türkçe çevirisinde bu ifade **“TANRI onların Rabbiydi”** diye verir. Güven emrinden hemen önce bu ilişkinin anılması dikkat çekicidir.
 
 Bütün bu kökleri yan yana getirdiğimde yeni bir inanç tanımı üretmek istemiyorum. Fakat ayetlerin dili içinde güçlü bir bütünlük görüyorum: **güvenmek, teslim olmak, yönelmek, TANRI’yı yeterli görmek ve O’nu savunucu edinmek birbirinden kopuk başlıklar gibi durmuyor.**
 

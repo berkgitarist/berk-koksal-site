@@ -352,7 +352,7 @@ Bu yüzden tevhid benim için yalnız metafizik bir cümle değil. Bilgiyi nası
 
 *Teyit Etmeden Kabul Etmemek* yazımın çıkış noktası da buydu: Teyit, yalnız akademik yöntem değil, vicdanı ve dili koruyan bir ahlak. Bir iddia hoşuma gidiyor diye, benim inanç çizgimi destekliyor diye veya güvendiğim biri söyledi diye onu otomatik olarak bilgiye çeviremem. Görünmeyen hakkında bu sorumluluk daha da önem kazanıyor.
 
-*Meal Karşılaştırmak Şüphe mi, Sorumluluk mu?* yazımda Kuranteyit’in doğuşunu anlatırken projenin önce kendim ve eşim için bir çalışma masası gibi başladığını yazmıştım. Amaç, kabul ettiğim yetkilendirilmiş çeviriyi başka bir otoriteyle değiştirmek değil; onu daha dikkatli anlamaktı. Bugün de aynı ölçüyü korumak istiyorum. Araç araştırmayı kolaylaştırmalı, hükmü bana hazır paket olarak vermemeli.
+*Meal Karşılaştırmak Şüphe mi, Sorumluluk mu?* yazımda Kuranteyit’in doğuşunu anlatırken projenin önce kendim ve eşim için bir çalışma masası gibi başladığını yazmıştım. Amaç, kabul ettiğim Yetkilendirilmiş İngilizce Çeviriyi başka bir otoriteyle değiştirmek değil; onu daha dikkatli anlamaktı. Bugün de aynı ölçüyü korumak istiyorum. Araç araştırmayı kolaylaştırmalı, hükmü bana hazır paket olarak vermemeli.
 
 Bir yazılımcı olarak kullanıcı arayüzünün ne kadar ikna edici olabileceğini biliyorum. Bir sonuç en üstte gösterildiğinde, bir kutu “analiz” diye etiketlendiğinde veya sistem çok kesin bir dil kullandığında insan fark etmeden güvenebilir. Fakat ekrandaki kesinlik hissi, 17:36’daki kişisel sorumluluğu ortadan kaldırmaz. Bu yüzden Üst Toplum hakkında okuduğum, duyduğum veya ürettiğim her açıklamada kendime aynı soruyu sormak zorundayım: Bu gerçekten ayete mi dayanıyor, yoksa ben bir boşluğu güzel bir cümleyle mi dolduruyorum? (17:36)
 

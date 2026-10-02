@@ -10,14 +10,14 @@ category: "Quran Reflections"
 language: "tr"
 
 image: "/images/writings/meal-karsilastirmak-suphe-mi-sorumluluk-mu.webp"
-imageAlt: "Meal Karşılaştırmak Şüphe mi, Sorumluluk mu başlıklı, yetkilendirilmiş İngilizce çeviri, Türkçe karşılıklar ve Kuranteyit çalışmasını simgeleyen bir masa görseli"
+imageAlt: "Meal Karşılaştırmak Şüphe mi, Sorumluluk mu başlıklı, Yetkilendirilmiş İngilizce Çeviri, Türkçe karşılıklar ve Kuranteyit çalışmasını simgeleyen bir masa görseli"
 
 tags:
   - "Kuran"
   - "Meal"
   - "Çeviri"
   - "Reşat Halife"
-  - "Yetkilendirilmiş Çeviri"
+  - "Yetkilendirilmiş İngilizce Çeviri"
   - "Zümer"
   - "39:18"
   - "İsra"
@@ -37,7 +37,7 @@ author: "Berk KÖKSAL"
 
 # Meal Karşılaştırmak Şüphe mi, Sorumluluk mu?
 
-*Yetkilendirilmiş Çeviri, Kuranteyit ve Kişisel Sorumluluk Üzerine Bir Tefekkür*
+*Yetkilendirilmiş İngilizce Çeviri, Kuranteyit ve Kişisel Sorumluluk Üzerine Bir Tefekkür*
 
 **Yazar:** Berk KÖKSAL
 
@@ -55,13 +55,13 @@ Makalenin temel amacı, ayetleri diğer ilgili ayetlerle birlikte düşünmek; T
 
 ## Giriş
 
-Bu yazıda kendi inanç konumumu baştan açık etmek istiyorum. Ben, Reşat Halife’nin sunduğu İngilizce metni TANRI’nın Antlaşma Elçisi aracılığıyla gelen yetkilendirilmiş çeviri olarak kabul ettim. Bunun doğruluğundan eminim. Bu nedenle Kuranteyit’i, söz konusu çevirinin karşısına başka bir dini otorite koymak veya onun doğruluğunu sürekli yeniden tartışmaya açmak için geliştirmedim.
+Bu yazıda kendi inanç konumumu baştan açık etmek istiyorum. Ben, Reşat Halife’nin sunduğu İngilizce metni TANRI’nın Antlaşma Elçisi aracılığıyla gelen Yetkilendirilmiş İngilizce Çeviri olarak kabul ettim. Bunun doğruluğundan eminim. Bu nedenle Kuranteyit’i, söz konusu çevirinin karşısına başka bir dini otorite koymak veya onun doğruluğunu sürekli yeniden tartışmaya açmak için geliştirmedim.
 
-Kuranteyit önce kendim ve eşim için doğdu. Amacımız, yetkilendirilmiş İngilizce çeviriyi daha iyi anlamak; Türkçe karşılıkları, kelime bağlantılarını, ayetler arasındaki ilişkileri ve kök bilgilerini daha düzenli biçimde inceleyebilmekti. Başlangıçta kişisel bir çalışma masası gibiydi. Fakat proje geliştikçe ihtiyaçlar, içerik ve sorumluluk büyüdü; zamanla bizi aşan bir yapıya dönüştü.
+Kuranteyit önce kendim ve eşim için doğdu. Amacımız, Yetkilendirilmiş İngilizce Çeviriyi daha iyi anlamak; Türkçe karşılıkları, kelime bağlantılarını, ayetler arasındaki ilişkileri ve kök bilgilerini daha düzenli biçimde inceleyebilmekti. Başlangıçta kişisel bir çalışma masası gibiydi. Fakat proje geliştikçe ihtiyaçlar, içerik ve sorumluluk büyüdü; zamanla bizi aşan bir yapıya dönüştü.
 
 Bugün Kuranteyit’in Android uygulamasını da tamamladım. Uygulama şu anda onay sürecinde. Süreç planlandığı gibi ilerlerse, inşallah yaklaşık bir hafta içinde Android kullanıcıları için de erişilebilir olacak. Bu gelişmeyi yalnız teknik bir ilerleme olarak görmüyorum. Daha fazla kişiye ulaşmak, daha dikkatli konuşmayı ve yapılan her tercihin sorumluluğunu daha ciddi taşımayı gerektiriyor.
 
-Bu nedenle benim için asıl soru artık “Hangi çeviriyi otorite kabul etmeliyim?” değildir. İnanç bakımından dayandığım metin bellidir. Asıl soru şudur: **Kabul ettiğim yetkilendirilmiş çeviriyi, kendi arzumu ve alışkanlıklarımı araya koymadan ne kadar dikkatli anlayabiliyorum?**
+Bu nedenle benim için asıl soru artık “Hangi çeviriyi otorite kabul etmeliyim?” değildir. İnanç bakımından dayandığım metin bellidir. Asıl soru şudur: **Kabul ettiğim Yetkilendirilmiş İngilizce Çeviriyi, kendi arzumu ve alışkanlıklarımı araya koymadan ne kadar dikkatli anlayabiliyorum?**
 
 <details class="article-summary">
 <summary><strong>Özet:</strong></summary>
@@ -97,7 +97,7 @@ Bu nedenle benim için asıl soru artık “Hangi çeviriyi otorite kabul etmeli
 </section>
 
 <section class="article-summary__section">
-<h3>4. Yetkilendirilmiş Çeviri ile Diğer Çevirilerin Yeri</h3>
+<h3>4. Yetkilendirilmiş İngilizce Çeviri ile Diğer Çevirilerin Yeri</h3>
 <blockquote>
 <p><strong>6:115</strong> — Rabbinin sözleri hakikat ve adalet bakımından tamdır.* Hiçbir şey O’nun kelimelerini yürürlükten kaldıramaz. O İşitendir, Her Şeyi Bilendir.</p>
 <p><strong>3:7</strong> — O, anlaşılması kolay—kutsal yazının özünü oluşturan—ayetleri de, çok anlamlı veya alegorik ayetleri de içeren bu kutsal yazıyı sana indirdi. Kalplerinde şüphe barındıranlar, karışıklık meydana getirmek ve belirli bir anlamı çekip çıkarmak için çok anlamlı ayetlerin peşine düşerler. Bunların doğru anlamını, TANRI ve bilgide sağlam temelli olan kimselerin dışında hiç kimse bilmez. Onlar derler ki: “Biz buna inanıyoruz—hepsi Rabbimizden gelir.” Sadece akıl sahibi olanlar dikkate alacaklardır.</p>
@@ -201,7 +201,7 @@ Bu nedenle benim için asıl soru artık “Hangi çeviriyi otorite kabul etmeli
 
 39:18’de incelemek ile uymak birbirinden ayrılmıyor. Sözler inceleniyor, ardından en güzeline uyuluyor. Bu ayeti yalnızca bitmeyen bir karşılaştırma çağrısı olarak okumuyorum. İncelemenin sonunda bir yöneliş, güven ve takip vardır.
 
-Benim için bu yöneliş, Reşat Halife’nin sunduğu yetkilendirilmiş İngilizce çeviriyi kabul etmekle somutlaştı. Bunu geçici bir çalışma varsayımı olarak değil, inanç bakımından doğru olduğuna emin olduğum bir kabul olarak ifade ediyorum. Fakat bu kesinlik, benim her okuyuşumun, her Türkçe cümlemin ve her yorumumun otomatik olarak doğru olduğu anlamına gelmez.
+Benim için bu yöneliş, Reşat Halife’nin Yetkilendirilmiş İngilizce Çeviriyi kabul etmekle somutlaştı. Bunu geçici bir çalışma varsayımı olarak değil, inanç bakımından doğru olduğuna emin olduğum bir kabul olarak ifade ediyorum. Fakat bu kesinlik, benim her okuyuşumun, her Türkçe cümlemin ve her yorumumun otomatik olarak doğru olduğu anlamına gelmez.
 
 Dayandığım metinden emin olmak ile kendi anlayışımı sorgulamak aynı anda mümkündür. Hatta bana göre sorumluluk tam burada başlar. Metne güvenmek, onu yüzeysel okumaya izin vermez. Aksine, güven duyduğum sözün karşısında daha dikkatli olmamı gerektirir.
 
@@ -215,7 +215,7 @@ Dayandığım metinden emin olmak ile kendi anlayışımı sorgulamak aynı anda
 
 ### Ayetin Tefekkürü
 
-Kuranteyit’in başlangıcında büyük bir platform kurma düşüncesi yoktu. Öncelikle kendim ve eşim için, okuduğumuz yetkilendirilmiş çeviriyi daha iyi anlayabileceğimiz bir çalışma alanına ihtiyaç duyduk. Bir ayeti açtığımızda İngilizce metni, Türkçe karşılıkları, kelime ilişkilerini ve ilgili ayetleri daha düzenli görmek istiyorduk.
+Kuranteyit’in başlangıcında büyük bir platform kurma düşüncesi yoktu. Öncelikle kendim ve eşim için, okuduğumuz Yetkilendirilmiş İngilizce Çeviriyi daha iyi anlayabileceğimiz bir çalışma alanına ihtiyaç duyduk. Bir ayeti açtığımızda İngilizce metni, Türkçe karşılıkları, kelime ilişkilerini ve ilgili ayetleri daha düzenli görmek istiyorduk.
 
 Bu ihtiyaç, 47:24’teki dikkatli inceleme çağrısıyla doğrudan bağlantılıydı. Metni yalnızca okumak ile üzerinde durmak aynı şey değildir. Bazen bir kelime gözümüzün önündedir fakat alışkanlıklarımız nedeniyle onu gerçekten görmeyiz. Bazen cümleyi anladığımızı sanırız fakat başka bir ayetle yan yana geldiğinde anlamın daha derin bir yönü açılır.
 
@@ -231,13 +231,13 @@ Kuranteyit bu kilitleri kendi başına açan bir otorite değildir. Anahtarı in
 
 ### Ayetin Tefekkürü
 
-Teyit etmek her zaman kaynağa güvensizlik anlamına gelmez. Bazen teyit, kendi anlayışımıza karşı dürüst olmaktır. Ben yetkilendirilmiş İngilizce çevirinin doğruluğundan emin olabilirim; buna rağmen bir kelimeyi yanlış anlamış, cümlenin vurgusunu kaçırmış veya Türkçe karşılığı kendi alışkanlığıma göre daraltmış olabilirim.
+Teyit etmek her zaman kaynağa güvensizlik anlamına gelmez. Bazen teyit, kendi anlayışımıza karşı dürüst olmaktır. Ben Yetkilendirilmiş İngilizce Çevirinin doğruluğundan emin olabilirim; buna rağmen bir kelimeyi yanlış anlamış, cümlenin vurgusunu kaçırmış veya Türkçe karşılığı kendi alışkanlığıma göre daraltmış olabilirim.
 
 17:36 bana işitme, görme ve beynin kullanılmasının kişisel sorumluluk olduğunu hatırlatıyor. Bu sorumluluğu bir çevirmene, yazılıma, dini lidere veya topluluğa tamamen devredemem. Bir metni doğru kabul etmek, onu düşünmeden tekrar etmek demek değildir.
 
-Kuranteyit adındaki “teyit” de benim için tam olarak bunu anlatır. Yetkilendirilmiş metni başka bir otoriteyle yargılamak değil; duyduğumu doğru duyup duymadığımı, gördüğümü gerçekten görüp görmediğimi ve vardığım sonucun ayetlerle bağını kendim için sınamak.
+Kuranteyit adındaki “teyit” de benim için tam olarak bunu anlatır. İngilizce metni başka bir otoriteyle yargılamak değil; duyduğumu doğru duyup duymadığımı, gördüğümü gerçekten görüp görmediğimi ve vardığım sonucun ayetlerle bağını kendim için sınamak.
 
-## 4. Yetkilendirilmiş Çeviri ile Diğer Çevirilerin Yeri
+## 4. Yetkilendirilmiş İngilizce Çeviri ile Diğer Çevirilerin Yeri
 
 ### Ayet
 
@@ -247,7 +247,7 @@ Kuranteyit adındaki “teyit” de benim için tam olarak bunu anlatır. Yetkil
 
 ### Ayetin Tefekkürü
 
-Kuranteyit’te farklı Türkçe çevirilerin görünmesi, benim için bütün çevirilerin aynı otoriteye sahip olduğu anlamına gelmez. İnanç bakımından ölçüm, Reşat Halife’nin yetkilendirilmiş İngilizce çevirisidir. Diğer çeviriler ise Türkçede hangi kelimenin nasıl karşılandığını, hangi açıklamanın cümleye eklendiğini veya hangi anlam yönünün öne çıkarıldığını görmeme yardım edebilir.
+Kuranteyit’te farklı Türkçe çevirilerin görünmesi, benim için bütün çevirilerin aynı otoriteye sahip olduğu anlamına gelmez. İnanç bakımından ölçüm, Reşat Halife’nin Yetkilendirilmiş İngilizce Çevirisidir. Diğer çeviriler ise Türkçede hangi kelimenin nasıl karşılandığını, hangi açıklamanın cümleye eklendiğini veya hangi anlam yönünün öne çıkarıldığını görmeme yardım edebilir.
 
 Bu karşılaştırmanın amacı hakikati çoğaltmak değildir. İnsan tercihini görünür hale getirmektir. Aynı İngilizce ifadenin Türkçeye farklı biçimlerde aktarılması, okuyucunun kendi dilindeki sınırları fark etmesini sağlayabilir. Böylece Türkçe cümlenin kendisini mutlaklaştırmak yerine dayandığım metne yeniden dönebilirim.
 
@@ -367,9 +367,9 @@ Kök bilgisi bu nedenle değerlidir, fakat tek başına hüküm değildir. Bir k
 
 ### Ayetin Tefekkürü
 
-Bir yaklaşım, yetkilendirilmiş bir çeviriyi kabul eden kişinin diğer çevirilere hiç bakmaması gerektiğini savunabilir. Ben bunu zorunlu görmüyorum. Diğer çevirileri ölçü belirlemek için değil, Türkçe tercihleri fark etmek ve dayandığım İngilizce metni daha dikkatli anlamak için kullanıyorum.
+Bir yaklaşım, Yetkilendirilmiş bir çeviriyi kabul eden kişinin diğer çevirilere hiç bakmaması gerektiğini savunabilir. Ben bunu zorunlu görmüyorum. Diğer çevirileri ölçü belirlemek için değil, Türkçe tercihleri fark etmek ve dayandığım İngilizce metni daha dikkatli anlamak için kullanıyorum.
 
-Başka bir yaklaşım, “yetkilendirilmiş çeviri” ifadesinin bir insan çevirisine gereğinden fazla otorite verdiğini ileri sürebilir. Reşat Halife’nin TANRI’nın Antlaşma Elçisi olarak kabul edilmesi konusunda farklı dini, tarihsel ve mezhepsel değerlendirmeler bulunduğu açıktır. Bu makale bu tartışmaların tamamını çözme iddiasında değildir. Ben burada kendi inanç konumumu saklamadan konuşuyorum: Reşat Halife’nin sunduğu İngilizce metni yetkilendirilmiş çeviri olarak kabul ediyorum ve doğruluğundan eminim.
+Başka bir yaklaşım, “Yetkilendirilmiş İngilizce Çeviri” ifadesinin bir insan çevirisine gereğinden fazla otorite verdiğini ileri sürebilir. Reşat Halife’nin TANRI’nın Antlaşma Elçisi olarak kabul edilmesi konusunda farklı dini, tarihsel ve mezhepsel değerlendirmeler bulunduğu açıktır. Bu makale bu tartışmaların tamamını çözme iddiasında değildir. Ben burada kendi inanç konumumu saklamadan konuşuyorum: Reşat Halife’nin sunduğu İngilizce metni Yetkilendirilmiş Çeviri olarak kabul ediyorum ve doğruluğundan eminim.
 
 Bir başka iddia, Kuranteyit’in büyümesinin veya Android mağazasında yayımlanmasının projenin dini bakımdan doğruluğunu kanıtladığı olabilir. Böyle bir sonuç çıkarmıyorum. Teknik onay, kullanıcı sayısı veya yaygınlık manevi doğruluğun ölçüsü değildir. Bunlar yalnızca sorumluluğun alanını genişletir.
 
@@ -387,7 +387,7 @@ Son olarak, bazıları yazılımın kullanıcıya hazır sonuç vermesini bekley
 
 ### Ayetin Tefekkürü
 
-Benim için meal karşılaştırmak, yetkilendirilmiş İngilizce çevirinin doğruluğundan şüphe etmek değildir. İnanç bakımından dayandığım metin bellidir. Karşılaştırma, o metni Türkçede daha dikkatli anlamak, kendi yorumumu sınamak ve insan tercihlerinin nerede devreye girdiğini görmek için kullandığım yardımcı bir yöntemdir.
+Benim için meal karşılaştırmak, Yetkilendirilmiş İngilizce Çevirinin doğruluğundan şüphe etmek değildir. İnanç bakımından dayandığım metin bellidir. Karşılaştırma, o metni Türkçede daha dikkatli anlamak, kendi yorumumu sınamak ve insan tercihlerinin nerede devreye girdiğini görmek için kullandığım yardımcı bir yöntemdir.
 
 Kuranteyit bu anlayışla önce kendim ve eşim için gelişti. Sonra proje büyüdü, bizi aştı ve daha geniş bir sorumluluğa dönüştü. Android uygulamasının onay süreci de bu yolun yeni bir aşamasıdır. Fakat platform değişse de temel ölçü değişmemelidir: Yazılım yardımcıdır; rehberliğin sahibi TANRI’dır. Araç bilgi sunabilir; işitmek, düşünmek, inanmak, takip etmek ve doğru bir hayat sürmek insanın sorumluluğudur.
 

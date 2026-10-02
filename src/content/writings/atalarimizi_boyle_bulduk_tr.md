@@ -574,7 +574,7 @@ Miras bana bir başlangıç verebilir. Fakat teslimiyet benim adıma miras alın
 
 **أَلْفَيْنَا — l-f-w (ل ف و)** kökü burada “bulduk” anlamıyla karşımıza çıkar. İnsanların gerekçesi, bir şeyi ebeveynlerinin üzerinde bulmuş olmalarıdır. Bu kelime bana çok şey düşündürüyor: İnsan bir uygulamayı keşfetmiyor, kanıtlamıyor veya vahiyde bulduğunu söylemiyor; onu ailesinin hayatında hazır halde buluyor. Hazır halde bulmak, başlangıcı açıklar; doğruluğu tek başına açıklamaz. (2:170)
 
-**ءَابَآءَنَا — ʾ-b-w (أ ب و)** kökünden gelen ifade, yetkilendirilmiş Türkçe çeviride “ebeveynlerimizi” olarak karşılanır. Ayetin vurgusu soy bağının gücünü küçümsemek için değil, bu bağın hakikat için yeterli delil olmadığını göstermek açısından önemlidir. En yakın insanlarımız bile bilgi ve rehberlik ölçüsünün dışında tutulmuyor. (2:170)
+**ءَابَآءَنَا — ʾ-b-w (أ ب و)** kökünden gelen ifade, Yetkilendirilmiş İngilizce Çevirinin Türkçe çevirisinde “ebeveynlerimizi” olarak karşılanır. Ayetin vurgusu soy bağının gücünü küçümsemek için değil, bu bağın hakikat için yeterli delil olmadığını göstermek açısından önemlidir. En yakın insanlarımız bile bilgi ve rehberlik ölçüsünün dışında tutulmuyor. (2:170)
 
 **يَعْقِلُونَ — ʿ-q-l (ع ق ل)** kökü anlama ve aklı kullanma alanını taşır. Ayetin sorusu yalnızca “ebeveynleri doğru muydu?” değildir; “anlıyorlar mıydı?” sorusunu da getirir. Böylece mirasın değerlendirilmesinde düşünme sorumluluğu ortaya çıkar. Bir uygulama kuşaktan kuşağa aktarılmış olabilir; fakat aktarımın kendisi anlayışın kanıtı değildir. (2:170)
 

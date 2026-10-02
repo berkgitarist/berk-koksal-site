@@ -664,7 +664,7 @@ Ana ayetin Arapça metnindeki bazı kelimeler, bu tefekkürün yönünü daha di
 
 17:14’teki **حَسِيبًا — hasiban**, **ح س ب (h-s-b)** köküyle hesap ve hesap görme anlam alanına bağlıdır. “Kendi hesap görücün olarak sen yetersin” ifadesi, dışarıdan gelen bir suçlamadan çok insanın kendi kaydıyla yüzleşmesini öne çıkarıyor.
 
-75:15’te mazeretleri ifade eden **مَعَاذِيرَهُ — ma‘adhirahu** kelimesi **ع ذ ر (‘-dh-r)** köküyle bağlantılıdır. Ayetin yetkilendirilmiş çevirisi bunu “Hiçbir bahane kabul edilmeyecektir” diye verir. Böylece kök analizi de bizi aynı yere getiriyor: şahitliğin karşısında retorik mazeretin gücü tükeniyor.
+75:15’te mazeretleri ifade eden **مَعَاذِيرَهُ — ma‘adhirahu** kelimesi **ع ذ ر (‘-dh-r)** köküyle bağlantılıdır. Yetkilendirilmiş İngilizce Çevirinin Türkçe çevirisinde bu ifade “Hiçbir bahane kabul edilmeyecektir” diye verir. Böylece kök analizi de bizi aynı yere getiriyor: şahitliğin karşısında retorik mazeretin gücü tükeniyor.
 
 Bu kelimeleri birlikte düşündüğümde ana ayetin iç hareketi daha görünür oluyor: **mühürlenen ağız, konuşan el, şahitlik eden ayak ve insanın kazandığı işler.** 36:65’in merkezinde bir tartışma değil, açığa çıkan hayat var.
 

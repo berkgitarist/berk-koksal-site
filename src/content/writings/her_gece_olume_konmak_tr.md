@@ -661,9 +661,9 @@ Her sabah sessiz bir soru gibi: **Sana bir gün daha verildi; onunla ne yapacaks
 
 ### Ayetin Tefekkürü
 
-39:42’nin Arapça kelimelerine bakmak ayetin çevirisini değiştirmek için değil, düşünce alanını daha dikkatli görmek için yararlı olabilir. Yetkilendirilmiş çevirideki anlamı esas alırken bazı kök ilişkileri ayetin iç hareketini daha görünür hale getiriyor.
+39:42’nin Arapça kelimelerine bakmak ayetin çevirisini değiştirmek için değil, düşünce alanını daha dikkatli görmek için yararlı olabilir. Yetkilendirilmiş İngilizce Çevirideki anlamı esas alırken bazı kök ilişkileri ayetin iç hareketini daha görünür hale getiriyor.
 
-Ayetin başındaki **يَتَوَفَّى — yatawaffā** kelimesi **و ف ي (w-f-y)** kök ailesindedir. Bu kök, tamamlama ve bir şeyi bütünüyle alma gibi anlam alanlarıyla ilişkilidir. Yetkilendirilmiş çeviri burada bunu “puts the souls to death / nefisleri ölüme koyar” biçiminde verir. Aynı fiilin hem hayatın sonu hem uyku bağlamında kullanılması, ayetin iki durumu bilinçli biçimde yan yana getirdiğini gösterir.
+Ayetin başındaki **يَتَوَفَّى — yatawaffā** kelimesi **و ف ي (w-f-y)** kök ailesindedir. Bu kök, tamamlama ve bir şeyi bütünüyle alma gibi anlam alanlarıyla ilişkilidir. Yetkilendirilmiş İngilizce Çeviri burada “puts the souls to death / nefisleri ölüme koyar” biçiminde verir. Aynı fiilin hem hayatın sonu hem uyku bağlamında kullanılması, ayetin iki durumu bilinçli biçimde yan yana getirdiğini gösterir.
 
 **ٱلْأَنفُس — al-anfus**, **ن ف س (n-f-s)** kök ailesindedir ve burada “nefisler” olarak çevrilmiştir. Ayetin odağı yalnızca bedensel uyku değildir; doğrudan nefislerden söz eder. Bunun nasıl gerçekleştiğine dair ayetin vermediği ayrıntıları üretmek yerine, bu kelimeyi olduğu yerde bırakmak daha güvenli görünüyor.
 

@@ -628,13 +628,13 @@ Bu yazının başlığındaki “ilan” kelimesine Arapça ifadeler üzerinden 
 
 3:187’de “ilan edin” şeklinde aktarılan **لَتُبَيِّنُنَّهُ — latubayyinunnahu**, **ب ي ن — b-y-n** köküyle bağlantılıdır. Bu kökün anlam alanında açıklık, ayırma ve belirgin hale getirme yönleri bulunur. Aynı ayette bunun karşısında **تَكْتُمُونَهُ — taktumūnahu** vardır; bu ifade **ك ت م — k-t-m** köküyle, gizleme ve saklama anlam alanıyla bağlantılıdır.
 
-93:11’deki **فَحَدِّثْ — faḥaddith** ise **ح د ث — ḥ-d-th** köküyle bağlantılıdır. Ayetteki emir, yetkilendirilmiş çeviride “proclaim”, Türkçede “ilan et” olarak aktarılmıştır. Cümlenin nesnesi insanın kendi büyüklüğü değil, Rabbinin ona ihsan ettiği nimettir.
+93:11’deki **فَحَدِّثْ — faḥaddith** ise **ح د ث — ḥ-d-th** köküyle bağlantılıdır. Ayetteki emir, Yetkilendirilmiş İngilizce Çeviride “proclaim”, Türkçede “ilan et” olarak aktarılmıştır. Cümlenin nesnesi insanın kendi büyüklüğü değil, Rabbinin ona ihsan ettiği nimettir.
 
-53:32’deki **فَلَا تُزَكُّوا أَنفُسَكُمْ — falā tuzakkū anfusakum** ifadesi, nefsin kendi kendisini yükseltmesiyle ilgili uyarının bulunduğu yerdir. Yetkilendirilmiş Türkçe metin bunu “kendi kendinizi yükseltmeyin” şeklinde aktarır.
+53:32’deki **فَلَا تُزَكُّوا أَنفُسَكُمْ — falā tuzakkū anfusakum** ifadesi, nefsin kendi kendisini yükseltmesiyle ilgili uyarının bulunduğu yerdir. Yetkilendirilmiş İngilizce Çevirinin Türkçe çevirisinde bu ifade “kendi kendinizi yükseltmeyin” şeklinde aktarır.
 
 17:111’de ise **وَكَبِّرْهُ تَكْبِيرًا — wa kabbirhu takbīrā** ifadesi **ك ب ر — k-b-r** kökü üzerinden büyüklük ve yüceltme yönünü TANRI’ya çevirir.
 
-Bu kökleri tek başlarına bütün ayetlerin anlamını belirleyen sözlük hükümleri gibi kullanmıyorum. Cümle, bağlam ve yetkilendirilmiş çeviri birlikte düşünülmelidir. Yine de yan yana geldiklerinde benim için güçlü bir yön oluşturuyorlar:
+Bu kökleri tek başlarına bütün ayetlerin anlamını belirleyen sözlük hükümleri gibi kullanmıyorum. Cümle, bağlam ve Yetkilendirilmiş İngilizce Çeviri birlikte düşünülmelidir. Yine de yan yana geldiklerinde benim için güçlü bir yön oluşturuyorlar:
 
 **Hakikati açıkla. Gizleme. Nimeti ilan et. Kendini yükseltme. TANRI’yı yücelt.**
 

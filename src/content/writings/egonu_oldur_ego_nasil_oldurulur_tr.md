@@ -509,7 +509,7 @@ Nasıl bir kul olmak gerekir? Bu ayet ağına göre, kendini tanrılaştırmayan
 
 **أَنفُسَكُمْ / anfusakum**, **n-f-s** kök alanındadır ve “kendiniz/nefisleriniz” anlam çevresinde kullanılır. Aynı kelime ailesinin Kuran boyunca sorumluluk, arzu, arınma, kurtuluş ve öz-denetim bağlamlarında görünmesi, “nefs”i tek boyutlu bir kötülük olarak okumamamız gerektiğini düşündürür. Nitekim 91:9 nefsi “kurtarmaktan”, 59:18 nefsin kendisini gözden geçirmesinden söz eder.
 
-**فَٱقْتُلُوا / fa-uqtulū**, **q-t-l** kök alanından “öldürmek” fiilidir. Yetkilendirilmiş Türkçe çeviri burada bunu “Egonuzu öldürün” şeklinde verir. Bu güçlü ifade, 25:43 ve 45:23’te egonun tanrılaştırılabilmesiyle birlikte okunduğunda, tefekkür açısından benliğin sahte egemenliğinin sona erdirilmesi yönünde derin bir anlam kazanır. Aynı zamanda 4:29’un “Kendi kendinizi öldürmeyin” buyruğu, bu tefekkürün bedene zarar vermeyi teşvik eden bir yöne çekilmesine izin vermez.
+**فَٱقْتُلُوا / fa-uqtulū**, **q-t-l** kök alanından “öldürmek” fiilidir. Yetkilendirilmiş İngilizce Çevirinin Türkçe çevirisinde bu ifade “Egonuzu öldürün” şeklinde verir. Bu güçlü ifade, 25:43 ve 45:23’te egonun tanrılaştırılabilmesiyle birlikte okunduğunda, tefekkür açısından benliğin sahte egemenliğinin sona erdirilmesi yönünde derin bir anlam kazanır. Aynı zamanda 4:29’un “Kendi kendinizi öldürmeyin” buyruğu, bu tefekkürün bedene zarar vermeyi teşvik eden bir yöne çekilmesine izin vermez.
 
 **بَارِئِكُمْ / bāri’ikum**, **b-r-ʾ** kök alanında Yaratıcı/Başlatan anlamına gelir. Ayette tövbenin yönü “Yaratıcınıza” doğrudur. Egonun temel yanılsaması kendisini bağımsız bir merkez gibi kurmaksa, “Yaratıcı” kelimesi insanın varlığının kaynağını yeniden hatırlatır.
 
@@ -517,7 +517,7 @@ Son olarak **خَيْرٌ / khayrun**, **kh-y-r** kök alanıyla “daha iyi/hay
 
 ## Diğer İddialar
 
-2:54’teki **فَٱقْتُلُوا أَنفُسَكُمْ / fa-uqtulū anfusakum** ifadesi tarih boyunca farklı biçimlerde yorumlanmıştır. Bazı geleneksel yorumlar ifadeyi topluluk içinde gerçekleşen gerçek bir öldürme emri veya ağır bir toplu tövbe biçimi olarak anlamıştır. Bazı başka okumalar ise “anfusakum” ifadesinin “birbirinizi” anlam alanına gelebileceğini savunur. Yetkilendirilmiş Reşat Halife çevirisi ise ayeti açıkça “Egonuzu öldürün” şeklinde verir ve bu makalenin ana tefekkürü bu çeviri üzerinden kurulmuştur.
+2:54’teki **فَٱقْتُلُوا أَنفُسَكُمْ / fa-uqtulū anfusakum** ifadesi tarih boyunca farklı biçimlerde yorumlanmıştır. Bazı geleneksel yorumlar ifadeyi topluluk içinde gerçekleşen gerçek bir öldürme emri veya ağır bir toplu tövbe biçimi olarak anlamıştır. Bazı başka okumalar ise “anfusakum” ifadesinin “birbirinizi” anlam alanına gelebileceğini savunur. Reşat Halife’nin Yetkilendirilmiş İngilizce Çevirisi ise ayeti açıkça “Egonuzu öldürün” şeklinde verir ve bu makalenin ana tefekkürü bu çeviri üzerinden kurulmuştur.
 
 Bu farklı yaklaşımlar burada kesin bir tarihsel hüküm vermek için kullanılmamalıdır. Makalenin ana düşüncesi de bu dış yorumlara dayanmıyor. Ana yapı, doğrudan kullanılan ayetlerin kendi arasındaki ilişkiye dayanıyor: ego tanrılaştırılabilir (25:43; 45:23), benlik ahlaksızlığı savunabilir (12:53), insan kendisini yükseltmemelidir (53:32), nefis kurtarılmalıdır (91:7-10), günahkar arzular sınırlandırılmalıdır (79:40-41), kişinin kendi aleyhine bile adil olması gerekir (4:135) ve insan kendisine zarar vermemelidir (4:29).
 

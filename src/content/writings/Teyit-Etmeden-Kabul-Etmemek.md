@@ -279,7 +279,7 @@ Teyit sonsuz tereddüt üretmek için değil, doğru olana güvenle yönelmek i�
 
 ### Ayetin Tefekkürü
 
-Kök bilgisi ayetin yerine geçmez ve Reşat Halife’nin yetkilendirilmiş çevirisini değiştirmez; yalnız Arapça ifadenin açtığı anlam alanını düşünmeye yardım eder.
+Kök bilgisi ayetin yerine geçmez ve Reşat Halife’nin Yetkilendirilmiş İngilizce Çevirisini. değiştirmez; yalnız Arapça ifadenin açtığı anlam alanını düşünmeye yardım eder.
 
 **تَقْفُ (takfu)** kelimesi **ق-ف-و (Kaf-Fe-Vav)** köküyle ilişkilidir. Ardından gitmek ve izlemek anlam alanına açılır. İnsan yanlış bilgiyi kabul ettiğinde çoğu zaman onun peşinden gider.
 
