@@ -625,15 +625,15 @@ Instead of “Believe me”: Look. Read. Verify. Turn to GOD.
 
 When I look at the word “proclaim” in the title of this article through the Arabic expressions, the subject becomes somewhat clearer.
 
-In 3:187, **لَتُبَيِّنُنَّهُ — latubayyinunnahu**, rendered in the authorized translation as “You shall proclaim it,” is connected with the root **ب ي ن — b-y-n**. Its field of meaning includes clarity, distinction, and making something manifest. In the same verse, **تَكْتُمُونَهُ — taktumūnahu** stands on the opposite side and is connected with **ك ت م — k-t-m**, the field of concealing and hiding.
+In 3:187, **لَتُبَيِّنُنَّهُ — latubayyinunnahu**, rendered in the Authorized English Translation as ‘You shall proclaim it’ is connected with the root **ب ي ن — b-y-n**. Its field of meaning includes clarity, distinction, and making something manifest. In the same verse, **تَكْتُمُونَهُ — taktumūnahu** stands on the opposite side and is connected with **ك ت م — k-t-m**, the field of concealing and hiding.
 
-In 93:11, **فَحَدِّثْ — faḥaddith** is connected with **ح د ث — ḥ-d-th**. The authorized translation renders the command as “proclaim.” The object of the sentence is not the person's own greatness, but the blessing his Lord has bestowed upon him.
+In 93:11, **فَحَدِّثْ — faḥaddith** is connected with **ح د ث — ḥ-d-th**. The Authorized English Translation renders the command as ‘proclaim.’ The object of the sentence is not the person's own greatness, but the blessing his Lord has bestowed upon him.
 
 In 53:32, **فَلَا تُزَكُّوا أَنفُسَكُمْ — falā tuzakkū anfusakum** appears where the warning against exalting the self is given. The authorized English translation renders it: “do not exalt yourselves.”
 
 In 17:111, **وَكَبِّرْهُ تَكْبِيرًا — wa kabbirhu takbīrā**, through the root **ك ب ر — k-b-r**, directs greatness and magnification toward GOD.
 
-I do not use roots by themselves as dictionary rulings that determine the entire meaning of a verse. The sentence, context, and authorized translation should be considered together. Yet when these expressions stand beside one another, they create a powerful direction for me:
+I do not use roots by themselves as dictionary rulings that determine the entire meaning of a verse. The sentence, context, and the Authorized English Translation should be considered together. Yet when these expressions stand beside one another, they create a powerful direction for me:
 
 **Make the truth clear. Do not conceal. Proclaim the blessing. Do not exalt yourself. Magnify GOD.**
 

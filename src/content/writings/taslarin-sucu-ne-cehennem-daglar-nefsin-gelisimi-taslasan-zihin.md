@@ -235,7 +235,7 @@ Ufalanıp dağılıyor.
 
 Bu sahne fiziksel varlığın TANRI’nın doğrudan tecellisi karşısındaki sınırlılığını düşündürüyor.
 
-Üstelik Reşad Halife Yetkilendirilmiş çevirisindeki bölüm başlığı bunu açıkça **“Dünyamız Tanrı’nın Fiziksel Huzuruna Dayanamaz”** şeklinde yorumluyor.
+Üstelik Reşat Halife’nin Yetkilendirilmiş İngilizce Çevirisindeki bölüm başlığı bunu açıkça ‘Our World Cannot Stand GOD’s Physical Presence’ şeklinde yorumluyor. Bunun Türkçe çevirisi ‘Dünyamız TANRI’nın Fiziksel Huzuruna Dayanamaz’ şeklindedir.
 
 Burada çok dikkatli olmam gerekiyor.
 
@@ -429,7 +429,7 @@ Bunu doğrulayacak açık bir ayet görmüyorum.
 
 Ama artık ayetlerin dışına taşmadan şu kadarını söyleyebiliyorum:
 
-**TANRI’nın fiziksel huzuru ile mevcut maddi düzenin çözülmesi arasında bu Yetkilendirilmiş çevirinin kurduğu güçlü bir ilişki var.**
+TANRI’nın fiziksel huzuru ile mevcut maddi düzenin çözülmesi arasında Yetkilendirilmiş İngilizce Çevirinin kurduğu güçlü bir ilişki var.
 
 Bu, taşları yalnız putlarla açıklamamamız gerektiğini düşündürüyor.
 
@@ -497,7 +497,7 @@ Ama bir şey daha belirgin hale geliyor:
 
 **TANRI’nın varlığı ile Cehennemin ateşini aynı şey olarak düşünmek zorunda değiliz.**
 
-Hatta Yetkilendirilmiş çevirinin dipnotları bunun tersini öneriyor.
+Hatta Yetkilendirilmiş İngilizce Çevirinin dipnotları bunun tersini öneriyor.
 
 Bu yüzden iyi tefekkür yalnız yeni ihtimal üretmek değil, kendi yeni ihtimalimizi de ayetlerle sınamak olmalı.
 

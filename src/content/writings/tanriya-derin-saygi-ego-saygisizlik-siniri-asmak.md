@@ -471,7 +471,7 @@ Sorun, bir insanı hata ihtimalinin üzerine çıkardığım anda başlıyor.
 
 *Bir Kelimeyle Tevhid Nasıl Bozulur? Tek TANRI mı, “Yüceler Yücesi” mi?* yazısındaki otorite sorusu burada daha da büyüyor. Kaynak metin ile insan aktarımı arasında bir fark varsa, sevgim veya bağlılığım insanın sözünü kaynağın üstüne çıkarmamalı.
 
-Reşat Halife için de aynı ölçüyü korumam gerekir. Bir çeviriyi yetkilendirilmiş metin olarak esas almak, bir araştırmadan yararlanmak veya bir yorumun bana güçlü gelmesi, bir insanı TANRI’nın yerine geçirme hakkı vermez. Bu yazının kendisi için de aynı şey geçerli. Benim tefekkürüm ayet değildir.
+Reşat Halife için de aynı ölçüyü korumam gerekir. Reşat Halife’nin Yetkilendirilmiş İngilizce Çevirisini esas almak, bir araştırmadan yararlanmak veya bir yorumun bana güçlü gelmesi, bir insanı TANRI’nın yerine geçirme hakkı vermez. Bu yazının kendisi için de aynı şey geçerli. Benim tefekkürüm ayet değildir.
 
 Derin saygının korunması için aracı ile Kaynak arasındaki fark sürekli açık kalmalıdır.
 
@@ -743,9 +743,9 @@ Derin saygı bu yüzden yalnız büyüklüğü görmek değil; gördüğüm büy
 
 ### Ayetin Tefekkürü
 
-2:40’ın Arapçasındaki bazı kökler, ayetin kurduğu hareketi daha yakından görmeme yardım ediyor. Kök bilgisini tek başına hüküm veren bağımsız bir kaynak gibi kullanmak istemiyorum; Türkçe ve Yetkilendirilmiş İngilizce Çevirinin açık anlamı benim için esas olmaya devam ediyor.
+2:40’ın Arapçasındaki bazı kökler, ayetin kurduğu hareketi daha yakından görmeme yardım ediyor. Kök bilgisini tek başına hüküm veren bağımsız bir kaynak gibi kullanmak istemiyorum; Yetkilendirilmiş İngilizce Çeviri ve onun Türkçe çevirisinin açık anlamı benim için esas olmaya devam ediyor.” Bu ifade iki ayrı “yetkili” kaynak izlenimini ortadan kaldırıyor.
 
-**ذ ك ر — Zel-Kef-Re** kökü, **ٱذْكُرُوا۟ (uzkurû)** ifadesinde hatırlamayı taşıyor. Yetkilendirilmiş İngilizce metindeki “remember”, Türkçe metindeki “hatırlayın” ile örtüşüyor. Ayetin ilk hareketi hafızadır. Bu bana saygının unutkanlıkla bağını düşündürüyor. Nimeti kaynağından kopardığımda kendimi daha bağımsız görmeye başlarım.
+**ذ ك ر — Zel-Kef-Re** kökü, **ٱذْكُرُوا۟ (uzkurû)** ifadesinde hatırlamayı taşıyor. Yetkilendirilmiş İngilizce Çevirideki ‘remember’ ifadesi, Yetkilendirilmiş İngilizce Çevirinin Türkçe çevirisindeki ‘hatırlayın’ ifadesiyle örtüşüyor. Ayetin ilk hareketi hafızadır. Bu bana saygının unutkanlıkla bağını düşündürüyor. Nimeti kaynağından kopardığımda kendimi daha bağımsız görmeye başlarım.
 
 **ن ع م — Nun-Ayn-Mim** kökü, **نِعْمَتِىَ (ni'metî)** ifadesinde nimet ve iyilik alanını açıyor. Derin saygının yalnız tehditten değil, verilen iyiliği hatırlamaktan doğması benim için önemlidir. TANRI’ya yöneliş yalnız korkunun ürünü değildir; nimeti doğru yere bağlamanın da sonucudur.
 
@@ -753,7 +753,7 @@ Derin saygı bu yüzden yalnız büyüklüğü görmek değil; gördüğüm büy
 
 **و ف ي — Vav-Fe-Ya** kökü, **أَوْفُوا۟** ve **أُوفِ** biçimlerinde yerine getirme fikrini taşır. Hatırlamak eyleme dönüşüyor. Bu geçiş benim için belirleyici: TANRI’ya duyulan saygı yalnız kalpte kalırsa eksik bir hayat resmi ortaya çıkar. Antlaşmaya sadakat davranış ister.
 
-Sonunda **ر ه ب — Re-He-Be** kökü ve **فَٱرْهَبُونِ (ferhebûnî)** geliyor. Yetkilendirilmiş İngilizce Çeviri “reverence Me”, Türkçe çeviri “Bana derin saygı duyun” diyor. Ayetin bütünü içinde bu ifade yalnız panik veya dehşet olarak durmuyor. Öncesinde nimet, hatırlama ve sadakat var.
+Sonunda **ر ه ب — Re-He-Be** kökü ve **فَٱرْهَبُونِ (ferhebûnî)** geliyor. Yetkilendirilmiş İngilizce Çeviri ‘reverence Me’ diyor; bunun Türkçe çevirisinde ifade ‘Bana derin saygı duyun’ olarak aktarılıyor. Ayetin bütünü içinde bu ifade yalnız panik veya dehşet olarak durmuyor. Öncesinde nimet, hatırlama ve sadakat var.
 
 Köklerin bana gösterdiği akış çok sade:
 

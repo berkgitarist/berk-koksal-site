@@ -235,7 +235,7 @@ It crumbles and disintegrates.
 
 This scene makes me think about the limitation of physical existence before GOD's direct manifestation.
 
-Moreover, the section heading in Rashad Khalifa's Authorized Translation explicitly interprets this as **“Our World Cannot Stand GOD's Physical Presence.”**
+Moreover, the section heading in Rashad Khalifa's the Authorized English Translation explicitly interprets this as **“Our World Cannot Stand GOD's Physical Presence.”**
 
 I need to be very careful here.
 
@@ -497,7 +497,7 @@ But one thing becomes clearer:
 
 **We do not have to think of GOD's presence and the fire of Hell as the same thing.**
 
-In fact, the footnotes of the Authorized Translation suggest the opposite.
+In fact, the footnotes of the Authorized English Translation suggest the opposite.
 
 For this reason, good reflection should not merely generate a new possibility; it should also test its own new possibility against the verses.
 

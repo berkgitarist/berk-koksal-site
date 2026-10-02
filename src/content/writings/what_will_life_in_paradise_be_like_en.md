@@ -432,7 +432,7 @@ Other important root fields in the article are **س ل م (s-l-m)** for peace an
 
 ### Reflection on the Verse
 
-Across history, many detailed pictures of Paradise have been proposed. Some readings take the descriptions of food, drink, spouses, furniture, and gardens as physically continuous with the present bodily order; others read much of the language as symbolic or spiritual. The authorized translation of 47:15 itself uses the phrase “the allegory of Paradise,” which calls for caution about claiming that every descriptive detail must operate through the exact physics and biology of this world.
+Across history, many detailed pictures of Paradise have been proposed. Some readings take the descriptions of food, drink, spouses, furniture, and gardens as physically continuous with the present bodily order; others read much of the language as symbolic or spiritual. The Authorized English Translation of 47:15 itself uses the phrase ‘the allegory of Paradise which calls for caution about claiming that every descriptive detail must operate through the exact physics and biology of this world.
 
 Likewise, people may speculate about professions, technology, artistic production, children, sleep, digestion, exploration, or social institutions in Paradise. The verses used in this article do not explicitly establish those details. 36:55 tells us that the people of Paradise are happily busy; it does not provide a complete catalog of their activities.
 

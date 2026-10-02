@@ -15,7 +15,7 @@ tags:
   - "Quran"
   - "Translation"
   - "Rashad Khalifa"
-  - "Authorized Translation"
+  - "Authorized English Translation"
   - "Az-Zumar"
   - "39:18"
   - "Al-Isra"
@@ -35,7 +35,7 @@ author: "Berk KÖKSAL"
 
 # Is Comparing Quran Translations Doubt or Responsibility?
 
-*A Reflection on the Authorized Translation, Kuranteyit, and Personal Responsibility*
+*A Reflection on the Authorized English Translation, Kuranteyit, and Personal Responsibility*
 
 **Author:** Berk KÖKSAL
 
@@ -53,7 +53,7 @@ The primary aim of this article is to consider the verses together with other re
 
 ## Introduction
 
-At the outset of this article, I want to state my own position of faith clearly. I have accepted the English text presented by Rashad Khalifa as the authorized translation that came through GOD's Messenger of the Covenant. I am certain of its correctness. For this reason, I did not develop Kuranteyit in order to place another religious authority against that translation or to keep reopening the question of its correctness.
+At the outset of this article, I want to state my own position of faith clearly. I have accepted Rashad Khalifa’s English translation as the Authorized English translation that came through GOD's Messenger of the Covenant. I am certain of its correctness. For this reason, I did not develop Kuranteyit in order to place another religious authority against that translation or to keep reopening the question of its correctness.
 
 Kuranteyit was first born for my wife and me. Our aim was to understand the authorized English translation better and to be able to examine Turkish renderings, word connections, relationships among verses, and root information in a more organized way. At first it was like a personal workbench. But as the project developed, the needs, content, and responsibility grew; over time it became a structure larger than us.
 
@@ -212,7 +212,7 @@ It is possible to be certain of the text on which I rely while questioning my ow
 
 ### Reflection on the Verse
 
-At the beginning of Kuranteyit, there was no thought of building a large platform. First of all, my wife and I needed a workspace where we could understand the authorized translation we were reading more carefully. When we opened a verse, we wanted to see the English text, Turkish renderings, word relationships, and related verses in a more organized way.
+At the beginning of Kuranteyit, there was no thought of building a large platform. First of all, my wife and I needed a workspace where we could understand the Authorized English Translation I have accepted” / “the Authorized English Translation we were reading more carefully. When we opened a verse, we wanted to see the English text, Turkish renderings, word relationships, and related verses in a more organized way.
 
 This need was directly connected to the call for careful study in 47:24. Merely reading a text and dwelling on it are not the same thing. Sometimes a word is right before our eyes, yet because of our habits we do not truly see it. Sometimes we think we understand a sentence, but when it is placed beside another verse, a deeper aspect of its meaning opens.
 
@@ -234,7 +234,7 @@ Verification does not always mean distrust of the source. Sometimes verification
 
 For me, the “verification” in the name Kuranteyit means exactly this. It is not judging the authorized text by another authority; it is testing for myself whether I have heard correctly what I heard, whether I have really seen what I saw, and whether the conclusion I reached is connected to the verses.
 
-## 4. The Place of the Authorized Translation and Other Translations
+## 4. The Place of the Authorized English Translation and Other Translations
 
 ### Verse
 
@@ -244,7 +244,7 @@ For me, the “verification” in the name Kuranteyit means exactly this. It is 
 
 ### Reflection on the Verse
 
-The fact that different Turkish translations appear in Kuranteyit does not mean, for me, that all translations have the same authority. In matters of faith, my measure is Rashad Khalifa's authorized English translation. Other translations can help me see which Turkish word has been chosen for an expression, which explanatory element has been added to a sentence, or which direction of meaning has been emphasized.
+The fact that different Turkish translations appear in Kuranteyit does not mean, for me, that all translations have the same authority. In matters of faith, my measure is Rashad Khalifa’s Authorized English Translation. Other translations can help me see which Turkish word has been chosen for an expression, which explanatory element has been added to a sentence, or which direction of meaning has been emphasized.
 
 The purpose of this comparison is not to multiply truth. It is to make human choice visible. Seeing the same English expression rendered in Turkish in different ways can help the reader recognize the limits of his own language. In this way, instead of making the Turkish sentence itself absolute, I can return again to the text on which I rely.
 
@@ -366,7 +366,7 @@ Root information is valuable for this reason, but it is not a ruling by itself. 
 
 One approach may argue that a person who accepts an authorized translation should never look at other translations. I do not see this as necessary. I use other translations not to determine the measure, but to notice Turkish choices and to understand the English text on which I rely more carefully.
 
-Another approach may argue that the expression “authorized translation” gives too much authority to a human translation. It is clear that there are different religious, historical, and sectarian assessments regarding the acceptance of Rashad Khalifa as GOD's Messenger of the Covenant. This article does not claim to resolve all of those debates. I am speaking here without hiding my own position of faith: I accept the English text presented by Rashad Khalifa as the authorized translation and I am certain of its correctness.
+Another approach may argue that the expression “Authorized English Translation” gives too much authority to a human translation. It is clear that there are different religious, historical, and sectarian assessments regarding the acceptance of Rashad Khalifa as GOD's Messenger of the Covenant. This article does not claim to resolve all of those debates. I am speaking here without hiding my own position of faith: I accept Rashad Khalifa’s English translation as the Authorized English Translation and I am certain of its correctness.
 
 Another claim might be that Kuranteyit's growth or publication in the Android store proves the project's religious correctness. I draw no such conclusion. Technical approval, user numbers, or widespread use are not measures of spiritual correctness. They only widen the field of responsibility.
 

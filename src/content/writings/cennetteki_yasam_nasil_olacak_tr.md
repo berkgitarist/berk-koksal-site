@@ -434,7 +434,7 @@ Makalenin diğer temel kelime alanları da önemlidir: **س ل م (s-l-m)** esen
 
 ### Ayetin Tefekkürü
 
-Cennet hayatı hakkında tarih boyunca çok sayıda ayrıntılı tasvir ve yorum üretilmiştir. Bazı yaklaşımlar ayetlerdeki yiyecek, içecek, eş, mobilya ve bahçe tasvirlerini tamamen fiziksel ve bugünkü beden düzenine yakın okurken; bazıları bunları bütünüyle sembolik veya manevi karşılıklar olarak yorumlar. 47:15’in yetkilendirilmiş çevirisinde bizzat “Cennetin alegorisi” ifadesinin bulunması, en azından bu ayette tasvir dilinin niteliği konusunda ihtiyatlı olmamız gerektiğini gösterir.
+Cennet hayatı hakkında tarih boyunca çok sayıda ayrıntılı tasvir ve yorum üretilmiştir. Bazı yaklaşımlar ayetlerdeki yiyecek, içecek, eş, mobilya ve bahçe tasvirlerini tamamen fiziksel ve bugünkü beden düzenine yakın okurken; bazıları bunları bütünüyle sembolik veya manevi karşılıklar olarak yorumlar. 47:15’in Yetkilendirilmiş İngilizce Çevirisinde bizzat ‘the allegory of Paradise’ ifadesinin bulunması ve bunun Türkçe çevirisinde ‘Cennetin alegorisi’ olarak aktarılması, en azından bu ayette tasvir dilinin niteliği konusunda ihtiyatlı olmamız gerektiğini gösterir.
 
 Aynı şekilde Cennette meslek, teknoloji, sanat üretimi, çocuk sahibi olma, uyku, sindirim, yeni dünyalar keşfetme veya belirli toplumsal kurumların bulunacağına dair çeşitli görüşler ileri sürülebilir. Fakat bu makalede kullanılan ayetler bu ayrıntıları açıkça belirlemez. 36:55 “mutlu bir biçimde meşgul” olmayı bildirir; meşguliyetin bütün içeriğini listelemez.
 

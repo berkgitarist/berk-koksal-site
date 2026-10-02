@@ -133,7 +133,7 @@ For that reason, this issue should be guided not by anger but by awareness of ac
 
 I also do not want to leave my own position of belief unclear. I accept the English text presented by Rashad Khalifa as the Authorized Translation that came through GOD's Messenger of the Covenant, and I am confident in its correctness. This article does not reopen the Authorized English Text for judgment; it examines a specific difference that arose in its Turkish rendering. Nor do I use Kuranteyit to set up a new religious authority against that text, but to understand the text I accept more carefully, to see Turkish renderings side by side, and to carry my own responsibility of understanding with greater discipline.
 
-When I use the expression **“incorrect text”** in this article, I am also stating my criterion clearly: a faithful Turkish rendering of the Authorized English Text. I am not debating how powerful a free literary adaptation may sound. I am asking why, when the source contains a singular description, it was turned into a plural construction in Turkish; what that change adds; and what it may evoke.
+When I use the expression **“incorrect text”** in this article, I am also stating my criterion clearly: a faithful Turkish translation of Rashad Khalifa’s Authorized English Translation. I am not debating how powerful a free literary adaptation may sound. I am asking why, when the source contains a singular description, it was turned into a plural construction in Turkish; what that change adds; and what it may evoke.
 
 The severity of the title should also be read within this boundary. When I ask, **“How can tawhid be distorted by a single word?”** I am not claiming that everyone who uses this expression loses faith because of one word. My question is more measurable: In a text where tawhid is established with exceptional clarity, can the **language** of tawhid become blurred when a plural structure absent from the source enters the translation? Judging a person's intention and ultimate state of belief is one thing; showing a shift of meaning in translation is another.
 
@@ -443,7 +443,7 @@ The first ethic I learn from 2:255 is therefore an ethic of translation: saying 
 
 ### Reflection on the Verse
 
-The translation difference first needs to be placed side by side in its bare form. In the comparison below, the expressions on the left represent the CORRECT Turkish translation of the Authorized English Text; those on the right are taken from the incorrect Turkish text:
+The translation difference first needs to be placed side by side in its bare form. In the comparison below, the expressions on the left represent the CORRECT Turkish Translation of the Authorized English Translation Text; those on the right are taken from the incorrect Turkish text:
 
 **Visual key:** the <mark class="yy-correct">green</mark> highlight marks the “<mark class="yy-correct">Yüce</mark> / <mark class="yy-correct">Yücedir</mark>” forms in the correct Turkish rendering of the Authorized English Text; the <mark class="yy-warning">yellow</mark> highlight marks the “<mark class="yy-warning">Yüceler</mark> / <mark class="yy-warning">Yücesi</mark>” pattern inserted into the incorrect text. The colors are my editorial markings; they are not part of the verse text.
 

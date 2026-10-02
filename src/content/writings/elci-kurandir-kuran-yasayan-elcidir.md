@@ -447,7 +447,7 @@ Karanlıktan aydınlığa çıkış bir anda tamamlanan bir üstünlük duygusu 
 
 ### Ayetin Tefekkürü
 
-Kök bilgisi ayetin yerine geçmez ve Reşat Halife’nin yetkilendirilmiş çevirisini değiştirmez. Bir kelimenin kök alanı, çeviriye alternatif bir ayet üretmek için değil, ayetin içindeki ilişkileri daha dikkatli düşünmek için kullanılabilir. Bu sınır korunmadığında kök çalışması, metni açıklamak yerine kişinin istediği anlama zorlayan bir araca dönüşebilir.
+Kök bilgisi ayetin yerine geçmez ve Reşat Halife’nin Yetkilendirilmiş İngilizce Çevirisini değiştirmez. Bir kelimenin kök alanı, çeviriye alternatif bir ayet üretmek için değil, ayetin içindeki ilişkileri daha dikkatli düşünmek için kullanılabilir. Bu sınır korunmadığında kök çalışması, metni açıklamak yerine kişinin istediği anlama zorlayan bir araca dönüşebilir.
 
 **رَسُولًا (resulan)** kelimesi **ر-س-ل (Re-Sin-Lam)** köküyle ilişkilidir ve gönderme anlam alanını taşır. Elçi, kendi kendisini yetkilendiren kişi değildir. Gönderilmiş olma niteliği, elçinin kaynağa bağlılığını gösterir. Elçinin bağımsız bir dini merkez olmamasının dildeki işaretlerinden biri budur: O, gönderileni taşır.
 
