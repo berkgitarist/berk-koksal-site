@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import Nav from "../../components/nav.astro";
 
 const milestones = [
-  ["1980", "İstanbul'da doğdu", "19 Aralık 1980'de (19.12.1980) İstanbul'da doğdu ve çocukluğunun ilk yıllarını ağırlıklı olarak Rami ve Gaziosmanpaşa çevresinde geçirdi. Kan grubu O Rh negatiftir (O−). Kendisi için anlamlı olan kişisel bir ayrıntı olarak, doğum tarihinde 19 sayısının iki kez yer aldığını belirtir. Tarih 19121980 biçiminde yazıldığında tam sayı da 19'a tam bölünmektedir. Köksal, 19'u kişisel uğurlu sayısı olarak da görür ve bu sayısal ayrıntıları bağımsız bir dinî iddia olarak değil, 19 sayısına duyduğu saygının kişisel bir ifadesi olarak korur."],
+  ["1980", "İstanbul'da doğdu", "19 Aralık 1980'de (19.12.1980) İstanbul'da doğdu ve çocukluğunun ilk yıllarını ağırlıklı olarak Rami ve Gaziosmanpaşa çevresinde geçirdi. Kendisi için anlamlı olan kişisel bir ayrıntı olarak, doğum tarihinde 19 sayısının iki kez yer aldığını belirtir. Tarih 19121980 biçiminde yazıldığında tam sayı da 19'a tam bölünmektedir. Köksal bu sayısal ayrıntıları bağımsız bir dinî iddia olarak değil, 19 sayısına duyduğu saygının kişisel bir ifadesi olarak korur."],
   ["yak. 1992–1993", "Klasik gitar", "Gaziosmanpaşa'da özel klasik gitar derslerine başladı ve müzik yaşamının teknik temelini oluşturdu."],
   ["1996", "Hayatını etkileyen kişisel bir kayıp", "On altı yaşındayken annesi Aynur'u bir trafik kazasında kaybetti. Bu deneyim, TANRI'ya teslimiyetinden önce ürettiği müziğin duygusal dilini derinden şekillendirdi."],
   ["1990'ların sonu–2000'ler", "Gitar, gruplar ve berkgitarist", "Gitarist ve vokalist olarak sahne aldı, gruplarla çalıştı ve kulaktan çıkardığı tabları, akorları ve MIDI/Guitar Pro dosyalarını berkgitarist adıyla internette yayımladı."],
@@ -13,6 +13,7 @@ const milestones = [
   ["2024", "İlk zikir çalışmaları", "Zikir (La ilahe illa Allah) eserini yayımladı ve müzikal yeteneklerini TEK TANRI'yı anma ve yüceltme yönünde kullanmaya başladı."],
   ["2025–2026", "Neo-Sacred Zikr", "Senfonik müzikten ambient meditasyona, rock müziğinden klasik koroya, çocuk korosundan rap, caz ve senfonik metale uzanan büyüyen bir kutsal müzik evreni geliştirdi."],
   ["2026", "QURANIC CONCEPTS ve HELLL", "KURAN'da anlatılan belirli temalara, sahnelere, seslere ve gerçekliklere girmek için ayrı bir konsept albüm çerçevesi olarak QURANIC CONCEPTS'i oluşturdu. HELLL, bu evrenin 19 parçalık ilk dünyası oldu."],
+  ["2026", "HEAVENN yapım aşamasında", "19 eserlik QURANIC CONCEPTS projesi HEAVENN'in miks sürecine başladı. Bu çalışmayı katı bir uzun vadeli takvimin değil, açık uçlu ve teslimiyet merkezli yaratıcı yolculuğun güncel bölümü olarak görüyor."],
 ];
 
 const albums = [
@@ -54,10 +55,14 @@ const albums = [
               Berk KÖKSAL
             </h1>
 
-            <p class="mb-8 text-xl leading-8 text-accent">
+            <p class="mb-6 text-xl leading-8 text-accent">
               Besteci • Gitarist • Müzik Prodüktörü • Yazılım Mühendisi<br />
               Neo-Sacred Zikr'in Kurucusu<br />
               QURANIC CONCEPTS'in Yaratıcısı
+            </p>
+
+            <p class="mb-6 max-w-2xl text-2xl font-heading font-bold leading-9 text-maintext">
+              TANRI'ya teslim olmuş, TEK TANRI'yı anmaya ve yüceltmeye gönül vermiş bir sanatçı ve müzisyen.
             </p>
 
             <p class="max-w-2xl text-lg leading-8 text-subtext">
@@ -542,13 +547,23 @@ const albums = [
 
           <div class="rounded-2xl border border-accent/20 bg-accent/5 p-8">
             <p class="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-accent">KURAN Araştırması ve Yazılım</p>
-            <h2 class="mb-5 text-3xl font-heading font-bold text-maintext">Araştırma, teknoloji ve sürekli öğrenme</h2>
-            <p class="leading-8 text-subtext">
-              Köksal, müziğin yanında yazılım mühendisliği ve KURAN araştırmalarıyla da
-              ilgilenmektedir. Müziğe, koda ve metinsel araştırmaya yaklaşımındaki analitik
-              tavır, erken MIDI yıllarında geliştirdiği aynı alışkanlığı yansıtır:
-              yapıyı incelemek, parçaları doğrulamak, sistemi anlamak ve öğrenmeye devam etmek.
-            </p>
+            <h2 class="mb-5 text-3xl font-heading font-bold text-maintext">Araştırma, yazılım ve sorumluluk</h2>
+            <div class="space-y-4 leading-8 text-subtext">
+              <p>
+                Köksal, müziğin yanında yazılım mühendisliği ve KURAN araştırmalarıyla da
+                ilgilenmektedir. University of the People'da 120 kredilik Bachelor of Science
+                in Computer Science programını tamamlamıştır. Teknik alandaki en güçlü çalışma
+                alışkanlığını, zor problemlerin üzerinde çözülene, bitirilene ve geliştirilene
+                kadar kalmak olarak tanımlar.
+              </p>
+              <p>
+                <a href="https://kuranteyit.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-maintext transition-colors hover:text-accent">KuranTeyit</a>'i
+                bağımsız bir KURAN araştırma ve karşılaştırma aracı olarak geliştirmiştir.
+                Yaklaşımının merkezinde yapıyı incelemek, kaynakları karşılaştırmak ve ilişkileri
+                doğrulamak vardır. Araç ile otorite arasındaki sınırı özellikle korur: AI araştırmaya
+                yardımcı olabilir; ancak anlamanın ve seçimin nihai sorumluluğu kişide kalır.
+              </p>
+            </div>
           </div>
         </section>
 

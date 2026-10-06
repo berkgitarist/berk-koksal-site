@@ -64,6 +64,15 @@ const capabilities = [
 
 ];
 
+const workPrinciples = [
+  { icon: '01', title: 'Plan Deeply', text: 'Front-load the thinking: define the problem, map dependencies and reduce avoidable uncertainty before execution.' },
+  { icon: '02', title: 'Solve Complex Problems', text: 'Stay with difficult, long-running problems instead of abandoning them when the first solution fails.' },
+  { icon: '03', title: 'Find Hidden Errors', text: 'Look for the overlooked detail, broken assumption or process gap that explains why a system is underperforming.' },
+  { icon: '04', title: 'Finish the Target', text: 'Work toward a clear outcome, complete the job and avoid letting endless exploration replace delivery.' },
+  { icon: '05', title: 'Improve After Completion', text: 'Treat completion as the start of iteration: measure, refine, simplify and strengthen the system after it works.' },
+  { icon: '06', title: 'Bridge Business & Technology', text: 'Translate commercial and operational needs into practical digital systems that technical and business teams can both understand.' }
+];
+
 const experience = [
 
   {
@@ -192,9 +201,25 @@ const schema = {
 
     'Digital Operations',
 
-    'Software Development'
+    'Software Development',
 
-  ]
+    'Computer Science',
+
+    'Web Development',
+
+    'Process Automation',
+
+    'Complex Problem Solving'
+
+  ],
+
+  alumniOf: {
+
+    '@type': 'CollegeOrUniversity',
+
+    name: 'University of the People'
+
+  }
 
 };
 
@@ -224,13 +249,13 @@ const schema = {
 
     />
 
-    <link rel="canonical" href=https://berkkoksal.com/career/" />
+    <link rel="canonical" href="https://berkkoksal.com/career/" />
 
-    <link rel="alternate" hreflang="en" href=https://berkkoksal.com/career/" />
+    <link rel="alternate" hreflang="en" href="https://berkkoksal.com/career/" />
 
-    <link rel="alternate" hreflang="tr" href=https://berkkoksal.com/tr/career/" />
+    <link rel="alternate" hreflang="tr" href="https://berkkoksal.com/tr/career/" />
 
-    <link rel="alternate" hreflang="x-default" href=https://berkkoksal.com/career/" />
+    <link rel="alternate" hreflang="x-default" href="https://berkkoksal.com/career/" />
 
     <meta property="og:type" content="profile" />
 
@@ -244,7 +269,7 @@ const schema = {
 
     />
 
-    <meta property="og:url" content=https://berkkoksal.com/career/" />
+    <meta property="og:url" content="https://berkkoksal.com/career/" />
 
     <meta name="twitter:card" content="summary" />
 
@@ -1698,17 +1723,17 @@ const schema = {
 
             <p>
 
-              The differentiator is technical: I also design and build software products. That makes it easier to
+              The differentiator is technical: I also design and build software products. I enjoy complex problems,
 
-              identify inefficient workflows, communicate with technical teams and turn operational problems into
+              hidden errors and long-running issues that require persistence. My default approach is to plan deeply,
 
-              structured, scalable systems.
+              finish the target and then improve the system through iteration.
 
             </p>
 
             <div class="focus-strip">
 
-              <span>Target roles</span>
+              <span>Relevant leadership paths</span>
 
               <strong>Head of E-Commerce · E-Commerce Director · Procurement Manager / Director · Supply Chain Manager / Director · Head of Operations</strong>
 
@@ -1788,9 +1813,9 @@ const schema = {
 
               <span>Education</span>
 
-              <strong>Computer Science</strong>
+              <strong>Bachelor of Science in Computer Science</strong>
 
-              <p>University of the People · 2023–2026</p>
+              <p>University of the People · 2023–2026 · 120 credits · Completed</p>
 
             </div>
 
@@ -1876,7 +1901,15 @@ const schema = {
 
             <span>JavaScript</span>
 
+            <span>Python</span>
+
+            <span>Java</span>
+
             <span>HTML / CSS</span>
+
+            <span>Databases</span>
+
+            <span>Software Engineering</span>
 
             <span>JSON-driven systems</span>
 
@@ -1896,13 +1929,53 @@ const schema = {
 
       </section>
 
+      <section id="working-method" class="section-pad section-muted">
+
+        <div class="shell">
+
+          <div class="section-heading-row">
+
+            <div>
+
+              <p class="section-kicker">05 / Working Method</p>
+
+              <h2 class="section-title">Plan deeply. Solve the hard part. Finish. Then improve.</h2>
+
+            </div>
+
+            <p>A target-oriented operating style built around persistence, error detection, structured planning and end-to-end ownership.</p>
+
+          </div>
+
+          <div class="capability-grid">
+
+            {workPrinciples.map((item) => (
+
+              <article class="capability-card">
+
+                <span class="capability-number">{item.icon}</span>
+
+                <h3>{item.title}</h3>
+
+                <p>{item.text}</p>
+
+              </article>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
       <section class="section-pad value-section">
 
         <div class="shell value-grid">
 
           <div>
 
-            <p class="section-kicker">05 / What I Bring</p>
+            <p class="section-kicker">06 / What I Bring</p>
 
             <h2 class="section-title">The perspective of someone who has worked across the entire operating chain.</h2>
 
@@ -1939,6 +2012,14 @@ const schema = {
               <span>04</span>
 
               <p><strong>Technical fluency</strong> that helps convert business problems into structured digital solutions.</p>
+
+            </div>
+
+            <div>
+
+              <span>05</span>
+
+              <p><strong>Integrity & ownership</strong> — results matter, but so do the method, accountability and long-term consequences of the decision.</p>
 
             </div>
 

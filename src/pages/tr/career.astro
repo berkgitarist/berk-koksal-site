@@ -64,6 +64,15 @@ const capabilities = [
 
 ];
 
+const workPrinciples = [
+  { icon: '01', title: 'Derin Planla', text: 'Uygulamadan önce problemi, bağımlılıkları ve riskleri netleştir; önlenebilir belirsizliği planlama aşamasında azalt.' },
+  { icon: '02', title: 'Karmaşık Problemi Çöz', text: 'İlk çözüm başarısız olduğunda bırakmak yerine uzun süren ve zor problemlerin üzerinde kal.' },
+  { icon: '03', title: 'Gizli Hatayı Bul', text: 'Sistemin neden iyi çalışmadığını açıklayan gözden kaçmış ayrıntıyı, yanlış varsayımı veya süreç boşluğunu ara.' },
+  { icon: '04', title: 'Hedefi Bitir', text: 'Net bir sonuca doğru ilerle; sonsuz araştırmanın teslimatın yerini almasına izin vermeden işi tamamla.' },
+  { icon: '05', title: 'Bitirdikten Sonra Geliştir', text: 'Tamamlanmayı iterasyonun başlangıcı kabul et; çalışan sistemi ölç, sadeleştir, güçlendir ve yeniden geliştir.' },
+  { icon: '06', title: 'İş ile Teknolojiyi Birleştir', text: 'Ticari ve operasyonel ihtiyaçları hem teknik hem iş ekiplerinin anlayabileceği pratik dijital sistemlere dönüştür.' }
+];
+
 const experience = [
 
   {
@@ -192,9 +201,25 @@ const schema = {
 
     'Digital Operations',
 
-    'Software Development'
+    'Software Development',
 
-  ]
+    'Computer Science',
+
+    'Web Development',
+
+    'Process Automation',
+
+    'Complex Problem Solving'
+
+  ],
+
+  alumniOf: {
+
+    '@type': 'CollegeOrUniversity',
+
+    name: 'University of the People'
+
+  }
 
 };
 
@@ -224,13 +249,13 @@ const schema = {
 
     />
 
-    <link rel="canonical" href=https://berkkoksal.com/tr/career/" />
+    <link rel="canonical" href="https://berkkoksal.com/tr/career/" />
 
-    <link rel="alternate" hreflang="tr" href=https://berkkoksal.com/tr/career/" />
+    <link rel="alternate" hreflang="tr" href="https://berkkoksal.com/tr/career/" />
 
-    <link rel="alternate" hreflang="en" href=https://berkkoksal.com/career/" />
+    <link rel="alternate" hreflang="en" href="https://berkkoksal.com/career/" />
 
-    <link rel="alternate" hreflang="x-default" href=https://berkkoksal.com/career/" />
+    <link rel="alternate" hreflang="x-default" href="https://berkkoksal.com/career/" />
 
     <meta property="og:type" content="profile" />
 
@@ -244,7 +269,7 @@ const schema = {
 
     />
 
-    <meta property="og:url" content=https://berkkoksal.com/tr/career/" />
+    <meta property="og:url" content="https://berkkoksal.com/tr/career/" />
 
     <meta name="twitter:card" content="summary" />
 
@@ -1698,17 +1723,17 @@ const schema = {
 
             <p>
 
-              Beni farklılaştıran taraf teknik yetkinlik: yazılım ürünleri de tasarlıyor ve geliştiriyorum. Bu sayede
+              Beni farklılaştıran taraf teknik yetkinlik: yazılım ürünleri de tasarlıyor ve geliştiriyorum. Karmaşık problemleri,
 
-              verimsiz iş akışlarını daha kolay tespit ediyor, teknik ekiplerle aynı dili konuşuyor ve operasyonel sorunları
+              görünmeyen hataları ve sabır isteyen uzun süreçleri çözmekten hoşlanıyorum. Varsayılan yaklaşımım derin planlama yapmak,
 
-              yapılandırılmış, ölçeklenebilir sistemlere dönüştürebiliyorum.
+              hedefi bitirmek ve ardından sistemi iterasyonla geliştirmek.
 
             </p>
 
             <div class="focus-strip">
 
-              <span>Hedef roller</span>
+              <span>Uygun liderlik yolları</span>
 
               <strong>E-Ticaret Direktörü · E-Ticaret Lideri · Satın Alma Müdürü / Direktörü · Tedarik Zinciri Müdürü / Direktörü · Operasyon Direktörü</strong>
 
@@ -1784,9 +1809,9 @@ const schema = {
 
               <span>Eğitim</span>
 
-              <strong>Bilgisayar Bilimleri</strong>
+              <strong>Bachelor of Science in Computer Science</strong>
 
-              <p>University of the People · 2023–2026</p>
+              <p>University of the People · 2023–2026 · 120 kredi · Tamamlandı</p>
 
             </div>
 
@@ -1872,7 +1897,15 @@ const schema = {
 
             <span>JavaScript</span>
 
+            <span>Python</span>
+
+            <span>Java</span>
+
             <span>HTML / CSS</span>
+
+            <span>Veritabanları</span>
+
+            <span>Yazılım Mühendisliği</span>
 
             <span>JSON tabanlı sistemler</span>
 
@@ -1892,13 +1925,53 @@ const schema = {
 
       </section>
 
+      <section id="working-method" class="section-pad section-muted">
+
+        <div class="shell">
+
+          <div class="section-heading-row">
+
+            <div>
+
+              <p class="section-kicker">05 / Çalışma Yöntemi</p>
+
+              <h2 class="section-title">Derin planla. Zor kısmı çöz. Bitir. Sonra geliştir.</h2>
+
+            </div>
+
+            <p>Israr, hata bulma, yapılandırılmış planlama ve uçtan uca sorumluluk üzerine kurulu hedef odaklı bir çalışma biçimi.</p>
+
+          </div>
+
+          <div class="capability-grid">
+
+            {workPrinciples.map((item) => (
+
+              <article class="capability-card">
+
+                <span class="capability-number">{item.icon}</span>
+
+                <h3>{item.title}</h3>
+
+                <p>{item.text}</p>
+
+              </article>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
       <section class="section-pad value-section">
 
         <div class="shell value-grid">
 
           <div>
 
-            <p class="section-kicker">05 / Katkım</p>
+            <p class="section-kicker">06 / Katkım</p>
 
             <h2 class="section-title">Tüm operasyon zincirinde çalışmış birinin bakış açısı.</h2>
 
@@ -1935,6 +2008,14 @@ const schema = {
               <span>04</span>
 
               <p><strong>Teknik yetkinlik</strong> — iş problemlerini yapılandırılmış dijital çözümlere dönüştürmeye yardımcı olur.</p>
+
+            </div>
+
+            <div>
+
+              <span>05</span>
+
+              <p><strong>Dürüstlük ve sorumluluk</strong> — sonuç önemlidir; fakat sonuca hangi yöntemle ulaşıldığı, hesap verebilirlik ve uzun vadeli etkiler de kararın parçasıdır.</p>
 
             </div>
 
