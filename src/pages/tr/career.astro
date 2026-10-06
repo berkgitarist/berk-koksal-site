@@ -976,7 +976,9 @@ const schema = {
   @media print {
     @page {
       size: A4;
-      margin: 10mm 11mm;
+      /* Keep the browser page box full-size; the document itself owns the margins.
+         This keeps the PDF gutter even when Chrome is set to "Margins: None". */
+      margin: 0;
     }
 
     html,
@@ -985,6 +987,17 @@ const schema = {
       color: #111 !important;
       font-size: 9.2pt;
       line-height: 1.35;
+    }
+
+    html {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    body {
+      margin: 0 !important;
+      padding: 10mm 12mm 10mm !important;
+      box-sizing: border-box !important;
     }
 
     * {
@@ -1344,8 +1357,11 @@ const schema = {
     }
 
     .section-tech {
-      padding-top: 4mm !important;
-      break-inside: avoid;
+      /* Page 2 begins here in the two-page CV. Add a real top gutter even
+         when the browser print dialog has page margins disabled. */
+      padding-top: 10mm !important;
+      break-before: page;
+      break-inside: auto;
     }
 
     .tech-heading {
@@ -2041,7 +2057,7 @@ const schema = {
 
           <div>
 
-            <p class="section-kicker">06 / Uluslararası Fırsatlar</p>
+            <p class="section-kicker">07 / Uluslararası Fırsatlar</p>
 
             <h2>Ticaret, operasyon ve teknolojinin kesiştiği liderlik rollerini hedefliyorum.</h2>
 
