@@ -18,7 +18,7 @@ interface Props {
 
 const {
   title,
-  description = 'Berk KÖKSAL - Composer, Guitarist, Music Producer, Software Engineer. Founder of Neo-Sacred Zikr.',
+  description = 'Berk KÖKSAL — Composer, Guitarist, Music Producer, Software Engineer and QURAN Researcher. Founder of Neo-Sacred Zikr and creator of QURANIC CONCEPTS.',
   canonical = Astro.url.pathname,
   ogImage = '/artist/berk-portrait.webp',
   ogType = 'website',
@@ -62,6 +62,8 @@ const defaultTheme = `${baseTheme}-dark`;
       ogType={ogType}
       twitterCard={twitterCard}
     />
+
+    <link rel="describedby" href="/llms.txt" />
 
     <script
       is:inline

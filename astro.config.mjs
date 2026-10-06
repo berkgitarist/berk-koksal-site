@@ -15,6 +15,11 @@ export default defineConfig({
 
   integrations: [
     icon(),
-    sitemap(),
+    sitemap({
+      customPages: [
+        "https://berkkoksal.com/llms.txt",
+        "https://berkkoksal.com/ai/berk-koksal-master-context.md",
+      ],
+    }),
   ],
 });

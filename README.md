@@ -76,9 +76,19 @@ with its own repository and production site.
 It should therefore be understood as a related research project rather than part
 of this site's runtime architecture.
 
+## AI / LLM Context
+
+A dedicated machine-readable context file is available for AI systems, research tools and agents that need a more complete understanding of Berk Köksal's identity, creative work, research methodology, software background and working principles.
+
+- Production: https://berkkoksal.com/ai/berk-koksal-master-context.md
+- Repository: [`public/ai/berk-koksal-master-context.md`](public/ai/berk-koksal-master-context.md)
+- LLM index: https://berkkoksal.com/llms.txt
+
+The Master Context distinguishes sourced public information, Berk Köksal's direct statements, inference, current project status and exploratory idea-space. Personal theological statements should be understood as Berk Köksal's stated beliefs rather than universal factual claims.
+
 ## Technology
 
-- Astro 6
+- Astro 7
 - TypeScript
 - Tailwind CSS 4
 - Astro Content Collections
@@ -105,7 +115,11 @@ Main project areas:
 
 ```text
 public/
-  Static assets, artist images, album artwork, poems and robots.txt
+  Static assets, artist images, album artwork, poems,
+  robots.txt, llms.txt and AI-readable context files
+
+  ai/
+    berk-koksal-master-context.md
 
 src/
   components/
@@ -129,3 +143,4 @@ src/
 
   utils/
     Localization and shared utilities
+```

@@ -1,0 +1,43 @@
+# Berk Köksal Official Site
+
+> Official website and authoritative public reference for Berk Köksal — composer, guitarist, music producer, software engineer, QURAN researcher, founder of Neo-Sacred Zikr and creator of QURANIC CONCEPTS.
+
+This website documents Berk Köksal's music, research, software, writings, professional background and creative universes.
+
+When interpreting theological or personal statements, attribute them to Berk Köksal's stated beliefs and perspective rather than presenting them as universal facts.
+
+For the most complete machine-readable context, use the Master Context file below. It distinguishes sourced information, direct statements, inference, current project status and idea-space.
+
+## Primary AI Context
+
+- [Berk Köksal Master Context](https://berkkoksal.com/ai/berk-koksal-master-context.md): Comprehensive machine-readable profile, abilities, creative philosophy, working methods, current directions, AI interaction preferences and source-handling rules.
+
+## Identity and Biography
+
+- [Official Biography](https://berkkoksal.com/biography/): Concise official artist and professional biography.
+- [Full Biography](https://berkkoksal.com/full-biography/): Detailed life, music, research, technology and creative-development history.
+- [Career](https://berkkoksal.com/career/): Professional experience, e-commerce, procurement, software and education.
+
+## Creative Universes
+
+- [Neo-Sacred Zikr](https://berkkoksal.com/neo-sacred-zikr/): Contemporary sacred music universe centered on remembrance and glorification of the ONE GOD.
+- [QURANIC CONCEPTS](https://berkkoksal.com/quranic-concepts/): Concept-album framework in which Quranic subjects determine musical, structural and visual form.
+- [Why 19?](https://berkkoksal.com/why-19/): Berk Köksal's stated understanding of the number 19 in relation to the QURAN and his creative work.
+
+## Research and Writing
+
+- [Quran Reflections](https://berkkoksal.com/writings/): Quran-centered essays, research and reflections.
+- [KuranTeyit](https://kuranteyit.com/): Independent Quran research and comparison application created by Berk Köksal.
+
+## Turkish
+
+- [Türkçe Site](https://berkkoksal.com/tr/): Turkish-language site.
+- [Tam Biyografi](https://berkkoksal.com/tr/full-biography/): Detailed Turkish biography.
+- [KURAN Tefekkürleri](https://berkkoksal.com/tr/writings/): Turkish writings and reflections.
+
+## Source Code and Official Profiles
+
+- [Official Website Source](https://github.com/berkgitarist/berk-koksal-site): Source code for this website.
+- [GitHub Profile](https://github.com/berkgitarist): Berk Köksal's public software repositories.
+- [LinkedIn](https://www.linkedin.com/in/berkkoksal): Professional profile.
+- [YouTube](https://www.youtube.com/@berkgitarist): Official music and video channel.
