@@ -51,7 +51,7 @@ Sorunun önemi yalnız “kime itaat edeceğiz?” meselesinden kaynaklanmıyor.
 
 **Türkçe:** Ey inananlar, TANRI’ya itaat edin ve elçiye ve aranızdan sorumlulara itaat edin. Herhangi bir meselede ihtilafa düşerseniz, onu TANRI’ya ve elçiye havale edin, eğer TANRI’ya ve Son Gün’e gerçekten inanıyorsanız. Bu sizin için daha iyidir ve size en iyi çözümü sağlar.
 
-Source: <a href="https://kuranteyit.com/" target="_blank" rel="noopener noreferrer">kuranteyit.com</a>
+Kaynak: <a href="https://kuranteyit.com/" target="_blank" rel="noopener noreferrer">kuranteyit.com</a>
 
 ### Ayetin Tefekkürü
 
@@ -477,4 +477,4 @@ En doğrusunu TANRI bilir.
 
 En doğrusunu TANRI bilir.
 
-Source: <a href="https://kuranteyit.com/" target="_blank" rel="noopener noreferrer">kuranteyit.com</a>
+Kaynak: <a href="https://kuranteyit.com/" target="_blank" rel="noopener noreferrer">kuranteyit.com</a>
