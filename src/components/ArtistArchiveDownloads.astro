@@ -1,0 +1,351 @@
+---
+/**
+ * Downloadable artist / digital archive dossier (8 October 2026).
+ * Reusable on the standalone career pages and the full-biography pages.
+ */
+interface Props {
+  lang?: 'tr' | 'en';
+  variant?: 'full' | 'compact';
+}
+
+const { lang = 'en', variant = 'full' } = Astro.props;
+const isTr = lang === 'tr';
+const isCompact = variant === 'compact';
+
+const files = [
+  {
+    code: 'TR',
+    language: 'Türkçe',
+    languageEn: 'Turkish',
+    titleTr: 'Türkçe arşiv dosyası',
+    titleEn: 'Turkish archive edition',
+    summaryTr: 'Sanatçı profili, diskografi, HELLL albüm dosyası, yazılar, yazılım çalışmaları ve kaynaklar.',
+    summaryEn: 'Artist profile, discography, the HELLL album dossier, writings, software projects and sources.',
+    url: '/archive/berk-koksal-artist-digital-archive-2026-tr.pdf',
+    cover: '/archive/berk-koksal-artist-digital-archive-2026-tr.webp',
+    filename: 'Berk_Koksal_Artist_Digital_Archive_2026_TR.pdf'
+  },
+  {
+    code: 'EN',
+    language: 'English',
+    languageEn: 'English',
+    titleTr: 'İngilizce arşiv dosyası',
+    titleEn: 'Complete English edition',
+    summaryTr: 'Sanat, müzik, araştırma, dijital projeler ve kaynakların tamamını kapsayan İngilizce yayın.',
+    summaryEn: 'The complete English-language edition covering music, research, digital projects and primary sources.',
+    url: '/archive/berk-koksal-artist-digital-archive-2026-en.pdf',
+    cover: '/archive/berk-koksal-artist-digital-archive-2026-en.webp',
+    filename: 'Berk_Koksal_Artist_Digital_Archive_2026_EN.pdf'
+  }
+];
+
+const orderedFiles = isTr ? files : [...files].reverse();
+const heading = isCompact
+  ? (isTr ? 'Sanatçı arşivini keşfedin' : 'Explore the artist archive')
+  : (isTr ? 'Sanatçı & Dijital Arşiv' : 'Artist & Digital Archive');
+const description = isCompact
+  ? (isTr
+      ? 'Müzik, diskografi, yazılar ve dijital projelerin 2026 tarihli kaynaklı dosyasını Türkçe veya İngilizce indirin.'
+      : 'Download the 2026 source-linked dossier of music, discography, writings and digital projects in either language.')
+  : (isTr
+      ? 'Müzik yolculuğumu, Neo-Sacred Zikr ve QURANIC CONCEPTS çalışmalarımı, diskografimi, yazılarımı ve yazılım projelerimi bir araya getiren 15 sayfalık arşiv yayını.'
+      : 'A 15-page archival edition bringing together my musical journey, Neo-Sacred Zikr and QURANIC CONCEPTS, discography, writings and software projects.');
+---
+
+<section
+  id="artist-digital-archive"
+  class:list={['bk-archive', isCompact && 'bk-archive--compact']}
+  aria-labelledby="bk-archive-heading"
+>
+  <div class="bk-archive-inner">
+    <div class="bk-archive-heading">
+      <p class="bk-archive-eyebrow">
+        {isCompact
+          ? (isTr ? 'ARŞİV YAYINI / 2026' : 'ARCHIVE EDITION / 2026')
+          : (isTr ? '08 / ARŞİV YAYINI' : '08 / ARCHIVE EDITION')}
+      </p>
+      <h2 id="bk-archive-heading">{heading}</h2>
+      <p class="bk-archive-description">{description}</p>
+    </div>
+
+    <div class="bk-archive-grid">
+      {orderedFiles.map((file) => (
+        <article class="bk-archive-card">
+          {!isCompact && (
+            <div class="bk-archive-cover">
+              <img
+                src={file.cover}
+                alt={isTr
+                  ? `Berk Köksal ${file.language} dijital arşiv dosyası kapağı`
+                  : `Cover of Berk Köksal's ${file.languageEn} digital archive dossier`}
+                loading="lazy"
+                decoding="async"
+                width="440"
+                height="623"
+              />
+            </div>
+          )}
+          <div class="bk-archive-card-copy">
+            <div class="bk-archive-card-top">
+              <span class="bk-archive-language">{file.code} / {file.language}</span>
+              <span class="bk-archive-filetype">PDF · 15 {isTr ? 'sayfa' : 'pages'}</span>
+            </div>
+            <h3>{isTr ? file.titleTr : file.titleEn}</h3>
+            {!isCompact && <p>{isTr ? file.summaryTr : file.summaryEn}</p>}
+            <div class="bk-archive-actions">
+              <a
+                class="bk-archive-action bk-archive-action--download"
+                href={file.url}
+                download={file.filename}
+                type="application/pdf"
+                aria-label={isTr
+                  ? `${file.language} arşiv dosyasını PDF olarak indir`
+                  : `Download ${file.languageEn} archive as PDF`}
+              >
+                <span aria-hidden="true">↓</span>
+                {isTr ? 'PDF İndir' : 'Download PDF'}
+              </a>
+              <a
+                class="bk-archive-action bk-archive-action--view"
+                href={file.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                type="application/pdf"
+                aria-label={isTr
+                  ? `${file.language} arşiv dosyasını yeni sekmede görüntüle`
+                  : `Open ${file.languageEn} archive in a new tab`}
+              >
+                {isTr ? 'Görüntüle' : 'View'}
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+    <p class="bk-archive-footnote">
+      {isTr
+        ? '8 Ekim 2026 · Kaynak bağlantıları içeren, aranabilir sanatçı ve dijital arşiv yayını.'
+        : '8 October 2026 · Searchable, source-linked artist and digital archive publication.'}
+    </p>
+  </div>
+</section>
+
+<style>
+  .bk-archive {
+    --bk-archive-gold: #dbc18c;
+    --bk-archive-ink: #f7f4ed;
+    --bk-archive-muted: #afb9bc;
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    padding: clamp(70px, 8vw, 112px) 24px;
+    color: var(--bk-archive-ink);
+    border-top: 1px solid rgba(219, 193, 140, 0.18);
+    border-bottom: 1px solid rgba(219, 193, 140, 0.18);
+    background:
+      radial-gradient(circle at 92% 4%, rgba(219, 193, 140, 0.085), transparent 33%),
+      linear-gradient(145deg, #0e191d 0%, #10171b 48%, #0b1115 100%);
+  }
+
+  .bk-archive-inner {
+    width: min(100%, 1180px);
+    margin-inline: auto;
+  }
+
+  .bk-archive-heading { margin-bottom: 32px; }
+  .bk-archive-eyebrow {
+    margin: 0 0 15px;
+    color: var(--bk-archive-gold);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .bk-archive-heading h2 {
+    margin: 0 0 16px;
+    max-width: 900px;
+    color: #fffdf8;
+    font-size: clamp(31px, 4.1vw, 52px);
+    font-weight: 770;
+    letter-spacing: -0.035em;
+    line-height: 1.14;
+  }
+
+  .bk-archive-description {
+    max-width: 760px;
+    margin: 0;
+    color: var(--bk-archive-muted);
+    font-size: clamp(15px, 1.6vw, 17px);
+    line-height: 1.75;
+  }
+
+  .bk-archive-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .bk-archive-card {
+    display: grid;
+    grid-template-columns: 130px minmax(0, 1fr);
+    gap: 22px;
+    min-width: 0;
+    padding: 21px;
+    border: 1px solid rgba(219, 193, 140, 0.22);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.032);
+    transition: border-color 200ms ease, transform 200ms ease;
+  }
+  .bk-archive-card:hover {
+    border-color: rgba(219, 193, 140, 0.53);
+    transform: translateY(-2px);
+  }
+
+  .bk-archive-cover {
+    align-self: start;
+    min-width: 0;
+    padding: 3px;
+    border: 1px solid rgba(219, 193, 140, 0.18);
+    border-radius: 8px;
+    background: #0b1316;
+  }
+  .bk-archive-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 440 / 623;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .bk-archive-card-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+  }
+
+  .bk-archive-card-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px 14px;
+    margin-bottom: 12px;
+  }
+  .bk-archive-language {
+    color: var(--bk-archive-gold);
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+  .bk-archive-filetype {
+    color: #919a9e;
+    font-size: 11px;
+    font-weight: 650;
+  }
+  .bk-archive-card h3 {
+    margin: 0 0 12px;
+    color: #fff;
+    font-size: clamp(18px, 2vw, 21px);
+    font-weight: 750;
+    letter-spacing: -0.018em;
+    line-height: 1.3;
+  }
+  .bk-archive-card-copy > p {
+    margin: 0 0 22px;
+    color: #b2bbbd;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .bk-archive-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: auto;
+  }
+  .bk-archive-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: border-color 180ms ease, background-color 180ms ease;
+  }
+  .bk-archive-action--download {
+    background: #e5c995;
+    color: #171713 !important;
+  }
+  .bk-archive-action--download:hover { background: #f3ddaF; }
+  .bk-archive-action--view {
+    color: #ece7dc !important;
+    border-color: rgba(219, 193, 140, 0.33);
+    background: rgba(255, 255, 255, 0.025);
+  }
+  .bk-archive-action--view:hover {
+    border-color: rgba(219, 193, 140, 0.7);
+    background: rgba(219, 193, 140, 0.075);
+  }
+  .bk-archive-action:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+  }
+
+  .bk-archive-footnote {
+    margin: 24px 0 0;
+    color: #8b9598;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .bk-archive--compact {
+    width: min(100% - 24px, 1180px);
+    margin: 56px auto 84px;
+    padding: clamp(27px, 5vw, 48px);
+    border: 1px solid rgba(219, 193, 140, 0.25);
+    border-radius: 24px;
+    box-shadow: 0 18px 54px rgba(0, 0, 0, 0.22);
+  }
+  .bk-archive--compact .bk-archive-heading h2 { font-size: clamp(25px, 3.3vw, 37px); }
+  .bk-archive--compact .bk-archive-heading { margin-bottom: 25px; }
+  .bk-archive--compact .bk-archive-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding: 21px;
+  }
+  .bk-archive--compact .bk-archive-card h3 { margin-bottom: 20px; }
+  .bk-archive--compact .bk-archive-footnote { margin-top: 17px; }
+
+  @media (max-width: 900px) {
+    .bk-archive-grid { grid-template-columns: minmax(0, 1fr); }
+    .bk-archive-card { grid-template-columns: 112px minmax(0, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .bk-archive { padding-inline: 16px; }
+    .bk-archive-card { grid-template-columns: 89px minmax(0, 1fr); gap: 14px; padding: 14px; }
+    .bk-archive-card-top { margin-bottom: 7px; }
+    .bk-archive-card h3 { margin-bottom: 8px; }
+    .bk-archive-card-copy > p { font-size: 12px; margin-bottom: 14px; }
+    .bk-archive-action { min-height: 39px; padding: 9px 11px; font-size: 11px; }
+    .bk-archive--compact { width: min(100% - 8px, 1180px); padding: 24px 16px; }
+    .bk-archive--compact .bk-archive-card { padding: 17px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .bk-archive-card, .bk-archive-action { transition: none; }
+    .bk-archive-card:hover { transform: none; }
+  }
+  /* Keep the career page's existing "Save CV as PDF" output unchanged. */
+  @media print {
+    .bk-archive { display: none !important; }
+  }
+</style>
