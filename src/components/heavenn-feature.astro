@@ -1,0 +1,85 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props { lang?: 'en' | 'tr' }
+const { lang = 'en' } = Astro.props;
+const tr = lang === 'tr';
+const prefix = tr ? '/tr' : '';
+const spotifyUrl = 'https://open.spotify.com/intl-tr/album/2HiMboay21UxfcgZlhSRIj';
+const copy = tr ? {
+  label: 'QURANIC CONCEPTS',
+  meta: 'ALBÜM • 2026 • 19 ESER',
+  heading: 'HEAVENN',
+  subtitle: 'CENNET: KORKUNUN VE YORGUNLUĞUN OLMADIĞI BİR DÜNYA.',
+  description: 'QURANIC CONCEPTS’in ikinci dünyası: Cennet’i huzur, güven, yorgunluktan uzaklık, tükenmeyen güzellik ve sonu olmayan yakınlık temalarıyla ele alan KURAN merkezli 19 eserlik konsept albüm.',
+  tagOne: 'SONU OLMAYAN YAKINLIK',
+  tagTwo: '19 ESER',
+  tagFour: 'CENNET • 2026',
+  listen: 'Spotify',
+  explore: 'HEAVENN’i Dinle',
+  coverAlt: 'Berk KÖKSAL — HEAVENN albüm kapağı',
+} : {
+  label: 'QURANIC CONCEPTS',
+  meta: 'ALBUM • 2026 • 19 WORKS',
+  heading: 'HEAVENN',
+  subtitle: 'THE MUSIC MUST SOUND AS IF IT HAS NOTHING TO FEAR.',
+  description: 'The second world of QURANIC CONCEPTS: a nineteen-work, Quran-centered concept album that explores Paradise through peace, safety, freedom from fatigue, inexhaustible beauty and nearness without end.',
+  tagOne: 'NEARNESS WITHOUT END',
+  tagTwo: '19 WORKS',
+  tagFour: 'PARADISE • 2026',
+  listen: 'Spotify',
+  explore: 'Enter HEAVENN',
+  coverAlt: 'HEAVENN album cover by Berk KÖKSAL',
+};
+---
+
+<!-- Matches the HELLL homepage card's dimensions, heading scale and grid. -->
+<section class="bk-heavenn-feature mb-6" aria-labelledby="bk-heavenn-feature-title">
+  <div class="relative isolate overflow-hidden rounded-[2rem] border border-[#acd6dc]/35 bg-gradient-to-br from-[#0b1b26] via-[#102328] to-[#1b281c] p-6 backdrop-blur-xl md:p-8">
+    <div class="pointer-events-none absolute -right-10 top-1/2 -translate-y-1/2 select-none font-heading text-[17rem] font-bold leading-none tracking-[-0.06em] text-[#acd6dc]/[0.12] md:-right-16 md:text-[28rem]" aria-hidden="true">XIX</div>
+    <div class="relative z-10 mb-6 flex items-center gap-2">
+      <Icon name="mdi:album" class="h-5 w-5 text-[#b8e0e1]" />
+      <span class="text-xs font-semibold uppercase tracking-[0.35em] text-[#b8e0e1]">{copy.label}</span>
+    </div>
+    <div class="relative z-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-[340px_1fr]">
+      <a href={`${prefix}/albums/heavenn/`} class="group" aria-label={copy.explore}>
+        <img
+          src="/albums/heavenn.webp"
+          alt={copy.coverAlt}
+          width="640"
+          height="640"
+          loading="lazy"
+          decoding="async"
+          class="w-full rounded-3xl border border-white/10 bg-white object-cover shadow-[0_0_80px_rgba(172,214,220,0.13)] transition duration-500 group-hover:scale-[1.02]"
+        />
+      </a>
+      <div class="min-w-0">
+        <p class="mb-2 text-sm uppercase tracking-[0.35em] text-[#b8e0e1]">{copy.meta}</p>
+        <h2 id="bk-heavenn-feature-title" class="mb-3 text-5xl font-bold leading-none text-maintext md:text-7xl">{copy.heading}</h2>
+        <p class="mb-5 font-heading text-xl font-bold uppercase tracking-[0.08em] text-maintext/90 md:text-2xl">{copy.subtitle}</p>
+        <p class="mb-8 max-w-3xl text-lg leading-8 text-subtext">{copy.description}</p>
+        <div class="mb-8 flex flex-wrap gap-2 text-xs uppercase tracking-widest">
+          <span class="rounded-full border border-[#acd6dc]/35 bg-[#acd6dc]/10 px-4 py-2 text-[#b8e0e1]">{copy.tagOne}</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">{copy.tagTwo}</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">XIX</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">{copy.tagFour}</span>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <a href={spotifyUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full border border-[#1DB954]/30 bg-[#1DB954]/10 px-7 py-4 font-semibold text-maintext transition hover:bg-[#1DB954]/20">
+            <Icon name="mdi:spotify" class="h-5 w-5 text-[#1DB954]" /> {copy.listen}
+          </a>
+          <a href={`${prefix}/albums/heavenn/`} class="inline-flex items-center gap-3 rounded-full border border-[#acd6dc]/35 bg-[#acd6dc]/10 px-7 py-4 font-semibold text-maintext transition hover:bg-[#acd6dc]/20">{copy.explore}</a>
+          <a href={`${prefix}/quranic-concepts/`} class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-7 py-4 font-semibold text-maintext transition hover:bg-white/10">QURANIC CONCEPTS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Home.astro already contains the original HELLL card. Keep that card intact,
+     but render the new HEAVENN sibling ahead of it (without duplicating HELLL). -->
+<style is:global>
+  .bk-home-album-flow { display: flex; flex-direction: column; min-width: 0; }
+  .bk-home-album-flow > .bk-heavenn-feature { order: 1; }
+  .bk-home-album-flow > section.mb-6:not(.bk-heavenn-feature) { order: 2; }
+</style>

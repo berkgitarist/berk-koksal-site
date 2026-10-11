@@ -2,8 +2,20 @@
 import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/nav.astro';
 import HeavennPage from '../../components/concepts/HeavennPage.astro';
+
 ---
-<Layout title="HEAVENN | Berk KÖKSAL" description="A nineteen-work Quran-centered album where Paradise becomes musical law: power without violence, movement without fatigue, beauty without depletion, and nearness without end." canonical="/albums/heavenn/" ogImage="/albums/heavenn.webp" ogType="music.album" twitterCard="summary_large_image" pageClass="bk-heavenn-theme" disableAmbient={true}>
+
+<Layout
+  title="HEAVENN | Berk KÖKSAL"
+  description="A nineteen-work Quran-centered album where Paradise becomes musical law: power without violence, movement without fatigue, beauty without depletion, and nearness without end. Listen on Spotify."
+  canonical="/albums/heavenn/"
+  ogImage="/albums/heavenn.webp"
+  ogType="music.album"
+  twitterCard="summary_large_image"
+  pageClass="bk-heavenn-theme"
+  disableAmbient={true}
+>
   <Nav />
+
   <HeavennPage lang="en" />
 </Layout>

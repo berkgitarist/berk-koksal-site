@@ -3,6 +3,7 @@ import Singles from "../components/singles.astro";
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/nav.astro";
 import Home from "../components/home.astro";
+import HeavennFeature from "../components/heavenn-feature.astro";
 import Tech from "../components/tech.astro";
 import Projects from "../components/projects.astro";
 import Contact from "../components/contact.astro";
@@ -16,7 +17,11 @@ import Career from "../components/career.astro";
   ogImage="/artist/berk-portrait.webp"
 >
   <Nav />
-  <Home />
+  <div class="bk-home-album-flow">
+    <Home />
+    <HeavennFeature lang="en" />
+  </div>
+
   <Career />
   <Projects />
   <Singles />

@@ -3,6 +3,7 @@ import Singles from '../../components/singles.astro';
 import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/nav.astro';
 import Home from '../../components/home.astro';
+import HeavennFeature from '../../components/heavenn-feature.astro';
 import Tech from '../../components/tech.astro';
 import Projects from '../../components/projects.astro';
 import Contact from '../../components/contact.astro';
@@ -17,7 +18,10 @@ import Career from '../../components/career.astro';
   lang="tr"
 >
   <Nav />
-  <Home lang="tr" />
+  <div class="bk-home-album-flow">
+    <Home lang="tr" />
+    <HeavennFeature lang="tr" />
+  </div>
   <Career lang="tr" />
   <Projects lang="tr" />
   <Singles lang="tr" />

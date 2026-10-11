@@ -11,6 +11,7 @@ const isTurkish = lang === 'tr';
 
 const albumDescriptionTr: Record<string, string> = {
   helll: 'Cehennem, hesap, pişmanlık, susuzluk, hapsedilme ve geri dönüşü olmayan sonuçlara ilişkin KURAN merkezli uyarıları tavizsiz tek bir müzikal inişe dönüştüren 19 parçalık konsept albüm.',
+  heavenn: "Cennet'in huzur, güven, yorgunluktan uzaklık, tükenmeyen güzellik ve sonu olmayan yakınlık temalarını ele alan KURAN merkezli 19 eserlik konsept albüm.",
   'zikr-symphonic-metal': "Tek bir kutsal ifade olan HÛ'nun nefes ve sessizlikten yükselerek anıtsal korolara, senfonik orkestraya, borulu orga ve progresif neoklasik metale dönüştüğü 19 bölümlük bir Neo-Sacred Zikr döngüsü.",
   'zikr-jazz': "Spiritüel cazın, sıcak akustik enstrümantasyonun ve TANRI'nın güzel isimlerinin sessiz bir zikirde buluştuğu samimi bir Neo-Sacred Zikr albümü.",
   'zikr-i-batin': "Kalbin sessiz zikrine, içsel tefekküre ve TANRI'nın güzel isimlerine odaklanan son derece kişisel bir Neo-Sacred Zikr albümü.",
@@ -25,6 +26,7 @@ const albumDescriptionTr: Record<string, string> = {
 };
 
 const genreTr: Record<string, string> = {
+  'Symphonic Rock': 'Senfonik Rock',
   'Progressive Metal': 'Progresif Metal',
   'Symphonic Extreme Metal': 'Senfonik Ekstrem Metal',
   'Experimental Choral': 'Deneysel Koro',
@@ -52,18 +54,48 @@ const genreTr: Record<string, string> = {
 
 const translateGenre = (value: string) => isTurkish ? (genreTr[value] ?? value) : value;
 
-const projects = albumsData.map((album) => ({
-  title: album.title,
-  description: isTurkish ? (albumDescriptionTr[album.slug] ?? album.description) : album.description,
-  category: `${album.universe ?? (isTurkish ? 'ALBÜM' : 'ALBUM')} • ${album.year}`,
-  images: [album.cover.replace(/^\//, '')],
-  platforms: ['web'],
-  tech: album.genre.split(' / ').map(translateGenre),
-  link: isTurkish ? `/tr/albums/${album.slug}/` : `/albums/${album.slug}/`,
-  universe: album.universe ?? 'Neo-Sacred Zikr',
-}));
+// HEAVENN may not yet be present in albums.json. Keep the discography complete
+// without duplicating the album when its record is added to the main data file.
+const heavennFallback = {
+  slug: 'heavenn',
+  title: 'HEAVENN',
+  description: 'The second world of QURANIC CONCEPTS: a nineteen-work Quran-centered album exploring Paradise through peace, safety, inexhaustible beauty and nearness without end.',
+  year: '2026',
+  cover: '/albums/heavenn.webp',
+  genre: 'Symphonic Rock / Metal',
+  universe: 'QURANIC CONCEPTS',
+};
 
-const quranicConcepts = projects.filter((project) => project.universe === 'QURANIC CONCEPTS');
+const albumsWithHeavenn = albumsData.some((album) => album.slug === 'heavenn')
+  ? albumsData
+  : [...albumsData, heavennFallback];
+
+const projects = albumsWithHeavenn.map((album) => {
+  // HEAVENN always belongs to QURANIC CONCEPTS, even if an older JSON record
+  // does not yet have the universe field set correctly.
+  const universe = album.slug === 'heavenn'
+    ? 'QURANIC CONCEPTS'
+    : (album.universe ?? 'Neo-Sacred Zikr');
+
+  return {
+    title: album.title,
+    description: isTurkish ? (albumDescriptionTr[album.slug] ?? album.description) : album.description,
+    category: `${universe} • ${album.year}`,
+    images: [album.cover.replace(/^\//, '')],
+    platforms: ['web'],
+    tech: album.genre.split(' / ').map(translateGenre),
+    link: isTurkish ? `/tr/albums/${album.slug}/` : `/albums/${album.slug}/`,
+    universe,
+  };
+});
+
+// HELLL first, HEAVENN immediately beside it; other concept albums follow.
+const conceptCardOrder = (project: (typeof projects)[number]) =>
+  project.link.endsWith('/helll/') ? 0 : project.link.endsWith('/heavenn/') ? 1 : 2;
+
+const quranicConcepts = projects
+  .filter((project) => project.universe === 'QURANIC CONCEPTS')
+  .sort((a, b) => conceptCardOrder(a) - conceptCardOrder(b));
 const neoSacred = projects.filter((project) => project.universe !== 'QURANIC CONCEPTS');
 
 const copy = isTurkish

@@ -12,10 +12,14 @@ import {
 } from "../../data/helll";
 
 export async function getStaticPaths() {
-  return albums.map((album) => ({
-    params: { slug: album.slug },
-    props: { album },
-  }));
+  // HEAVENN has a dedicated, custom /albums/heavenn/ page.
+  // Exclude it here to prevent competing static routes when added to albums.json.
+  return albums
+    .filter((album) => album.slug !== "heavenn")
+    .map((album) => ({
+      params: { slug: album.slug },
+      props: { album },
+    }));
 }
 
 const { album } = Astro.props;
@@ -685,13 +689,22 @@ const albumVisual =
         </section>
 
         <!-- NAVIGATION -->
-        <section class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <section class="grid grid-cols-1 gap-6 md:grid-cols-3">
           <a
             href="/quranic-concepts/"
             class="group rounded-[2rem] border border-[#8f1c1c]/30 bg-[#7f1212]/10 p-8 transition-all hover:border-[#b33a3a]/55"
           >
             <p class="mb-3 text-xs uppercase tracking-widest text-[#b74a4a]">Parent Series</p>
             <h3 class="text-2xl font-heading font-bold text-white transition-colors group-hover:text-[#d16c6c]">QURANIC CONCEPTS</h3>
+          </a>
+
+          <a
+            href="/albums/heavenn/"
+            class="group rounded-[2rem] border border-[#badfe2]/30 bg-[#9bd1d9]/[0.06] p-8 transition-all hover:border-[#badfe2]/55"
+          >
+            <p class="mb-3 text-xs uppercase tracking-widest text-[#badfe2]">Second QURANIC CONCEPTS World</p>
+            <h3 class="text-2xl font-heading font-bold text-white transition-colors group-hover:text-[#badfe2]">HEAVENN →</h3>
+            <p class="mt-3 text-sm text-white/50">Explore Paradise through nineteen works.</p>
           </a>
 
           <a
