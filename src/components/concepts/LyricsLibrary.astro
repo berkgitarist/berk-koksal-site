@@ -1,0 +1,158 @@
+---
+import '../../styles/concepts.css';
+import heavennSongs from '../../data/heavenn-lyrics.json';
+import helllSongs from '../../data/helll-lyrics.json';
+import heavennTurkish from '../../data/heavenn-translations.tr.json';
+import helllTurkish from '../../data/helll-translations.tr.json';
+
+interface Props { album: 'helll' | 'heavenn'; lang?: 'tr' | 'en' }
+const { album, lang = 'en' } = Astro.props;
+const tr = lang === 'tr';
+const isHeavenn = album === 'heavenn';
+type DisplaySection = { label: string; type: string; lines: string[] };
+type DisplaySong = {
+  number: number;
+  title: string;
+  summary?: { en: string; tr: string };
+  sections?: DisplaySection[];
+  lines?: string[];
+};
+type TranslationSection = { label: string; lines: string[] };
+type TranslatedSong = { number: number; title: string; sections?: TranslationSection[]; lines?: string[] };
+const songs: DisplaySong[] = isHeavenn ? heavennSongs : helllSongs;
+const translated: TranslatedSong[] = isHeavenn ? heavennTurkish : helllTurkish;
+const ui = tr ? {
+  eyebrow: 'ON DOKUZ ESER · İKİ DİLLİ SÖZ ARŞİVİ', heading: 'Şarkı sözleri', subheading: 'Aynı eser, iki dil.',
+  search: 'Eser ara...', navigate: 'Eser seç', original: 'ORİJİNAL İNGİLİZCE', translated: 'TÜRKÇE ÇEVİRİ',
+  note: 'Sol sütunda seslendirilen özgün İngilizce sözler, sağ sütunda Türkçe anlam çevirileri bulunur. Mobil ekranda iki dil alt alta gösterilir.',
+  source: 'KURAN KAYNAKLI SES / İNGİLİZCE ALINTI TASLAĞI',
+  sourceEn: 'QURANIC SOURCE / DRAFT QUOTATION',
+  sourceDisclaimer: 'KURAN kaynaklı satırlar müzik taslağının İngilizce metninden Türkçeye aktarılmıştır; doğrulanmış ayet çevirisi yerine geçmez. Yayımdan önce kaynak metinle kontrol edilmelidir.',
+  draft: 'HEAVENN sözleri üretim çalışma dosyasından alınmıştır. Yayımlamadan önce son kayıttaki sözlerle karşılaştırılmalıdır. Türkçe sütun anlam çevirisidir; ayrı bir Türkçe vokal kaydı değildir.',
+  official: 'HELLL sözleri sağlanan Word dosyasından alınmıştır. Türkçe çeviriler anlamı aktarmak amacıyla hazırlanmıştır; İngilizce vokallerin yerini almaz.',
+  noResult: 'Aramanızla eşleşen eser bulunamadı.', open: 'Sözleri aç veya kapat'
+} : {
+  eyebrow: 'NINETEEN WORKS · LYRIC ARCHIVE', heading: 'The lyrics', subheading: 'The words inside the music.',
+  search: 'Find a work...', navigate: 'Choose a work', original: 'ORIGINAL ENGLISH LYRICS', translated: 'TURKISH TRANSLATION',
+  note: 'These works are performed in English. Original wording is preserved in this English edition.',
+  source: 'QURANIC SOURCE VOICE / DRAFT QUOTATION',
+  sourceEn: 'QURANIC SOURCE VOICE / DRAFT QUOTATION',
+  sourceDisclaimer: 'Quranic-source passages and original artistic lines are visually separated. Verify draft quotations against the source before publication.',
+  draft: 'HEAVENN lyrics are drawn from the working production document; check against the final sung recordings before publication.',
+  official: 'HELLL lyrics come from the supplied lyric Word document, retaining repetitions and extended vocal sounds.',
+  noResult: 'No matching work found.', open: 'Expand or collapse lyrics'
+};
+const anchorFor = (num: number) => `${album}-track-${String(num).padStart(2, '0')}`;
+---
+<section id="lyrics" class:list={['bk-lyrics', {'bk-lyrics--heavenn': isHeavenn, 'bk-lyrics--helll': !isHeavenn, 'bk-lyrics--bilingual': tr}]} data-lyrics-library>
+  <div class="bk-lyrics__header">
+    <div>
+      <p class="bk-overline">{ui.eyebrow}</p>
+      <h2 class="bk-display">{ui.heading}<span class="bk-lyrics__period">.</span></h2>
+    </div>
+    <div class="bk-lyrics__header-aside"><span class="bk-lyrics__nineteen">XIX</span><p>{ui.subheading}</p></div>
+  </div>
+  <p class="bk-lyrics__context">{ui.note}</p>
+  <div class="bk-lyrics__layout">
+    <aside class="bk-lyrics__index">
+      <label class="bk-lyrics__search-label" for={`${album}-lyric-search`}>{ui.navigate}</label>
+      <input id={`${album}-lyric-search`} type="search" class="bk-lyrics__search" data-lyric-search placeholder={ui.search} autocomplete="off" />
+      <nav class="bk-lyrics__nav" aria-label={ui.navigate}>
+        {songs.map((song) => (
+          <a href={`#${anchorFor(song.number)}`} data-lyric-link><span>{String(song.number).padStart(2, '0')}</span><span>{song.title}</span><span aria-hidden="true">↗</span></a>
+        ))}
+      </nav>
+    </aside>
+    <div class="bk-lyrics__songs">
+      {songs.map((song) => (
+        <details class="bk-song" id={anchorFor(song.number)} data-lyric-track data-title={song.title.toLowerCase()}>
+          <summary aria-label={`${ui.open}: ${song.title}`}>
+            <span class="bk-song__number">{String(song.number).padStart(2, '0')}</span>
+            <span class="bk-song__heading"><strong>{song.title}</strong><small>{isHeavenn ? song.summary?.[lang] ?? '' : tr ? 'İngilizce özgün metin · Türkçe çeviri' : ui.original}</small></span>
+            <span class="bk-song__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="bk-song__content">
+            {tr ? (
+              <>
+                <div class="bk-lyric-dual-head">
+                  <div><span class="bk-lyric-dual-head__badge">EN</span>{ui.original}</div>
+                  <div><span class="bk-lyric-dual-head__badge">TR</span>{ui.translated}</div>
+                </div>
+                {isHeavenn ? (
+                  <div class="bk-lyric-dual-stanzas">
+                    {(song.sections ?? []).map((section, i) => (
+                      <div class:list={['bk-lyric-dual-row', {'bk-lyric-dual-row--quranic': section.type === 'quranic'}]}>
+                        <div class="bk-lyric-dual-col bk-lyric-dual-col--en" lang="en">
+                          <p class="bk-lyric-stanza__label">{section.type === 'quranic' ? ui.sourceEn : section.label}</p>
+                          <p class="bk-lyric-stanza__lines">{section.lines.join('\n')}</p>
+                        </div>
+                        <div class="bk-lyric-dual-col bk-lyric-dual-col--tr" lang="tr">
+                          <p class="bk-lyric-stanza__label">{translated[song.number - 1]?.sections?.[i]?.label ?? 'Çeviri'}</p>
+                          <p class="bk-lyric-stanza__lines">{(translated[song.number - 1]?.sections?.[i]?.lines ?? []).join('\n')}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div class="bk-lyric-dual-row bk-lyric-dual-row--helll-plain">
+                    <div class="bk-lyric-dual-col bk-lyric-dual-col--en" lang="en"><p class="bk-song__plain">{(song.lines ?? []).join('\n')}</p></div>
+                    <div class="bk-lyric-dual-col bk-lyric-dual-col--tr" lang="tr"><p class="bk-song__plain">{(translated[song.number - 1]?.lines ?? []).join('\n')}</p></div>
+                  </div>
+                )}
+              </>
+            ) : (
+              <>
+                <div class="bk-song__source-indicator"><span>{ui.original}</span><span>© Berk KÖKSAL</span></div>
+                {isHeavenn ? (
+                  <div class="bk-song__sections">
+                    {(song.sections ?? []).map((section) => (
+                      <div class:list={['bk-lyric-stanza', {'bk-lyric-stanza--source': section.type === 'quranic'}]}>
+                        <p class="bk-lyric-stanza__label">{section.type === 'quranic' ? ui.source : section.label}</p>
+                        <p class="bk-lyric-stanza__lines">{section.lines.join('\n')}</p>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p class="bk-song__plain">{(song.lines ?? []).join('\n')}</p>
+                )}
+              </>
+            )}
+          </div>
+        </details>
+      ))}
+      <p class="bk-lyrics__empty" data-lyrics-empty hidden>{ui.noResult}</p>
+    </div>
+  </div>
+  <div class="bk-lyrics__legal"><span aria-hidden="true">◈</span><p>{isHeavenn ? ui.draft : ui.official} {isHeavenn ? ui.sourceDisclaimer : ''}</p></div>
+</section>
+<script>
+  function initBkLyrics() {
+    document.querySelectorAll<HTMLElement>('[data-lyrics-library]').forEach((root) => {
+      if (root.dataset.libraryInitialized === 'yes') return;
+      root.dataset.libraryInitialized = 'yes';
+      const cards = [...root.querySelectorAll<HTMLDetailsElement>('[data-lyric-track]')];
+      const links = [...root.querySelectorAll<HTMLAnchorElement>('[data-lyric-link]')];
+      const search = root.querySelector<HTMLInputElement>('[data-lyric-search]');
+      const empty = root.querySelector<HTMLElement>('[data-lyrics-empty]');
+      links.forEach((link) => link.addEventListener('click', (event) => {
+        const id = decodeURIComponent(link.hash.slice(1));
+        const card = cards.find((el) => el.id === id);
+        if (!card) return;
+        event.preventDefault(); card.open = true;
+        history.replaceState(null, '', `#${id}`);
+        card.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+      }));
+      search?.addEventListener('input', () => {
+        const term = (search.value ?? '').trim().toLocaleLowerCase('tr');
+        let visible = 0;
+        cards.forEach((card) => { const show = card.dataset.title?.toLocaleLowerCase('tr').includes(term) ?? false; card.hidden = !show; if (show) visible++; });
+        links.forEach((link) => { const match = cards.find((card) => `#${card.id}` === link.hash); link.hidden = !!match && match.hidden; });
+        if (empty) empty.hidden = visible > 0;
+      });
+      const initial = window.location.hash ? cards.find((card) => `#${card.id}` === decodeURIComponent(window.location.hash)) : null;
+      if (initial) initial.open = true;
+    });
+  }
+  initBkLyrics();
+  document.addEventListener('astro:page-load', initBkLyrics);
+</script>

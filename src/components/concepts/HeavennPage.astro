@@ -1,0 +1,248 @@
+---
+import '../../styles/concepts.css';
+import lyrics from '../../data/heavenn-lyrics.json';
+import manifesto from '../../data/heavenn-manifesto.json';
+import albumsEn from '../../data/albums.json';
+import albumsTr from '../../data/albums.tr.json';
+import LyricsLibrary from './LyricsLibrary.astro';
+interface Props { lang?: 'en' | 'tr' }
+const { lang = 'en' } = Astro.props;
+const tr = lang === 'tr';
+const prefix = tr ? '/tr' : '';
+// Spotify album links are read from your existing albums.json / albums.tr.json records.
+// No album ID is invented: the player appears only when a valid Spotify ALBUM URL is set.
+const enAlbum = albumsEn.find((entry) => entry.slug === 'heavenn');
+const trAlbum = albumsTr.find((entry) => entry.slug === 'heavenn');
+const spotifySource = String((tr ? trAlbum?.spotify : '') || enAlbum?.spotify || trAlbum?.spotify || '').trim();
+const spotifyMatch = spotifySource.match(/(?:open\.spotify\.com\/(?:intl-[a-z-]+\/)?album\/|spotify:album:)([A-Za-z0-9]{22})(?:[/?#]|$)/i);
+const spotifyEmbedUrl = spotifyMatch ? `https://open.spotify.com/embed/album/${spotifyMatch[1]}` : null;
+const c = tr ? {
+  eyebrow: 'QURANIC CONCEPTS II', stat: '19 ESER / TEK VARIŞ / SONU OLMAYAN YAKINLIK',
+  heroQuote: 'MÜZİK, KORKACAK HİÇBİR ŞEYİ YOKMUŞ GİBİ DUYULMALI.',
+  heroBody: 'Cennet, taklit edilen bir manzara değil; müziğin nasıl davranacağını yeniden belirleyen bir imkân.',
+  button: '19 eseri keşfet', manifestoBtn: 'Manifestoya geç',
+  heroSeries: 'QURANIC CONCEPTS · CENNET · 2026',
+  spotifyHeading: 'SPOTIFY · RESMÎ ALBÜM DİNLEME ALANI',
+  spotifyPending: 'Spotify yayını bekleniyor',
+  spotifyExplanation: 'Albümün Spotify bağlantısı hazır olduğunda 19 eserin oynatıcısı bu alanda görünecek.',
+  spotifyAction: 'Spotify dinleme alanı',
+  officialSpotify: 'Spotify’da dinle',
+  coverOpen: 'HEAVENN albüm kapağını büyüt',
+  spotifySoon: 'YAKINDA',
+  arrivalTag: 'Tek varış, sonsuz yakınlık',
+  natureTag: 'Senfonik Rock / Metal',
+  seeAtlas: 'QURANIC CONCEPTS',
+  enigma: 'I / MÜZİĞİN FİZİĞİ', question: 'Ya müziğin korkacak hiçbir şeyi kalmasaydı?',
+  enigmaBody: 'HEAVENN, Cennet’in sesini bildiğini iddia etmez. KURAN’da anlatılan huzur, güven, bolluk, ışık ve yakınlık, birer ses efekti değil; melodinin, suskunluğun, tekrarın ve gücün davranışını dönüştüren koşullardır.',
+  rules: 'II / DEĞİŞMEZ YASALAR', headingLaws: 'Güçlü. Huzurlu. Korkusuz.',
+  lawIntro: 'Saldırganlık olmadan distorsiyon, tehdit olmadan görkem, sıkılma olmadan tekrar ve boşluk olmadan sessizlik.',
+  laws: [
+    ['01','Dissonance may exist. Threat may not.','Uyumsuzluk olabilir. Tehdit olamaz.'],
+    ['02','The center does not get louder. It gets closer.','Merkez daha yüksek sesle duyulmaz; daha yakına gelir.'],
+    ['03','Beauty returns, but never exactly the same.','Güzellik geri döner; ama hiçbir zaman tam olarak aynı değildir.'],
+    ['04','Virtuosity does not require ego.','Ustalık, egonun üstünlüğüne ihtiyaç duymaz.'],
+  ],
+  path: 'III / ON DOKUZ ESER', pathTitle: 'Bir melodiden sonsuzluğa.', pathIntro: 'Her eser bir müzik yasasını keşfeder. On dokuzuncu eser, hepsini yeniden birbirine yaklaştırır.',
+  lyrics: 'IV / ESERLERİN SÖZLERİ', full: 'V / MANİFESTO', manifesto: 'HEAVENN Manifestosu', manifestoIntro: 'On dokuz eserin ardındaki yaratıcı mimari; kaynak, yorum ve müzik arasındaki sınırları koruyarak.',
+  fullEn: 'Özgün İngilizce manifestoyu da oku', closing: 'HELLL silinmez. HEAVENN ona cevap verir.',
+  return: 'QURANIC CONCEPTS atlasına dön', previous: 'Önceki dünya: HELLL',
+  sourceLine: 'Sözlerdeki KURAN kaynaklı pasajlar ayrıca işaretlenmiştir. Taslak alıntılar, resmî metinle yayımdan önce kontrol edilmelidir.',
+} : {
+  eyebrow: 'QURANIC CONCEPTS II', stat: '19 WORKS / ONE ARRIVAL / NEARNESS WITHOUT END',
+  heroQuote: 'THE MUSIC MUST SOUND AS IF IT HAS NOTHING TO FEAR.',
+  heroBody: 'Paradise not as scenery to imitate, but as a possibility that changes the way music behaves.',
+  button: 'Discover the 19 works', manifestoBtn: 'Read the manifesto',
+  heroSeries: 'QURANIC CONCEPTS · PARADISE · 2026',
+  spotifyHeading: 'OFFICIAL SPOTIFY ALBUM STREAM',
+  spotifyPending: 'Spotify release pending',
+  spotifyExplanation: 'The official 19-work album player will appear here as soon as the Spotify album link is available.',
+  spotifyAction: 'Spotify listening area',
+  officialSpotify: 'Listen on Spotify',
+  coverOpen: 'Enlarge the HEAVENN album cover',
+  spotifySoon: 'COMING SOON',
+  arrivalTag: 'One arrival, nearness without end',
+  natureTag: 'Symphonic Rock / Metal',
+  seeAtlas: 'QURANIC CONCEPTS',
+  enigma: 'I / THE PHYSICS OF MUSIC', question: 'What if music had nothing left to fear?',
+  enigmaBody: 'HEAVENN does not claim to know what Paradise sounds like. Quranic descriptions of peace, safety, abundance, light and nearness become musical conditions—not literal sound effects—transforming the behavior of melody, silence, repetition and power.',
+  rules: 'II / THE LAWS', headingLaws: 'Powerful. Peaceful. Unafraid.',
+  lawIntro: 'Distortion without hostility. Magnitude without threat. Return without boredom. Silence without danger.',
+  laws: [
+    ['01','Dissonance may exist. Threat may not.','Dissonance is possible. Hostility is not.'],
+    ['02','The center does not get louder. It gets closer.','The deepest center is found in nearness, not volume.'],
+    ['03','Beauty returns, but never exactly the same.','Eternity becomes discovery rather than mechanical repetition.'],
+    ['04','Virtuosity does not require ego.','Each performer gives a musical line to another.'],
+  ],
+  path: 'III / NINETEEN WORKS', pathTitle: 'From one melody to eternity.', pathIntro: 'Every work discovers one musical law. The nineteenth allows the others to recognize one another.',
+  lyrics: 'IV / THE WORDS', full: 'V / THE MANIFESTO', manifesto: 'The HEAVENN Manifesto', manifestoIntro: 'The creative architecture behind the nineteen works, maintaining the distinction between source, interpretation and music.',
+  fullEn: 'Original manifesto', closing: 'HELLL is not erased. HEAVENN answers it.',
+  return: 'Return to the QURANIC CONCEPTS atlas', previous: 'The previous world: HELLL',
+  sourceLine: 'Quranic-source passages within the lyrics are separately marked. Draft quotations should be checked against the source before publication.',
+};
+---
+<div class="bk-heavenn">
+  <div class="bk-heavenn__watermark" aria-hidden="true">XIX</div>
+  <div class="bk-heavenn__first-line"><span>BERK KÖKSAL &nbsp; / &nbsp; XIX</span><span>QURANIC CONCEPTS &nbsp; · &nbsp; 2026</span></div>
+  <!-- HELLL-style order: large album artwork + release information / Spotify / complete concept below. -->
+  <header class="bk-heavenn-release" aria-labelledby="bk-heavenn-title">
+    <a href="/albums/heavenn.webp" target="_blank" rel="noopener noreferrer" class="bk-heavenn-release__cover" aria-label={c.coverOpen}>
+      <img src="/albums/heavenn.webp" alt={tr ? 'Berk Köksal — HEAVENN albümünün beyaz kabartma kapağı' : 'Berk Köksal — HEAVENN white embossed album cover'} width="1254" height="1254" fetchpriority="high" />
+      <span class="bk-heavenn-release__cover-caption">BERK KÖKSAL <span aria-hidden="true">·</span> XIX <span aria-hidden="true">·</span> 2026</span>
+    </a>
+    <div class="bk-heavenn-release__copy">
+      <p class="bk-heavenn-release__eyebrow">{c.heroSeries}</p>
+      <h1 id="bk-heavenn-title">HEAVENN</h1>
+      <p class="bk-heavenn-release__stat">{c.stat}</p>
+      <h2>{c.heroQuote}</h2>
+      <p class="bk-heavenn-release__description">{c.heroBody}</p>
+      <div class="bk-heavenn-release__tags" aria-label={tr ? 'Albüm özellikleri' : 'Album characteristics'}>
+        <span>{c.arrivalTag}</span><span>XIX</span><span>19 {tr ? 'ESER' : 'WORKS'}</span><span>{c.natureTag}</span>
+      </div>
+      <div class="bk-heavenn-release__actions">
+        {spotifyEmbedUrl ? (
+          <a href={spotifySource} target="_blank" rel="noopener noreferrer" class="bk-heavenn-release__spotify-button"><span class="bk-spotify-mark" aria-hidden="true">◉</span>{c.officialSpotify} <span aria-hidden="true">↗</span></a>
+        ) : (
+          <a href="#spotify" class="bk-heavenn-release__spotify-button"><span class="bk-spotify-mark" aria-hidden="true">◉</span>{c.spotifyAction} <span aria-hidden="true">↓</span></a>
+        )}
+        <a href={`${prefix}/quranic-concepts/`} class="bk-heavenn-release__atlas-button">{c.seeAtlas} <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Exactly below the hero, as on the HELLL page. -->
+  <section id="spotify" class="bk-heavenn-stream" aria-label={c.spotifyHeading}>
+    <div class="bk-heavenn-stream__eyebrow"><span class="bk-heavenn-stream__signal" aria-hidden="true">≋</span> {c.spotifyHeading}</div>
+    {spotifyEmbedUrl ? (
+      <iframe
+        src={spotifyEmbedUrl}
+        title={tr ? 'HEAVENN albümü Spotify oynatıcısı' : 'HEAVENN album Spotify player'}
+        width="100%"
+        height="492"
+        loading="lazy"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        class="bk-heavenn-stream__player"
+      ></iframe>
+    ) : (
+      <div class="bk-heavenn-stream__pending" aria-live="polite">
+        <img src="/albums/heavenn.webp" width="110" height="110" alt="" loading="lazy" />
+        <div class="bk-heavenn-stream__pending-copy">
+          <strong>HEAVENN</strong>
+          <span>BERK KÖKSAL · XIX · 2026</span>
+          <p>{c.spotifyPending}<span aria-hidden="true">.</span> {c.spotifyExplanation}</p>
+        </div>
+        <span class="bk-heavenn-stream__badge">{c.spotifySoon}</span>
+      </div>
+    )}
+  </section>
+  <nav class="bk-heavenn-jumps" aria-label={tr ? 'Albüm içeriği' : 'Explore the album'}>
+    <a href="#works">{c.button} <span aria-hidden="true">↓</span></a>
+    <a href="#lyrics">{tr ? 'Şarkı sözleri' : 'Lyrics'} <span aria-hidden="true">↓</span></a>
+    <a href="#manifesto">{c.manifestoBtn} <span aria-hidden="true">↓</span></a>
+  </nav>
+
+  <section class="bk-heavenn-thesis bk-section-gap" id="concept" aria-labelledby="heavenn-question">
+    <span class="bk-overline">{c.enigma}</span>
+    <div class="bk-heavenn-thesis__body"><h2 id="heavenn-question">{c.question}</h2><div><span class="bk-heavenn-thesis__symbol" aria-hidden="true">✧</span><p>{c.enigmaBody}</p></div></div>
+  </section>
+
+  <section class="bk-heavenn-laws bk-section-gap" aria-labelledby="heavenn-laws-title">
+    <div class="bk-heavenn-laws__intro"><div><p class="bk-overline">{c.rules}</p><h2 class="bk-display" id="heavenn-laws-title">{c.headingLaws}</h2></div><p>{c.lawIntro}</p></div>
+    <div class="bk-heavenn-laws__grid">
+      {c.laws.map(([num, original, explanation])=>(
+        <article class="bk-heavenn-law"><span>{num} / XIX</span><h3>{original}</h3><p>{explanation}</p><span class="bk-heavenn-law__spark" aria-hidden="true">✦</span></article>
+      ))}
+    </div>
+  </section>
+
+  <section id="works" class="bk-heavenn-works bk-section-gap" aria-labelledby="heavenn-works-title">
+    <div class="bk-heavenn-works__head"><div><p class="bk-overline">{c.path}</p><h2 class="bk-display" id="heavenn-works-title">{c.pathTitle}</h2></div><p>{c.pathIntro}</p></div>
+    <div class="bk-heavenn-works__list">
+      {lyrics.map((song) => (
+        <a href={`#heavenn-track-${String(song.number).padStart(2,'0')}`} class="bk-heavenn-work">
+          <span class="bk-heavenn-work__num">{String(song.number).padStart(2,'0')}</span>
+          <span class="bk-heavenn-work__middle"><strong>{song.title}</strong><small>{song.summary[lang]}</small></span>
+          <span class="bk-heavenn-work__go" aria-hidden="true">↗</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <div class="bk-section-gap" id="words"><LyricsLibrary album="heavenn" lang={lang} /></div>
+
+  <section id="manifesto" class="bk-heavenn-manifesto bk-section-gap" aria-labelledby="heavenn-manifesto-title">
+    <div class="bk-heavenn-manifesto__intro"><p class="bk-overline">{c.full}</p><h2 class="bk-display" id="heavenn-manifesto-title">{c.manifesto}</h2><p>{c.manifestoIntro}</p></div>
+    <div class="bk-heavenn-manifesto__paper"><div class="bk-heavenn-manifesto__mark" aria-hidden="true">XIX</div><div class="bk-manifesto-prose" set:html={tr ? manifesto.trHtml : manifesto.enHtml}></div></div>
+    {tr && <details class="bk-heavenn-manifesto__original"><summary>{c.fullEn} <span aria-hidden="true">+</span></summary><div class="bk-manifesto-prose" lang="en" set:html={manifesto.enHtml}></div></details>}
+  </section>
+
+  <footer class="bk-heavenn-end bk-section-gap">
+    <span aria-hidden="true">XIX</span><blockquote>{c.closing}</blockquote><p>NEARNESS WITHOUT END.</p>
+    <div><a href={`${prefix}/quranic-concepts/`}>← {c.return}</a><a href={`${prefix}/albums/helll/`}>{c.previous} ↗</a></div>
+    <small>{c.sourceLine}</small>
+  </footer>
+</div>
+
+<style>
+  /* HEAVENN V3 — HELLL's hierarchy, Heaven's white-on-white architectural identity. */
+  .bk-heavenn-release { display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(1.7rem,4.5vw,5rem);align-items:center;position:relative;margin-top:clamp(1.7rem,3vw,3rem);padding:clamp(1.15rem,2.6vw,2.5rem);border:1px solid #e8edef;border-radius:26px;background:linear-gradient(150deg,#f9fbfa 0%,#fff 58%,#f7f9f9 100%);box-shadow:0 24px 75px rgba(66,87,91,.06);isolation:isolate;}
+  .bk-heavenn-release:before {content:'XIX';position:absolute;right:.7rem;bottom:-.5rem;font:400 clamp(7rem,20vw,18rem)/1 var(--bk-serif);letter-spacing:-.14em;color:rgba(99,128,134,.032);pointer-events:none;z-index:-1;}
+  .bk-heavenn-release__cover{display:block;position:relative;min-width:0;padding:clamp(.55rem,1.2vw,.9rem);border:1px solid #e2e7e7;background:linear-gradient(150deg,#edf0ee,#fbfbf9 45%,#e8edeb);box-shadow:0 15px 50px rgba(75,94,98,.09);border-radius:19px;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease;}
+  .bk-heavenn-release__cover:hover{transform:translateY(-3px);box-shadow:0 24px 60px rgba(65,83,88,.13);}
+  .bk-heavenn-release__cover img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border:1px solid #e1e6e5;border-radius:12px;background:#fff;box-shadow:0 4px 21px rgba(70,92,93,.08);}
+  .bk-heavenn-release__cover-caption{display:block;padding:.95rem .1rem .25rem;text-align:center;color:#9baaaa;font:700 .65rem/1.4 Inter,system-ui,sans-serif;letter-spacing:.19em;}
+  .bk-heavenn-release__copy{min-width:0;padding-block:clamp(.4rem,1.3vw,1.5rem);position:relative;z-index:1;}
+  .bk-heavenn-release__eyebrow{margin:0 0 1.3rem;color:#758b8a;font:700 .7rem/1.65 Inter,system-ui,sans-serif;letter-spacing:.26em;text-transform:uppercase;}
+  .bk-heavenn-release h1{color:#43565c;font:700 clamp(3.45rem,5.4vw,6.4rem)/1.03 Inter,Arial,system-ui,sans-serif;letter-spacing:-.075em;margin:0;overflow-wrap:normal;}
+  .bk-heavenn-release__stat{margin:1rem 0 0;color:#879a9d;font:700 .69rem/1.9 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;}
+  .bk-heavenn-release h2{margin:clamp(1.7rem,3.3vw,3rem) 0 0;color:#435c64;font:500 clamp(1.55rem,2.1vw,2.35rem)/1.3 var(--bk-serif);letter-spacing:.005em;max-width:680px;}
+  .bk-heavenn-release__description{color:#70838a;font:400 clamp(.92rem,1.12vw,1.06rem)/1.8 Inter,system-ui,sans-serif;margin:1.2rem 0 0;max-width:580px;}
+  .bk-heavenn-release__tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.65rem 0 0;}
+  .bk-heavenn-release__tags span{display:inline-flex;border:1px solid #dce5e3;border-radius:9999px;background:#f3f6f5;color:#677e82;padding:.55rem .83rem;font:700 .65rem/1.5 Inter,system-ui,sans-serif;letter-spacing:.045em;}
+  .bk-heavenn-release__actions{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem;margin-top:1.9rem;}
+  .bk-heavenn-release__actions a{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;border-radius:9999px;padding:.91rem 1.25rem;text-decoration:none;font:700 .75rem/1.3 Inter,system-ui,sans-serif;transition:background .2s ease,border-color .2s ease;}
+  .bk-heavenn-release__spotify-button{border:1px solid #b7dcc8;background:#e9f7ef;color:#196844;}
+  .bk-heavenn-release__spotify-button:hover{background:#dbefdf;border-color:#8ec7a6;}
+  .bk-heavenn-release__atlas-button{border:1px solid #dde6e5;background:#fff;color:#49636a;}
+  .bk-heavenn-release__atlas-button:hover{border-color:#9bb4b4;background:#f2f7f6;}
+  .bk-spotify-mark{font-size:1.3rem;line-height:1;color:#179c5b;}
+  .bk-heavenn-stream{position:relative;margin-top:clamp(1.25rem,2.6vw,2.25rem);border:1px solid #cce9d7;background:linear-gradient(140deg,#f4fbf6 0%,#fafdfb 65%,#f3f8f5 100%);border-radius:24px;padding:clamp(1rem,2.1vw,1.7rem);box-shadow:0 15px 60px rgba(67,116,81,.045);}
+  .bk-heavenn-stream__eyebrow{display:flex;gap:.65rem;align-items:center;color:#228855;font:800 .68rem/1.4 Inter,system-ui,sans-serif;letter-spacing:.23em;text-transform:uppercase;margin-bottom:1.1rem;}
+  .bk-heavenn-stream__signal{display:grid;place-items:center;background:#1db954;color:white;border-radius:50%;height:1.65rem;width:1.65rem;font-size:1.1rem;letter-spacing:0;line-height:1;}
+  .bk-heavenn-stream__player{display:block;width:100%;height:clamp(360px,36vw,492px);border:none;border-radius:16px;background:#18211e;}
+  .bk-heavenn-stream__pending{display:flex;align-items:center;gap:1.35rem;min-height:170px;border:1px solid #e2ebe5;background:#fefefe;border-radius:16px;padding:1.25rem 1.5rem;}
+  .bk-heavenn-stream__pending img{width:110px;height:110px;flex:none;object-fit:cover;border:1px solid #dce6e3;border-radius:12px;box-shadow:0 6px 20px rgba(37,69,58,.06);}
+  .bk-heavenn-stream__pending-copy{min-width:0;flex:1;}
+  .bk-heavenn-stream__pending-copy strong{display:block;color:#405b54;font:800 1.5rem/1.3 Inter,system-ui,sans-serif;letter-spacing:-.03em;}
+  .bk-heavenn-stream__pending-copy>span{display:block;color:#85968e;font:700 .63rem/1.5 Inter,system-ui,sans-serif;letter-spacing:.19em;margin-top:.4rem;}
+  .bk-heavenn-stream__pending-copy p{max-width:580px;color:#75897f;line-height:1.75;margin:.7rem 0 0;font-size:.85rem;}
+  .bk-heavenn-stream__badge{flex:none;border:1px solid #d0e3d7;background:#eff8f1;color:#4b8363;font:800 .63rem/1.5 Inter,system-ui,sans-serif;letter-spacing:.15em;border-radius:9999px;padding:.55rem .9rem;}
+  .bk-heavenn-jumps{display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem;padding:1.25rem .75rem 0;}
+  .bk-heavenn-jumps a{color:#647c80;font:700 .77rem/1.5 Inter,system-ui,sans-serif;text-decoration:none;border-bottom:1px solid #c1d0d0;padding:.3rem .1rem .6rem;}
+  .bk-heavenn-jumps a:hover{color:#285057;border-bottom-color:#628a90;}
+  @media(max-width:900px){
+    .bk-heavenn-release{grid-template-columns:minmax(0,1fr);gap:1.5rem;padding:clamp(1.1rem,3.5vw,2rem);}
+    .bk-heavenn-release__cover{width:100%;max-width:570px;margin-inline:auto;}
+    .bk-heavenn-release__copy{padding:.7rem .5rem 1rem;}
+    .bk-heavenn-release h1{font-size:clamp(3.4rem,10vw,6rem);}
+  }
+  @media(max-width:540px){
+    .bk-heavenn-release{border-radius:19px;margin-top:1.5rem;padding:.85rem;}
+    .bk-heavenn-release__cover{border-radius:14px;}
+    .bk-heavenn-release__copy{padding:1rem .55rem 1.25rem;}
+    .bk-heavenn-release__eyebrow{font-size:.6rem;letter-spacing:.12em;}
+    .bk-heavenn-release h1{font-size:clamp(2.85rem,12vw,4.5rem);letter-spacing:-.065em;}
+    .bk-heavenn-release__stat{font-size:.59rem;letter-spacing:.08em;}
+    .bk-heavenn-release h2{font-size:clamp(1.45rem,6.2vw,2rem);}
+    .bk-heavenn-release__description{font-size:.92rem;}
+    .bk-heavenn-release__actions a{flex:1 1 auto;text-align:center;}
+    .bk-heavenn-stream{border-radius:19px;padding:.85rem;}
+    .bk-heavenn-stream__eyebrow{font-size:.59rem;letter-spacing:.1em;}
+    .bk-heavenn-stream__pending{gap:.8rem;padding:.85rem;min-height:135px;align-items:flex-start;flex-wrap:wrap;}
+    .bk-heavenn-stream__pending img{height:80px;width:80px;}
+    .bk-heavenn-stream__pending-copy strong{font-size:1.17rem;}
+    .bk-heavenn-stream__badge{margin-left:0;}
+    .bk-heavenn-jumps{justify-content:space-between;gap:.45rem;}
+    .bk-heavenn-jumps a{font-size:.65rem;}
+  }
+  @media(prefers-reduced-motion:reduce){.bk-heavenn-release__cover,.bk-heavenn-release__actions a{transition:none;}}
+</style>

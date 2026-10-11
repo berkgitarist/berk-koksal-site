@@ -1,0 +1,139 @@
+---
+import '../../styles/concepts.css';
+interface Props { lang?: 'en' | 'tr' }
+const { lang = 'en' } = Astro.props;
+const tr = lang === 'tr';
+const prefix = tr ? '/tr' : '';
+const c = tr ? {
+  eyebrow: 'BERK KÖKSAL · İKİNCİ MÜZİKAL EVREN',
+  intro: 'Bir konu. Bir dünya. Bir albüm.',
+  lead: 'KURAN’da anlatılan gerçekliklerin, sahnelerin ve seslerin kendi müzikal yasalarını belirlediği bir konsept albüm atlası.',
+  enter: 'İki dünyayı keşfet', question: 'Sesin biçimini kim belirler?',
+  thesis: 'Tür değil. Konu.',
+  explanation: 'QURANIC CONCEPTS bir üslubu her albüme zorla giydirmez. Önce KURAN’daki konu araştırılır; konuşan sesler, bağlam, tekrar ve anlam ayrıştırılır. Müzik, görsel dünya ve dramatik hareket ancak bundan sonra şekillenir.',
+  worlds: 'I · İKİ DÜNYA', two: 'Aynı yöntem. Zıt müzik yasaları.',
+  hell: 'I · İLK DÜNYA', hellSub: 'Kapanan mekân. Kaçışsız tekrar.', hellBody: 'Uyarı, pişmanlık, hapsedilme ve kalıcılığın müziği; her tekrar, çıkışı daha da daraltır.',
+  heaven: 'II · İKİNCİ DÜNYA', heavenSub: 'Açılan mekân. Sonu olmayan yakınlık.', heavenBody: 'Korkunun, yorgunluğun, kıtlığın ve düşmanlığın müzikte hüküm süremediği on dokuz eser.',
+  open: 'Albümü keşfet', frame: 'II · YÖNTEM', method: 'Önce araştırma. Sonra müzik.',
+  methodBody: 'KURAN kaynağı ile özgün sanatçı sözleri ve dramatizasyon aynı şey değildir. Bu ayrım, hem albümlerin yapısında hem şarkı sözü arşivlerinde korunur.',
+  future: 'III · GENİŞLEYEN ATLAS', horizon: 'Her konsept kendi dünyasını kurar.', conceptStatus: 'GELECEK KONSEPT',
+  closing: 'KURAN, dekor değil; başlangıç noktasıdır.', source: 'Kaynak → anlam → yasalar → ses',
+  lyricCta: '19 eserin sözleri', read: 'Manifestoyu oku',
+} : {
+  eyebrow: 'BERK KÖKSAL · A SECOND MUSICAL UNIVERSE',
+  intro: 'One subject. One world. One album.',
+  lead: 'An atlas of Quran-centered concept albums in which each subject, scene and voice determines its own laws of music.',
+  enter: 'Discover the two worlds', question: 'What determines the form of sound?',
+  thesis: 'Not the genre. The subject.',
+  explanation: 'QURANIC CONCEPTS does not impose the same musical style on every album. The Quranic subject is researched first; speakers, context, repetition and meaning are distinguished. Only then do sound, visual identity and dramatic form begin to take shape.',
+  worlds: 'I · THE TWO WORLDS', two: 'One method. Opposite musical laws.',
+  hell: 'I · THE FIRST WORLD', hellSub: 'A space that closes. Repetition without escape.', hellBody: 'A musical descent through warning, regret, confinement and permanence. Each return narrows the possibility of exit.',
+  heaven: 'II · THE SECOND WORLD', heavenSub: 'A space that opens. Nearness without end.', heavenBody: 'Nineteen works in which fear, fatigue, scarcity and hostility no longer dictate how music behaves.',
+  open: 'Enter the album', frame: 'II · THE METHOD', method: 'Research first. Music second.',
+  methodBody: 'Quranic source, original artistic lyrics and dramatic framing are not the same thing. This distinction is maintained in the albums and their lyric archives.',
+  future: 'III · AN EXPANDING ATLAS', horizon: 'Each concept creates its own world.', conceptStatus: 'FUTURE CONCEPT',
+  closing: 'The Quran is not decoration. It is the point of departure.', source: 'Source → meaning → laws → sound',
+  lyricCta: 'Lyrics of the 19 works', read: 'Read the manifesto',
+};
+const steps = tr ? [
+  ['01','KONU','KURAN’daki bir tema, sahne, mekân veya gerçeklik belirlenir.'],
+  ['02','KAYNAK','Ayetler araştırılır, bağlamlar karşılaştırılır.'],
+  ['03','SESLER','Alıntı, anlatıcı ve dramatik söz birbirinden ayrılır.'],
+  ['04','YASALAR','Ritim, tekrar, sessizlik, ölçek ve görsel dil belirlenir.'],
+  ['05','MÜZİK','Yalnızca bundan sonra müzikal yapı kurulur.'],
+] : [
+  ['01','SUBJECT','A Quranic theme, scene, place or reality is identified.'],
+  ['02','SOURCE','Passages are studied and contexts compared.'],
+  ['03','VOICES','Quotation, narration and dramatization remain distinct.'],
+  ['04','LAWS','Rhythm, repetition, silence, scale and visual language emerge.'],
+  ['05','MUSIC','Only then does the musical architecture begin.'],
+];
+const future = tr ? [
+  ['THE DAY','Hesap Günü','Diriliş · şahitlik · kayıtlar'],
+  ['MIZAN','Terazi','Ölçü · adalet · denge'],
+  ['ANGELS','Melekler','Elçiler · koruma · tanıklık'],
+  ['CREATION','Yaratılış','Gökler · yeryüzü · yaşam'],
+  ['MOSES','Musa','Vahiy · yüzleşme · işaretler'],
+  ['SATAN','Şeytan ve insan seçimi','Kibir · ayartma · sorumluluk'],
+] : [
+  ['THE DAY','Judgment Day','Resurrection · testimony · records'],
+  ['MIZAN','The Scale','Measure · justice · balance'],
+  ['ANGELS','The Angels','Messengers · guardians · witnesses'],
+  ['CREATION','Creation','Heavens · earth · life'],
+  ['MOSES','Moses','Revelation · confrontation · signs'],
+  ['SATAN','Satan & human choice','Pride · temptation · responsibility'],
+];
+---
+<div class="bk-atlas">
+  <section class="bk-atlas-hero" aria-labelledby="atlas-title">
+    <div class="bk-atlas-hero__globe" aria-hidden="true"><span>XIX</span></div>
+    <div class="bk-atlas-hero__top"><span>{c.eyebrow}</span><span>Q·C / 2026</span></div>
+    <div class="bk-atlas-hero__copy">
+      <span class="bk-eyebrow bk-eyebrow--light">RESEARCH &nbsp; / &nbsp; COMPOSITION &nbsp; / &nbsp; FORM</span>
+      <h1 id="atlas-title" class="bk-atlas-title">QURANIC<br /><em>CONCEPTS</em><span class="bk-atlas-title__period">.</span></h1>
+      <p class="bk-atlas-hero__statement">{c.intro}</p>
+      <p class="bk-atlas-hero__lead">{c.lead}</p>
+      <a class="bk-action bk-action--light" href="#worlds">{c.enter}<span aria-hidden="true">↘</span></a>
+    </div>
+    <div class="bk-atlas-hero__bottom"><span>QURANIC CONCEPTS &nbsp; / &nbsp; XIX</span><span>01 — ∞</span></div>
+  </section>
+
+  <section class="bk-atlas-intro bk-section-gap" aria-labelledby="atlas-thesis">
+    <p class="bk-overline">00 &nbsp; / &nbsp; {c.question}</p>
+    <div class="bk-atlas-intro__grid">
+      <h2 id="atlas-thesis">{c.thesis}</h2>
+      <p>{c.explanation}</p>
+    </div>
+  </section>
+
+  <section id="worlds" class="bk-section-gap" aria-labelledby="atlas-worlds-title">
+    <p class="bk-overline">{c.worlds}</p>
+    <h2 class="bk-display bk-atlas-worlds__title" id="atlas-worlds-title">{c.two}</h2>
+    <div class="bk-world-grid">
+      <article class="bk-world bk-world--hell">
+        <div class="bk-world__art"><img src="/albums/helll.png" alt={tr ? 'HELLL albüm kapağı' : 'HELLL album cover'} loading="lazy" /></div>
+        <div class="bk-world__info">
+          <p class="bk-world__eyebrow">{c.hell} / XIX</p>
+          <h3>HELLL</h3><h4>{c.hellSub}</h4>
+          <p>{c.hellBody}</p>
+          <a class="bk-world__link" href={`${prefix}/albums/helll/`}>{c.open} <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <article class="bk-world bk-world--heaven">
+        <div class="bk-world__art"><img src="/albums/heavenn.webp" alt={tr ? 'HEAVENN albüm kapağı' : 'HEAVENN album cover'} loading="lazy" /></div>
+        <div class="bk-world__info">
+          <p class="bk-world__eyebrow">{c.heaven} / XIX</p>
+          <h3>HEAVENN</h3><h4>{c.heavenSub}</h4>
+          <p>{c.heavenBody}</p>
+          <a class="bk-world__link" href={`${prefix}/albums/heavenn/`}>{c.open} <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="bk-method bk-section-gap" aria-labelledby="atlas-method-title">
+    <div class="bk-method__header">
+      <div><p class="bk-overline">{c.frame}</p><h2 id="atlas-method-title" class="bk-display">{c.method}</h2></div>
+      <p>{c.methodBody}</p>
+    </div>
+    <div class="bk-method__list">
+      {steps.map(([num, name, desc]) => (
+        <article><span class="bk-method__num">{num}</span><h3>{name}</h3><p>{desc}</p></article>
+      ))}
+    </div>
+  </section>
+
+  <section class="bk-future bk-section-gap" aria-labelledby="atlas-future-title">
+    <p class="bk-overline">{c.future}</p><h2 class="bk-display" id="atlas-future-title">{c.horizon}</h2>
+    <div class="bk-future__grid">
+      {future.map(([title, subtitle, desc], i) => (
+        <article><span class="bk-future__number">{String(i+3).padStart(2,'0')} &nbsp; / &nbsp; {c.conceptStatus}</span><h3>{title}</h3><p>{subtitle}</p><small>{desc}</small></article>
+      ))}
+    </div>
+  </section>
+
+  <footer class="bk-atlas-end bk-section-gap">
+    <span aria-hidden="true">XIX</span><p>{c.closing}</p><small>{c.source}</small>
+    <div class="bk-atlas-end__links"><a href={`${prefix}/albums/helll/`}>HELLL ↗</a><a href={`${prefix}/albums/heavenn/`}>HEAVENN ↗</a></div>
+  </footer>
+</div>

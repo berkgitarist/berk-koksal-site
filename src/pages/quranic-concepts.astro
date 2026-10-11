@@ -1,261 +1,579 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/nav.astro';
-import { Icon } from 'astro-icon/components';
-
-const futureConcepts = [
-  ['HEAVENN', 'Paradise', 'Peace • gardens • rivers • safety • abundance • no fear'],
-  ['THE DAY', 'Judgment Day', 'Resurrection • gathering • records • witnesses • separation'],
-  ['MIZAN', 'The Scale', 'Measure • weight • justice • deeds • balance • consequence'],
-  ['ANGELS', 'The Angels', 'Messengers • guardians • witnesses • obedience • recording'],
-  ['CREATION', 'Creation', 'Earth • heavens • life • signs • order'],
-  ['MOSES', 'Moses', 'Revelation • Pharaoh • confrontation • signs • exodus'],
-  ['SATAN', 'Satan & Human Choice', 'Pride • refusal • temptation • responsibility • blame'],
-];
-
-const sourceSteps = [
-  ['01', 'The subject', 'A defined Quranic theme, place, event, character, dialogue or metaphysical reality comes first.'],
-  ['02', 'The verses', 'Relevant passages are collected and recurring ideas across suras are mapped before the album structure is finalized.'],
-  ['03', 'The voices', 'Speakers and scenes are separated. Direct source material is not intentionally blurred with artistic dramatization.'],
-  ['04', 'The laws', 'Tempo, instrumentation, repetition, silence, visual identity and structure are determined by the subject itself.'],
-  ['05', 'The music', 'Only after the conceptual architecture is clear does the final musical world take shape.'],
-];
 ---
-
 <Layout
   title="QURANIC CONCEPTS | Berk KÖKSAL"
-  description="QURANIC CONCEPTS is a series of concept albums by Berk Köksal exploring specific themes, scenes, voices and realities described in the Quran — one subject, one world, one album."
+  description="QURANIC CONCEPTS by Berk Köksal: one subject, one world, one album. Explore HELLL, HEAVENN, the manifesto and the expanding Quran-centered musical atlas."
   canonical="/quranic-concepts/"
-  ogImage="/albums/helll.png"
+  ogImage="/albums/heavenn.webp"
   ogType="website"
+  
   pageClass="quranic-concepts-theme"
   disableAmbient={true}
 >
   <Nav />
-
-  <section class="qc-page py-10 md:py-32">
-    <div class="mx-auto max-w-6xl space-y-8 md:space-y-28">
-      <!-- HERO -->
-      <header class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black px-6 py-16 shadow-2xl md:px-14 md:py-24">
-        <div class="pointer-events-none absolute inset-0 opacity-80">
-          <div class="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#8d1010]/10 blur-3xl"></div>
-          <div class="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-white/[0.025] blur-3xl"></div>
+<main class="qci-page" id="quranic-concepts">
+  <div class="qci-background-ornament" aria-hidden="true"></div>
+  <div class="qci-shell">
+    <!-- ILLUMINATED COVER: geometric manuscript art, no sacred text as decoration -->
+    <header class="qci-cover" aria-labelledby="qci-main-title">
+      <div class="qci-cover-edge" aria-hidden="true"></div>
+      <div class="qci-gild-corner qci-gild-corner-tl" aria-hidden="true">✦</div>
+      <div class="qci-gild-corner qci-gild-corner-tr" aria-hidden="true">✦</div>
+      <div class="qci-gild-corner qci-gild-corner-bl" aria-hidden="true">✦</div>
+      <div class="qci-gild-corner qci-gild-corner-br" aria-hidden="true">✦</div>
+      <div class="qci-cover-topline"><span>BERK KÖKSAL · A SECOND MUSICAL UNIVERSE</span><span>VOL. II <i></i> XIX <i></i> 2026</span></div>
+      <div class="qci-cover-grid">
+        <div class="qci-cover-copy">
+          <p class="qci-cover-overline"><span class="qci-spark" aria-hidden="true">✧</span>RESEARCH / COMPOSITION / FORM</p>
+          <h1 id="qci-main-title"><span>QURANIC</span><em>CONCEPTS</em></h1>
+          <div class="qci-ornate-rule" aria-hidden="true"><span>✦</span></div>
+          <p class="qci-cover-motto">One subject. One world. One album.</p>
+          <p class="qci-cover-intro">A series of concept albums exploring specific themes, scenes, voices and realities described in the Quran. Each work begins with a defined Quranic subject and develops its own musical language, structure and visual identity according to that subject.</p>
+          <nav class="qci-hero-links" aria-label="Album navigation">
+            <a class="qci-button qci-button-gold" href="/albums/heavenn/"><span>Enter HEAVENN</span><b aria-hidden="true">↗</b></a>
+            <a class="qci-button qci-button-clear" href="/albums/helll/"><span>Enter HELLL</span><b aria-hidden="true">↗</b></a>
+          </nav>
+          <a href="#manifesto" class="qci-scroll-link">Read the manifesto <span aria-hidden="true">↓</span></a>
         </div>
+        <div class="qci-hero-art" aria-hidden="true">
+          <div class="qci-arch">
+            <svg class="qci-mandala" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><radialGradient id="qcMandalaGlow"><stop offset="0" stop-color="#f4d8a1" stop-opacity=".19"/><stop offset="1" stop-color="#c29856" stop-opacity="0"/></radialGradient></defs><circle cx="300" cy="300" r="270" fill="url(#qcMandalaGlow)"/><circle cx="300" cy="300" r="259" stroke="#dbb574" stroke-opacity="0.6" stroke-width="1.1" fill="none"/><circle cx="300" cy="300" r="244" stroke="#dbb574" stroke-opacity="0.55" stroke-width="0.8" fill="none"/><circle cx="300" cy="300" r="228" stroke="#dbb574" stroke-opacity="0.38" stroke-width="1" fill="none"/><circle cx="300" cy="300" r="193" stroke="#dbb574" stroke-opacity="0.7" stroke-width="1.5" fill="none"/><circle cx="300" cy="300" r="168" stroke="#dbb574" stroke-opacity="0.48" stroke-width="0.8" fill="none"/><circle cx="300" cy="300" r="137" stroke="#dbb574" stroke-opacity="0.63" stroke-width="1.1" fill="none"/><circle cx="300" cy="300" r="105" stroke="#dbb574" stroke-opacity="0.75" stroke-width="1.4" fill="none"/><path d="M541.0 300.0 L556.0 300.0" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M532.8 362.4 L547.3 366.3" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M508.7 420.5 L521.7 428.0" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M470.4 470.4 L481.0 481.0" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M420.5 508.7 L428.0 521.7" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M362.4 532.8 L366.3 547.3" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M300.0 541.0 L300.0 556.0" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M237.6 532.8 L233.7 547.3" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M179.5 508.7 L172.0 521.7" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M129.6 470.4 L119.0 481.0" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M91.3 420.5 L78.3 428.0" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M67.2 362.4 L52.7 366.3" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M59.0 300.0 L44.0 300.0" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M67.2 237.6 L52.7 233.7" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M91.3 179.5 L78.3 172.0" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M129.6 129.6 L119.0 119.0" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M179.5 91.3 L172.0 78.3" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M237.6 67.2 L233.7 52.7" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M300.0 59.0 L300.0 44.0" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M362.4 67.2 L366.3 52.7" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M420.5 91.3 L428.0 78.3" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M470.4 129.6 L481.0 119.0" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M508.7 179.5 L521.7 172.0" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><path d="M532.8 237.6 L547.3 233.7" stroke="#ebcd8b" stroke-opacity=".68" stroke-width="1"/><polygon points="300.00,74.00 347.45,185.44 459.81,140.19 414.56,252.55 526.00,300.00 414.56,347.45 459.81,459.81 347.45,414.56 300.00,526.00 252.55,414.56 140.19,459.81 185.44,347.45 74.00,300.00 185.44,252.55 140.19,140.19 252.55,185.44" stroke="#f2d28e" stroke-opacity=".67" stroke-width="1.7" fill="#d4b36e" fill-opacity="0.05"/><polygon points="300.00,93.00 330.63,146.02 379.22,108.76 387.22,169.46 446.37,153.63 430.54,212.78 491.24,220.78 453.98,269.37 507.00,300.00 453.98,330.63 491.24,379.22 430.54,387.22 446.37,446.37 387.22,430.54 379.22,491.24 330.63,453.98 300.00,507.00 269.37,453.98 220.78,491.24 212.78,430.54 153.63,446.37 169.46,387.22 108.76,379.22 146.02,330.63 93.00,300.00 146.02,269.37 108.76,220.78 169.46,212.78 153.63,153.63 212.78,169.46 220.78,108.76 269.37,146.02" stroke="#f2d28e" stroke-opacity=".67" stroke-width="1.1" fill="#d4b36e" fill-opacity="0.025"/><path d="M300 45 C315 122 344 151 300 208 C256 151 285 122 300 45 Z" transform="rotate(0 300 300)" stroke="#d5b075" stroke-width="1.2" stroke-opacity=".56" fill="none"/><path d="M300 45 C315 122 344 151 300 208 C256 151 285 122 300 45 Z" transform="rotate(45 300 300)" stroke="#d5b075" stroke-width="1.2" stroke-opacity=".56" fill="none"/><path d="M300 45 C315 122 344 151 300 208 C256 151 285 122 300 45 Z" transform="rotate(90 300 300)" stroke="#d5b075" stroke-width="1.2" stroke-opacity=".56" fill="none"/><path d="M300 45 C315 122 344 151 300 208 C256 151 285 122 300 45 Z" transform="rotate(135 300 300)" stroke="#d5b075" stroke-width="1.2" stroke-opacity=".56" fill="none"/><path d="M300 45 C315 122 344 151 300 208 C256 151 285 122 300 45 Z" transform="rotate(180 300 300)" stroke="#d5b075" stroke-width="1.2" stroke-opacity=".56" fill="none"/><path d="M300 45 C315 122 344 151 300 208 C256 151 285 122 300 45 Z" transform="rotate(225 300 300)" stroke="#d5b075" stroke-width="1.2" stroke-opacity=".56" fill="none"/><path d="M300 45 C315 122 344 151 300 208 C256 151 285 122 300 45 Z" transform="rotate(270 300 300)" stroke="#d5b075" stroke-width="1.2" stroke-opacity=".56" fill="none"/><path d="M300 45 C315 122 344 151 300 208 C256 151 285 122 300 45 Z" transform="rotate(315 300 300)" stroke="#d5b075" stroke-width="1.2" stroke-opacity=".56" fill="none"/><circle cx="527.00" cy="300.00" r="5" fill="#e9c382" fill-opacity=".8"/><circle cx="460.51" cy="460.51" r="5" fill="#e9c382" fill-opacity=".8"/><circle cx="300.00" cy="527.00" r="5" fill="#e9c382" fill-opacity=".8"/><circle cx="139.49" cy="460.51" r="5" fill="#e9c382" fill-opacity=".8"/><circle cx="73.00" cy="300.00" r="5" fill="#e9c382" fill-opacity=".8"/><circle cx="139.49" cy="139.49" r="5" fill="#e9c382" fill-opacity=".8"/><circle cx="300.00" cy="73.00" r="5" fill="#e9c382" fill-opacity=".8"/><circle cx="460.51" cy="139.49" r="5" fill="#e9c382" fill-opacity=".8"/><circle cx="300" cy="300" r="91" fill="#12372e" fill-opacity=".65" stroke="#c9a463" stroke-opacity=".6" stroke-width="1.2"/><text x="300" y="327" font-family="Georgia, serif" font-size="81" font-weight="400" fill="#e9d4a4" fill-opacity=".9" text-anchor="middle" letter-spacing="-4">XIX</text></svg>
+            <div class="qci-arch-caption">XIX <span>•</span> THE MUSICAL ATLAS</div>
+          </div>
+        </div>
+      </div>
+      <div class="qci-cover-colophon"><span>BERK KÖKSAL <i>✧</i> QURANIC CONCEPTS</span><span>01 / HELLL &nbsp;&nbsp; 02 / HEAVENN</span></div>
+    </header>
 
-        <div class="relative z-10 max-w-5xl">
-          <p class="mb-6 text-xs font-bold uppercase tracking-[0.5em] text-[#b74a4a]">
-            A Second Musical Universe by Berk Köksal
-          </p>
+    <div class="qci-ribbon" aria-hidden="true"><span></span><b>✥</b><span></span></div>
 
-          <h1 class="text-5xl font-heading font-bold leading-none text-white sm:text-6xl md:text-8xl">
-            QURANIC<br />CONCEPTS
-          </h1>
+    <!-- Definition: opening folio -->
+    <section class="qci-section qci-opening" aria-labelledby="qci-definition">
+      <div class="qci-chapter-mark"><b>I</b><span>I · THE DEFINITION</span></div>
+      <div class="qci-opening-grid">
+        <div class="qci-opening-title">
+          <p class="qci-calligraphy" aria-hidden="true">Q</p>
+          <h2 id="qci-definition">The subject determines the sound.</h2>
+          <p class="qci-large-quote">There is no fixed genre. There is only the concept.</p>
+        </div>
+        <div class="qci-body qci-opening-copy">
+          <p>QURANIC CONCEPTS is a long-form musical project built around specific subjects found in the Quran. Each album isolates one theme, place, event, character, dialogue or metaphysical reality and develops it as an independent musical universe.</p>
+          <p>The purpose is not to turn every verse into a song, nor to begin with a genre and search for sacred words to place inside it. The process moves in the opposite direction: first comes the subject, then the source research, the voices and the structure. Only after that does the music begin.</p>
+          <div class="qci-mini-imprint"><span aria-hidden="true">✧</span> 01 &nbsp; / &nbsp; SUBJECT BEFORE SOUND</div>
+        </div>
+      </div>
+    </section>
 
-          <p class="mt-8 text-2xl font-heading font-bold text-white md:text-3xl">
-            One subject. One world. One album.
-          </p>
+    <!-- Manifesto in dark ink illuminated panel -->
+    <section class="qci-manifesto qci-section" id="manifesto" aria-labelledby="qci-manifesto-title">
+      <div class="qci-manuscript-border" aria-hidden="true"></div>
+      <div class="qci-manifesto-inner">
+        <div class="qci-manifesto-icon" aria-hidden="true">✧</div>
+        <p class="qci-gold-label">II · THE MANIFESTO</p>
+        <h2 id="qci-manifesto-title">The Quran is not decoration. The concept comes before the genre.</h2>
+        <div class="qci-gold-divider" aria-hidden="true"><span></span><b>✦</b><span></span></div>
+        <div class="qci-manifesto-columns">
+          <div><p>QURANIC CONCEPTS does not attempt to turn the Quran into background music. It does not treat verses as visual or lyrical ornament. It does not begin with a musical style and then search for a Quranic phrase to justify it.</p><p>Every project asks a more difficult question:</p><p class="qci-statement">What does this subject demand from sound?</p></div>
+          <div><p>Hell cannot sound like Paradise. Judgment cannot move like Creation. Angels cannot be represented by the same musical language as human conflict. A narrative cannot obey the same architecture as a metaphysical concept.</p><p class="qci-statement">The form must serve the subject. Never the opposite.</p></div>
+        </div>
+      </div>
+    </section>
 
-          <p class="mt-7 max-w-4xl text-lg leading-8 text-white/65 md:text-xl md:leading-9">
-            A series of concept albums exploring specific themes, scenes, voices and realities described in the Quran. Each work begins with a defined Quranic subject and develops its own musical language, structure and visual identity according to that subject.
-          </p>
+    <!-- Two musical universes -->
+    <section class="qci-section qci-universe-section" aria-labelledby="qci-universe-title">
+      <div class="qci-chapter-mark"><b>II</b><span>III · TWO MUSICAL UNIVERSES</span></div>
+      <div class="qci-section-heading"><h2 id="qci-universe-title">Remembrance and entry are not the same movement.</h2><div class="qci-eight" aria-hidden="true">✧</div></div>
+      <div class="qci-universes">
+        <a href="/neo-sacred-zikr/" class="qci-universe qci-zikr">
+          <span class="qci-universe-ornament" aria-hidden="true">✷</span>
+          <span class="qci-overline">NEO-SACRED ZIKR</span>
+          <h3>The center is remembrance.</h3>
+          <p>Music centered on zikr, repetition, devotion and sacred invocation. Its repetition is devotional and its movement is toward remembrance.</p>
+          <strong>Neo-Sacred Zikr invites the listener to remember.</strong>
+          <span class="qci-universe-arrow" aria-hidden="true">↗</span>
+        </a>
+        <div class="qci-universe qci-concept">
+          <span class="qci-universe-ornament" aria-hidden="true">✵</span>
+          <span class="qci-overline">QURANIC CONCEPTS</span>
+          <h3>The center is the subject.</h3>
+          <p>Music centered on subjects, narratives, voices, places and realities described in the Quran. Repetition may represent memory, eternity, judgment, imprisonment, peace or any other law demanded by the concept.</p>
+          <strong>QURANIC CONCEPTS invites the listener to enter.</strong>
+        </div>
+      </div>
+    </section>
 
-          <div class="mt-10 flex flex-wrap gap-4">
-            <a
-              href="/albums/helll/"
-              class="inline-flex items-center gap-3 rounded-full border border-[#9e2525]/55 bg-[#7f1212]/15 px-7 py-4 font-bold text-white transition hover:border-[#c83d3d]/75 hover:bg-[#7f1212]/25"
-            >
-              Enter HELLL <span aria-hidden="true">→</span>
+    <!-- Research process -->
+    <section class="qci-section qci-source-section" aria-labelledby="qci-source-title">
+      <div class="qci-chapter-mark"><b>III</b><span>IV · THE SOURCE PRINCIPLE</span></div>
+      <div class="qci-source-heading">
+        <div><h2 id="qci-source-title">Research first. Music second.</h2><p class="qci-lead">A fundamental distinction is maintained throughout the series: <strong>Quranic source</strong> and <strong>artistic dramatization</strong> are not the same thing. Original connective or dramatic lines remain artistic interpretation; they are not presented as Quranic text.</p></div>
+        <div class="qci-study-seal" aria-hidden="true"><span>XIX</span><small>✦</small></div>
+      </div>
+      <div class="qci-steps">
+        
+        <article class="qci-step">
+          <div class="qci-step-seal" aria-hidden="true">01</div>
+          <h3>The subject</h3>
+          <p>A defined Quranic theme, place, event, character, dialogue or metaphysical reality comes first.</p>
+        </article>
+        
+        <article class="qci-step">
+          <div class="qci-step-seal" aria-hidden="true">02</div>
+          <h3>The verses</h3>
+          <p>Relevant passages are collected and recurring ideas across suras are mapped before the album structure is finalized.</p>
+        </article>
+        
+        <article class="qci-step">
+          <div class="qci-step-seal" aria-hidden="true">03</div>
+          <h3>The voices</h3>
+          <p>Speakers and scenes are separated. Direct source material is not intentionally blurred with artistic dramatization.</p>
+        </article>
+        
+        <article class="qci-step">
+          <div class="qci-step-seal" aria-hidden="true">04</div>
+          <h3>The laws</h3>
+          <p>Tempo, instrumentation, repetition, silence, visual identity and structure are determined by the subject itself.</p>
+        </article>
+        
+        <article class="qci-step">
+          <div class="qci-step-seal" aria-hidden="true">05</div>
+          <h3>The music</h3>
+          <p>Only after the conceptual architecture is clear does the final musical world take shape.</p>
+        </article>
+        
+      </div>
+    </section>
+
+    <!-- Album folios -->
+    <section class="qci-section qci-worlds" id="worlds" aria-labelledby="qci-worlds-title">
+      <div class="qci-chapter-mark"><b>IV</b><span>V · THE TWO ALBUM WORLDS</span></div>
+      <h2 id="qci-worlds-title" class="qci-main-section-title">Opposite musical laws. One research method.</h2>
+      <p class="qci-lead qci-worlds-lead">The first two QURANIC CONCEPTS albums begin from opposite conditions: one world contracts; the other opens. Their relationship is deeper than simply darkness and light.</p>
+      <div class="qci-album-stack">
+        <article class="qci-album qci-album-hell">
+          <div class="qci-album-art">
+            <a href="/albums/helll/" aria-label="Explore the album — HELLL">
+              <img src="/albums/helll.png" alt="HELLL album cover by Berk Köksal" loading="lazy" width="700" height="700" />
             </a>
-
-            <a
-              href="#manifesto"
-              class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-7 py-4 font-bold text-white transition hover:bg-white/10"
-            >
-              Read the Manifesto
+            <span class="qci-art-number" aria-hidden="true">I</span>
+          </div>
+          <div class="qci-album-copy">
+            <p class="qci-overline">01 · THE FIRST WORLD / 2026</p><h3>HELLL</h3>
+            <p class="qci-album-meta">HELL · 19 TRACKS · 2026</p><h4>THIS ALBUM DOES NOT BELONG TO THIS WORLD.</h4>
+            <p>Punishment • regret • fire • thirst • accusation • no exit • permanence • nineteen. HELLL is the first QURANIC CONCEPTS album and the first complete demonstration of the method: a subject defining its own musical, visual and narrative laws.</p>
+            <div class="qci-tags"><span>A Magnificent Disturbance</span><span>160 BPM</span><span>Repetition becomes imprisonment</span><span>19 × 19</span></div>
+            <a class="qci-album-link" href="/albums/helll/">Explore the album <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="qci-album qci-album-heaven">
+          <div class="qci-album-art">
+            <a href="/albums/heavenn/" aria-label="Explore the album — HEAVENN">
+              <img src="/albums/heavenn.webp" alt="HEAVENN album cover by Berk Köksal" loading="lazy" width="700" height="700" />
             </a>
+            <span class="qci-art-number" aria-hidden="true">II</span>
           </div>
-        </div>
-      </header>
-
-      <!-- DEFINITION -->
-      <section class="grid grid-cols-1 gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:gap-10">
-        <div>
-          <p class="mb-4 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">I</p>
-          <h2 class="text-4xl font-heading font-bold text-white md:text-5xl">
-            The subject determines the sound.
-          </h2>
-        </div>
-
-        <div class="space-y-6 text-lg leading-8 text-white/65">
-          <p>
-            QURANIC CONCEPTS is a long-form musical project built around specific subjects found in the Quran. Each album isolates one theme, place, event, character, dialogue or metaphysical reality and develops it as an independent musical universe.
-          </p>
-          <p>
-            The purpose is not to turn every verse into a song, nor to begin with a genre and search for sacred words to place inside it. The process moves in the opposite direction: first comes the subject, then the source research, the voices and the structure. Only after that does the music begin.
-          </p>
-          <p class="font-heading text-2xl font-bold leading-9 text-white">
-            There is no fixed genre. There is only the concept.
-          </p>
-        </div>
-      </section>
-
-      <!-- MANIFESTO -->
-      <section id="manifesto" class="rounded-[2rem] border border-white/10 bg-white/[0.025] p-7 md:p-14">
-        <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">II · Manifesto</p>
-        <h2 class="max-w-5xl text-4xl font-heading font-bold leading-tight text-white md:text-6xl">
-          The Quran is not decoration. The concept comes before the genre.
-        </h2>
-
-        <div class="mt-6 grid grid-cols-1 gap-6 text-lg leading-8 text-white/65 md:mt-10 lg:grid-cols-2 lg:gap-8">
-          <div class="space-y-5">
-            <p>
-              QURANIC CONCEPTS does not attempt to turn the Quran into background music. It does not treat verses as visual or lyrical ornament. It does not begin with a musical style and then search for a Quranic phrase to justify it.
-            </p>
-            <p>
-              Every project asks a more difficult question: <strong class="text-white">What does this subject demand from sound?</strong>
-            </p>
+          <div class="qci-album-copy">
+            <p class="qci-overline">02 · THE SECOND WORLD / 2026</p><h3>HEAVENN</h3>
+            <p class="qci-album-meta">PARADISE · 19 WORKS · 2026</p><h4>THE MUSIC MUST SOUND AS IF IT HAS NOTHING TO FEAR.</h4>
+            <p>HEAVENN does not claim to reproduce the sound of Paradise. Across nineteen works, fear loses access to sound, scarcity loses access to form, power no longer requires violence, and monumental scale gives way to human nearness.</p>
+            <div class="qci-tags"><span>Melodic symphonic rock</span><span>Silence is safe</span><span>Beauty returns</span><span>Nearness without end</span></div>
+            <a class="qci-album-link" href="/albums/heavenn/">Album manifesto &amp; lyrics <span aria-hidden="true">↗</span></a>
           </div>
+        </article>
+      </div>
+    </section>
 
-          <div class="space-y-5">
-            <p>
-              Hell cannot sound like Paradise. Judgment cannot move like Creation. Angels cannot be represented by the same musical language as human conflict. A narrative cannot obey the same architecture as a metaphysical concept.
-            </p>
-            <p>
-              The form must serve the subject. Never the opposite.
-            </p>
-          </div>
-        </div>
-      </section>
+    <!-- HELLL / HEAVENN musical duality -->
+    <section class="qci-section qci-contrast" aria-labelledby="qci-contrast-title">
+      <div class="qci-chapter-mark"><b>V</b><span>VI · HELLL / HEAVENN</span></div>
+      <div class="qci-contrast-heading"><h2 id="qci-contrast-title">The memory remains. The suffering does not.</h2><p>HELLL is not erased by HEAVENN. It is answered. Even their works titled NO DEATH are conceived as two forms of one recognizable musical memory.</p></div>
+      <div class="qci-mirror-head"><span>HELLL</span><div aria-hidden="true">↔</div><span>HEAVENN</span></div>
+      <div class="qci-pairs">
+      
+        <div class="qci-pair"><div>HELLL contracts.</div><div>HEAVENN expands.</div></div>
+      
+        <div class="qci-pair"><div>Repetition becomes confinement.</div><div>Return becomes discovery.</div></div>
+      
+        <div class="qci-pair"><div>Silence becomes dangerous.</div><div>Silence becomes safe.</div></div>
+      
+        <div class="qci-pair"><div>Permanence becomes punishment.</div><div>Continuity becomes a gift.</div></div>
+      
+      </div>
+    </section>
 
-      <!-- TWO UNIVERSES -->
-      <section>
-        <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">III · Two Universes</p>
-        <h2 class="mb-6 text-4xl font-heading font-bold text-white md:mb-10 md:text-6xl">
-          Remembrance and entry are not the same movement.
-        </h2>
+    <!-- Future atlas -->
+    <section class="qci-section qci-future-section" aria-labelledby="qci-future-title">
+      <div class="qci-chapter-mark"><b>VI</b><span>VII · THE EXPANDING ATLAS</span></div>
+      <div class="qci-future-header"><h2 id="qci-future-title">One concept at a time.</h2><p>The series is designed as an expanding musical atlas of Quranic concepts. The albums may sound radically different while remaining part of the same system because the method — not a single genre — is the identity.</p></div>
+      <div class="qci-future-grid">
+        
+        <article class="qci-future">
+          <span class="qci-tile-star" aria-hidden="true">✵</span>
+          <div class="qci-future-no"><span>03</span> <span>FUTURE CONCEPT</span></div>
+          <h3>THE DAY</h3><p>Judgment Day</p><small>Resurrection • gathering • records • witnesses • separation</small>
+        </article>
+        
+        <article class="qci-future">
+          <span class="qci-tile-star" aria-hidden="true">✵</span>
+          <div class="qci-future-no"><span>04</span> <span>FUTURE CONCEPT</span></div>
+          <h3>MIZAN</h3><p>The Scale</p><small>Measure • weight • justice • deeds • balance • consequence</small>
+        </article>
+        
+        <article class="qci-future">
+          <span class="qci-tile-star" aria-hidden="true">✵</span>
+          <div class="qci-future-no"><span>05</span> <span>FUTURE CONCEPT</span></div>
+          <h3>ANGELS</h3><p>The Angels</p><small>Messengers • guardians • witnesses • obedience • recording</small>
+        </article>
+        
+        <article class="qci-future">
+          <span class="qci-tile-star" aria-hidden="true">✵</span>
+          <div class="qci-future-no"><span>06</span> <span>FUTURE CONCEPT</span></div>
+          <h3>CREATION</h3><p>Creation</p><small>Earth • heavens • life • signs • order</small>
+        </article>
+        
+        <article class="qci-future">
+          <span class="qci-tile-star" aria-hidden="true">✵</span>
+          <div class="qci-future-no"><span>07</span> <span>FUTURE CONCEPT</span></div>
+          <h3>MOSES</h3><p>Moses</p><small>Revelation • Pharaoh • confrontation • signs • exodus</small>
+        </article>
+        
+        <article class="qci-future">
+          <span class="qci-tile-star" aria-hidden="true">✵</span>
+          <div class="qci-future-no"><span>08</span> <span>FUTURE CONCEPT</span></div>
+          <h3>SATAN</h3><p>Satan &amp; Human Choice</p><small>Pride • refusal • temptation • responsibility • blame</small>
+        </article>
+        
+      </div>
+    </section>
 
-        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          <a href="/neo-sacred-zikr/" class="rounded-[2rem] border border-accent/25 bg-accent/5 p-8 no-underline transition hover:border-accent/50 md:p-10">
-            <p class="text-xs font-bold uppercase tracking-[0.35em] text-accent">Neo-Sacred Zikr</p>
-            <h3 class="mt-4 text-3xl font-heading font-bold text-white">The center is remembrance.</h3>
-            <p class="mt-5 leading-7 text-white/60">
-              Music centered on zikr, repetition, devotion and sacred invocation. Its repetition is devotional and its movement is toward remembrance.
-            </p>
-            <p class="mt-8 font-heading text-xl font-bold text-white">
-              Neo-Sacred Zikr invites the listener to remember.
-            </p>
-          </a>
-
-          <div class="rounded-[2rem] border border-[#8f1c1c]/40 bg-[#7f1212]/10 p-8 md:p-10">
-            <p class="text-xs font-bold uppercase tracking-[0.35em] text-[#d16c6c]">QURANIC CONCEPTS</p>
-            <h3 class="mt-4 text-3xl font-heading font-bold text-white">The center is the subject.</h3>
-            <p class="mt-5 leading-7 text-white/60">
-              Music centered on subjects, narratives, voices, places and realities described in the Quran. Repetition may represent memory, eternity, judgment, imprisonment, peace or any other law demanded by the concept.
-            </p>
-            <p class="mt-8 font-heading text-xl font-bold text-white">
-              QURANIC CONCEPTS invites the listener to enter.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- SOURCE PRINCIPLE -->
-      <section>
-        <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">IV · The Source Principle</p>
-        <h2 class="mb-6 text-4xl font-heading font-bold text-white md:text-6xl">
-          Research first. Music second.
-        </h2>
-        <p class="mb-6 max-w-4xl text-lg leading-8 text-white/60 md:mb-10">
-          A fundamental distinction is maintained throughout the series: <strong class="text-white">Quranic source</strong> and <strong class="text-white">artistic dramatization</strong> are not the same thing. Original connective or dramatic lines remain artistic interpretation; they are not presented as Quranic text.
-        </p>
-
-        <div class="space-y-4">
-          {sourceSteps.map(([number, title, text]) => (
-            <article class="grid grid-cols-[72px_1fr] gap-5 rounded-2xl border border-white/10 bg-white/[0.02] p-6 md:grid-cols-[100px_1fr] md:p-7">
-              <div class="font-mono text-2xl font-bold text-[#9d2a2a]">{number}</div>
-              <div>
-                <h3 class="text-2xl font-heading font-bold text-white">{title}</h3>
-                <p class="mt-2 leading-7 text-white/60">{text}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <!-- HELLL -->
-      <section class="overflow-hidden rounded-[2rem] border border-[#8f1c1c]/45 bg-black">
-        <div class="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr]">
-          <a href="/albums/helll/" class="group block bg-black p-5 md:p-8">
-            <img
-              src="/albums/helll.png"
-              alt="HELLL album cover by Berk KÖKSAL"
-              class="w-full rounded-3xl border border-white/10 bg-black shadow-[0_0_90px_rgba(130,0,0,0.14)] transition duration-500 group-hover:scale-[1.015]"
-              loading="lazy"
-            />
-          </a>
-
-          <div class="flex flex-col justify-center p-7 md:p-12 lg:p-14">
-            <p class="text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">V · The First World</p>
-            <h2 class="mt-4 text-6xl font-heading font-bold leading-none text-white md:text-8xl">HELLL</h2>
-            <p class="mt-5 text-sm font-bold uppercase tracking-[0.3em] text-white/45">HELL • 19 TRACKS • 2026</p>
-
-            <p class="mt-8 font-heading text-2xl font-bold uppercase leading-9 text-white md:text-3xl">
-              THIS ALBUM DOES NOT BELONG TO THIS WORLD.
-            </p>
-
-            <p class="mt-6 text-lg leading-8 text-white/60">
-              Punishment • regret • fire • thirst • accusation • no exit • permanence • nineteen. HELLL is the first QURANIC CONCEPTS album and the first complete demonstration of the method: a subject defining its own musical, visual and narrative laws.
-            </p>
-
-            <div class="mt-8 flex flex-wrap gap-2">
-              {['A Magnificent Disturbance', '160 BPM', 'Black', 'Repetition becomes imprisonment', '19 × 19'].map((item) => (
-                <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-widest text-white/65">{item}</span>
-              ))}
-            </div>
-
-            <a
-              href="/albums/helll/"
-              class="mt-9 inline-flex w-fit items-center gap-3 rounded-full border border-[#a32d2d]/55 bg-[#7f1212]/15 px-7 py-4 font-bold text-white transition hover:bg-[#7f1212]/25"
-            >
-              Enter the album <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- FUTURE -->
-      <section>
-        <p class="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#b74a4a]">VI · Expanding Atlas</p>
-        <h2 class="mb-6 text-4xl font-heading font-bold text-white md:text-6xl">
-          One concept at a time.
-        </h2>
-        <p class="mb-6 max-w-4xl text-lg leading-8 text-white/60 md:mb-10">
-          The series is designed as an expanding musical atlas of Quranic concepts. The albums may sound radically different while remaining part of the same system because the method — not a single genre — is the identity.
-        </p>
-
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {futureConcepts.map(([title, subtitle, text]) => (
-            <article class="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-              <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-[#9f3b3b]">Future Concept</p>
-              <h3 class="mt-3 text-2xl font-heading font-bold text-white">{title}</h3>
-              <p class="mt-1 font-bold text-white/55">{subtitle}</p>
-              <p class="mt-4 text-sm leading-6 text-white/45">{text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <!-- CLOSING -->
-      <section class="rounded-[2rem] border border-white/10 bg-white/[0.02] px-6 py-14 text-center md:px-12 md:py-20">
-        <Icon name="mdi:book-open-page-variant" class="mx-auto h-8 w-8 text-[#9f3b3b]" />
-        <p class="mt-7 text-xs font-bold uppercase tracking-[0.5em] text-[#b74a4a]">The Long-Term Vision</p>
-        <h2 class="mx-auto mt-6 max-w-5xl text-4xl font-heading font-bold leading-tight text-white md:text-6xl">
-          An expanding musical atlas of Quranic concepts.
-        </h2>
-        <p class="mx-auto mt-7 max-w-3xl text-lg leading-8 text-white/55">
-          Not one album about the Quran. Not one musical style. Not one interpretation repeated indefinitely. A growing collection of independent worlds — each opening one subject, studying it, building its laws, and then moving to the next.
-        </p>
-      </section>
-    </div>
-  </section>
+    <!-- Colophon -->
+    <footer class="qci-closing" aria-label="Long-term vision">
+      <div class="qci-footer-medallion" aria-hidden="true">XIX</div>
+      <span class="qci-closing-ornament" aria-hidden="true">✧</span>
+      <p class="qci-overline">THE LONG-TERM VISION</p>
+      <h2>An expanding musical atlas of Quranic concepts.</h2>
+      <p>Not one album about the Quran. Not one musical style. Not one interpretation repeated indefinitely. A growing collection of independent worlds — each opening one subject, studying it, building its laws, and then moving to the next.</p>
+      <span class="qci-closing-line">SOURCE → MEANING → MUSICAL LAW</span>
+      <nav aria-label="Album navigation"><a href="/albums/helll/">HELLL <span aria-hidden="true">↗</span></a><a href="/albums/heavenn/">HEAVENN <span aria-hidden="true">↗</span></a></nav>
+    </footer>
+  </div>
+</main>
 </Layout>
+<style is:global>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap');
+/* Quranic Concepts only. Visual references: traditional manuscript illumination,
+   gilded bindings, geometric book ornaments and aged paper. No verses or sacred
+   text have been used as a decorative texture. */
+body.quranic-concepts-theme,body:has(.qci-page){
+ --color-background:#e9dfc7;--color-maintext:#213c34;--color-subtext:#665e4c;
+ --color-accent:#8c6b35;--color-textrain:#b29a6a;
+ background:#e9dfc7 !important;color:#283e33 !important;
+}
+body:has(.qci-page) nav:not(.qci-hero-links):not(.qci-closing nav){
+ border:1px solid rgba(195,160,91,.5) !important;
+ background:linear-gradient(105deg,#12372d 0%,#245345 70%,#183b30 100%) !important;
+ box-shadow:0 15px 42px rgba(29,42,31,.22),inset 0 1px rgba(246,232,193,.17) !important;
+}
+body:has(.qci-page) nav:not(.qci-hero-links):not(.qci-closing nav) a{
+ color:#f4e9cc !important;
+}
+html:has(.qci-page){scroll-padding-top:105px;}
+.qci-page{
+ --qci-ink:#253e34;--qci-leather:#133c30;--qci-gold:#ba9151;
+ --qci-gold-light:#e6c98b;--qci-muted:#635f4c;--qci-parch:#f3e8ce;
+ --qci-display:'Amiri','Cormorant Garamond',Georgia,serif;
+ --qci-roman:'Cormorant Garamond','Amiri',Georgia,serif;
+ --qci-sans:'Manrope','Inter',system-ui,sans-serif;
+ isolation:isolate;position:relative;min-height:100vh;overflow:hidden;
+ padding:clamp(8.2rem,10.2vw,10.8rem) 0 0;
+ background-image:radial-gradient(ellipse 70% 37% at 14% 9%,rgba(255,250,231,.82),transparent 85%),
+ radial-gradient(ellipse 42% 52% at 96% 53%,rgba(175,132,68,.16),transparent 95%),
+ linear-gradient(90deg,rgba(118,75,27,.08),transparent 9%,transparent 92%,rgba(118,75,27,.095)),
+ url('/images/writings/qc-parchment.webp');
+ background-size:auto,auto,auto,960px 960px;
+ color:var(--qci-ink);font-family:var(--qci-sans);font-size:16px;
+}
+.qci-page:after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.4;
+ background:repeating-linear-gradient(90deg,transparent 0 238px,rgba(126,93,44,.021) 239px,transparent 241px);}
+.qci-page *{box-sizing:border-box;}
+.qci-page :is(h1,h2,h3,h4,p){margin:0;}
+.qci-page a{text-decoration:none;}
+.qci-page a:focus-visible{outline:3px solid #d9a751;outline-offset:5px;}
+.qci-shell{width:min(1340px,calc(100% - clamp(1.35rem,6vw,8rem)));margin-inline:auto;}
+.qci-background-ornament{position:absolute;pointer-events:none;opacity:.13;width:370px;height:900px;left:-190px;top:1020px;
+ background:repeating-conic-gradient(from 22.5deg,#86633e 0 3deg,transparent 3deg 45deg);border-radius:50%;filter:blur(13px);}
+/* ---- Cover / manuscript binding ---- */
+.qci-cover{position:relative;isolation:isolate;overflow:hidden;background:
+ radial-gradient(ellipse 80% 130% at 80% 46%,rgba(61,104,77,.67),transparent 68%),
+ radial-gradient(ellipse 70% 85% at 7% 8%,rgba(7,32,30,.67),transparent),
+ linear-gradient(115deg,#12392d,#234e3c 56%,#315b47);
+ border:1px solid #aa864e;box-shadow:0 37px 80px rgba(51,51,36,.27),0 8px 16px rgba(68,46,23,.18),inset 0 0 90px rgba(3,19,15,.45);color:#f4e7c8;}
+.qci-cover:before{content:'';position:absolute;z-index:-2;inset:0;opacity:.14;
+ background-image:linear-gradient(90deg,transparent 0,transparent 45%,rgba(242,194,116,.18) 46%,transparent 48%),url('/images/writings/qc-parchment.webp');background-size:auto,950px 950px;mix-blend-mode:screen;}
+.qci-cover:after{content:'';position:absolute;z-index:-1;pointer-events:none;inset:12px;border:1px solid rgba(221,175,89,.58);box-shadow:inset 0 0 0 7px rgba(16,49,38,.14),inset 0 0 0 8px rgba(233,185,96,.26);}
+.qci-cover-edge{position:absolute;pointer-events:none;left:29px;top:37px;bottom:37px;border-left:1px solid rgba(214,175,89,.48);}
+.qci-gild-corner{position:absolute;z-index:3;color:#ddb56d;font-size:1.18rem;line-height:1;pointer-events:none;text-shadow:0 1px 5px #040f0b80;}
+.qci-gild-corner-tl{top:20px;left:20px;}.qci-gild-corner-tr{top:20px;right:20px;}.qci-gild-corner-bl{bottom:20px;left:20px;}.qci-gild-corner-br{bottom:20px;right:20px;}
+.qci-cover-topline,.qci-cover-colophon{position:relative;z-index:4;display:flex;gap:1rem;justify-content:space-between;align-items:center;
+ margin-inline:clamp(2.4rem,5vw,5rem);padding-block:1.4rem;letter-spacing:.18em;
+ text-transform:uppercase;font:600 .63rem/1.6 var(--qci-sans);color:#dac8a3;}
+.qci-cover-topline{border-bottom:1px solid rgba(232,190,108,.27);padding-top:2rem;}
+.qci-cover-topline i{display:inline-block;width:4px;height:4px;margin:0 6px 2px;border:1px solid #d2b47f;transform:rotate(45deg);}
+.qci-cover-colophon{border-top:1px solid rgba(232,190,108,.27);padding-bottom:2rem;}
+.qci-cover-colophon i{color:#ddb66c;font-style:normal;margin:0 .6rem;}
+.qci-cover-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(345px,.8fr);align-items:center;min-height:710px;gap:0;padding:2.8rem clamp(2.4rem,5vw,5rem) 3.2rem;}
+.qci-cover-copy{position:relative;z-index:3;padding:1rem 0;}
+.qci-cover-overline,.qci-overline{font:700 .68rem/1.7 var(--qci-sans);letter-spacing:.2em;text-transform:uppercase;}
+.qci-cover-overline{color:#e6cb92;display:flex;gap:.7rem;align-items:center;margin:0 0 1.3rem !important;}
+.qci-spark{font:2rem/1 var(--qci-display);color:#dabb77;}
+.qci-cover h1{margin:0 0 1rem !important;font-family:var(--qci-display);font-size:clamp(4.7rem,8.25vw,9.6rem);font-weight:400;line-height:.82;letter-spacing:-.057em;color:#f8efcf;word-spacing:-.05em;text-shadow:0 2px 1px #08201750;}
+.qci-cover h1 span{display:block;white-space:nowrap;}
+.qci-cover h1 em{display:block;font:italic 500 .96em/.94 var(--qci-roman);letter-spacing:-.069em;white-space:nowrap;margin:0 0 0 .1em;color:#e9d2a6;}
+.qci-ornate-rule{display:flex;align-items:center;gap:1rem;width:min(310px,100%);height:22px;color:#dbb973;margin:1.4rem 0 1.35rem;}
+.qci-ornate-rule:before,.qci-ornate-rule:after{content:'';height:1px;background:linear-gradient(90deg,#e9c88980,#e9c889);flex:1;}
+.qci-ornate-rule:after{background:linear-gradient(90deg,#e9c889,#e9c88900);}
+.qci-ornate-rule span{font-size:1.13rem;}
+.qci-cover-motto{font:400 clamp(1.7rem,2.8vw,2.65rem)/1.08 var(--qci-display);color:#ffe5b2;margin-bottom:.9rem !important;}
+.qci-cover-intro{max-width:590px;font:400 .96rem/1.88 var(--qci-sans);color:#e6e5d4;}
+.qci-hero-links{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:2rem;}
+.qci-button{display:inline-flex;min-height:53px;align-items:center;gap:1.5rem;justify-content:space-between;padding:.88rem 1.3rem;font:700 .77rem/1.4 var(--qci-sans);letter-spacing:.01em;transition:transform .25s,box-shadow .25s,background .25s;}
+.qci-button:hover{transform:translateY(-3px);box-shadow:0 9px 17px #001b1538;}
+.qci-button-gold{color:#193f35;background:#e5c889;border:1px solid #fbe0aa;}
+.qci-button-gold:hover{background:#f5dda6;}
+.qci-button-clear{color:#f5e8c3;border:1px solid rgba(227,193,122,.66);background:#ead8b00d;}
+.qci-button-clear:hover{background:#eed39e1b;}
+.qci-scroll-link{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.4rem;border-bottom:1px solid #d0ba8059;padding-bottom:.4rem;font:600 .73rem var(--qci-sans);color:#d4c59d;}
+.qci-scroll-link:hover{color:#fff4cd;}
+.qci-hero-art{pointer-events:none;display:grid;place-items:center;align-self:stretch;position:relative;min-width:0;}
+.qci-arch{position:relative;display:grid;align-items:center;justify-items:center;aspect-ratio:3/4;width:min(455px,100%);margin:0 0 0 -.4rem;
+ background:radial-gradient(ellipse at 50% 44%,rgba(195,160,87,.11),transparent 62%),linear-gradient(90deg,transparent,rgba(228,188,104,.034),transparent);
+ border:1px solid rgba(221,186,112,.3);border-radius:250px 250px 12px 12px;box-shadow:inset 0 0 0 10px rgba(13,47,35,.53),inset 0 0 0 11px rgba(232,193,109,.23),0 20px 50px #00190f3b;}
+.qci-arch:after{content:'';position:absolute;inset:28px 25px;border:1px solid rgba(214,179,106,.16);border-radius:250px 250px 4px 4px;}
+.qci-mandala{display:block;width:110%;max-width:520px;height:auto;filter:drop-shadow(0 1px 8px #e4b85d18);animation:qci-breathe 14s ease-in-out infinite;}
+.qci-arch-caption{position:absolute;bottom:12%;left:0;right:0;text-align:center;font:600 .64rem/1.4 var(--qci-sans);letter-spacing:.22em;color:#cfbc8f;}
+.qci-arch-caption span{padding:0 .4rem;}
+@keyframes qci-breathe{0%,100%{opacity:.7;transform:scale(.985)}50%{opacity:.97;transform:scale(1.015)}}
+.qci-ribbon{display:flex;align-items:center;justify-content:center;gap:1.4rem;margin:3.3rem auto 3.8rem;width:min(520px,80%);color:#a17b43;}
+.qci-ribbon span{flex:1;height:1px;background:linear-gradient(90deg,transparent,#ad8b58 85%);}.qci-ribbon span:last-child{transform:rotate(180deg);}
+.qci-ribbon b{font:400 2rem/1 var(--qci-display);}
+/* ---- Main folios / headings ---- */
+.qci-section{position:relative;margin-top:clamp(5.8rem,8vw,9rem);scroll-margin-top:125px;}
+.qci-chapter-mark{display:flex;align-items:center;gap:.85rem;margin-bottom:1.8rem;font:700 .69rem var(--qci-sans);letter-spacing:.19em;text-transform:uppercase;color:#7b663f;}
+.qci-chapter-mark b{display:grid;place-items:center;width:45px;height:45px;border-radius:50%;border:1px solid #9b7f4f;box-shadow:inset 0 0 0 3px #e5d5af,inset 0 0 0 4px rgba(136,104,60,.3);color:#735329;font:400 1.2rem var(--qci-roman);}
+.qci-section h2{font:400 clamp(3.25rem,5.5vw,6.2rem)/.97 var(--qci-display);letter-spacing:-.035em;color:#263c32;}
+.qci-body{font:400 1rem/1.94 var(--qci-sans);color:#5a5444;}
+.qci-body p+p{margin-top:1.5rem;}
+.qci-opening-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:clamp(2rem,8vw,8rem);align-items:start;}
+.qci-opening-title{position:relative;min-width:0;}
+.qci-calligraphy{position:absolute;z-index:-1;left:-.32em;top:-.54em;color:#9c783417;font:italic 29rem/1 var(--qci-display);pointer-events:none;}
+.qci-opening-title h2{max-width:590px;margin:0 0 1.8rem;}
+.qci-large-quote{max-width:520px;color:#9b783d;font:italic 500 clamp(1.6rem,2.4vw,2.5rem)/1.18 var(--qci-roman);padding-left:1.4rem;border-left:2px solid #c29b5a;}
+.qci-opening-copy{padding:1.5rem 0 2rem;border-top:1px solid #ab8655;}
+.qci-mini-imprint{margin-top:2.2rem;padding-top:1.2rem;border-top:1px solid #c7b083;font:700 .65rem/1.3 var(--qci-sans);letter-spacing:.16em;color:#967647;}
+.qci-mini-imprint span{font-size:1.5rem;vertical-align:middle;margin-right:.5rem;}
+/* ---- Manifesto: velvet / gold manuscript plaque ---- */
+.qci-manifesto{color:#f4e7ce;padding:clamp(2rem,3.5vw,3.3rem);background:
+ radial-gradient(ellipse at 80% 10%,rgba(135,124,70,.2),transparent 46%),linear-gradient(130deg,#172d33 0%,#203d42 54%,#152b31 100%);
+ box-shadow:0 30px 85px rgba(67,54,36,.21),inset 0 0 70px #04121e50;border:1px solid #a5844d;overflow:hidden;}
+.qci-manifesto:before{content:'';position:absolute;inset:0;pointer-events:none;opacity:.12;
+ background:repeating-linear-gradient(135deg,transparent 0 49px,#cfb27d 50px,transparent 51px);}
+.qci-manuscript-border{position:absolute;inset:16px;pointer-events:none;border:1px solid #d3a95f87;box-shadow:inset 0 0 0 5px #1e343c,inset 0 0 0 6px #d3a95f42;}
+.qci-manifesto-inner{position:relative;z-index:1;padding:clamp(2.2rem,5vw,5rem) clamp(1rem,5vw,5rem);}
+.qci-manifesto-icon{width:70px;height:70px;margin:0 auto 1rem;border:1px solid #bd9b63;box-shadow:inset 0 0 0 7px #1a3038,inset 0 0 0 8px #bd9b63;transform:rotate(45deg);display:grid;place-items:center;color:#dab56f;font:2.5rem/1 var(--qci-display);}
+.qci-manifesto-icon::first-letter{transform:rotate(-45deg);}
+.qci-gold-label{text-align:center;font:700 .69rem var(--qci-sans);letter-spacing:.27em;color:#e2bd7b;}
+.qci-manifesto h2{max-width:990px;text-align:center;margin:1.5rem auto 2rem;color:#f7e8c4;font:400 clamp(3rem,6vw,6.1rem)/.98 var(--qci-display);}
+.qci-gold-divider{display:flex;align-items:center;gap:1rem;width:min(390px,85%);margin:0 auto 3rem;color:#dab56f;}
+.qci-gold-divider span{height:1px;flex:1;background:linear-gradient(90deg,transparent,#d6b16d);}.qci-gold-divider span:last-child{transform:rotate(180deg);}
+.qci-gold-divider b{font-size:1.4rem;}
+.qci-manifesto-columns{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.2rem,7vw,7rem);border-top:1px solid #deb97c44;padding-top:2rem;}
+.qci-manifesto-columns p{font-size:.97rem;line-height:1.93;color:#e3ddcf;margin-bottom:1.3rem;}
+.qci-manifesto-columns .qci-statement{font:italic 500 clamp(1.6rem,2.3vw,2.3rem)/1.2 var(--qci-roman);color:#e9c98a;}
+/* ---- Universes ---- */
+.qci-section-heading{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:2.8rem;}
+.qci-section-heading h2{max-width:920px;}
+.qci-eight{font:5.3rem var(--qci-display);color:#b49863;line-height:1;}
+.qci-universes{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;}
+.qci-universe{position:relative;isolation:isolate;overflow:hidden;min-height:380px;display:flex;flex-direction:column;padding:clamp(2rem,4vw,4rem);border:1px solid rgba(136,107,54,.42);color:#33453b;box-shadow:0 9px 25px #624c2b1a;transition:transform .25s ease,box-shadow .25s ease;}
+.qci-universe:hover{transform:translateY(-5px);box-shadow:0 22px 40px #624c2b2a;}
+.qci-zikr{background:linear-gradient(110deg,#eee6d4ee,#dcccadbb),url('/images/writings/qc-parchment.webp');}
+.qci-concept{background:linear-gradient(115deg,#d8e4cfef,#b8cfb2d9),url('/images/writings/qc-parchment.webp');}
+.qci-universe:after{content:'';position:absolute;inset:12px;z-index:-1;pointer-events:none;border:1px solid #ac8b57a3;}
+.qci-universe-ornament{position:absolute;z-index:-1;right:-.05em;top:-.37em;font:17rem var(--qci-display);color:#9a7b3426;}
+.qci-overline{color:#8f6e39;}
+.qci-universe h3{max-width:430px;font:400 clamp(2.3rem,3.5vw,3.7rem)/1.07 var(--qci-display);color:#2f4036;margin:1.1rem 0 1.4rem;}
+.qci-universe>p{max-width:455px;line-height:1.9;font-size:.91rem;color:#5e5a4a;}
+.qci-universe strong{display:block;margin-top:auto;padding-top:1.3rem;max-width:460px;font:italic 500 clamp(1.5rem,2.15vw,2.1rem)/1.18 var(--qci-roman);color:#385b44;}
+.qci-universe-arrow{position:absolute;right:2.3rem;bottom:1.75rem;color:#81683e;font-size:1.2rem;}
+/* ---- Method: scholarly diagram ---- */
+.qci-source-section{padding:clamp(2rem,4vw,3.6rem);border-top:2px solid #b9955c;border-bottom:2px solid #b9955c;
+ background:linear-gradient(180deg,#f7efd8df,#ebddbddb),url('/images/writings/qc-parchment.webp');box-shadow:0 16px 36px #6f512a1a;}
+.qci-source-heading{display:flex;justify-content:space-between;align-items:center;gap:3rem;}
+.qci-source-heading>div:first-child{max-width:875px;}
+.qci-source-heading h2{margin:0 0 1.4rem;}
+.qci-lead{max-width:870px;font:.98rem/1.95 var(--qci-sans);color:#655c49;}
+.qci-lead strong{color:#2e493c;}
+.qci-study-seal{flex:0 0 150px;aspect-ratio:1/1;border:2px solid #9a783e;border-radius:50%;position:relative;display:grid;place-items:center;font:400 4.5rem/1 var(--qci-roman);color:#897041;transform:rotate(-9deg);}
+.qci-study-seal:before{content:'';position:absolute;inset:10px;border:1px dashed #9a783e;border-radius:50%;}
+.qci-study-seal small{position:absolute;bottom:15px;font:1.5rem var(--qci-display);}
+.qci-steps{margin-top:2.7rem;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1.1rem;position:relative;}
+.qci-steps:before{content:'';position:absolute;z-index:0;height:1px;top:25px;left:7%;right:7%;background:linear-gradient(90deg,transparent,#ab874c,#ab874c,transparent);}
+.qci-step{position:relative;padding:.3rem .7rem 1rem;text-align:center;min-width:0;}
+.qci-step-seal{display:grid;place-items:center;position:relative;z-index:1;background:#e9d7b3;margin:0 auto 1.1rem;width:49px;height:49px;border:1px solid #9b763f;color:#6b4f27;font:600 .79rem var(--qci-sans);background:transparent;border:0;isolation:isolate;}
+.qci-step-seal:before{content:"";position:absolute;z-index:-1;inset:2px;background:#e9d7b3;border:1px solid #9b763f;transform:rotate(45deg);}
+.qci-step h3{font:500 clamp(1.4rem,1.9vw,1.95rem)/1.1 var(--qci-display);margin:1.35rem 0 .6rem;color:#30463b;}
+.qci-step p{font:.78rem/1.85 var(--qci-sans);color:#6a624f;}
+/* ---- Featured albums / large cover art ---- */
+.qci-worlds h2{max-width:960px;}
+.qci-worlds-lead{margin:1.2rem 0 3.3rem;}
+.qci-album-stack{display:grid;gap:2rem;}
+.qci-album{display:grid;grid-template-columns:minmax(0,.89fr) minmax(0,1.11fr);overflow:hidden;box-shadow:0 18px 50px #3b301f30;min-height:570px;}
+.qci-album-hell{background:linear-gradient(125deg,#20191b,#3a2324 68%,#251d20);color:#f6e4d4;border:1px solid #a47755;}
+.qci-album-heaven{background:linear-gradient(125deg,#f5f0e3,#f4f4ef 68%,#dcdacf);color:#344d48;border:1px solid #bfb494;}
+.qci-album-art{position:relative;isolation:isolate;display:grid;place-items:center;min-width:0;overflow:hidden;padding:clamp(1.1rem,3vw,2.65rem);}
+.qci-album-hell .qci-album-art{background:radial-gradient(circle,#6b25236b,#080608 74%);}
+.qci-album-heaven .qci-album-art{background:radial-gradient(circle,#ffffffd4,#e2e2d6 76%);}
+.qci-album-art a{display:block;width:100%;max-width:520px;z-index:2;box-shadow:0 20px 45px #0a0b0a50;overflow:hidden;}
+.qci-album-heaven .qci-album-art a{box-shadow:0 17px 43px #68746b38;}
+.qci-album-art img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;display:block;transition:transform .5s;}
+.qci-album-art a:hover img{transform:scale(1.032);}
+.qci-art-number{position:absolute;z-index:1;left:-.12em;bottom:-.3em;font:400 24rem/.8 var(--qci-display);color:#fff3d411;pointer-events:none;}
+.qci-album-heaven .qci-art-number{color:#a7b3a515;}
+.qci-album-copy{padding:clamp(2rem,4.5vw,4.6rem);display:flex;flex-direction:column;justify-content:center;align-items:start;min-width:0;}
+.qci-album-hell .qci-overline{color:#d7ad8c;}
+.qci-album-heaven .qci-overline{color:#778e85;}
+.qci-album-copy h3{font: 400 clamp(3.2rem, 5vw, 5.5rem)/.9 var(--qci-display);
+  letter-spacing: -.042em;
+  margin: 1rem 0 .6rem;}
+.qci-album-meta{font:.66rem/1.6 var(--qci-sans);letter-spacing:.24em;opacity:.74;}
+.qci-album-copy h4{font:400 clamp(1.65rem,2.4vw,2.65rem)/1.11 var(--qci-display);margin:2rem 0 1.2rem;max-width:520px;}
+.qci-album-copy>p:not(.qci-overline,.qci-album-meta){font:.91rem/1.87 var(--qci-sans);max-width:530px;opacity:.9;}
+.qci-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.45rem 0 1.6rem;}
+.qci-tags span{border:1px solid currentColor;border-radius:2px;opacity:.68;padding:.45rem .65rem;font:.62rem/1.5 var(--qci-sans);}
+.qci-album-link{margin-top:auto;padding:.5rem 0;border-bottom:1px solid currentColor;display:inline-flex;align-items:center;gap:1.6rem;font:700 .78rem var(--qci-sans);color:inherit;}
+.qci-album-link:hover{opacity:.65;}
+/* ---- Mirror: musical inversion ---- */
+.qci-contrast{padding:clamp(2rem,5vw,4.5rem);border:1px solid #b89c6c;background:
+ linear-gradient(180deg,rgba(242,233,210,.93),rgba(223,206,172,.95)),url('/images/writings/qc-parchment.webp');}
+.qci-contrast-heading{display:grid;grid-template-columns:1.3fr .7fr;gap:3rem;align-items:end;margin-bottom:2.5rem;}
+.qci-contrast-heading h2{max-width:800px;}
+.qci-contrast-heading p{color:#625846;font:.93rem/1.94 var(--qci-sans);}
+.qci-mirror-head,.qci-pair{display:grid;grid-template-columns:1fr 42px 1fr;}
+.qci-mirror-head{align-items:end;border-bottom:2px solid #987a4e;padding-bottom:1rem;color:#8b6d3c;letter-spacing:.23em;font:700 .69rem var(--qci-sans);}
+.qci-mirror-head span:last-child{text-align:right;}.qci-mirror-head>div{text-align:center;font-size:1.2rem;letter-spacing:0;}
+.qci-pair{border-bottom:1px solid #c4ab7d;position:relative;}
+.qci-pair:before{content:'✧';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#98784c;font-size:1.25rem;background:#e9d8b7;padding:.2rem .4rem;}
+.qci-pair>div{font:500 clamp(1.2rem,1.9vw,1.87rem)/1.25 var(--qci-display);padding:1.2rem 1rem .9rem 0;color:#734c3c;}
+.qci-pair>div:last-child{grid-column:3;color:#30584e;text-align:right;padding:1.2rem 0 .9rem 1rem;}
+/* ---- Next worlds / card stamps ---- */
+.qci-future-header{display:grid;grid-template-columns:1fr .7fr;gap:3rem;align-items:end;margin-bottom:2.5rem;}
+.qci-future-header p{font:.94rem/1.9 var(--qci-sans);color:#675d4b;}
+.qci-future-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;}
+.qci-future{position:relative;isolation:isolate;min-height:285px;overflow:hidden;background:
+ linear-gradient(145deg,rgba(248,239,214,.88),rgba(234,216,176,.85)),url('/images/writings/qc-parchment.webp');
+ border:1px solid #ac8e5a;box-shadow:0 5px 13px #8f774e24;padding:clamp(1.5rem,2.5vw,2.3rem);transition:transform .22s ease;}
+.qci-future:hover{transform:translateY(-5px);}
+.qci-future:before{content:'';position:absolute;inset:8px;border:1px solid #bb9e6988;pointer-events:none;}
+.qci-tile-star{position:absolute;z-index:-1;right:-.1em;top:-.4em;font:400 15rem/1 var(--qci-display);color:#a28a5e25;}
+.qci-future-no{display:flex;justify-content:space-between;gap:.3rem;border-bottom:1px solid #bda57576;padding-bottom:.65rem;color:#937342;font:700 .61rem/1.6 var(--qci-sans);letter-spacing:.12em;}
+.qci-future h3{font:400 clamp(2.6rem,3.5vw,3.8rem)/1 var(--qci-display);margin:2rem 0 .5rem;color:#314a3b;}
+.qci-future p{font:500 1.15rem/1.3 var(--qci-display);color:#705d41;margin-bottom:.65rem;}
+.qci-future small{display:block;font:.8rem/1.77 var(--qci-sans);color:#665e4a;}
+/* ---- The final colophon ---- */
+.qci-closing{position:relative;isolation:isolate;text-align:center;margin-top:clamp(6rem,9vw,10rem);padding:clamp(4rem,8vw,8rem) clamp(1.5rem,8vw,7rem);
+ background:radial-gradient(circle at 50% -15%,#5671567a,transparent 56%),linear-gradient(135deg,#102e2d,#254b3c 52%,#102e2d);color:#e9ddbd;overflow:hidden;border-top:5px double #c6a269;}
+.qci-closing:before{content:'';position:absolute;inset:14px;border:1px solid #c6a2697c;pointer-events:none;z-index:-1;}
+.qci-footer-medallion{position:absolute;z-index:-1;pointer-events:none;inset:0;display:grid;place-items:center;font:400 min(35vw,27rem)/1 var(--qci-display);color:#f4e7c709;}
+.qci-closing-ornament{display:inline-block;font:4.4rem/1 var(--qci-display);color:#d6ad64;margin-bottom:1rem;}
+.qci-closing .qci-overline{color:#d1b06d;}
+.qci-closing h2{font:400 clamp(3rem,5.2vw,5.8rem)/1 var(--qci-display);max-width:920px;margin:1.2rem auto 1.8rem;color:#f4e6c5;}
+.qci-closing>p:not(.qci-overline){font:.98rem/1.94 var(--qci-sans);max-width:820px;color:#e1ddcb;margin:0 auto 2.4rem;}
+.qci-closing-line{display:block;font:700 .72rem/1.6 var(--qci-sans);letter-spacing:.21em;color:#c4a26c;}
+.qci-closing nav{display:flex;flex-wrap:wrap;justify-content:center;gap:2.2rem;margin-top:2.8rem;}
+.qci-closing nav a{display:inline-flex;align-items:center;gap:.8rem;border-bottom:1px solid #d1ad70;color:#f2e4c5;padding-bottom:.6rem;font:700 .85rem var(--qci-sans);}
+.qci-closing nav a:hover{color:#fff;}
+/* ---- Responsive ---- */
+@media(max-width:1100px){
+ .qci-cover-grid{grid-template-columns:minmax(0,1.12fr) minmax(260px,.7fr);min-height:620px;}
+ .qci-cover h1{font-size:clamp(4rem,8.5vw,7rem);}
+ .qci-hero-art{opacity:.87;}
+ .qci-arch{width:min(350px,100%);}
+ .qci-steps{grid-template-columns:repeat(3,minmax(0,1fr));}.qci-steps:before{display:none;}
+ .qci-step-seal{width:41px;height:41px;}
+ .qci-album{min-height:auto;}
+}
+@media(max-width:800px){
+ .qci-page{padding-top:7.7rem;}
+ .qci-cover-grid{grid-template-columns:1fr;padding-top:3rem;padding-bottom:2rem;}
+ .qci-cover-copy{max-width:680px;}
+ .qci-cover h1{font-size:clamp(4.2rem,11vw,7rem);}
+ .qci-hero-art{position:absolute;inset:0 0 0 43%;z-index:0;opacity:.28;}
+ .qci-arch{width:min(480px,100%);}
+ .qci-opening-grid,.qci-universes,.qci-manifesto-columns,.qci-contrast-heading,.qci-future-header{grid-template-columns:1fr;}
+ .qci-manifesto-columns{gap:0;}
+ .qci-opening-grid{gap:2rem;}
+ .qci-opening-copy{max-width:740px;}
+ .qci-section-heading .qci-eight{display:none;}
+ .qci-album{grid-template-columns:minmax(0,.7fr) minmax(0,1fr);}
+ .qci-album-copy{padding:2.1rem;}
+ .qci-album-copy h3{font-size:clamp(3.5rem,8vw,6rem);}
+ .qci-album-copy h4{font-size:1.7rem;}
+ .qci-future-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:600px){
+ .qci-page{padding-top:6.7rem;}
+ .qci-shell{width:calc(100% - 1.15rem);}
+ .qci-cover-edge{left:15px;top:25px;bottom:25px;}
+ .qci-cover:after{inset:7px;box-shadow:none;}
+ .qci-gild-corner{font-size:.9rem;}.qci-gild-corner-tl{left:11px;top:12px;}.qci-gild-corner-tr{right:11px;top:12px;}.qci-gild-corner-bl{left:11px;bottom:12px;}.qci-gild-corner-br{right:11px;bottom:12px;}
+ .qci-cover-topline,.qci-cover-colophon{margin-inline:1.5rem;padding-top:1.5rem;letter-spacing:.09em;font-size:.54rem;}
+ .qci-cover-topline span:last-child,.qci-cover-colophon span:last-child{display:none;}
+ .qci-cover-grid{padding:2rem 1.55rem 3.4rem;min-height:580px;}
+ .qci-cover h1{font-size:clamp(3.55rem,13.2vw,5.7rem);letter-spacing:-.07em;}
+ .qci-cover h1 em{letter-spacing:-.075em;}
+ .qci-cover-motto{font-size:1.85rem;}
+ .qci-cover-intro{font-size:.84rem;line-height:1.85;}
+ .qci-cover-overline{font-size:.57rem;letter-spacing:.14em;}
+ .qci-hero-links{display:flex;flex-direction:column;align-items:stretch;}.qci-button{min-height:48px;}
+ .qci-hero-art{inset:20% -38% 0 30%;opacity:.16;}
+ .qci-ribbon{margin:2.3rem auto 2rem;}
+ .qci-section{margin-top:5.1rem;}
+ .qci-section h2{font-size:clamp(2.8rem,11.5vw,4.3rem);}
+ .qci-chapter-mark{font-size:.57rem;letter-spacing:.12em;}
+ .qci-chapter-mark b{width:38px;height:38px;}
+ .qci-body{font-size:.9rem;line-height:1.88;}
+ .qci-calligraphy{font-size:18rem;}
+ .qci-large-quote{font-size:1.6rem;}
+ .qci-manifesto{padding:.85rem;}.qci-manuscript-border{inset:9px;}.qci-manifesto-inner{padding:2.9rem 1.55rem;}
+ .qci-manifesto-icon{width:52px;height:52px;font-size:1.7rem;}
+ .qci-manifesto h2{font-size:clamp(2.7rem,10.1vw,4rem);}
+ .qci-manifesto-columns p{font-size:.86rem;}
+ .qci-universe{min-height:320px;padding:2.3rem;}
+ .qci-universe h3{font-size:2.65rem;}
+ .qci-source-section{padding:1.7rem 1.25rem;}
+ .qci-source-heading{gap:1rem;}.qci-study-seal{display:none;}
+ .qci-steps{grid-template-columns:1fr 1fr;gap:1.35rem .7rem;}
+ .qci-step{padding:.2rem;}.qci-step h3{font-size:1.5rem;margin-top:1rem;}.qci-step p{font-size:.71rem;}
+ .qci-worlds-lead{margin-bottom:1.5rem;}
+ .qci-album{grid-template-columns:1fr;}
+ .qci-album-art{padding:1.4rem;}.qci-album-art a{width:min(420px,100%);}
+ .qci-album-copy{padding:1.7rem 1.6rem 2.6rem;}
+ .qci-album-copy h3{font-size:4.5rem;}.qci-album-copy h4{font-size:2rem;}
+ .qci-album-copy>p:not(.qci-overline,.qci-album-meta){font-size:.86rem;}
+ .qci-album-link{margin-top:.5rem;}
+ .qci-contrast{padding:1.4rem 1.05rem;}
+ .qci-contrast-heading{gap:1rem;}
+ .qci-mirror-head,.qci-pair{grid-template-columns:1fr 28px 1fr;}
+ .qci-mirror-head{font-size:.61rem;}
+ .qci-pair>div{font-size:1.32rem;padding-right:.4rem;}.qci-pair>div:last-child{padding-left:.4rem;}
+ .qci-future-grid{grid-template-columns:1fr;}
+ .qci-future{min-height:230px;}
+ .qci-closing{margin-top:5rem;padding:4rem 1.5rem;}.qci-closing h2{font-size:3.1rem;}
+ .qci-closing>p:not(.qci-overline){font-size:.85rem;}.qci-closing-line{font-size:.61rem;letter-spacing:.12em;}
+}
+@media(max-width:380px){.qci-cover h1{font-size:clamp(2.7rem,13vw,3.55rem);}.qci-cover-grid{padding-inline:1.4rem;}.qci-cover-motto{font-size:1.7rem;}}
+@media(prefers-reduced-motion:reduce){.qci-page *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
+
+</style>
