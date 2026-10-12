@@ -356,7 +356,7 @@ const hourTarget = "2280-09-24T19:33:00Z";
 
 <section class="mb-6">
   <div
-    class="relative overflow-hidden rounded-[2rem] border border-[#6f1010]/40 bg-black/35 p-6 backdrop-blur-xl md:p-8"
+    class="relative overflow-hidden rounded-[2rem] border border-[#8f1c1c]/50 bg-gradient-to-br from-[#130809] via-[#1c0b0e] to-[#090909] p-6 backdrop-blur-xl md:p-8"
   >
     <div
       class="pointer-events-none absolute -right-10 top-1/2 -translate-y-1/2 select-none text-[17rem] font-heading font-bold leading-none tracking-[-0.06em] text-[#8f1c1c]/[0.12] md:-right-16 md:text-[28rem]"
@@ -397,13 +397,13 @@ const hourTarget = "2280-09-24T19:33:00Z";
         </div>
 
         <h2
-          class="mb-3 text-5xl font-bold leading-none text-maintext md:text-7xl"
+          class="mb-3 text-5xl font-bold leading-none text-white md:text-7xl"
         >
           HELLL - CEHENNEMM
         </h2>
 
         <p
-          class="mb-5 font-heading text-xl font-bold uppercase tracking-[0.08em] text-maintext/90 md:text-2xl"
+          class="mb-5 font-heading text-xl font-bold uppercase tracking-[0.08em] text-white md:text-2xl"
         >
           {copy.helllStatement}
         </p>
@@ -412,52 +412,49 @@ const hourTarget = "2280-09-24T19:33:00Z";
           {copy.helllDescription}
         </p>
 
-        <div
-          class="mb-8 flex flex-wrap gap-2 text-xs uppercase tracking-widest"
-        >
-          <span
-            class="rounded-full border border-[#8f1c1c]/35 bg-[#8f1c1c]/10 px-4 py-2 text-[#d16c6c]"
-            >{copy.magnificentDisturbance}</span
-          >
-          <span
-            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75"
-            >19 × 19</span
-          >
-          <span
-            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75"
-            >XIX</span
-          >
-          <span
-            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75"
-            >{copy.warningMustBeHeard}</span
-          >
-        </div>
+        <div class="mb-8 flex flex-wrap gap-2 text-xs uppercase tracking-widest">
+  <span class="rounded-full border border-[#8f1c1c]/35 bg-[#8f1c1c]/10 px-4 py-2 text-white">
+    {copy.magnificentDisturbance}
+  </span>
+
+  <span class="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-white/90">
+    19 × 19
+  </span>
+
+  <span class="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-white/90">
+    XIX
+  </span>
+
+  <span class="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-white/90">
+    {copy.warningMustBeHeard}
+  </span>
+</div>
 
         <div class="flex flex-wrap gap-4">
-          <a
-            href={helllAlbum?.spotify ?? resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-3 rounded-full border border-[#1DB954]/30 bg-[#1DB954]/10 px-7 py-4 font-semibold text-maintext transition hover:bg-[#1DB954]/20"
-          >
-            <Icon name="mdi:spotify" class="h-5 w-5 text-[#1DB954]" />
-            Spotify
-          </a>
+  <a
+    href={helllAlbum?.spotify ?? resumeUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-flex items-center gap-3 rounded-full border border-[#1DB954]/30 bg-[#1DB954]/10 px-7 py-4 font-semibold text-white transition hover:bg-[#1DB954]/20"
+  >
+    <Icon name="mdi:spotify" class="h-5 w-5 text-[#1DB954]" />
+    Spotify
+  </a>
 
-          <a
-            href={isTurkish ? "/tr/albums/helll/" : "/albums/helll/"}
-            class="inline-flex items-center gap-3 rounded-full border border-[#8f1c1c]/45 bg-[#8f1c1c]/10 px-7 py-4 font-semibold text-maintext transition hover:bg-[#8f1c1c]/20"
-          >
-            {copy.enterHelll}
-          </a>
+  <a
+    href={isTurkish ? "/tr/albums/helll/" : "/albums/helll/"}
+    class="inline-flex items-center gap-3 rounded-full border border-[#8f1c1c]/45 bg-[#8f1c1c]/10 px-7 py-4 font-semibold text-white transition hover:bg-[#8f1c1c]/20"
+  >
+    {copy.enterHelll}
+  </a>
 
-          <a
-            href={isTurkish ? "/tr/quranic-concepts/" : "/quranic-concepts/"}
-            class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-7 py-4 font-semibold text-maintext transition hover:bg-white/10"
-          >
-            QURANIC CONCEPTS
-          </a>
-        </div>
+  <a
+    href={isTurkish ? "/tr/quranic-concepts/" : "/quranic-concepts/"}
+    class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-7 py-4 font-semibold text-white transition hover:bg-white/10"
+  >
+    QURANIC CONCEPTS
+  </a>
+</div>
       </div>
     </div>
   </div>

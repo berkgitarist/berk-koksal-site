@@ -55,22 +55,28 @@ const copy = tr ? {
       </a>
       <div class="min-w-0">
         <p class="mb-2 text-sm uppercase tracking-[0.35em] text-[#b8e0e1]">{copy.meta}</p>
-        <h2 id="bk-heavenn-feature-title" class="mb-3 text-5xl font-bold leading-none text-maintext md:text-7xl">{copy.heading}</h2>
-        <p class="mb-5 font-heading text-xl font-bold uppercase tracking-[0.08em] text-maintext/90 md:text-2xl">{copy.subtitle}</p>
-        <p class="mb-8 max-w-3xl text-lg leading-8 text-subtext">{copy.description}</p>
+        <h2 id="bk-heavenn-feature-title" class="mb-3 text-5xl font-bold leading-none text-white md:text-7xl">{copy.heading}</h2>
+        <p class="mb-5 font-heading text-xl font-bold uppercase tracking-[0.08em] text-white md:text-2xl">{copy.subtitle}</p>
+        <p class="mb-8 max-w-3xl text-lg leading-8 text-white/85">{copy.description}</p>
         <div class="mb-8 flex flex-wrap gap-2 text-xs uppercase tracking-widest">
-          <span class="rounded-full border border-[#acd6dc]/35 bg-[#acd6dc]/10 px-4 py-2 text-[#b8e0e1]">{copy.tagOne}</span>
-          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">{copy.tagTwo}</span>
-          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">XIX</span>
-          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-maintext/75">{copy.tagFour}</span>
-        </div>
+  <span class="rounded-full border border-[#acd6dc]/35 bg-[#acd6dc]/10 px-4 py-2 text-[#b8e0e1]">{copy.tagOne}</span>
+  <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-white/90">{copy.tagTwo}</span>
+  <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-white/90">XIX</span>
+  <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-white/90">{copy.tagFour}</span>
+</div>
         <div class="flex flex-wrap gap-4">
-          <a href={spotifyUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full border border-[#1DB954]/30 bg-[#1DB954]/10 px-7 py-4 font-semibold text-maintext transition hover:bg-[#1DB954]/20">
-            <Icon name="mdi:spotify" class="h-5 w-5 text-[#1DB954]" /> {copy.listen}
-          </a>
-          <a href={`${prefix}/albums/heavenn/`} class="inline-flex items-center gap-3 rounded-full border border-[#acd6dc]/35 bg-[#acd6dc]/10 px-7 py-4 font-semibold text-maintext transition hover:bg-[#acd6dc]/20">{copy.explore}</a>
-          <a href={`${prefix}/quranic-concepts/`} class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-7 py-4 font-semibold text-maintext transition hover:bg-white/10">QURANIC CONCEPTS</a>
-        </div>
+  <a href={spotifyUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full border border-[#1DB954]/30 bg-[#1DB954]/10 px-7 py-4 font-semibold text-white transition hover:bg-[#1DB954]/20">
+    <Icon name="mdi:spotify" class="h-5 w-5 text-[#1DB954]" /> {copy.listen}
+  </a>
+
+  <a href={`${prefix}/albums/heavenn/`} class="inline-flex items-center gap-3 rounded-full border border-[#acd6dc]/35 bg-[#acd6dc]/10 px-7 py-4 font-semibold text-white transition hover:bg-[#acd6dc]/20">
+    {copy.explore}
+  </a>
+
+  <a href={`${prefix}/quranic-concepts/`} class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-7 py-4 font-semibold text-white transition hover:bg-white/10">
+    QURANIC CONCEPTS
+  </a>
+</div>
       </div>
     </div>
   </div>
