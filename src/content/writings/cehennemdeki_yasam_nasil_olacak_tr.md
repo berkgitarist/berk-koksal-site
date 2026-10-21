@@ -28,12 +28,6 @@ author: "Berk KÖKSAL"
 **Tarih:** 21 Ekim 2026  
 **Yer:** Mersin
 
-# Cehennemdeki Yaşam Nasıl Olacak? Ölümün Bitirmediği, Çıkışın Olmadığı Bir Hayat
-
-**Yazar:** Berk KÖKSAL  
-**Tarih:** 30 Eylül 2026  
-**Yer:** Mersin
-
 Makalenin temel amacı, ayetleri diğer ilgili ayetlerle birlikte düşünmek; TANRI’nın birliğine şahitliğin bilgi, adalet, doğruluk ve teslimiyet bakımından insan hayatında ne anlama geldiğini samimi ve derin bir dille ortaya koymaktır.
 
 ## 1. Ölümün Bitirmediği Bir Varoluş: Cehennemde “Yaşam” Ne Demek?
