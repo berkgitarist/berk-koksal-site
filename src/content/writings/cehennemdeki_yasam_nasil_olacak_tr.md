@@ -36,11 +36,11 @@ Makalenin temel amacı, ayetleri diğer ilgili ayetlerle birlikte düşünmek; T
 
 **35:36**
 
-**Arapça:** وَٱلَّذِينَ كَفَرُوا۟ لَهُمْ نَارُ جَهَنَّمَ لَا يُقْضَىٰ عَلَيْهِمْ فَيَمُوتُوا۟ وَلَا يُخَفَّفُ عَنْهُم مِّنْ عَذَابِهَا كَذَٰلِكَ نَجْزِى كُلَّ كَفُورٍ
+> **Arapça:** وَٱلَّذِينَ كَفَرُوا۟ لَهُمْ نَارُ جَهَنَّمَ لَا يُقْضَىٰ عَلَيْهِمْ فَيَمُوتُوا۟ وَلَا يُخَفَّفُ عَنْهُم مِّنْ عَذَابِهَا كَذَٰلِكَ نَجْزِى كُلَّ كَفُورٍ
 
-**English:** As  for  those  who  disbelieve,  they have  incurred  the  fire  of  Hell,  where they  are  never  finished  by  death,  nor is  the  retribution  ever  commuted  for them.  We  thus  requite  the  unappreciative.
+> **English:** As  for  those  who  disbelieve,  they have  incurred  the  fire  of  Hell,  where they  are  never  finished  by  death,  nor is  the  retribution  ever  commuted  for them.  We  thus  requite  the  unappreciative.
 
-**Türkçe:** İnkâr edenlere gelince, Cehennemin ateşini üzerlerine çekmişlerdir; orada ne ölüm onları sona erdirir, ne de azap onlar için hafifletilir. Biz nankörlere işte böyle karşılık veririz.
+> **Türkçe:** İnkâr edenlere gelince, Cehennemin ateşini üzerlerine çekmişlerdir; orada ne ölüm onları sona erdirir, ne de azap onlar için hafifletilir. Biz nankörlere işte böyle karşılık veririz.
 
 Kaynak: <a href="https://kuranteyit.com/" target="_blank" rel="noopener noreferrer">kuranteyit.com</a>
 
