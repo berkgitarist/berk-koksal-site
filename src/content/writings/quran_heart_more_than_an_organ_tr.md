@@ -5,7 +5,7 @@ description: >-
 publishDate: 2026-10-22
 category: "Quran Reflections"
 language: "tr"
-image: "/images/writings/the-secrets-of-the-heart-tr.png"
+image: "/images/writings/the-secrets-of-the-heart-tr2.jpg"
 tags:
   - "KURAN"
   - "Kalp"
