@@ -307,7 +307,7 @@ Bazen tefekkürün devamı yeni bir cevap istemek olmayacak. Ekranı bir süre k
 
 Bir asistanın cümlelerimi tamamlamasıyla benim adıma TANRI’nın ne istediğine hükmetmesi arasında büyük bir mesafe var. Bu mesafe, konuşma samimileştikçe kendiliğinden korunmayabilir. Beni yakından tanıdığına inandığım bir sese, bilmediği konularda da yetki tanımaya başlayabilirim.
 
-<a href="https://berkkoksal.com/writings/can-artificial-intelligence-explain-the-quran-information-tool-and-responsibility-of-understanding/" target="_blank" rel="noopener noreferrer">Yapay zekanın KURAN’ı açıklaması ve anlama sorumluluğu üzerine yazımda</a> araç ile sorumluluk arasında bir sınır aramıştım. Burada o sınırın bilgi kadar yakınlık üzerinden de aşılabileceğini düşünüyorum. Bir söz, yalnızca bilgili görünerek değil, bana özel söylenmiş gibi duyularak da etkili olabilir.
+<a href="https://berkkoksal.com/tr/writings/yapay-zeka-kurani-aciklayabilir-mi/" target="_blank" rel="noopener noreferrer">Yapay zekanın KURAN’ı açıklaması ve anlama sorumluluğu üzerine yazımda</a> araç ile sorumluluk arasında bir sınır aramıştım. Burada o sınırın bilgi kadar yakınlık üzerinden de aşılabileceğini düşünüyorum. Bir söz, yalnızca bilgili görünerek değil, bana özel söylenmiş gibi duyularak da etkili olabilir.
 
 43:36 karşısında mesajı göz ardı etmemeyi, 25:43 karşısında ise kendi eğilimimi hüküm makamına taşımamayı düşünürken bu iki mesele birleşiyor. Dini bir cevabı, beni iyi tanıyan bir asistan ürettiği için değil, gerçekten neye dayandığını görebildiğim ölçüde değerlendirmeliyim. Bana uygun gelmesi, ayete uygun olduğunu göstermez.
 
@@ -369,7 +369,7 @@ Böyle bir yardımcı tasarlasaydım, ayetin kendisiyle ayet üzerine kurulmuş 
 
 Kişiselleştirme burada yerini bulabilir. Yazı boyutunu, dili, araştırma notlarını veya nerede kaldığımı hatırlaması faydalı olabilir. Fakat bana sunulan gerekçelerin kuvveti, benim hangi cevabı sevdiğime göre değişmemeli. Aynı iddia karşısında yalnızca kullanıcı değişti diye hakikat ölçüsünün değişmesini istemiyorum.
 
-<a href="https://berkkoksal.com/writings/should-a-quran-app-issue-rulings-tool-authority-boundary/" target="_blank" rel="noopener noreferrer">Bir KURAN uygulamasının hüküm vermesi ve araç–otorite sınırı üzerine yazımda</a> aradığım dikkat, bu tasarım fikrinde de sürüyor. Burada mevcut bir özelliği duyurmuyor, geliştirmeye değer bulduğum bir ilkeyi düşünüyorum: Yardımcı, yalnızca neden haklı olabileceğimi değil, gerekçemin nerede yetmediğini de gösterebilmeli.
+<a href="https://berkkoksal.com/tr/writings/bir-kuran-uygulamasi-hukum-vermeli-mi/" target="_blank" rel="noopener noreferrer">Bir KURAN uygulamasının hüküm vermesi ve araç–otorite sınırı üzerine yazımda</a> aradığım dikkat, bu tasarım fikrinde de sürüyor. Burada mevcut bir özelliği duyurmuyor, geliştirmeye değer bulduğum bir ilkeyi düşünüyorum: Yardımcı, yalnızca neden haklı olabileceğimi değil, gerekçemin nerede yetmediğini de gösterebilmeli.
 
 Üstelik kendisine itiraz etmemi de mümkün kılmalı. Cevabını yeniden inceletebilmeli, dayanağını açabilmeli, konuşmayı bırakıp metinle baş başa kalabilmeliyim. Araştırmanın sonunda ona daha bağımlı olmam değil, kendi sorumluluğumu daha bilinçli taşımam değerli olur.
 
