@@ -86,6 +86,7 @@ const copy = tr ? {
      but render the new HEAVENN sibling ahead of it (without duplicating HELLL). -->
 <style is:global>
   .bk-home-album-flow { display: flex; flex-direction: column; min-width: 0; }
-  .bk-home-album-flow > .bk-heavenn-feature { order: 1; }
-  .bk-home-album-flow > section.mb-6:not(.bk-heavenn-feature) { order: 2; }
+  .bk-home-album-flow > .bk-la-ilahe-feature { order: 1; }
+  .bk-home-album-flow > .bk-heavenn-feature { order: 2; }
+  .bk-home-album-flow > section.mb-6:not(.bk-heavenn-feature):not(.bk-la-ilahe-feature) { order: 3; }
 </style>

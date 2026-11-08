@@ -15,7 +15,7 @@ export async function getStaticPaths() {
   // HEAVENN için /tr/albums/heavenn/ adresinde ayrı bir sayfa bulunuyor.
   // albums.tr.json'a eklendiğinde aynı yolun iki kez oluşturulmasını engeller.
   return albums
-    .filter((album) => album.slug !== "heavenn")
+    .filter((album) => !["heavenn", "la-ilahe-illa-allah"].includes(album.slug))
     .map((album) => ({
       params: { slug: album.slug },
       props: { album },

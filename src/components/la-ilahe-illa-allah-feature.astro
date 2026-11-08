@@ -1,0 +1,54 @@
+---
+interface Props { lang?: 'en' | 'tr' }
+const { lang = 'en' } = Astro.props;
+const tr = lang === 'tr';
+const prefix = tr ? '/tr' : '';
+const href = `${prefix}/albums/la-ilahe-illa-allah/`;
+const c = tr ? {
+  eyebrow: 'NEO-SACRED ZIKR · 2026 · XIX',
+  stat: '19 ÖZGÜN BESTE · TEK TEVHİD İFADESİ',
+  heading: 'La İlahe İlla ALLAH',
+  motto: 'TEK İFADE. ON DOKUZ AYRI BESTE. TEK MERKEZ.',
+  description: 'Aynı tevhid ifadesi üzerine kurulmuş 19 bağımsız beste. Tek bir eserin 19 düzenlemesi değil; her biri kendine ait melodi ve ses dünyası taşıyor. Merkezde TEK TANRI’yı hatırlama ve yüceltme amacı var.',
+  release: '8 Kasım 2026 yükleme kaydında dijital mağazalara aktarım sürecindeydi.',
+  open: 'Albümü ve manifestoyu keşfet',
+  universe: 'Neo-Sacred Zikr',
+  cover: 'Berk KÖKSAL — La İlahe İlla ALLAH albüm kapağı, lacivert ve turkuaz dairesel hat sanatı'
+} : {
+  eyebrow: 'NEO-SACRED ZIKR · 2026 · XIX',
+  stat: '19 ORIGINAL COMPOSITIONS · ONE DECLARATION',
+  heading: 'La İlahe İlla ALLAH',
+  motto: 'ONE DECLARATION. NINETEEN DISTINCT COMPOSITIONS. ONE CENTER.',
+  description: 'Nineteen independent compositions built around the same declaration of the oneness of GOD. Not nineteen arrangements of a single piece: each work has its own musical identity, while the aim remains remembrance and glorification of the ONE GOD.',
+  release: 'The album was in digital-store delivery processing in the 8 November 2026 upload record.',
+  open: 'Explore the album and manifesto',
+  universe: 'Neo-Sacred Zikr',
+  cover: 'Berk KÖKSAL — La İlahe İlla ALLAH album cover with navy-blue and turquoise circular calligraphy'
+};
+---
+
+<section class="bk-la-ilahe-feature mb-6" aria-labelledby="bk-la-ilahe-feature-title">
+  <div class="relative isolate overflow-hidden rounded-[2rem] border border-[#32dbdb]/40 bg-gradient-to-br from-[#080d40] via-[#0c1559] to-[#101f58] p-6 shadow-[0_22px_80px_rgba(6,16,65,0.14)] md:p-8">
+    <span class="pointer-events-none absolute -right-6 -top-20 select-none font-heading text-[15rem] font-bold leading-none text-[#42e5df]/[0.075] md:text-[26rem]" aria-hidden="true">XIX</span>
+    <div class="relative z-10 mb-6 flex items-center gap-3 text-[#6af0e9]">
+      <span class="inline-block h-2.5 w-2.5 rounded-full bg-[#38e2d9]" aria-hidden="true"></span>
+      <span class="text-xs font-bold uppercase tracking-[0.26em]">{c.eyebrow}</span>
+    </div>
+    <div class="relative z-10 grid grid-cols-1 items-center gap-9 lg:grid-cols-[340px_minmax(0,1fr)]">
+      <a href={href} class="group block" aria-label={c.open}>
+        <img src="/albums/la-ilahe-illa-allah.webp" alt={c.cover} width="640" height="640" loading="lazy" decoding="async" class="w-full rounded-3xl border border-[#67e6e4]/30 bg-white object-cover shadow-[0_0_75px_rgba(21,222,217,0.12)] transition-transform duration-500 group-hover:scale-[1.02]" />
+      </a>
+      <div class="min-w-0">
+        <p class="mb-3 text-xs font-bold uppercase tracking-[0.23em] text-[#71eae5]">{c.stat}</p>
+        <h2 id="bk-la-ilahe-feature-title" class="max-w-3xl font-heading text-[clamp(2.6rem,5vw,4.4rem)] font-bold leading-[1.08] tracking-[-0.035em] text-white">{c.heading}</h2>
+        <p class="mt-5 font-heading text-lg font-bold tracking-[0.03em] text-white md:text-xl">{c.motto}</p>
+        <p class="mt-5 max-w-3xl text-base leading-8 text-white/80 md:text-lg">{c.description}</p>
+        <p class="mt-4 text-sm leading-6 text-[#9cdadf]">{c.release}</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href={href} class="inline-flex items-center justify-center rounded-full border border-[#43e5dd]/65 bg-[#43e5dd]/15 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#43e5dd]/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43e5dd]">{c.open} <span aria-hidden="true">↗</span></a>
+          <a href={`${prefix}/neo-sacred-zikr/`} class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-white/10">{c.universe} <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

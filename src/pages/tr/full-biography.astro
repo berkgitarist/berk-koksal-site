@@ -58,6 +58,11 @@ const albums = [
     year: "2026",
     title: "ZIKR SYMPHONIC METAL",
     description: "Neredeyse bütünüyle HÛ etrafında kurulan; seçili bölümlerde Hay / Al-Hayy kullanılan; kadın sesi, kutsal koro, orkestra, borulu org ve progresif neoklasik metali birleştiren 19 bölümlük konsept albüm."
+  },
+  {
+    year: "2026",
+    title: "La İlahe İlla ALLAH",
+    description: "Tek tevhid ifadesi üzerine kurulan 19 bağımsız bestelik Neo-Sacred Zikr albümü. 8 Kasım 2026'da dijital dağıtıma yüklendi; platformlarda canlı olduğu henüz doğrulanmadı."
   }
 ];
 
@@ -469,6 +474,25 @@ const archiveLinks = [
         <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XVIII · Genişleyen Albüm Evreni</p>
         <h2 class="mb-12 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Tek amaç, birçok müzikal dil</h2>
         <div class="space-y-5">{albums.map((album) => (<article class="pro-card grid grid-cols-1 gap-4 p-6 md:grid-cols-[110px_1fr] md:p-8"><p class="font-bold tracking-[0.2em] text-accent">{album.year}</p><div><h3 class="mb-2 text-xl font-heading font-bold text-maintext">{album.title}</h3><p class="text-sm leading-6 text-subtext/90">{album.description}</p></div></article>))}</div>
+        <!-- 2026 · LA ILAHE ILLA ALLAH: new entry, not a replacement for earlier works -->
+        <article class="mt-9 overflow-hidden rounded-[2rem] border border-[#42dfe0]/30 bg-gradient-to-br from-[#0a1246] via-[#131c58] to-[#17265e] p-6 md:p-9" aria-labelledby="fullbio-xix-title">
+          <div class="grid items-center gap-8 md:grid-cols-[minmax(0,0.75fr)_minmax(0,1.25fr)]">
+            <a href="/tr/albums/la-ilahe-illa-allah/" aria-label="La İlahe İlla ALLAH albüm sayfasına git">
+              <img src="/albums/la-ilahe-illa-allah.webp" alt="La İlahe İlla ALLAH albüm kapağı" width="640" height="640" loading="lazy" class="w-full rounded-2xl border border-[#75ebea]/35 bg-white" />
+            </a>
+            <div class="text-white">
+              <p class="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-[#8cece9]">8 KASIM 2026 · NEO-SACRED ZIKR · 19 BESTE</p>
+              <h3 id="fullbio-xix-title" class="font-heading text-3xl font-bold leading-tight md:text-4xl">La İlahe İlla ALLAH</h3>
+              <div class="mt-5 space-y-4 leading-8 text-white/80">
+                <p>Bu albüm aynı sözleri kullanan on dokuz bağımsız besteden oluşuyor. Tek bir bestenin on dokuz remiksi veya düzenlemesi değil. Her eserin melodisi, armonisi ve müzikal anlatımı farklı; değişmeyen söz ise <strong class="text-white">La İlahe İlla ALLAH</strong>.</p>
+                <p>2024'te yayımlanan <em>Zikir (La ilahe illa Allah)</em> teklisiyle paylaşılan ifade, bu yeni albümü eski kaydın yeniden yayımlanışı yapmıyor. Köksal'ın Neo-Sacred Zikr anlayışında türler değişse de amaç, TEK TANRI'yı hatırlamak ve yüceltmek olarak kalıyor. Kapakta merkeze yerleştirilen ALLAH hat yazısı ve XIX vurgusu bu sanatsal yönelişin görsel karşılığı.</p>
+                <p class="text-sm text-[#b5e5e5]">Albüm 8 Kasım 2026'da DistroKid'e yüklendi. O tarihte dijital mağazalara aktarılma sürecindeydi; doğrulanmamış Spotify yayını veya dinlenme bağlantısı burada belirtilmiyor.</p>
+              </div>
+              <a href="/tr/albums/la-ilahe-illa-allah/" class="mt-6 inline-flex rounded-full border border-[#7ee7e7]/60 bg-[#7ee7e7]/15 px-6 py-3 font-bold text-white transition hover:bg-[#7ee7e7]/25">Albümü ve manifestoyu incele ↗</a>
+            </div>
+          </div>
+        </article>
+
         <a href="/tr/#projects" class="group mt-10 inline-flex items-center gap-3 font-bold text-accent transition-colors hover:text-maintext"><span>Diskografiyi Keşfet</span><span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-2">→</span></a>
       </section>
 
@@ -628,7 +652,10 @@ const archiveLinks = [
         <p class="mb-5 text-xs font-bold uppercase tracking-[0.4em] text-accent">XXVIII · Geleceğe Bakış</p>
         <h2 class="mb-8 text-4xl font-heading font-bold leading-tight text-maintext md:text-5xl">Katı bir uzun vadeli plandan çok sıradaki doğru iş</h2>
         <div class="space-y-6 text-lg leading-8 text-subtext">
-          <p>2026'da <strong class="text-maintext">HEAVENN</strong>'in ikinci QURANIC CONCEPTS albümü olarak Spotify'da yayımlanmasının ardından Köksal, yaratıcı yolculuğunu açık uçlu görmeye devam ediyor. Yeniden bir Neo-Sacred Zikr albümüne dönmek istiyor; rock eksenli bir yön olasılıklardan biri olsa da bunu kesin bir yayın takvimi olarak sunmuyor.</p>
+          <p>2026'da ikinci QURANIC CONCEPTS albümü <strong class="text-maintext">HEAVENN</strong> Spotify'da yayımlandıktan sonra Köksal,
+          <strong class="text-maintext">La İlahe İlla ALLAH</strong> ile Neo-Sacred Zikr evrenine döndü. Aynı tevhid ifadesini taşıyan
+          on dokuz bağımsız beste içeren bu yeni albümü 8 Kasım 2026'da dijital dağıtıma yükledi.
+          Sanatsal yolculuğunu hâlâ açık uçlu görmektedir.</p>
           <p>KURAN tefekkür arşivi de gelecekteki konseptler için geniş bir kaynak olmaya devam etmektedir. Köksal bu tefekkürlerdeki birçok konunun tek başına bir albüm oluşturabilecek zenginlikte olduğunu düşünür. Aynı zamanda, doğal biçimde ortaya çıkması hâlinde Neo-Sacred Zikr ve QURANIC CONCEPTS'in ötesinde yeni bir TANRI'yı yüceltme müzik dili keşfetmeye de açıktır.</p>
           <p>Geleceği artık katı bir kişisel kontrol planına dönüştürmek istemez. Tercih ettiği yaklaşım işi dikkatle planlamak, elinden gelen en doğru kararı vermek, ısrarla çalışmak ve sonucu TANRI'ya bırakmaktır. Yeni projeler, kariyer yolları ve teknolojiler bu nedenle zorlanacak kaderler değil; açıldıkça değerlendirilecek imkânlardır.</p>
           <p>Yazarlık ve üreticilik anlayışı da onun için önemlidir. Adı besteci, prodüktör ve sanatçı olarak görünse de yaratma yeteneğini, öğrenme fırsatlarını ve tamamlanmış eserleri TANRI'nın hediyeleri olarak görür. Bu nedenle tekrar tekrar sade bir ifadeye döner: <strong class="text-maintext">Tüm övgüler TANRI'yadır.</strong></p>

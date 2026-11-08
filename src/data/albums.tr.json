@@ -1,5 +1,48 @@
 [
   {
+    "slug": "la-ilahe-illa-allah",
+    "title": "La İlahe İlla ALLAH",
+    "year": "2026",
+    "duration": "TBA",
+    "tracksCount": "19",
+    "cover": "/albums/la-ilahe-illa-allah.webp",
+    "universe": "Neo-Sacred Zikr",
+    "releaseStatus": "upcoming",
+    "spotifyPlaceholder": true,
+    "genre": "Neo-Sacred Zikr / Neoklasik Kutsal Rock / Gitar Merkezli Zikir Rock / Koro",
+    "description": "Tek bir tevhid ifadesi etrafında kurulan 19 ayrı özgün beste: gitar merkezli neoklasik rock, koro katmanları ve değişmeyen zikir sözleri.",
+    "story": "Albümde on dokuz ayrı beste yalnızca La İlahe İlla ALLAH ifadesini seslendirir. Bunlar bir eserin remiksleri değildir. Ana vokal Berk KÖKSAL’ın sesidir; bazı bestelerde kadın ve erkek ses katmanları eşlik eder. I-XIX Roma rakamları eserleri ayırt eder. Kapaktaki on dokuz motif sanatçının KURAN’daki 19 üzerine kişisel tefekkürlerine gönderme yapar.",
+    "verse": {
+      "reference": "Kuran 13:28",
+      "text": "TANRI’yı hatırlamaktan kalpleri sevinç duyan onlardır. Kesinlikle, kalpler TANRI’yı hatırlamaktan sevinç duyar.",
+      "source": "Rashad Khalifa Çevirisi"
+    },
+    "spotify": "",
+    "tracks": [
+      "I — La İlahe İlla ALLAH",
+      "II — La İlahe İlla ALLAH",
+      "III — La İlahe İlla ALLAH",
+      "IV — La İlahe İlla ALLAH",
+      "V — La İlahe İlla ALLAH",
+      "VI — La İlahe İlla ALLAH",
+      "VII — La İlahe İlla ALLAH",
+      "VIII — La İlahe İlla ALLAH",
+      "IX — La İlahe İlla ALLAH",
+      "X — La İlahe İlla ALLAH",
+      "XI — La İlahe İlla ALLAH",
+      "XII — La İlahe İlla ALLAH",
+      "XIII — La İlahe İlla ALLAH",
+      "XIV — La İlahe İlla ALLAH",
+      "XV — La İlahe İlla ALLAH",
+      "XVI — La İlahe İlla ALLAH",
+      "XVII — La İlahe İlla ALLAH",
+      "XVIII — La İlahe İlla ALLAH",
+      "XIX — La İlahe İlla ALLAH"
+    ],
+    "uploadDate": "2026-11-08",
+    "storeDeliveryNote": "processing_as_shown_2026-11-08"
+  },
+  {
     "slug": "helll",
     "title": "HELLL",
     "year": "2026",

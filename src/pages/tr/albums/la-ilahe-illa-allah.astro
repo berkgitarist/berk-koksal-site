@@ -1,0 +1,22 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Nav from '../../../components/nav.astro';
+import LaIlaheIllaAllahPage from '../../../components/concepts/LaIlaheIllaAllahPage.astro';
+import albums from '../../../data/albums.tr.json';
+
+const album = albums.find((item) => item.slug === 'la-ilahe-illa-allah');
+if (!album) throw new Error('Album metadata missing');
+---
+<Layout
+  title={`${album.title} | Berk K\u00d6KSAL`}
+  description={album.description}
+  canonical="/tr/albums/la-ilahe-illa-allah/"
+  lang="tr"
+  ogImage={album.cover}
+  ogType="music.album"
+  twitterCard="summary_large_image"
+  disableAmbient={true}
+>
+  <Nav />
+  <LaIlaheIllaAllahPage lang="tr" />
+</Layout>

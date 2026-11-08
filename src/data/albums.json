@@ -1,5 +1,48 @@
 [
   {
+    "slug": "la-ilahe-illa-allah",
+    "title": "La İlahe İlla ALLAH",
+    "year": "2026",
+    "duration": "TBA",
+    "tracksCount": "19",
+    "cover": "/albums/la-ilahe-illa-allah.webp",
+    "universe": "Neo-Sacred Zikr",
+    "releaseStatus": "upcoming",
+    "spotifyPlaceholder": true,
+    "genre": "Neo-Sacred Zikr / Neoclassical Sacred Rock / Guitar-led Devotional Rock / Sacred Choir",
+    "description": "Nineteen distinct original compositions built around one unchanged devotional declaration, La Ilahe Illa ALLAH; guitar-led neoclassical sacred rock and layered vocals.",
+    "story": "Nineteen independent compositions share only the words La Ilahe Illa ALLAH. They are not remixes of one work. The lead vocal comes from Berk KÖKSAL, with supporting female and male layers in selected tracks. Roman numerals I-XIX distinguish the compositions. The nineteen motifs around the circular cover recall the number 19 in Berk KÖKSAL’s personal Quran reflections.",
+    "verse": {
+      "reference": "Quran 13:28",
+      "text": "They are the ones whose hearts rejoice in remembering GOD. Absolutely, by remembering GOD, the hearts rejoice.",
+      "source": "Rashad Khalifa Translation"
+    },
+    "spotify": "",
+    "tracks": [
+      "I — La İlahe İlla ALLAH",
+      "II — La İlahe İlla ALLAH",
+      "III — La İlahe İlla ALLAH",
+      "IV — La İlahe İlla ALLAH",
+      "V — La İlahe İlla ALLAH",
+      "VI — La İlahe İlla ALLAH",
+      "VII — La İlahe İlla ALLAH",
+      "VIII — La İlahe İlla ALLAH",
+      "IX — La İlahe İlla ALLAH",
+      "X — La İlahe İlla ALLAH",
+      "XI — La İlahe İlla ALLAH",
+      "XII — La İlahe İlla ALLAH",
+      "XIII — La İlahe İlla ALLAH",
+      "XIV — La İlahe İlla ALLAH",
+      "XV — La İlahe İlla ALLAH",
+      "XVI — La İlahe İlla ALLAH",
+      "XVII — La İlahe İlla ALLAH",
+      "XVIII — La İlahe İlla ALLAH",
+      "XIX — La İlahe İlla ALLAH"
+    ],
+    "uploadDate": "2026-11-08",
+    "storeDeliveryNote": "processing_as_shown_2026-11-08"
+  },
+  {
     "slug": "helll",
     "title": "HELLL",
     "year": "2026",
