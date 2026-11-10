@@ -17,9 +17,9 @@ if (!album) throw new Error('Missing la-ilahe-illa-allah album record');
 
 const romans = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX'];
 const songPhrase = album.tracks[0]?.split(' \u2014 ').slice(1).join(' \u2014 ') || album.title;
-const spotifyId = album.spotify?.match(/^https:\/\/open\.spotify\.com\/(?:intl-[^/]+\/)?album\/([A-Za-z0-9]+)(?:[/?#]|$)/)?.[1];
-const spotifySource = spotifyId ? `https://open.spotify.com/album/${spotifyId}` : null;
-const spotifyEmbed = spotifyId ? `https://open.spotify.com/embed/album/${spotifyId}` : null;
+// Verified Spotify album URL supplied for this release. Shared by TR and EN pages.
+const spotifySource = 'https://open.spotify.com/intl-tr/album/2uhGQ0tLMBfQnkJxGpycpP';
+const spotifyEmbed = 'https://open.spotify.com/embed/album/2uhGQ0tLMBfQnkJxGpycpP?utm_source=generator';
 ---
 
 <main class="bkx" id="main-xix">
@@ -45,6 +45,7 @@ const spotifyEmbed = spotifyId ? `https://open.spotify.com/embed/album/${spotify
           <span>XIX</span><span>19 {tr ? 'BESTE' : 'COMPOSITIONS'}</span><span>2026</span><span>NEO-SACRED ZIKR</span>
         </div>
         <nav class="bkx-hero__links" aria-label={tr ? 'Sayfa b\u00f6l\u00fcmleri' : 'Page sections'}>
+          <a href="#stream" class="bkx-hero__spotify">{tr ? 'Spotify’da Dinle' : 'Listen on Spotify'} <span aria-hidden="true">&#8595;</span></a>
           <a href="#concept">{c.conceptNav} <span aria-hidden="true">&#8595;</span></a>
           <a href="#works">{c.tracksNav} <span aria-hidden="true">&#8595;</span></a>
           <a href="#manifesto">{c.manifestoNav} <span aria-hidden="true">&#8595;</span></a>
@@ -52,17 +53,22 @@ const spotifyEmbed = spotifyId ? `https://open.spotify.com/embed/album/${spotify
       </div>
     </section>
 
-    {spotifySource && spotifyEmbed ? (
-      <section class="bkx-stream" id="stream" aria-label={c.statusLive}>
-        <div class="bkx-stream__row"><span class="bkx-signal" aria-hidden="true">&#9673;</span><strong>{c.statusLive}</strong><a href={spotifySource} target="_blank" rel="noopener noreferrer">{c.playButton} <span aria-hidden="true">&#8599;</span></a></div>
-        <iframe src={spotifyEmbed} title={c.statusLive} width="100%" height="440" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-      </section>
-    ) : (
-      <section class="bkx-status" role="status" aria-label={c.statusLabel}>
-        <span class="bkx-status__dot" aria-hidden="true"></span>
-        <div><strong>{c.statusLabel}</strong><p>{c.statusPending}</p></div>
-      </section>
-    )}
+    <!-- This shared player is shown on both /albums/... and /tr/albums/... -->
+    <section class="bkx-stream" id="stream" aria-label={tr ? 'Resmî Spotify albüm dinleme alanı' : 'Official Spotify album player'}>
+      <div class="bkx-stream__row">
+        <span class="bkx-signal" aria-hidden="true">&#9673;</span>
+        <strong>{tr ? 'SPOTIFY · RESMÎ ALBÜM DİNLEME ALANI' : 'SPOTIFY · OFFICIAL ALBUM PLAYER'}</strong>
+        <a href={spotifySource} target="_blank" rel="noopener noreferrer">{tr ? 'Spotify’da aç' : 'Open on Spotify'} <span aria-hidden="true">&#8599;</span></a>
+      </div>
+      <iframe
+        src={spotifyEmbed}
+        title={tr ? 'Berk KÖKSAL — La İlahe İlla ALLAH Spotify albüm oynatıcısı' : 'Berk KÖKSAL — La İlahe İlla ALLAH Spotify album player'}
+        width="100%"
+        height="440"
+        loading="lazy"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      ></iframe>
+    </section>
 
     <section id="concept" class="bkx-section bkx-question" aria-labelledby="bkx-concept-heading">
       <div><span class="bkx-eyebrow">{c.conceptEyebrow}</span><h2 id="bkx-concept-heading">{c.conceptTitle}</h2></div>
@@ -139,12 +145,14 @@ const spotifyEmbed = spotifyId ? `https://open.spotify.com/embed/album/${spotify
   .bkx-hero__links{display:flex;gap:.6rem;flex-wrap:wrap;}
   .bkx-hero__links a{color:#e9fefb;display:inline-flex;gap:.7rem;align-items:center;text-decoration:none;border:1px solid rgba(129,217,219,.35);background:rgba(255,255,255,.055);padding:.78rem 1rem;border-radius:999px;font-size:.76rem;font-weight:700;transition:background .2s;}
   .bkx-hero__links a:hover{background:rgba(49,209,201,.2);}
+  .bkx-hero__links a.bkx-hero__spotify{border-color:rgba(29,185,84,.6);background:rgba(29,185,84,.13);color:#d7ffe5;}
+  .bkx-hero__links a.bkx-hero__spotify:hover{background:rgba(29,185,84,.24);}
   .bkx-status{display:flex;gap:1.1rem;align-items:start;border:1px solid rgba(81,212,205,.23);background:rgba(35,206,187,.055);border-radius:18px;padding:1.35rem 1.55rem;margin-bottom:4rem;}
   .bkx-status__dot{flex:none;width:11px;height:11px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 5px rgba(54,228,209,.12);margin-top:.22rem;}
   .bkx-status strong{color:#b5f1e9;font-size:.72rem;letter-spacing:.17em;}
   .bkx-status p{color:#b8cede;line-height:1.7;margin:.45rem 0 0;font-size:.91rem;}
-  .bkx-stream{margin-bottom:4rem;padding:1.15rem;background:rgba(29,185,84,.07);border:1px solid rgba(29,185,84,.26);border-radius:20px;}
-  .bkx-stream__row{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem;font-size:.82rem;}
+  .bkx-stream{scroll-margin-top:100px;margin-bottom:4rem;padding:1.15rem;background:rgba(29,185,84,.07);border:1px solid rgba(29,185,84,.26);border-radius:20px;}
+  .bkx-stream__row{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem;margin-bottom:1rem;font-size:.82rem;}
   .bkx-stream__row strong{color:#a4efc6;letter-spacing:.08em;}
   .bkx-stream__row a{margin-left:auto;color:#d7ffe5;font-weight:700;text-decoration:none;}
   .bkx-stream iframe{display:block;width:100%;height:clamp(340px,40vw,440px);border:0;border-radius:12px;}

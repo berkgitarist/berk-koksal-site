@@ -4,13 +4,15 @@ const { lang = 'en' } = Astro.props;
 const tr = lang === 'tr';
 const prefix = tr ? '/tr' : '';
 const href = `${prefix}/albums/la-ilahe-illa-allah/`;
+const spotifyUrl = 'https://open.spotify.com/intl-tr/album/2uhGQ0tLMBfQnkJxGpycpP';
 const c = tr ? {
   eyebrow: 'NEO-SACRED ZIKR · 2026 · XIX',
   stat: '19 ÖZGÜN BESTE · TEK TEVHİD İFADESİ',
   heading: 'La İlahe İlla ALLAH',
   motto: 'TEK İFADE. ON DOKUZ AYRI BESTE. TEK MERKEZ.',
   description: 'Aynı tevhid ifadesi üzerine kurulmuş 19 bağımsız beste. Tek bir eserin 19 düzenlemesi değil; her biri kendine ait melodi ve ses dünyası taşıyor. Merkezde TEK TANRI’yı hatırlama ve yüceltme amacı var.',
-  release: '8 Kasım 2026 yükleme kaydında dijital mağazalara aktarım sürecindeydi.',
+  release: 'Albüm Spotify’da yayımlandı. 19 özgün besteyi şimdi dinleyebilirsiniz.',
+  listen: 'Spotify’da Dinle',
   open: 'Albümü ve manifestoyu keşfet',
   universe: 'Neo-Sacred Zikr',
   cover: 'Berk KÖKSAL — La İlahe İlla ALLAH albüm kapağı, lacivert ve turkuaz dairesel hat sanatı'
@@ -20,7 +22,8 @@ const c = tr ? {
   heading: 'La İlahe İlla ALLAH',
   motto: 'ONE DECLARATION. NINETEEN DISTINCT COMPOSITIONS. ONE CENTER.',
   description: 'Nineteen independent compositions built around the same declaration of the oneness of GOD. Not nineteen arrangements of a single piece: each work has its own musical identity, while the aim remains remembrance and glorification of the ONE GOD.',
-  release: 'The album was in digital-store delivery processing in the 8 November 2026 upload record.',
+  release: 'The album is now available on Spotify. Listen to all 19 original compositions.',
+  listen: 'Listen on Spotify',
   open: 'Explore the album and manifesto',
   universe: 'Neo-Sacred Zikr',
   cover: 'Berk KÖKSAL — La İlahe İlla ALLAH album cover with navy-blue and turquoise circular calligraphy'
@@ -45,6 +48,7 @@ const c = tr ? {
         <p class="mt-5 max-w-3xl text-base leading-8 text-white/80 md:text-lg">{c.description}</p>
         <p class="mt-4 text-sm leading-6 text-[#9cdadf]">{c.release}</p>
         <div class="mt-8 flex flex-wrap gap-3">
+          <a href={spotifyUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-[#1DB954]/55 bg-[#1DB954]/15 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#1DB954]/25">{c.listen} <span aria-hidden="true">&#8599;</span></a>
           <a href={href} class="inline-flex items-center justify-center rounded-full border border-[#43e5dd]/65 bg-[#43e5dd]/15 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#43e5dd]/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#43e5dd]">{c.open} <span aria-hidden="true">↗</span></a>
           <a href={`${prefix}/neo-sacred-zikr/`} class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-white/10">{c.universe} <span aria-hidden="true">↗</span></a>
         </div>
