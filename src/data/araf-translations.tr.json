@@ -1,0 +1,1351 @@
+[
+  {
+    "number": 1,
+    "title": "MERCY",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Henüz değil...",
+          "Henüz değil...",
+          "Görüyoruz...",
+          "Görüyoruz..."
+        ]
+      },
+      {
+        "label": "Kıta 1 · Değişim",
+        "lines": [
+          "Henüz değil...",
+          "Henüz değil...",
+          "Bekliyoruz...",
+          "Bekliyoruz..."
+        ]
+      },
+      {
+        "label": "Ön nakarat",
+        "lines": [
+          "Rahmet...",
+          "Rahmet...",
+          "Rahmet...",
+          "Rahmet..."
+        ]
+      },
+      {
+        "label": "Nakarat · Selam",
+        "lines": [
+          "Selam olsun size!",
+          "Selam olsun size!",
+          "Selam olsun size!",
+          "Selam olsun size!"
+        ]
+      },
+      {
+        "label": "Nakarat · Dua",
+        "lines": [
+          "Onlarla birlikte olmayalım!",
+          "Onlarla birlikte olmayalım!",
+          "Onlarla birlikte olmayalım!",
+          "Onlarla birlikte olmayalım!"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Henüz değil...",
+          "Henüz değil...",
+          "Rahmet...",
+          "Rahmet..."
+        ]
+      },
+      {
+        "label": "Köprü · Korku ve umut",
+        "lines": [
+          "Umut ediyoruz...",
+          "Korkuyoruz...",
+          "Umut ediyoruz...",
+          "Korkuyoruz..."
+        ]
+      },
+      {
+        "label": "Doruk noktası",
+        "lines": [
+          "Rahmet!",
+          "Rahmet!",
+          "Rahmet!",
+          "Rahmet!"
+        ]
+      },
+      {
+        "label": "Final nakaratı",
+        "lines": [
+          "Selam olsun size!",
+          "Selam olsun size!",
+          "Korku yok!",
+          "Hüzün yok!",
+          "Rahmet!",
+          "Rahmet!",
+          "Korku yok!",
+          "Hüzün yok!"
+        ]
+      },
+      {
+        "label": "Son vokal",
+        "lines": [
+          "Rahmet..."
+        ]
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "NOT AMONG THEM",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Rabbimiz...",
+          "Rabbimiz...",
+          "Bu yakarışımızı işit...",
+          "Bu yakarışımızı işit..."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Bizi koyma...",
+          "Zalimlerin arasına...",
+          "Bizi koyma...",
+          "Zalimlerin arasına..."
+        ]
+      },
+      {
+        "label": "Yalın nakarat",
+        "lines": [
+          "Onların arasında olmayalım...",
+          "Onların arasında olmayalım...",
+          "Bizi kötülükten uzak tut...",
+          "Bizi kötülükten uzak tut..."
+        ]
+      },
+      {
+        "label": "Arka vokal cevabı",
+        "lines": [
+          "(Rabbimiz...)",
+          "(Rabbimiz...)",
+          "(Senden diliyoruz...)",
+          "(Senden diliyoruz...)"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Kibir yok...",
+          "İddia yok...",
+          "Yalnızca bu yakarış...",
+          "Yalnızca bu yakarış..."
+        ]
+      },
+      {
+        "label": "Büyük final",
+        "lines": [
+          "Rabbimiz!",
+          "Rabbimiz!",
+          "Bizi koyma!",
+          "Zalimlerin arasına!",
+          "Senden diliyoruz!",
+          "Senden diliyoruz!",
+          "Rahmet!",
+          "Rahmet!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "THE HEIGHTS",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Bir taraf...",
+          "Diğeri...",
+          "İkisi de gözümüzün önünde.",
+          "İkisi de gözümüzün önünde."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Bir ses...",
+          "Diğeri...",
+          "Farklı sonlar.",
+          "Farklı sonlar."
+        ]
+      },
+      {
+        "label": "Sakin Nakarat",
+        "lines": [
+          "Görebiliyorum...",
+          "Görebiliyorum...",
+          "Ama karar veremem.",
+          "Karar veremem."
+        ]
+      },
+      {
+        "label": "Arka Vokal Cevabı",
+        "lines": [
+          "(Her iki taraf...)",
+          "(Her iki taraf...)",
+          "(Gözümüzün önünde...)",
+          "(Gözümüzün önünde...)"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Gördüğüm şey...",
+          "Bildiğim şey...",
+          "Yapamayacağım şey...",
+          "Benim diyebileceğim..."
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "İki ufuk!",
+          "İki ufuk!",
+          "İkisi de gözümüzün önünde!",
+          "İkisi de gözümüzün önünde!",
+          "Görebiliyoruz!",
+          "Görebiliyoruz!",
+          "Bize ait olanın ötesinde!",
+          "Bize ait olanın ötesinde!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "BY THEIR SIGNS",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Yüzler...",
+          "Yüzler...",
+          "Mesafenin ötesinde.",
+          "Mesafenin ötesinde."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Onlar tanınıyor.",
+          "Onlar tanınıyor.",
+          "Bizim seçimimizle değil.",
+          "Bizim seçimimizle değil."
+        ]
+      },
+      {
+        "label": "Nakarat",
+        "lines": [
+          "İşaretlerinden...",
+          "İşaretlerinden...",
+          "Tanıyoruz.",
+          "Tanıyoruz."
+        ]
+      },
+      {
+        "label": "Cevap",
+        "lines": [
+          "(Tanıyoruz...)",
+          "(Tanıyoruz...)",
+          "(İşaretlerinden...)",
+          "(İşaretlerinden...)"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "İşareti biliyorum.",
+          "Yüzü tanıyorum.",
+          "Hak iddia etmeyeceğim...",
+          "Bilemeyeceğim şey."
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "İşaretlerinden!",
+          "İşaretlerinden!",
+          "Tanıyoruz!",
+          "Tanıyoruz!",
+          "Şimdi görüyoruz!",
+          "Şimdi görüyoruz!",
+          "İşaretlerinden!",
+          "İşaretlerinden!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "PEACE FROM AFAR",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Buradan...",
+          "Buradan...",
+          "Selam gönderiyoruz.",
+          "Selam gönderiyoruz."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Siz oradasınız.",
+          "Biz buradayız.",
+          "Mesafenin ötesinden...",
+          "Mesafenin ötesinden..."
+        ]
+      },
+      {
+        "label": "Sakin Nakarat",
+        "lines": [
+          "Selam olsun size.",
+          "Selam olsun size.",
+          "Uzaktan...",
+          "Uzaktan..."
+        ]
+      },
+      {
+        "label": "Arka Vokal Cevabı",
+        "lines": [
+          "(Selam...)",
+          "(Selam...)",
+          "(Uzaktan...)",
+          "(Uzaktan...)"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "İçeriden değil...",
+          "Yine de sesleniyoruz...",
+          "Mesafenin ötesinden...",
+          "Mesafenin ötesinden..."
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "Uzaktan selam!",
+          "Uzaktan selam!",
+          "Seslerimiz yükseliyor!",
+          "Seslerimiz yükseliyor!",
+          "Selam!",
+          "Selam!",
+          "Uzaktan!",
+          "Uzaktan!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "WITHIN SIGHT",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Gözümüzün önünde...",
+          "Gözümüzün önünde...",
+          "Çok uzaklarda.",
+          "Çok uzaklarda."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Görebiliyoruz...",
+          "Görebiliyoruz...",
+          "Ama henüz girmedik.",
+          "Henüz girmedik."
+        ]
+      },
+      {
+        "label": "Sakin Nakarat",
+        "lines": [
+          "Görmeye bu kadar yakın...",
+          "Ulaşmaya çok uzak...",
+          "Görmeye bu kadar yakın...",
+          "Ulaşmaya çok uzak..."
+        ]
+      },
+      {
+        "label": "Arka Vokal Cevabı",
+        "lines": [
+          "(Hâlâ gözümüzün önünde...)",
+          "(Hâlâ gözümüzün önünde...)",
+          "(Umut sürüyor...)",
+          "(Umut sürüyor...)"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Görebiliyoruz...",
+          "Umut edebiliriz...",
+          "Hak iddia edemeyiz...",
+          "Bize ait olmayan şey."
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "Gözümüzün önünde!",
+          "Gözümüzün önünde!",
+          "Umut sürüyor!",
+          "Umut sürüyor!",
+          "Görebiliyoruz!",
+          "Görebiliyoruz!",
+          "Umut sürüyor!",
+          "Umut sürüyor!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "BEYOND WISHING",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Diledim...",
+          "Diledim...",
+          "Görebildiğim şey için.",
+          "Görebildiğim şey için."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Umut ettim...",
+          "Umut ettim...",
+          "Ama umut bir hak iddiası değildir.",
+          "Umut bir hak iddiası değildir."
+        ]
+      },
+      {
+        "label": "Sakin Nakarat",
+        "lines": [
+          "Yalnız dilemekle değil...",
+          "Yalnız dilemekle değil...",
+          "Yalnız dilemekle değil...",
+          "Tek başına..."
+        ]
+      },
+      {
+        "label": "Arka Vokal Cevabı",
+        "lines": [
+          "(Dilemenin ötesinde...)",
+          "(Dilemenin ötesinde...)",
+          "(Yine de umut ediyoruz...)",
+          "(Yine de umut ediyoruz...)"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Arzu ettiğim şey...",
+          "Bir vaat değildir.",
+          "Arzu ettiğim şey...",
+          "Bir vaat değildir."
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "Dilemenin ötesinde!",
+          "Dilemenin ötesinde!",
+          "Yine de umut ediyoruz!",
+          "Yine de umut ediyoruz!",
+          "Yalnız dilemekle değil!",
+          "Yalnız dilemekle değil!",
+          "TANRI'ya yöneliyoruz!",
+          "TANRI'ya yöneliyoruz!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "WHEN EYES TURN",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Bakışlarımız çevrildi...",
+          "Bakışlarımız çevrildi...",
+          "Ateşe doğru...",
+          "Ateşe doğru..."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Diğer taraf...",
+          "Diğer taraf...",
+          "Şimdi gözümüzün önünde...",
+          "Şimdi gözümüzün önünde..."
+        ]
+      },
+      {
+        "label": "Nakarat",
+        "lines": [
+          "Çevrilen bakışlar...",
+          "Çevrilen bakışlar...",
+          "Ateşin görüntüsü...",
+          "Ateşin görüntüsü..."
+        ]
+      },
+      {
+        "label": "Arka Vokal Cevabı",
+        "lines": [
+          "(Görüyoruz...)",
+          "(Görüyoruz...)",
+          "(Korkuyoruz...)",
+          "(Korkuyoruz...)"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Bir nefes başlıyor...",
+          "Bir ses geri dönüyor...",
+          "Bir dua yükseliyor...",
+          "Bir dua yükseliyor..."
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "Bakışlarımız çevrildi!",
+          "Bakışlarımız çevrildi!",
+          "Ateşe doğru!",
+          "Ateşe doğru!",
+          "Görüyoruz!",
+          "Görüyoruz!",
+          "Bir dua yükseliyor!",
+          "Bir dua yükseliyor!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "THE BARRIER",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Aramızda...",
+          "Aramızda...",
+          "Bir engel duruyor.",
+          "Bir engel duruyor."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "İki uzak ses.",
+          "İki uzak taraf.",
+          "Onların seslendiğini duyuyoruz.",
+          "Onların seslendiğini duyuyoruz."
+        ]
+      },
+      {
+        "label": "Nakarat",
+        "lines": [
+          "Aramızda...",
+          "Aramızda...",
+          "Yine de görüyoruz.",
+          "Yine de görüyoruz."
+        ]
+      },
+      {
+        "label": "Cevap",
+        "lines": [
+          "(Uzaktan...)",
+          "(Uzaktan...)",
+          "(Görebiliyoruz...)",
+          "(Görebiliyoruz...)"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Bir engel...",
+          "Bir mesafe...",
+          "Bir sessizlik...",
+          "Aramızda..."
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "Aramızda!",
+          "Aramızda!",
+          "Yine de görüyoruz!",
+          "Yine de görüyoruz!",
+          "Bir engel duruyor!",
+          "Bir engel duruyor!",
+          "Yine de sesleniyoruz!",
+          "Yine de sesleniyoruz!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "THE FACE IN THE CROWD",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Kalabalığın arasında...",
+          "Kalabalığın arasında...",
+          "Bir yüz tanınıyor.",
+          "Bir yüz tanınıyor."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "İşaretlerinizden...",
+          "İşaretlerinizden...",
+          "Sizi tanıyoruz.",
+          "Sizi tanıyoruz."
+        ]
+      },
+      {
+        "label": "Sakin Nakarat",
+        "lines": [
+          "Size sesleniyoruz...",
+          "Size sesleniyoruz...",
+          "İşaretlerinizi tanıyoruz.",
+          "İşaretlerinizi tanıyoruz."
+        ]
+      },
+      {
+        "label": "Arka Vokal Cevabı",
+        "lines": [
+          "(Tanıyoruz...)",
+          "(Tanıyoruz...)",
+          "(Size sesleniyoruz...)",
+          "(Size sesleniyoruz...)"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Bütün o sesler...",
+          "Bütün o sayılar...",
+          "Ne yapabilirler?",
+          "Ne yapabilirler?"
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "Sizi tanıyoruz!",
+          "Sizi tanıyoruz!",
+          "Kalabalığın arasında!",
+          "Kalabalığın arasında!",
+          "Ne yapabilirler?",
+          "Ne yapabilirler?",
+          "Size sesleniyoruz!",
+          "Size sesleniyoruz!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "YOUR GATHERING",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Ne kadar çok...",
+          "Ne kadar çok...",
+          "Toplandınız...",
+          "Toplandınız..."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Bütün o sayılar...",
+          "Bütün o sesler...",
+          "Geriye ne kalıyor?",
+          "Geriye ne kalıyor?"
+        ]
+      },
+      {
+        "label": "Nakarat",
+        "lines": [
+          "Neyi kurtardılar?",
+          "Neyi kurtardılar?",
+          "Topluluğunuz...",
+          "Topluluğunuz..."
+        ]
+      },
+      {
+        "label": "Arka Vokal Cevabı",
+        "lines": [
+          "(Ne kadar çok...)",
+          "(Ne kadar çok...)",
+          "(Geriye ne kalıyor...)",
+          "(Geriye ne kalıyor...)"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Bin ses...",
+          "Karar veremez.",
+          "Bin ses...",
+          "Karar veremez."
+        ]
+      },
+      {
+        "label": "Final Gerilimi",
+        "lines": [
+          "Neyi kurtardılar?",
+          "Neyi kurtardılar?",
+          "Hak iddia edecek hiçbir şey yok...",
+          "Hak iddia edecek hiçbir şey yok..."
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "Topluluğunuz!",
+          "Topluluğunuz!",
+          "Neyi kurtardı?",
+          "Neyi kurtardı?",
+          "Hiçbir sayı!",
+          "Hiçbir güç!",
+          "Karar veremez!",
+          "Karar veremez!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "THE HEIGHT OF PRIDE",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Öylesine yüksekte duruyordun...",
+          "Çok yüksekte...",
+          "Buna güç dedin...",
+          "Buna güç dedin..."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Ama kibir kurtaramaz.",
+          "Kibir kurtaramaz.",
+          "Şimdi bile kurtaramaz...",
+          "Şimdi bile kurtaramaz..."
+        ]
+      },
+      {
+        "label": "Nakarat",
+        "lines": [
+          "Kibrin nerede?",
+          "Kibrin nerede?",
+          "Ne getirdi?",
+          "Ne getirdi?"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Çok yüksekte...",
+          "Çok yüksekte...",
+          "Yine de tutunacak hiçbir şey yok.",
+          "Tutunacak hiçbir şey yok."
+        ]
+      },
+      {
+        "label": "Sakin Tekrar",
+        "lines": [
+          "Yüksekliğine güvendin...",
+          "Kibrine güvendin...",
+          "Ama geriye ne kalıyor?",
+          "Geriye ne kalıyor?"
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "Kibrin nerede!",
+          "Kibrin nerede!",
+          "Ne getirdi!",
+          "Ne getirdi!",
+          "Kibrin hiçbir yüksekliği!",
+          "Kibrin hiçbir yüksekliği!",
+          "Kurtaramaz!",
+          "Kurtaramaz!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "THE OATH",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Yemin ettin...",
+          "Yemin ettin...",
+          "Öylesine emin...",
+          "Öylesine emin..."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Onlara rahmet yok...",
+          "Senin iddian buydu.",
+          "Onlara rahmet yok...",
+          "Senin iddian buydu."
+        ]
+      },
+      {
+        "label": "Nakarat",
+        "lines": [
+          "Sana bu hakkı kim verdi?",
+          "Sana bu hakkı kim verdi?",
+          "Bu iddiada bulunmaya...",
+          "Bu iddiada bulunmaya..."
+        ]
+      },
+      {
+        "label": "Arka Vokal Cevabı",
+        "lines": [
+          "(Yemin ettin...)",
+          "(Yemin ettin...)",
+          "(Öylesine emin...)",
+          "(Öylesine emin...)"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Bir insan sözü...",
+          "Bir insan yemini...",
+          "Hüküm değildir.",
+          "Hüküm değildir."
+        ]
+      },
+      {
+        "label": "Final Gerilimi",
+        "lines": [
+          "Yemininiz...",
+          "Yemininiz...",
+          "Sana bu hakkı kim verdi?",
+          "Sana bu hakkı kim verdi?"
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "Yemin ettin!",
+          "Yemin ettin!",
+          "Ama sana bu hakkı kim verdi!",
+          "Sana bu hakkı kim verdi!",
+          "Sizin sözünüz değildir!",
+          "Son söz!",
+          "Sizin sözünüz değildir!",
+          "Son söz!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "THOSE YOU CONDEMNED",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Küçümsediklerin...",
+          "Küçümsediklerin...",
+          "Hükmünüzü verdiniz.",
+          "Hükmünüzü verdiniz."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Rahmet hakkında konuştunuz...",
+          "Sanki sana aitmiş gibi.",
+          "Sanki sana aitmiş gibi...",
+          "Vermek ya da esirgemek için."
+        ]
+      },
+      {
+        "label": "Nakarat",
+        "lines": [
+          "Reddetmek sana düşmez.",
+          "Reddetmek sana düşmez.",
+          "Karar vermek sana düşmez.",
+          "Karar vermek sana düşmez."
+        ]
+      },
+      {
+        "label": "Arka Vokal Cevabı",
+        "lines": [
+          "(Sana ait değil...)",
+          "(Sana ait değil...)",
+          "(Reddetmek için...)",
+          "(Reddetmek için...)"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Küçümsediklerin...",
+          "Küçümsediklerin...",
+          "Siz kimsiniz...",
+          "Karar vermek için?"
+        ]
+      },
+      {
+        "label": "Final Gerilimi",
+        "lines": [
+          "Sana ait değil...",
+          "Sana ait değil...",
+          "TANRI'nın rahmeti...",
+          "TANRI'nın rahmeti..."
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "Reddetmek sana düşmez!",
+          "Reddetmek sana düşmez!",
+          "TANRI'nın rahmeti!",
+          "TANRI'nın rahmeti!",
+          "Küçümsediklerin!",
+          "Küçümsediklerin!",
+          "Karar vermek sana düşmez!",
+          "Karar vermek sana düşmez!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "WHO ASSIGNS MERCY",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Rahmeti kim dağıtır?",
+          "Rahmeti kim dağıtır?",
+          "Kim karar verebilir?",
+          "Kim karar verebilir?"
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Onu paylaştırabilir misin?",
+          "Ona hükmedebilir misin?",
+          "Onu inkâr edebilir misin?",
+          "Onu inkâr edebilir misin?"
+        ]
+      },
+      {
+        "label": "Nakarat",
+        "lines": [
+          "Kimin rahmeti?",
+          "Kimin rahmeti?",
+          "Yalnız TANRI'ya aittir.",
+          "Yalnız TANRI'ya aittir."
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Bizim elimizde değil...",
+          "Bizim elimizde değil...",
+          "Hiçbir insan iddiası...",
+          "Hiçbir insan iddiası..."
+        ]
+      },
+      {
+        "label": "Sakin Nakarat Varyasyonu",
+        "lines": [
+          "Rahmeti kim dağıtır?",
+          "Rahmeti kim dağıtır?",
+          "Sen değilsin...",
+          "Ben değilim..."
+        ]
+      },
+      {
+        "label": "Final Gerilimi",
+        "lines": [
+          "Yalnız TANRI...",
+          "Yalnız TANRI...",
+          "TANRI'nın rahmeti...",
+          "TANRI'nın rahmeti..."
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "Rahmeti kim dağıtır!",
+          "Rahmeti kim dağıtır!",
+          "Yalnız TANRI!",
+          "Yalnız TANRI!",
+          "Sen değilsin!",
+          "Ben değilim!",
+          "Yalnız TANRI!",
+          "Yalnız TANRI!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "FEAR AND HOPE",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Korkuyorum...",
+          "Korkuyorum...",
+          "Ötesinde ne olduğu.",
+          "Ötesinde ne olduğu."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Umut ediyorum...",
+          "Umut ediyorum...",
+          "Rahmet içinde.",
+          "Rahmet içinde."
+        ]
+      },
+      {
+        "label": "Nakarat",
+        "lines": [
+          "Korkuyorum...",
+          "(Umut ediyorum...)",
+          "Korkuyorum...",
+          "(Umut ediyorum...)"
+        ]
+      },
+      {
+        "label": "Nakarat Varyasyonu",
+        "lines": [
+          "Yöneliyorum...",
+          "(TANRI'ya...)",
+          "Yöneliyorum...",
+          "(TANRI'ya...)"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Korku olmadan değil...",
+          "Umut olmadan değil...",
+          "TANRI'ya yöneliyorum...",
+          "TANRI'ya yöneliyorum..."
+        ]
+      },
+      {
+        "label": "Final Gerilimi",
+        "lines": [
+          "Korku...",
+          "Umut...",
+          "Korku...",
+          "Umut..."
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "Korku ve umut!",
+          "Korku ve umut!",
+          "TANRI'ya yöneliyorum!",
+          "TANRI'ya yöneliyorum!",
+          "TANRI'ya yöneliyorum!",
+          "TANRI'ya yöneliyorum!",
+          "Umut içinde!",
+          "Umut içinde!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "THE UNNAMED VOICE",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Sessizlik sürüyor...",
+          "Sessizlik sürüyor...",
+          "Sözlerimizin ötesinde...",
+          "Sözlerimizin ötesinde..."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Bir çağrı duyuluyor...",
+          "Bir çağrı duyuluyor...",
+          "Tek bir söz...",
+          "Tek bir söz..."
+        ]
+      },
+      {
+        "label": "Sakin Nakarat",
+        "lines": [
+          "Girin...",
+          "Girin...",
+          "Çağrı duyuluyor.",
+          "Çağrı duyuluyor."
+        ]
+      },
+      {
+        "label": "Arka Vokal Cevabı",
+        "lines": [
+          "(Girin...)",
+          "(Girin...)",
+          "(Çağrı...)",
+          "(Çağrı...)"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Adlandırılacak bir yüz yok...",
+          "Hak iddia edecek bir ses yok...",
+          "Sözler kalıyor.",
+          "Sözler kalıyor."
+        ]
+      },
+      {
+        "label": "Final Gerilimi",
+        "lines": [
+          "Girin...",
+          "Girin...",
+          "Sözler kalıyor...",
+          "Sözler kalıyor..."
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "Girin!",
+          "Girin!",
+          "Korku son bulsun!",
+          "Korku son bulsun!",
+          "Girin!",
+          "Girin!",
+          "Hüzün son bulsun!",
+          "Hüzün son bulsun!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "ENTER",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Söz söylendi...",
+          "Söz söylendi...",
+          "Girin...",
+          "Girin..."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Korku yakındaydı...",
+          "Hüzün yakındaydı...",
+          "Söz hâlâ duruyor...",
+          "Söz hâlâ duruyor..."
+        ]
+      },
+      {
+        "label": "Sakin Nakarat",
+        "lines": [
+          "Girin...",
+          "Girin...",
+          "İddialarımızın ötesinde bir çağrı.",
+          "İddialarımızın ötesinde bir çağrı."
+        ]
+      },
+      {
+        "label": "Arka Vokal Cevabı",
+        "lines": [
+          "(Girin...)",
+          "(Girin...)",
+          "(Korku yok...)",
+          "(Hüzün yok...)"
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Artık korku yok...",
+          "Artık hüzün yok...",
+          "Rahmet sözü...",
+          "Rahmet sözü..."
+        ]
+      },
+      {
+        "label": "Final Gerilimi",
+        "lines": [
+          "Girin...",
+          "Girin...",
+          "Artık korku yok...",
+          "Artık hüzün yok..."
+        ]
+      },
+      {
+        "label": "Büyük Final",
+        "lines": [
+          "Girin!",
+          "Girin!",
+          "Artık korku yok!",
+          "Artık hüzün yok!",
+          "Girin!",
+          "Girin!",
+          "Müzik yükselsin!",
+          "Müzik yükselsin!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "NO LONGER BETWEEN",
+    "sections": [
+      {
+        "label": "Kıta 1",
+        "lines": [
+          "Aramızda...",
+          "Aramızda...",
+          "Bir engel vardı.",
+          "Bir engel vardı."
+        ]
+      },
+      {
+        "label": "Kıta 2",
+        "lines": [
+          "Henüz değil...",
+          "Henüz değil...",
+          "Tekrar tekrar...",
+          "Tekrar tekrar..."
+        ]
+      },
+      {
+        "label": "Kıta 3",
+        "lines": [
+          "İşaretlerinden...",
+          "Tanıdık...",
+          "Uzaktan...",
+          "Selamla seslendik..."
+        ]
+      },
+      {
+        "label": "Sakin Nakarat",
+        "lines": [
+          "Artık arada değiliz...",
+          "Artık arada değiliz...",
+          "TANRI'nın rahmeti...",
+          "TANRI'nın rahmeti..."
+        ]
+      },
+      {
+        "label": "Köprü",
+        "lines": [
+          "Sayılar işe yaramadı...",
+          "Kibir sustu...",
+          "Bize ait hiçbir söz...",
+          "O'nun rahmetini veremez."
+        ]
+      },
+      {
+        "label": "Köprü Varyasyonu",
+        "lines": [
+          "Henüz değil...",
+          "Henüz değil...",
+          "Bildiğimiz sözler...",
+          "Bildiğimiz sözler..."
+        ]
+      },
+      {
+        "label": "Final Gerilimi",
+        "lines": [
+          "Henüz değil...",
+          "Henüz değil...",
+          "Artık değil...",
+          "Artık değil..."
+        ]
+      },
+      {
+        "label": "Albümün Büyük Finali",
+        "lines": [
+          "Artık arada değiliz!",
+          "Artık arada değiliz!",
+          "Korku yok!",
+          "Hüzün yok!",
+          "TANRI'nın rahmeti!",
+          "TANRI'nın rahmeti!",
+          "Korku yok!",
+          "Hüzün yok!"
+        ]
+      },
+      {
+        "label": "Final Tekrarı",
+        "lines": [
+          "Artık arada değiliz!",
+          "Artık arada değiliz!",
+          "TANRI'ya yöneliyoruz!",
+          "TANRI'ya yöneliyoruz!",
+          "Bütün övgüler TANRI'ya!",
+          "Bütün övgüler TANRI'ya!",
+          "Korku yok!",
+          "Hüzün yok!"
+        ]
+      },
+      {
+        "label": "Son Uzun Vokal",
+        "lines": [
+          "Bütün övgüler TANRI'ya..."
+        ]
+      }
+    ]
+  }
+]

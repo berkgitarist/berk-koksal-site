@@ -1,0 +1,136 @@
+---
+import '../../styles/araf.css';
+import songs from '../../data/araf-lyrics.json';
+import translations from '../../data/araf-translations.tr.json';
+import manifesto from '../../data/araf-manifesto.json';
+
+interface Props { lang?: 'en' | 'tr'; }
+const { lang = 'en' } = Astro.props;
+const tr = lang === 'tr';
+const prefix = tr ? '/tr' : '';
+
+// TODO (ARAF Spotify release): Replace only this URL with the official ARAF album URL.
+// Until then, it deliberately points to HEAVENN. The visitor-facing note below
+// disappears automatically when you change the URL.
+const spotifyAlbumUrl = 'https://open.spotify.com/album/2HiMboay21UxfcgZlhSRIj';
+const heavennTemporarySpotifyUrl = 'https://open.spotify.com/album/2HiMboay21UxfcgZlhSRIj';
+const spotifyIsTemporary = spotifyAlbumUrl === heavennTemporarySpotifyUrl;
+
+const ui = tr ? {
+  series: 'QURANIC CONCEPTS III · ÜÇÜNCÜ DÜNYA',
+  subtitle: '19 ESERLİK KONSEPT · İKİ DİLLİ ŞARKI SÖZLERİ',
+  maxim: 'TANIMAK, HÜKÜM VERMEK DEĞİLDİR.',
+  intro: 'İki taraf görünür. Selam duyulur. Bakış yön değiştirir. Bir dua yükselir. Son söz insana ait değildir.',
+  status: '19 eserin İngilizce söz taslakları ve Türkçe anlam çevirileri aşağıda',
+  spotify: 'Spotify’da dinle',
+  spotifyNote: 'Geçici bağlantı: Şimdilik HEAVENN albümüne yönlendirir. ARAF yayımlandığında bağlantı güncellenecektir.',
+  spotifyAccessible: 'Spotify’da HEAVENN albümünü aç (ARAF için geçici bağlantı)',
+  gotoWords: 'Şarkı sözleri', gotoManifesto: 'Manifesto',
+  wordsOver: 'I / ŞARKI SÖZLERİ', wordsTitle: 'İngilizce ve Türkçe, yan yana.',
+  wordsIntro: 'Her bölümün solunda özgün İngilizce sözler, sağında Türkçe anlam çevirisi bulunur. Türkçe sütun, ayrı bir vokal kaydı değildir.',
+  original: 'EN · ORİJİNAL İNGİLİZCE', translated: 'TR · TÜRKÇE ANLAM ÇEVİRİSİ',
+  lyricsNote: '19 eserin sözleri önceki üretim taslaklarından derlenmiştir; tamamının son ses kayıtlarıyla satır satır doğrulanması gerekir. Prodüksiyon talimatları söylenmiş söz sayılmaz. 03 numaralı eserin eski taslağı farklı ad taşıdığı için ayrıca kontrol edilmelidir.',
+  sourceOver: 'II / KAYNAK VE YORUM', sourceTitle: 'Kaynak, bir sahne. Müzik, bir yorum.',
+  sourceBody: 'Albümün temel metinsel çıkış noktası KURAN 7:46–49; yakın bağlamı 7:44–50’dir. Çalışmada Rashad Khalifa’nın Authorized Translation çevirisi temel referanstır. Buradaki şarkı sözleri ayet alıntısı olarak sunulmaz. Kaynakta belirtilmeyen kişilikler, süreler, mekânsal ayrıntılar veya konuşmacılar dinî hüküm olarak eklenmez.',
+  manifestOver: 'III / MANİFESTO', manifestTitle: 'ARAF Manifestosu',
+  closing: 'İKİ TARAF GÖRÜNÜR. SON SÖZ İNSANA AİT DEĞİLDİR.',
+  back: 'QURANIC CONCEPTS atlasına dön', prior: 'Önceki dünya: HEAVENN',
+} : {
+  series: 'QURANIC CONCEPTS III · THE THIRD WORLD',
+  subtitle: 'A NINETEEN-WORK CONCEPT · BILINGUAL LYRICS',
+  maxim: 'TO RECOGNIZE IS NOT TO JUDGE.',
+  intro: 'Two sides are visible. A greeting is heard. The gaze turns. A prayer rises. The final word is not ours.',
+  status: 'English lyric drafts and Turkish meaning translations for all nineteen works are below',
+  spotify: 'Listen on Spotify',
+  spotifyNote: 'Temporary link: currently opens the HEAVENN album. It will be replaced when ARAF is released.',
+  spotifyAccessible: 'Open HEAVENN on Spotify (temporary ARAF link)',
+  gotoWords: 'Read the lyrics', gotoManifesto: 'Read the manifesto',
+  wordsOver: 'I / LYRIC ARCHIVE', wordsTitle: 'Original lyrics. Turkish meaning.',
+  wordsIntro: 'Original English lyrics appear on the left and Turkish meaning translations on the right, section by section, on both language editions of this page.',
+  original: 'EN · ORIGINAL ENGLISH', translated: 'TR · TURKISH TRANSLATION',
+  lyricsNote: 'Lyrics for all nineteen works are taken from earlier composition drafts, not fully verified against the final audio recordings. Non-sung production instructions are omitted. The original draft for track 03 has a different title and requires particular verification.',
+  sourceOver: 'II / SOURCE & INTERPRETATION', sourceTitle: 'A scene as source. Music as interpretation.',
+  sourceBody: 'Quran 7:46–49 forms the album’s primary textual starting point, with 7:44–50 as its immediate context. The research uses Rashad Khalifa’s Authorized Translation as its principal English reference. The lyrics shown here are not presented as Quranic quotations. Unspecified identities, times, physical details and speakers are not added as religious facts.',
+  manifestOver: 'III / THE MANIFESTO', manifestTitle: 'The ARAF Manifesto',
+  closing: 'TWO SIDES ARE VISIBLE. THE FINAL WORD IS NOT OURS.',
+  back: 'Back to QURANIC CONCEPTS', prior: 'Previous world: HEAVENN',
+};
+---
+<main class="bk-araf">
+  <div class="bk-araf__watermark" aria-hidden="true">XIX</div>
+  <p class="bk-araf__eyebrow">BERK KÖKSAL <span aria-hidden="true">·</span> {ui.series}</p>
+  <header class="bk-araf__hero">
+    <a class="bk-araf__cover" href="/albums/araf.webp" target="_blank" rel="noopener noreferrer" aria-label={tr ? 'ARAF albüm kapağını büyüt' : 'Enlarge the ARAF album cover'}>
+      <img src="/albums/araf.webp" width="1254" height="1254" alt="ARAF album artwork: a figure between radiant clouds and a fiery abyss" fetchpriority="high" />
+    </a>
+    <div class="bk-araf__hero-content">
+      <p class="bk-araf__kicker">{ui.subtitle}</p>
+      <h1>ARAF</h1>
+      <p class="bk-araf__manifesto-line">{ui.maxim}</p>
+      <p class="bk-araf__intro">{ui.intro}</p>
+      <p class="bk-araf__status">{ui.status}</p>
+      <nav class="bk-araf__jumps" aria-label={tr ? 'Albüm içinde gezin' : 'Explore this album'}>
+        <a class="bk-araf__spotify-button" href={spotifyAlbumUrl} target="_blank" rel="noopener noreferrer" aria-label={spotifyIsTemporary ? ui.spotifyAccessible : ui.spotify}>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .7a11.3 11.3 0 1 0 0 22.6A11.3 11.3 0 0 0 12 .7Zm5.18 16.36a.7.7 0 0 1-.96.23c-2.63-1.61-5.93-1.98-9.81-1.09a.7.7 0 0 1-.31-1.36c4.24-.97 7.89-.55 10.85 1.26a.7.7 0 0 1 .23.96Zm1.38-3.13a.88.88 0 0 1-1.2.28c-3.01-1.85-7.59-2.39-11.15-1.31a.88.88 0 0 1-.51-1.68c4.07-1.23 9.12-.63 12.58 1.5.88.88 0 0 1 .28 1.21Zm.12-3.27c-3.61-2.14-9.56-2.34-13-1.29a1.05 1.05 0 1 1-.61-2.01c3.94-1.2 10.53-.97 14.69 1.5a1.05 1.05 0 1 1-1.08 1.8Z"/></svg>
+          <span>{ui.spotify}</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+        <a href="#araf-lyrics">{ui.gotoWords}</a>
+        <a href="#araf-manifesto">{ui.gotoManifesto}</a>
+      </nav>
+      {spotifyIsTemporary && <p class="bk-araf__spotify-note">{ui.spotifyNote}</p>}
+    </div>
+  </header>
+
+  <section class="bk-araf__section" id="araf-lyrics">
+    <p class="bk-araf__overline">{ui.wordsOver}</p>
+    <h2>{ui.wordsTitle}</h2>
+    <p class="bk-araf__section-lead">{ui.wordsIntro}</p>
+    {songs.map((song) => {
+      const trans = translations.find((item) => item.number === song.number);
+      const editorialNote = 'editorialNote' in song ? song.editorialNote?.[lang] : undefined;
+      return (
+        <details class="bk-araf__lyric-track" id={`araf-track-${String(song.number).padStart(2, '0')}`}>
+          <summary>
+            <span>{String(song.number).padStart(2, '0')} · {song.title}</span>
+            <span class="bk-araf__plus" aria-hidden="true">+</span>
+          </summary>
+          <div class="bk-araf__lyrics-body">
+            {editorialNote && <p class="bk-araf__draft-note">{editorialNote}</p>}
+            <div class="bk-araf__lyric-languages"><span lang="en">{ui.original}</span><span lang="tr">{ui.translated}</span></div>
+            {song.sections.map((section,index) => (
+              <div class="bk-araf__stanza bk-araf__stanza--bilingual">
+                <div class="bk-araf__stanza-col" lang="en">
+                  <p class="bk-araf__stanza-label"><span class="bk-araf__lang-chip">EN</span>{section.label}</p>
+                  <pre>{section.lines.join('\n')}</pre>
+                </div>
+                <div class="bk-araf__stanza-col" lang="tr">
+                  <p class="bk-araf__stanza-label"><span class="bk-araf__lang-chip">TR</span>{trans?.sections[index]?.label ?? 'Türkçe anlam'}</p>
+                  <pre>{(trans?.sections[index]?.lines ?? []).join('\n')}</pre>
+                </div>
+              </div>
+            ))}
+          </div>
+        </details>
+      );
+    })}
+    <p class="bk-araf__disclaimer">{ui.lyricsNote}</p>
+  </section>
+
+  <section class="bk-araf__section bk-araf__source" id="araf-source">
+    <p class="bk-araf__overline">{ui.sourceOver}</p>
+    <h2>{ui.sourceTitle}</h2>
+    <p>{ui.sourceBody}</p>
+  </section>
+
+  <section class="bk-araf__section bk-araf__manifesto" id="araf-manifesto">
+    <p class="bk-araf__overline">{ui.manifestOver}</p>
+    <h2>{ui.manifestTitle}</h2>
+    <article class="bk-araf__manifesto-paper" set:html={tr ? manifesto.trHtml : manifesto.enHtml}></article>
+  </section>
+
+  <footer class="bk-araf__footer">
+    <p class="bk-araf__closing">{ui.closing}</p>
+    <nav aria-label="Album links"><a href={`${prefix}/quranic-concepts/`}>{ui.back}</a><a href={`${prefix}/albums/heavenn/`}>{ui.prior}</a></nav>
+  </footer>
+</main>

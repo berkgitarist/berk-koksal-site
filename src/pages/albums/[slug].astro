@@ -15,7 +15,7 @@ export async function getStaticPaths() {
   // HEAVENN has a dedicated, custom /albums/heavenn/ page.
   // Exclude it here to prevent competing static routes when added to albums.json.
   return albums
-    .filter((album) => !["heavenn", "la-ilahe-illa-allah"].includes(album.slug))
+    .filter((album) => !["heavenn", "la-ilahe-illa-allah", "araf"].includes(album.slug))
     .map((album) => ({
       params: { slug: album.slug },
       props: { album },

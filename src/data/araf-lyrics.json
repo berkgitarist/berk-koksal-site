@@ -1,0 +1,1524 @@
+[
+  {
+    "number": 1,
+    "title": "MERCY",
+    "sourceReference": "Quran 7:46–49",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse 1",
+        "type": "lyrics",
+        "lines": [
+          "Not yet...",
+          "Not yet...",
+          "We see...",
+          "We see..."
+        ]
+      },
+      {
+        "label": "Verse 1 Variation",
+        "type": "lyrics",
+        "lines": [
+          "Not yet...",
+          "Not yet...",
+          "We wait...",
+          "We wait..."
+        ]
+      },
+      {
+        "label": "Pre-Chorus",
+        "type": "lyrics",
+        "lines": [
+          "Mercy...",
+          "Mercy...",
+          "Mercy...",
+          "Mercy..."
+        ]
+      },
+      {
+        "label": "Hard Rock Chorus A",
+        "type": "lyrics",
+        "lines": [
+          "Peace to you!",
+          "Peace to you!",
+          "Peace to you!",
+          "Peace to you!"
+        ]
+      },
+      {
+        "label": "Hard Rock Chorus B",
+        "type": "lyrics",
+        "lines": [
+          "Not with them!",
+          "Not with them!",
+          "Not with them!",
+          "Not with them!"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "Not yet...",
+          "Not yet...",
+          "Mercy...",
+          "Mercy..."
+        ]
+      },
+      {
+        "label": "Bridge Variation",
+        "type": "lyrics",
+        "lines": [
+          "We hope...",
+          "We fear...",
+          "We hope...",
+          "We fear..."
+        ]
+      },
+      {
+        "label": "Climactic Build",
+        "type": "lyrics",
+        "lines": [
+          "Mercy!",
+          "Mercy!",
+          "Mercy!",
+          "Mercy!"
+        ]
+      },
+      {
+        "label": "Grand Final Chorus",
+        "type": "lyrics",
+        "lines": [
+          "Peace to you!",
+          "Peace to you!",
+          "No fear!",
+          "No grief!",
+          "Mercy!",
+          "Mercy!",
+          "No fear!",
+          "No grief!"
+        ]
+      },
+      {
+        "label": "Final Sustained Vocal",
+        "type": "lyrics",
+        "lines": [
+          "Mercy..."
+        ]
+      }
+    ],
+    "draftSourceTitle": "THE HEIGHTS"
+  },
+  {
+    "number": 2,
+    "title": "NOT AMONG THEM",
+    "sourceReference": "Quran 7:47",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "Our Lord...",
+          "Our Lord...",
+          "Hear this cry...",
+          "Hear this cry..."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "Do not place us...",
+          "Among the unjust...",
+          "Do not place us...",
+          "Among the unjust..."
+        ]
+      },
+      {
+        "label": "Quiet Refrain",
+        "type": "lyrics",
+        "lines": [
+          "Not among them...",
+          "Not among them...",
+          "Keep us from wrong...",
+          "Keep us from wrong..."
+        ]
+      },
+      {
+        "label": "Backing Response",
+        "type": "lyrics",
+        "lines": [
+          "(Our Lord...)",
+          "(Our Lord...)",
+          "(We ask You...)",
+          "(We ask You...)"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "No pride...",
+          "No claim...",
+          "Only this plea...",
+          "Only this plea..."
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "Our Lord!",
+          "Our Lord!",
+          "Do not place us!",
+          "Among the unjust!",
+          "We ask You!",
+          "We ask You!",
+          "Mercy!",
+          "Mercy!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "THE HEIGHTS",
+    "sourceReference": "Quran 7:46",
+    "lyricsStatus": "title_changed__draft_needs_approval",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "One side...",
+          "The other...",
+          "Both in sight.",
+          "Both in sight."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "One voice...",
+          "Another...",
+          "Different ends.",
+          "Different ends."
+        ]
+      },
+      {
+        "label": "Quiet Refrain",
+        "type": "lyrics",
+        "lines": [
+          "I can see...",
+          "I can see...",
+          "But I cannot decide.",
+          "I cannot decide."
+        ]
+      },
+      {
+        "label": "Backing Response",
+        "type": "lyrics",
+        "lines": [
+          "(Both sides...)",
+          "(Both sides...)",
+          "(In our sight...)",
+          "(In our sight...)"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "What I see...",
+          "What I know...",
+          "What I cannot...",
+          "Call my own..."
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "Two horizons!",
+          "Two horizons!",
+          "Both in sight!",
+          "Both in sight!",
+          "We can see!",
+          "We can see!",
+          "Beyond our own!",
+          "Beyond our own!"
+        ]
+      }
+    ],
+    "draftSourceTitle": "TWO HORIZONS",
+    "editorialNote": {
+      "tr": "Önemli: Bu eserin eski söz taslağının başlığı TWO HORIZONS idi. Yeni adı THE HEIGHTS olarak belirtildi. Sözlerin nihai kayıtla eşleşmesi henüz doğrulanmadı.",
+      "en": "Editorial note: the earlier lyric draft for this position was titled TWO HORIZONS. The current track is titled THE HEIGHTS; its final recording has not been checked against these draft lyrics."
+    }
+  },
+  {
+    "number": 4,
+    "title": "BY THEIR SIGNS",
+    "sourceReference": "Quran 7:46",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "Faces...",
+          "Faces...",
+          "Beyond the distance.",
+          "Beyond the distance."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "They are known.",
+          "They are known.",
+          "Not by our choosing.",
+          "Not by our choosing."
+        ]
+      },
+      {
+        "label": "Refrain",
+        "type": "lyrics",
+        "lines": [
+          "By their signs...",
+          "By their signs...",
+          "We recognize.",
+          "We recognize."
+        ]
+      },
+      {
+        "label": "Response",
+        "type": "lyrics",
+        "lines": [
+          "(We recognize...)",
+          "(We recognize...)",
+          "(By their signs...)",
+          "(By their signs...)"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "I know the sign.",
+          "I know the face.",
+          "I will not claim...",
+          "What I cannot know."
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "By their signs!",
+          "By their signs!",
+          "We recognize!",
+          "We recognize!",
+          "Now we see!",
+          "Now we see!",
+          "By their signs!",
+          "By their signs!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "PEACE FROM AFAR",
+    "sourceReference": "Quran 7:46",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "From here...",
+          "From here...",
+          "We send a greeting.",
+          "We send a greeting."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "You are there.",
+          "We are here.",
+          "Across the distance...",
+          "Across the distance..."
+        ]
+      },
+      {
+        "label": "Quiet Refrain",
+        "type": "lyrics",
+        "lines": [
+          "Peace be upon you.",
+          "Peace be upon you.",
+          "From afar...",
+          "From afar..."
+        ]
+      },
+      {
+        "label": "Backing Response",
+        "type": "lyrics",
+        "lines": [
+          "(Peace...)",
+          "(Peace...)",
+          "(From afar...)",
+          "(From afar...)"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "Not from within...",
+          "Still we call...",
+          "Across the distance...",
+          "Across the distance..."
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "Peace from afar!",
+          "Peace from afar!",
+          "Our voices rise!",
+          "Our voices rise!",
+          "Peace!",
+          "Peace!",
+          "From afar!",
+          "From afar!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "WITHIN SIGHT",
+    "sourceReference": "Quran 7:46",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "Within sight...",
+          "Within sight...",
+          "So far away.",
+          "So far away."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "We can see...",
+          "We can see...",
+          "But we have not entered.",
+          "We have not entered."
+        ]
+      },
+      {
+        "label": "Quiet Refrain",
+        "type": "lyrics",
+        "lines": [
+          "So near to sight...",
+          "So far from reaching...",
+          "So near to sight...",
+          "So far from reaching..."
+        ]
+      },
+      {
+        "label": "Backing Response",
+        "type": "lyrics",
+        "lines": [
+          "(Still in sight...)",
+          "(Still in sight...)",
+          "(Hope remains...)",
+          "(Hope remains...)"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "We can see...",
+          "We can hope...",
+          "We cannot claim...",
+          "What is not ours."
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "Within sight!",
+          "Within sight!",
+          "Hope remains!",
+          "Hope remains!",
+          "We can see!",
+          "We can see!",
+          "Hope remains!",
+          "Hope remains!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "BEYOND WISHING",
+    "sourceReference": "Quran 7:46",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "I wished...",
+          "I wished...",
+          "For what I could see.",
+          "For what I could see."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "I hoped...",
+          "I hoped...",
+          "But hope is not a claim.",
+          "Hope is not a claim."
+        ]
+      },
+      {
+        "label": "Quiet Refrain",
+        "type": "lyrics",
+        "lines": [
+          "Not by wishing...",
+          "Not by wishing...",
+          "Not by wishing...",
+          "Alone..."
+        ]
+      },
+      {
+        "label": "Backing Response",
+        "type": "lyrics",
+        "lines": [
+          "(Beyond wishing...)",
+          "(Beyond wishing...)",
+          "(Still we hope...)",
+          "(Still we hope...)"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "What I desire...",
+          "Is not a promise.",
+          "What I desire...",
+          "Is not a promise."
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "Beyond wishing!",
+          "Beyond wishing!",
+          "Still we hope!",
+          "Still we hope!",
+          "Not by wishing!",
+          "Not by wishing!",
+          "We turn to God!",
+          "We turn to God!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "WHEN EYES TURN",
+    "sourceReference": "Quran 7:47",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "Our eyes were turned...",
+          "Our eyes were turned...",
+          "Toward the fire...",
+          "Toward the fire..."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "The other side...",
+          "The other side...",
+          "Now in sight...",
+          "Now in sight..."
+        ]
+      },
+      {
+        "label": "Refrain",
+        "type": "lyrics",
+        "lines": [
+          "Turned eyes...",
+          "Turned eyes...",
+          "The sight of fire...",
+          "The sight of fire..."
+        ]
+      },
+      {
+        "label": "Backing Response",
+        "type": "lyrics",
+        "lines": [
+          "(We see...)",
+          "(We see...)",
+          "(We fear...)",
+          "(We fear...)"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "A breath begins...",
+          "A voice returns...",
+          "A prayer rises...",
+          "A prayer rises..."
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "Our eyes were turned!",
+          "Our eyes were turned!",
+          "Toward the fire!",
+          "Toward the fire!",
+          "We see!",
+          "We see!",
+          "A prayer rises!",
+          "A prayer rises!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "THE BARRIER",
+    "sourceReference": "Quran 7:46",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "Between us...",
+          "Between us...",
+          "A barrier stands.",
+          "A barrier stands."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "Two distant voices.",
+          "Two distant sides.",
+          "We hear them calling.",
+          "We hear them calling."
+        ]
+      },
+      {
+        "label": "Refrain",
+        "type": "lyrics",
+        "lines": [
+          "Between us...",
+          "Between us...",
+          "Still we see.",
+          "Still we see."
+        ]
+      },
+      {
+        "label": "Response",
+        "type": "lyrics",
+        "lines": [
+          "(From afar...)",
+          "(From afar...)",
+          "(We can see...)",
+          "(We can see...)"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "A barrier...",
+          "A distance...",
+          "A silence...",
+          "Between us..."
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "Between us!",
+          "Between us!",
+          "Still we see!",
+          "Still we see!",
+          "A barrier stands!",
+          "A barrier stands!",
+          "Still we call!",
+          "Still we call!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "THE FACE IN THE CROWD",
+    "sourceReference": "Quran 7:48",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "Among the many...",
+          "Among the many...",
+          "A face is known.",
+          "A face is known."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "By your signs...",
+          "By your signs...",
+          "We recognize you.",
+          "We recognize you."
+        ]
+      },
+      {
+        "label": "Quiet Refrain",
+        "type": "lyrics",
+        "lines": [
+          "We call to you...",
+          "We call to you...",
+          "We know your signs.",
+          "We know your signs."
+        ]
+      },
+      {
+        "label": "Backing Response",
+        "type": "lyrics",
+        "lines": [
+          "(We recognize...)",
+          "(We recognize...)",
+          "(We call to you...)",
+          "(We call to you...)"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "All those voices...",
+          "All those numbers...",
+          "What can they do?",
+          "What can they do?"
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "We recognize you!",
+          "We recognize you!",
+          "Among the many!",
+          "Among the many!",
+          "What can they do?",
+          "What can they do?",
+          "We call to you!",
+          "We call to you!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "YOUR GATHERING",
+    "sourceReference": "Quran 7:48",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "So many...",
+          "So many...",
+          "You gathered...",
+          "You gathered..."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "All those numbers...",
+          "All those voices...",
+          "What remains?",
+          "What remains?"
+        ]
+      },
+      {
+        "label": "Refrain",
+        "type": "lyrics",
+        "lines": [
+          "What did they save?",
+          "What did they save?",
+          "Your gathering...",
+          "Your gathering..."
+        ]
+      },
+      {
+        "label": "Backing Response",
+        "type": "lyrics",
+        "lines": [
+          "(So many...)",
+          "(So many...)",
+          "(What remains...)",
+          "(What remains...)"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "A thousand voices...",
+          "Cannot decide.",
+          "A thousand voices...",
+          "Cannot decide."
+        ]
+      },
+      {
+        "label": "Final Tension",
+        "type": "lyrics",
+        "lines": [
+          "What did they save?",
+          "What did they save?",
+          "Nothing to claim...",
+          "Nothing to claim..."
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "Your gathering!",
+          "Your gathering!",
+          "What did it save?",
+          "What did it save?",
+          "No number!",
+          "No power!",
+          "Can decide!",
+          "Can decide!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "THE HEIGHT OF PRIDE",
+    "sourceReference": "Quran 7:48; 7:12–13; 7:36",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "You stood so high...",
+          "So high...",
+          "You called it power...",
+          "Called it power..."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "But pride cannot save.",
+          "Pride cannot save.",
+          "Not even now...",
+          "Not even now..."
+        ]
+      },
+      {
+        "label": "Refrain",
+        "type": "lyrics",
+        "lines": [
+          "Where is your pride?",
+          "Where is your pride?",
+          "What did it bring?",
+          "What did it bring?"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "So high...",
+          "So high...",
+          "Yet nothing to hold.",
+          "Nothing to hold."
+        ]
+      },
+      {
+        "label": "Quiet Reprise",
+        "type": "lyrics",
+        "lines": [
+          "You trusted your height...",
+          "You trusted your pride...",
+          "But what remains?",
+          "What remains?"
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "Where is your pride!",
+          "Where is your pride!",
+          "What did it bring!",
+          "What did it bring!",
+          "No height of pride!",
+          "No height of pride!",
+          "Can save!",
+          "Can save!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "THE OATH",
+    "sourceReference": "Quran 7:49",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "You swore...",
+          "You swore...",
+          "So certain...",
+          "So certain..."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "No mercy for them...",
+          "That was your claim.",
+          "No mercy for them...",
+          "That was your claim."
+        ]
+      },
+      {
+        "label": "Refrain",
+        "type": "lyrics",
+        "lines": [
+          "Who gave you the right?",
+          "Who gave you the right?",
+          "To make that claim...",
+          "To make that claim..."
+        ]
+      },
+      {
+        "label": "Backing Response",
+        "type": "lyrics",
+        "lines": [
+          "(You swore...)",
+          "(You swore...)",
+          "(So certain...)",
+          "(So certain...)"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "A human word...",
+          "A human vow...",
+          "Is not the judgment.",
+          "Is not the judgment."
+        ]
+      },
+      {
+        "label": "Final Tension",
+        "type": "lyrics",
+        "lines": [
+          "Your oath...",
+          "Your oath...",
+          "Who gave you the right?",
+          "Who gave you the right?"
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "You swore!",
+          "You swore!",
+          "But who gave you the right!",
+          "Who gave you the right!",
+          "Your word is not!",
+          "The final word!",
+          "Your word is not!",
+          "The final word!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "THOSE YOU CONDEMNED",
+    "sourceReference": "Quran 7:49",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "Those you dismissed...",
+          "Those you dismissed...",
+          "You made your judgment.",
+          "You made your judgment."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "You spoke of mercy...",
+          "As though it were yours.",
+          "As though it were yours...",
+          "To give or deny."
+        ]
+      },
+      {
+        "label": "Refrain",
+        "type": "lyrics",
+        "lines": [
+          "Not yours to deny.",
+          "Not yours to deny.",
+          "Not yours to decide.",
+          "Not yours to decide."
+        ]
+      },
+      {
+        "label": "Backing Response",
+        "type": "lyrics",
+        "lines": [
+          "(Not yours...)",
+          "(Not yours...)",
+          "(To deny...)",
+          "(To deny...)"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "Those you dismissed...",
+          "Those you dismissed...",
+          "Who are you...",
+          "To decide?"
+        ]
+      },
+      {
+        "label": "Final Tension",
+        "type": "lyrics",
+        "lines": [
+          "Not yours...",
+          "Not yours...",
+          "The mercy of God...",
+          "The mercy of God..."
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "Not yours to deny!",
+          "Not yours to deny!",
+          "The mercy of God!",
+          "The mercy of God!",
+          "Those you dismissed!",
+          "Those you dismissed!",
+          "Not yours to decide!",
+          "Not yours to decide!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "WHO ASSIGNS MERCY",
+    "sourceReference": "Quran 7:49; 43:32",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "Who assigns mercy?",
+          "Who assigns mercy?",
+          "Who can decide?",
+          "Who can decide?"
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "Can you divide it?",
+          "Can you command it?",
+          "Can you deny it?",
+          "Can you deny it?"
+        ]
+      },
+      {
+        "label": "Refrain",
+        "type": "lyrics",
+        "lines": [
+          "Whose mercy?",
+          "Whose mercy?",
+          "God's alone.",
+          "God's alone."
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "Not in our hands...",
+          "Not in our hands...",
+          "No human claim...",
+          "No human claim..."
+        ]
+      },
+      {
+        "label": "Quiet Refrain Variation",
+        "type": "lyrics",
+        "lines": [
+          "Who assigns mercy?",
+          "Who assigns mercy?",
+          "Not you...",
+          "Not me..."
+        ]
+      },
+      {
+        "label": "Final Tension",
+        "type": "lyrics",
+        "lines": [
+          "God alone...",
+          "God alone...",
+          "The mercy of God...",
+          "The mercy of God..."
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "Who assigns mercy!",
+          "Who assigns mercy!",
+          "God alone!",
+          "God alone!",
+          "Not you!",
+          "Not me!",
+          "God alone!",
+          "God alone!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "FEAR AND HOPE",
+    "sourceReference": "Quran 7:46–47; 7:56",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "I fear...",
+          "I fear...",
+          "What lies beyond.",
+          "What lies beyond."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "I hope...",
+          "I hope...",
+          "In mercy.",
+          "In mercy."
+        ]
+      },
+      {
+        "label": "Refrain",
+        "type": "lyrics",
+        "lines": [
+          "I fear...",
+          "(I hope...)",
+          "I fear...",
+          "(I hope...)"
+        ]
+      },
+      {
+        "label": "Refrain Variation",
+        "type": "lyrics",
+        "lines": [
+          "I turn...",
+          "(To God...)",
+          "I turn...",
+          "(To God...)"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "Not without fear...",
+          "Not without hope...",
+          "I turn to God...",
+          "I turn to God..."
+        ]
+      },
+      {
+        "label": "Final Tension",
+        "type": "lyrics",
+        "lines": [
+          "Fear...",
+          "Hope...",
+          "Fear...",
+          "Hope..."
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "Fear and hope!",
+          "Fear and hope!",
+          "I turn to God!",
+          "I turn to God!",
+          "I turn to God!",
+          "I turn to God!",
+          "In hope!",
+          "In hope!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "THE UNNAMED VOICE",
+    "sourceReference": "Quran 7:49",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "A silence holds...",
+          "A silence holds...",
+          "Beyond our words...",
+          "Beyond our words..."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "A call is heard...",
+          "A call is heard...",
+          "One word...",
+          "One word..."
+        ]
+      },
+      {
+        "label": "Quiet Refrain",
+        "type": "lyrics",
+        "lines": [
+          "Enter...",
+          "Enter...",
+          "The call is heard.",
+          "The call is heard."
+        ]
+      },
+      {
+        "label": "Backing Response",
+        "type": "lyrics",
+        "lines": [
+          "(Enter...)",
+          "(Enter...)",
+          "(The call...)",
+          "(The call...)"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "No face to name...",
+          "No voice to claim...",
+          "The words remain.",
+          "The words remain."
+        ]
+      },
+      {
+        "label": "Final Tension",
+        "type": "lyrics",
+        "lines": [
+          "Enter...",
+          "Enter...",
+          "The words remain...",
+          "The words remain..."
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "Enter!",
+          "Enter!",
+          "Let fear fall!",
+          "Let fear fall!",
+          "Enter!",
+          "Enter!",
+          "Let grief fall!",
+          "Let grief fall!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "ENTER",
+    "sourceReference": "Quran 7:49",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "The word is spoken...",
+          "The word is spoken...",
+          "Enter...",
+          "Enter..."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "Fear was near...",
+          "Grief was near...",
+          "Still the word...",
+          "Still the word..."
+        ]
+      },
+      {
+        "label": "Quiet Refrain",
+        "type": "lyrics",
+        "lines": [
+          "Enter...",
+          "Enter...",
+          "A call beyond our claim.",
+          "A call beyond our claim."
+        ]
+      },
+      {
+        "label": "Backing Response",
+        "type": "lyrics",
+        "lines": [
+          "(Enter...)",
+          "(Enter...)",
+          "(No fear...)",
+          "(No grief...)"
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "No more fear...",
+          "No more grief...",
+          "A word of mercy...",
+          "A word of mercy..."
+        ]
+      },
+      {
+        "label": "Final Tension",
+        "type": "lyrics",
+        "lines": [
+          "Enter...",
+          "Enter...",
+          "No more fear...",
+          "No more grief..."
+        ]
+      },
+      {
+        "label": "GRAND FINAL",
+        "type": "lyrics",
+        "lines": [
+          "Enter!",
+          "Enter!",
+          "No more fear!",
+          "No more grief!",
+          "Enter!",
+          "Enter!",
+          "Let the music rise!",
+          "Let the music rise!"
+        ]
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "NO LONGER BETWEEN",
+    "sourceReference": "Quran 7:49; Rashad Khalifa, Appendix 11 (interpretation)",
+    "lyricsStatus": "production_draft__verify_against_master",
+    "sections": [
+      {
+        "label": "Verse I",
+        "type": "lyrics",
+        "lines": [
+          "Between us...",
+          "Between us...",
+          "A barrier stood.",
+          "A barrier stood."
+        ]
+      },
+      {
+        "label": "Verse II",
+        "type": "lyrics",
+        "lines": [
+          "Not yet...",
+          "Not yet...",
+          "Again and again...",
+          "Again and again..."
+        ]
+      },
+      {
+        "label": "Verse III",
+        "type": "lyrics",
+        "lines": [
+          "By their signs...",
+          "We recognized...",
+          "From afar...",
+          "We called in peace..."
+        ]
+      },
+      {
+        "label": "Quiet Refrain",
+        "type": "lyrics",
+        "lines": [
+          "No longer between...",
+          "No longer between...",
+          "The mercy of God...",
+          "The mercy of God..."
+        ]
+      },
+      {
+        "label": "Bridge",
+        "type": "lyrics",
+        "lines": [
+          "The numbers failed...",
+          "The pride fell silent...",
+          "No word of ours...",
+          "Could give His mercy."
+        ]
+      },
+      {
+        "label": "Bridge Variation",
+        "type": "lyrics",
+        "lines": [
+          "Not yet...",
+          "Not yet...",
+          "The words we knew...",
+          "The words we knew..."
+        ]
+      },
+      {
+        "label": "Final Tension",
+        "type": "lyrics",
+        "lines": [
+          "Not yet...",
+          "Not yet...",
+          "No longer...",
+          "No longer..."
+        ]
+      },
+      {
+        "label": "GRAND ALBUM FINAL",
+        "type": "lyrics",
+        "lines": [
+          "No longer between!",
+          "No longer between!",
+          "No fear!",
+          "No grief!",
+          "The mercy of God!",
+          "The mercy of God!",
+          "No fear!",
+          "No grief!"
+        ]
+      },
+      {
+        "label": "Final Reprise",
+        "type": "lyrics",
+        "lines": [
+          "No longer between!",
+          "No longer between!",
+          "We turn to God!",
+          "We turn to God!",
+          "All praise to God!",
+          "All praise to God!",
+          "No fear!",
+          "No grief!"
+        ]
+      },
+      {
+        "label": "Final Sustained Vocal",
+        "type": "lyrics",
+        "lines": [
+          "All praise to God..."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,93 @@
+---
+interface Props { lang?: 'en' | 'tr'; }
+const { lang = 'en' } = Astro.props;
+const tr = lang === 'tr';
+const url = tr ? '/tr/albums/araf/' : '/albums/araf/';
+const copy = tr ? {
+  eyebrow: 'QURANIC CONCEPTS · III · 2026 · XIX',
+  sub: 'HELLL VE HEAVENN’DEN SONRA ÜÇÜNCÜ DÜNYA',
+  title: 'ARAF',
+  motto: 'TANIMAK, HÜKÜM VERMEK DEĞİLDİR.',
+  body: 'İki taraf görünür. Bir selam duyulur. Bakış yön değiştirir ve bir dua yükselir. KURAN 7:46–49 çevresinde şekillenen ARAF; tanıma, umut, korku ve rahmeti kendi müzikal yasalarıyla araştırır.',
+  detail: '19 eserlik albüm çalışması · İngilizce ve Türkçe şarkı sözleri · Albüm manifestosu',
+  action: 'ARAF Albümünü Keşfet',
+  alt: 'ARAF albüm kapağı: ışık ile ateş arasında duran insan figürü',
+} : {
+  eyebrow: 'QURANIC CONCEPTS · III · 2026 · XIX',
+  sub: 'THE THIRD WORLD AFTER HELLL AND HEAVENN',
+  title: 'ARAF',
+  motto: 'TO RECOGNIZE IS NOT TO JUDGE.',
+  body: 'Two sides are visible. A greeting is heard. The gaze turns and a prayer rises. Rooted in Quran 7:46–49, ARAF explores recognition, hope, fear and mercy through its own musical laws.',
+  detail: 'Nineteen-work album in development · English and Turkish lyrics · Album manifesto',
+  action: 'Explore the ARAF Album',
+  alt: 'ARAF album artwork: a lone figure between light and a fiery abyss',
+};
+---
+<section class="araf-home" aria-labelledby={`araf-home-title-${lang}`}>
+  <a class="araf-home__cover-link" href={url} aria-label={copy.action}>
+    <img class="araf-home__cover" src="/albums/araf.webp" alt={copy.alt} width="1254" height="1254" loading="lazy" decoding="async" />
+  </a>
+  <div class="araf-home__content">
+    <p class="araf-home__eyebrow">{copy.eyebrow}</p>
+    <p class="araf-home__overline">{copy.sub}</p>
+    <h2 id={`araf-home-title-${lang}`}>{copy.title}</h2>
+    <p class="araf-home__motto">{copy.motto}</p>
+    <p class="araf-home__description">{copy.body}</p>
+    <p class="araf-home__detail">{copy.detail}</p>
+    <a href={url} class="araf-home__cta">{copy.action}<span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="araf-home__watermark" aria-hidden="true">XIX</div>
+</section>
+<style>
+  .araf-home {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: minmax(0, .83fr) minmax(0, 1.17fr);
+    gap: clamp(1.5rem, 4vw, 3.2rem);
+    align-items: center;
+    width: min(1200px, calc(100% - 2rem));
+    margin: 2rem auto 3.5rem;
+    padding: clamp(1.2rem, 4vw, 2.6rem);
+    border: 1px solid rgba(225, 178, 98, .42);
+    border-radius: 2rem;
+    background: radial-gradient(ellipse at 55% 0%, rgba(232, 181, 90, .13), transparent 42%),
+      linear-gradient(125deg, #101725 0%, #182b3f 55%, #0e152b 100%);
+    box-shadow: 0 22px 75px rgba(0, 0, 0, .3);
+    overflow: hidden;
+    color: #fcf2de;
+  }
+  .araf-home__cover-link,
+  .araf-home__content { position: relative; z-index: 1; }
+  .araf-home__cover-link {
+    display: block;
+    border: 1px solid rgba(245, 211, 148, .33);
+    border-radius: 1.15rem;
+    overflow: hidden;
+    box-shadow: 0 20px 48px rgba(0,0,0,.34);
+    transition: transform .25s ease, border-color .25s ease;
+  }
+  .araf-home__cover-link:hover { transform: translateY(-3px); border-color: rgba(245, 211, 148, .7); }
+  .araf-home__cover-link:focus-visible,.araf-home__cta:focus-visible { outline: 3px solid #f3ca7b; outline-offset: 4px; }
+  .araf-home__cover { width: 100%; height: auto; display: block; }
+  .araf-home__eyebrow { font: 800 .72rem/1.6 ui-sans-serif,system-ui,sans-serif; letter-spacing: .22em; color: #f1bb62; }
+  .araf-home__overline { margin: 1.1rem 0 0; font: 700 .68rem/1.7 ui-sans-serif,system-ui,sans-serif; letter-spacing: .14em; color: #b8c9d9; }
+  .araf-home h2 { margin: .25rem 0 .6rem; font: 700 clamp(3.5rem, 8vw, 6rem)/1 Georgia, 'Times New Roman', serif; letter-spacing: .025em; color: #fff1d1; }
+  .araf-home__motto { max-width: 36rem; margin: 1.3rem 0; font: 700 clamp(1.2rem, 2.2vw, 1.65rem)/1.4 Georgia,'Times New Roman',serif; color: #f5c878; }
+  .araf-home__description { max-width: 40rem; line-height: 1.85; font-size: 1rem; color: #ebedf0; }
+  .araf-home__detail { max-width: 40rem; font-size: .82rem; line-height: 1.65; color: #b4c4d4; margin: 1.2rem 0 1.7rem; }
+  .araf-home__cta { display: inline-flex; align-items: center; justify-content: center; gap: .9rem; min-height: 2.9rem; padding: .75rem 1.3rem; border: 1px solid rgba(250, 204, 126, .65); border-radius: 999px; color: #fff2d4; background: rgba(212, 158, 60, .14); text-decoration: none; font-weight: 700; transition: background .25s ease, transform .25s ease; }
+  .araf-home__cta:hover { background: rgba(212, 158, 60, .26); transform: translateY(-2px); }
+  .araf-home__watermark { position: absolute; z-index: 0; right: -4%; top: -24%; font: 700 clamp(10rem, 24vw, 22rem)/1 Georgia,serif; opacity: .055; pointer-events: none; }
+  @media (max-width: 750px) {
+    .araf-home { grid-template-columns: 1fr; padding: 1.15rem; width: calc(100% - 1.25rem); margin: 1.25rem auto 2.25rem; border-radius: 1.3rem; }
+    .araf-home__cover-link { max-width: 440px; width: 100%; margin: 0 auto; }
+    .araf-home__content { padding: 0 .2rem .4rem; }
+    .araf-home__eyebrow { font-size: .63rem; }
+    .araf-home h2 { font-size: clamp(3.6rem, 16vw, 5.4rem); }
+    .araf-home__cta { width: 100%; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .araf-home__cover-link, .araf-home__cta { transition: none; }
+  }
+</style>
