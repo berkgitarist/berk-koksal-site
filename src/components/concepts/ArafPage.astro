@@ -9,12 +9,10 @@ const { lang = 'en' } = Astro.props;
 const tr = lang === 'tr';
 const prefix = tr ? '/tr' : '';
 
-// TODO (ARAF Spotify release): Replace only this URL with the official ARAF album URL.
-// Until then, it deliberately points to HEAVENN. The visitor-facing note below
-// disappears automatically when you change the URL.
-const spotifyAlbumUrl = 'https://open.spotify.com/album/2HiMboay21UxfcgZlhSRIj';
-const heavennTemporarySpotifyUrl = 'https://open.spotify.com/album/2HiMboay21UxfcgZlhSRIj';
-const spotifyIsTemporary = spotifyAlbumUrl === heavennTemporarySpotifyUrl;
+// Official ARAF album: verified Spotify album ID (not a HEAVENN placeholder).
+const spotifyAlbumId = '56eZq2Qdspg6HSlwsEq9wg';
+const spotifyAlbumUrl = `https://open.spotify.com/album/${spotifyAlbumId}`;
+const spotifyEmbedUrl = `https://open.spotify.com/embed/album/${spotifyAlbumId}?utm_source=generator`;
 
 const ui = tr ? {
   series: 'QURANIC CONCEPTS III · ÜÇÜNCÜ DÜNYA',
@@ -23,13 +21,12 @@ const ui = tr ? {
   intro: 'İki taraf görünür. Selam duyulur. Bakış yön değiştirir. Bir dua yükselir. Son söz insana ait değildir.',
   status: '19 eserin İngilizce söz taslakları ve Türkçe anlam çevirileri aşağıda',
   spotify: 'Spotify’da dinle',
-  spotifyNote: 'Geçici bağlantı: Şimdilik HEAVENN albümüne yönlendirir. ARAF yayımlandığında bağlantı güncellenecektir.',
-  spotifyAccessible: 'Spotify’da HEAVENN albümünü aç (ARAF için geçici bağlantı)',
+  spotifyHeading: 'SPOTIFY · RESMÎ ALBÜM DİNLEME ALANI',
+  spotifyPlayerTitle: 'ARAF albümü Spotify oynatıcısı',
   gotoWords: 'Şarkı sözleri', gotoManifesto: 'Manifesto',
   wordsOver: 'I / ŞARKI SÖZLERİ', wordsTitle: 'İngilizce ve Türkçe, yan yana.',
   wordsIntro: 'Her bölümün solunda özgün İngilizce sözler, sağında Türkçe anlam çevirisi bulunur. Türkçe sütun, ayrı bir vokal kaydı değildir.',
   original: 'EN · ORİJİNAL İNGİLİZCE', translated: 'TR · TÜRKÇE ANLAM ÇEVİRİSİ',
-  lyricsNote: '19 eserin sözleri önceki üretim taslaklarından derlenmiştir; tamamının son ses kayıtlarıyla satır satır doğrulanması gerekir. Prodüksiyon talimatları söylenmiş söz sayılmaz. 03 numaralı eserin eski taslağı farklı ad taşıdığı için ayrıca kontrol edilmelidir.',
   sourceOver: 'II / KAYNAK VE YORUM', sourceTitle: 'Kaynak, bir sahne. Müzik, bir yorum.',
   sourceBody: 'Albümün temel metinsel çıkış noktası KURAN 7:46–49; yakın bağlamı 7:44–50’dir. Çalışmada Rashad Khalifa’nın Authorized Translation çevirisi temel referanstır. Buradaki şarkı sözleri ayet alıntısı olarak sunulmaz. Kaynakta belirtilmeyen kişilikler, süreler, mekânsal ayrıntılar veya konuşmacılar dinî hüküm olarak eklenmez.',
   manifestOver: 'III / MANİFESTO', manifestTitle: 'ARAF Manifestosu',
@@ -42,13 +39,12 @@ const ui = tr ? {
   intro: 'Two sides are visible. A greeting is heard. The gaze turns. A prayer rises. The final word is not ours.',
   status: 'English lyric drafts and Turkish meaning translations for all nineteen works are below',
   spotify: 'Listen on Spotify',
-  spotifyNote: 'Temporary link: currently opens the HEAVENN album. It will be replaced when ARAF is released.',
-  spotifyAccessible: 'Open HEAVENN on Spotify (temporary ARAF link)',
+  spotifyHeading: 'OFFICIAL SPOTIFY ALBUM STREAM',
+  spotifyPlayerTitle: 'ARAF album Spotify player',
   gotoWords: 'Read the lyrics', gotoManifesto: 'Read the manifesto',
   wordsOver: 'I / LYRIC ARCHIVE', wordsTitle: 'Original lyrics. Turkish meaning.',
   wordsIntro: 'Original English lyrics appear on the left and Turkish meaning translations on the right, section by section, on both language editions of this page.',
   original: 'EN · ORIGINAL ENGLISH', translated: 'TR · TURKISH TRANSLATION',
-  lyricsNote: 'Lyrics for all nineteen works are taken from earlier composition drafts, not fully verified against the final audio recordings. Non-sung production instructions are omitted. The original draft for track 03 has a different title and requires particular verification.',
   sourceOver: 'II / SOURCE & INTERPRETATION', sourceTitle: 'A scene as source. Music as interpretation.',
   sourceBody: 'Quran 7:46–49 forms the album’s primary textual starting point, with 7:44–50 as its immediate context. The research uses Rashad Khalifa’s Authorized Translation as its principal English reference. The lyrics shown here are not presented as Quranic quotations. Unspecified identities, times, physical details and speakers are not added as religious facts.',
   manifestOver: 'III / THE MANIFESTO', manifestTitle: 'The ARAF Manifesto',
@@ -70,17 +66,33 @@ const ui = tr ? {
       <p class="bk-araf__intro">{ui.intro}</p>
       <p class="bk-araf__status">{ui.status}</p>
       <nav class="bk-araf__jumps" aria-label={tr ? 'Albüm içinde gezin' : 'Explore this album'}>
-        <a class="bk-araf__spotify-button" href={spotifyAlbumUrl} target="_blank" rel="noopener noreferrer" aria-label={spotifyIsTemporary ? ui.spotifyAccessible : ui.spotify}>
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .7a11.3 11.3 0 1 0 0 22.6A11.3 11.3 0 0 0 12 .7Zm5.18 16.36a.7.7 0 0 1-.96.23c-2.63-1.61-5.93-1.98-9.81-1.09a.7.7 0 0 1-.31-1.36c4.24-.97 7.89-.55 10.85 1.26a.7.7 0 0 1 .23.96Zm1.38-3.13a.88.88 0 0 1-1.2.28c-3.01-1.85-7.59-2.39-11.15-1.31a.88.88 0 0 1-.51-1.68c4.07-1.23 9.12-.63 12.58 1.5.88.88 0 0 1 .28 1.21Zm.12-3.27c-3.61-2.14-9.56-2.34-13-1.29a1.05 1.05 0 1 1-.61-2.01c3.94-1.2 10.53-.97 14.69 1.5a1.05 1.05 0 1 1-1.08 1.8Z"/></svg>
+        <a class="bk-araf__spotify-button" href={spotifyAlbumUrl} target="_blank" rel="noopener noreferrer" aria-label={ui.spotify}>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .7a11.3 11.3 0 1 0 0 22.6A11.3 11.3 0 0 0 12 .7Zm5.18 16.36a.7.7 0 0 1-.96.23c-2.63-1.61-5.93-1.98-9.81-1.09a.7.7 0 0 1-.31-1.36c4.24-.97 7.89-.55 10.85 1.26a.7.7 0 0 1 .23.96Zm1.38-3.13a.88.88 0 0 1-1.2.28c-3.01-1.85-7.59-2.39-11.15-1.31a.88.88 0 0 1-.51-1.68c4.07-1.23 9.12-.63 12.58 1.5a.88.88 0 0 1 .28 1.21Zm.12-3.27c-3.61-2.14-9.56-2.34-13-1.29a1.05 1.05 0 1 1-.61-2.01c3.94-1.2 10.53-.97 14.69 1.5a1.05 1.05 0 1 1-1.08 1.8Z"/></svg>
           <span>{ui.spotify}</span>
           <span aria-hidden="true">↗</span>
         </a>
         <a href="#araf-lyrics">{ui.gotoWords}</a>
         <a href="#araf-manifesto">{ui.gotoManifesto}</a>
       </nav>
-      {spotifyIsTemporary && <p class="bk-araf__spotify-note">{ui.spotifyNote}</p>}
     </div>
   </header>
+
+  <!-- Official embedded Spotify album player, matching the HEAVENN stream layout. -->
+  <section id="araf-spotify" class="bk-araf__stream" aria-label={ui.spotifyHeading}>
+    <div class="bk-araf__stream-eyebrow">
+      <span class="bk-araf__stream-signal" aria-hidden="true">≋</span>
+      <span>{ui.spotifyHeading}</span>
+    </div>
+    <iframe
+      src={spotifyEmbedUrl}
+      title={ui.spotifyPlayerTitle}
+      width="100%"
+      height="492"
+      loading="lazy"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      class="bk-araf__stream-player"
+    ></iframe>
+  </section>
 
   <section class="bk-araf__section" id="araf-lyrics">
     <p class="bk-araf__overline">{ui.wordsOver}</p>
@@ -134,3 +146,56 @@ const ui = tr ? {
     <nav aria-label="Album links"><a href={`${prefix}/quranic-concepts/`}>{ui.back}</a><a href={`${prefix}/albums/heavenn/`}>{ui.prior}</a></nav>
   </footer>
 </main>
+
+<style>
+  /* Matching the HEAVENN Spotify stream section, scoped to the ARAF page. */
+  .bk-araf__stream {
+    position: relative;
+    scroll-margin-top: 7rem;
+    margin-top: clamp(1.25rem, 2.6vw, 2.25rem);
+    padding: clamp(1rem, 2.1vw, 1.7rem);
+    border: 1px solid #cce9d7;
+    border-radius: 24px;
+    background: linear-gradient(140deg, #f4fbf6 0%, #fafdfb 65%, #f3f8f5 100%);
+    box-shadow: 0 15px 60px rgba(67, 116, 81, 0.045);
+  }
+
+  .bk-araf__stream-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 1.1rem;
+    color: #228855;
+    font: 800 0.68rem/1.4 Inter, system-ui, sans-serif;
+    letter-spacing: 0.23em;
+    text-transform: uppercase;
+  }
+
+  .bk-araf__stream-signal {
+    display: grid;
+    place-items: center;
+    width: 1.65rem;
+    height: 1.65rem;
+    flex: 0 0 1.65rem;
+    border-radius: 50%;
+    background: #1db954;
+    color: #fff;
+    font-size: 1.1rem;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+
+  .bk-araf__stream-player {
+    display: block;
+    width: 100%;
+    height: clamp(360px, 36vw, 492px);
+    border: none;
+    border-radius: 16px;
+    background: #18211e;
+  }
+
+  @media (max-width: 540px) {
+    .bk-araf__stream { border-radius: 19px; padding: 0.85rem; }
+    .bk-araf__stream-eyebrow { font-size: 0.59rem; letter-spacing: 0.1em; }
+  }
+</style>
