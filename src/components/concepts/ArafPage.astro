@@ -104,7 +104,7 @@ const ui = tr ? {
       return (
         <details class="bk-araf__lyric-track" id={`araf-track-${String(song.number).padStart(2, '0')}`}>
           <summary>
-            <span>{String(song.number).padStart(2, '0')} · {song.title}</span>
+            <span>{String(song.number).padStart(2, '0')} · {tr ? (trans?.title ?? song.title) : song.title}</span>
             <span class="bk-araf__plus" aria-hidden="true">+</span>
           </summary>
           <div class="bk-araf__lyrics-body">
